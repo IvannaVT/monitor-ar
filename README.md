@@ -2,14 +2,14 @@
 
 Dashboard de seguimiento longitudinal de indicadores de opinión pública (encuestas + social listening).
 
-🌐 **Sitio live:** https://ivannavtravaini.netlify.app/
+🌐 **Sitio live:** https://ivannatravaini.netlify.app/
 
-📊 **Monitor directo:** https://ivannavtravaini.netlify.app/monitor-ar.html
+📊 **Monitor directo:** https://ivannatravaini.netlify.app/monitor
 
 ## Contenido
 
-- `index.html` — (https://ivannavtravaini.netlify.app/)
-- `monitor-ar.html` — [dashboard principal] (https://ivannavtravaini.netlify.app/monitor-ar.html)
+- `index.html` — sitio principal (https://ivannatravaini.netlify.app/)
+- `monitor.html` — dashboard Monitor AR (https://ivannatravaini.netlify.app/monitor)
 
 ## Deploy
 
