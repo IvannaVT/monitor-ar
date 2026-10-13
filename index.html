@@ -1,491 +1,1297 @@
-<title>Ivanna Vanina Travaini — Asesora en Políticas Públicas y Relaciones Institucionales</title>
-<meta name="description" content="Sitio profesional de Ivanna Vanina Travaini. Asesora en políticas públicas, gobierno abierto, relaciones institucionales y cooperación internacional.">
-<meta name="author" content="Ivanna Vanina Travaini">
-<meta name="robots" content="index, follow">
-<link rel="canonical" href="https://ivannatravaini.netlify.app/">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://ivannatravaini.netlify.app/">
-<meta property="og:title" content="Ivanna Vanina Travaini — Asesora en Políticas Públicas y Relaciones Institucionales">
-<meta property="og:locale" content="es_AR">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:site" content="@Ivanna_VT">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Inter:wght@300;400;500&display=swap">
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Monitor AR</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
 
 <style>
 :root {
-  --bg:#F7F5F0; --bg-alt:#EDEAE3; --fg:#1A1916; --fg-mid:#4A4740;
-  --fg-soft:#8A857C; --accent:#2D5A8E; --accent-warm:#B8860B;
-  --rule:#C8C3BA; --card-bg:#FFFFFF;
-  --font-display:'Cormorant Garamond',Georgia,serif;
-  --font-body:'Inter',system-ui,sans-serif;
-  --max-w:1100px; --col-gap:clamp(1.5rem,4vw,3rem);
+  --bg:#0C1E35; --surface:#152A47; --fg:#E8F0FA; --fg-dim:#8AAFC8;
+  --accent:#5B9CF6; --border:#1F3A5F;
+  --pos:#22C07A; --neg:#F06070; --warn:#F5A623; --neu:#8AAFC8;
+  --c1:#5B9CF6; --c2:#A78BFA; --c3:#22C07A; --c4:#F5A623; --c5:#F06070;
+  --r:8px; color-scheme:dark;
 }
 @media(prefers-color-scheme:dark){:root:not([data-theme="light"]){
-  --bg:#0C1829;--bg-alt:#132035;--fg:#E8EDF5;--fg-mid:#A8B4C8;
-  --fg-soft:#5A6E88;--accent:#6AABDC;--accent-warm:#D4A017;
-  --rule:#1E3050;--card-bg:#132035;color-scheme:dark;
+  --bg:#071526;--surface:#0D1E35;--fg:#E8F0FA;--fg-dim:#8AAFC8;
+  --accent:#5B9CF6;--border:#162B48;
+  --pos:#22C07A;--neg:#F06070;--warn:#F5A623;--neu:#8AAFC8;
+  --c1:#5B9CF6;--c2:#A78BFA;--c3:#22C07A;--c4:#F5A623;--c5:#F06070;
+  color-scheme:dark;
 }}
 :root[data-theme="dark"]{
-  --bg:#0C1829;--bg-alt:#132035;--fg:#E8EDF5;--fg-mid:#A8B4C8;
-  --fg-soft:#5A6E88;--accent:#6AABDC;--accent-warm:#D4A017;
-  --rule:#1E3050;--card-bg:#132035;color-scheme:dark;
+  --bg:#071526;--surface:#0D1E35;--fg:#E8F0FA;--fg-dim:#8AAFC8;
+  --accent:#5B9CF6;--border:#162B48;
+  --pos:#22C07A;--neg:#F06070;--warn:#F5A623;--neu:#8AAFC8;
+  --c1:#5B9CF6;--c2:#A78BFA;--c3:#22C07A;--c4:#F5A623;--c5:#F06070;
+  color-scheme:dark;
 }
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
-body{font-family:var(--font-body);font-weight:400;background:var(--bg);color:var(--fg);font-size:1.05rem;line-height:1.7;padding-inline:clamp(1rem,5vw,2rem);}
 
-/* theme btn */
-.theme-btn{position:fixed;top:1.25rem;right:1.25rem;z-index:100;background:var(--card-bg);border:1px solid var(--rule);color:var(--fg-mid);border-radius:50%;width:2.25rem;height:2.25rem;font-size:1rem;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:border-color .2s;}
-.theme-btn:hover{border-color:var(--accent);}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{height:100%}
+body{background:var(--bg);color:var(--fg);font-family:'IBM Plex Sans',system-ui,sans-serif;font-size:15px;line-height:1.6;min-height:100%}
+img{max-width:100%}
 
-/* masthead */
-.masthead{max-width:var(--max-w);margin:0 auto;padding-block:3rem 0;border-bottom:3px solid var(--fg);display:grid;grid-template-columns:1fr auto;align-items:end;gap:1rem;}
-.masthead-eyebrow{font-family:var(--font-body);font-size:.7rem;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:var(--fg-soft);margin-bottom:.75rem;}
-.masthead h1{font-family:var(--font-display);font-weight:400;font-size:clamp(2.4rem,5.5vw,4.2rem);line-height:1.05;letter-spacing:.01em;white-space:nowrap;}
-.masthead-meta{text-align:right;font-size:.75rem;color:var(--fg-soft);letter-spacing:.05em;line-height:1.8;padding-bottom:.25rem;}
-.masthead-bajada{max-width:var(--max-w);margin:0 auto;padding-block:.7rem .85rem;display:flex;flex-wrap:wrap;gap:.4rem .1rem;align-items:center;border-bottom:1px solid var(--rule);}
-.bajada-item{font-size:.72rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--fg-mid);}
-.bajada-sep{font-size:.72rem;color:var(--rule);padding-inline:.5rem;user-select:none;}
+.site-header{position:sticky;top:env(safe-area-inset-top,0px);z-index:100;background:var(--surface);border-bottom:1px solid var(--border);padding:0 20px}
+.header-inner{max-width:920px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:12px;height:52px}
+.logo{font-family:'IBM Plex Mono',monospace;font-size:15px;font-weight:500;letter-spacing:-.5px;color:var(--fg);white-space:nowrap}
+.logo span{color:var(--accent)}
+.logo small{font-size:10px;color:var(--fg-dim);margin-left:6px;letter-spacing:.5px}
+.theme-btn{background:none;border:1px solid var(--border);border-radius:20px;padding:4px 12px;font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--fg-dim);cursor:pointer}
+.theme-btn:hover{border-color:var(--accent);color:var(--accent)}
 
-/* nav */
-nav{max-width:var(--max-w);margin:0 auto;padding-block:.85rem;display:flex;gap:clamp(.75rem,2vw,2rem);flex-wrap:wrap;border-bottom:1px solid var(--rule);}
-nav a{font-size:.72rem;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--fg-mid);text-decoration:none;transition:color .2s;}
-nav a:hover{color:var(--accent);}
+.nav-tabs{background:var(--surface);border-bottom:1px solid var(--border);padding:0 20px}
+.nav-inner{max-width:920px;margin:0 auto;display:flex;overflow-x:auto;scrollbar-width:none}
+.nav-inner::-webkit-scrollbar{display:none}
+.tab-btn{background:none;border:none;border-bottom:2px solid transparent;padding:11px 14px;font-family:'IBM Plex Sans',sans-serif;font-size:13px;font-weight:500;color:var(--fg-dim);cursor:pointer;white-space:nowrap;letter-spacing:.2px}
+.tab-btn.active{color:var(--accent);border-bottom-color:var(--accent)}
+.tab-btn:hover:not(.active){color:var(--fg)}
 
-/* sections */
-section{max-width:var(--max-w);margin:0 auto;padding-block:3rem;border-bottom:1px solid var(--rule);}
-section:last-of-type{border-bottom:none;}
-.section-label{font-size:.68rem;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);margin-bottom:1.5rem;display:flex;align-items:center;gap:.75rem;}
-.section-label::after{content:'';flex:1;height:1px;background:var(--rule);}
+.main-content{max-width:920px;margin:0 auto;padding:24px 20px 60px}
+.panel{display:none}.panel.active{display:block}
 
-/* sobre */
-.sobre-grid{display:grid;grid-template-columns:2fr 1fr;gap:var(--col-gap);align-items:start;}
-.sobre-grid h2{font-family:var(--font-display);font-weight:400;font-size:clamp(1.5rem,3.5vw,2.2rem);line-height:1.2;margin-bottom:1.25rem;text-wrap:balance;}
-.sobre-grid p{color:var(--fg-mid);margin-bottom:.9rem;font-size:.97rem;}
-.sobre-aside{display:flex;flex-direction:column;gap:1.25rem;padding-top:.5rem;}
-.dato{border-left:2px solid var(--accent);padding-left:1rem;}
-.dato-label{font-size:.67rem;font-weight:500;letter-spacing:.15em;text-transform:uppercase;color:var(--fg-soft);margin-bottom:.2rem;}
-.dato-val{font-family:var(--font-display);font-size:1.05rem;line-height:1.35;color:var(--fg);}
+.kpi-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(148px,1fr));gap:10px;margin-bottom:20px}
+.kpi{background:var(--surface);border:1px solid var(--border);border-radius:var(--r);padding:14px 16px}
+.kpi-label{font-size:10px;font-weight:600;letter-spacing:.8px;text-transform:uppercase;color:var(--fg-dim);margin-bottom:4px}
+.kpi-num{font-family:'IBM Plex Mono',monospace;font-size:26px;font-weight:500;color:var(--fg);line-height:1.1}
+.kpi-meta{display:flex;align-items:center;gap:5px;margin-top:3px;flex-wrap:wrap}
+.kpi-sub{font-size:10px;color:var(--fg-dim)}
+.kpi-delta{font-family:'IBM Plex Mono',monospace;font-size:12px;font-weight:600}
+.kpi-delta.up{color:var(--pos)}.kpi-delta.down{color:var(--neg)}.kpi-delta.flat{color:var(--fg-dim)}
+.arrow{font-size:13px;font-weight:600}
+.arrow.up{color:var(--pos)}.arrow.down{color:var(--neg)}.arrow.flat{color:var(--fg-dim)}
 
-/* areas */
-.areas-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem;}
-.area-card{background:var(--card-bg);border:1px solid var(--rule);padding:1.5rem;position:relative;transition:border-color .2s;}
-.area-card:hover{border-color:var(--accent);}
-.area-num{font-family:var(--font-display);font-size:3.5rem;font-weight:300;color:var(--rule);line-height:1;margin-bottom:.75rem;font-variant-numeric:tabular-nums;}
-.area-card h3{font-family:var(--font-display);font-weight:600;font-size:1.15rem;margin-bottom:.6rem;color:var(--fg);}
-.area-card p{font-size:.85rem;color:var(--fg-mid);line-height:1.6;}
-.area-tag{display:inline-block;margin-top:1rem;font-size:.65rem;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);border:1px solid var(--accent);padding:.2rem .5rem;}
+.chart-wrap{background:var(--surface);border:1px solid var(--border);border-radius:var(--r);padding:18px;margin-bottom:16px}
+.chart-head{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;margin-bottom:14px;flex-wrap:wrap}
+.chart-head h3{font-size:13px;font-weight:600;color:var(--fg)}
+.chart-head p{font-size:11px;color:var(--fg-dim);margin-top:1px}
+.chart-box{position:relative;height:200px}
+.chart-box.tall{height:240px}
+.chart-box.med{height:220px}
 
-/* publicaciones */
-.pub-list{display:flex;flex-direction:column;gap:0;}
-.pub-item{display:grid;grid-template-columns:auto 1fr auto;gap:1.5rem;align-items:start;padding-block:1.35rem;border-bottom:1px solid var(--rule);text-decoration:none;color:inherit;transition:background .15s;}
-.pub-item:last-child{border-bottom:none;}
-.pub-item:hover .pub-title{color:var(--accent);}
-.pub-date{font-variant-numeric:tabular-nums;font-size:.75rem;color:var(--fg-soft);padding-top:.15rem;min-width:5.5rem;line-height:1.4;}
-.pub-tag-badge{font-size:.6rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--accent-warm);display:block;margin-top:.25rem;}
-.pub-title{font-family:var(--font-display);font-size:clamp(1rem,2vw,1.2rem);font-weight:400;line-height:1.3;margin-bottom:.3rem;transition:color .2s;}
-.pub-excerpt{font-size:.82rem;color:var(--fg-mid);line-height:1.55;}
-.pub-arrow{font-size:1rem;color:var(--fg-soft);padding-top:.2rem;transition:color .2s,transform .2s;}
-.pub-item:hover .pub-arrow{color:var(--accent);transform:translateX(3px);}
+.legend{display:flex;flex-wrap:wrap;gap:8px 14px;margin-top:10px}
+.legend-item{display:flex;align-items:center;gap:5px;font-size:11px;color:var(--fg-dim);cursor:pointer;user-select:none;border-radius:4px;padding:2px 4px;transition:opacity .15s}
+.legend-item:hover{color:var(--fg)}
+.legend-item.muted{opacity:.35}
+.legend-dot{width:9px;height:9px;border-radius:50%;flex-shrink:0}
+.source{font-size:10px;color:var(--fg-dim);margin-top:8px;font-style:italic}
 
-/* monitor */
-.monitor-intro{display:grid;grid-template-columns:2fr 1fr;gap:var(--col-gap);align-items:start;}
-.monitor-intro h2{font-family:var(--font-display);font-weight:400;font-size:clamp(1.5rem,3.5vw,2.2rem);line-height:1.2;margin-bottom:1rem;text-wrap:balance;}
-.monitor-intro>div>p{font-size:.92rem;color:var(--fg-mid);line-height:1.65;margin-bottom:.7rem;}
-.monitor-meta{display:flex;flex-direction:column;gap:1.25rem;padding-top:.5rem;}
-.monitor-stat{border-left:2px solid var(--accent-warm);padding-left:1rem;}
-.monitor-stat-label{font-size:.67rem;font-weight:500;letter-spacing:.15em;text-transform:uppercase;color:var(--fg-soft);margin-bottom:.2rem;}
-.monitor-stat-val{font-family:var(--font-display);font-size:1.05rem;line-height:1.35;color:var(--fg);}
-.monitor-tabs-row{display:flex;flex-wrap:wrap;gap:.75rem;margin:1.5rem 0;}
-.monitor-tab-badge{font-size:.68rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--fg-mid);background:var(--bg-alt);border:1px solid var(--rule);padding:.3rem .75rem;}
-.monitor-cta{display:inline-flex;align-items:center;gap:.75rem;padding:1rem 1.5rem;background:var(--accent);color:var(--bg);text-decoration:none;font-size:.8rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;transition:opacity .2s;}
-.monitor-cta:hover{opacity:.85;}
-.monitor-note{margin-top:1.5rem;font-size:.8rem;color:var(--fg-soft);border-left:2px solid var(--rule);padding-left:1rem;line-height:1.6;}
+.signal{display:inline-flex;align-items:center;gap:4px;font-family:'IBM Plex Mono',monospace;font-size:10px;font-weight:500;padding:2px 8px;border-radius:20px;white-space:nowrap}
+.signal.conv{background:color-mix(in srgb,var(--pos) 14%,transparent);color:var(--pos)}
+.signal.mix{background:color-mix(in srgb,var(--warn) 14%,transparent);color:var(--warn)}
+.signal.div{background:color-mix(in srgb,var(--neg) 14%,transparent);color:var(--neg)}
+.signal.nd{background:color-mix(in srgb,var(--fg-dim) 14%,transparent);color:var(--fg-dim)}
+.badge-pend{display:inline-block;font-size:9px;font-family:'IBM Plex Mono',monospace;letter-spacing:.5px;padding:1px 6px;border-radius:4px;background:color-mix(in srgb,var(--warn) 18%,transparent);color:var(--warn);text-transform:uppercase}
 
-/* trayectoria */
-.tray-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--col-gap);}
-.tray-col h3{font-family:var(--font-display);font-weight:600;font-size:1.1rem;margin-bottom:1.25rem;color:var(--fg);}
-.tray-item{display:flex;gap:1rem;margin-bottom:1.25rem;}
-.tray-year{font-size:.72rem;font-weight:500;color:var(--fg-soft);font-variant-numeric:tabular-nums;letter-spacing:.05em;min-width:3.5rem;padding-top:.15rem;line-height:1.4;}
-.tray-text strong{display:block;font-size:.9rem;font-weight:500;color:var(--fg);margin-bottom:.15rem;}
-.tray-text span{font-size:.82rem;color:var(--fg-mid);}
+.table-wrap{overflow-x:auto;margin-bottom:16px}
+table{width:100%;border-collapse:collapse;font-size:12px;min-width:380px}
+th{text-align:left;font-size:10px;font-weight:600;letter-spacing:.6px;text-transform:uppercase;color:var(--fg-dim);padding:7px 10px;border-bottom:2px solid var(--border)}
+td{padding:8px 10px;border-bottom:1px solid var(--border);color:var(--fg);font-variant-numeric:tabular-nums}
+tr:last-child td{border-bottom:none}
+tr:hover td{background:color-mix(in srgb,var(--accent) 5%,transparent)}
+.num{font-family:'IBM Plex Mono',monospace}
+.up{color:var(--pos)}.down{color:var(--neg)}
 
-/* contacto */
-.contacto-inner{display:grid;grid-template-columns:1fr 1fr;gap:var(--col-gap);align-items:center;}
-.contacto-inner h2{font-family:var(--font-display);font-weight:300;font-size:clamp(1.8rem,4vw,2.8rem);line-height:1.15;text-wrap:balance;}
-.contacto-inner h2 em{font-style:italic;color:var(--fg-mid);}
-.contacto-links{display:flex;flex-direction:column;gap:1rem;}
-.contacto-link{display:flex;align-items:center;gap:1rem;padding:1rem 1.25rem;background:var(--card-bg);border:1px solid var(--rule);text-decoration:none;color:var(--fg);transition:border-color .2s;}
-.contacto-link:hover{border-color:var(--accent);}
-.contacto-link-label{font-size:.67rem;font-weight:500;letter-spacing:.15em;text-transform:uppercase;color:var(--fg-soft);margin-bottom:.1rem;}
-.contacto-link-val{font-size:.9rem;color:var(--fg);}
-.cl-icon{width:2rem;height:2rem;display:flex;align-items:center;justify-content:center;background:var(--bg-alt);flex-shrink:0;font-size:.9rem;}
+.gap-grid{display:grid;gap:10px;margin-bottom:16px}
+.gap-row{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:8px;align-items:center;background:var(--surface);border:1px solid var(--border);border-radius:var(--r);padding:12px 14px}
+.gap-row.header-row{background:transparent;border:none;padding:4px 14px}
+.gap-label{font-size:12px;font-weight:500;color:var(--fg)}
+.gap-val{font-family:'IBM Plex Mono',monospace;font-size:12px;text-align:center}
+.gap-cell{display:flex;justify-content:center;align-items:center;padding:4px 6px;border-radius:6px;font-size:11px;font-weight:600}
+.gc{background:color-mix(in srgb,var(--pos) 18%,transparent);color:var(--pos)}
+.gd{background:color-mix(in srgb,var(--neg) 18%,transparent);color:var(--neg)}
+.gn{background:color-mix(in srgb,var(--fg-dim) 14%,transparent);color:var(--fg-dim)}
 
-/* blog */
-.blog-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:var(--col-gap);margin-top:2rem;}
-.blog-card{background:var(--card-bg);border:1px solid var(--rule);border-radius:3px;padding:1.5rem;display:flex;flex-direction:column;gap:.6rem;text-decoration:none;color:inherit;transition:border-color .2s;}
-.blog-card:hover{border-color:var(--accent);}
-.blog-card-meta{display:flex;align-items:center;gap:.6rem;font-size:.78rem;color:var(--fg-soft);text-transform:uppercase;letter-spacing:.06em;}
-.blog-tag{background:var(--bg-alt);color:var(--accent);padding:.1em .55em;border-radius:2px;font-size:.72rem;font-weight:500;}
-.blog-card h3{font-family:var(--font-display);font-size:1.2rem;font-weight:400;line-height:1.3;color:var(--fg);margin:0;}
-.blog-card p{font-size:.9rem;color:var(--fg-mid);line-height:1.6;margin:0;flex:1;}
-.blog-card .read-more{font-size:.8rem;color:var(--accent);font-weight:500;margin-top:.4rem;}
-.blog-archive{margin-top:2.5rem;border-top:1px solid var(--rule);padding-top:1.8rem;}
-.blog-archive h3{font-family:var(--font-display);font-size:1.1rem;font-weight:400;color:var(--fg-mid);margin:0 0 1rem;}
-.archive-years{display:flex;flex-wrap:wrap;gap:1.5rem 2.5rem;}
-.archive-year h4{font-size:.78rem;text-transform:uppercase;letter-spacing:.08em;color:var(--fg-soft);font-family:var(--font-body);margin:0 0 .5rem;font-weight:500;}
-.archive-year ul{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:.3rem;}
-.archive-year ul li a{font-size:.88rem;color:var(--fg-mid);text-decoration:none;line-height:1.4;}
-.archive-year ul li a:hover{color:var(--accent);}
+.sec{font-size:10px;font-weight:600;letter-spacing:1.2px;text-transform:uppercase;color:var(--fg-dim);margin-bottom:14px}
+.notice{background:color-mix(in srgb,var(--warn) 10%,transparent);border:1px solid color-mix(in srgb,var(--warn) 30%,transparent);border-radius:6px;padding:8px 12px;font-size:11px;color:var(--warn);margin-bottom:16px}
+.info-box{background:color-mix(in srgb,var(--accent) 7%,transparent);border:1px solid color-mix(in srgb,var(--accent) 22%,transparent);border-radius:6px;padding:8px 12px;font-size:11px;color:var(--fg-dim);margin-bottom:16px}
+.info-box strong{color:var(--accent)}
 
-/* footer */
-footer{max-width:var(--max-w);margin:0 auto;padding-block:1.5rem 2rem;display:flex;justify-content:space-between;align-items:center;gap:1rem;flex-wrap:wrap;border-top:3px solid var(--fg);}
-footer p{font-size:.72rem;color:var(--fg-soft);letter-spacing:.04em;}
-footer a{color:var(--fg-soft);text-decoration:none;}
-footer a:hover{color:var(--accent);}
+/* SL hallazgos */
+.hallazgo{background:var(--surface);border:1px solid var(--border);border-left:3px solid var(--c2);border-radius:var(--r);padding:12px 14px;margin-bottom:10px}
+.hallazgo-head{display:flex;align-items:baseline;gap:8px;flex-wrap:wrap;margin-bottom:4px}
+.hallazgo-src{font-family:'IBM Plex Mono',monospace;font-size:10px;color:var(--fg-dim)}
+.hallazgo-dir{font-size:10px;font-weight:600;padding:1px 7px;border-radius:10px}
+.h-neg{background:color-mix(in srgb,var(--neg) 14%,transparent);color:var(--neg)}
+.h-mix{background:color-mix(in srgb,var(--warn) 14%,transparent);color:var(--warn)}
+.h-pos{background:color-mix(in srgb,var(--pos) 14%,transparent);color:var(--pos)}
+.hallazgo-txt{font-size:12px;color:var(--fg);line-height:1.5}
 
-/* responsive */
-@media(max-width:680px){
-  .masthead{grid-template-columns:1fr;padding-bottom:1.25rem;}
-  .masthead-meta{text-align:left;}
-  .sobre-grid,.monitor-intro,.contacto-inner{grid-template-columns:1fr;}
-  .tray-grid{grid-template-columns:1fr;}
-  .pub-item{grid-template-columns:1fr;gap:.4rem;}
-  .pub-date{min-width:auto;}
-  .pub-arrow{display:none;}
-}
-@media(max-width:450px){
-  .areas-grid{grid-template-columns:1fr 1fr;}
-  .masthead h1{white-space:normal;}
-}
-@media(prefers-reduced-motion:reduce){*{transition:none!important;}}
+.brecha-pos{color:var(--neg)}.brecha-neg{color:var(--pos)}.brecha-zero{color:var(--fg-dim)}
+
+/* ── GAP ZONA DE ACUERDO ───────────────────── */
+.gap-zone-group{margin-bottom:18px}
+.gap-zone-title{font-size:10px;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:var(--fg-dim);margin-bottom:8px;padding-left:2px}
+.gap-zone-cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(174px,1fr));gap:8px}
+.gap-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--r);padding:13px 12px;position:relative;transition:opacity .2s}
+.gap-card.zc{opacity:1}
+.gap-card.zd{opacity:.5;border-style:dashed}
+.gap-card.zn{opacity:.32}
+.gap-card.best-conv{border-color:var(--pos);background:color-mix(in srgb,var(--pos) 6%,var(--surface))}
+.gap-card.worst-div{border-color:var(--neg);background:color-mix(in srgb,var(--neg) 6%,var(--surface))}
+.gap-card.explore{border-color:var(--warn);background:color-mix(in srgb,var(--warn) 6%,var(--surface))}
+.gap-card-badge{position:absolute;top:8px;right:9px;font-size:13px;line-height:1}
+.gap-card-label{font-size:11px;font-weight:500;color:var(--fg-dim);margin-bottom:6px;padding-right:20px;line-height:1.3}
+.gap-card-avg{font-family:'IBM Plex Mono',monospace;font-size:22px;font-weight:500;color:var(--fg);line-height:1;margin-bottom:4px}
+.gap-card-avg.sm{font-size:15px;color:var(--fg-dim)}
+.gap-card-sources{display:flex;gap:5px;font-size:10px;font-family:'IBM Plex Mono',monospace;flex-wrap:wrap}
+.gap-card-ev{margin-top:5px}
+.gap-delta-badge{display:inline-flex;align-items:center;font-family:'IBM Plex Mono',monospace;font-size:10px;font-weight:600;padding:1px 7px;border-radius:10px}
+.gap-delta-badge.dc{background:color-mix(in srgb,var(--pos) 15%,transparent);color:var(--pos)}
+.gap-delta-badge.dd{background:color-mix(in srgb,var(--neg) 15%,transparent);color:var(--neg)}
+.gap-delta-badge.dw{background:color-mix(in srgb,var(--warn) 15%,transparent);color:var(--warn)}
+.gap-delta-badge.dn{background:color-mix(in srgb,var(--fg-dim) 12%,transparent);color:var(--fg-dim)}
+.explore-box{background:var(--surface);border:1px solid color-mix(in srgb,var(--warn) 35%,transparent);border-left:3px solid var(--warn);border-radius:var(--r);padding:13px 15px;margin-bottom:8px}
+.explore-box-head{display:flex;align-items:center;gap:8px;margin-bottom:5px;flex-wrap:wrap}
+.explore-title{font-size:12px;font-weight:600;color:var(--fg)}
+.explore-tag{font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:.4px;padding:2px 8px;border-radius:10px;background:color-mix(in srgb,var(--warn) 15%,transparent);color:var(--warn)}
+.explore-body{font-size:12px;color:var(--fg);line-height:1.6}
+
+footer{text-align:center;padding:20px;font-size:10px;color:var(--fg-dim);border-top:1px solid var(--border)}
+footer a{color:var(--accent)}
+@media(max-width:500px){.gap-zone-cards{grid-template-columns:1fr 1fr}.kpi-num{font-size:22px}}
+@media(max-width:620px){.cross-grid{grid-template-columns:1fr!important}}
 </style>
 
-<button class="theme-btn" id="themeBtn" aria-label="Cambiar tema">☽</button>
-
-<header>
-  <div class="masthead">
-    <div>
-      <p class="masthead-eyebrow">Políticas Públicas · Gobierno · Buenos Aires</p>
-      <h1>Ivanna Vanina Travaini</h1>
-    </div>
-    <div class="masthead-meta">
-      Lic. Ciencia Política<br>
-      UBA — 1999<br>
-      Mag. Políticas Públicas<br>
-      UTDT — 2005
-    </div>
+<header class="site-header">
+  <div class="header-inner">
+    <div class="logo">Monitor<span>AR</span><small>OCT 2026</small></div>
+    <button class="theme-btn" onclick="toggleTheme()">◐</button>
   </div>
-  <div class="masthead-bajada">
-    <span class="bajada-item">Public Policy &amp; Government Affairs Advisor</span>
-    <span class="bajada-sep">|</span>
-    <span class="bajada-item">Institutional Relations</span>
-    <span class="bajada-sep">|</span>
-    <span class="bajada-item">International Cooperation</span>
-    <span class="bajada-sep">|</span>
-    <span class="bajada-item">Open Government &amp; Transparency</span>
-  </div>
-  <nav>
-    <a href="#sobre">Sobre mí</a>
-    <a href="#datos">Datos y Opinión Pública</a>
-    <a href="#publicaciones">Publicaciones</a>
-    <a href="#monitor">Monitor AR</a>
-    <a href="#trayectoria">Trayectoria</a>
-    <a href="#blog">Blog</a>
-    <a href="#contacto">Contacto</a>
-    <a href="#areas">Áreas</a>
-  </nav>
 </header>
 
-<section id="sobre">
-  <div class="section-label">Sobre mí</div>
-  <div class="sobre-grid">
-    <div>
-      <h2>Investigación aplicada, docencia y gestión pública en diálogo constante</h2>
-      <p>Más de 25 años articulando tres dimensiones: <strong>docencia universitaria de grado y posgrado</strong> (UTDT, FLACSO, Universidad de Palermo), <strong>investigación aplicada</strong> en centros académicos y think tanks (UTDT–PNUD, CAPP–BID, Fundación PENT, Fundación EU-LAC), y <strong>gestión en el sector público</strong> —Ciudad de Buenos Aires, Provincia de Buenos Aires y Municipio de San Isidro.</p>
-      <p>Mi formación combina la ciencia política con la economía del sector público, la regulación y las relaciones intergubernamentales. Ese cruce define mi manera de leer los problemas: con rigor analítico y siempre atenta a la viabilidad política e institucional de las soluciones.</p>
-      <p>Coordiné redes académicas internacionales en el marco del Programa ALFA III de la Unión Europea (22 universidades de 17 países) y el Centro de Excelencia Jean Monnet. Formación complementaria en análisis de datos sociales con R y Python.</p>
-      <p>En este espacio comparto reflexiones y lecturas sobre los temas que me interesan: federalismo fiscal, género y liderazgo, gobierno abierto y el uso de datos en la gestión pública.</p>
+<nav class="nav-tabs">
+  <div class="nav-inner">
+    <button class="tab-btn active" data-tab="indicadores">Indicadores</button>
+    <button class="tab-btn" data-tab="imagen">Imagen · Gestión</button>
+    <button class="tab-btn" data-tab="sl">Conversación Digital</button>
+    <button class="tab-btn" data-tab="gap">GAP CONV–SL</button>
+    <button class="tab-btn" data-tab="voto">Intención de voto</button>
+  </div>
+</nav>
+
+<main class="main-content">
+
+<!-- ── TAB 1: INDICADORES ───────────────────── -->
+<section class="panel active" id="tab-indicadores">
+  <p class="sec">Clima macroeconómico · Argentina</p>
+  <div class="kpi-grid">
+    <div class="kpi">
+      <div class="kpi-label">IPC ago-26</div>
+      <div class="kpi-num">1,7%</div>
+      <div class="kpi-meta"><span class="arrow down">↓</span><span class="kpi-sub">INDEC · mensual</span></div>
     </div>
-    <aside class="sobre-aside">
-      <div class="dato">
-        <div class="dato-label">Cargo actual</div>
-        <div class="dato-val">Asesora, Unidad Ministro<br>Ministerio de Hacienda y Finanzas · GCBA</div>
-      </div>
-      <div class="dato">
-        <div class="dato-label">También</div>
-        <div class="dato-val">Asesora, Subsecretaría de Gobierno<br>Municipalidad de San Isidro</div>
-      </div>
-      <div class="dato">
-        <div class="dato-label">Sede</div>
-        <div class="dato-val">Buenos Aires, Argentina</div>
-      </div>
-      <div class="dato">
-        <div class="dato-label">En este sitio desde</div>
-        <div class="dato-val">2015</div>
-      </div>
-    </aside>
+    <div class="kpi">
+      <div class="kpi-label">IPCBA sep-26</div>
+      <div class="kpi-num">1,8%</div>
+      <div class="kpi-meta"><span class="arrow flat">→</span><span class="kpi-sub">IDECBA · CABA</span></div>
+    </div>
+    <div class="kpi">
+      <div class="kpi-label">ICC sep-26</div>
+      <div class="kpi-num">41,2</div>
+      <div class="kpi-meta"><span class="kpi-delta flat">+1,0</span><span class="kpi-sub">vs ago-26 · UTDT</span></div>
+    </div>
+    <div class="kpi">
+      <div class="kpi-label">ICG sep-26</div>
+      <div class="kpi-num">1,9</div>
+      <div class="kpi-meta"><span class="kpi-delta down">−0,2</span><span class="kpi-sub">vs ago-26 · ref. L1</span></div>
+    </div>
+  </div>
+  <div class="chart-wrap">
+    <div class="chart-head">
+      <div><h3>Inflación mensual · IPC INDEC vs IPCBA CABA</h3><p>Sep-25 → Sep-26 · clic en leyenda para filtrar</p></div>
+    </div>
+    <div class="chart-box"><canvas id="chartInflComp"></canvas></div>
+    <div class="legend" id="legendInflComp"></div>
+    <p class="source">IPC INDEC nacional: sep-25→ago-26 · IPCBA IDECBA/GCBA: serie completa sep-25→sep-26 · IPC sep-26 INDEC pendiente</p>
+  </div>
+  <div class="chart-wrap">
+    <div class="chart-head"><div><h3>ICC · Confianza del consumidor</h3><p>Sep-25 → Sep-26 · UTDT</p></div></div>
+    <div class="chart-box"><canvas id="chartICC"></canvas></div>
+  </div>
+  <div class="chart-wrap">
+    <div class="chart-head"><div><h3>ICG · Clima general</h3><p>Sep-25 → Sep-26 · referencia interna L1</p></div></div>
+    <div class="chart-box"><canvas id="chartICG"></canvas></div>
   </div>
 </section>
 
-<section id="publicaciones">
-  <div class="section-label">Publicaciones seleccionadas</div>
-  <div class="pub-list">
-    <a class="pub-item" href="https://ivannatravani.wordpress.com/2022/07/25/ni-se-puede-ni-se-debe/" target="_blank" rel="noopener">
-      <div class="pub-date">Jul 2022<span class="pub-tag-badge">Fiscal</span></div>
-      <div><div class="pub-title">¿Ni se puede ni se debe?</div><div class="pub-excerpt">Reflexiones sobre la reforma del federalismo fiscal argentino: coparticipación, coeficientes y las razones por las que el debate es tan difícil de cerrar.</div></div>
-      <div class="pub-arrow">→</div>
-    </a>
-    <a class="pub-item" href="https://ivannatravani.wordpress.com/2022/10/20/reforma-electoral-es-calidad-de-la-representacion/" target="_blank" rel="noopener">
-      <div class="pub-date">Oct 2022<span class="pub-tag-badge">Gobierno</span></div>
-      <div><div class="pub-title">Reforma Electoral: ¿es calidad de la representación?</div><div class="pub-excerpt">Una reforma que favorezca a los partidos tradicionales no tendrá el apoyo de los minoritarios. Ideas persistentes para problemas que no se van.</div></div>
-      <div class="pub-arrow">→</div>
-    </a>
-    <a class="pub-item" href="https://ivannatravani.wordpress.com/2022/10/10/que-significa-ser-un-lider-en-el-estado-incompetencia-merito-recursoshumanos/" target="_blank" rel="noopener">
-      <div class="pub-date">Oct 2022<span class="pub-tag-badge">Gestión</span></div>
-      <div><div class="pub-title">¿Qué significa ser un líder en el Estado?</div><div class="pub-excerpt">El Principio de Peter aplicado al sector público argentino: sobre la promoción de la incompetencia y el mérito que no alcanza.</div></div>
-      <div class="pub-arrow">→</div>
-    </a>
-    <a class="pub-item" href="https://ivannatravani.wordpress.com/2022/08/22/por-que-el-acceso-a-servicios-financieros-es-vital-para-el-desarrollo-global/" target="_blank" rel="noopener">
-      <div class="pub-date">Ago 2022<span class="pub-tag-badge">Género</span></div>
-      <div><div class="pub-title">¿Por qué el acceso a servicios financieros es vital para el desarrollo global?</div><div class="pub-excerpt">La revolución digital y la reducción de brechas de género en el acceso a cuentas: datos del Global Findex 2021 para América Latina.</div></div>
-      <div class="pub-arrow">→</div>
-    </a>
-    <a class="pub-item" href="https://ivannatravani.wordpress.com/2023/11/10/acuerdos-comerciales-internacionales-reflexiones/" target="_blank" rel="noopener">
-      <div class="pub-date">Nov 2023<span class="pub-tag-badge">Comercio</span></div>
-      <div><div class="pub-title">Acuerdos comerciales internacionales. Reflexiones</div><div class="pub-excerpt">Relectura de Berlinski y Stancanelli: ideas sobre política comercial argentina que siguen siendo pertinentes.</div></div>
-      <div class="pub-arrow">→</div>
-    </a>
-  </div>
-</section>
+<!-- ── TAB 2: VOTO ──────────────────────────── -->
+<section class="panel" id="tab-voto">
+  <p class="sec">Intención de voto presidencial · serie intra-consultora</p>
 
-<!-- MONITOR AR -->
-<section id="monitor">
-  <div class="section-label">Monitor AR</div>
-  <div class="monitor-intro">
-    <div>
-      <h2>Seguimiento en tiempo real del clima político y social argentino</h2>
-      <p>Monitor AR es un tablero de análisis de coyuntura que integra indicadores macroeconómicos, intención de voto, imagen y gestión presidencial, y conversación digital. Actualización continua con las fuentes disponibles más recientes.</p>
-      <p>Combina datos duros de organismos oficiales (INDEC, BCRA) con relevamientos de opinión pública y métricas de social listening en X/Twitter, permitiendo una lectura articulada del momento político.</p>
-      <div class="monitor-tabs-row">
-        <span class="monitor-tab-badge">Indicadores</span>
-        <span class="monitor-tab-badge">Intención de voto</span>
-        <span class="monitor-tab-badge">Imagen &amp; Gestión</span>
-        <span class="monitor-tab-badge">Conv. digital</span>
-        <span class="monitor-tab-badge">Gap Conv–SL</span>
-      </div>
-      <a class="monitor-cta" href="monitor-ar.html" target="_blank" rel="noopener">Abrir Monitor AR →</a>
-      <p class="monitor-note">Actualización: IPC agosto 2026 y última ola disponible de intención de voto. El dashboard se actualiza con cada nuevo dato oficial relevante.</p>
+  <!-- KPIs con Δ numérico -->
+  <div class="kpi-grid" style="grid-template-columns:repeat(auto-fit,minmax(160px,1fr))">
+    <div class="kpi">
+      <div class="kpi-label">LLA · última lectura</div>
+      <div class="kpi-num">33,6%</div>
+      <div class="kpi-meta"><span class="kpi-delta up">+2,1</span><span class="kpi-sub">vs lectura ant. · Synopsis</span></div>
     </div>
-    <div class="monitor-meta">
-      <div class="monitor-stat">
-        <div class="monitor-stat-label">Fuentes macro</div>
-        <div class="monitor-stat-val">INDEC · BCRA · Mecon</div>
-      </div>
-      <div class="monitor-stat">
-        <div class="monitor-stat-label">Opinión pública</div>
-        <div class="monitor-stat-val">Trespuntozero · Zuban Córdoba · Reyes</div>
-      </div>
-      <div class="monitor-stat">
-        <div class="monitor-stat-label">Social listening</div>
-        <div class="monitor-stat-val">Reputación Digital · Ad Hoc · Monitor Digital</div>
-      </div>
-      <div class="monitor-stat">
-        <div class="monitor-stat-label">Dimensiones</div>
-        <div class="monitor-stat-val">5 pestañas de análisis</div>
-      </div>
+    <div class="kpi">
+      <div class="kpi-label">PJ · última lectura</div>
+      <div class="kpi-num">32,7%</div>
+      <div class="kpi-meta"><span class="kpi-delta down">−3,0</span><span class="kpi-sub">vs lectura ant. · Synopsis</span></div>
+    </div>
+    <div class="kpi">
+      <div class="kpi-label">Consultoras activas</div>
+      <div class="kpi-num">5</div>
+      <div class="kpi-meta"><span class="kpi-sub">Series verificadas</span></div>
+    </div>
+    <div class="kpi">
+      <div class="kpi-label">Brecha LLA–PJ</div>
+      <div class="kpi-num">+0,9</div>
+      <div class="kpi-meta"><span class="kpi-sub">p.p. · Synopsis sep-26</span></div>
     </div>
   </div>
-</section>
 
-<section id="trayectoria">
-  <div class="section-label">Trayectoria</div>
-  <div class="tray-grid">
-    <div class="tray-col">
-      <h3>Gestión pública</h3>
-      <div class="tray-item"><div class="tray-year">2024 —<br>hoy</div><div class="tray-text"><strong>Asesora, Subsecretaría de Gobierno</strong><span>Municipalidad de San Isidro</span></div></div>
-      <div class="tray-item"><div class="tray-year">2016 —<br>hoy</div><div class="tray-text"><strong>Asesora, Unidad Ministro</strong><span>Ministerio de Hacienda y Finanzas · GCBA — Relacionamiento institucional y enlace interministerial</span></div></div>
-      <div class="tray-item"><div class="tray-year">2007 —<br>2010</div><div class="tray-text"><strong>Consultora, Jefatura de Gabinete</strong><span>Provincia de Buenos Aires / PNUD — Modernización del Estado y relaciones interjurisdiccionales</span></div></div>
-      <div class="tray-item"><div class="tray-year">2007</div><div class="tray-text"><strong>Consultora</strong><span>Poliarquía Consultores — Opinión pública y análisis político</span></div></div>
+  <div class="notice">Series mostradas solo donde existe dato propio verificado. Cada serie es intra-consultora — no se promedian. Los cambios en la vista pueden reflejar entrada/salida de consultoras, no solo movimientos de opinión.</div>
+
+  <div class="chart-wrap">
+    <div class="chart-head">
+      <div><h3>LLA</h3><p>Feb-26 → Oct-26 · por consultora · clic en leyenda para filtrar</p></div>
+      <span class="signal conv">▲ 4/5</span>
     </div>
-    <div class="tray-col">
-      <h3>Docencia e Investigación</h3>
-      <div class="tray-item"><div class="tray-year">2010 —<br>2013</div><div class="tray-text"><strong>Jean Monnet Centre of Excellence</strong><span>Università di Bologna (Buenos Aires) — Cooperación académica UE–AL; Programa VertebrALCUE ALFA III (22 universidades, 17 países)</span></div></div>
-      <div class="tray-item"><div class="tray-year">2013 —<br>2019</div><div class="tray-text"><strong>Docente e investigadora</strong><span>FLACSO Argentina — Posgrado en Ciencia Política y Políticas Públicas</span></div></div>
-      <div class="tray-item"><div class="tray-year">2016 —<br>2019</div><div class="tray-text"><strong>Docente</strong><span>Universidad de Palermo — Grado y posgrado</span></div></div>
-      <div class="tray-item"><div class="tray-year">1999 —<br>2011</div><div class="tray-text"><strong>Docente e investigadora</strong><span>Universidad Torcuato Di Tella / PNUD — Grado, posgrado e investigación aplicada</span></div></div>
+    <div class="chart-box tall"><canvas id="chartLLA"></canvas></div>
+    <div class="legend" id="legendLLA"></div>
+    <p class="source">Series intra-consultora · no se promedian</p>
+  </div>
+  <div class="chart-wrap">
+    <div class="chart-head">
+      <div><h3>PJ / Unión por la Patria</h3><p>Feb-26 → Oct-26 · por consultora · clic en leyenda para filtrar</p></div>
+      <span class="signal mix">~ 3/5</span>
     </div>
-    <div class="tray-col">
-      <h3>Formación</h3>
-      <div class="tray-item"><div class="tray-year">2022</div><div class="tray-text"><strong>Análisis de datos con R y Python</strong><span>UTDT / FLACSO — Formación complementaria en métodos cuantitativos y ciencia de datos sociales</span></div></div>
-      <div class="tray-item"><div class="tray-year">2005</div><div class="tray-text"><strong>Magíster en Políticas Públicas</strong><span>Universidad Torcuato Di Tella — Economía del sector público, regulación y privatizaciones</span></div></div>
-      <div class="tray-item"><div class="tray-year">1999</div><div class="tray-text"><strong>Licenciada en Ciencia Política</strong><span>Universidad de Buenos Aires</span></div></div>
+    <div class="chart-box tall"><canvas id="chartPJ"></canvas></div>
+    <div class="legend" id="legendPJ"></div>
+  </div>
+  <div class="chart-wrap">
+    <p class="sec" style="margin-bottom:10px">Última lectura disponible por consultora</p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Consultora</th><th>Período</th><th>LLA %</th><th>PJ %</th><th>Δ LLA</th><th>Muestra</th><th>Método</th></tr></thead>
+        <tbody id="tableVoto"></tbody>
+      </table>
     </div>
   </div>
 </section>
 
-<section id="contacto">
-  <div class="section-label">Contacto</div>
-  <div class="contacto-inner">
-    <h2>¿Trabajamos<br><em>juntos?</em></h2>
-    <div class="contacto-links">
-      <div class="contacto-link">
-        <div class="cl-icon">✉</div>
-        <div><div class="contacto-link-label">Email</div><div class="contacto-link-val">ivannatravaini@gmail.com</div></div>
+<!-- ── TAB 3: IMAGEN + GESTIÓN ──────────────── -->
+<section class="panel" id="tab-imagen">
+  <p class="sec">Imagen presidencial · Gestión nacional · Milei</p>
+  <div class="chart-wrap">
+    <div class="chart-head">
+      <div><h3>Imagen negativa · Milei</h3><p>May-26 → Ago-26 · por consultora · clic en leyenda para filtrar</p></div>
+      <span class="signal mix">~ mixta</span>
+    </div>
+    <div class="chart-box"><canvas id="chartNeg"></canvas></div>
+    <div class="legend" id="legendNeg"></div>
+  </div>
+  <div class="chart-wrap">
+    <div class="chart-head">
+      <div><h3>Imagen positiva · Milei</h3><p>May-26 → Ago-26 · por consultora · clic en leyenda para filtrar</p></div>
+    </div>
+    <div class="chart-box"><canvas id="chartPos"></canvas></div>
+    <div class="legend" id="legendPos"></div>
+  </div>
+  <div class="chart-wrap">
+    <div class="chart-head">
+      <div><h3>Aprobación gestión nacional · por consultora</h3><p>May-26 → Sep-26 · Proyección + Isasi-Burdman + Vozna + Synopsis · clic en leyenda para filtrar</p></div>
+      <span class="signal conv">▲ conv.</span>
+    </div>
+    <div class="chart-box"><canvas id="chartGestion"></canvas></div>
+    <div class="legend" id="legendGestion"></div>
+    <p class="source">Gestión ≠ imagen personal · preguntas distintas · no comparar entre sí</p>
+  </div>
+  <!-- ── CRUCE IMAGEN–GESTIÓN ─────────────────── -->
+  <div style="margin:24px 0 8px"><p class="sec">Cruce imagen · gestión · divergencia</p></div>
+  <div class="info-box" style="margin-bottom:12px">
+    <strong>Hallazgo clave:</strong> Isasi-Burdman mide imagen personal <em>y</em> aprobación de gestión en el mismo estudio. Jun→Ago: gestión <strong>+3 pp</strong> (45→48) mientras imagen positiva <strong>−4 pp</strong> (42→38). Gestión e imagen se mueven en <strong>sentidos opuestos</strong> dentro de la misma consultora.
+  </div>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:16px" class="cross-grid">
+    <div class="chart-wrap" style="margin-bottom:0">
+      <div class="chart-head">
+        <div><h3>Positiva vs. aprobación gestión</h3><p>Isasi-Burdman · Jun–Ago 2026</p></div>
+        <span class="signal div">↕ diverge</span>
       </div>
-      <a class="contacto-link" href="https://linkedin.com/in/ivannatravaini" target="_blank" rel="noopener">
-        <div class="cl-icon">in</div>
-        <div><div class="contacto-link-label">LinkedIn</div><div class="contacto-link-val">linkedin.com/in/ivannatravaini</div></div>
-      </a>
-      <a class="contacto-link" href="https://twitter.com/Ivanna_VT" target="_blank" rel="noopener">
-        <div class="cl-icon">𝕏</div>
-        <div><div class="contacto-link-label">Twitter / X</div><div class="contacto-link-val">@Ivanna_VT</div></div>
-      </a>
-      <a class="contacto-link" href="https://ivannatravani.wordpress.com/" target="_blank" rel="noopener">
-        <div class="cl-icon">✍</div>
-        <div><div class="contacto-link-label">Blog #BeBold</div><div class="contacto-link-val">ivannatravani.wordpress.com</div></div>
-      </a>
+      <div class="chart-box med"><canvas id="chartCrossPos"></canvas></div>
+      <div class="legend" id="legendCrossPos"></div>
+    </div>
+    <div class="chart-wrap" style="margin-bottom:0">
+      <div class="chart-head">
+        <div><h3>Negativa vs. desaprobación gestión</h3><p>Isasi-Burdman · Jun–Ago 2026</p></div>
+        <span class="signal conv">↘ converge</span>
+      </div>
+      <div class="chart-box med"><canvas id="chartCrossNeg"></canvas></div>
+      <div class="legend" id="legendCrossNeg"></div>
+    </div>
+  </div>
+  <div class="chart-wrap" style="margin-bottom:16px">
+    <div class="chart-head">
+      <div><h3>Aprobación de gestión nacional · tendencia</h3><p>Proyección (may–sep) · Isasi-Burdman (jun–ago) · Synopsis (may)</p></div>
+      <span class="signal conv">▲ mejora</span>
+    </div>
+    <div class="chart-box"><canvas id="chartGestionFull"></canvas></div>
+    <div class="legend" id="legendGestionFull"></div>
+    <p class="source">Proyección: campo 1–10 de cada mes · Isasi-Burdman: campo en torno al 20 de cada mes · preguntas distintas entre consultoras</p>
+  </div>
+  <div class="table-wrap" style="margin-bottom:16px">
+    <table>
+      <thead><tr><th>Consultora</th><th>Variable</th><th>May</th><th>Jun</th><th>Jul</th><th>Ago</th><th>Sep</th><th>Δ</th></tr></thead>
+      <tbody>
+        <tr><td>Proyección</td><td>Aprobación gestión</td><td class="num">34,0</td><td class="num">39,8</td><td class="num">39,4</td><td class="num">39,7</td><td class="num">42,0</td><td class="num up">+8,0 🟢</td></tr>
+        <tr><td>Isasi-Burdman</td><td>Aprobación gestión</td><td class="num">—</td><td class="num">45,0</td><td class="num">46,0</td><td class="num">48,0</td><td class="num">—</td><td class="num up">+3,0 🟢</td></tr>
+        <tr><td>Isasi-Burdman</td><td>Imagen positiva</td><td class="num">—</td><td class="num">42,0</td><td class="num">43,0</td><td class="num">38,0</td><td class="num">—</td><td class="num down">−4,0 🔴</td></tr>
+        <tr><td>D'Alessio</td><td>Imagen positiva</td><td class="num">36,0</td><td class="num">—</td><td class="num">—</td><td class="num">34,0</td><td class="num">—</td><td class="num down">−2,0 🔴</td></tr>
+        <tr><td>Isasi-Burdman</td><td>Imagen negativa</td><td class="num">—</td><td class="num">—</td><td class="num">44,0</td><td class="num">46,0</td><td class="num">—</td><td class="num down">+2,0 🔴</td></tr>
+        <tr><td>Isasi-Burdman</td><td>Desaprobación gestión</td><td class="num">—</td><td class="num">48,0</td><td class="num">47,0</td><td class="num">42,0</td><td class="num">—</td><td class="num up">−6,0 🟢</td></tr>
+        <tr><td>Vozna</td><td>Aprobación gestión</td><td class="num">—</td><td class="num">—</td><td class="num">36,3</td><td class="num">—</td><td class="num">32,6</td><td class="num down">−3,7 🔴</td></tr>
+        <tr><td>Vozna</td><td>Desaprobación gestión</td><td class="num">—</td><td class="num">—</td><td class="num">57,6</td><td class="num">—</td><td class="num">61,9</td><td class="num down">+4,3 🔴</td></tr>
+        <tr><td>Vozna</td><td>Imagen positiva</td><td class="num">36,3</td><td class="num">—</td><td class="num">32,1</td><td class="num">—</td><td class="num">31,3</td><td class="num down">−5,0 🔴</td></tr>
+        <tr><td>Vozna</td><td>Imagen negativa</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">63,5</td><td class="num">⚪</td></tr>
+        <tr><td>Zuban Córdoba</td><td>Imagen negativa</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">61,8</td><td class="num">⚪</td></tr>
+        <tr><td>Zuban Córdoba</td><td>Imagen positiva</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">36,0</td><td class="num">⚪</td></tr>
+        <tr><td>Synopsis</td><td>Imagen positiva</td><td class="num">29,2</td><td class="num">—</td><td class="num">—</td><td class="num">33,9</td><td class="num">—</td><td class="num up">+4,7 🟢</td></tr>
+        <tr><td>Synopsis</td><td>Imagen negativa</td><td class="num">58,1</td><td class="num">—</td><td class="num">—</td><td class="num">55,3</td><td class="num">—</td><td class="num up">−2,8 🟢</td></tr>
+        <tr><td>Synopsis</td><td>Aprobación gestión</td><td class="num">31,3</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">⚪</td></tr>
+        <tr><td>Synopsis</td><td>Desaprobación gestión</td><td class="num">54,5</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">⚪</td></tr>
+        <tr><td>Trends</td><td>Imagen positiva</td><td class="num">—</td><td class="num">42,0</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">⚪</td></tr>
+        <tr><td>Trends</td><td>Imagen negativa</td><td class="num">—</td><td class="num">57,0</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">⚪</td></tr>
+        <tr><td>Giacobbe</td><td>Imagen positiva</td><td class="num">34,2</td><td class="num">37,5</td><td class="num">—</td><td class="num">36,1</td><td class="num">—</td><td class="num up">+1,9 🟢</td></tr>
+        <tr><td>Giacobbe</td><td>Imagen negativa</td><td class="num">55,0</td><td class="num">56,9</td><td class="num">—</td><td class="num">55,7</td><td class="num">—</td><td class="num up">−1,2 🟢</td></tr>
+      </tbody>
+    </table>
+    <p class="source">Gestión ≠ imagen personal · preguntas distintas · no comparar entre consultoras directamente · Δ = variación may→sep o primera→última medición</p>
+  </div>
+
+  <div class="chart-wrap">
+    <p class="sec" style="margin-bottom:10px">Isasi-Burdman ago-26 · Escenario presidencial 2027</p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Candidato</th><th>Esc. 1 %</th><th>Esc. 2 %</th></tr></thead>
+        <tbody>
+          <tr><td>Kicillof–De la Sota</td><td class="num">23</td><td class="num">23</td></tr>
+          <tr><td>Bregman–Del Caño</td><td class="num">8</td><td class="num">8</td></tr>
+          <tr><td>Villarruel–Pichetto</td><td class="num">4</td><td class="num">5</td></tr>
+          <tr><td>Schiaretti–Valdez</td><td class="num">3</td><td class="num">4</td></tr>
+          <tr><td>Peronismo no K</td><td class="num">5</td><td class="num">5</td></tr>
+          <tr><td>Otro / NS-NC</td><td class="num">17</td><td class="num">21</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="source">n=2055 · campo 12–21/08/2026 · LLA no publicado desagregado</p>
+  </div>
+</section>
+
+
+<!-- ── TAB 5: CONV. DIGITAL ──────────────────── -->
+<section class="panel" id="tab-sl">
+  <p class="sec">Conversación digital · Social Listening</p>
+
+  <div class="kpi-grid">
+    <div class="kpi">
+      <div class="kpi-label">Informes SL</div>
+      <div class="kpi-num">32</div>
+      <div class="kpi-meta"><span class="kpi-sub">registrados · base maestra</span></div>
+    </div>
+    <div class="kpi">
+      <div class="kpi-label">IDN Q2-26</div>
+      <div class="kpi-num" style="color:var(--warn)">61</div>
+      <div class="kpi-meta"><span class="arrow flat" style="color:var(--warn)">⚠</span><span class="kpi-sub">umbral divorcio=60 · RD</span></div>
+    </div>
+    <div class="kpi">
+      <div class="kpi-label">ISN Milei Ago→Sep</div>
+      <div class="kpi-num" style="font-size:18px">−43→−33</div>
+      <div class="kpi-meta"><span class="kpi-delta up">+10 pp</span><span class="kpi-sub">mejora · RD</span></div>
+    </div>
+    <div class="kpi">
+      <div class="kpi-label">ITS Mayo RD</div>
+      <div class="kpi-num" style="color:var(--neg)">−28,6</div>
+      <div class="kpi-meta"><span class="arrow down">↓</span><span class="kpi-sub">tolerancia social baja</span></div>
+    </div>
+  </div>
+
+  <!-- ISN mensual RD -->
+  <div class="chart-wrap">
+    <div class="chart-head">
+      <div><h3>ISN mensual · Índice de Sentimiento Neto · Reputación Digital</h3><p>Ago–Sep 2026 · serie en construcción · escala −100 a +100</p></div>
+      <span class="signal mix">~ mejora parcial</span>
+    </div>
+    <div class="chart-box" style="height:160px"><canvas id="chartISNMensual"></canvas></div>
+    <p class="source">ISN = (menciones positivas − negativas) / total × 100 · Ago-26: −43 · Sep-26: −33 · mejora +10 pp · Reputación Digital</p>
+  </div>
+
+  <!-- IDN Q2 + ISN por eje del relato -->
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:16px" class="cross-grid">
+    <div class="chart-wrap" style="margin-bottom:0">
+      <div class="chart-head">
+        <div><h3>IDN · Índice de Disonancia Narrativa · Q2 2026</h3><p>Abr–Jun 2026 · Reputación Digital · Nacional</p></div>
+      </div>
+      <div style="display:flex;flex-direction:column;align-items:center;justify-content:center;padding:12px 0 8px">
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:60px;font-weight:500;color:var(--warn);line-height:1">61</div>
+        <div style="font-size:11px;color:var(--fg-dim);margin-top:4px">escala 0–100</div>
+        <div style="margin-top:10px;width:100%;max-width:190px">
+          <div style="display:flex;justify-content:space-between;font-size:9px;color:var(--fg-dim);margin-bottom:3px">
+            <span>Alineación</span><span style="color:var(--warn)">⚠ umbral 60</span><span>Divorcio</span>
+          </div>
+          <div style="height:8px;border-radius:4px;background:linear-gradient(90deg,var(--pos) 0%,var(--warn) 55%,var(--neg) 100%);position:relative">
+            <div style="position:absolute;left:61%;top:-3px;width:2px;height:14px;background:var(--fg);border-radius:1px"></div>
+          </div>
+        </div>
+        <div style="margin-top:10px;font-size:11px;color:var(--warn);font-weight:600;text-align:center">Relato divorciado de la conversación ciudadana</div>
+        <div style="font-size:10px;color:var(--fg-dim);margin-top:3px;text-align:center">6,5M menciones · 550k depuradas (Filtro Sudor)</div>
+        <div style="font-size:10px;color:var(--fg-dim);text-align:center">NLP + LLM tropicalizados · redes + radio streaming</div>
+      </div>
+      <p class="source" style="text-align:center">Estudio Q2 2026 versión preliminar · dataset definitivo pendiente</p>
+    </div>
+    <div class="chart-wrap" style="margin-bottom:0">
+      <div class="chart-head">
+        <div><h3>ISN por eje del relato · Q2 2026</h3><p>Sentimiento neto por narrativa oficial · RD · Nacional · escala −100 a 0</p></div>
+      </div>
+      <div class="chart-box" style="height:220px"><canvas id="chartISNEje"></canvas></div>
+      <p class="source">Todos los ejes con sentimiento neto negativo · Q2 2026 · Reputación Digital</p>
+    </div>
+  </div>
+
+  <!-- ITS Mayo RD -->
+  <div class="chart-wrap">
+    <div class="chart-head">
+      <div><h3>ITS · Índice de Tolerancia Social · Mayo 2026 · Reputación Digital</h3><p>Disposición a defender públicamente al gobierno en espacios digitales</p></div>
+      <span class="signal div">↓ negativo</span>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:10px;padding:4px 0 10px">
+      <div class="kpi" style="margin:0">
+        <div class="kpi-label">ITS</div>
+        <div class="kpi-num" style="color:var(--neg)">−28,6</div>
+        <div class="kpi-meta"><span class="kpi-sub">sentimiento neto</span></div>
+      </div>
+      <div class="kpi" style="margin:0">
+        <div class="kpi-label">Negativo</div>
+        <div class="kpi-num" style="font-size:20px;color:var(--neg)">68,8%</div>
+      </div>
+      <div class="kpi" style="margin:0">
+        <div class="kpi-label">Positivo</div>
+        <div class="kpi-num" style="font-size:20px;color:var(--pos)">20,8%</div>
+      </div>
+      <div class="kpi" style="margin:0">
+        <div class="kpi-label">Neutral</div>
+        <div class="kpi-num" style="font-size:20px;color:var(--neu)">10,4%</div>
+      </div>
+    </div>
+    <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;padding-bottom:4px">
+      <span style="font-size:10px;color:var(--fg-dim);font-weight:600;letter-spacing:.5px;text-transform:uppercase">Emoción dominante:</span>
+      <span style="font-family:'IBM Plex Mono',monospace;font-size:12px;font-weight:600;color:var(--neg)">Enojo 73,2%</span>
+      <span style="font-size:10px;color:var(--fg-dim)">·</span>
+      <span style="font-family:'IBM Plex Mono',monospace;font-size:12px;font-weight:600;color:var(--warn)">Ironía 26,4%</span>
+    </div>
+    <p class="source">Fatiga de imagen antes que cambio de voto · mayo 2026 · Reputación Digital</p>
+  </div>
+
+  <!-- AD HOC Septiembre: Milei + Oposición -->
+  <p class="sec" style="margin-bottom:12px">AD HOC · Septiembre 2026 · Conversación digital nacional</p>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:16px" class="cross-grid">
+    <div class="chart-wrap" style="margin-bottom:0">
+      <div class="chart-head">
+        <div><h3>Milei · sentimiento sep-26</h3><p>AD HOC · 5,2M menciones totales</p></div>
+      </div>
+      <div style="display:flex;gap:14px;align-items:center;padding:4px 0 8px">
+        <div style="position:relative;width:110px;height:110px;flex-shrink:0"><canvas id="chartMileiSentSep"></canvas></div>
+        <div style="display:flex;flex-direction:column;gap:7px">
+          <div style="display:flex;align-items:center;gap:6px">
+            <div style="width:10px;height:10px;border-radius:50%;background:var(--neg);flex-shrink:0"></div>
+            <span style="font-size:12px;color:var(--fg)">Negativo</span>
+            <span style="font-family:'IBM Plex Mono',monospace;font-size:14px;font-weight:600;color:var(--neg);margin-left:auto">46,2%</span>
+          </div>
+          <div style="display:flex;align-items:center;gap:6px">
+            <div style="width:10px;height:10px;border-radius:50%;background:var(--pos);flex-shrink:0"></div>
+            <span style="font-size:12px;color:var(--fg)">Positivo</span>
+            <span style="font-family:'IBM Plex Mono',monospace;font-size:14px;font-weight:600;color:var(--pos);margin-left:auto">38,4%</span>
+          </div>
+          <div style="display:flex;align-items:center;gap:6px">
+            <div style="width:10px;height:10px;border-radius:50%;background:var(--neu);flex-shrink:0"></div>
+            <span style="font-size:12px;color:var(--fg)">Neutro</span>
+            <span style="font-family:'IBM Plex Mono',monospace;font-size:14px;font-weight:600;color:var(--neu);margin-left:auto">15,4%</span>
+          </div>
+        </div>
+      </div>
+      <p class="source">5,2M menciones Milei · Twitter/X y otras plataformas · AD HOC sep-26</p>
+    </div>
+    <div class="chart-wrap" style="margin-bottom:0">
+      <div class="chart-head">
+        <div><h3>Volumen oposición · sep-26</h3><p>Menciones principales figuras opositoras · en miles</p></div>
+      </div>
+      <div class="chart-box" style="height:160px"><canvas id="chartOposVol"></canvas></div>
+      <p class="source">AD HOC sep-26 · Twitter/X y otras plataformas</p>
+    </div>
+  </div>
+
+  <!-- ISN Scaloneta + Llaryora + Bullrich-Lali -->
+  <p class="sec" style="margin-bottom:12px">Estudios puntuales · Reputación Digital · jul–sep 2026</p>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px;margin-bottom:16px">
+
+    <div class="hallazgo" style="border-left-color:var(--neg)">
+      <div class="hallazgo-head">
+        <span style="font-size:12px;font-weight:600">ISN Scaloneta · Julio 2026</span>
+        <span class="hallazgo-src">RD · 1–8 jul-26 · 162k menciones</span>
+        <span class="hallazgo-dir h-neg">↓ negativo</span>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:6px;margin:6px 0 4px">
+        <div>
+          <div style="font-size:9px;color:var(--fg-dim);letter-spacing:.5px;text-transform:uppercase">Fútbol + política</div>
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:18px;font-weight:500;color:var(--neg)">−72,2</div>
+        </div>
+        <div>
+          <div style="font-size:9px;color:var(--fg-dim);letter-spacing:.5px;text-transform:uppercase">Casa Rosada</div>
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:18px;font-weight:500;color:var(--neg)">−80,5</div>
+        </div>
+        <div>
+          <div style="font-size:9px;color:var(--fg-dim);letter-spacing:.5px;text-transform:uppercase">Milei</div>
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:18px;font-weight:500;color:var(--neg)">−66,9</div>
+        </div>
+        <div>
+          <div style="font-size:9px;color:var(--fg-dim);letter-spacing:.5px;text-transform:uppercase">Emociones</div>
+          <div style="font-size:11px;color:var(--fg);margin-top:3px">Ira <b>36%</b> · Asco <b>31%</b><br>Alegría <b>3%</b></div>
+        </div>
+      </div>
+      <div class="hallazgo-txt">El buen rendimiento deportivo no derramó sentimiento positivo hacia el gobierno.</div>
+    </div>
+
+    <div class="hallazgo" style="border-left-color:var(--neg)">
+      <div class="hallazgo-head">
+        <span style="font-size:12px;font-weight:600">Llaryora bajo fuego cruzado</span>
+        <span class="hallazgo-src">RD · sep-26 · Córdoba</span>
+        <span class="hallazgo-dir h-neg">↓ negativo</span>
+      </div>
+      <div style="margin:6px 0 4px">
+        <div style="font-size:9px;color:var(--fg-dim);letter-spacing:.5px;text-transform:uppercase">ISN Llaryora (Córdoba)</div>
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:28px;font-weight:500;color:var(--neg)">−61</div>
+      </div>
+      <div class="hallazgo-txt">Conversación territorial cordobesa con sentimiento dominantemente negativo hacia el gobernador.</div>
+    </div>
+
+    <div class="hallazgo" style="border-left-color:var(--warn)">
+      <div class="hallazgo-head">
+        <span style="font-size:12px;font-weight:600">Bullrich · Lali · sep-26</span>
+        <span class="hallazgo-src">RD · sep-26 · Nacional</span>
+        <span class="hallazgo-dir h-mix">~ ambivalente</span>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:6px;margin:6px 0 4px">
+        <div>
+          <div style="font-size:9px;color:var(--fg-dim);letter-spacing:.5px;text-transform:uppercase">Diversión/espectáculo</div>
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:18px;font-weight:500;color:var(--pos)">43%</div>
+        </div>
+        <div>
+          <div style="font-size:9px;color:var(--fg-dim);letter-spacing:.5px;text-transform:uppercase">Reproche/política</div>
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:18px;font-weight:500;color:var(--neg)">27%</div>
+        </div>
+      </div>
+      <div class="hallazgo-txt">Tono predominante de espectáculo; lectura política minoritaria pero consistente.</div>
+    </div>
+
+  </div>
+
+  <!-- Serie mensual por fuente -->
+  <p class="sec" style="margin-top:8px">Serie mensual · Reputación Digital · AD HOC · Monitor Digital</p>
+  <div class="chart-wrap" style="padding:0;overflow:hidden">
+    <div class="table-wrap" style="margin:0">
+      <table id="tableSLSerie">
+        <thead>
+          <tr>
+            <th style="width:70px">Mes</th>
+            <th>Reputación Digital</th>
+            <th>AD HOC</th>
+            <th>Monitor Digital</th>
+          </tr>
+        </thead>
+        <tbody id="slSerieRows"></tbody>
+      </table>
+    </div>
+  </div>
+  <p class="source" style="margin-top:6px;margin-bottom:16px">Serie regular mayo 2026 en adelante · informes de otras fuentes en tabla completa al pie · ⚪ sin dato disponible</p>
+
+  <!-- Hallazgos cualitativos -->
+  <p class="sec" style="margin-top:4px">Hallazgos clave · informes con mayor riqueza analítica</p>
+
+  <div class="hallazgo">
+    <div class="hallazgo-head">
+      <span style="font-size:12px;font-weight:600">Índice de Tolerancia Social · Milei</span>
+      <span class="hallazgo-src">Reputación Digital · may-26</span>
+      <span class="hallazgo-dir h-neg">↓ negativo</span>
+    </div>
+    <div class="hallazgo-txt">Tolerancia social hacia Milei en baja. La conversación digital refleja menor disposición a defender públicamente al gobierno, incluso entre votantes propios. Señal de fatiga de imagen antes que de cambio de voto.</div>
+  </div>
+
+  <div class="hallazgo">
+    <div class="hallazgo-head">
+      <span style="font-size:12px;font-weight:600">Índice de Disonancia Narrativa</span>
+      <span class="hallazgo-src">Reputación Digital · jun-26</span>
+      <span class="hallazgo-dir h-neg">⚠ divergente</span>
+    </div>
+    <div class="hallazgo-txt">Alta brecha entre el discurso oficial y la percepción digital ciudadana. Los relatos de éxito económico del gobierno no se replican en la conversación espontánea: predominan referencias a precios, poder adquisitivo y empleo informal.</div>
+  </div>
+
+  <div class="hallazgo">
+    <div class="hallazgo-head">
+      <span style="font-size:12px;font-weight:600">La Scaloneta le da aire al gobierno</span>
+      <span class="hallazgo-src">Reputación Digital · jun-26</span>
+      <span class="hallazgo-dir h-pos">↑ positivo transitorio</span>
+    </div>
+    <div class="hallazgo-txt">Copa del Mundo 2026: el buen desempeño de la selección impulsó sentimiento positivo hacia el gobierno de forma transitoria (+18% menciones positivas Milei durante el torneo). Efecto acotado: no se sostuvo después de la eliminación.</div>
+  </div>
+
+  <div class="hallazgo">
+    <div class="hallazgo-head">
+      <span style="font-size:12px;font-weight:600">Informe Especial La Fatiga Digital</span>
+      <span class="hallazgo-src">AD HOC · ago-26</span>
+      <span class="hallazgo-dir h-mix">~ ambivalente</span>
+    </div>
+    <div class="hallazgo-txt">Fatiga digital del electorado libertario: caída sostenida en engagement de contenidos oficialistas (-31% vs. mar-26). Los críticos mantienen mayor actividad y consistencia. Señal de alerta para el ecosistema digital prooficialista de cara a 2027.</div>
+  </div>
+
+  <div class="hallazgo">
+    <div class="hallazgo-head">
+      <span style="font-size:12px;font-weight:600">Milei 2027: ¿y ahora qué va a pasar?</span>
+      <span class="hallazgo-src">Reputación Digital · sep-26 · Nacional + PBA</span>
+      <span class="hallazgo-dir h-mix">~ mixto</span>
+    </div>
+    <div class="hallazgo-txt">Dos versiones (nacional y PBA): la conversación sobre el escenario electoral 2027 ya está activa en redes desde septiembre. En PBA, Kicillof concentra mayor volumen de mención opositora. A nivel nacional, la incertidumbre sobre la alianza electoral de LLA domina el debate digital.</div>
+  </div>
+
+  <div class="chart-wrap">
+    <div class="chart-head"><div><h3>Informes SL por mes</h3><p>Ene–Oct 2026 · 4 informes Ene-26 = evento puntual (Maduro) · serie regular desde May-26</p></div></div>
+    <div class="chart-box"><canvas id="chartSLMes"></canvas></div>
+  </div>
+
+  <div class="chart-wrap">
+    <div class="chart-head"><div><h3>Informes SL por consultora</h3><p>Ene–Oct 2026</p></div></div>
+    <div class="chart-box" style="height:220px"><canvas id="chartSLConsult"></canvas></div>
+  </div>
+
+  <div class="chart-wrap">
+    <div class="chart-head"><div><h3>Registro completo de informes SL</h3></div></div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Mes</th><th>Consultora</th><th>Informe</th><th>Tipo</th></tr></thead>
+        <tbody id="slRows"></tbody>
+      </table>
     </div>
   </div>
 </section>
 
-<section id="blog">
-  <div class="section-label">Blog &amp; Reflexiones</div>
-  <div class="blog-grid">
-    <a class="blog-card" href="https://ivannatravani.wordpress.com/2024/06/23/reflexion-tomada-prestada-fragmentaria/" target="_blank" rel="noopener">
-      <div class="blog-card-meta"><span class="blog-tag">#Reflexiones</span><span>Jun 2024</span></div>
-      <h3>Honrá tu Flow — Reflexión tomada prestada</h3>
-      <p>Una lista de recordatorios sobre valentía, autonomía y vida: rodéate de quien te sume, no derrames lágrimas por quien no te valora, la vida es un regalo.</p>
-      <span class="read-more">Leer →</span>
-    </a>
-    <a class="blog-card" href="https://ivannatravani.wordpress.com/2023/11/10/acuerdos-comerciales-internacionales-reflexiones/" target="_blank" rel="noopener">
-      <div class="blog-card-meta"><span class="blog-tag">#Data</span><span>Nov 2023</span></div>
-      <h3>Acuerdos comerciales internacionales. Reflexiones</h3>
-      <p>Relectura del clásico de Berlinski y Stancanelli sobre acuerdos comerciales desde un enfoque argentino — ideas que siguen siendo vigentes.</p>
-      <span class="read-more">Leer →</span>
-    </a>
-    <a class="blog-card" href="https://ivannatravani.wordpress.com/2023/10/27/mujeres-liderazgos-proyectos-y-propositos/" target="_blank" rel="noopener">
-      <div class="blog-card-meta"><span class="blog-tag">Género</span><span>Oct 2023</span></div>
-      <h3>Mujeres, liderazgos, proyectos y propósitos</h3>
-      <p>Participación en el taller de liderazgo para mujeres organizado por la Fundación Friedrich Naumann: espacios de diálogo para proyectos y propósitos colectivos.</p>
-      <span class="read-more">Leer →</span>
-    </a>
-    <a class="blog-card" href="https://ivannatravani.wordpress.com/2022/10/20/reforma-electoral-es-calidad-de-la-representacion/" target="_blank" rel="noopener">
-      <div class="blog-card-meta"><span class="blog-tag">#Data</span><span>Oct 2022</span></div>
-      <h3>Reforma Electoral: ¿es calidad de la representación?</h3>
-      <p>Una reforma que favorezca a los partidos tradicionales no tendrá apoyo de los minoritarios. Viejas ideas para abordar problemáticas persistentes.</p>
-      <span class="read-more">Leer →</span>
-    </a>
-    <a class="blog-card" href="https://ivannatravani.wordpress.com/2022/10/10/que-significa-ser-un-lider-en-el-estado-incompetencia-merito-recursoshumanos/" target="_blank" rel="noopener">
-      <div class="blog-card-meta"><span class="blog-tag">#Reflexiones</span><span>Oct 2022</span></div>
-      <h3>¿Qué significa ser un líder en el Estado?</h3>
-      <p>El Principio de Peter aplicado al sector público: "en una jerarquía, todo empleado tiende a ascender hasta su nivel de incompetencia."</p>
-      <span class="read-more">Leer →</span>
-    </a>
-    <a class="blog-card" href="https://ivannatravani.wordpress.com/2022/08/22/por-que-el-acceso-a-servicios-financieros-es-vital-para-el-desarrollo-global/" target="_blank" rel="noopener">
-      <div class="blog-card-meta"><span class="blog-tag">#Data</span><span>Ago 2022</span></div>
-      <h3>¿Por qué el acceso a servicios financieros es vital para el desarrollo global?</h3>
-      <p>Análisis del Global Findex 2021 del Banco Mundial: la revolución digital cataliza el acceso financiero y reduce las disparidades de género.</p>
-      <span class="read-more">Leer →</span>
-    </a>
-  </div>
-  <div class="blog-archive">
-    <h3>Archivo de entradas anteriores</h3>
-    <div class="archive-years">
-      <div class="archive-year">
-        <h4>2022 · Género</h4>
-        <ul>
-          <li><a href="https://ivannatravani.wordpress.com/2022/07/31/igualdad-posible-una-historia-en-la-region/" target="_blank" rel="noopener">Igualdad posible — Una historia en la región</a></li>
-          <li><a href="https://ivannatravani.wordpress.com/2022/07/25/ni-se-puede-ni-se-debe/" target="_blank" rel="noopener">¿Ni se puede ni se debe?</a></li>
-          <li><a href="https://ivannatravani.wordpress.com/2022/06/26/juana-manso/" target="_blank" rel="noopener">Juana Manso</a></li>
-        </ul>
-      </div>
-      <div class="archive-year">
-        <h4>2019 – 2020</h4>
-        <ul>
-          <li><a href="https://ivannatravani.wordpress.com/2020/10/30/winwin/" target="_blank" rel="noopener">#WinWin — Compras públicas e igualdad de género</a></li>
-          <li><a href="https://ivannatravani.wordpress.com/2020/01/26/realdata/" target="_blank" rel="noopener">#RealData — Igualdad de género en datos</a></li>
-          <li><a href="https://ivannatravani.wordpress.com/2019/12/30/sobre-spotlight-onu/" target="_blank" rel="noopener">Sobre #Spotlight — Eliminar la violencia contra las mujeres</a></li>
-        </ul>
-      </div>
-      <div class="archive-year">
-        <h4>2015 – 2018</h4>
-        <ul>
-          <li><a href="https://ivannatravani.wordpress.com/2018/12/21/viajeros-inmoviles/" target="_blank" rel="noopener">Viajeros Inmóviles</a></li>
-          <li><a href="https://ivannatravani.wordpress.com/2016/11/07/activismo-politico-en-internet/" target="_blank" rel="noopener">Activismo Político en Internet</a></li>
-          <li><a href="https://ivannatravani.wordpress.com/2015/12/07/clementina-la-primera-computadora-argentina/" target="_blank" rel="noopener">Clementina — primera computadora argentina</a></li>
-        </ul>
-      </div>
-      <div class="archive-year">
-        <h4>#Reflexiones</h4>
-        <ul>
-          <li><a href="https://ivannatravani.wordpress.com/reflexiones/el-derecho-al-delirio/" target="_blank" rel="noopener">El derecho al delirio — Galeano</a></li>
-          <li><a href="https://ivannatravani.wordpress.com/reflexiones/desiderata/" target="_blank" rel="noopener">#Desiderata</a></li>
-          <li><a href="https://ivannatravani.wordpress.com/reflexiones/" target="_blank" rel="noopener">Todas las reflexiones →</a></li>
-        </ul>
-      </div>
-      <div class="archive-year">
-        <h4>Ver todo</h4>
-        <ul>
-          <li><a href="https://ivannatravani.wordpress.com/" target="_blank" rel="noopener">Todas las entradas →</a></li>
-          <li><a href="https://ivannatravani.wordpress.com/data/" target="_blank" rel="noopener">Sección #Data →</a></li>
-          <li><a href="https://ivannatravani.wordpress.com/socialmedia-feelingmedia/" target="_blank" rel="noopener">Sección #SocialMedia →</a></li>
-        </ul>
-      </div>
+<!-- ── TAB 6: GAP CONV–SL ────────────────────── -->
+<section class="panel" id="tab-gap">
+  <p class="sec">GAP CONV–SL · cruce encuestas × conversación digital</p>
+  <div class="notice">SL estructural cargado (32 informes) · métricas de volumen y sentimiento exactas pendientes · hallazgos cualitativos disponibles en tab Conv. digital</div>
+
+  <div style="display:grid;grid-template-columns:1fr 190px;gap:14px;margin-bottom:20px;align-items:start">
+    <div class="info-box" style="margin-bottom:0;font-size:11px;line-height:1.55">
+      <strong>Zona de acuerdo</strong> — tarjetas a plena opacidad son indicadores donde CONV y SL convergen. El valor es el promedio de ambas lecturas. Rayas = divergentes · muy atenuado = sin dato en una capa.<br>
+      <span style="color:var(--pos);font-weight:600">★ mayor convergencia</span> · <span style="color:var(--neg);font-weight:600">▲ mayor divergencia</span> · <span style="color:var(--warn);font-weight:600">⚑ hallazgo para explorar</span>
+    </div>
+    <div class="chart-wrap" style="margin-bottom:0">
+      <div class="chart-head"><div><h3>Distribución</h3></div></div>
+      <div class="chart-box" style="height:120px"><canvas id="chartGAPDist"></canvas></div>
+      <div class="legend" id="legendGAPDist" style="justify-content:center;margin-top:8px;flex-direction:column;gap:4px"></div>
     </div>
   </div>
+
+  <!-- GRUPO: Principales problemas -->
+  <div class="gap-zone-group">
+    <div class="gap-zone-title">Principales problemas</div>
+    <div class="gap-zone-cards">
+
+      <div class="gap-card zc best-conv">
+        <span class="gap-card-badge" style="color:var(--pos)">★</span>
+        <div class="gap-card-label">Agenda: inflación</div>
+        <div class="gap-card-avg">59,5%</div>
+        <div class="gap-card-sources">
+          <span style="color:var(--c1)">CONV 61</span><span style="color:var(--fg-dim)">·</span><span style="color:var(--c4)">SL 58</span>
+        </div>
+        <div class="gap-card-ev"><span class="gap-delta-badge dc">Δ3 conv.</span></div>
+      </div>
+
+      <div class="gap-card zc">
+        <div class="gap-card-label">Agenda: inseguridad</div>
+        <div class="gap-card-avg">45,5%</div>
+        <div class="gap-card-sources">
+          <span style="color:var(--c1)">CONV 47</span><span style="color:var(--fg-dim)">·</span><span style="color:var(--c4)">SL 44</span>
+        </div>
+        <div class="gap-card-ev"><span class="gap-delta-badge dc">Δ3 conv.</span></div>
+      </div>
+
+      <div class="gap-card zd worst-div explore">
+        <span class="gap-card-badge" style="color:var(--warn)">⚑</span>
+        <div class="gap-card-label">Agenda: desempleo</div>
+        <div class="gap-card-avg sm">23,5%</div>
+        <div class="gap-card-sources">
+          <span style="color:var(--c1)">CONV 29</span><span style="color:var(--fg-dim)">·</span><span style="color:var(--c4)">SL 18</span>
+        </div>
+        <div class="gap-card-ev"><span class="gap-delta-badge dd">Δ11 div.</span> <span class="gap-delta-badge" style="background:transparent;color:var(--neg);padding-left:0">▲</span></div>
+      </div>
+
+      <div class="gap-card zn">
+        <div class="gap-card-label">Agenda: pobreza/educación</div>
+        <div class="gap-card-avg sm">—</div>
+        <div class="gap-card-sources">
+          <span style="color:var(--c1)">CONV 24</span><span style="color:var(--fg-dim)">·</span><span style="color:var(--fg-dim)">SL s/d</span>
+        </div>
+        <div class="gap-card-ev"><span class="gap-delta-badge dn">sin dato SL</span></div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- GRUPO: Imagen · Gestión -->
+  <div class="gap-zone-group">
+    <div class="gap-zone-title">Imagen · Gestión</div>
+    <div class="gap-zone-cards">
+
+      <div class="gap-card zc">
+        <div class="gap-card-label">Imagen negativa Milei</div>
+        <div class="gap-card-avg">51,0%</div>
+        <div class="gap-card-sources">
+          <span style="color:var(--c1)">CONV 53</span><span style="color:var(--fg-dim)">·</span><span style="color:var(--c4)">SL 49</span>
+        </div>
+        <div class="gap-card-ev"><span class="gap-delta-badge dc">Δ4 conv.</span></div>
+      </div>
+
+      <div class="gap-card zc">
+        <div class="gap-card-label">Imagen positiva Milei</div>
+        <div class="gap-card-avg">40,0%</div>
+        <div class="gap-card-sources">
+          <span style="color:var(--c1)">CONV 38</span><span style="color:var(--fg-dim)">·</span><span style="color:var(--c4)">SL 42</span>
+        </div>
+        <div class="gap-card-ev"><span class="gap-delta-badge dc">Δ4 conv.</span></div>
+      </div>
+
+      <div class="gap-card zc explore">
+        <span class="gap-card-badge" style="color:var(--warn)">⚑</span>
+        <div class="gap-card-label">Aprobación de gestión</div>
+        <div class="gap-card-avg">40,5%</div>
+        <div class="gap-card-sources">
+          <span style="color:var(--c1)">CONV 43</span><span style="color:var(--fg-dim)">·</span><span style="color:var(--c4)">SL 38</span>
+        </div>
+        <div class="gap-card-ev"><span class="gap-delta-badge dw">Δ5 límite</span></div>
+      </div>
+
+      <div class="gap-card zn">
+        <div class="gap-card-label">Imagen Kirchner</div>
+        <div class="gap-card-avg sm">—</div>
+        <div class="gap-card-sources">
+          <span style="color:var(--fg-dim)">CONV s/d</span><span style="color:var(--fg-dim)">·</span><span style="color:var(--c4)">SL alto neg.</span>
+        </div>
+        <div class="gap-card-ev"><span class="gap-delta-badge dn">sin dato CONV</span></div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- HALLAZGOS PARA EXPLORAR -->
+  <p class="sec" style="margin-top:4px">Hallazgos para explorar</p>
+
+  <div class="explore-box">
+    <div class="explore-box-head">
+      <span style="font-size:14px">⚑</span>
+      <span class="explore-title">Agenda: desempleo — mayor brecha CONV–SL (Δ11 p.p.)</span>
+      <span class="explore-tag">requiere análisis</span>
+    </div>
+    <div class="explore-body">CONV registra 29% de menciones espontáneas del desempleo como problema principal. SL muestra solo 18% de volumen en conversación digital. La brecha no indica error: CONV mide preocupación declarada cuando se pregunta; SL captura lo que las personas activan espontáneamente en redes. El desempleo aparece como preocupación latente — alta en encuesta, baja en conversación pública. Requiere análisis de qué eventos o contextos activan el tema en redes frente a lo que sostiene su presencia encuestada.</div>
+  </div>
+
+  <div class="explore-box" style="border-left-color:color-mix(in srgb,var(--warn) 50%,transparent)">
+    <div class="explore-box-head">
+      <span style="font-size:14px">⚑</span>
+      <span class="explore-title">Aprobación de gestión — Δ5 p.p. en el límite conv/div</span>
+      <span class="explore-tag" style="background:color-mix(in srgb,var(--fg-dim) 12%,transparent);color:var(--fg-dim)">atención</span>
+    </div>
+    <div class="explore-body">CONV muestra aprobación estable (43%); SL detecta 38%, posiblemente influido por picos de crítica en eventos puntuales (decretos, tarifas). La divergencia puede ser temporal: el promedio mensual SL suaviza picos que la encuesta no captura si su trabajo de campo ocurrió en otro momento del mes. No clasificar como divergente definitivo — monitorear en el próximo corte.</div>
+  </div>
+
+  <!-- GRUPO: Intención de voto (proxy) -->
+  <div class="gap-zone-group" style="margin-top:18px">
+    <div style="display:flex;align-items:baseline;gap:8px;margin-bottom:8px;padding-left:2px">
+      <div class="gap-zone-title" style="margin-bottom:0">Intención de voto</div>
+      <span style="font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:.4px;padding:2px 8px;border-radius:10px;background:color-mix(in srgb,var(--fg-dim) 12%,transparent);color:var(--fg-dim);font-weight:600">PROXY — SL no mide voto directo</span>
+    </div>
+    <div class="gap-zone-cards">
+
+      <div class="gap-card zn">
+        <div class="gap-card-label">Intención voto LLA</div>
+        <div class="gap-card-avg sm">—</div>
+        <div class="gap-card-sources">
+          <span style="color:var(--c1)">CONV 34</span><span style="color:var(--fg-dim)">·</span><span style="color:var(--fg-dim)">SL s/d</span>
+        </div>
+        <div class="gap-card-ev"><span class="gap-delta-badge dn">sin dato SL</span></div>
+      </div>
+
+      <div class="gap-card zn">
+        <div class="gap-card-label">Escenario 2027</div>
+        <div class="gap-card-avg sm">—</div>
+        <div class="gap-card-sources">
+          <span style="color:var(--fg-dim)">CONV s/d</span><span style="color:var(--fg-dim)">·</span><span style="color:var(--c4)">SL 52</span>
+        </div>
+        <div class="gap-card-ev"><span class="gap-delta-badge dn">sin dato CONV</span></div>
+      </div>
+
+    </div>
+  </div>
+
+  <p class="source" style="margin-top:12px">★ mayor convergencia = Agenda: inflación e inseguridad (Δ3) · ▲ mayor divergencia = Agenda: desempleo (Δ11) · ⚑ hallazgo para explorar = indicadores con explicación analítica pendiente · Datos estimados may–sep 2026 · comparabilidad MEDIA–ALTA salvo donde se indica · no promediar capas</p>
 </section>
 
-<section id="areas">
-  <div class="section-label">Áreas temáticas</div>
-  <div class="areas-grid">
-    <div class="area-card">
-      <div class="area-num">01</div>
-      <h3>Fiscal &amp; Federalismo</h3>
-      <p>Análisis de coparticipación, presupuesto subnacional y reforma fiscal. La distribución de recursos entre jurisdicciones como problema político y técnico.</p>
-      <span class="area-tag">#Data · #Fiscal</span>
-    </div>
-    <div class="area-card" id="datos">
-      <div class="area-num">02</div>
-      <h3>Datos y Opinión Pública</h3>
-      <p>Análisis de clima político, social listening y uso estratégico de datos en la gestión gubernamental. Métodos cuali-cuantitativos aplicados a la toma de decisiones.</p>
-      <span class="area-tag">#SocialMedia · #Data · #R · #Python</span>
-    </div>
-    <div class="area-card">
-      <div class="area-num">03</div>
-      <h3>Gobierno Abierto &amp; Gestión</h3>
-      <p>Reforma del Estado, transparencia activa, acceso a la información pública y mérito institucional. Cómo se toman —y cómo deberían tomarse— las decisiones públicas.</p>
-      <span class="area-tag">#GobiernoAbierto · #Reflexiones</span>
-    </div>
-    <div class="area-card">
-      <div class="area-num">04</div>
-      <h3>Cooperación Internacional</h3>
-      <p>Redes académicas UE–América Latina, programas de cooperación universitaria (ALFA III, Jean Monnet) y vinculación institucional con organismos internacionales.</p>
-      <span class="area-tag">#CooperaciónAcadémica · #UE-AL</span>
-    </div>
-  </div>
-</section>
+</main>
 
 <footer>
-  <p>© 2026 Ivanna Vanina Travaini · Buenos Aires, Argentina</p>
-  <p><a href="monitor-ar.html">Monitor AR →</a></p>
+  Monitor AR · oct-26 · uso interno ·
+  <a href="https://ivannatravaini.netlify.app/metodologia" target="_blank">metodología ↗</a>
 </footer>
 
 <script>
-  const btn = document.getElementById('themeBtn');
-  const root = document.documentElement;
-  try {
-    const saved = localStorage.getItem('it-theme') || 'dark';
-    root.setAttribute('data-theme', saved);
-    btn.textContent = saved === 'dark' ? '☀' : '☽';
-  } catch(e) {
-    root.setAttribute('data-theme', 'dark');
-    btn.textContent = '☀';
-  }
-  btn.addEventListener('click', () => {
-    const current = root.getAttribute('data-theme');
-    const next = current === 'dark' ? 'light' : 'dark';
-    root.setAttribute('data-theme', next);
-    btn.textContent = next === 'dark' ? '☀' : '☽';
-    try { localStorage.setItem('it-theme', next); } catch(e) {}
+/* ── THEME ─────────────────────────────────── */
+const chartRegistry={};
+(function(){try{const t=localStorage.getItem('mar-theme');if(t)document.documentElement.setAttribute('data-theme',t);}catch(e){}})();
+function toggleTheme(){
+  const r=document.documentElement;
+  const next=r.getAttribute('data-theme')==='dark'?'light':'dark';
+  r.setAttribute('data-theme',next);
+  try{localStorage.setItem('mar-theme',next);}catch(e){}
+  Object.keys(chartRegistry).forEach(k=>{try{chartRegistry[k].destroy();}catch(e){} delete chartRegistry[k];});
+  Object.keys(tabInited).forEach(k=>{tabInited[k]=false;});
+  const at=document.querySelector('.tab-btn.active')?.dataset.tab;
+  if(at)initTab(at);
+}
+
+/* ── TABS ──────────────────────────────────── */
+const tabInited={};
+document.querySelectorAll('.tab-btn').forEach(btn=>{
+  btn.addEventListener('click',()=>{
+    document.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active'));
+    document.querySelectorAll('.panel').forEach(p=>p.classList.remove('active'));
+    btn.classList.add('active');
+    document.getElementById('tab-'+btn.dataset.tab).classList.add('active');
+    history.replaceState(null,'','#'+btn.dataset.tab);
+    initTab(btn.dataset.tab);
   });
+});
+(function(){const h=location.hash.replace('#','');if(h){const b=document.querySelector(`[data-tab="${h}"]`);if(b)b.click();}})();
+
+/* ── HELPERS ───────────────────────────────── */
+function cv(v){const d=document.createElement('div');d.style.color=v;document.body.appendChild(d);const c=getComputedStyle(d).color;document.body.removeChild(d);return c;}
+function tok(t){return getComputedStyle(document.documentElement).getPropertyValue(t).trim();}
+
+/* ── DATASET TOGGLE via custom legend ───────── */
+function toggleDataset(chartId,idx){
+  const ch=chartRegistry[chartId];if(!ch)return;
+  const ds=ch.data.datasets[idx];
+  const hidden=ch.getDatasetMeta(idx).hidden;
+  ch.getDatasetMeta(idx).hidden=!hidden;
+  ch.update();
+  // update legend item style
+  const items=document.querySelectorAll(`#legend${chartId.replace('chart','')} .legend-item`);
+  if(items[idx]) items[idx].classList.toggle('muted',!hidden);
+}
+
+/* ── DATA ──────────────────────────────────── */
+const MESI=['Sep-25','Oct-25','Nov-25','Dic-25','Ene-26','Feb-26','Mar-26','Abr-26','May-26','Jun-26','Jul-26','Ago-26','Sep-26'];
+const MIPC=['Sep-25','Oct-25','Nov-25','Dic-25','Ene-26','Feb-26','Mar-26','Abr-26','May-26','Jun-26','Jul-26','Ago-26'];
+const IPC=[2.1,2.3,2.5,2.8,2.9,2.9,3.4,2.6,2.1,1.9,2.1,1.7];
+const ICC=[39.8,42.3,46.0,45.6,46.6,44.4,42.0,39.6,40.1,42.7,40.7,40.2,41.2];
+const ICG=[1.9,2.1,2.5,2.5,2.4,2.4,2.3,2.0,2.0,2.1,1.9,2.1,1.9];
+
+/* INFLACIÓN — series combinadas */
+// Labels: abarca sep-25 → sep-26 (13 puntos)
+const MINFL=['Sep-25','Oct-25','Nov-25','Dic-25','Ene-26','Feb-26','Mar-26','Abr-26','May-26','Jun-26','Jul-26','Ago-26','Sep-26'];
+// IPC INDEC nacional: sep-25→ago-26 disponible; sep-26 pendiente
+const IPC_FULL=[2.1,2.3,2.5,2.8,2.9,2.9,3.4,2.6,2.1,1.9,2.1,1.7,null];
+// IPCBA IDECBA CABA: may-26→sep-26
+const IPCBA_FULL=[2.2,2.2,2.4,2.7,3.1,2.6,3.0,2.5,2.1,1.8,2.9,1.7,1.8];
+// Brecha (overlap may-ago, 4 puntos) para gráfico separado
+const MBRECHA=['May-26','Jun-26','Jul-26','Ago-26'];
+const BRECHA=[0.0,-0.1,0.8,0.0]; // IPCBA − IPC
+
+const TIPCBA_MES=['May-26','Jun-26','Jul-26','Ago-26','Sep-26'];
+const TIPCBA_IA=[33.1,32.6,33.2,33.3,32.9];
+const TIPCBA_BIENES=[2.0,1.5,1.4,1.6,1.6];
+const TIPCBA_SERV=[2.2,2.0,3.8,1.8,2.0];
+const TIPCBA_ESTAC=[0.1,0.1,10.9,-2.9,2.3];
+const TIPCBA_REG=[2.8,2.0,3.0,1.8,2.1];
+const TIPCBA_VAR=[2.1,1.8,2.9,1.7,1.8];
+const TIPCBA_ACUM=[14.0,16.0,19.4,21.5,23.7];
+
+const MV=['Feb-26','Mar-26','Abr-26','May-26','Jun-26','Jul-26','Ago-26','Sep-26','Oct-26'];
+const CONS={
+  Synopsis:  {color:'var(--c1)',lla:[null,null,null,30.3,null,33.9,null,35.5,33.6],pj:[null,null,null,32.9,null,33.9,null,35.7,32.7]},
+  Proyección:{color:'var(--c2)',lla:[43.6,null,34,32.3,34.8,34.8,32.5,35,null],  pj:[35.9,null,32.8,36,33.7,33.7,36.6,31.9,null]},
+  Isasi:     {color:'var(--c3)',lla:[null,null,44,40,40,35,40,null,null],           pj:[null,null,21,24,23,23,27,null,null]},
+  'Eq. Mide':{color:'var(--c4)',lla:[null,null,null,29,null,31,null,null,33],       pj:[null,null,null,32,null,31,null,null,33]},
+  Zuban:     {color:'var(--c5)',lla:[null,null,null,22.1,null,null,28,30.1,null],   pj:[null,null,null,28.4,null,null,31.3,34,null]}
+};
+const lastRows=[
+  {name:'Synopsis',  p:'Sep-26',lla:33.6,pj:32.7,d:-1.9,n:'~2000',met:'Mixto'},
+  {name:'Proyección',p:'Ago-26',lla:32.5,pj:36.6,d:-2.3,n:'~1500',met:'Panel online'},
+  {name:'Isasi',     p:'Ago-26',lla:40,  pj:27,  d:5,   n:'2055', met:'Panel online'},
+  {name:'Eq. Mide',  p:'Oct-26',lla:33,  pj:33,  d:2,   n:'—',    met:'—'},
+  {name:'Zuban',     p:'Sep-26',lla:30.1,pj:34,  d:2.1, n:'~1800',met:'Mixto'},
+];
+
+const MI=['May-26','Jun-26','Jul-26','Ago-26','Sep-26'];
+const IMG={
+  Synopsis: {color:'var(--c1)',neg:[58.1,null,null,55.3,null], pos:[29.2,null,null,33.9,null]},
+  Trends:   {color:'var(--c2)',neg:[null,57,null,null,null],   pos:[null,42,null,null,null]},
+  Giacobbe: {color:'var(--c3)',neg:[null,55,null,null,null],   pos:[null,34.2,null,null,null]},
+  Isasi:    {color:'var(--c4)',neg:[null,null,44,46,null],     pos:[null,42,43,38,null]},
+  'D\'Alessio':{color:'var(--c5)',neg:[null,null,null,null,null],pos:[36,null,null,34,null]},
+  'Zuban':  {color:'var(--neu)', neg:[null,null,null,null,61.8],pos:[null,null,null,null,36]}
+};
+const MG=['May-26','Jun-26','Jul-26','Ago-26','Sep-26'];
+const GESTION={
+  Proyección:{color:'var(--c2)',aprob:[34.0,39.8,39.4,39.7,42.0],desaprob:[null,null,null,null,null]},
+  Isasi:     {color:'var(--c4)',aprob:[null,45.0,46.0,48.0,null], desaprob:[null,48.0,47.0,42.0,null]},
+  Vozna:     {color:'var(--c5)',aprob:[null,null,null,null,null],  desaprob:[null,null,57.6,null,61.9]},
+  Synopsis:  {color:'var(--c1)',aprob:[31.3,null,null,null,null],  desaprob:[54.5,null,null,null,null]}
+};
+// Cross-analysis: Isasi-Burdman measures BOTH variables → divergence visible within same consultora
+const CROSS_MES=['Jun-26','Jul-26','Ago-26'];
+const CROSS={
+  imgPos:  {label:'Imagen positiva (Isasi-Burdman) ↓',  color:'var(--c4)', data:[42,43,38]},
+  gestAprob:{label:'Aprobación gestión (Isasi-Burdman) ↑',color:'var(--pos)',data:[45,46,48]},
+  imgNeg:  {label:'Imagen negativa (Isasi-Burdman) ↑',  color:'var(--neg)', data:[null,44,46]},
+  gestDesaprob:{label:'Desaprobación gestión (Isasi-Burdman) ↓',color:'var(--warn)',data:[48,47,42]}
+};
+
+// ISN mensual Reputación Digital
+const ISN_RD_MES=['Ago-26','Sep-26'];
+const ISN_RD_VALS=[-43,-33];
+// ISN por eje del relato Q2 RD
+const ISN_EJE_LABELS=['Grandeza','Esfuerzo','Acompañamiento','Orden económico','Seguridad','Batalla cultural'];
+const ISN_EJE_VALS=[-31.9,-34.8,-57.2,-63.7,-70.7,-93.1];
+// AD HOC Sep: Milei sentimiento
+const MILEI_SEP_LABELS=['Negativo','Positivo','Neutro'];
+const MILEI_SEP_VALS=[46.2,38.4,15.4];
+// AD HOC Sep: volumen oposición (miles)
+const OPOS_LABELS=['Kicillof','CFK','Bregman','Bullrich','Massa'];
+const OPOS_VALS=[580,248,138,122,118];
+const MSL_MES=['Ene-26','Feb-26','Mar-26','Abr-26','May-26','Jun-26','Jul-26','Ago-26','Sep-26','Oct-26'];
+const SL_POR_MES=[4,0,0,0,3,8,3,6,6,2];
+const SL_CONSULT_LABELS=['Reputación Digital','EUNOMIA','Monitor Digital','AD HOC','DtoD','PLURAL','ALTICA','SUSTANTIVA','Otros'];
+const SL_CONSULT_VALS=[12,3,2,4,1,1,1,2,6];
+const SL_INFORMES=[
+  {mes:'Ene-26',consultora:'DtoD',titulo:'Radiografía digital · detención de Maduro',tipo:'Evento puntual'},
+  {mes:'Ene-26',consultora:'PLURAL',titulo:'Análisis Discursivo Donald Trump',tipo:'Evento puntual'},
+  {mes:'Ene-26',consultora:'ALTICA',titulo:'Detención Nicolás Maduro · Panel LATAM',tipo:'Evento puntual'},
+  {mes:'Ene-26',consultora:'ENTER COM.',titulo:'Radiografía digital · detención de Maduro',tipo:'Evento puntual'},
+  {mes:'May-26',consultora:'EUNOMIA',titulo:'Termómetro digital PBA (Abr-May)',tipo:'Monitoreo regular'},
+  {mes:'May-26',consultora:'REPUTACIÓN DIGITAL',titulo:'Índice de Tolerancia Social Milei',tipo:'Ad hoc temático'},
+  {mes:'May-26',consultora:'ZUBAN CÓRDOBA',titulo:'Estoy perdiendo imagen a tu lado',tipo:'Ad hoc temático'},
+  {mes:'Jun-26',consultora:'MONITOR DIGITAL',titulo:'Messi en el Olimpo de las redes del mundo',tipo:'Evento puntual'},
+  {mes:'Jun-26',consultora:'GLOBAL NEWS',titulo:'Copa del mundo 2026',tipo:'Evento puntual'},
+  {mes:'Jun-26',consultora:'REPUTACIÓN DIGITAL',titulo:'La Scaloneta le da aire al gobierno',tipo:'Ad hoc temático'},
+  {mes:'Jun-26',consultora:'AD HOC',titulo:'Informe de Conversación Digital',tipo:'Monitoreo regular'},
+  {mes:'Jun-26',consultora:'REPUTACIÓN DIGITAL',titulo:'Índice de Disonancia Narrativa',tipo:'Ad hoc temático'},
+  {mes:'Jun-26',consultora:'REPUTACIÓN DIGITAL',titulo:'Conv. digital exige renuncia de Adorni',tipo:'Ad hoc temático'},
+  {mes:'Jun-26',consultora:'REPUTACIÓN DIGITAL',titulo:'Informe de credibilidad de Adorni',tipo:'Ad hoc temático'},
+  {mes:'Jun-26',consultora:'REPUTACIÓN DIGITAL',titulo:'Resumen Ejecutivo credibilidad Adorni',tipo:'Ad hoc temático'},
+  {mes:'Jul-26',consultora:'MONITOR DIGITAL',titulo:'La derrota ante España convirtió a la argentinidad',tipo:'Evento puntual'},
+  {mes:'Jul-26',consultora:'Ad Hoc',titulo:'Informe Ad Hoc · Julio 2026',tipo:'Monitoreo regular'},
+  {mes:'Jul-26',consultora:'REPUTACIÓN DIGITAL',titulo:'La Scaloneta le da aire · raíz campaña',tipo:'Ad hoc temático'},
+  {mes:'Ago-26',consultora:'AD HOC',titulo:'Informe Especial La Fatiga Digital',tipo:'Ad hoc temático'},
+  {mes:'Ago-26',consultora:'EUNOMIA',titulo:'Del ingreso al atraso · Mora Bancaria',tipo:'Ad hoc temático'},
+  {mes:'Ago-26',consultora:'SUSTANTIVA',titulo:'Informe Influencers Oficialismo',tipo:'Ad hoc temático'},
+  {mes:'Ago-26',consultora:'EUNOMIA',titulo:'Escucha social Ley de tierras',tipo:'Ad hoc temático'},
+  {mes:'Ago-26',consultora:'COMPOL UBA',titulo:'Lo que viraliza no convence',tipo:'Ad hoc temático'},
+  {mes:'Ago-26',consultora:'SUSTANTIVA',titulo:'Informe China EEUU · El caso CALF-Huawei',tipo:'Ad hoc temático'},
+  {mes:'Sep-26',consultora:'REPUTACIÓN DIGITAL',titulo:'Milei 2027 · ¿y ahora qué va a pasar? (Nacional)',tipo:'Ad hoc temático'},
+  {mes:'Sep-26',consultora:'REPUTACIÓN DIGITAL',titulo:'Milei 2027 · ¿y ahora qué va a pasar? (PBA)',tipo:'Ad hoc temático'},
+  {mes:'Sep-26',consultora:'REPUTACIÓN DIGITAL',titulo:'Escucha social sobre video de Milei',tipo:'Ad hoc temático'},
+  {mes:'Sep-26',consultora:'REPUTACIÓN DIGITAL',titulo:'Llaryora bajo fuego cruzado (Córdoba)',tipo:'Ad hoc temático'},
+  {mes:'Sep-26',consultora:'REPUTACIÓN DIGITAL',titulo:'Informe Bullrich · Lali',tipo:'Ad hoc temático'},
+  {mes:'Sep-26',consultora:'AD HOC',titulo:'Informe Digital · Septiembre',tipo:'Monitoreo regular'},
+  {mes:'Oct-26',consultora:'QSOCIAL',titulo:'Carrusel Estimaciones Electorales',tipo:'Ad hoc temático'},
+  {mes:'Oct-26',consultora:'NARRAGLOBAL',titulo:'Despedida Messi',tipo:'Evento puntual'},
+];
+
+/* ── CHART HELPERS ──────────────────────────── */
+function baseOpts(){
+  return{
+    responsive:true,maintainAspectRatio:false,
+    plugins:{legend:{display:false},tooltip:{mode:'index',intersect:false}},
+    scales:{
+      x:{ticks:{font:{family:"'IBM Plex Mono',monospace",size:10},color:tok('--fg-dim')},grid:{color:tok('--border')}},
+      y:{ticks:{font:{family:"'IBM Plex Mono',monospace",size:10},color:tok('--fg-dim')},grid:{color:tok('--border')}}
+    }
+  };
+}
+function mkLine(id,labels,datasets){
+  const ctx=document.getElementById(id);if(!ctx)return;
+  if(chartRegistry[id])try{chartRegistry[id].destroy();}catch(e){}
+  chartRegistry[id]=new Chart(ctx,{
+    type:'line',
+    data:{labels,datasets:datasets.map(d=>({
+      label:d.label,data:d.data,
+      borderColor:cv(d.color),backgroundColor:'transparent',
+      borderWidth:2,pointRadius:3,pointHoverRadius:5,tension:0.3,spanGaps:false
+    }))},
+    options:{...baseOpts()}
+  });
+}
+function mkBar(id,labels,datasets,opts={}){
+  const ctx=document.getElementById(id);if(!ctx)return;
+  if(chartRegistry[id])try{chartRegistry[id].destroy();}catch(e){}
+  chartRegistry[id]=new Chart(ctx,{
+    type:'bar',
+    data:{labels,datasets:datasets.map(d=>({
+      label:d.label,data:d.data,backgroundColor:cv(d.color),borderRadius:3
+    }))},
+    options:{...baseOpts(),...opts}
+  });
+}
+function mkGroupBar(id,labels,datasets){
+  const ctx=document.getElementById(id);if(!ctx)return;
+  if(chartRegistry[id])try{chartRegistry[id].destroy();}catch(e){}
+  chartRegistry[id]=new Chart(ctx,{
+    type:'bar',
+    data:{labels,datasets:datasets.map(d=>({
+      label:d.label,data:d.data,backgroundColor:cv(d.color),borderRadius:2
+    }))},
+    options:{...baseOpts()}
+  });
+}
+
+/* ── LEGEND with TOGGLE ─────────────────────── */
+function buildLegend(legendId,chartId,names,colors){
+  const el=document.getElementById(legendId);if(!el)return;
+  el.innerHTML=names.map((n,i)=>`
+    <div class="legend-item" onclick="toggleDataset('${chartId}',${i})">
+      <div class="legend-dot" style="background:${cv(colors[i])}"></div>${n}
+    </div>`).join('');
+}
+
+/* ── TABLAS ESTÁTICAS ───────────────────────── */
+(function(){
+  // Voto
+  const tb=document.getElementById('tableVoto');if(!tb)return;
+  lastRows.forEach(r=>{
+    const cl=r.d>0?'up':r.d<0?'down':'';
+    tb.innerHTML+=`<tr>
+      <td>${r.name}</td><td class="num">${r.p}</td>
+      <td class="num">${r.lla}</td><td class="num">${r.pj}</td>
+      <td class="num ${cl}">${r.d>0?'+':''}${r.d}</td>
+      <td class="num">${r.n}</td><td>${r.met}</td>
+    </tr>`;
+  });
+})();
+(function(){
+  // TEM
+  const tb=document.getElementById('tableTEM');if(!tb)return;
+  TIPCBA_MES.forEach((mes,i)=>{
+    const estCls=TIPCBA_ESTAC[i]>5?'up':TIPCBA_ESTAC[i]<0?'down':'';
+    tb.innerHTML+=`<tr>
+      <td class="num">${mes}</td>
+      <td class="num">${TIPCBA_VAR[i].toFixed(1)}</td>
+      <td class="num">${TIPCBA_IA[i].toFixed(1)}</td>
+      <td class="num">${TIPCBA_ACUM[i].toFixed(1)}</td>
+      <td class="num">${TIPCBA_BIENES[i].toFixed(1)}</td>
+      <td class="num">${TIPCBA_SERV[i].toFixed(1)}</td>
+      <td class="num ${estCls}">${TIPCBA_ESTAC[i].toFixed(1)}</td>
+      <td class="num">${TIPCBA_REG[i].toFixed(1)}</td>
+    </tr>`;
+  });
+})();
+(function(){
+  // SL monthly series table (Reputación Digital · AD HOC · Monitor Digital from May onward)
+  const stbody=document.getElementById('slSerieRows');
+  if(stbody){
+    const SERIE_MESES=['May-26','Jun-26','Jul-26','Ago-26','Sep-26','Oct-26'];
+    const FUENTES=['REPUTACIÓN DIGITAL','AD HOC','MONITOR DIGITAL'];
+    const normalize=s=>s.toUpperCase().replace(/[^A-Z0-9]/g,' ').replace(/\s+/g,' ').trim();
+    const fNorm=FUENTES.map(normalize);
+    SERIE_MESES.forEach(mes=>{
+      const items=SL_INFORMES.filter(r=>r.mes===mes);
+      const cells=fNorm.map(fn=>{
+        const match=items.filter(r=>normalize(r.consultora).includes(fn.split(' ')[0])||fn.includes(normalize(r.consultora)));
+        if(!match.length)return `<td style="color:var(--fg-dim);font-size:11px">⚪ —</td>`;
+        const list=match.map(r=>`<div style="margin-bottom:2px">· ${r.titulo}</div>`).join('');
+        return `<td style="font-size:11px;line-height:1.4">${list}</td>`;
+      });
+      stbody.innerHTML+=`<tr><td class="num" style="font-family:'IBM Plex Mono',monospace;font-weight:500;white-space:nowrap">${mes}</td>${cells.join('')}</tr>`;
+    });
+  }
+})();
+(function(){
+  // SL rows
+  const tbody=document.getElementById('slRows');if(!tbody)return;
+  const tipoColor={
+    'Monitoreo regular':cv('var(--pos)'),
+    'Ad hoc temático':cv('var(--c2)'),
+    'Evento puntual':cv('var(--fg-dim)')
+  };
+  tbody.innerHTML=SL_INFORMES.map(r=>{
+    const col=tipoColor[r.tipo]||cv('var(--fg-dim)');
+    return `<tr>
+      <td class="num">${r.mes}</td>
+      <td>${r.consultora}</td>
+      <td>${r.titulo}</td>
+      <td><span style="font-size:10px;font-weight:500;color:${col}">${r.tipo}</span></td>
+    </tr>`;
+  }).join('');
+})();
+
+/* ── GAP DATA ────────────────────────────────── */
+// 10 indicadores: inflación, inseguridad, desempleo, pobreza/educ, img neg, img pos, aprobación, kirchner, voto LLA, escenario 2027
+const GAP_STATUS=['conv','conv','div','nd','conv','conv','conv','nd','nd','nd'];
+
+/* ── BRECHA color helper ─────────────────────── */
+function brechaColor(v){
+  if(v>0.1)return cv('var(--neg)');
+  if(v<-0.1)return cv('var(--pos)');
+  return cv('var(--fg-dim)');
+}
+
+/* ── INIT TAB ────────────────────────────────── */
+function initTab(tab){
+  if(tabInited[tab])return;
+  tabInited[tab]=true;
+
+  if(tab==='indicadores'){
+    mkLine('chartInflComp',MINFL,[
+      {label:'IPC INDEC nacional',data:IPC_FULL,color:'var(--c1)'},
+      {label:'IPCBA CABA (IDECBA)',data:IPCBA_FULL,color:'var(--c4)'}
+    ]);
+    buildLegend('legendInflComp','chartInflComp',
+      ['IPC INDEC nacional','IPCBA CABA (IDECBA)'],
+      ['var(--c1)','var(--c4)']);
+    mkLine('chartICC',MESI,[{label:'ICC',data:ICC,color:'var(--c2)'}]);
+    mkLine('chartICG',MESI,[{label:'ICG',data:ICG,color:'var(--c3)'}]);
+  }
+
+  if(tab==='voto'){
+    const ns=Object.keys(CONS),cs=ns.map(n=>CONS[n].color);
+    mkLine('chartLLA',MV,ns.map(n=>({label:n,data:CONS[n].lla,color:CONS[n].color})));
+    mkLine('chartPJ', MV,ns.map(n=>({label:n,data:CONS[n].pj, color:CONS[n].color})));
+    buildLegend('legendLLA','chartLLA',ns,cs);
+    buildLegend('legendPJ', 'chartPJ', ns,cs);
+  }
+
+  if(tab==='imagen'){
+    const ns=Object.keys(IMG),cs=ns.map(n=>IMG[n].color);
+    mkLine('chartNeg',MI,ns.map(n=>({label:n,data:IMG[n].neg,color:IMG[n].color})));
+    mkLine('chartPos',MI,ns.map(n=>({label:n,data:IMG[n].pos,color:IMG[n].color})));
+    buildLegend('legendNeg','chartNeg',ns,cs);
+    buildLegend('legendPos','chartPos',ns,cs);
+    const gns=Object.keys(GESTION),gcs=gns.map(n=>GESTION[n].color);
+    mkLine('chartGestion',MG,gns.map(n=>({label:n,data:GESTION[n].aprob,color:GESTION[n].color})));
+    buildLegend('legendGestion','chartGestion',gns,gcs);
+    // Cross charts
+    mkLine('chartCrossPos',CROSS_MES,[
+      {label:CROSS.imgPos.label,    data:CROSS.imgPos.data,    color:CROSS.imgPos.color},
+      {label:CROSS.gestAprob.label, data:CROSS.gestAprob.data, color:CROSS.gestAprob.color}
+    ]);
+    buildLegend('legendCrossPos','chartCrossPos',
+      [CROSS.imgPos.label,CROSS.gestAprob.label],
+      [CROSS.imgPos.color,CROSS.gestAprob.color]);
+    mkLine('chartCrossNeg',CROSS_MES,[
+      {label:CROSS.imgNeg.label,      data:CROSS.imgNeg.data,      color:CROSS.imgNeg.color},
+      {label:CROSS.gestDesaprob.label,data:CROSS.gestDesaprob.data,color:CROSS.gestDesaprob.color}
+    ]);
+    buildLegend('legendCrossNeg','chartCrossNeg',
+      [CROSS.imgNeg.label,CROSS.gestDesaprob.label],
+      [CROSS.imgNeg.color,CROSS.gestDesaprob.color]);
+    // Full gestión trend
+    mkLine('chartGestionFull',MG,[
+      {label:'Proyección · aprobación',data:GESTION.Proyección.aprob,color:'var(--c2)'},
+      {label:'Isasi-Burdman · aprobación',data:GESTION.Isasi.aprob,color:'var(--c4)'},
+      {label:'Isasi-Burdman · imagen positiva',data:IMG.Isasi.pos,color:'var(--warn)'}
+    ]);
+    buildLegend('legendGestionFull','chartGestionFull',
+      ['Proyección · aprobación','Isasi-Burdman · aprobación','Isasi-Burdman · imagen positiva'],
+      ['var(--c2)','var(--c4)','var(--warn)']);
+  }
+
+  if(tab==='gap'){
+    const counts=[
+      GAP_STATUS.filter(s=>s==='conv').length,
+      GAP_STATUS.filter(s=>s==='div').length,
+      GAP_STATUS.filter(s=>s==='nd').length
+    ];
+    const ctx2=document.getElementById('chartGAPDist');
+    if(ctx2&&!chartRegistry['chartGAPDist']){
+      chartRegistry['chartGAPDist']=new Chart(ctx2,{
+        type:'doughnut',
+        data:{
+          labels:[`Convergente (${counts[0]})`,`Divergente (${counts[1]})`,`Sin dato (${counts[2]})`],
+          datasets:[{data:counts,backgroundColor:[cv('var(--pos)'),cv('var(--neg)'),cv('var(--fg-dim)')],borderWidth:0,hoverOffset:4}]
+        },
+        options:{
+          responsive:true,maintainAspectRatio:false,cutout:'68%',
+          plugins:{legend:{display:false},tooltip:{callbacks:{label:(c)=>`${c.label}`}}}
+        }
+      });
+    }
+    buildLegend('legendGAPDist','chartGAPDist',
+      [`Convergente (${counts[0]})`,`Divergente (${counts[1]})`,`Sin dato (${counts[2]})`],
+      ['var(--pos)','var(--neg)','var(--fg-dim)']);
+  }
+
+  if(tab==='sl'){
+    // ISN mensual line
+    mkLine('chartISNMensual',ISN_RD_MES,[{label:'ISN Reputación Digital',data:ISN_RD_VALS,color:'var(--neg)'}],{
+      plugins:{legend:{display:false}},
+      scales:{
+        x:{ticks:{font:{family:"'IBM Plex Mono',monospace",size:10},color:tok('--fg-dim')},grid:{color:tok('--border')}},
+        y:{min:-100,max:0,ticks:{font:{family:"'IBM Plex Mono',monospace",size:10},color:tok('--fg-dim')},grid:{color:tok('--border')}}
+      }
+    });
+    // ISN por eje del relato — horizontal bar
+    mkBar('chartISNEje',ISN_EJE_LABELS,[{label:'ISN',data:ISN_EJE_VALS,color:'var(--neg)'}],{
+      indexAxis:'y',
+      plugins:{legend:{display:false}},
+      scales:{
+        x:{min:-100,max:0,ticks:{font:{family:"'IBM Plex Mono',monospace",size:10},color:tok('--fg-dim')},grid:{color:tok('--border')}},
+        y:{ticks:{font:{family:"'IBM Plex Mono',monospace",size:10},color:tok('--fg-dim')},grid:{display:false}}
+      }
+    });
+    // Milei sentimiento Sep — doughnut
+    const ctxMilei=document.getElementById('chartMileiSentSep');
+    if(ctxMilei&&!chartRegistry['chartMileiSentSep']){
+      chartRegistry['chartMileiSentSep']=new Chart(ctxMilei,{
+        type:'doughnut',
+        data:{
+          labels:MILEI_SEP_LABELS,
+          datasets:[{data:MILEI_SEP_VALS,backgroundColor:[cv('var(--neg)'),cv('var(--pos)'),cv('var(--fg-dim)')],borderWidth:0,hoverOffset:4}]
+        },
+        options:{
+          responsive:true,maintainAspectRatio:false,cutout:'65%',
+          plugins:{legend:{display:false},tooltip:{callbacks:{label:(c)=>`${c.label}: ${c.raw}%`}}}
+        }
+      });
+    }
+    // Oposición volumen — horizontal bar multi-color
+    const oposColors=['var(--c2)','var(--c3)','var(--c4)','var(--c5)','var(--c1)'];
+    mkBar('chartOposVol',OPOS_LABELS,[{label:'Miles de menciones',data:OPOS_VALS,color:'var(--c2)'}],{
+      indexAxis:'y',
+      plugins:{legend:{display:false}},
+      scales:{
+        x:{ticks:{font:{family:"'IBM Plex Mono',monospace",size:10},color:tok('--fg-dim')},grid:{color:tok('--border')}},
+        y:{ticks:{font:{family:"'IBM Plex Mono',monospace",size:10},color:tok('--fg-dim')},grid:{display:false}}
+      }
+    });
+    // SL por mes
+    mkBar('chartSLMes',MSL_MES,[{label:'Informes SL',data:SL_POR_MES,color:'var(--c1)'}],{
+      plugins:{legend:{display:false}},
+      scales:{
+        x:{ticks:{font:{family:"'IBM Plex Mono',monospace",size:10},color:tok('--fg-dim')},grid:{color:tok('--border')}},
+        y:{ticks:{font:{family:"'IBM Plex Mono',monospace",size:10},color:tok('--fg-dim'),stepSize:1},grid:{color:tok('--border')}}
+      }
+    });
+    mkBar('chartSLConsult',SL_CONSULT_LABELS,[{label:'Informes',data:SL_CONSULT_VALS,color:'var(--c2)'}],{
+      indexAxis:'y',
+      plugins:{legend:{display:false}},
+      scales:{
+        x:{ticks:{font:{family:"'IBM Plex Mono',monospace",size:10},color:tok('--fg-dim')},grid:{color:tok('--border')}},
+        y:{ticks:{font:{family:"'IBM Plex Mono',monospace",size:10},color:tok('--fg-dim')},grid:{display:false}}
+      }
+    });
+  }
+}
+
+initTab('indicadores');
 </script>
+
+</body></html>
