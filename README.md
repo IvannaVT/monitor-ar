@@ -8,8 +8,8 @@ Dashboard de seguimiento longitudinal de indicadores de opinión pública (encue
 
 ## Contenido
 
-- `index.html` — página de entrada (redirige al monitor)
-- `monitor-ar.html` — dashboard principal
+- `index.html` — (https://ivannavtravaini.netlify.app/)
+- `monitor-ar.html` — [dashboard principal] (https://ivannavtravaini.netlify.app/monitor-ar.html)
 
 ## Deploy
 
