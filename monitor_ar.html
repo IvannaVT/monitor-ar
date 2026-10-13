@@ -179,9 +179,9 @@ footer a{color:var(--accent)}
   <p class="sec">Clima macroeconómico · Argentina</p>
   <div class="kpi-grid">
     <div class="kpi">
-      <div class="kpi-label">IPC ago-26</div>
-      <div class="kpi-num">1,7%</div>
-      <div class="kpi-meta"><span class="arrow down">↓</span><span class="kpi-sub">INDEC · mensual</span></div>
+      <div class="kpi-label">IPC sep-26</div>
+      <div class="kpi-num">1,9%</div>
+      <div class="kpi-meta"><span class="arrow up">↑</span><span class="kpi-sub">INDEC · mensual · vs 1,7% ago</span></div>
     </div>
     <div class="kpi">
       <div class="kpi-label">IPCBA sep-26</div>
@@ -205,7 +205,7 @@ footer a{color:var(--accent)}
     </div>
     <div class="chart-box"><canvas id="chartInflComp"></canvas></div>
     <div class="legend" id="legendInflComp"></div>
-    <p class="source">IPC INDEC nacional: sep-25→ago-26 · IPCBA IDECBA/GCBA: serie completa sep-25→sep-26 · IPC sep-26 INDEC pendiente</p>
+    <p class="source">IPC INDEC nacional: sep-25→sep-26 (1,9% sep · acum. 23,6% · interanual 33,4%) · IPCBA IDECBA/GCBA: serie completa sep-25→sep-26</p>
   </div>
   <div class="chart-wrap">
     <div class="chart-head"><div><h3>ICC · Confianza del consumidor</h3><p>Sep-25 → Sep-26 · UTDT</p></div></div>
@@ -1233,8 +1233,8 @@ function toggleDataset(chartId,idx){
 
 /* ── DATA ──────────────────────────────────── */
 const MESI=['Sep-25','Oct-25','Nov-25','Dic-25','Ene-26','Feb-26','Mar-26','Abr-26','May-26','Jun-26','Jul-26','Ago-26','Sep-26'];
-const MIPC=['Sep-25','Oct-25','Nov-25','Dic-25','Ene-26','Feb-26','Mar-26','Abr-26','May-26','Jun-26','Jul-26','Ago-26'];
-const IPC=[2.1,2.3,2.5,2.8,2.9,2.9,3.4,2.6,2.1,1.9,2.1,1.7];
+const MIPC=['Sep-25','Oct-25','Nov-25','Dic-25','Ene-26','Feb-26','Mar-26','Abr-26','May-26','Jun-26','Jul-26','Ago-26','Sep-26'];
+const IPC=[2.1,2.3,2.5,2.8,2.9,2.9,3.4,2.6,2.1,1.9,2.1,1.7,1.9];
 const ICC=[39.8,42.3,46.0,45.6,46.6,44.4,42.0,39.6,40.1,42.7,40.7,40.2,41.2];
 const ICG=[1.9,2.1,2.5,2.5,2.4,2.4,2.3,2.0,2.0,2.1,1.9,2.1,1.9];
 
@@ -1242,12 +1242,12 @@ const ICG=[1.9,2.1,2.5,2.5,2.4,2.4,2.3,2.0,2.0,2.1,1.9,2.1,1.9];
 // Labels: abarca sep-25 → sep-26 (13 puntos)
 const MINFL=['Sep-25','Oct-25','Nov-25','Dic-25','Ene-26','Feb-26','Mar-26','Abr-26','May-26','Jun-26','Jul-26','Ago-26','Sep-26'];
 // IPC INDEC nacional: sep-25→ago-26 disponible; sep-26 pendiente
-const IPC_FULL=[2.1,2.3,2.5,2.8,2.9,2.9,3.4,2.6,2.1,1.9,2.1,1.7,null];
+const IPC_FULL=[2.1,2.3,2.5,2.8,2.9,2.9,3.4,2.6,2.1,1.9,2.1,1.7,1.9];
 // IPCBA IDECBA CABA: may-26→sep-26
 const IPCBA_FULL=[2.2,2.2,2.4,2.7,3.1,2.6,3.0,2.5,2.1,1.8,2.9,1.7,1.8];
 // Brecha (overlap may-ago, 4 puntos) para gráfico separado
-const MBRECHA=['May-26','Jun-26','Jul-26','Ago-26'];
-const BRECHA=[0.0,-0.1,0.8,0.0]; // IPCBA − IPC
+const MBRECHA=['May-26','Jun-26','Jul-26','Ago-26','Sep-26'];
+const BRECHA=[0.0,-0.1,0.8,0.0,-0.1]; // IPCBA − IPC
 
 const TIPCBA_MES=['May-26','Jun-26','Jul-26','Ago-26','Sep-26'];
 const TIPCBA_IA=[33.1,32.6,33.2,33.3,32.9];
