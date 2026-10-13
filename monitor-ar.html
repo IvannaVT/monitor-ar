@@ -407,25 +407,6 @@ footer a{color:var(--accent)}
     </div>
   </div>
 
-  <!-- Serie mensual por fuente -->
-  <p class="sec" style="margin-top:8px">Serie mensual · Reputación Digital · AD HOC · Monitor Digital</p>
-  <div class="chart-wrap" style="padding:0;overflow:hidden">
-    <div class="table-wrap" style="margin:0">
-      <table id="tableSLSerie">
-        <thead>
-          <tr>
-            <th style="width:70px">Mes</th>
-            <th>Reputación Digital</th>
-            <th>AD HOC</th>
-            <th>Monitor Digital</th>
-          </tr>
-        </thead>
-        <tbody id="slSerieRows"></tbody>
-      </table>
-    </div>
-  </div>
-  <p class="source" style="margin-top:6px;margin-bottom:16px">Serie regular mayo 2026 en adelante · informes de otras fuentes en tabla completa al pie · ⚪ sin dato disponible</p>
-
   <!-- Hallazgos cualitativos -->
   <p class="sec" style="margin-top:4px">Hallazgos clave · informes con mayor riqueza analítica</p>
 
@@ -905,26 +886,6 @@ function buildLegend(legendId,chartId,names,colors){
       <td class="num">${TIPCBA_REG[i].toFixed(1)}</td>
     </tr>`;
   });
-})();
-(function(){
-  // SL monthly series table (Reputación Digital · AD HOC · Monitor Digital from May onward)
-  const stbody=document.getElementById('slSerieRows');
-  if(stbody){
-    const SERIE_MESES=['May-26','Jun-26','Jul-26','Ago-26','Sep-26','Oct-26'];
-    const FUENTES=['REPUTACIÓN DIGITAL','AD HOC','MONITOR DIGITAL'];
-    const normalize=s=>s.toUpperCase().replace(/[^A-Z0-9]/g,' ').replace(/\s+/g,' ').trim();
-    const fNorm=FUENTES.map(normalize);
-    SERIE_MESES.forEach(mes=>{
-      const items=SL_INFORMES.filter(r=>r.mes===mes);
-      const cells=fNorm.map(fn=>{
-        const match=items.filter(r=>normalize(r.consultora).includes(fn.split(' ')[0])||fn.includes(normalize(r.consultora)));
-        if(!match.length)return `<td style="color:var(--fg-dim);font-size:11px">⚪ —</td>`;
-        const list=match.map(r=>`<div style="margin-bottom:2px">· ${r.titulo}</div>`).join('');
-        return `<td style="font-size:11px;line-height:1.4">${list}</td>`;
-      });
-      stbody.innerHTML+=`<tr><td class="num" style="font-family:'IBM Plex Mono',monospace;font-weight:500;white-space:nowrap">${mes}</td>${cells.join('')}</tr>`;
-    });
-  }
 })();
 (function(){
   // SL rows
