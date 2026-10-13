@@ -387,7 +387,7 @@ footer a{color:var(--accent)}
   <div class="kpi-grid">
     <div class="kpi">
       <div class="kpi-label">Informes SL</div>
-      <div class="kpi-num">30</div>
+      <div class="kpi-num">32</div>
       <div class="kpi-meta"><span class="kpi-sub">registrados · base maestra</span></div>
     </div>
     <div class="kpi">
@@ -406,6 +406,25 @@ footer a{color:var(--accent)}
       <div class="kpi-meta"><span class="kpi-sub">métricas vol./sentimiento pendientes</span></div>
     </div>
   </div>
+
+  <!-- Serie mensual por fuente -->
+  <p class="sec" style="margin-top:8px">Serie mensual · Reputación Digital · AD HOC · Monitor Digital</p>
+  <div class="chart-wrap" style="padding:0;overflow:hidden">
+    <div class="table-wrap" style="margin:0">
+      <table id="tableSLSerie">
+        <thead>
+          <tr>
+            <th style="width:70px">Mes</th>
+            <th>Reputación Digital</th>
+            <th>AD HOC</th>
+            <th>Monitor Digital</th>
+          </tr>
+        </thead>
+        <tbody id="slSerieRows"></tbody>
+      </table>
+    </div>
+  </div>
+  <p class="source" style="margin-top:6px;margin-bottom:16px">Serie regular mayo 2026 en adelante · informes de otras fuentes en tabla completa al pie · ⚪ sin dato disponible</p>
 
   <!-- Hallazgos cualitativos -->
   <p class="sec" style="margin-top:4px">Hallazgos clave · informes con mayor riqueza analítica</p>
@@ -483,7 +502,7 @@ footer a{color:var(--accent)}
 <!-- ── TAB 6: GAP CONV–SL ────────────────────── -->
 <section class="panel" id="tab-gap">
   <p class="sec">GAP CONV–SL · cruce encuestas × conversación digital</p>
-  <div class="notice">SL estructural cargado (30 informes) · métricas de volumen y sentimiento exactas pendientes · hallazgos cualitativos disponibles en tab Conv. digital</div>
+  <div class="notice">SL estructural cargado (32 informes) · métricas de volumen y sentimiento exactas pendientes · hallazgos cualitativos disponibles en tab Conv. digital</div>
 
   <div style="display:grid;grid-template-columns:1fr 190px;gap:14px;margin-bottom:20px;align-items:start">
     <div class="info-box" style="margin-bottom:0;font-size:11px;line-height:1.55">
@@ -762,9 +781,9 @@ const CROSS={
 };
 
 const MSL_MES=['Ene-26','Feb-26','Mar-26','Abr-26','May-26','Jun-26','Jul-26','Ago-26','Sep-26','Oct-26'];
-const SL_POR_MES=[4,0,0,0,3,8,3,6,4,2];
+const SL_POR_MES=[4,0,0,0,3,8,3,6,6,2];
 const SL_CONSULT_LABELS=['Reputación Digital','EUNOMIA','Monitor Digital','AD HOC','DtoD','PLURAL','ALTICA','SUSTANTIVA','Otros'];
-const SL_CONSULT_VALS=[9,3,2,2,1,1,1,2,9];
+const SL_CONSULT_VALS=[12,3,2,4,1,1,1,2,6];
 const SL_INFORMES=[
   {mes:'Ene-26',consultora:'DtoD',titulo:'Radiografía digital · detención de Maduro',tipo:'Evento puntual'},
   {mes:'Ene-26',consultora:'PLURAL',titulo:'Análisis Discursivo Donald Trump',tipo:'Evento puntual'},
@@ -794,6 +813,8 @@ const SL_INFORMES=[
   {mes:'Sep-26',consultora:'REPUTACIÓN DIGITAL',titulo:'Milei 2027 · ¿y ahora qué va a pasar? (PBA)',tipo:'Ad hoc temático'},
   {mes:'Sep-26',consultora:'REPUTACIÓN DIGITAL',titulo:'Escucha social sobre video de Milei',tipo:'Ad hoc temático'},
   {mes:'Sep-26',consultora:'REPUTACIÓN DIGITAL',titulo:'Llaryora bajo fuego cruzado (Córdoba)',tipo:'Ad hoc temático'},
+  {mes:'Sep-26',consultora:'REPUTACIÓN DIGITAL',titulo:'Informe Bullrich · Lali',tipo:'Ad hoc temático'},
+  {mes:'Sep-26',consultora:'AD HOC',titulo:'Informe Digital · Septiembre',tipo:'Monitoreo regular'},
   {mes:'Oct-26',consultora:'QSOCIAL',titulo:'Carrusel Estimaciones Electorales',tipo:'Ad hoc temático'},
   {mes:'Oct-26',consultora:'NARRAGLOBAL',titulo:'Despedida Messi',tipo:'Evento puntual'},
 ];
@@ -884,6 +905,26 @@ function buildLegend(legendId,chartId,names,colors){
       <td class="num">${TIPCBA_REG[i].toFixed(1)}</td>
     </tr>`;
   });
+})();
+(function(){
+  // SL monthly series table (Reputación Digital · AD HOC · Monitor Digital from May onward)
+  const stbody=document.getElementById('slSerieRows');
+  if(stbody){
+    const SERIE_MESES=['May-26','Jun-26','Jul-26','Ago-26','Sep-26','Oct-26'];
+    const FUENTES=['REPUTACIÓN DIGITAL','AD HOC','MONITOR DIGITAL'];
+    const normalize=s=>s.toUpperCase().replace(/[^A-Z0-9]/g,' ').replace(/\s+/g,' ').trim();
+    const fNorm=FUENTES.map(normalize);
+    SERIE_MESES.forEach(mes=>{
+      const items=SL_INFORMES.filter(r=>r.mes===mes);
+      const cells=fNorm.map(fn=>{
+        const match=items.filter(r=>normalize(r.consultora).includes(fn.split(' ')[0])||fn.includes(normalize(r.consultora)));
+        if(!match.length)return `<td style="color:var(--fg-dim);font-size:11px">⚪ —</td>`;
+        const list=match.map(r=>`<div style="margin-bottom:2px">· ${r.titulo}</div>`).join('');
+        return `<td style="font-size:11px;line-height:1.4">${list}</td>`;
+      });
+      stbody.innerHTML+=`<tr><td class="num" style="font-family:'IBM Plex Mono',monospace;font-weight:500;white-space:nowrap">${mes}</td>${cells.join('')}</tr>`;
+    });
+  }
 })();
 (function(){
   // SL rows
