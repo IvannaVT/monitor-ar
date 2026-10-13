@@ -149,6 +149,7 @@ tr:hover td{background:color-mix(in srgb,var(--accent) 5%,transparent)}
 footer{text-align:center;padding:20px;font-size:10px;color:var(--fg-dim);border-top:1px solid var(--border)}
 footer a{color:var(--accent)}
 @media(max-width:500px){.gap-zone-cards{grid-template-columns:1fr 1fr}.kpi-num{font-size:22px}}
+@media(max-width:620px){.cross-grid{grid-template-columns:1fr!important}}
 </style>
 
 <header class="site-header">
@@ -291,13 +292,62 @@ footer a{color:var(--accent)}
   </div>
   <div class="chart-wrap">
     <div class="chart-head">
-      <div><h3>Aprobación gestión nacional</h3><p>May-26 → Sep-26 · Synopsis + Proyección · clic en leyenda para filtrar</p></div>
+      <div><h3>Aprobación gestión nacional · por consultora</h3><p>May-26 → Sep-26 · Proyección + Isasi-Burdman + Vozna + Synopsis · clic en leyenda para filtrar</p></div>
       <span class="signal conv">▲ conv.</span>
     </div>
     <div class="chart-box"><canvas id="chartGestion"></canvas></div>
     <div class="legend" id="legendGestion"></div>
     <p class="source">Gestión ≠ imagen personal · preguntas distintas · no comparar entre sí</p>
   </div>
+  <!-- ── CRUCE IMAGEN–GESTIÓN ─────────────────── -->
+  <div style="margin:24px 0 8px"><p class="sec">Cruce imagen · gestión · divergencia</p></div>
+  <div class="info-box" style="margin-bottom:12px">
+    <strong>Hallazgo clave:</strong> Isasi-Burdman mide imagen personal <em>y</em> aprobación de gestión en el mismo estudio. Jun→Ago: gestión <strong>+3 pp</strong> (45→48) mientras imagen positiva <strong>−4 pp</strong> (42→38). Gestión e imagen se mueven en <strong>sentidos opuestos</strong> dentro de la misma consultora.
+  </div>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:16px" class="cross-grid">
+    <div class="chart-wrap" style="margin-bottom:0">
+      <div class="chart-head">
+        <div><h3>Positiva vs. aprobación gestión</h3><p>Isasi-Burdman · Jun–Ago 2026</p></div>
+        <span class="signal div">↕ diverge</span>
+      </div>
+      <div class="chart-box med"><canvas id="chartCrossPos"></canvas></div>
+      <div class="legend" id="legendCrossPos"></div>
+    </div>
+    <div class="chart-wrap" style="margin-bottom:0">
+      <div class="chart-head">
+        <div><h3>Negativa vs. desaprobación gestión</h3><p>Isasi-Burdman · Jun–Ago 2026</p></div>
+        <span class="signal conv">↘ converge</span>
+      </div>
+      <div class="chart-box med"><canvas id="chartCrossNeg"></canvas></div>
+      <div class="legend" id="legendCrossNeg"></div>
+    </div>
+  </div>
+  <div class="chart-wrap" style="margin-bottom:16px">
+    <div class="chart-head">
+      <div><h3>Aprobación de gestión nacional · tendencia</h3><p>Proyección (may–sep) · Isasi-Burdman (jun–ago) · Synopsis (may)</p></div>
+      <span class="signal conv">▲ mejora</span>
+    </div>
+    <div class="chart-box"><canvas id="chartGestionFull"></canvas></div>
+    <div class="legend" id="legendGestionFull"></div>
+    <p class="source">Proyección: campo 1–10 de cada mes · Isasi-Burdman: campo en torno al 20 de cada mes · preguntas distintas entre consultoras</p>
+  </div>
+  <div class="table-wrap" style="margin-bottom:16px">
+    <table>
+      <thead><tr><th>Consultora</th><th>Variable</th><th>May</th><th>Jun</th><th>Jul</th><th>Ago</th><th>Sep</th><th>Δ</th></tr></thead>
+      <tbody>
+        <tr><td>Proyección</td><td>Aprobación gestión</td><td class="num">34,0</td><td class="num">39,8</td><td class="num">39,4</td><td class="num">39,7</td><td class="num">42,0</td><td class="num up">+8,0 🟢</td></tr>
+        <tr><td>Isasi-Burdman</td><td>Aprobación gestión</td><td class="num">—</td><td class="num">45,0</td><td class="num">46,0</td><td class="num">48,0</td><td class="num">—</td><td class="num up">+3,0 🟢</td></tr>
+        <tr><td>Isasi-Burdman</td><td>Imagen positiva</td><td class="num">—</td><td class="num">42,0</td><td class="num">43,0</td><td class="num">38,0</td><td class="num">—</td><td class="num down">−4,0 🔴</td></tr>
+        <tr><td>D'Alessio</td><td>Imagen positiva</td><td class="num">36,0</td><td class="num">—</td><td class="num">—</td><td class="num">34,0</td><td class="num">—</td><td class="num down">−2,0 🔴</td></tr>
+        <tr><td>Isasi-Burdman</td><td>Imagen negativa</td><td class="num">—</td><td class="num">—</td><td class="num">44,0</td><td class="num">46,0</td><td class="num">—</td><td class="num down">+2,0 🔴</td></tr>
+        <tr><td>Isasi-Burdman</td><td>Desaprobación gestión</td><td class="num">—</td><td class="num">48,0</td><td class="num">47,0</td><td class="num">42,0</td><td class="num">—</td><td class="num up">−6,0 🟢</td></tr>
+        <tr><td>Vozna</td><td>Desaprobación gestión</td><td class="num">—</td><td class="num">—</td><td class="num">57,6</td><td class="num">—</td><td class="num">61,9</td><td class="num down">+4,3 🔴</td></tr>
+        <tr><td>Zuban Córdoba</td><td>Imagen negativa</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">61,8</td><td class="num">⚪</td></tr>
+      </tbody>
+    </table>
+    <p class="source">Gestión ≠ imagen personal · preguntas distintas · no comparar entre consultoras directamente · Δ = variación may→sep o primera→última medición</p>
+  </div>
+
   <div class="chart-wrap">
     <p class="sec" style="margin-bottom:10px">Isasi-Burdman ago-26 · Escenario presidencial 2027</p>
     <div class="table-wrap">
@@ -674,17 +724,29 @@ const lastRows=[
   {name:'Zuban',     p:'Sep-26',lla:30.1,pj:34,  d:2.1, n:'~1800',met:'Mixto'},
 ];
 
-const MI=['May-26','Jun-26','Jul-26','Ago-26'];
+const MI=['May-26','Jun-26','Jul-26','Ago-26','Sep-26'];
 const IMG={
-  Synopsis: {color:'var(--c1)',neg:[58.1,null,null,55.3],pos:[29.2,null,null,33.9]},
-  Trends:   {color:'var(--c2)',neg:[null,57,null,null],  pos:[null,42,null,null]},
-  Giacobbe: {color:'var(--c3)',neg:[null,55,null,null],  pos:[null,34.2,null,null]},
-  Isasi:    {color:'var(--c4)',neg:[null,null,44,null],  pos:[null,null,43,null]}
+  Synopsis: {color:'var(--c1)',neg:[58.1,null,null,55.3,null], pos:[29.2,null,null,33.9,null]},
+  Trends:   {color:'var(--c2)',neg:[null,57,null,null,null],   pos:[null,42,null,null,null]},
+  Giacobbe: {color:'var(--c3)',neg:[null,55,null,null,null],   pos:[null,34.2,null,null,null]},
+  Isasi:    {color:'var(--c4)',neg:[null,null,44,46,null],     pos:[null,42,43,38,null]},
+  'D\'Alessio':{color:'var(--c5)',neg:[null,null,null,null,null],pos:[36,null,null,34,null]},
+  'Zuban':  {color:'var(--neu)', neg:[null,null,null,null,61.8],pos:[null,null,null,null,36]}
 };
 const MG=['May-26','Jun-26','Jul-26','Ago-26','Sep-26'];
 const GESTION={
-  Synopsis:  {color:'var(--c1)',data:[48,49,51,52,null]},
-  Proyección:{color:'var(--c2)',data:[46,47,48,50,51]}
+  Proyección:{color:'var(--c2)',aprob:[34.0,39.8,39.4,39.7,42.0],desaprob:[null,null,null,null,null]},
+  Isasi:     {color:'var(--c4)',aprob:[null,45.0,46.0,48.0,null], desaprob:[null,48.0,47.0,42.0,null]},
+  Vozna:     {color:'var(--c5)',aprob:[null,null,null,null,null],  desaprob:[null,null,57.6,null,61.9]},
+  Synopsis:  {color:'var(--c1)',aprob:[31.3,null,null,null,null],  desaprob:[54.5,null,null,null,null]}
+};
+// Cross-analysis: Isasi-Burdman measures BOTH variables → divergence visible within same consultora
+const CROSS_MES=['Jun-26','Jul-26','Ago-26'];
+const CROSS={
+  imgPos:  {label:'Imagen positiva (Isasi-Burdman)',  color:'var(--c4)', data:[42,43,38]},
+  gestAprob:{label:'Aprobación gestión (Isasi-Burdman)',color:'var(--pos)',data:[45,46,48]},
+  imgNeg:  {label:'Imagen negativa (Isasi-Burdman)',  color:'var(--neg)', data:[null,44,46]},
+  gestDesaprob:{label:'Desaprobación gestión (Isasi-Burdman)',color:'var(--warn)',data:[48,47,42]}
 };
 
 const MSL_MES=['Ene-26','Feb-26','Mar-26','Abr-26','May-26','Jun-26','Jul-26','Ago-26','Sep-26','Oct-26'];
@@ -874,8 +936,32 @@ function initTab(tab){
     buildLegend('legendNeg','chartNeg',ns,cs);
     buildLegend('legendPos','chartPos',ns,cs);
     const gns=Object.keys(GESTION),gcs=gns.map(n=>GESTION[n].color);
-    mkLine('chartGestion',MG,gns.map(n=>({label:n,data:GESTION[n].data,color:GESTION[n].color})));
+    mkLine('chartGestion',MG,gns.map(n=>({label:n,data:GESTION[n].aprob,color:GESTION[n].color})));
     buildLegend('legendGestion','chartGestion',gns,gcs);
+    // Cross charts
+    mkLine('chartCrossPos',CROSS_MES,[
+      {label:CROSS.imgPos.label,    data:CROSS.imgPos.data,    color:CROSS.imgPos.color},
+      {label:CROSS.gestAprob.label, data:CROSS.gestAprob.data, color:CROSS.gestAprob.color}
+    ]);
+    buildLegend('legendCrossPos','chartCrossPos',
+      [CROSS.imgPos.label,CROSS.gestAprob.label],
+      [CROSS.imgPos.color,CROSS.gestAprob.color]);
+    mkLine('chartCrossNeg',CROSS_MES,[
+      {label:CROSS.imgNeg.label,      data:CROSS.imgNeg.data,      color:CROSS.imgNeg.color},
+      {label:CROSS.gestDesaprob.label,data:CROSS.gestDesaprob.data,color:CROSS.gestDesaprob.color}
+    ]);
+    buildLegend('legendCrossNeg','chartCrossNeg',
+      [CROSS.imgNeg.label,CROSS.gestDesaprob.label],
+      [CROSS.imgNeg.color,CROSS.gestDesaprob.color]);
+    // Full gestión trend
+    mkLine('chartGestionFull',MG,[
+      {label:'Proyección · aprobación',data:GESTION.Proyección.aprob,color:'var(--c2)'},
+      {label:'Isasi-Burdman · aprobación',data:GESTION.Isasi.aprob,color:'var(--c4)'},
+      {label:'Isasi-Burdman · imagen positiva',data:IMG.Isasi.pos,color:'var(--warn)'}
+    ]);
+    buildLegend('legendGestionFull','chartGestionFull',
+      ['Proyección · aprobación','Isasi-Burdman · aprobación','Isasi-Burdman · imagen positiva'],
+      ['var(--c2)','var(--c4)','var(--warn)']);
   }
 
   if(tab==='gap'){
