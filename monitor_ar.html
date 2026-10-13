@@ -866,7 +866,7 @@ document.querySelectorAll('.tab-btn').forEach(btn=>{
     document.querySelectorAll('.panel').forEach(p=>p.classList.remove('active'));
     btn.classList.add('active');
     document.getElementById('tab-'+btn.dataset.tab).classList.add('active');
-    history.replaceState(null,'','#'+btn.dataset.tab);
+    try{history.replaceState(null,'','#'+btn.dataset.tab);}catch(e){}
     initTab(btn.dataset.tab);
   });
 });
