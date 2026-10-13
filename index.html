@@ -1,96 +1,497 @@
-<!doctype html>
-<html lang="es">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Ivanna Travaini</title>
+<title>Ivanna Vanina Travaini — Asesora en Políticas Públicas y Relaciones Institucionales</title>
+<meta name="description" content="Sitio profesional de Ivanna Vanina Travaini. Asesora en políticas públicas, gobierno abierto, relaciones institucionales y cooperación internacional.">
+<meta name="author" content="Ivanna Vanina Travaini">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://ivannatravaini.netlify.app/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://ivannatravaini.netlify.app/">
+<meta property="og:title" content="Ivanna Vanina Travaini — Asesora en Políticas Públicas y Relaciones Institucionales">
+<meta property="og:locale" content="es_AR">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@Ivanna_VT">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Inter:wght@300;400;500&display=swap">
+
 <style>
 :root {
-  --bg: #F5F7FA;
-  --fg: #0D1B2A;
-  --fg-dim: #5A7A9A;
-  --accent: #1D4ED8;
-  --border: #D8E3EF;
-  --surface: #FFFFFF;
-  color-scheme: light;
+  --bg:#F7F5F0; --bg-alt:#EDEAE3; --fg:#1A1916; --fg-mid:#4A4740;
+  --fg-soft:#8A857C; --accent:#2D5A8E; --accent-warm:#B8860B;
+  --rule:#C8C3BA; --card-bg:#FFFFFF;
+  --font-display:'Cormorant Garamond',Georgia,serif;
+  --font-body:'Inter',system-ui,sans-serif;
+  --max-w:1100px; --col-gap:clamp(1.5rem,4vw,3rem);
 }
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) {
-    --bg: #0B0F18; --fg: #DCE8F5; --fg-dim: #7A9ABF;
-    --accent: #5B9CF6; --border: #1E2E45; --surface: #141C2B;
-    color-scheme: dark;
-  }
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#0C1829;--bg-alt:#132035;--fg:#E8EDF5;--fg-mid:#A8B4C8;
+  --fg-soft:#5A6E88;--accent:#6AABDC;--accent-warm:#D4A017;
+  --rule:#1E3050;--card-bg:#132035;color-scheme:dark;
+}}
+:root[data-theme="dark"]{
+  --bg:#0C1829;--bg-alt:#132035;--fg:#E8EDF5;--fg-mid:#A8B4C8;
+  --fg-soft:#5A6E88;--accent:#6AABDC;--accent-warm:#D4A017;
+  --rule:#1E3050;--card-bg:#132035;color-scheme:dark;
 }
-:root[data-theme="dark"] {
-  --bg: #0B0F18; --fg: #DCE8F5; --fg-dim: #7A9ABF;
-  --accent: #5B9CF6; --border: #1E2E45; --surface: #141C2B;
-  color-scheme: dark;
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:var(--font-body);font-weight:400;background:var(--bg);color:var(--fg);font-size:1.05rem;line-height:1.7;padding-inline:clamp(1rem,5vw,2rem);}
+
+/* theme btn */
+.theme-btn{position:fixed;top:1.25rem;right:1.25rem;z-index:100;background:var(--card-bg);border:1px solid var(--rule);color:var(--fg-mid);border-radius:50%;width:2.25rem;height:2.25rem;font-size:1rem;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:border-color .2s;}
+.theme-btn:hover{border-color:var(--accent);}
+
+/* masthead */
+.masthead{max-width:var(--max-w);margin:0 auto;padding-block:3rem 0;border-bottom:3px solid var(--fg);display:grid;grid-template-columns:1fr auto;align-items:end;gap:1rem;}
+.masthead-eyebrow{font-family:var(--font-body);font-size:.7rem;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:var(--fg-soft);margin-bottom:.75rem;}
+.masthead h1{font-family:var(--font-display);font-weight:400;font-size:clamp(2.4rem,5.5vw,4.2rem);line-height:1.05;letter-spacing:.01em;white-space:nowrap;}
+.masthead-meta{text-align:right;font-size:.75rem;color:var(--fg-soft);letter-spacing:.05em;line-height:1.8;padding-bottom:.25rem;}
+.masthead-bajada{max-width:var(--max-w);margin:0 auto;padding-block:.7rem .85rem;display:flex;flex-wrap:wrap;gap:.4rem .1rem;align-items:center;border-bottom:1px solid var(--rule);}
+.bajada-item{font-size:.72rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--fg-mid);}
+.bajada-sep{font-size:.72rem;color:var(--rule);padding-inline:.5rem;user-select:none;}
+
+/* nav */
+nav{max-width:var(--max-w);margin:0 auto;padding-block:.85rem;display:flex;gap:clamp(.75rem,2vw,2rem);flex-wrap:wrap;border-bottom:1px solid var(--rule);}
+nav a{font-size:.72rem;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--fg-mid);text-decoration:none;transition:color .2s;}
+nav a:hover{color:var(--accent);}
+
+/* sections */
+section{max-width:var(--max-w);margin:0 auto;padding-block:3rem;border-bottom:1px solid var(--rule);}
+section:last-of-type{border-bottom:none;}
+.section-label{font-size:.68rem;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);margin-bottom:1.5rem;display:flex;align-items:center;gap:.75rem;}
+.section-label::after{content:'';flex:1;height:1px;background:var(--rule);}
+
+/* sobre */
+.sobre-grid{display:grid;grid-template-columns:2fr 1fr;gap:var(--col-gap);align-items:start;}
+.sobre-grid h2{font-family:var(--font-display);font-weight:400;font-size:clamp(1.5rem,3.5vw,2.2rem);line-height:1.2;margin-bottom:1.25rem;text-wrap:balance;}
+.sobre-grid p{color:var(--fg-mid);margin-bottom:.9rem;font-size:.97rem;}
+.sobre-aside{display:flex;flex-direction:column;gap:1.25rem;padding-top:.5rem;}
+.dato{border-left:2px solid var(--accent);padding-left:1rem;}
+.dato-label{font-size:.67rem;font-weight:500;letter-spacing:.15em;text-transform:uppercase;color:var(--fg-soft);margin-bottom:.2rem;}
+.dato-val{font-family:var(--font-display);font-size:1.05rem;line-height:1.35;color:var(--fg);}
+
+/* areas */
+.areas-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1.5rem;}
+.area-card{background:var(--card-bg);border:1px solid var(--rule);padding:1.5rem;position:relative;transition:border-color .2s;}
+.area-card:hover{border-color:var(--accent);}
+.area-num{font-family:var(--font-display);font-size:3.5rem;font-weight:300;color:var(--rule);line-height:1;margin-bottom:.75rem;font-variant-numeric:tabular-nums;}
+.area-card h3{font-family:var(--font-display);font-weight:600;font-size:1.15rem;margin-bottom:.6rem;color:var(--fg);}
+.area-card p{font-size:.85rem;color:var(--fg-mid);line-height:1.6;}
+.area-tag{display:inline-block;margin-top:1rem;font-size:.65rem;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);border:1px solid var(--accent);padding:.2rem .5rem;}
+
+/* publicaciones */
+.pub-list{display:flex;flex-direction:column;gap:0;}
+.pub-item{display:grid;grid-template-columns:auto 1fr auto;gap:1.5rem;align-items:start;padding-block:1.35rem;border-bottom:1px solid var(--rule);text-decoration:none;color:inherit;transition:background .15s;}
+.pub-item:last-child{border-bottom:none;}
+.pub-item:hover .pub-title{color:var(--accent);}
+.pub-date{font-variant-numeric:tabular-nums;font-size:.75rem;color:var(--fg-soft);padding-top:.15rem;min-width:5.5rem;line-height:1.4;}
+.pub-tag-badge{font-size:.6rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--accent-warm);display:block;margin-top:.25rem;}
+.pub-title{font-family:var(--font-display);font-size:clamp(1rem,2vw,1.2rem);font-weight:400;line-height:1.3;margin-bottom:.3rem;transition:color .2s;}
+.pub-excerpt{font-size:.82rem;color:var(--fg-mid);line-height:1.55;}
+.pub-arrow{font-size:1rem;color:var(--fg-soft);padding-top:.2rem;transition:color .2s,transform .2s;}
+.pub-item:hover .pub-arrow{color:var(--accent);transform:translateX(3px);}
+
+/* monitor */
+.monitor-intro{display:grid;grid-template-columns:2fr 1fr;gap:var(--col-gap);align-items:start;}
+.monitor-intro h2{font-family:var(--font-display);font-weight:400;font-size:clamp(1.5rem,3.5vw,2.2rem);line-height:1.2;margin-bottom:1rem;text-wrap:balance;}
+.monitor-intro>div>p{font-size:.92rem;color:var(--fg-mid);line-height:1.65;margin-bottom:.7rem;}
+.monitor-meta{display:flex;flex-direction:column;gap:1.25rem;padding-top:.5rem;}
+.monitor-stat{border-left:2px solid var(--accent-warm);padding-left:1rem;}
+.monitor-stat-label{font-size:.67rem;font-weight:500;letter-spacing:.15em;text-transform:uppercase;color:var(--fg-soft);margin-bottom:.2rem;}
+.monitor-stat-val{font-family:var(--font-display);font-size:1.05rem;line-height:1.35;color:var(--fg);}
+.monitor-tabs-row{display:flex;flex-wrap:wrap;gap:.75rem;margin:1.5rem 0;}
+.monitor-tab-badge{font-size:.68rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--fg-mid);background:var(--bg-alt);border:1px solid var(--rule);padding:.3rem .75rem;}
+.monitor-cta{display:inline-flex;align-items:center;gap:.75rem;padding:1rem 1.5rem;background:var(--accent);color:var(--bg);text-decoration:none;font-size:.8rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;transition:opacity .2s;}
+.monitor-cta:hover{opacity:.85;}
+.monitor-note{margin-top:1.5rem;font-size:.8rem;color:var(--fg-soft);border-left:2px solid var(--rule);padding-left:1rem;line-height:1.6;}
+
+/* trayectoria */
+.tray-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--col-gap);}
+.tray-col h3{font-family:var(--font-display);font-weight:600;font-size:1.1rem;margin-bottom:1.25rem;color:var(--fg);}
+.tray-item{display:flex;gap:1rem;margin-bottom:1.25rem;}
+.tray-year{font-size:.72rem;font-weight:500;color:var(--fg-soft);font-variant-numeric:tabular-nums;letter-spacing:.05em;min-width:3.5rem;padding-top:.15rem;line-height:1.4;}
+.tray-text strong{display:block;font-size:.9rem;font-weight:500;color:var(--fg);margin-bottom:.15rem;}
+.tray-text span{font-size:.82rem;color:var(--fg-mid);}
+
+/* contacto */
+.contacto-inner{display:grid;grid-template-columns:1fr 1fr;gap:var(--col-gap);align-items:center;}
+.contacto-inner h2{font-family:var(--font-display);font-weight:300;font-size:clamp(1.8rem,4vw,2.8rem);line-height:1.15;text-wrap:balance;}
+.contacto-inner h2 em{font-style:italic;color:var(--fg-mid);}
+.contacto-links{display:flex;flex-direction:column;gap:1rem;}
+.contacto-link{display:flex;align-items:center;gap:1rem;padding:1rem 1.25rem;background:var(--card-bg);border:1px solid var(--rule);text-decoration:none;color:var(--fg);transition:border-color .2s;}
+.contacto-link:hover{border-color:var(--accent);}
+.contacto-link-label{font-size:.67rem;font-weight:500;letter-spacing:.15em;text-transform:uppercase;color:var(--fg-soft);margin-bottom:.1rem;}
+.contacto-link-val{font-size:.9rem;color:var(--fg);}
+.cl-icon{width:2rem;height:2rem;display:flex;align-items:center;justify-content:center;background:var(--bg-alt);flex-shrink:0;font-size:.9rem;}
+
+/* blog */
+.blog-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:var(--col-gap);margin-top:2rem;}
+.blog-card{background:var(--card-bg);border:1px solid var(--rule);border-radius:3px;padding:1.5rem;display:flex;flex-direction:column;gap:.6rem;text-decoration:none;color:inherit;transition:border-color .2s;}
+.blog-card:hover{border-color:var(--accent);}
+.blog-card-meta{display:flex;align-items:center;gap:.6rem;font-size:.78rem;color:var(--fg-soft);text-transform:uppercase;letter-spacing:.06em;}
+.blog-tag{background:var(--bg-alt);color:var(--accent);padding:.1em .55em;border-radius:2px;font-size:.72rem;font-weight:500;}
+.blog-card h3{font-family:var(--font-display);font-size:1.2rem;font-weight:400;line-height:1.3;color:var(--fg);margin:0;}
+.blog-card p{font-size:.9rem;color:var(--fg-mid);line-height:1.6;margin:0;flex:1;}
+.blog-card .read-more{font-size:.8rem;color:var(--accent);font-weight:500;margin-top:.4rem;}
+.blog-archive{margin-top:2.5rem;border-top:1px solid var(--rule);padding-top:1.8rem;}
+.blog-archive h3{font-family:var(--font-display);font-size:1.1rem;font-weight:400;color:var(--fg-mid);margin:0 0 1rem;}
+.archive-years{display:flex;flex-wrap:wrap;gap:1.5rem 2.5rem;}
+.archive-year h4{font-size:.78rem;text-transform:uppercase;letter-spacing:.08em;color:var(--fg-soft);font-family:var(--font-body);margin:0 0 .5rem;font-weight:500;}
+.archive-year ul{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:.3rem;}
+.archive-year ul li a{font-size:.88rem;color:var(--fg-mid);text-decoration:none;line-height:1.4;}
+.archive-year ul li a:hover{color:var(--accent);}
+
+/* footer */
+footer{max-width:var(--max-w);margin:0 auto;padding-block:1.5rem 2rem;display:flex;justify-content:space-between;align-items:center;gap:1rem;flex-wrap:wrap;border-top:3px solid var(--fg);}
+footer p{font-size:.72rem;color:var(--fg-soft);letter-spacing:.04em;}
+footer a{color:var(--fg-soft);text-decoration:none;}
+footer a:hover{color:var(--accent);}
+
+/* responsive */
+@media(max-width:680px){
+  .masthead{grid-template-columns:1fr;padding-bottom:1.25rem;}
+  .masthead-meta{text-align:left;}
+  .sobre-grid,.monitor-intro,.contacto-inner{grid-template-columns:1fr;}
+  .tray-grid{grid-template-columns:1fr;}
+  .pub-item{grid-template-columns:1fr;gap:.4rem;}
+  .pub-date{min-width:auto;}
+  .pub-arrow{display:none;}
 }
-* { box-sizing: border-box; margin: 0; padding: 0; }
-body {
-  background: var(--bg); color: var(--fg);
-  font-family: 'IBM Plex Sans', system-ui, sans-serif;
-  min-height: 100vh;
-  display: flex; flex-direction: column;
-  align-items: center; justify-content: center;
-  padding: 40px 20px;
+@media(max-width:450px){
+  .areas-grid{grid-template-columns:1fr;}
+  .masthead h1{white-space:normal;}
 }
-.card {
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: 12px;
-  padding: 36px 40px;
-  max-width: 480px;
-  width: 100%;
-  text-align: center;
-}
-h1 { font-size: 22px; font-weight: 600; margin-bottom: 6px; }
-.sub { font-size: 14px; color: var(--fg-dim); margin-bottom: 32px; }
-.link-item {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  padding: 14px 18px;
-  border: 1px solid var(--border);
-  border-radius: 8px;
-  text-decoration: none;
-  color: var(--fg);
-  transition: border-color .15s, background .15s;
-  text-align: left;
-}
-.link-item:hover {
-  border-color: var(--accent);
-  background: color-mix(in srgb, var(--accent) 5%, var(--surface));
-}
-.link-icon {
-  flex-shrink: 0;
-  width: 36px; height: 36px;
-  border-radius: 8px;
-  background: color-mix(in srgb, var(--accent) 12%, var(--surface));
-  display: flex; align-items: center; justify-content: center;
-  font-size: 18px;
-}
-.link-label { font-size: 14px; font-weight: 600; }
-.link-desc { font-size: 12px; color: var(--fg-dim); margin-top: 2px; }
-.footer { margin-top: 28px; font-size: 12px; color: var(--fg-dim); }
+@media(prefers-reduced-motion:reduce){*{transition:none!important;}}
 </style>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&display=swap">
-</head>
-<body>
-<div class="card">
-  <h1>Ivanna Travaini</h1>
-  <p class="sub">Análisis político · Opinión pública · Buenos Aires</p>
 
-  <a class="link-item" href="/monitor-ar.html">
-    <div class="link-icon">📊</div>
+<button class="theme-btn" id="themeBtn" aria-label="Cambiar tema">☽</button>
+
+<header>
+  <div class="masthead">
     <div>
-      <div class="link-label">Monitor AR</div>
-      <div class="link-desc">Seguimiento de opinión pública argentina</div>
+      <p class="masthead-eyebrow">Políticas Públicas · Gobierno · Buenos Aires</p>
+      <h1>Ivanna Vanina Travaini</h1>
     </div>
-  </a>
+    <div class="masthead-meta">
+      Lic. Ciencia Política<br>
+      UBA — 1999<br>
+      Mag. Políticas Públicas<br>
+      UTDT — 2005
+    </div>
+  </div>
+  <div class="masthead-bajada">
+    <span class="bajada-item">Public Policy &amp; Government Affairs Advisor</span>
+    <span class="bajada-sep">|</span>
+    <span class="bajada-item">Institutional Relations</span>
+    <span class="bajada-sep">|</span>
+    <span class="bajada-item">International Cooperation</span>
+    <span class="bajada-sep">|</span>
+    <span class="bajada-item">Open Government &amp; Transparency</span>
+  </div>
+  <nav>
+    <a href="#sobre">Sobre mí</a>
+    <a href="#areas">Áreas</a>
+    <a href="#datos">Datos y Opinión Pública</a>
+    <a href="#publicaciones">Publicaciones</a>
+    <a href="#monitor">Monitor AR</a>
+    <a href="#trayectoria">Trayectoria</a>
+    <a href="#blog">Blog</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
+</header>
 
-  <p class="footer">ivannatravaini.netlify.app</p>
-</div>
-</body>
-</html>
+<section id="sobre">
+  <div class="section-label">Sobre mí</div>
+  <div class="sobre-grid">
+    <div>
+      <h2>Investigación aplicada, docencia y gestión pública en diálogo constante</h2>
+      <p>Más de 25 años articulando tres dimensiones: <strong>docencia universitaria de grado y posgrado</strong> (UTDT, FLACSO, Universidad de Palermo), <strong>investigación aplicada</strong> en centros académicos y think tanks (UTDT–PNUD, CAPP–BID, Fundación PENT, Fundación EU-LAC), y <strong>gestión en el sector público</strong> —Ciudad de Buenos Aires, Provincia de Buenos Aires y Municipio de San Isidro.</p>
+      <p>Mi formación combina la ciencia política con la economía del sector público, la regulación y las relaciones intergubernamentales. Ese cruce define mi manera de leer los problemas: con rigor analítico y siempre atenta a la viabilidad política e institucional de las soluciones.</p>
+      <p>Coordiné redes académicas internacionales en el marco del Programa ALFA III de la Unión Europea (22 universidades de 17 países) y el Centro de Excelencia Jean Monnet. Formación complementaria en análisis de datos sociales con R y Python.</p>
+      <p>En este espacio comparto reflexiones y lecturas sobre los temas que me interesan: federalismo fiscal, género y liderazgo, gobierno abierto y el uso de datos en la gestión pública.</p>
+    </div>
+    <aside class="sobre-aside">
+      <div class="dato">
+        <div class="dato-label">Cargo actual</div>
+        <div class="dato-val">Asesora, Unidad Ministro<br>Ministerio de Hacienda y Finanzas · GCBA</div>
+      </div>
+      <div class="dato">
+        <div class="dato-label">También</div>
+        <div class="dato-val">Asesora, Subsecretaría de Gobierno<br>Municipalidad de San Isidro</div>
+      </div>
+      <div class="dato">
+        <div class="dato-label">Sede</div>
+        <div class="dato-val">Buenos Aires, Argentina</div>
+      </div>
+      <div class="dato">
+        <div class="dato-label">En este sitio desde</div>
+        <div class="dato-val">2015</div>
+      </div>
+    </aside>
+  </div>
+</section>
+
+<section id="areas">
+  <div class="section-label">Áreas temáticas</div>
+  <div class="areas-grid">
+    <div class="area-card">
+      <div class="area-num">01</div>
+      <h3>Fiscal &amp; Federalismo</h3>
+      <p>Análisis de coparticipación, presupuesto subnacional y reforma fiscal. La distribución de recursos entre jurisdicciones como problema político y técnico.</p>
+      <span class="area-tag">#Data · #Fiscal</span>
+    </div>
+    <div class="area-card" id="datos">
+      <div class="area-num">02</div>
+      <h3>Datos y Opinión Pública</h3>
+      <p>Análisis de clima político, social listening y uso estratégico de datos en la gestión gubernamental. Métodos cuali-cuantitativos aplicados a la toma de decisiones.</p>
+      <span class="area-tag">#SocialMedia · #Data · #R · #Python</span>
+    </div>
+    <div class="area-card">
+      <div class="area-num">03</div>
+      <h3>Liderazgo y Autonomía</h3>
+      <p>Políticas de igualdad, acceso a servicios financieros, liderazgo femenino en el sector público. Evidencia y agenda en el Cono Sur.</p>
+      <span class="area-tag">#Género</span>
+    </div>
+    <div class="area-card">
+      <div class="area-num">04</div>
+      <h3>Gobierno Abierto &amp; Gestión</h3>
+      <p>Reforma del Estado, transparencia activa, acceso a la información pública y mérito institucional. Cómo se toman —y cómo deberían tomarse— las decisiones públicas.</p>
+      <span class="area-tag">#GobiernoAbierto · #Reflexiones</span>
+    </div>
+    <div class="area-card">
+      <div class="area-num">05</div>
+      <h3>Cooperación Internacional</h3>
+      <p>Redes académicas UE–América Latina, programas de cooperación universitaria (ALFA III, Jean Monnet) y vinculación institucional con organismos internacionales.</p>
+      <span class="area-tag">#CooperaciónAcadémica · #UE-AL</span>
+    </div>
+  </div>
+</section>
+
+<section id="publicaciones">
+  <div class="section-label">Publicaciones seleccionadas</div>
+  <div class="pub-list">
+    <a class="pub-item" href="https://ivannatravani.wordpress.com/2022/07/25/ni-se-puede-ni-se-debe/" target="_blank" rel="noopener">
+      <div class="pub-date">Jul 2022<span class="pub-tag-badge">Fiscal</span></div>
+      <div><div class="pub-title">¿Ni se puede ni se debe?</div><div class="pub-excerpt">Reflexiones sobre la reforma del federalismo fiscal argentino: coparticipación, coeficientes y las razones por las que el debate es tan difícil de cerrar.</div></div>
+      <div class="pub-arrow">→</div>
+    </a>
+    <a class="pub-item" href="https://ivannatravani.wordpress.com/2022/10/20/reforma-electoral-es-calidad-de-la-representacion/" target="_blank" rel="noopener">
+      <div class="pub-date">Oct 2022<span class="pub-tag-badge">Gobierno</span></div>
+      <div><div class="pub-title">Reforma Electoral: ¿es calidad de la representación?</div><div class="pub-excerpt">Una reforma que favorezca a los partidos tradicionales no tendrá el apoyo de los minoritarios. Ideas persistentes para problemas que no se van.</div></div>
+      <div class="pub-arrow">→</div>
+    </a>
+    <a class="pub-item" href="https://ivannatravani.wordpress.com/2022/10/10/que-significa-ser-un-lider-en-el-estado-incompetencia-merito-recursoshumanos/" target="_blank" rel="noopener">
+      <div class="pub-date">Oct 2022<span class="pub-tag-badge">Gestión</span></div>
+      <div><div class="pub-title">¿Qué significa ser un líder en el Estado?</div><div class="pub-excerpt">El Principio de Peter aplicado al sector público argentino: sobre la promoción de la incompetencia y el mérito que no alcanza.</div></div>
+      <div class="pub-arrow">→</div>
+    </a>
+    <a class="pub-item" href="https://ivannatravani.wordpress.com/2022/08/22/por-que-el-acceso-a-servicios-financieros-es-vital-para-el-desarrollo-global/" target="_blank" rel="noopener">
+      <div class="pub-date">Ago 2022<span class="pub-tag-badge">Género</span></div>
+      <div><div class="pub-title">¿Por qué el acceso a servicios financieros es vital para el desarrollo global?</div><div class="pub-excerpt">La revolución digital y la reducción de brechas de género en el acceso a cuentas: datos del Global Findex 2021 para América Latina.</div></div>
+      <div class="pub-arrow">→</div>
+    </a>
+    <a class="pub-item" href="https://ivannatravani.wordpress.com/2023/11/10/acuerdos-comerciales-internacionales-reflexiones/" target="_blank" rel="noopener">
+      <div class="pub-date">Nov 2023<span class="pub-tag-badge">Comercio</span></div>
+      <div><div class="pub-title">Acuerdos comerciales internacionales. Reflexiones</div><div class="pub-excerpt">Relectura de Berlinski y Stancanelli: ideas sobre política comercial argentina que siguen siendo pertinentes.</div></div>
+      <div class="pub-arrow">→</div>
+    </a>
+  </div>
+</section>
+
+<!-- MONITOR AR -->
+<section id="monitor">
+  <div class="section-label">Monitor AR</div>
+  <div class="monitor-intro">
+    <div>
+      <h2>Seguimiento en tiempo real del clima político y social argentino</h2>
+      <p>Monitor AR es un tablero de análisis de coyuntura que integra indicadores macroeconómicos, intención de voto, imagen y gestión presidencial, y conversación digital. Actualización continua con las fuentes disponibles más recientes.</p>
+      <p>Combina datos duros de organismos oficiales (INDEC, BCRA) con relevamientos de opinión pública y métricas de social listening en X/Twitter, permitiendo una lectura articulada del momento político.</p>
+      <div class="monitor-tabs-row">
+        <span class="monitor-tab-badge">Indicadores</span>
+        <span class="monitor-tab-badge">Intención de voto</span>
+        <span class="monitor-tab-badge">Imagen &amp; Gestión</span>
+        <span class="monitor-tab-badge">Conv. digital</span>
+        <span class="monitor-tab-badge">Gap Conv–SL</span>
+      </div>
+      <a class="monitor-cta" href="monitor-ar.html" target="_blank" rel="noopener">Abrir Monitor AR →</a>
+      <p class="monitor-note">Actualización: IPC agosto 2026 y última ola disponible de intención de voto. El dashboard se actualiza con cada nuevo dato oficial relevante.</p>
+    </div>
+    <div class="monitor-meta">
+      <div class="monitor-stat">
+        <div class="monitor-stat-label">Fuentes macro</div>
+        <div class="monitor-stat-val">INDEC · BCRA · Mecon</div>
+      </div>
+      <div class="monitor-stat">
+        <div class="monitor-stat-label">Opinión pública</div>
+        <div class="monitor-stat-val">Trespuntozero · Zuban Córdoba · Reyes</div>
+      </div>
+      <div class="monitor-stat">
+        <div class="monitor-stat-label">Social listening</div>
+        <div class="monitor-stat-val">Reputación Digital · Ad Hoc · Monitor Digital</div>
+      </div>
+      <div class="monitor-stat">
+        <div class="monitor-stat-label">Dimensiones</div>
+        <div class="monitor-stat-val">5 pestañas de análisis</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="trayectoria">
+  <div class="section-label">Trayectoria</div>
+  <div class="tray-grid">
+    <div class="tray-col">
+      <h3>Gestión pública</h3>
+      <div class="tray-item"><div class="tray-year">2024 —<br>hoy</div><div class="tray-text"><strong>Asesora, Subsecretaría de Gobierno</strong><span>Municipalidad de San Isidro</span></div></div>
+      <div class="tray-item"><div class="tray-year">2016 —<br>hoy</div><div class="tray-text"><strong>Asesora, Unidad Ministro</strong><span>Ministerio de Hacienda y Finanzas · GCBA — Relacionamiento institucional y enlace interministerial</span></div></div>
+      <div class="tray-item"><div class="tray-year">2007 —<br>2010</div><div class="tray-text"><strong>Consultora, Jefatura de Gabinete</strong><span>Provincia de Buenos Aires / PNUD — Modernización del Estado y relaciones interjurisdiccionales</span></div></div>
+      <div class="tray-item"><div class="tray-year">2007</div><div class="tray-text"><strong>Consultora</strong><span>Poliarquía Consultores — Opinión pública y análisis político</span></div></div>
+    </div>
+    <div class="tray-col">
+      <h3>Docencia e Investigación</h3>
+      <div class="tray-item"><div class="tray-year">2010 —<br>2013</div><div class="tray-text"><strong>Jean Monnet Centre of Excellence</strong><span>Università di Bologna (Buenos Aires) — Cooperación académica UE–AL; Programa VertebrALCUE ALFA III (22 universidades, 17 países)</span></div></div>
+      <div class="tray-item"><div class="tray-year">2013 —<br>2019</div><div class="tray-text"><strong>Docente e investigadora</strong><span>FLACSO Argentina — Posgrado en Ciencia Política y Políticas Públicas</span></div></div>
+      <div class="tray-item"><div class="tray-year">2016 —<br>2019</div><div class="tray-text"><strong>Docente</strong><span>Universidad de Palermo — Grado y posgrado</span></div></div>
+      <div class="tray-item"><div class="tray-year">1999 —<br>2011</div><div class="tray-text"><strong>Docente e investigadora</strong><span>Universidad Torcuato Di Tella / PNUD — Grado, posgrado e investigación aplicada</span></div></div>
+    </div>
+    <div class="tray-col">
+      <h3>Formación</h3>
+      <div class="tray-item"><div class="tray-year">2022</div><div class="tray-text"><strong>Análisis de datos con R y Python</strong><span>UTDT / FLACSO — Formación complementaria en métodos cuantitativos y ciencia de datos sociales</span></div></div>
+      <div class="tray-item"><div class="tray-year">2005</div><div class="tray-text"><strong>Magíster en Políticas Públicas</strong><span>Universidad Torcuato Di Tella — Economía del sector público, regulación y privatizaciones</span></div></div>
+      <div class="tray-item"><div class="tray-year">1999</div><div class="tray-text"><strong>Licenciada en Ciencia Política</strong><span>Universidad de Buenos Aires</span></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="contacto">
+  <div class="section-label">Contacto</div>
+  <div class="contacto-inner">
+    <h2>¿Trabajamos<br><em>juntos?</em></h2>
+    <div class="contacto-links">
+      <div class="contacto-link">
+        <div class="cl-icon">✉</div>
+        <div><div class="contacto-link-label">Email</div><div class="contacto-link-val">ivannatravaini@gmail.com</div></div>
+      </div>
+      <a class="contacto-link" href="https://linkedin.com/in/ivannatravaini" target="_blank" rel="noopener">
+        <div class="cl-icon">in</div>
+        <div><div class="contacto-link-label">LinkedIn</div><div class="contacto-link-val">linkedin.com/in/ivannatravaini</div></div>
+      </a>
+      <a class="contacto-link" href="https://twitter.com/Ivanna_VT" target="_blank" rel="noopener">
+        <div class="cl-icon">𝕏</div>
+        <div><div class="contacto-link-label">Twitter / X</div><div class="contacto-link-val">@Ivanna_VT</div></div>
+      </a>
+      <a class="contacto-link" href="https://ivannatravani.wordpress.com/" target="_blank" rel="noopener">
+        <div class="cl-icon">✍</div>
+        <div><div class="contacto-link-label">Blog #BeBold</div><div class="contacto-link-val">ivannatravani.wordpress.com</div></div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section id="blog">
+  <div class="section-label">Blog &amp; Reflexiones</div>
+  <div class="blog-grid">
+    <a class="blog-card" href="https://ivannatravani.wordpress.com/2024/06/23/reflexion-tomada-prestada-fragmentaria/" target="_blank" rel="noopener">
+      <div class="blog-card-meta"><span class="blog-tag">#Reflexiones</span><span>Jun 2024</span></div>
+      <h3>Honrá tu Flow — Reflexión tomada prestada</h3>
+      <p>Una lista de recordatorios sobre valentía, autonomía y vida: rodéate de quien te sume, no derrames lágrimas por quien no te valora, la vida es un regalo.</p>
+      <span class="read-more">Leer →</span>
+    </a>
+    <a class="blog-card" href="https://ivannatravani.wordpress.com/2023/11/10/acuerdos-comerciales-internacionales-reflexiones/" target="_blank" rel="noopener">
+      <div class="blog-card-meta"><span class="blog-tag">#Data</span><span>Nov 2023</span></div>
+      <h3>Acuerdos comerciales internacionales. Reflexiones</h3>
+      <p>Relectura del clásico de Berlinski y Stancanelli sobre acuerdos comerciales desde un enfoque argentino — ideas que siguen siendo vigentes.</p>
+      <span class="read-more">Leer →</span>
+    </a>
+    <a class="blog-card" href="https://ivannatravani.wordpress.com/2023/10/27/mujeres-liderazgos-proyectos-y-propositos/" target="_blank" rel="noopener">
+      <div class="blog-card-meta"><span class="blog-tag">Género</span><span>Oct 2023</span></div>
+      <h3>Mujeres, liderazgos, proyectos y propósitos</h3>
+      <p>Participación en el taller de liderazgo para mujeres organizado por la Fundación Friedrich Naumann: espacios de diálogo para proyectos y propósitos colectivos.</p>
+      <span class="read-more">Leer →</span>
+    </a>
+    <a class="blog-card" href="https://ivannatravani.wordpress.com/2022/10/20/reforma-electoral-es-calidad-de-la-representacion/" target="_blank" rel="noopener">
+      <div class="blog-card-meta"><span class="blog-tag">#Data</span><span>Oct 2022</span></div>
+      <h3>Reforma Electoral: ¿es calidad de la representación?</h3>
+      <p>Una reforma que favorezca a los partidos tradicionales no tendrá apoyo de los minoritarios. Viejas ideas para abordar problemáticas persistentes.</p>
+      <span class="read-more">Leer →</span>
+    </a>
+    <a class="blog-card" href="https://ivannatravani.wordpress.com/2022/10/10/que-significa-ser-un-lider-en-el-estado-incompetencia-merito-recursoshumanos/" target="_blank" rel="noopener">
+      <div class="blog-card-meta"><span class="blog-tag">#Reflexiones</span><span>Oct 2022</span></div>
+      <h3>¿Qué significa ser un líder en el Estado?</h3>
+      <p>El Principio de Peter aplicado al sector público: "en una jerarquía, todo empleado tiende a ascender hasta su nivel de incompetencia."</p>
+      <span class="read-more">Leer →</span>
+    </a>
+    <a class="blog-card" href="https://ivannatravani.wordpress.com/2022/08/22/por-que-el-acceso-a-servicios-financieros-es-vital-para-el-desarrollo-global/" target="_blank" rel="noopener">
+      <div class="blog-card-meta"><span class="blog-tag">#Data</span><span>Ago 2022</span></div>
+      <h3>¿Por qué el acceso a servicios financieros es vital para el desarrollo global?</h3>
+      <p>Análisis del Global Findex 2021 del Banco Mundial: la revolución digital cataliza el acceso financiero y reduce las disparidades de género.</p>
+      <span class="read-more">Leer →</span>
+    </a>
+  </div>
+  <div class="blog-archive">
+    <h3>Archivo de entradas anteriores</h3>
+    <div class="archive-years">
+      <div class="archive-year">
+        <h4>2022 · Género</h4>
+        <ul>
+          <li><a href="https://ivannatravani.wordpress.com/2022/07/31/igualdad-posible-una-historia-en-la-region/" target="_blank" rel="noopener">Igualdad posible — Una historia en la región</a></li>
+          <li><a href="https://ivannatravani.wordpress.com/2022/07/25/ni-se-puede-ni-se-debe/" target="_blank" rel="noopener">¿Ni se puede ni se debe?</a></li>
+          <li><a href="https://ivannatravani.wordpress.com/2022/06/26/juana-manso/" target="_blank" rel="noopener">Juana Manso</a></li>
+        </ul>
+      </div>
+      <div class="archive-year">
+        <h4>2019 – 2020</h4>
+        <ul>
+          <li><a href="https://ivannatravani.wordpress.com/2020/10/30/winwin/" target="_blank" rel="noopener">#WinWin — Compras públicas e igualdad de género</a></li>
+          <li><a href="https://ivannatravani.wordpress.com/2020/01/26/realdata/" target="_blank" rel="noopener">#RealData — Igualdad de género en datos</a></li>
+          <li><a href="https://ivannatravani.wordpress.com/2019/12/30/sobre-spotlight-onu/" target="_blank" rel="noopener">Sobre #Spotlight — Eliminar la violencia contra las mujeres</a></li>
+        </ul>
+      </div>
+      <div class="archive-year">
+        <h4>2015 – 2018</h4>
+        <ul>
+          <li><a href="https://ivannatravani.wordpress.com/2018/12/21/viajeros-inmoviles/" target="_blank" rel="noopener">Viajeros Inmóviles</a></li>
+          <li><a href="https://ivannatravani.wordpress.com/2016/11/07/activismo-politico-en-internet/" target="_blank" rel="noopener">Activismo Político en Internet</a></li>
+          <li><a href="https://ivannatravani.wordpress.com/2015/12/07/clementina-la-primera-computadora-argentina/" target="_blank" rel="noopener">Clementina — primera computadora argentina</a></li>
+        </ul>
+      </div>
+      <div class="archive-year">
+        <h4>#Reflexiones</h4>
+        <ul>
+          <li><a href="https://ivannatravani.wordpress.com/reflexiones/el-derecho-al-delirio/" target="_blank" rel="noopener">El derecho al delirio — Galeano</a></li>
+          <li><a href="https://ivannatravani.wordpress.com/reflexiones/desiderata/" target="_blank" rel="noopener">#Desiderata</a></li>
+          <li><a href="https://ivannatravani.wordpress.com/reflexiones/" target="_blank" rel="noopener">Todas las reflexiones →</a></li>
+        </ul>
+      </div>
+      <div class="archive-year">
+        <h4>Ver todo</h4>
+        <ul>
+          <li><a href="https://ivannatravani.wordpress.com/" target="_blank" rel="noopener">Todas las entradas →</a></li>
+          <li><a href="https://ivannatravani.wordpress.com/data/" target="_blank" rel="noopener">Sección #Data →</a></li>
+          <li><a href="https://ivannatravani.wordpress.com/socialmedia-feelingmedia/" target="_blank" rel="noopener">Sección #SocialMedia →</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 Ivanna Vanina Travaini · Buenos Aires, Argentina</p>
+  <p><a href="monitor-ar.html">Monitor AR →</a></p>
+</footer>
+
+<script>
+  const btn = document.getElementById('themeBtn');
+  const root = document.documentElement;
+  try {
+    const saved = localStorage.getItem('it-theme') || 'dark';
+    root.setAttribute('data-theme', saved);
+    btn.textContent = saved === 'dark' ? '☀' : '☽';
+  } catch(e) {
+    root.setAttribute('data-theme', 'dark');
+    btn.textContent = '☀';
+  }
+  btn.addEventListener('click', () => {
+    const current = root.getAttribute('data-theme');
+    const next = current === 'dark' ? 'light' : 'dark';
+    root.setAttribute('data-theme', next);
+    btn.textContent = next === 'dark' ? '☀' : '☽';
+    try { localStorage.setItem('it-theme', next); } catch(e) {}
+  });
+</script>
