@@ -67,7 +67,7 @@ section:last-of-type{border-bottom:none;}
 .dato-val{font-family:var(--font-display);font-size:1.05rem;line-height:1.35;color:var(--fg);}
 
 /* areas */
-.areas-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1.5rem;}
+.areas-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem;}
 .area-card{background:var(--card-bg);border:1px solid var(--rule);padding:1.5rem;position:relative;transition:border-color .2s;}
 .area-card:hover{border-color:var(--accent);}
 .area-num{font-family:var(--font-display);font-size:3.5rem;font-weight:300;color:var(--rule);line-height:1;margin-bottom:.75rem;font-variant-numeric:tabular-nums;}
@@ -154,7 +154,7 @@ footer a:hover{color:var(--accent);}
   .pub-arrow{display:none;}
 }
 @media(max-width:450px){
-  .areas-grid{grid-template-columns:1fr;}
+  .areas-grid{grid-template-columns:1fr 1fr;}
   .masthead h1{white-space:normal;}
 }
 @media(prefers-reduced-motion:reduce){*{transition:none!important;}}
@@ -186,13 +186,13 @@ footer a:hover{color:var(--accent);}
   </div>
   <nav>
     <a href="#sobre">Sobre mí</a>
-    <a href="#areas">Áreas</a>
     <a href="#datos">Datos y Opinión Pública</a>
     <a href="#publicaciones">Publicaciones</a>
     <a href="#monitor">Monitor AR</a>
     <a href="#trayectoria">Trayectoria</a>
     <a href="#blog">Blog</a>
     <a href="#contacto">Contacto</a>
+    <a href="#areas">Áreas</a>
   </nav>
 </header>
 
@@ -224,42 +224,6 @@ footer a:hover{color:var(--accent);}
         <div class="dato-val">2015</div>
       </div>
     </aside>
-  </div>
-</section>
-
-<section id="areas">
-  <div class="section-label">Áreas temáticas</div>
-  <div class="areas-grid">
-    <div class="area-card">
-      <div class="area-num">01</div>
-      <h3>Fiscal &amp; Federalismo</h3>
-      <p>Análisis de coparticipación, presupuesto subnacional y reforma fiscal. La distribución de recursos entre jurisdicciones como problema político y técnico.</p>
-      <span class="area-tag">#Data · #Fiscal</span>
-    </div>
-    <div class="area-card" id="datos">
-      <div class="area-num">02</div>
-      <h3>Datos y Opinión Pública</h3>
-      <p>Análisis de clima político, social listening y uso estratégico de datos en la gestión gubernamental. Métodos cuali-cuantitativos aplicados a la toma de decisiones.</p>
-      <span class="area-tag">#SocialMedia · #Data · #R · #Python</span>
-    </div>
-    <div class="area-card">
-      <div class="area-num">03</div>
-      <h3>Liderazgo y Autonomía</h3>
-      <p>Políticas de igualdad, acceso a servicios financieros, liderazgo femenino en el sector público. Evidencia y agenda en el Cono Sur.</p>
-      <span class="area-tag">#Género</span>
-    </div>
-    <div class="area-card">
-      <div class="area-num">04</div>
-      <h3>Gobierno Abierto &amp; Gestión</h3>
-      <p>Reforma del Estado, transparencia activa, acceso a la información pública y mérito institucional. Cómo se toman —y cómo deberían tomarse— las decisiones públicas.</p>
-      <span class="area-tag">#GobiernoAbierto · #Reflexiones</span>
-    </div>
-    <div class="area-card">
-      <div class="area-num">05</div>
-      <h3>Cooperación Internacional</h3>
-      <p>Redes académicas UE–América Latina, programas de cooperación universitaria (ALFA III, Jean Monnet) y vinculación institucional con organismos internacionales.</p>
-      <span class="area-tag">#CooperaciónAcadémica · #UE-AL</span>
-    </div>
   </div>
 </section>
 
@@ -467,6 +431,36 @@ footer a:hover{color:var(--accent);}
           <li><a href="https://ivannatravani.wordpress.com/socialmedia-feelingmedia/" target="_blank" rel="noopener">Sección #SocialMedia →</a></li>
         </ul>
       </div>
+    </div>
+  </div>
+</section>
+
+<section id="areas">
+  <div class="section-label">Áreas temáticas</div>
+  <div class="areas-grid">
+    <div class="area-card">
+      <div class="area-num">01</div>
+      <h3>Fiscal &amp; Federalismo</h3>
+      <p>Análisis de coparticipación, presupuesto subnacional y reforma fiscal. La distribución de recursos entre jurisdicciones como problema político y técnico.</p>
+      <span class="area-tag">#Data · #Fiscal</span>
+    </div>
+    <div class="area-card" id="datos">
+      <div class="area-num">02</div>
+      <h3>Datos y Opinión Pública</h3>
+      <p>Análisis de clima político, social listening y uso estratégico de datos en la gestión gubernamental. Métodos cuali-cuantitativos aplicados a la toma de decisiones.</p>
+      <span class="area-tag">#SocialMedia · #Data · #R · #Python</span>
+    </div>
+    <div class="area-card">
+      <div class="area-num">03</div>
+      <h3>Gobierno Abierto &amp; Gestión</h3>
+      <p>Reforma del Estado, transparencia activa, acceso a la información pública y mérito institucional. Cómo se toman —y cómo deberían tomarse— las decisiones públicas.</p>
+      <span class="area-tag">#GobiernoAbierto · #Reflexiones</span>
+    </div>
+    <div class="area-card">
+      <div class="area-num">04</div>
+      <h3>Cooperación Internacional</h3>
+      <p>Redes académicas UE–América Latina, programas de cooperación universitaria (ALFA III, Jean Monnet) y vinculación institucional con organismos internacionales.</p>
+      <span class="area-tag">#CooperaciónAcadémica · #UE-AL</span>
     </div>
   </div>
 </section>
