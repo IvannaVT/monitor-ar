@@ -151,6 +151,31 @@ footer{text-align:center;padding:20px;font-size:10px;color:var(--fg-dim);border-
 footer a{color:var(--accent)}
 @media(max-width:500px){.gap-zone-cards{grid-template-columns:1fr 1fr}.kpi-num{font-size:22px}}
 @media(max-width:620px){.cross-grid{grid-template-columns:1fr!important}}
+/* ── MOBILE ─────────────────────────────────── */
+@media(max-width:640px){
+  .gap-legend-grid{grid-template-columns:1fr!important}
+  .main-content{padding:16px 14px 60px}
+  .header-inner{height:46px}
+  .logo{font-size:15px}
+  .kpi{padding:10px 12px}
+  .kpi-num{font-size:24px}
+  .chart-wrap{padding:14px}
+  .chart-box{height:180px}
+  .chart-box.med{height:160px}
+  .gap-row{grid-template-columns:1fr 1fr;gap:6px}
+  .gap-row .gap-val:nth-child(n+4){display:none}
+  .gap-row.header-row .gap-val:nth-child(n+4){display:none}
+  .gap-zone-cards{grid-template-columns:1fr 1fr}
+  .hallazgo-head{gap:5px}
+  .hallazgo-src{display:block;width:100%}
+  .explore-box{padding:10px 12px}
+  .sec{font-size:10px}
+  .notice{font-size:10px}
+  .source{font-size:10px}
+  table{font-size:11px;min-width:300px}
+  th,td{padding:6px 8px}
+  .tab-btn{font-size:12px;padding:9px 10px}
+}
 </style>
 
 <header class="site-header">
@@ -723,7 +748,7 @@ footer a{color:var(--accent)}
   <p class="sec">GAP CONV–SL · cruce encuestas × conversación digital</p>
   <div class="notice">SL estructural cargado (32 informes) · métricas de volumen y sentimiento exactas pendientes · hallazgos cualitativos disponibles en tab Conv. digital</div>
 
-  <div style="display:grid;grid-template-columns:1fr 190px;gap:14px;margin-bottom:20px;align-items:start">
+  <div style="display:grid;grid-template-columns:1fr minmax(0,190px);gap:14px;margin-bottom:20px;align-items:start" class="gap-legend-grid">
     <div class="info-box" style="margin-bottom:0;font-size:11px;line-height:1.55">
       <strong>Zona de acuerdo</strong> — tarjetas a plena opacidad son indicadores donde CONV y SL convergen. El valor es el promedio de ambas lecturas. Rayas = divergentes · muy atenuado = sin dato en una capa.<br>
       <span style="color:var(--pos);font-weight:600">★ mayor convergencia</span> · <span style="color:var(--neg);font-weight:600">▲ mayor divergencia</span> · <span style="color:var(--warn);font-weight:600">⚑ hallazgo para explorar</span>
