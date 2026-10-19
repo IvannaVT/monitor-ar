@@ -57,6 +57,14 @@ tr:nth-child(even) td { background: var(--accent-light); }
 .pill-yellow { background: var(--yellow-bg); color: var(--yellow); }
 .pill-grey { background: var(--grey-bg); color: var(--grey); }
 .cifra { font-family: 'Arial', sans-serif; font-size: .82rem; color: var(--accent); }
+.mosaico-par { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; align-items: start; }
+@media (max-width: 640px) { .mosaico-par { grid-template-columns: 1fr; } }
+.mosaico-tiles { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; }
+.mtile { background: var(--surface); border: 1px solid var(--border); border-radius: 5px; padding: 7px 10px; font-size: .78rem; line-height: 1.4; }
+.mtile-red { border-left: 3px solid var(--red); background: var(--red-bg); }
+.mtile-blue { border-left: 3px solid var(--accent); background: var(--accent-light); }
+.mtile .tl { font-family: 'Arial', sans-serif; font-size: .68rem; font-weight: 700; color: var(--red); margin-bottom: 2px; }
+.mtile-blue .tl { color: var(--accent); }
 footer { font-family: 'Arial', sans-serif; font-size: 11px; color: var(--muted); margin-top: 28px; border-top: 1px solid var(--border); padding-top: 10px; }
 </style>
 </head>
@@ -381,111 +389,114 @@ footer { font-family: 'Arial', sans-serif; font-size: 11px; color: var(--muted);
 
 <hr class="divider">
 
-<!-- PENDIENTES -->
+<!-- PENDIENTES + MONITOREAR en paralelo -->
+<div class="mosaico-par">
+
 <section>
 <h2>Pendientes operativos</h2>
-
-<div class="pendiente-item">
-  <div class="pi-label">RP-01 · PASO — $29.000M</div>
-  LLA exige ahorro redirigido a baja impositiva. Sin respuesta oficial.
-</div>
-<div class="pendiente-item">
-  <div class="pi-label">RP-02 · ABL –10% permanente</div>
-  Arengo ofreció congelamiento. Brecha sin cerrar.
-</div>
-<div class="pendiente-item">
-  <div class="pi-label">RP-03 · IIBB — manufactura / monotributistas / gastronomía</div>
-  Tres demandas convergentes. Sin respuesta articulada del GCBA.
-</div>
-<div class="pendiente-item">
-  <div class="pi-label">RP-04 · Patentes híbridos/eléctricos — exención + costo fiscal</div>
-  LLA exige exención. CD preguntó costo. Sin respuesta.
-</div>
-<div class="pendiente-item">
-  <div class="pi-label">RP-05 · 6 organismos (LLA)</div>
-  DG Mujer · DG Economía Circular · DG Política Ambiental · Sec. Asuntos Estratégicos · Unidad Rel. Federales · IVC. Sin posición del Ejecutivo.
-</div>
-<div class="pendiente-item">
-  <div class="pi-label">RP-06 · Autódromo — concesión</div>
-  Condición LLA. Sin valuación ni estado del contrato.
-</div>
-<div class="pendiente-item">
-  <div class="pi-label">RP-07 · Publicidad oficial — recorte $60.000M+</div>
-  Sin respuesta.
-</div>
-<div class="pendiente-item">
-  <div class="pi-label">RP-08 · IVC — peronismo vs. LLA</div>
-  Requiere posición del Ejecutivo.
-</div>
-<div class="pendiente-item">
-  <div class="pi-label">RP-09 · Intereses deuda — $592.000M (FxBA)</div>
-  Cotejar con planillas del proyecto.
-</div>
-<div class="pendiente-item">
-  <div class="pi-label">RP-10 · Privatización SBASE / Autopistas</div>
-  Sin posición oficial. Alta sensibilidad sindical.
-</div>
-<div class="pendiente-item">
-  <div class="pi-label">RP-11 · Taquigrafía 7/10</div>
-  No publicada. Fuente: legislatura.gob.ar.
-</div>
-<div class="pendiente-item">
-  <div class="pi-label">RP-12 · Fondo Anticíclico — uso emergencia hídrica</div>
-  Verificar saldo y aplicaciones previas.
-</div>
-<div class="pendiente-item">
-  <div class="pi-label">RP-13 · Sala de 3 — partida en Educación</div>
-  Miguel (16/10) sin respuesta formal a Tagliaferri.
-</div>
-<div class="pendiente-item">
-  <div class="pi-label">RP-14 · Bono proveedores — condiciones</div>
-  Arengo confirmó $600.000M. Pendiente: tasas, plazos, quiénes califican.
-</div>
-<div class="pendiente-item">
-  <div class="pi-label">RP-15 · Línea F — cronograma</div>
-  Bereciartua no respondió a Neira (14/10).
+<div class="mosaico-tiles">
+  <div class="mtile mtile-red">
+    <div class="tl">RP-01 · PASO</div>
+    $29.000M → baja impositiva. Sin respuesta.
+  </div>
+  <div class="mtile mtile-red">
+    <div class="tl">RP-02 · ABL –10%</div>
+    Arengo ofreció congelamiento. Brecha sin cerrar.
+  </div>
+  <div class="mtile mtile-red">
+    <div class="tl">RP-03 · IIBB</div>
+    Manufactura / monotributistas / gastronomía. Sin respuesta GCBA.
+  </div>
+  <div class="mtile mtile-red">
+    <div class="tl">RP-04 · Patentes híbridos/eléctricos</div>
+    Exención + costo fiscal. Sin respuesta.
+  </div>
+  <div class="mtile mtile-red">
+    <div class="tl">RP-05 · 6 organismos</div>
+    DG Mujer · Economía Circular · Pol. Ambiental · Asuntos Estratégicos · Rel. Federales · IVC.
+  </div>
+  <div class="mtile mtile-red">
+    <div class="tl">RP-06 · Autódromo</div>
+    Concesión privada. Sin valuación ni contrato.
+  </div>
+  <div class="mtile mtile-red">
+    <div class="tl">RP-07 · Publicidad oficial</div>
+    Recorte $60.000M+. Sin respuesta.
+  </div>
+  <div class="mtile mtile-red">
+    <div class="tl">RP-08 · IVC</div>
+    Peronismo defiende; LLA quiere cerrar. Requiere posición GCBA.
+  </div>
+  <div class="mtile mtile-red">
+    <div class="tl">RP-09 · Intereses deuda</div>
+    $592.000M (FxBA). Cotejar con planillas.
+  </div>
+  <div class="mtile mtile-red">
+    <div class="tl">RP-10 · Privatización SBASE / Autopistas</div>
+    Sin posición oficial. Alta sensibilidad sindical.
+  </div>
+  <div class="mtile mtile-red">
+    <div class="tl">RP-11 · Taquigrafía 7/10</div>
+    No publicada. legislatura.gob.ar.
+  </div>
+  <div class="mtile mtile-red">
+    <div class="tl">RP-12 · Fondo Anticíclico</div>
+    Uso emergencia hídrica. Verificar saldo y aplicaciones previas.
+  </div>
+  <div class="mtile mtile-red">
+    <div class="tl">RP-13 · Sala de 3</div>
+    Sin partida en Educación. Miguel (16/10) sin respuesta formal.
+  </div>
+  <div class="mtile mtile-red">
+    <div class="tl">RP-14 · Bono proveedores</div>
+    $600.000M confirmado. Pendiente: tasas, plazos, quiénes califican.
+  </div>
+  <div class="mtile mtile-red">
+    <div class="tl">RP-15 · Línea F</div>
+    Sin cronograma. Bereciartua no respondió a Neira (14/10).
+  </div>
 </div>
 </section>
 
-<hr class="divider">
-
-<!-- QUÉ MONITOREAR -->
 <section>
 <h2>Semana 20/10 — Qué monitorear</h2>
-
-<div class="monitoreo-item">
-  <div class="ml">🔴 1 · Respuesta del Ejecutivo a LLA y CD</div>
-  ¿Oferta formal sobre ABL, IIBB, PASO u organismos?
-</div>
-<div class="monitoreo-item">
-  <div class="ml">🔴 2 · Pliego LLA — 12 condiciones</div>
-  PASO, ABL, IIBB y cierre de organismos: máxima fricción.
-</div>
-<div class="monitoreo-item">
-  <div class="ml">🔴 3 · Confianza y Desarrollo</div>
-  CD-01/02/03 sin respuesta. Sus votos: segundo bloque clave.
-</div>
-<div class="monitoreo-item">
-  <div class="ml">🔴 4 · UCR / Ciudadanos Unidos</div>
-  Sin declaraciones al 10/10. Votos necesarios para mayoría.
-</div>
-<div class="monitoreo-item">
-  <div class="ml">🔴 5 · Taquigrafías — legislatura.gob.ar</div>
-  Sesiones 7/10, 14/10 y 16/10 sin publicar.
-</div>
-<div class="monitoreo-item">
-  <div class="ml">🟡 6 · IVC — posición del Ejecutivo</div>
-  LLA: cierre. Peronismo: defender. Requiere definición.
-</div>
-<div class="monitoreo-item">
-  <div class="ml">🟡 7 · $592.000M intereses — validar cifra FxBA</div>
-  Cotejar con planillas del proyecto.
-</div>
-<div class="monitoreo-item">
-  <div class="ml">🟡 8 · Privatización SBASE / Autopistas — reacción sindical</div>
-  Monitorear UTA, AGTSyP y prensa especializada.
+<div class="mosaico-tiles">
+  <div class="mtile mtile-blue">
+    <div class="tl">🔴 1 · Ejecutivo → LLA y CD</div>
+    ¿Oferta formal sobre ABL, IIBB, PASO u organismos?
+  </div>
+  <div class="mtile mtile-blue">
+    <div class="tl">🔴 2 · Pliego LLA — 12 condiciones</div>
+    PASO, ABL, IIBB y organismos: máxima fricción.
+  </div>
+  <div class="mtile mtile-blue">
+    <div class="tl">🔴 3 · Confianza y Desarrollo</div>
+    CD-01/02/03 sin respuesta. Segundo bloque clave.
+  </div>
+  <div class="mtile mtile-blue">
+    <div class="tl">🔴 4 · UCR / Ciudadanos Unidos</div>
+    Sin declaraciones al 10/10. Votos necesarios.
+  </div>
+  <div class="mtile mtile-blue">
+    <div class="tl">🔴 5 · Taquigrafías</div>
+    7/10, 14/10 y 16/10 sin publicar. legislatura.gob.ar.
+  </div>
+  <div class="mtile mtile-blue">
+    <div class="tl">🟡 6 · IVC</div>
+    LLA: cierre. Peronismo: defender. Requiere definición GCBA.
+  </div>
+  <div class="mtile mtile-blue">
+    <div class="tl">🟡 7 · $592.000M intereses</div>
+    Validar cifra FxBA con planillas del proyecto.
+  </div>
+  <div class="mtile mtile-blue">
+    <div class="tl">🟡 8 · Privatización SBASE / Autopistas</div>
+    Reacción sindical: UTA, AGTSyP, prensa especializada.
+  </div>
 </div>
 </section>
+
+</div>
 
 <footer>
   Uso interno · Comisión de Presupuesto, Hacienda y Política Tributaria · CABA · 19/10/2026 14:55 ART · Fuentes: Ámbito, La Nación, Letra P, Parlamentario, Pura Ciudad · Taquigrafías 7/10, 14/10, 16/10 pendientes.
