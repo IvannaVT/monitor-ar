@@ -1,0 +1,573 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1"><style>:root{color-scheme:light}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Presupuesto 2027 · Posiciones legislativas</title>
+<style>
+:root {
+  --bg: #f7f7f5;
+  --surface: #ffffff;
+  --border: #e4e4e0;
+  --text: #1a1a1a;
+  --muted: #6b6b6b;
+  --accent: #1a4b8e;
+  --accent-light: #e8f0fb;
+  --red: #c0392b;
+  --red-bg: #fdecea;
+  --yellow: #b45309;
+  --yellow-bg: #fef9ec;
+  --green: #15803d;
+  --green-bg: #f0fdf4;
+  --grey: #6b6b6b;
+  --grey-bg: #f4f4f3;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #111110; --surface: #1c1c1a; --border: #2e2e2b;
+    --text: #e8e8e5; --muted: #9a9a96; --accent: #5b8dd9;
+    --accent-light: #1a2d4a; --red-bg: #2d1412;
+    --yellow-bg: #2d2010; --green-bg: #0e2018; --grey-bg: #232320;
+  }
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { background: var(--bg); color: var(--text); font-family: 'Georgia', serif; font-size: 15px; line-height: 1.7; padding: 0 16px 60px; }
+.wrap { max-width: 900px; margin: 0 auto; }
+header { border-bottom: 2px solid var(--accent); padding: 28px 0 16px; margin-bottom: 28px; }
+header .kicker { font-family: 'Arial', sans-serif; font-size: 11px; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); margin-bottom: 6px; }
+header h1 { font-size: 1.55rem; color: var(--accent); line-height: 1.25; }
+header .meta { font-family: 'Arial', sans-serif; font-size: 12px; color: var(--muted); margin-top: 8px; }
+.corte { display: inline-block; background: var(--yellow-bg); color: var(--yellow); border: 1px solid #f5c96e; border-radius: 4px; padding: 2px 8px; font-size: 11px; font-family: 'Arial', sans-serif; font-weight: 600; }
+.aviso { background: var(--yellow-bg); border-left: 4px solid #f5c96e; padding: 10px 14px; border-radius: 0 6px 6px 0; margin: 14px 0 22px; font-family: 'Arial', sans-serif; font-size: 12.5px; color: var(--yellow); }
+section { margin-bottom: 36px; }
+h2 { font-family: 'Arial', sans-serif; font-size: 1rem; font-weight: 700; color: var(--accent); border-bottom: 1px solid var(--border); padding-bottom: 6px; margin-bottom: 16px; letter-spacing: .02em; text-transform: uppercase; }
+h3 { font-family: 'Arial', sans-serif; font-size: .88rem; font-weight: 700; color: var(--text); margin: 20px 0 8px; }
+p { margin-bottom: 9px; }
+.bloque-header { display: flex; align-items: center; gap: 12px; margin-bottom: 14px; }
+.bloque-nombre { font-family: 'Arial', sans-serif; font-size: .95rem; font-weight: 700; }
+.bloque-bancas { font-family: 'Arial', sans-serif; font-size: .8rem; color: var(--muted); }
+.card { background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 14px 18px; margin-bottom: 12px; }
+.card-mini { background: var(--surface); border: 1px solid var(--border); border-radius: 6px; padding: 10px 14px; margin-bottom: 8px; font-size: .87rem; }
+.legislador { font-family: 'Arial', sans-serif; font-size: .75rem; color: var(--muted); margin-bottom: 4px; }
+.tag { display: inline-block; font-family: 'Arial', sans-serif; font-size: .68rem; font-weight: 700; padding: 1px 6px; border-radius: 8px; white-space: nowrap; margin-right: 4px; }
+.tag-cond { background: var(--red-bg); color: var(--red); }
+.tag-preg { background: var(--accent-light); color: var(--accent); }
+.tag-cuest { background: var(--yellow-bg); color: var(--yellow); }
+.tag-decl { background: var(--grey-bg); color: var(--grey); }
+.tag-pend { background: var(--red-bg); color: var(--red); }
+table { width: 100%; border-collapse: collapse; font-size: .82rem; margin-bottom: 16px; }
+th { background: var(--accent); color: #fff; font-family: 'Arial', sans-serif; font-size: .73rem; padding: 7px 10px; text-align: left; }
+td { border-bottom: 1px solid var(--border); padding: 8px 10px; vertical-align: top; }
+tr:nth-child(even) td { background: var(--accent-light); }
+.est { font-size: 1rem; }
+.pendiente-item { border-left: 3px solid var(--red); background: var(--red-bg); padding: 10px 14px; margin-bottom: 10px; border-radius: 0 6px 6px 0; font-size: .87rem; }
+.pendiente-item .pi-label { font-family: 'Arial', sans-serif; font-size: .73rem; font-weight: 700; color: var(--red); margin-bottom: 4px; }
+.monitoreo-item { border-left: 3px solid var(--accent); background: var(--accent-light); padding: 10px 14px; margin-bottom: 10px; border-radius: 0 6px 6px 0; font-size: .87rem; }
+.monitoreo-item .ml { font-family: 'Arial', sans-serif; font-size: .73rem; font-weight: 700; color: var(--accent); margin-bottom: 3px; }
+.divider { border: none; border-top: 1px dashed var(--border); margin: 28px 0; }
+.pill { display: inline-block; font-family: 'Arial', sans-serif; font-size: .7rem; font-weight: 700; padding: 2px 7px; border-radius: 10px; }
+.pill-red { background: var(--red-bg); color: var(--red); }
+.pill-yellow { background: var(--yellow-bg); color: var(--yellow); }
+.pill-grey { background: var(--grey-bg); color: var(--grey); }
+ul.lista { padding-left: 1.2em; margin-bottom: 10px; }
+ul.lista li { margin-bottom: 4px; }
+.cifra-inline { font-family: 'Arial', sans-serif; font-size: .85rem; color: var(--accent); }
+footer { font-family: 'Arial', sans-serif; font-size: 11px; color: var(--muted); margin-top: 36px; border-top: 1px solid var(--border); padding-top: 12px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <div class="kicker">Comisión de Presupuesto · CABA · Uso interno</div>
+  <h1>Presupuesto 2027 — Posiciones legislativas,<br>preguntas y pendientes</h1>
+  <div class="meta">Presentación ante Comisión de Presupuesto · 7 de octubre de 2026 &nbsp;|&nbsp; <span class="corte">⏱ Actualización 10/10/2026 10:05 ART</span></div>
+</header>
+
+<div class="aviso">⚠ Taquigrafía oficial no publicada al 10/10. Intervenciones reconstruidas de fuentes periodísticas (Ámbito, La Nación, Infobae, Letra P, Parlamentario, Pura Ciudad). · <strong>Novedad 10/10:</strong> Se confirmó el bono a proveedores ($600.000M, Arengo en sesión). Confianza y Desarrollo y peronismo (FB-09/FB-10) incorporados. Rondas ministeriales en curso. Sin acuerdo.</div>
+
+<!-- ===== LLA ===== -->
+<section>
+<h2>La Libertad Avanza — Condiciones y preguntas</h2>
+<div class="bloque-header">
+  <div>
+    <div class="bloque-nombre">La Libertad Avanza</div>
+    <div class="bloque-bancas">14 bancas · Jefa de bloque: Pilar Ramírez · Vicepresidente de comisión: Nicolás Pakgojz</div>
+  </div>
+</div>
+
+<div style="overflow-x:auto;">
+<table>
+<thead>
+<tr><th>#</th><th>Legislador/a</th><th>Tema</th><th>Planteo / Condición</th><th>Respuesta GCBA</th><th>Estado</th></tr>
+</thead>
+<tbody>
+<tr>
+  <td>LLA-01</td>
+  <td>Pilar Ramírez</td>
+  <td>PASO / gasto electoral</td>
+  <td><span class="tag tag-cond">CONDICIÓN</span> Eliminación de las PASO. Estimación de ahorro: $29.000M. Exige que los fondos se redirijan a baja de impuestos.</td>
+  <td>No documentada. Wolff dijo que el gobierno "escuchará". ⚪</td>
+  <td><span class="est">⏳</span></td>
+</tr>
+<tr>
+  <td>LLA-02</td>
+  <td>Pilar Ramírez</td>
+  <td>ABL</td>
+  <td><span class="tag tag-cond">CONDICIÓN</span> Reducción del ABL en 10%. Exige que sea permanente y sostenible, sin compensar con otros tributos ni con deuda.</td>
+  <td>Arengo anunció congelamiento del ABL para más de la mitad de los contribuyentes y exención para jubilados. LLA considera insuficiente: pide –10% nominal.</td>
+  <td><span class="est">⏳</span></td>
+</tr>
+<tr>
+  <td>LLA-03</td>
+  <td>Pilar Ramírez</td>
+  <td>Ingresos Brutos</td>
+  <td><span class="tag tag-cond">CONDICIÓN</span> Reducir IIBB 25% para actividad manufacturera; ampliar tope para comercio y servicios; tasa 0% para todas las categorías de monotributistas de servicios.</td>
+  <td>No documentada respuesta específica a los términos de LLA. ⚪</td>
+  <td><span class="est">⏳</span></td>
+</tr>
+<tr>
+  <td>LLA-04</td>
+  <td>Pilar Ramírez / Pakgojz</td>
+  <td>Patentes — híbridos y eléctricos</td>
+  <td><span class="tag tag-cuest">CUESTIONAMIENTO</span> Exigir exención de patentes para autos híbridos y eléctricos. LLA acusa al PRO de haber eliminado esa exención en 2024, generando "inseguridad jurídica", y dice que el anuncio del Jefe de Gobierno copió su proyecto de mayo.</td>
+  <td>Arengo anunció que "ningún vecino pagará más nominalmente de lo que pagó este año." Sin confirmación de exención específica para híbridos/eléctricos. ⚪</td>
+  <td><span class="est">⏳</span></td>
+</tr>
+<tr>
+  <td>LLA-05</td>
+  <td>Pilar Ramírez</td>
+  <td>Organismos — 6 dependencias</td>
+  <td><span class="tag tag-cond">CONDICIÓN</span> Eliminar: DG Mujer · DG Economía Circular · DG Política y Estrategia Ambiental · Sec. Asuntos Estratégicos · Unidad Relaciones Federales · IVC (costo ~$124.000M).</td>
+  <td>No documentada. ⚪</td>
+  <td><span class="est">⏳</span></td>
+</tr>
+<tr>
+  <td>LLA-06</td>
+  <td>Pilar Ramírez</td>
+  <td>Autódromo / concesión</td>
+  <td><span class="tag tag-cond">CONDICIÓN</span> Concesión privada del Autódromo y eliminación de la Subsecretaría que lo administra.</td>
+  <td>No documentada. ⚪</td>
+  <td><span class="est">⏳</span></td>
+</tr>
+<tr>
+  <td>LLA-07</td>
+  <td>Pilar Ramírez</td>
+  <td>Publicidad / propaganda</td>
+  <td><span class="tag tag-cond">CONDICIÓN</span> Recorte de publicidad oficial estimada en más de $60.000M.</td>
+  <td>No documentada. ⚪</td>
+  <td><span class="est">⏳</span></td>
+</tr>
+<tr>
+  <td>LLA-08</td>
+  <td>Nicolás Pakgojz</td>
+  <td>Sostenibilidad fiscal de las bajas</td>
+  <td><span class="tag tag-preg">PREGUNTA</span> ¿La baja de impuestos está financiada con recorte de gasto o con deuda? "Bajar impuestos con deuda no es bajar impuestos: es pasarles la cuenta a los porteños más adelante."</td>
+  <td>No documentada. ⚪</td>
+  <td><span class="est">⏳</span></td>
+</tr>
+<tr>
+  <td>LLA-09</td>
+  <td>Juan Pablo Arenaza</td>
+  <td>Privatización de empresas</td>
+  <td><span class="tag tag-preg">PREGUNTA</span> ¿Prevé el presupuesto avanzar en la privatización de Subterráneos de Buenos Aires y Autopistas Urbanas, conforme a la "Ley Bases porteña" de LLA?</td>
+  <td>No documentada. ⚪</td>
+  <td><span class="est">⏳</span></td>
+</tr>
+<tr>
+  <td>LLA-10</td>
+  <td>Juan Pablo Arenaza</td>
+  <td>Superposición de estructuras</td>
+  <td><span class="tag tag-preg">PREGUNTA</span> Escrutinio de secretarías y subsecretarías superpuestas. CABA gasta en seguridad más que Madrid: gestión más eficiente, no más presupuesto.</td>
+  <td>No documentada. ⚪</td>
+  <td><span class="est">⏳</span></td>
+</tr>
+<tr>
+  <td>LLA-11</td>
+  <td>Juan Pablo Arenaza</td>
+  <td>Deuda para gasto corriente</td>
+  <td><span class="tag tag-preg">PREGUNTA</span> Declaró que no aprobará deuda para financiar gasto corriente.</td>
+  <td>No documentada. ⚪</td>
+  <td><span class="est">⏳</span></td>
+</tr>
+<tr>
+  <td>LLA-12</td>
+  <td>Pilar Ramírez</td>
+  <td>Agenda legislativa paralela</td>
+  <td><span class="tag tag-decl">DECLARACIÓN</span> Exige tratamiento antes de fin de año de Ley de Libertad Comercial y Silencio Positivo, como parte del paquete de acuerdo.</td>
+  <td>No documentada. ⚪</td>
+  <td><span class="est">⏳</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<div class="card-mini">
+  Alivio fiscal total exigido por LLA: <span class="cifra-inline">$435.000M</span>. Mecanismo: eliminar organismos + recorte publicidad + supresión PASO. Posición general: "No es un mal presupuesto, pero podría ser mejor." Condiciones se trabajarán "en las próximas semanas" (Ramírez).
+</div>
+</section>
+
+<hr class="divider">
+
+<!-- ===== PERONISMO ===== -->
+<section>
+<h2>Fuerza por Buenos Aires (peronismo) — Cuestionamientos y demandas</h2>
+<div class="bloque-header">
+  <div>
+    <div class="bloque-nombre">Fuerza por Buenos Aires</div>
+    <div class="bloque-bancas">20 bancas · Presidenta de bloque: Claudia Neira · Vicepresidenta de comisión</div>
+  </div>
+</div>
+
+<p>El bloque lanzó un "monitor de presupuesto" en línea con datos propios. Posición de conjunto: no anunció voto favorable. Apunta a vivienda, empleo, coherencia fiscal y coparticipación.</p>
+
+<div style="overflow-x:auto;">
+<table>
+<thead>
+<tr><th>#</th><th>Legislador/a</th><th>Área</th><th>Cuestionamiento</th><th>Dato que citan</th><th>Estado</th></tr>
+</thead>
+<tbody>
+<tr>
+  <td>FB-01</td>
+  <td>Claudia Neira / bloque</td>
+  <td>Coherencia fiscal</td>
+  <td><span class="tag tag-cuest">CUESTIONAMIENTO</span> El PRO presenta superávit mientras sube impuestos patrimoniales. "Un superávit debería bajar impuestos a la actividad, no al patrimonio."</td>
+  <td>Superávit primario $593.000M vs. incremento de impuestos patrimoniales. <span class="pill pill-grey">⚪ confirmar</span></td>
+  <td><span class="est">🟡</span></td>
+</tr>
+<tr>
+  <td>FB-02</td>
+  <td>Bloque</td>
+  <td>Vivienda / IVC</td>
+  <td><span class="tag tag-cuest">CUESTIONAMIENTO</span> "Vaciamiento" del IVC. Exigen mantener partidas del IVC y programas de integración de villas (Ricciardelli).</td>
+  <td>IVC cae 17,2% real en 2027 vs. 2026. Desde dic. 2023: –51,5% real acumulado. <span class="pill pill-grey">fuente: bloque</span></td>
+  <td><span class="est">🔴</span></td>
+</tr>
+<tr>
+  <td>FB-03</td>
+  <td>Bloque</td>
+  <td>Empleo</td>
+  <td><span class="tag tag-cuest">CUESTIONAMIENTO</span> Caída de empleo privado desde 2023. Piden políticas de asistencia para cuentapropistas. Partidas de trabajo bajan 12,3%.</td>
+  <td>–104.000 empleos registrados y cierre de 3.117 empresas en CABA desde nov. 2023 (cifras actualizadas Neira, 7/10). <span class="pill pill-grey">fuente: bloque</span></td>
+  <td><span class="est">🔴</span></td>
+</tr>
+<tr>
+  <td>FB-04</td>
+  <td>Bloque</td>
+  <td>Deuda / intereses</td>
+  <td><span class="tag tag-cuest">CUESTIONAMIENTO</span> Servicio de deuda crece casi 70% en 2027. Los intereses superan cuatro veces la inversión en vivienda.</td>
+  <td>$592.000M en intereses de deuda. IVC: ~$124.000M (dato de LLA). <span class="pill pill-grey">confirmar con doc. oficial</span></td>
+  <td><span class="est">🔴</span></td>
+</tr>
+<tr>
+  <td>FB-05</td>
+  <td>Bloque</td>
+  <td>Transporte</td>
+  <td><span class="tag tag-cuest">CUESTIONAMIENTO</span> Inversión en transporte baja 13,2% real pese a aumento de tarifas.</td>
+  <td>Dato propio del bloque. <span class="pill pill-grey">⚪ confirmar</span></td>
+  <td><span class="est">🟡</span></td>
+</tr>
+<tr>
+  <td>FB-06</td>
+  <td>Bloque</td>
+  <td>Salud</td>
+  <td><span class="tag tag-cuest">CUESTIONAMIENTO</span> Salud crece 18,2% nominal = caída real de casi 3%.</td>
+  <td>Dato propio del bloque. <span class="pill pill-grey">⚪ confirmar</span></td>
+  <td><span class="est">🟡</span></td>
+</tr>
+<tr>
+  <td>FB-07</td>
+  <td>Bloque</td>
+  <td>Educación</td>
+  <td><span class="tag tag-cuest">CUESTIONAMIENTO</span> Educación baja 0,6% real. Pérdida de participación presupuestaria: era más del 26% cuando llegó el PRO; hoy es 19,7%.</td>
+  <td>Datos propios del bloque. <span class="pill pill-grey">⚪ verificar con planillas</span></td>
+  <td><span class="est">🟡</span></td>
+</tr>
+<tr>
+  <td>FB-08</td>
+  <td>Bloque</td>
+  <td>IIBB — monotributistas</td>
+  <td><span class="tag tag-preg">DEMANDA</span> Exención total de IIBB para el 100% de monotributistas porteños. Las categorías D–H tienen hoy 75% de bonificación, no el 100%.</td>
+  <td>No documentada respuesta del GCBA. ⚪</td>
+  <td><span class="est">⏳</span></td>
+</tr>
+<tr>
+  <td>FB-09</td>
+  <td>Claudia Neira</td>
+  <td>IIBB gastronomía + coparticipación</td>
+  <td><span class="tag tag-preg">DEMANDA</span> Exige exención de IIBB para gastronomía durante el primer semestre 2027. Advierte que la caída de la coparticipación es estructural: "El 1,4% de coparticipación cae porque cae también la recaudación nacional." Duda de que el presupuesto cierre sin aporte nacional.</td>
+  <td>No documentada respuesta del GCBA. ⚪ <span class="pill pill-grey">sesión 7/10</span></td>
+  <td><span class="est">⏳</span></td>
+</tr>
+<tr>
+  <td>FB-10</td>
+  <td>Diego Barroetaveña</td>
+  <td>IVC — contradicción política</td>
+  <td><span class="tag tag-cuest">CUESTIONAMIENTO</span> Recordó que el IVC otorgó un crédito hipotecario a la familia del vocero presidencial Manuel Adorni. Apunta a la contradicción de LLA que pide cerrar el organismo mientras sus referentes lo usaron.</td>
+  <td>Dato de acceso público. Fuente: Letra P, 7/10.</td>
+  <td><span class="est">🟡</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+
+<hr class="divider">
+
+<!-- ===== CONFIANZA Y DESARROLLO ===== -->
+<section>
+<h2>Confianza y Desarrollo (larretismo) — Objeciones técnicas</h2>
+<div class="bloque-header">
+  <div>
+    <div class="bloque-nombre">Confianza y Desarrollo</div>
+    <div class="bloque-bancas">Bloque larretista · Sebastián Nagata · Guadalupe Tagliaferri · Votos decisivos junto a UCR si LLA no acuerda</div>
+  </div>
+</div>
+
+<p>Posición: ni apoyo ni rechazo explícito. Plantea objeciones técnicas diferenciadas. Sus votos son necesarios si LLA no cede. Posición general: "Queremos un presupuesto real."</p>
+
+<div style="overflow-x:auto;">
+<table>
+<thead>
+<tr><th>#</th><th>Legislador/a</th><th>Área</th><th>Cuestionamiento / Pregunta</th><th>Estado</th></tr>
+</thead>
+<tbody>
+<tr>
+  <td>CD-01</td>
+  <td>Sebastián Nagata</td>
+  <td>Sostenibilidad fiscal / IIBB</td>
+  <td><span class="tag tag-cuest">CUESTIONAMIENTO</span> La recaudación de IIBB cae sin señales de recuperación, pero el presupuesto es "casi expansivo". Baja ejecución histórica, deuda de coparticipación pendiente y deuda con proveedores sin saldar. Pregunta cómo se financia el recorte de patentes y cuál es su costo fiscal exacto. El PRO se opuso en el pasado a bajar ABL y patentes.</td>
+  <td><span class="est">🔴</span></td>
+</tr>
+<tr>
+  <td>CD-02</td>
+  <td>Guadalupe Tagliaferri</td>
+  <td>Emergencia hídrica — Fondo Anticíclico</td>
+  <td><span class="tag tag-preg">PREGUNTA</span> Cuestiona el uso del Fondo Anticíclico para la emergencia hídrica. Señala caída del 26% en gasto de Espacio Público y 12% en Infraestructura. "La Ciudad pide una ley para actuar sin haber ejecutado las obras previas."</td>
+  <td><span class="est">🔴</span></td>
+</tr>
+<tr>
+  <td>CD-03</td>
+  <td>Guadalupe Tagliaferri</td>
+  <td>Educación — Sala de 3</td>
+  <td><span class="tag tag-preg">PREGUNTA</span> La Ley de Sala de 3 obliga a readecuar jardines de infantes, pero el presupuesto de Educación no incluye partidas específicas para ello. ¿Cómo se financia la implementación?</td>
+  <td><span class="est">🔴</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="card-mini">Fuente: Ámbito, 7/10/2026. Sin respuesta documentada del Ejecutivo a ninguna de las tres objeciones al 10/10.</div>
+</section>
+
+<hr class="divider">
+
+<!-- ===== TEMAS PRIORITARIOS — PREGUNTAS VERIFICADAS ===== -->
+<section>
+<h2>Preguntas prioritarias — verificadas en sesión</h2>
+
+<div style="overflow-x:auto;">
+<table>
+<thead>
+<tr><th>#</th><th>Tema</th><th>Núcleo del planteo</th><th>Respuesta / información disponible</th><th>Estado</th></tr>
+</thead>
+<tbody>
+<tr>
+  <td>P-01</td>
+  <td>Ley de Emergencia Hídrica</td>
+  <td><span class="tag tag-preg">PREGUNTA</span> Por qué era necesaria una ley de emergencia, qué facultades adicionales otorga al Ejecutivo y cómo se vincula con las partidas ya previstas para obras hídricas. Punto sensible: posibilidad de readecuar partidas bajo régimen de emergencia (sin restricciones de la Ley 70).</td>
+  <td>El proyecto declara la emergencia por 12 meses (eventos El Niño). Habilita readecuaciones presupuestarias, medidas de RR.HH., subsidios para damnificados y créditos del Banco Ciudad. El Presupuesto 2027 eleva del 0,7% al 0,9% del gasto los recursos para infraestructura hídrica. Tagliaferri (CD) cuestionó el uso del Fondo Anticíclico para este fin. <span class="tag tag-decl">Fuente: buenosaires.gob.ar / Ámbito 7/10</span></td>
+  <td><span class="est">🟡</span> Requiere seguimiento sobre alcance de facultades, saldo del Fondo Anticíclico y detalle de partidas.</td>
+</tr>
+<tr>
+  <td>P-02</td>
+  <td>Financiamiento Belgrano Sur</td>
+  <td><span class="tag tag-preg">PREGUNTA</span> Cómo se financiará la terminación del viaducto hasta Constitución, qué monto asumirá la Ciudad y cómo se articula con Nación.</td>
+  <td>El Ejecutivo solicita autorización para contraer deuda por hasta <span class="cifra-inline">USD 75 millones</span> ("Proyecto de mejoramiento de la conectividad ferroviaria a Constitución – Belgrano Sur"). Financiamiento: organismos multilaterales o bancos de desarrollo. Condición: acuerdo con Nación para traspaso de la obra. <span class="tag tag-decl">Fuente: La Nación, 2/10/2026</span></td>
+  <td><span class="est">🟡</span> Parcialmente respondida. Condicionada al acuerdo con Nación y al esquema definitivo de financiamiento.</td>
+</tr>
+<tr>
+  <td>P-03</td>
+  <td>Bono a proveedores</td>
+  <td><span class="tag tag-preg">PREGUNTA</span> Uso de un instrumento financiero/bono para cancelar obligaciones con proveedores. Núcleo: si implica diferir pagos o convertir deuda corriente en deuda financiera.</td>
+  <td>Arengo solicitó en sesión autorización legislativa para emitir bonos por hasta <span class="cifra-inline">$600.000M</span> para cancelar deuda con proveedores, como compensación por la caída proyectada de IIBB (–6% en 2026). El instrumento convierte deuda corriente en deuda financiera. <span class="tag tag-decl">Fuente: Ámbito, 7/10/2026 18:47</span></td>
+  <td><span class="est">🟡</span> Confirmado el instrumento. Pendiente: condiciones de emisión y aprobación legislativa.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+
+<hr class="divider">
+
+<!-- ===== TEMAS TRANSVERSALES ===== -->
+<section>
+<h2>Temas planteados por más de un bloque</h2>
+
+<div class="card">
+  <p><span class="tag tag-cond">CONVERGENCIA</span> IIBB — LLA (tasa 0% servicios), peronismo (exención total monotributistas), peronismo (exención gastronomía). Tres demandas sobre el mismo impuesto desde ángulos distintos. El GCBA no respondió a ninguna con precisión.</p>
+</div>
+<div class="card">
+  <p><span class="tag tag-cond">CONVERGENCIA</span> IVC / vivienda — LLA pide su cierre por costo; el peronismo lo defiende y exige más partidas; el caso Adorni lo convirtió en munición política. El IVC es el organismo más conflictivo de la negociación.</p>
+</div>
+<div class="card">
+  <p><span class="tag tag-cuest">TENSIÓN</span> Coherencia fiscal — peronismo (superávit + impuestos patrimoniales); LLA (superávit + organismos); Confianza y Desarrollo (presupuesto "casi expansivo" con IIBB cayendo). Tres diagnósticos, mismo argumento de inconsistencia.</p>
+</div>
+<div class="card">
+  <p><span class="tag tag-cuest">TENSIÓN</span> Deuda — LLA no aprobará deuda para gasto corriente; peronismo señala que intereses crecen 70%; Confianza y Desarrollo cuestiona el Fondo Anticíclico y la deuda con proveedores acumulada. Bono a proveedores ($600.000M) agudiza la discusión.</p>
+</div>
+<div class="card">
+  <p><span class="tag tag-cond">CONVERGENCIA</span> Financiamiento de rebajas — LLA, peronismo y Confianza y Desarrollo exigen saber cómo se financia cada medida de alivio fiscal. Puntos de fractura: ABL, patentes, IIBB.</p>
+</div>
+</section>
+
+<hr class="divider">
+
+<!-- ===== REPERCUSIONES ===== -->
+<section>
+<h2>Repercusiones — Declaraciones clave</h2>
+
+<div class="card-mini">
+  <div class="legislador">Ejecutivo · Ministro Arengo · Fuente: Ámbito, 7/10/2026 18:47</div>
+  <span class="tag tag-decl">RESPUESTA EN SESIÓN</span> Presentó superávit de $1.000M, recorte del 15% de planta (8.954 cargos). Bono a proveedores hasta $600.000M. Patentes: "ningún vecino pagará más nominalmente." ABL congelado para más de la mitad de los contribuyentes; exención jubilados; hoteles, restaurantes y librerías exentos primer semestre 2027. Obra pública al 18% (mayor inversión en subte en 20 años, Línea F). Deuda postergada hasta USD 150M por condiciones de mercado.
+</div>
+<div class="card-mini">
+  <div class="legislador">LLA · Pilar Ramírez · Fuente: Letra P / Ámbito, 7/10/2026</div>
+  <span class="tag tag-decl">DECLARACIÓN</span> Confirmó que las condiciones se trabajarán "en las próximas semanas" e invitó a otros bloques a sumarse a las propuestas. "Esa plata no es del Gobierno: es de los porteños."
+</div>
+<div class="card-mini">
+  <div class="legislador">LLA · Nicolás Pakgojz · Fuente: La Nación, 2/10/2026</div>
+  <span class="tag tag-decl">DECLARACIÓN</span> "Vamos a ser muy rígidos en las negociaciones." Calificó el superávit de "artificial" y "poco sostenible." Condicionó apoyo a recorte de gasto.
+</div>
+<div class="card-mini">
+  <div class="legislador">LLA · Juan Pablo Arenaza · Fuente: La Nación, 2/10/2026</div>
+  <span class="tag tag-decl">DECLARACIÓN</span> Propuso privatizar Subterráneos de Buenos Aires y Autopistas Urbanas, en línea con la "Ley Bases porteña" de LLA.
+</div>
+<div class="card-mini">
+  <div class="legislador">PRO · Waldo Wolff (presidente de comisión) · Fuente: La Nación, 2/10/2026</div>
+  <span class="tag tag-decl">DECLARACIÓN</span> Optimista. El gobierno "escuchará las propuestas" de LLA. Advirtió caída de recaudación >6% y cuentas de coparticipación pendientes con Nación.
+</div>
+<div class="card-mini">
+  <div class="legislador">Fuerza por Buenos Aires · Claudia Neira · Fuente: Letra P, 6/10/2026</div>
+  <span class="tag tag-decl">DECLARACIÓN</span> Lanzó "monitor de presupuesto" en línea. "El IVC es vaciamiento de la política de vivienda." Advirtió que la caída de la coparticipación es estructural.
+</div>
+<div class="card-mini">
+  <div class="legislador">Confianza y Desarrollo · Nagata / Tagliaferri · Fuente: Ámbito, 7/10/2026</div>
+  <span class="tag tag-cuest">CUESTIONAMIENTO</span> Nagata exigió "un presupuesto real" y preguntó cómo se financia la baja de patentes. Tagliaferri vinculó la emergencia hídrica con obras paralizadas y cuestionó la partida de Educación para Sala de 3.
+</div>
+</section>
+
+<hr class="divider">
+
+<!-- ===== PENDIENTES ===== -->
+<section>
+<h2>Respuestas pendientes — Listado operativo</h2>
+
+<div class="pendiente-item">
+  <div class="pi-label">RP-01 · PASO — $29.000M</div>
+  Ramírez (LLA) exige que la eliminación de PASO figure como ahorro y se redirija a baja impositiva. Sin respuesta oficial documentada.
+</div>
+<div class="pendiente-item">
+  <div class="pi-label">RP-02 · ABL –10% permanente</div>
+  LLA pide reducción nominal del 10% como condición. Arengo anunció congelamiento, no rebaja. Brecha pendiente de negociación.
+</div>
+<div class="pendiente-item">
+  <div class="pi-label">RP-03 · IIBB — manufactura –25% + tasa 0% monotributistas servicios + exención gastronomía</div>
+  LLA, peronismo y peronismo (gastronomía) demandan por el mismo impuesto desde ángulos distintos. Sin respuesta articulada del GCBA.
+</div>
+<div class="pendiente-item">
+  <div class="pi-label">RP-04 · Híbridos y eléctricos — exención patentes + costo fiscal</div>
+  LLA exige exención. Nagata (CD) preguntó cuánto cuesta y cómo se financia. Sin respuesta específica.
+</div>
+<div class="pendiente-item">
+  <div class="pi-label">RP-05 · Cierre de 6 organismos (LLA)</div>
+  DG Mujer · DG Economía Circular · DG Política Ambiental · Sec. Asuntos Estratégicos · Unidad Rel. Federales · IVC. Sin posición del Ejecutivo.
+</div>
+<div class="pendiente-item">
+  <div class="pi-label">RP-06 · Autódromo — concesión privada</div>
+  Condición de LLA. Sin documentar valuación ni estado del contrato.
+</div>
+<div class="pendiente-item">
+  <div class="pi-label">RP-07 · Publicidad oficial — recorte $60.000M+</div>
+  Condición de LLA. Sin respuesta.
+</div>
+<div class="pendiente-item">
+  <div class="pi-label">RP-08 · IVC — partidas vivienda (peronismo) vs. cierre (LLA)</div>
+  Peronismo defiende el IVC; LLA pide cerrarlo. Requiere posición del Ejecutivo.
+</div>
+<div class="pendiente-item">
+  <div class="pi-label">RP-09 · Deuda / intereses — $592.000M (peronismo)</div>
+  Servicio de intereses crece 70% y supera 4x la inversión en vivienda. Sin respuesta documentada. Cotejar con planillas del proyecto.
+</div>
+<div class="pendiente-item">
+  <div class="pi-label">RP-10 · Privatización SBASE y Autopistas (LLA)</div>
+  Arenaza propuso privatizar Subterráneos de Buenos Aires y Autopistas Urbanas. Sin posición oficial. Alta sensibilidad sindical.
+</div>
+<div class="pendiente-item">
+  <div class="pi-label">RP-11 · Taquigrafía oficial</div>
+  Versión taquigráfica de la sesión del 7/10. Fuente: <em>legislatura.gob.ar</em>. No publicada al 10/10.
+</div>
+<div class="pendiente-item">
+  <div class="pi-label">RP-12 · Fondo Anticíclico — uso para emergencia hídrica (CD)</div>
+  Tagliaferri cuestionó el uso del fondo. Requiere verificar saldo actual y aplicaciones previas. Fuente: Ministerio de Hacienda / Proyecto de Ley de Emergencia Hídrica.
+</div>
+<div class="pendiente-item">
+  <div class="pi-label">RP-13 · Sala de 3 — partidas en Educación (CD)</div>
+  La Ley de Sala de 3 obliga a readecuar jardines pero el presupuesto no incluiría partidas específicas. Verificar en planillas del proyecto la línea de nivel inicial.
+</div>
+<div class="pendiente-item">
+  <div class="pi-label">RP-14 · Bono a proveedores — condiciones de emisión</div>
+  Arengo confirmó el instrumento ($600.000M). Pendiente: tasas, plazos, quiénes califican y aprobación legislativa.
+</div>
+</section>
+
+<hr class="divider">
+
+<!-- ===== QUÉ MONITOREAR ===== -->
+<section>
+<h2>Qué monitorear — Semana del 13/10</h2>
+
+<div class="monitoreo-item">
+  <div class="ml">🔴 1 · Rondas ministeriales en curso</div>
+  Se confirmó que hay rondas ministeriales activas. Monitorear resultado de reuniones Arengo con bloques, declaraciones post-reunión y si hay oferta formal del Ejecutivo sobre ABL, IIBB u organismos.
+</div>
+<div class="monitoreo-item">
+  <div class="ml">🔴 2 · Respuesta oficial a LLA — pliego de 12 condiciones</div>
+  ¿El Ejecutivo responde formalmente a Ramírez/Pakgojz? PASO, ABL, IIBB y cierre de organismos son las condiciones de mayor fricción.
+</div>
+<div class="monitoreo-item">
+  <div class="ml">🔴 3 · Negociación con Confianza y Desarrollo</div>
+  Tres objeciones sin respuesta (CD-01/02/03). Sus votos son el segundo bloque clave. Monitorear declaraciones de Nagata y Tagliaferri post-rondas.
+</div>
+<div class="monitoreo-item">
+  <div class="ml">🔴 4 · Posición de UCR/Ciudadanos Unidos</div>
+  Sin declaraciones documentadas al 10/10. Votos necesarios para la mayoría. Monitorear titulares del bloque.
+</div>
+<div class="monitoreo-item">
+  <div class="ml">🔴 5 · Taquigrafía oficial — legislatura.gob.ar</div>
+  Completará la matriz de intervenciones y permitirá identificar compromisos asumidos en sesión.
+</div>
+<div class="monitoreo-item">
+  <div class="ml">🟡 6 · IVC — posición del Ejecutivo</div>
+  LLA quiere cerrarlo; peronismo lo defiende. Requiere definición política del Ejecutivo.
+</div>
+<div class="monitoreo-item">
+  <div class="ml">🟡 7 · Deuda — validación de cifra peronista ($592.000M intereses)</div>
+  Cotejar con planillas del proyecto. Si es correcta, el argumento de coherencia fiscal del peronismo se fortalece.
+</div>
+<div class="monitoreo-item">
+  <div class="ml">🟡 8 · Privatización SBASE / Autopistas — reacción sindical</div>
+  La propuesta de Arenaza puede escalar. Monitorear UTA, AGTSyP y prensa especializada.
+</div>
+</section>
+
+<footer>
+  Uso interno · Comisión de Presupuesto, Hacienda, Administración Financiera y Política Tributaria · CABA ·
+  Actualización 10/10/2026 10:05 ART · Fuentes: Ámbito (7/10 18:47), La Nación, Letra P, Parlamentario, Pura Ciudad · Taquigrafía oficial pendiente.
+</footer>
+
+</div>
+</body>
+</html>
+
+</body></html>
