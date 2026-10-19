@@ -476,10 +476,41 @@ footer a{color:var(--accent)}
     </div>
   </div>
 
+  <!-- Sentimiento Milei · AD HOC · Septiembre 2026 -->
+  <p class="sec" style="margin-bottom:12px">AD HOC · Septiembre 2026 · Conversación digital nacional</p>
+  <div class="chart-wrap">
+    <div class="chart-head">
+      <div><h3>Sentimiento Milei · AD HOC · Septiembre 2026</h3><p>5,2M menciones · Twitter/X y otras plataformas</p></div>
+    </div>
+    <div style="display:flex;gap:14px;align-items:center;padding:4px 0 8px">
+      <div style="position:relative;width:110px;height:110px;flex-shrink:0"><canvas id="chartMileiSentSep"></canvas></div>
+      <div style="display:flex;flex-direction:column;gap:7px">
+        <div style="display:flex;align-items:center;gap:6px">
+          <div style="width:10px;height:10px;border-radius:50%;background:var(--neg);flex-shrink:0"></div>
+          <span style="font-size:12px;color:var(--fg)">Negativo</span>
+          <span style="font-family:'IBM Plex Mono',monospace;font-size:14px;font-weight:600;color:var(--neg);margin-left:auto">46,2%</span>
+        </div>
+        <div style="display:flex;align-items:center;gap:6px">
+          <div style="width:10px;height:10px;border-radius:50%;background:var(--pos);flex-shrink:0"></div>
+          <span style="font-size:12px;color:var(--fg)">Positivo</span>
+          <span style="font-family:'IBM Plex Mono',monospace;font-size:14px;font-weight:600;color:var(--pos);margin-left:auto">38,4%</span>
+        </div>
+        <div style="display:flex;align-items:center;gap:6px">
+          <div style="width:10px;height:10px;border-radius:50%;background:var(--neu);flex-shrink:0"></div>
+          <span style="font-size:12px;color:var(--fg)">Neutro</span>
+          <span style="font-family:'IBM Plex Mono',monospace;font-size:14px;font-weight:600;color:var(--neu);margin-left:auto">15,4%</span>
+        </div>
+      </div>
+    </div>
+    <p class="source">5,2M menciones Milei · Twitter/X y otras plataformas · AD HOC sep-26
+      &nbsp;·&nbsp;<a href="https://drive.google.com/drive/folders/1SDS2YXZCqEuwdIzkRhF3JYGR13S9NMvJ" target="_blank" rel="noopener" style="color:var(--fg-dim);text-decoration:underline;text-underline-offset:2px">Sentimiento por evento · AD HOC · Septiembre 2026 ↗</a>
+    </p>
+  </div>
+
   <!-- ISN mensual RD -->
   <div class="chart-wrap">
     <div class="chart-head">
-      <div><h3>ISN mensual · Índice de Sentimiento Neto · Reputación Digital</h3><p>Ago–Sep 2026 · serie en construcción · escala −100 a +100</p></div>
+      <div><h3>Evolución sentimiento neto negativo</h3><p>Ago–Sep 2026 · ISN Reputación Digital · serie en construcción · escala −100 a +100</p></div>
       <span class="signal mix">~ mejora parcial</span>
     </div>
     <div class="chart-box" style="height:160px"><canvas id="chartISNMensual"></canvas></div>
@@ -552,43 +583,6 @@ footer a{color:var(--accent)}
     <p class="source">Fatiga de imagen antes que cambio de voto · mayo 2026 · Reputación Digital</p>
   </div>
 
-  <!-- AD HOC Septiembre: Milei + Oposición -->
-  <p class="sec" style="margin-bottom:12px">AD HOC · Septiembre 2026 · Conversación digital nacional</p>
-  <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:16px" class="cross-grid">
-    <div class="chart-wrap" style="margin-bottom:0">
-      <div class="chart-head">
-        <div><h3>Milei · sentimiento sep-26</h3><p>AD HOC · 5,2M menciones totales</p></div>
-      </div>
-      <div style="display:flex;gap:14px;align-items:center;padding:4px 0 8px">
-        <div style="position:relative;width:110px;height:110px;flex-shrink:0"><canvas id="chartMileiSentSep"></canvas></div>
-        <div style="display:flex;flex-direction:column;gap:7px">
-          <div style="display:flex;align-items:center;gap:6px">
-            <div style="width:10px;height:10px;border-radius:50%;background:var(--neg);flex-shrink:0"></div>
-            <span style="font-size:12px;color:var(--fg)">Negativo</span>
-            <span style="font-family:'IBM Plex Mono',monospace;font-size:14px;font-weight:600;color:var(--neg);margin-left:auto">46,2%</span>
-          </div>
-          <div style="display:flex;align-items:center;gap:6px">
-            <div style="width:10px;height:10px;border-radius:50%;background:var(--pos);flex-shrink:0"></div>
-            <span style="font-size:12px;color:var(--fg)">Positivo</span>
-            <span style="font-family:'IBM Plex Mono',monospace;font-size:14px;font-weight:600;color:var(--pos);margin-left:auto">38,4%</span>
-          </div>
-          <div style="display:flex;align-items:center;gap:6px">
-            <div style="width:10px;height:10px;border-radius:50%;background:var(--neu);flex-shrink:0"></div>
-            <span style="font-size:12px;color:var(--fg)">Neutro</span>
-            <span style="font-family:'IBM Plex Mono',monospace;font-size:14px;font-weight:600;color:var(--neu);margin-left:auto">15,4%</span>
-          </div>
-        </div>
-      </div>
-      <p class="source">5,2M menciones Milei · Twitter/X y otras plataformas · AD HOC sep-26</p>
-    </div>
-    <div class="chart-wrap" style="margin-bottom:0">
-      <div class="chart-head">
-        <div><h3>Volumen oposición · sep-26</h3><p>Menciones principales figuras opositoras · en miles</p></div>
-      </div>
-      <div class="chart-box" style="height:160px"><canvas id="chartOposVol"></canvas></div>
-      <p class="source">AD HOC sep-26 · Twitter/X y otras plataformas</p>
-    </div>
-  </div>
 
   <!-- ISN Scaloneta + Llaryora + Bullrich-Lali -->
   <p class="sec" style="margin-bottom:12px">Estudios puntuales · Reputación Digital · jul–sep 2026</p>
@@ -733,7 +727,14 @@ footer a{color:var(--accent)}
   </div>
 
   <div class="chart-wrap">
-    <div class="chart-head"><div><h3>Registro completo de informes SL</h3></div></div>
+    <div class="chart-head">
+      <div>
+        <h3>Registro completo de informes SL</h3>
+        <p style="margin-top:4px">
+          <a href="https://drive.google.com/drive/folders/1SDS2YXZCqEuwdIzkRhF3JYGR13S9NMvJ" target="_blank" rel="noopener" style="color:var(--fg-dim);text-decoration:underline;text-underline-offset:2px;font-size:11px">Estado de cobertura SL ↗</a>
+        </p>
+      </div>
+    </div>
     <div class="table-wrap">
       <table>
         <thead><tr><th>Mes</th><th>Consultora</th><th>Informe</th><th>Tipo</th></tr></thead>
@@ -1667,16 +1668,6 @@ function initTab(tab){
         }
       });
     }
-    // Oposición volumen — horizontal bar multi-color
-    const oposColors=['var(--c2)','var(--c3)','var(--c4)','var(--c5)','var(--c1)'];
-    mkBar('chartOposVol',OPOS_LABELS,[{label:'Miles de menciones',data:OPOS_VALS,color:'var(--c2)'}],{
-      indexAxis:'y',
-      plugins:{legend:{display:false}},
-      scales:{
-        x:{ticks:{font:{family:"'IBM Plex Mono',monospace",size:10},color:tok('--fg-dim')},grid:{color:tok('--border')}},
-        y:{ticks:{font:{family:"'IBM Plex Mono',monospace",size:10},color:tok('--fg-dim')},grid:{display:false}}
-      }
-    });
     // SL por mes
     mkBar('chartSLMes',MSL_MES,[{label:'Informes SL',data:SL_POR_MES,color:'var(--c1)'}],{
       plugins:{legend:{display:false}},
