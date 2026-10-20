@@ -314,7 +314,7 @@ footer a{color:var(--accent)}
       <div class="kpi-subs">
         <div class="kpi-sub-row"><span class="kpi-sub-lbl">Núcleo</span><span class="kpi-sub-val">1,7%</span></div>
         <div class="kpi-sub-row"><span class="kpi-sub-lbl">Regulados</span><span class="kpi-sub-val">2,8%</span></div>
-        <div class="kpi-sub-row"><span class="kpi-sub-lbl">IPIM</span><span class="kpi-sub-val">3,2%</span></div>
+        <div class="kpi-sub-row"><span class="kpi-sub-lbl">Acumulado</span><span class="kpi-sub-val">23,6%</span></div>
         <div class="kpi-sub-row"><span class="kpi-sub-lbl">Interanual</span><span class="kpi-sub-val ia">33,4%</span></div>
       </div>
     </div>
@@ -326,7 +326,7 @@ footer a{color:var(--accent)}
       <div class="kpi-subs">
         <div class="kpi-sub-row"><span class="kpi-sub-lbl">Bienes</span><span class="kpi-sub-val">1,6%</span></div>
         <div class="kpi-sub-row"><span class="kpi-sub-lbl">Servicios</span><span class="kpi-sub-val">2,0%</span></div>
-        <div class="kpi-sub-row"><span class="kpi-sub-lbl">Regulados</span><span class="kpi-sub-val">2,1%</span></div>
+        <div class="kpi-sub-row"><span class="kpi-sub-lbl">Acumulado</span><span class="kpi-sub-val">23,7%</span></div>
         <div class="kpi-sub-row"><span class="kpi-sub-lbl">Interanual</span><span class="kpi-sub-val ia">32,9%</span></div>
       </div>
     </div>
@@ -361,28 +361,25 @@ footer a{color:var(--accent)}
     <div class="legend" id="legendInflComp"></div>
     <p class="source">IPC INDEC: sep-25→sep-26 (1,9% sep · acum. 23,6% · i.a. 33,4%) · IPCBA IDECBA/GCBA · MM3: media móvil 3 meses</p>
   </div>
-  <div class="chart-wrap">
-    <div class="chart-head"><div><h3>Inflación acumulada 2026 · IPC INDEC vs IPCBA CABA</h3><p>Ene-26 → Sep-26 · diferencial eje der.</p></div></div>
-    <div class="chart-box"><canvas id="chartInflAcum"></canvas></div>
-    <div class="legend" id="legendInflAcum"></div>
-    <p class="source">INDEC acum. ene-sep 2026: 23,6% · IPCBA acum. ene-sep 2026: 23,7% · diferencial: +0,1 p.p. (IPCBA − INDEC)</p>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px">
+    <div class="chart-wrap" style="margin:0">
+      <div class="chart-head"><div><h3>IPC Nacional · acum. e interanual</h3><p>Ene-26 → Sep-26 · acum. barra izq. · i.a. línea der.</p></div></div>
+      <div class="chart-box"><canvas id="chartInflNacAcumIA"></canvas></div>
+      <div class="legend" id="legendInflNacAcumIA"></div>
+      <p class="source">Acum. ene-sep 2026: 23,6% · Interanual sep-26: 33,4% · INDEC</p>
+    </div>
+    <div class="chart-wrap" style="margin:0">
+      <div class="chart-head"><div><h3>IPCBA CABA · acum. e interanual</h3><p>May-26 → Sep-26 · acum. barra izq. · i.a. línea der.</p></div></div>
+      <div class="chart-box"><canvas id="chartInflCabaAcumIA"></canvas></div>
+      <div class="legend" id="legendInflCabaAcumIA"></div>
+      <p class="source">Acum. may-sep 2026: 23,7% · Interanual sep-26: 32,9% · IDECBA · Serie desde may-26</p>
+    </div>
   </div>
   <div class="chart-wrap">
-    <div class="chart-head"><div><h3>Inflación interanual · IPC INDEC vs IPCBA CABA</h3><p>May-26 → Sep-26 · var. 12 meses</p></div></div>
-    <div class="chart-box"><canvas id="chartInflIA"></canvas></div>
-    <div class="legend" id="legendInflIA"></div>
-    <p class="source">IPC INDEC interanual: INDEC via monitorargy.com · IPCBA interanual: IDECBA/GCBA</p>
-  </div>
-  <div class="chart-wrap">
-    <div class="chart-head"><div><h3>ICC · Confianza del Consumidor · Nacional</h3><p>Sep-25 → Sep-26 · UTDT CIF · escala 0–100</p></div></div>
-    <div class="chart-box"><canvas id="chartICCICG"></canvas></div>
+    <div class="chart-head"><div><h3>ICC + ICG · UTDT CIF · apertura regional sep-26</h3><p>Sep-25 → Sep-26 · ICC Nacional + ICG Nacional (eje der.) · CABA / GBA / Interior: dato único sep-26</p></div></div>
+    <div class="chart-box med"><canvas id="chartICCICG"></canvas></div>
     <div class="legend" id="legendICCICG"></div>
-    <p class="source">ICC: Índice de Confianza del Consumidor · UTDT · escala 0–100 · ICG: Clima General · ref. interna L1 · escala 0–5</p>
-  </div>
-  <div class="chart-wrap">
-    <div class="chart-head"><div><h3>ICC · Apertura regional · CABA · Interior · GBA</h3><p>Sep-26 · snapshot regional · UTDT CIF</p></div></div>
-    <div class="chart-box" style="height:160px"><canvas id="chartICCRegional"></canvas></div>
-    <p class="source">Sep-26: Nacional 41,8 · CABA 37,2 · Interior 46,1 · GBA: solo variación m/m disponible (+3,3%) · UTDT CIF · Serie regional completa: pendiente de incorporación</p>
+    <p class="source">ICC Nacional 41,8 · CABA 37,2 · Interior 46,1 · GBA: sin dato absoluto sep-26 (var. m/m +3,3%) · ICG esc. 0–5 eje der. · UTDT CIF</p>
   </div>
 </section>
 
@@ -1432,7 +1429,14 @@ const IPC_ACUM=[2.9,5.9,9.4,12.3,14.7,16.8,19.3,21.3,23.6];           // INDEC a
 const IPCBA_ACUM_FULL=[null,null,null,null,14.0,16.0,19.4,21.5,23.7];  // IPCBA acum. desde may-26
 const BRECHA_ACUM=[null,null,null,null,-0.7,-0.8,0.1,0.2,0.1];         // diferencial (IPCBA−INDEC)
 const MIIA=['May-26','Jun-26','Jul-26','Ago-26','Sep-26'];
-const IPC_IA=[33.2,33.5,33.8,33.5,33.4]; // INDEC interanual (monitorargy.com / INDEC)
+const IPC_IA=[33.2,33.5,33.8,33.5,33.4];
+// Per-index acum+IA (9-point axis: Ene-26→Sep-26)
+const IPC_IA_9=[null,null,null,null,33.2,33.5,33.8,33.5,33.4];
+const IPCBA_ACUM_9=[null,null,null,null,14.0,16.0,19.4,21.5,23.7];
+const IPCBA_IA_9=[null,null,null,null,33.1,32.6,33.2,33.3,32.9];
+// Di Tella regional — single Sep-26 data points in 13-month axis
+const ICC_CABA_13=[null,null,null,null,null,null,null,null,null,null,null,null,37.2];
+const ICC_INT_13=[null,null,null,null,null,null,null,null,null,null,null,null,46.1]; // INDEC interanual (monitorargy.com / INDEC)
 
 const MV=['Feb-26','Mar-26','Abr-26','May-26','Jun-26','Jul-26','Ago-26','Sep-26','Oct-26'];
 const CONS={
@@ -1707,112 +1711,94 @@ function initTab(tab){
         ['IPC Nacional','IPCBA CABA','MM3 IPC','MM3 IPCBA'],
         ['var(--c1)','var(--c4)','var(--c1)','var(--c4)']);
     })();
-    // ── Inflación acumulada (dual-axis: acum. % izq. / diferencial p.p. der.) ─
+    // ── IPC Nacional: acumulado (barra izq.) + interanual (línea der.) ─
     (function(){
-      const ctx=document.getElementById('chartInflAcum');if(!ctx)return;
-      if(chartRegistry['chartInflAcum'])try{chartRegistry['chartInflAcum'].destroy();}catch(e){}
-      chartRegistry['chartInflAcum']=new Chart(ctx,{
-        type:'line',
-        data:{labels:MIPCACUM,datasets:[
-          {label:'IPC INDEC acum.',data:IPC_ACUM,
-           borderColor:cv('var(--c1)'),backgroundColor:'transparent',
-           borderWidth:2,pointRadius:3,pointHoverRadius:5,tension:0.3,spanGaps:false,yAxisID:'yA'},
-          {label:'IPCBA CABA acum.',data:IPCBA_ACUM_FULL,
-           borderColor:cv('var(--c4)'),backgroundColor:'transparent',
-           borderWidth:2,pointRadius:3,pointHoverRadius:5,tension:0.3,spanGaps:false,yAxisID:'yA'},
-          {label:'Dif. p.p. (IPCBA−INDEC)',data:BRECHA_ACUM,
-           borderColor:cv('var(--warn)'),backgroundColor:'transparent',
-           borderWidth:1.5,borderDash:[4,3],
-           pointRadius:2,pointHoverRadius:4,tension:0.3,spanGaps:false,yAxisID:'yD'}
-        ]},
-        options:{
-          responsive:true,maintainAspectRatio:false,
-          interaction:{mode:'index',intersect:false},
-          plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>{
-            const v=c.parsed.y;
-            const suf=c.dataset.yAxisID==='yD'?' p.p.':'%';
-            return c.dataset.label+': '+(v!==null?v.toFixed(1):'—')+suf;
-          }}}},
-          scales:{
-            x:{ticks:{font:{family:"'IBM Plex Mono',monospace",size:10},color:tok('--fg-dim')},grid:{color:tok('--border')}},
-            yA:{position:'left',min:0,max:28,
-                title:{display:true,text:'Acum. %',color:tok('--fg-dim'),font:{size:10}},
-                ticks:{font:{size:10},color:tok('--fg-dim')},grid:{color:tok('--border')}},
-            yD:{position:'right',min:-2,max:2,
-                title:{display:true,text:'Dif. p.p.',color:tok('--warn'),font:{size:10}},
-                ticks:{font:{size:10},color:tok('--warn')},grid:{drawOnChartArea:false}}
+      function mkAcumIA(id,legendId,acumData,iaData,acumLabel,iaLabel,acumColor,iaColor){
+        const ctx=document.getElementById(id);if(!ctx)return;
+        if(chartRegistry[id])try{chartRegistry[id].destroy();}catch(e){}
+        chartRegistry[id]=new Chart(ctx,{
+          type:'bar',
+          data:{labels:MIPCACUM,datasets:[
+            {label:acumLabel,data:acumData,type:'bar',
+             backgroundColor:cv(acumColor)+'55',borderColor:cv(acumColor),
+             borderWidth:1,borderRadius:3,order:2,yAxisID:'yA'},
+            {label:iaLabel,data:iaData,type:'line',
+             borderColor:cv(iaColor),backgroundColor:'transparent',
+             borderWidth:2,pointRadius:3,pointHoverRadius:5,tension:0.3,
+             spanGaps:false,order:1,yAxisID:'yI'}
+          ]},
+          options:{
+            responsive:true,maintainAspectRatio:false,
+            interaction:{mode:'index',intersect:false},
+            plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>{
+              const v=c.parsed.y;
+              return c.dataset.label+': '+(v!==null?v.toFixed(1):'—')+'%';
+            }}}},
+            scales:{
+              x:{ticks:{font:{family:"'IBM Plex Mono',monospace",size:10},color:tok('--fg-dim')},grid:{color:tok('--border')}},
+              yA:{position:'left',min:0,max:28,
+                  title:{display:true,text:'Acum. %',color:tok(acumColor.replace('var(','').replace(')','').replace('--','')?'--fg-dim':'--fg-dim'),font:{size:10}},
+                  ticks:{font:{size:10},color:tok('--fg-dim'),callback:v=>v+'%'},grid:{color:tok('--border')}},
+              yI:{position:'right',min:29,max:38,
+                  title:{display:true,text:'Interan. %',color:cv(iaColor),font:{size:10}},
+                  ticks:{font:{size:10},color:tok('--fg-dim'),callback:v=>v+'%'},grid:{drawOnChartArea:false}}
+            }
           }
-        }
-      });
-      buildLegend('legendInflAcum','chartInflAcum',
-        ['IPC INDEC acum.','IPCBA CABA acum.','Dif. p.p.'],
-        ['var(--c1)','var(--c4)','var(--warn)']);
+        });
+        buildLegend(legendId,id,[acumLabel,iaLabel],[acumColor,iaColor]);
+      }
+      mkAcumIA('chartInflNacAcumIA','legendInflNacAcumIA',
+        IPC_ACUM,IPC_IA_9,
+        'Acum. IPC','Interanual IPC',
+        'var(--c1)','var(--c1)');
+      mkAcumIA('chartInflCabaAcumIA','legendInflCabaAcumIA',
+        IPCBA_ACUM_9,IPCBA_IA_9,
+        'Acum. IPCBA','Interanual IPCBA',
+        'var(--c4)','var(--c4)');
     })();
-    // ── Inflación interanual ─
-    mkLine('chartInflIA',MIIA,[
-      {label:'IPC INDEC interanual',data:IPC_IA,color:'var(--c1)'},
-      {label:'IPCBA CABA interanual',data:TIPCBA_IA,color:'var(--c4)'}
-    ]);
-    buildLegend('legendInflIA','chartInflIA',
-      ['IPC INDEC interanual','IPCBA CABA interanual'],
-      ['var(--c1)','var(--c4)']);
-    // ── ICC + ICG combinados (dual-axis) ─
+    // ── ICC + ICG combinados (dual-axis) + apertura regional sep-26 ─
     (function(){
       const ctx=document.getElementById('chartICCICG');if(!ctx)return;
       if(chartRegistry['chartICCICG'])try{chartRegistry['chartICCICG'].destroy();}catch(e){}
       chartRegistry['chartICCICG']=new Chart(ctx,{
         type:'line',
         data:{labels:MESI,datasets:[
-          {label:'ICC',data:ICC,borderColor:cv('var(--c2)'),backgroundColor:'transparent',
-           borderWidth:2,pointRadius:3,pointHoverRadius:5,tension:0.3,yAxisID:'yICC'},
-          {label:'ICG',data:ICG,borderColor:cv('var(--c3)'),backgroundColor:'transparent',
-           borderWidth:2,pointRadius:3,pointHoverRadius:5,tension:0.3,yAxisID:'yICG',borderDash:[4,3]}
+          {label:'ICC Nacional',data:ICC,borderColor:cv('var(--c2)'),backgroundColor:'transparent',
+           borderWidth:2,pointRadius:3,pointHoverRadius:5,tension:0.3,yAxisID:'yICC',order:1},
+          {label:'ICC CABA (sep-26)',data:ICC_CABA_13,borderColor:cv('var(--c5)'),
+           backgroundColor:cv('var(--c5)')+'88',
+           borderWidth:0,pointRadius:8,pointHoverRadius:10,pointStyle:'rectRot',
+           spanGaps:false,yAxisID:'yICC',order:0},
+          {label:'ICC Interior (sep-26)',data:ICC_INT_13,borderColor:cv('var(--c4)'),
+           backgroundColor:cv('var(--c4)')+'88',
+           borderWidth:0,pointRadius:8,pointHoverRadius:10,pointStyle:'triangle',
+           spanGaps:false,yAxisID:'yICC',order:0},
+          {label:'ICG Nacional',data:ICG,borderColor:cv('var(--c3)'),backgroundColor:'transparent',
+           borderWidth:2,pointRadius:3,pointHoverRadius:5,tension:0.3,yAxisID:'yICG',borderDash:[4,3],order:2}
         ]},
         options:{
           responsive:true,maintainAspectRatio:false,
           interaction:{mode:'index',intersect:false},
           plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>{
-            return c.dataset.label+': '+(c.parsed.y!==null?c.parsed.y.toFixed(1):'—');
+            const v=c.parsed.y;
+            if(v===null)return null;
+            const suf=c.dataset.yAxisID==='yICG'?' (esc.0-5)':'';
+            return c.dataset.label+': '+v.toFixed(1)+suf;
           }}}},
           scales:{
             x:{ticks:{font:{family:"'IBM Plex Mono',monospace",size:10},color:tok('--fg-dim')},grid:{color:tok('--border')}},
             yICC:{position:'left',min:25,max:55,
-                  title:{display:true,text:'ICC',color:tok('--c2'),font:{size:10}},
+                  title:{display:true,text:'ICC (0–100)',color:tok('--c2'),font:{size:10}},
                   ticks:{font:{size:10},color:tok('--c2')},grid:{color:tok('--border')}},
             yICG:{position:'right',min:1,max:3,
-                  title:{display:true,text:'ICG',color:tok('--c3'),font:{size:10}},
+                  title:{display:true,text:'ICG (0–5)',color:tok('--c3'),font:{size:10}},
                   ticks:{font:{size:10},color:tok('--c3')},grid:{drawOnChartArea:false}}
           }
         }
       });
-      buildLegend('legendICCICG','chartICCICG',['ICC','ICG'],['var(--c2)','var(--c3)']);
-    })();
-    // ── ICC Regional snapshot (sep-26) ─
-    (function(){
-      const ctx=document.getElementById('chartICCRegional');if(!ctx)return;
-      if(chartRegistry['chartICCRegional'])try{chartRegistry['chartICCRegional'].destroy();}catch(e){}
-      chartRegistry['chartICCRegional']=new Chart(ctx,{
-        type:'bar',
-        data:{
-          labels:['Nacional','CABA','Interior'],
-          datasets:[{
-            label:'ICC sep-26',
-            data:[41.8,37.2,46.1],
-            backgroundColor:[cv('var(--c2)')+'88',cv('var(--c3)')+'88',cv('var(--c4)')+'88'],
-            borderColor:[cv('var(--c2)'),cv('var(--c3)'),cv('var(--c4)')],
-            borderWidth:1.5,borderRadius:4,barThickness:40
-          }]
-        },
-        options:{
-          responsive:true,maintainAspectRatio:false,
-          indexAxis:'y',
-          plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>c.dataset.label+': '+c.parsed.x.toFixed(1)}}},
-          scales:{
-            x:{min:25,max:55,ticks:{font:{size:10},color:tok('--fg-dim')},grid:{color:tok('--border')}},
-            y:{ticks:{font:{family:"'IBM Plex Mono',monospace",size:11},color:tok('--fg')},grid:{display:false}}
-          }
-        }
-      });
+      buildLegend('legendICCICG','chartICCICG',
+        ['ICC Nacional','ICC CABA sep-26','ICC Interior sep-26','ICG Nacional'],
+        ['var(--c2)','var(--c5)','var(--c4)','var(--c3)']);
     })();
   }
 
