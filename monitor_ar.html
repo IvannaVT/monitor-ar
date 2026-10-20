@@ -149,6 +149,36 @@ tr:hover td{background:color-mix(in srgb,var(--accent) 5%,transparent)}
 
 footer{text-align:center;padding:20px;font-size:10px;color:var(--fg-dim);border-top:1px solid var(--border)}
 footer a{color:var(--accent)}
+
+/* ── TIMELINE STRIP ──────────────────────────── */
+.timeline-strip{background:var(--surface);border-bottom:1px solid var(--border);overflow-x:auto;scrollbar-width:none}
+.timeline-strip::-webkit-scrollbar{display:none}
+.tl-inner{display:flex;align-items:stretch;gap:0;min-width:max-content;padding:0 20px}
+.tl-item{display:flex;flex-direction:column;align-items:center;gap:3px;padding:8px 14px;position:relative;border-right:1px solid var(--border);cursor:default;flex-shrink:0}
+.tl-item:last-child{border-right:none}
+.tl-item.published .tl-dot{background:var(--accent)}
+.tl-item.upcoming .tl-dot{background:transparent;border-color:var(--border)}
+.tl-item.soon .tl-dot{background:transparent;border-color:var(--warn)}
+.tl-dot{width:7px;height:7px;border-radius:50%;border:1.5px solid var(--accent);flex-shrink:0}
+.tl-date{font-family:'IBM Plex Mono',monospace;font-size:9px;color:var(--fg-dim);letter-spacing:.3px}
+.tl-icon{font-size:13px;line-height:1}
+.tl-name{font-size:10px;font-weight:600;color:var(--fg);letter-spacing:.2px;text-align:center;white-space:nowrap}
+.tl-val{font-family:'IBM Plex Mono',monospace;font-size:12px;font-weight:500;text-align:center;white-space:nowrap}
+.tl-val.pos{color:var(--pos)}.tl-val.neg{color:var(--neg)}.tl-val.neu{color:var(--fg-dim)}.tl-val.warn{color:var(--warn)}
+.tl-period{font-size:9px;color:var(--fg-dim);text-align:center}
+.tl-src{font-size:9px;color:var(--fg-dim);opacity:.6;text-align:center}
+.tl-upcoming-lbl{font-size:9px;font-weight:600;letter-spacing:.4px;text-transform:uppercase;color:var(--warn);opacity:.8}
+.tl-divider{width:1px;align-self:stretch;background:color-mix(in srgb,var(--warn) 40%,transparent);margin:4px 0;flex-shrink:0}
+
+/* ── KPI SUBCOMPONENTS ───────────────────────── */
+.kpi-subs{margin-top:6px;display:flex;flex-direction:column;gap:3px}
+.kpi-sub-row{display:flex;justify-content:space-between;align-items:center;gap:8px}
+.kpi-sub-lbl{font-size:9px;color:var(--fg-dim);letter-spacing:.3px}
+.kpi-sub-val{font-family:'IBM Plex Mono',monospace;font-size:10px;font-weight:500;color:var(--fg-dim)}
+.kpi-sub-val.ia{color:var(--warn)}
+.kpi.highlight{border-color:color-mix(in srgb,var(--accent) 40%,transparent)}
+.kpi-compare{font-size:9px;color:var(--fg-dim);margin-top:2px;font-style:italic}
+
 @media(max-width:500px){.gap-zone-cards{grid-template-columns:1fr 1fr}.kpi-num{font-size:22px}}
 @media(max-width:620px){.cross-grid{grid-template-columns:1fr!important}}
 /* ── MOBILE ─────────────────────────────────── */
@@ -185,6 +215,79 @@ footer a{color:var(--accent)}
   </div>
 </header>
 
+<!-- ── TIMELINE "ÚLTIMOS DATOS Y LO QUE VIENE" ── -->
+<div class="timeline-strip" title="Últimos datos publicados y próximas fechas">
+  <div class="tl-inner">
+    <!-- publicados -->
+    <div class="tl-item published">
+      <div class="tl-dot"></div>
+      <div class="tl-date">13 oct</div>
+      <div class="tl-icon">📊</div>
+      <div class="tl-name">IPC Nacional</div>
+      <div class="tl-val pos">1,9%</div>
+      <div class="tl-period">sep-26</div>
+      <div class="tl-src">INDEC</div>
+    </div>
+    <div class="tl-item published">
+      <div class="tl-dot"></div>
+      <div class="tl-date">14 oct</div>
+      <div class="tl-icon">🏙️</div>
+      <div class="tl-name">IPCBA CABA</div>
+      <div class="tl-val pos">1,8%</div>
+      <div class="tl-period">sep-26</div>
+      <div class="tl-src">IDECBA</div>
+    </div>
+    <div class="tl-item published">
+      <div class="tl-dot"></div>
+      <div class="tl-date">oct</div>
+      <div class="tl-icon">🎯</div>
+      <div class="tl-name">ICC UTDT</div>
+      <div class="tl-val neu">41,8</div>
+      <div class="tl-period">sep-26</div>
+      <div class="tl-src">UTDT</div>
+    </div>
+    <div class="tl-item published">
+      <div class="tl-dot"></div>
+      <div class="tl-date">oct</div>
+      <div class="tl-icon">🏭</div>
+      <div class="tl-name">IPIM</div>
+      <div class="tl-val warn">3,2%</div>
+      <div class="tl-period">sep-26</div>
+      <div class="tl-src">INDEC</div>
+    </div>
+    <!-- divisor próximos -->
+    <div class="tl-divider"></div>
+    <!-- próximos -->
+    <div class="tl-item soon">
+      <div class="tl-dot"></div>
+      <div class="tl-upcoming-lbl">próximo</div>
+      <div class="tl-icon">📊</div>
+      <div class="tl-name">IPC Nacional</div>
+      <div class="tl-val neu">oct-26</div>
+      <div class="tl-period">~13 nov</div>
+      <div class="tl-src">INDEC</div>
+    </div>
+    <div class="tl-item soon">
+      <div class="tl-dot"></div>
+      <div class="tl-upcoming-lbl">próximo</div>
+      <div class="tl-icon">🏙️</div>
+      <div class="tl-name">IPCBA CABA</div>
+      <div class="tl-val neu">oct-26</div>
+      <div class="tl-period">~14 nov</div>
+      <div class="tl-src">IDECBA</div>
+    </div>
+    <div class="tl-item upcoming">
+      <div class="tl-dot"></div>
+      <div class="tl-upcoming-lbl">próximo</div>
+      <div class="tl-icon">🎯</div>
+      <div class="tl-name">ICC UTDT</div>
+      <div class="tl-val neu">oct-26</div>
+      <div class="tl-period">~nov</div>
+      <div class="tl-src">UTDT</div>
+    </div>
+  </div>
+</div>
+
 <nav class="nav-tabs">
   <div class="nav-inner">
     <button class="tab-btn active" data-tab="indicadores">Indicadores</button>
@@ -202,35 +305,61 @@ footer a{color:var(--accent)}
 <!-- ── TAB 1: INDICADORES ───────────────────── -->
 <section class="panel active" id="tab-indicadores">
   <p class="sec">Clima macroeconómico · Argentina</p>
-  <div class="kpi-grid">
-    <div class="kpi">
-      <div class="kpi-label">IPC sep-26</div>
+  <div class="kpi-grid" style="grid-template-columns:repeat(auto-fit,minmax(180px,1fr))">
+    <!-- IPC Nacional -->
+    <div class="kpi highlight">
+      <div class="kpi-label">IPC Nacional · sep-26</div>
       <div class="kpi-num">1,9%</div>
       <div class="kpi-meta"><span class="arrow up">↑</span><span class="kpi-sub">INDEC · mensual · vs 1,7% ago</span></div>
+      <div class="kpi-subs">
+        <div class="kpi-sub-row"><span class="kpi-sub-lbl">Núcleo</span><span class="kpi-sub-val">1,7%</span></div>
+        <div class="kpi-sub-row"><span class="kpi-sub-lbl">Regulados</span><span class="kpi-sub-val">2,8%</span></div>
+        <div class="kpi-sub-row"><span class="kpi-sub-lbl">IPIM</span><span class="kpi-sub-val">3,2%</span></div>
+        <div class="kpi-sub-row"><span class="kpi-sub-lbl">Interanual</span><span class="kpi-sub-val ia">33,4%</span></div>
+      </div>
     </div>
+    <!-- IPCBA CABA -->
     <div class="kpi">
-      <div class="kpi-label">IPCBA sep-26</div>
+      <div class="kpi-label">IPCBA CABA · sep-26</div>
       <div class="kpi-num">1,8%</div>
-      <div class="kpi-meta"><span class="arrow flat">→</span><span class="kpi-sub">IDECBA · CABA · Nacional 1,9% · brecha −0,1 p.p.</span></div>
+      <div class="kpi-meta"><span class="arrow flat">→</span><span class="kpi-sub">IDECBA · brecha −0,1 p.p.</span></div>
+      <div class="kpi-subs">
+        <div class="kpi-sub-row"><span class="kpi-sub-lbl">Bienes</span><span class="kpi-sub-val">1,6%</span></div>
+        <div class="kpi-sub-row"><span class="kpi-sub-lbl">Servicios</span><span class="kpi-sub-val">2,0%</span></div>
+        <div class="kpi-sub-row"><span class="kpi-sub-lbl">Regulados</span><span class="kpi-sub-val">2,1%</span></div>
+        <div class="kpi-sub-row"><span class="kpi-sub-lbl">Interanual</span><span class="kpi-sub-val ia">32,9%</span></div>
+      </div>
     </div>
+    <!-- ICC -->
     <div class="kpi">
       <div class="kpi-label">ICC sep-26</div>
-      <div class="kpi-num">41,2</div>
-      <div class="kpi-meta"><span class="kpi-delta flat">+1,0</span><span class="kpi-sub">vs ago-26 · UTDT</span></div>
+      <div class="kpi-num">41,8</div>
+      <div class="kpi-meta"><span class="kpi-delta up">+1,6</span><span class="kpi-sub">vs ago-26 · UTDT</span></div>
+      <div class="kpi-subs">
+        <div class="kpi-sub-row"><span class="kpi-sub-lbl">CABA</span><span class="kpi-sub-val">37,2</span></div>
+        <div class="kpi-sub-row"><span class="kpi-sub-lbl">Interior</span><span class="kpi-sub-val">46,1</span></div>
+        <div class="kpi-sub-row"><span class="kpi-sub-lbl">GBA</span><span class="kpi-sub-val">+3,3% m/m</span></div>
+      </div>
     </div>
+    <!-- ICG -->
     <div class="kpi">
       <div class="kpi-label">ICG sep-26</div>
       <div class="kpi-num">1,9</div>
       <div class="kpi-meta"><span class="kpi-delta down">−0,2</span><span class="kpi-sub">vs ago-26 · ref. L1</span></div>
+      <div class="kpi-subs">
+        <div class="kpi-sub-row"><span class="kpi-sub-lbl">Escala</span><span class="kpi-sub-val">0–5</span></div>
+        <div class="kpi-sub-row"><span class="kpi-sub-lbl">Max 12m</span><span class="kpi-sub-val">2,5</span></div>
+        <div class="kpi-sub-row"><span class="kpi-sub-lbl">Min 12m</span><span class="kpi-sub-val">1,9</span></div>
+      </div>
     </div>
   </div>
   <div class="chart-wrap">
     <div class="chart-head">
-      <div><h3>Inflación mensual · IPC INDEC vs IPCBA CABA</h3><p>Sep-25 → Sep-26 · clic en leyenda para filtrar</p></div>
+      <div><h3>Inflación mensual · IPC Nacional vs IPCBA CABA</h3><p>Sep-25 → Sep-26 · barras + media móvil 3 meses</p></div>
     </div>
-    <div class="chart-box"><canvas id="chartInflComp"></canvas></div>
+    <div class="chart-box med"><canvas id="chartInflComp"></canvas></div>
     <div class="legend" id="legendInflComp"></div>
-    <p class="source">IPC INDEC nacional: sep-25→sep-26 (1,9% sep · acum. 23,6% · interanual 33,4%) · IPCBA IDECBA/GCBA: serie completa sep-25→sep-26</p>
+    <p class="source">IPC INDEC: sep-25→sep-26 (1,9% sep · acum. 23,6% · i.a. 33,4%) · IPCBA IDECBA/GCBA · MM3: media móvil 3 meses</p>
   </div>
   <div class="chart-wrap">
     <div class="chart-head"><div><h3>Inflación acumulada 2026 · IPC INDEC vs IPCBA CABA</h3><p>Ene-26 → Sep-26 · diferencial eje der.</p></div></div>
@@ -245,10 +374,15 @@ footer a{color:var(--accent)}
     <p class="source">IPC INDEC interanual: INDEC via monitorargy.com · IPCBA interanual: IDECBA/GCBA</p>
   </div>
   <div class="chart-wrap">
-    <div class="chart-head"><div><h3>ICC · ICG · Confianza y clima general</h3><p>Sep-25 → Sep-26 · ICC eje izq. · ICG eje der.</p></div></div>
+    <div class="chart-head"><div><h3>ICC · Confianza del Consumidor · Nacional</h3><p>Sep-25 → Sep-26 · UTDT CIF · escala 0–100</p></div></div>
     <div class="chart-box"><canvas id="chartICCICG"></canvas></div>
     <div class="legend" id="legendICCICG"></div>
     <p class="source">ICC: Índice de Confianza del Consumidor · UTDT · escala 0–100 · ICG: Clima General · ref. interna L1 · escala 0–5</p>
+  </div>
+  <div class="chart-wrap">
+    <div class="chart-head"><div><h3>ICC · Apertura regional · CABA · Interior · GBA</h3><p>Sep-26 · snapshot regional · UTDT CIF</p></div></div>
+    <div class="chart-box" style="height:160px"><canvas id="chartICCRegional"></canvas></div>
+    <p class="source">Sep-26: Nacional 41,8 · CABA 37,2 · Interior 46,1 · GBA: solo variación m/m disponible (+3,3%) · UTDT CIF · Serie regional completa: pendiente de incorporación</p>
   </div>
 </section>
 
@@ -1271,7 +1405,7 @@ function toggleDataset(chartId,idx){
 const MESI=['Sep-25','Oct-25','Nov-25','Dic-25','Ene-26','Feb-26','Mar-26','Abr-26','May-26','Jun-26','Jul-26','Ago-26','Sep-26'];
 const MIPC=['Sep-25','Oct-25','Nov-25','Dic-25','Ene-26','Feb-26','Mar-26','Abr-26','May-26','Jun-26','Jul-26','Ago-26','Sep-26'];
 const IPC=[2.1,2.3,2.5,2.8,2.9,2.9,3.4,2.6,2.1,1.9,2.1,1.7,1.9];
-const ICC=[39.8,42.3,46.0,45.6,46.6,44.4,42.0,39.6,40.1,42.7,40.7,40.2,41.2];
+const ICC=[39.8,42.3,46.0,45.6,46.6,44.4,42.0,39.6,40.1,42.7,40.7,40.2,41.8]; // sep-26: 41,8 (UTDT confirmado)
 const ICG=[1.9,2.1,2.5,2.5,2.4,2.4,2.3,2.0,2.0,2.1,1.9,2.1,1.9];
 
 /* INFLACIÓN — series combinadas */
@@ -1535,13 +1669,44 @@ function initTab(tab){
   tabInited[tab]=true;
 
   if(tab==='indicadores'){
-    mkLine('chartInflComp',MINFL,[
-      {label:'IPC INDEC nacional',data:IPC_FULL,color:'var(--c1)'},
-      {label:'IPCBA CABA (IDECBA)',data:IPCBA_FULL,color:'var(--c4)'}
-    ]);
-    buildLegend('legendInflComp','chartInflComp',
-      ['IPC INDEC nacional','IPCBA CABA (IDECBA)'],
-      ['var(--c1)','var(--c4)']);
+    // ── Inflación mensual bar+MM3 combo ─
+    (function(){
+      const ctx=document.getElementById('chartInflComp');if(!ctx)return;
+      if(chartRegistry['chartInflComp'])try{chartRegistry['chartInflComp'].destroy();}catch(e){}
+      // MM3 helper
+      function mm3(arr){return arr.map((_,i)=>{if(i<2)return null;const s=arr[i]+arr[i-1]+arr[i-2];if(s==null||arr[i]==null||arr[i-1]==null||arr[i-2]==null)return null;return Math.round(s/3*10)/10;});}
+      const mm3ipc=mm3(IPC_FULL);
+      const mm3ipcba=mm3(IPCBA_FULL);
+      chartRegistry['chartInflComp']=new Chart(ctx,{
+        type:'bar',
+        data:{labels:MINFL,datasets:[
+          {label:'IPC Nacional',data:IPC_FULL,
+           backgroundColor:cv('var(--c1)')+'55',borderColor:cv('var(--c1)'),borderWidth:1,
+           borderRadius:3,order:2},
+          {label:'IPCBA CABA',data:IPCBA_FULL,
+           backgroundColor:cv('var(--c4)')+'55',borderColor:cv('var(--c4)'),borderWidth:1,
+           borderRadius:3,order:3},
+          {label:'MM3 IPC',data:mm3ipc,type:'line',
+           borderColor:cv('var(--c1)'),backgroundColor:'transparent',
+           borderWidth:2,pointRadius:0,pointHoverRadius:4,tension:0.4,spanGaps:false,order:0},
+          {label:'MM3 IPCBA',data:mm3ipcba,type:'line',
+           borderColor:cv('var(--c4)'),backgroundColor:'transparent',
+           borderWidth:2,borderDash:[4,3],pointRadius:0,pointHoverRadius:4,tension:0.4,spanGaps:false,order:1}
+        ]},
+        options:{
+          responsive:true,maintainAspectRatio:false,
+          interaction:{mode:'index',intersect:false},
+          plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>c.dataset.label+': '+(c.parsed.y!==null?c.parsed.y.toFixed(1):'—')+'%'}}},
+          scales:{
+            x:{ticks:{font:{family:"'IBM Plex Mono',monospace",size:10},color:tok('--fg-dim')},grid:{color:tok('--border')}},
+            y:{min:0,max:4.5,ticks:{font:{size:10},color:tok('--fg-dim'),callback:v=>v+'%'},grid:{color:tok('--border')}}
+          }
+        }
+      });
+      buildLegend('legendInflComp','chartInflComp',
+        ['IPC Nacional','IPCBA CABA','MM3 IPC','MM3 IPCBA'],
+        ['var(--c1)','var(--c4)','var(--c1)','var(--c4)']);
+    })();
     // ── Inflación acumulada (dual-axis: acum. % izq. / diferencial p.p. der.) ─
     (function(){
       const ctx=document.getElementById('chartInflAcum');if(!ctx)return;
@@ -1621,6 +1786,33 @@ function initTab(tab){
         }
       });
       buildLegend('legendICCICG','chartICCICG',['ICC','ICG'],['var(--c2)','var(--c3)']);
+    })();
+    // ── ICC Regional snapshot (sep-26) ─
+    (function(){
+      const ctx=document.getElementById('chartICCRegional');if(!ctx)return;
+      if(chartRegistry['chartICCRegional'])try{chartRegistry['chartICCRegional'].destroy();}catch(e){}
+      chartRegistry['chartICCRegional']=new Chart(ctx,{
+        type:'bar',
+        data:{
+          labels:['Nacional','CABA','Interior'],
+          datasets:[{
+            label:'ICC sep-26',
+            data:[41.8,37.2,46.1],
+            backgroundColor:[cv('var(--c2)')+'88',cv('var(--c3)')+'88',cv('var(--c4)')+'88'],
+            borderColor:[cv('var(--c2)'),cv('var(--c3)'),cv('var(--c4)')],
+            borderWidth:1.5,borderRadius:4,barThickness:40
+          }]
+        },
+        options:{
+          responsive:true,maintainAspectRatio:false,
+          indexAxis:'y',
+          plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>c.dataset.label+': '+c.parsed.x.toFixed(1)}}},
+          scales:{
+            x:{min:25,max:55,ticks:{font:{size:10},color:tok('--fg-dim')},grid:{color:tok('--border')}},
+            y:{ticks:{font:{family:"'IBM Plex Mono',monospace",size:11},color:tok('--fg')},grid:{display:false}}
+          }
+        }
+      });
     })();
   }
 
