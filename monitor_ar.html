@@ -1823,7 +1823,7 @@ function initTab(tab){
 }
 
 /* ── CARGA DE DATOS + INIT ──────────────────── */
-fetch('./data/indicadores.json')
+fetch('https://raw.githubusercontent.com/IvannaVT/monitor-ar/main/data/indicadores.json')
   .then(r=>{ if(!r.ok)throw new Error(r.status); return r.json(); })
   .then(d=>{
     // Asigna todas las variables al scope global
