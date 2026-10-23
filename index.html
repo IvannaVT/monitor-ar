@@ -369,10 +369,10 @@ footer a{color:var(--accent)}
       <p class="source">Acum. ene-sep 2026: 23,6% · Interanual sep-26: 33,4% · INDEC</p>
     </div>
     <div class="chart-wrap" style="margin:0">
-      <div class="chart-head"><div><h3>IPCBA CABA · acum. e interanual</h3><p>May-26 → Sep-26 · acum. barra izq. · i.a. línea der.</p></div></div>
+      <div class="chart-head"><div><h3>IPCBA CABA · acum. e interanual</h3><p>Ene-26 → Sep-26 · acum. barra izq. · i.a. línea der.</p></div></div>
       <div class="chart-box"><canvas id="chartInflCabaAcumIA"></canvas></div>
       <div class="legend" id="legendInflCabaAcumIA"></div>
-      <p class="source">Acum. may-sep 2026: 23,7% · Interanual sep-26: 32,9% · IDECBA · Serie desde may-26</p>
+      <p class="source">Acum. ene-sep 2026: 23,7% · Interanual sep-26: 32,9% · IDECBA · Interanual disponible desde may-26</p>
     </div>
   </div>
   <div class="chart-wrap">
@@ -1426,13 +1426,13 @@ const TIPCBA_VAR=[2.1,1.8,2.9,1.7,1.8];
 const TIPCBA_ACUM=[14.0,16.0,19.4,21.5,23.7];
 const MIPCACUM=['Ene-26','Feb-26','Mar-26','Abr-26','May-26','Jun-26','Jul-26','Ago-26','Sep-26'];
 const IPC_ACUM=[2.9,5.9,9.4,12.3,14.7,16.8,19.3,21.3,23.6];           // INDEC acum. ene-sep
-const IPCBA_ACUM_FULL=[null,null,null,null,14.0,16.0,19.4,21.5,23.7];  // IPCBA acum. desde may-26
+const IPCBA_ACUM_FULL=[3.1,5.8,9.0,11.7,14.0,16.0,19.4,21.5,23.7];  // IPCBA acum. ene-sep, igual que data/indicadores.json
 const BRECHA_ACUM=[null,null,null,null,-0.7,-0.8,0.1,0.2,0.1];         // diferencial (IPCBA−INDEC)
 const MIIA=['May-26','Jun-26','Jul-26','Ago-26','Sep-26'];
 const IPC_IA=[33.2,33.5,33.8,33.5,33.4];
 // Per-index acum+IA (9-point axis: Ene-26→Sep-26)
 const IPC_IA_9=[null,null,null,null,33.2,33.5,33.8,33.5,33.4];
-const IPCBA_ACUM_9=[null,null,null,null,14.0,16.0,19.4,21.5,23.7];
+const IPCBA_ACUM_9=[3.1,5.8,9.0,11.7,14.0,16.0,19.4,21.5,23.7];
 const IPCBA_IA_9=[null,null,null,null,33.1,32.6,33.2,33.3,32.9];
 // Di Tella regional — single Sep-26 data points in 13-month axis
 const ICC_CABA_13=[null,null,null,null,null,null,null,null,null,null,null,null,37.2];
