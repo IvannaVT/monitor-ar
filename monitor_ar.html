@@ -1588,7 +1588,7 @@ function initTab(tab){
             {label:iaLabel,data:iaData,type:'line',
              borderColor:cv(iaColor),backgroundColor:'transparent',
              borderWidth:2,pointRadius:3,pointHoverRadius:5,tension:0.3,
-             spanGaps:false,order:1,yAxisID:'yI'}
+             spanGaps:true,order:1,yAxisID:'yI'}
           ]},
           options:{
             responsive:true,maintainAspectRatio:false,
@@ -1614,8 +1614,10 @@ function initTab(tab){
         IPC_ACUM,IPC_IA_9,
         'Acum. IPC','Interanual IPC',
         'var(--c1)','var(--c1)');
+      // Reemplazar null en interanual IPCBA con NaN para que Chart.js no bloquee renderizado de barras
+      const IPCBA_IA_9_CLEAN = IPCBA_IA_9.map(v => v === null ? NaN : v);
       mkAcumIA('chartInflCabaAcumIA','legendInflCabaAcumIA',
-        IPCBA_ACUM_9,IPCBA_IA_9,
+        IPCBA_ACUM_9,IPCBA_IA_9_CLEAN,
         'Acum. IPCBA','Interanual IPCBA',
         'var(--c4)','var(--c4)');
     })();
