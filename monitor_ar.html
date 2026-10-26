@@ -512,7 +512,7 @@ footer a{color:var(--accent)}
   <!-- ── CRUCE IMAGEN–GESTIÓN ─────────────────── -->
   <div style="margin:24px 0 8px"><p class="sec">Cruce imagen · gestión · divergencia</p></div>
   <div class="info-box" style="margin-bottom:12px">
-    <strong>Hallazgo clave:</strong> Isasi-Burdman mide imagen personal <em>y</em> aprobación de gestión en el mismo estudio. Jun→Ago: gestión <strong>+3 pp</strong> (45→48) mientras imagen positiva <strong>−4 pp</strong> (42→38). Gestión e imagen se mueven en <strong>sentidos opuestos</strong> dentro de la misma consultora.
+    <strong>Lectura corregida:</strong> Isasi-Burdman agosto: gestión de Javier Milei, <strong>42% aprueba, 48% desaprueba y 10% no sabe</strong>. Jun→Ago: aprobación <strong>−3 pp</strong> (45→42); imagen positiva <strong>−4 pp</strong> (42→38). Son preguntas distintas: no se promedian. <a href="https://drive.google.com/file/d/1Phw7mb5Dy9q7of8G-5wbfxUqy2lwxKgT/view" target="_blank" rel="noopener">Informe de agosto, p. 3</a>.
   </div>
   <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:16px" class="cross-grid">
     <div class="chart-wrap" style="margin-bottom:0">
@@ -546,11 +546,11 @@ footer a{color:var(--accent)}
       <thead><tr><th>Consultora</th><th>Variable</th><th>May</th><th>Jun</th><th>Jul</th><th>Ago</th><th>Sep</th><th>Δ</th></tr></thead>
       <tbody>
         <tr><td>Proyección</td><td>Aprobación gestión</td><td class="num">34,0</td><td class="num">39,8</td><td class="num">39,4</td><td class="num">39,7</td><td class="num">42,0</td><td class="num up">+8,0 🟢</td></tr>
-        <tr><td>Isasi-Burdman</td><td>Aprobación gestión</td><td class="num">—</td><td class="num">45,0</td><td class="num">46,0</td><td class="num">48,0</td><td class="num">—</td><td class="num up">+3,0 🟢</td></tr>
+        <tr><td>Isasi-Burdman</td><td>Aprobación gestión</td><td class="num">—</td><td class="num">45,0</td><td class="num">46,0</td><td class="num">42,0</td><td class="num">—</td><td class="num down">−3,0 🔴</td></tr>
         <tr><td>Isasi-Burdman</td><td>Imagen positiva</td><td class="num">—</td><td class="num">42,0</td><td class="num">43,0</td><td class="num">38,0</td><td class="num">—</td><td class="num down">−4,0 🔴</td></tr>
         <tr><td>D'Alessio</td><td>Imagen positiva</td><td class="num">36,0</td><td class="num">—</td><td class="num">—</td><td class="num">34,0</td><td class="num">—</td><td class="num down">−2,0 🔴</td></tr>
         <tr><td>Isasi-Burdman</td><td>Imagen negativa</td><td class="num">—</td><td class="num">—</td><td class="num">44,0</td><td class="num">46,0</td><td class="num">—</td><td class="num down">+2,0 🔴</td></tr>
-        <tr><td>Isasi-Burdman</td><td>Desaprobación gestión</td><td class="num">—</td><td class="num">48,0</td><td class="num">47,0</td><td class="num">42,0</td><td class="num">—</td><td class="num up">−6,0 🟢</td></tr>
+        <tr><td>Isasi-Burdman</td><td>Desaprobación gestión</td><td class="num">—</td><td class="num">48,0</td><td class="num">47,0</td><td class="num">48,0</td><td class="num">—</td><td class="num">0,0</td></tr>
         <tr><td>Vozna</td><td>Aprobación gestión</td><td class="num">—</td><td class="num">—</td><td class="num">36,3</td><td class="num">—</td><td class="num">32,6</td><td class="num down">−3,7 🔴</td></tr>
         <tr><td>Vozna</td><td>Desaprobación gestión</td><td class="num">—</td><td class="num">—</td><td class="num">57,6</td><td class="num">—</td><td class="num">61,9</td><td class="num down">+4,3 🔴</td></tr>
         <tr><td>Vozna</td><td>Imagen positiva</td><td class="num">36,3</td><td class="num">—</td><td class="num">32,1</td><td class="num">—</td><td class="num">31,3</td><td class="num down">−5,0 🔴</td></tr>
@@ -1825,7 +1825,7 @@ function initTab(tab){
 }
 
 /* ── CARGA DE DATOS + INIT ──────────────────── */
-fetch('https://raw.githubusercontent.com/IvannaVT/monitor-ar/main/data/indicadores.json')
+fetch('./data/indicadores.json')
   .then(r=>{ if(!r.ok)throw new Error(r.status); return r.json(); })
   .then(d=>{
     // Asigna todas las variables al scope global
