@@ -4,13 +4,13 @@
     "kicker": "Comisión de Presupuesto · CABA · Uso interno",
     "sesiones": "Sesiones 7/10 · 8/10 · 13/10/2026",
     "corte": "20/10/2026 ART",
-    "aviso": "⚠ Taquigrafía 7/10 no publicada. Fuentes: transcripciones 08/10 (Emergencia Hídrica + Belgrano Sur + Bono) y 13/10 (Infra/Transporte); dictámenes Exp. 3085-J y 3082-J. Rondas 13–16/10: Bereciartua (14/10) y Miguel (16/10) — sin acuerdo. <strong>Dictámenes de mayoría firmados 19/10 (PRO + FxBA + LLA + CD):</strong> P-01 ✅ y P-03 ✅ — pendiente sesión plenaria.",
+    "aviso": "Archivo histórico sin consumo por monitor_leg.html desde ac1e6b1. No usar para publicar ni regenerar HTML. Ver docs/AUDITORIA-2026-10-26.md.",
     "footer": "Uso interno · Comisión de Presupuesto · CABA · 20/10/2026 ART · Fuentes: transcripciones 08/10 y 13/10 (Drive); dictámenes de mayoría Exp. 3085-J y 3082-J firmados 19/10; Ámbito, La Nación, Letra P, Parlamentario, Pura Ciudad · Taquigrafías 7/10, 14/10, 16/10 pendientes."
   },
 
   "rondas": [
-    { "tipo": "yellow", "titulo": "Bereciartua (Infraestructura) · 14/10", "texto": "Neira (FxBA) exigió plazos <strong>Línea F</strong>. Sin respuesta. Política de transporte sin criterio unificado." },
-    { "tipo": "yellow", "titulo": "Miguel (Educación) · 16/10", "texto": "Plan \"BA Aprende\" (horizonte 2037). Sala de 3: \"articulación en la obligatoriedad\" — sin partida. CD-03 sin respuesta." },
+    { "tipo": "yellow", "titulo": "Bereciartua (Infraestructura) · 13/10", "texto": "Neira (FxBA) exigió plazos <strong>Línea F</strong>. Sin respuesta. Política de transporte sin criterio unificado." },
+    { "tipo": "yellow", "titulo": "Miguel (Educación) · 15/10", "texto": "Plan \"BA Aprende\" (horizonte 2037). Sala de 3: \"articulación en la obligatoriedad\" — sin partida. CD-03 sin respuesta." },
     { "tipo": "yellow", "titulo": "Sesión informativa · Emergencia Hídrica · 08/10", "texto": "Nagata (CD): \"ni en la pandemia se pidió esto.\" LLA: vocación de acompañar pero exige informes previos. FxBA: cuestionó redundancia facultades AUSA." },
     { "tipo": "yellow", "titulo": "Sesión informativa · Infraestructura/Transporte · 13/10", "texto": "Barroetaveña: F = \"ficción,\" Trambús = \"colectivo con ruedas tapadas.\" Iáñez: hídrico –44% vs emergencia ⚠. Bielli: subte –54% histórico. Ministro: Línea F adjudicación diciembre; Trambús T1 en un mes." }
   ],
@@ -55,7 +55,7 @@
     { "id": "FB-02",  "bloque": "FxBA","legislador": "Bloque",          "area": "IVC / Vivienda",             "tags": [{"cls":"cuest","lbl":"CUEST"}],"planteo": "\"Vaciamiento\" del IVC. –17,2% real 2027; –51,5% acum. desde dic. 2023.", "est": "🔴" },
     { "id": "FB-03",  "bloque": "FxBA","legislador": "Bloque",          "area": "Empleo",                     "tags": [{"cls":"cuest","lbl":"CUEST"}],"planteo": "–104.000 empleos; 3.117 empresas cerradas desde nov. 2023. Partidas –12,3%.", "est": "🔴" },
     { "id": "FB-04",  "bloque": "FxBA","legislador": "Bloque",          "area": "Deuda",                      "tags": [{"cls":"cuest","lbl":"CUEST"}],"planteo": "Intereses +70%. $592.000M vs. ~$124.000M IVC (4×).", "est": "🔴" },
-    { "id": "FB-05",  "bloque": "FxBA","legislador": "Neira",           "area": "Transporte / Línea F",       "tags": [{"cls":"cuest","lbl":"CUEST"}],"planteo": "Inversión –13,2% real. Sin plazos Línea F (14/10). Sin respuesta.", "est": "🔴" },
+    { "id": "FB-05",  "bloque": "FxBA","legislador": "Neira",           "area": "Transporte / Línea F",       "tags": [{"cls":"cuest","lbl":"CUEST"}],"planteo": "Inversión –13,2% real. Línea F: GCBA anunció adjudicación en diciembre e inicio previsto en 2027. Respuesta individual a Neira pendiente de cotejo.", "est": "🔴" },
     { "id": "FB-06",  "bloque": "FxBA","legislador": "Bloque",          "area": "Salud",                      "tags": [{"cls":"cuest","lbl":"CUEST"}],"planteo": "+18,2% nominal = caída real ~3%.", "est": "🟡" },
     { "id": "FB-07",  "bloque": "FxBA","legislador": "Bloque",          "area": "Educación",                  "tags": [{"cls":"cuest","lbl":"CUEST"}],"planteo": "–0,6% real. Del 26% al 19,7% del presupuesto.", "est": "🟡" },
     { "id": "FB-08",  "bloque": "FxBA","legislador": "Bloque",          "area": "IIBB monotributistas",       "tags": [{"cls":"preg","lbl":"DEM"}],  "planteo": "Exención 100%. Hoy categorías D–H tienen 75%.", "est": "⏳" },
@@ -74,11 +74,31 @@
   ],
 
   "resumen_bloques": [
-    { "bloque": "LLA",  "cls": "lla",  "bancas": "13", "nota": "alivio exigido <span class=\"cifra\">$435.000M</span> · condiciona quórum" },
-    { "bloque": "FxBA", "cls": "fxba", "bancas": "20", "nota": "monitor propio · posición coordinada" },
-    { "bloque": "CD",   "cls": "cd",   "bancas": "7",  "nota": "CD-01/02/03 sin respuesta al 19/10" },
-    { "bloque": "PRO",  "cls": "pro",  "bancas": "29", "nota": "mayoría relativa · Wolff preside" }
-  ],
+  {
+    "bloque": "LLA",
+    "cls": "lla",
+    "bancas": "14",
+    "nota": "alivio exigido <span class=\"cifra\">$435.000M</span> · condiciona quórum"
+  },
+  {
+    "bloque": "FxBA",
+    "cls": "fxba",
+    "bancas": "20",
+    "nota": "monitor propio · posición coordinada"
+  },
+  {
+    "bloque": "CD",
+    "cls": "cd",
+    "bancas": "6",
+    "nota": "CD-01/02/03 sin respuesta al 19/10"
+  },
+  {
+    "bloque": "Vamos por más",
+    "cls": "pro",
+    "bancas": "12",
+    "nota": "Wolff preside la comisión"
+  }
+],
 
   "transversales": [
     { "tipo": "red",    "titulo": "CONVERGENCIA · IIBB",                  "texto": "LLA (tasa 0% servicios) · FxBA (exención total monotributistas + gastronomía). Sin respuesta articulada GCBA.", "span": 1 },
@@ -98,10 +118,10 @@
     { "tipo": "grey",  "titulo": "Neira (FxBA) · 6/10",                   "texto": "Lanzó monitor propio. IVC = \"vaciamiento.\"", "span": 1 },
     { "tipo": "grey",  "titulo": "Nagata / Tagliaferri (CD) · 7/10",      "texto": "\"Presupuesto real.\" ¿Cómo se financia rebaja patentes? Obras hídricas paralizadas. Sala de 3 sin partida.", "span": 1 },
     { "tipo": "grey",  "titulo": "Nagata (CD) · 08/10 — Emergencia",      "texto": "\"Ni en la pandemia se pidió esto.\" Propone emergencia en 2 etapas. Sugiere denominarla \"hídrica, climática y social.\"", "span": 1 },
-    { "tipo": "grey",  "titulo": "Neira (FxBA) · 14/10",                  "texto": "Exigió plazos Línea F. Sin respuesta de Bereciartua.", "span": 1 },
+    { "tipo": "grey",  "titulo": "Neira (FxBA) · 13/10 — atribución pendiente",                  "texto": "Pedido de plazos atribuido a Neira: pendiente de cotejo. Existe cronograma anunciado por GCBA; no equivale a adjudicación ni inicio efectivo.", "span": 1 },
     { "tipo": "grey",  "titulo": "Barroetaveña (FxBA) · 13/10",           "texto": "Línea F = \"ficción.\" Trambús = \"colectivo con ruedas tapadas.\" Fondo del subte desde 2012 debería tener ~USD 2.800M: ¿en qué se gastan?", "span": 1 },
     { "tipo": "green", "titulo": "Ministro Infra · 13/10 — Respuestas",   "texto": "Línea F: adjudicación diciembre; 3 estaciones en obra (Cochabamba, Constitución, Branzen); 6 años plazo. Trambús T1: \"menos de un mes.\" Km reales: 9,8 (pasajeros) + 1,1 (cocheras/talleres) = 10,9. BASE: trenes 0km línea C salen fábrica esta semana.", "span": 1 },
-    { "tipo": "grey",  "titulo": "Miguel (GCBA) · 16/10",                  "texto": "\"BA Aprende.\" Sala de 3: \"articulación en la obligatoriedad\" — sin partida. CD-03 sin respuesta formal.", "span": 2 },
+    { "tipo": "grey",  "titulo": "Miguel (GCBA) · 15/10",                  "texto": "\"BA Aprende.\" Sala de 3: \"articulación en la obligatoriedad\" — sin partida. CD-03 sin respuesta formal.", "span": 2 },
     { "tipo": "green", "titulo": "Wolff · Neira · Pakgojz · Nagata — Firma dictámenes de mayoría · 19/10","texto": "PRO, FxBA, LLA y CD firman conjuntamente Exp. 3085-J (Emergencia Hídrica) y Exp. 3082-J (Bono Proveedores). Señal política: los cuatro bloques principales alinean posición antes del plenario. Cuestionamientos previos de FxBA y CD se incorporaron como límites en el texto.", "span": 2 }
   ],
 
@@ -116,10 +136,10 @@
     { "id": "RP-08", "titulo": "IVC",                      "tipo": "red",    "texto": "Peronismo defiende; LLA quiere cerrar. Requiere posición GCBA.", "span": 1 },
     { "id": "RP-09", "titulo": "Intereses deuda",          "tipo": "red",    "texto": "$592.000M (FxBA). Cotejar con planillas.", "span": 1 },
     { "id": "RP-10", "titulo": "SBASE / Autopistas",       "tipo": "red",    "texto": "Sin posición oficial. Alta sensibilidad sindical.", "span": 1 },
-    { "id": "RP-11", "titulo": "Taquigrafías",             "tipo": "red",    "texto": "7/10, 14/10 y 16/10 sin publicar.", "span": 1 },
+    { "id": "RP-11", "titulo": "Taquigrafías",             "tipo": "red",    "texto": "Verificar disponibilidad de versiones del 7/10, 13/10, 15/10, 16/10 y 23/10.", "span": 1 },
     { "id": "RP-12", "titulo": "Fondo Anticíclico",        "tipo": "red",    "texto": "Verificar saldo y aplicaciones previas.", "span": 1 },
     { "id": "RP-13", "titulo": "Sala de 3",                "tipo": "red",    "texto": "Sin partida en Educación. Miguel sin respuesta formal.", "span": 1 },
-    { "id": "RP-14", "titulo": "Bono proveedores ✅",       "tipo": "yellow", "texto": "Dictaminado 20/10. Pendiente plenario: voluntario/compulsivo, fecha de corte, criterios pymes (Iáñez). Intereses $114.000M ya en presupuesto.", "span": 1 },
+    { "id": "RP-14", "titulo": "Bono proveedores ✅",       "tipo": "yellow", "texto": "Dictaminado 19/10. Pendiente plenario: voluntario/compulsivo, fecha de corte, criterios pymes (Iáñez). Intereses $114.000M ya en presupuesto.", "span": 1 },
     { "id": "RP-15", "titulo": "Línea F",                  "tipo": "red",    "texto": "Adjudicación anunciada para dic. Kilómetros: 9,8 vs 10,9. Contingencia financiera sin plan B (Moderelli).", "span": 1 },
     { "id": "RP-16", "titulo": "Belgrano Sur — secuencia", "tipo": "red",    "texto": "Diputados: convenio primero, autorización deuda después. GCBA quiere ambas en paralelo. Pendiente: término convenio Nación, composición $65M, deuda cero proveedores.", "span": 1 },
     { "id": "RP-17", "titulo": "Intermodalidad tren-subte","tipo": "red",    "texto": "Descuento interrumpido agosto 2026. Sin justificación pública. FxBA exige restablecimiento. Afecta porteños Villa del Parque y bonaerenses combinados.", "span": 2 }
@@ -135,7 +155,17 @@
       { "tipo": "blue",  "titulo": "🔴 5 · UCR / Ciudadanos Unidos",   "texto": "Sin declaraciones al 10/10. Votos necesarios.", "span": 1 },
       { "tipo": "blue",  "titulo": "🔴 6 · Contradicción hídrico –44%","texto": "Iáñez, Mayra, Bielli y Bieri señalaron la incoherencia. ¿GCBA responde en plenario?", "span": 1 },
       { "tipo": "blue",  "titulo": "🟡 7 · Línea F adjudicación",      "texto": "Ministro anunció diciembre. Monitorear si se cumple. Km real (9,8 vs 10,9) sigue en discusión.", "span": 1 },
-      { "tipo": "blue",  "titulo": "🟡 8 · Taquigrafías",              "texto": "7/10, 14/10 y 16/10 sin publicar. Verificar legislatura.gob.ar.", "span": 1 }
+      { "tipo": "blue",  "titulo": "🟡 8 · Taquigrafías",              "texto": "Verificar disponibilidad de versiones del 7/10, 13/10, 15/10, 16/10 y 23/10. Verificar legislatura.gob.ar.", "span": 1 }
     ]
   }
+,
+  "composicion_oficial_al_2026_10_26": {
+  "Ciudadanos Unidos / UCR": 5,
+  "Confianza y Desarrollo": 6,
+  "Frente de Izquierda de los Trabajadores / PO": 2,
+  "Fuerza por Buenos Aires": 20,
+  "La Libertad avanza": 14,
+  "Transformación": 1,
+  "Vamos por más": 12
+}
 }
