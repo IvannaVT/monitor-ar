@@ -31,7 +31,7 @@ def build():
             'po.org.ar': 'actor', 'guadalupetagliaferri.com.ar': 'actor',
             'www.xn--presupuestoporteo-uxb.com.ar': 'actor',
         }
-        assert u.scheme == 'https' and (official or attributed.get(u.hostname) == source.get('clase'))
+        assert u.scheme == 'https' and (official or (u.hostname in attributed and attributed[u.hostname] == source.get('clase')))
         assert source['consultada'] == d['corte']
     records = d['rondas'] + d['preguntas'] + d['temas'] + d['declaraciones'] + d['seguimiento'] + d['agenda'] + d['bloques'] + d['preguntas_bloques']
     assert len({r['id'] for r in records}) == len(records)
