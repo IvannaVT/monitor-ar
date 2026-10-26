@@ -1,5 +1,7 @@
 # Proceso previo a cada publicación de Monitor LEG
 
+La adaptación del diseño exportado de Claude usa `monitor_leg_view.py` para la estructura y `monitor_leg.template.html` para estilos e interacciones. Ver `DISENO_CLAUDE.md` para el alcance visual y la corrección del mapa de bancas a siete bloques y 60 integrantes. No se importan predicciones de voto ni mediciones de impacto sin respaldo.
+
 ## Ajuste de lectura y móvil · 26/10/2026
 
 Cambio de diseño autorizado por la usuaria: cuerpo de 16px, tarjetas de 1rem, fuentes enlazadas con mayor contraste, espaciado y foco visibles, botones de al menos 44px. A 640px o menos, mosaicos en una columna y tablas como fichas etiquetadas conservando filtros. Se actualiza solo la huella CSS; no cambia el contenido legislativo ni el corte de datos. Se mantiene «Repercusión» en la bajada. Comprobar 320, 390, 640, 768 y 1280px, ausencia de desborde y los filtros antes de cerrar la publicación.

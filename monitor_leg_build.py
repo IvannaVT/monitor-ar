@@ -1,9 +1,8 @@
 """Generate Monitor LEG from reviewed records; --check fails on unpublished edits."""
 import argparse
 import hashlib
-import html
 import json
-import re
+from monitor_leg_view import render_monitor
 from datetime import date as CalendarDate
 from pathlib import Path
 from urllib.parse import urlparse
@@ -47,52 +46,7 @@ def build():
         assert r['filtro'] in {b['filtro'] for b in d['bloques']}
         assert r['clase'] in ['Pregunta', 'Reclamo'] and r['actor'].strip()
         assert r['fecha'] <= d['corte']
-    e = html.escape
-    def refs(r):
-        return ' · '.join(f'<a href="{e(sources[s]["url"], quote=True)}">{e(sources[s]["etiqueta"])}</a>' for s in r['fuentes'])
-    def tile(r):
-        assert r['tipo'] in ['yellow', 'green', 'grey', 'blue', 'red']
-        debate = ''
-        if 'palabras_clave' in r:
-            debate = f'<p><strong>{e(r["alcance_debate"])}:</strong> {e(" · ".join(r["palabras_clave"]))} <small>{refs({"fuentes": r["fuentes_debate"]})}</small></p>'
-        return f'<div class="mtile mtile-{r["tipo"]}"><div class="tl">{e(r["titulo"])}</div>{e(r["texto"])} <small>{refs(r)}</small>{debate}</div>'
-    def tiles(title, rows):
-        return '<section><h2>'+e(title)+'</h2><div class="mosaico-tiles">'+''.join(map(tile, rows))+'</div></section>'
-    date = '/'.join(reversed(d['corte'].split('-')))
-    body = f'<header><div class="kicker">Comisión de Presupuesto · CABA</div><h1>Monitor LEG | Presupuesto 2027 en medios</h1><p class="meta">Repercusión de las rondas presupuestarias de la Ciudad en medios locales y nacionales: temas destacados, controversias y planteos por bloque.</p><div class="meta">Seguimiento de cobertura &nbsp;|&nbsp; <span class="corte">⏱ {date} ART</span></div></header>'
-    body += '<section class="panorama" aria-labelledby="panorama-titulo"><h2 id="panorama-titulo">Panorama del debate</h2><p class="section-note">Abrí cada bloque para explorar la situación y los próximos hitos.</p><div class="panorama-grid">'
-    actions = [('rondas','Ver rondas'),('proyectos','Ver proyectos'),('preguntas','Ver preguntas')]
-    assert len(d['panorama']) == len(actions)
-    for i, (r, (target, label)) in enumerate(zip(d['panorama'], actions)):
-        opened = ' open' if i == 0 else ''
-        body += f'<details{opened}><summary>{e(r["titulo"])}</summary><div class="panorama-content"><p>{e(r["texto"])}</p><small>{refs(r)}</small><a class="panorama-link" href="#{target}">{e(label)} →</a></div></details>'
-    body += '</div></section>'
-    body += '<div class="aviso">Próxima sesión ordinaria prevista: 29/10. Los dictámenes de comisión no equivalen a sanción legislativa. El cronograma anunciado de Línea F prevé adjudicación en diciembre e inicio de obras en 2027.</div><hr class="divider">'
-    body += tiles('Rondas ministeriales y sesiones informativas', d['rondas']).replace('<section>', '<section id="rondas">', 1)
-    body += '<hr class="divider"><section id="proyectos"><h2>Proyectos prioritarios</h2><div style="overflow-x:auto"><table><thead><tr><th>#</th><th>Tema</th><th>Estado parlamentario</th><th>Est.</th></tr></thead><tbody>'
-    for r in d['preguntas']:
-        body += f'<tr><td data-label="#">{e(r["id"])}</td><td data-label="Tema">{e(r["titulo"])}</td><td data-label="Estado">{e(r["texto"])} {refs(r)}</td><td data-label="Indicador">{e(r["simbolo"])}</td></tr>'
-    body += '</tbody></table></div></section><hr class="divider"><section id="preguntas"><h2>Preguntas y reclamos por bloque</h2><p class="section-note">Síntesis de intervenciones y posiciones públicas; no son citas textuales ni implican falta de respuesta.</p><div class="filtros">'
-    for key, label in [('todos','Todos'),('LLA','🔴 LLA'),('FxBA','🔵 FxBA'),('CD','🟢 CD'),('FIT','FIT/PO')]:
-        active = ' class="activo"' if key == 'todos' else ''
-        body += f'<button{active} onclick="filtrar(\'{key}\',this)">{label}</button>'
-    body += '</div><div style="overflow-x:auto"><table id="tabla-bloques"><thead><tr><th>Bloque</th><th>Actor</th><th>Tema</th><th>Pregunta / reclamo</th><th>Fecha</th><th>Fuente</th></tr></thead><tbody>'
-    for r in d['preguntas_bloques']:
-        badge = {'LLA':'lla','FxBA':'fxba','CD':'cd'}.get(r['filtro'])
-        label = e(r['filtro'])
-        if badge: label = f'<span class="badge-{badge}">{label}</span>'
-        fecha = '/'.join(reversed(r['fecha'].split('-')[1:]))
-        if r['fuentes'] == ['fxba']: fecha += ' · consulta'
-        if r['fuentes'] == ['docentes_prensa']: fecha += ' · cobertura'
-        body += f'<tr data-bloque="{e(r["filtro"])}"><td data-label="Bloque">{label}</td><td data-label="Actor">{e(r["actor"])}</td><td data-label="Tema">{e(r["tema"])}</td><td data-label="Planteo">{e(r["texto"])}</td><td data-label="Fecha">{fecha}</td><td data-label="Fuente">{refs(r)}</td></tr>'
-    banks = ' · '.join(f'{e(r["filtro"])} {r["bancas"]}' for r in d['bloques'])
-    body += f'</tbody></table></div><div class="bank-note">Bancas: {banks}. Total: 60. {refs(d["bloques"][0])}. No determina el voto de cada proyecto.</div></section><hr class="divider"><div class="mosaico-par">'
-    body += tiles('Temas transversales', d['temas']) + tiles('Anuncios y antecedentes oficiales', d['declaraciones'])
-    body += '</div><hr class="divider"><div class="mosaico-par">'
-    body += tiles('Puntos de seguimiento', d['seguimiento']) + tiles('Agenda legislativa', d['agenda'])
-    body += f'</div><footer>Monitor LEG · CABA · {date} ART · Fuentes oficiales, actores y prensa identificadas en cada registro.</footer>'
-    # One content wrapper per cell keeps links and text together in mobile grids.
-    body = re.sub(r'(<td data-label="[^"]*">)(.*?)(</td>)', r'\1<div>\2</div>\3', body)
+    body = render_monitor(d)
     template = (ROOT / 'monitor_leg.template.html').read_text(encoding='utf-8')
     assert template.count('{{CONTENT}}') == 1
     css = template.split('<style>',1)[1].split('</style>',1)[0]
