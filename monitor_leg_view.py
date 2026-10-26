@@ -27,7 +27,7 @@ def render_monitor(d):
 
     body = f'<header><div class="kicker">Presupuesto CABA 2027 · Seguimiento legislativo y de medios</div><h1>Monitor LEG | Presupuesto 2027 en medios</h1><p class="meta">Repercusión de las rondas presupuestarias de la Ciudad en medios locales y nacionales: temas destacados, controversias y planteos por bloque.</p><div class="meta">Corte de información: <span class="corte">⏱ {date} ART</span></div></header>'
     body += '<div class="aviso-top">Sesión ordinaria prevista: <strong>29/10</strong>. Los dictámenes no equivalen a sanción. Línea F: adjudicación anunciada para diciembre e inicio de obras previsto en 2027.</div>'
-    nav = [('conclusion','Conclusión ejecutiva'),('votos','Composición del recinto'),('controversiales','Temas y controversias'),('posiciones','Posiciones por bloque'),('seguimiento','Seguimiento'),('agenda','Agenda legislativa'),('rondas','Rondas ministeriales')]
+    nav = [('conclusion','Síntesis'),('votos','Bancas'),('controversiales','Debates'),('posiciones','Posiciones'),('seguimiento','Seguimiento'),('agenda','Agenda'),('rondas','Rondas')]
     body += '<nav class="nav-interna" aria-label="Secciones del monitor">'+''.join(f'<a href="#{anchor}">{i} {e(label)}</a>' for i,(anchor,label) in enumerate(nav,1))+'</nav>'
 
     conclusion = tile('Síntesis del debate · '+date+' · Social Listening GA', 'Impuestos, gasto público, vivienda, educación y seguridad concentran los planteos relevados. La cobertura reúne preguntas y posiciones atribuidas a sus fuentes.', 'red', d['panorama'][0])
