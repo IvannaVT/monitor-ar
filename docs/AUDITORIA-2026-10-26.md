@@ -1,5 +1,7 @@
 # Monitor LEG: auditoría parcial al 26/10/2026 (ART)
 
+> Registro histórico de la primera tanda. La preparación posterior para publicación reemplaza los antecedentes sin respaldo accesible por hechos cotejados, elimina menciones públicas de auditoría e implementa el generador y el workflow descritos en `../PUBLICACION.md`. Las observaciones siguientes conservan el diagnóstico previo y sus pendientes; no describen por sí solas la versión pública final.
+
 ## Alcance y publicación
 
 Primera tanda para revisión; no certifica el resto del monitor. No mezclar automáticamente.
