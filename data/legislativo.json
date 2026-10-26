@@ -5,8 +5,8 @@
     "estado": "aprobado",
     "fecha": "2026-10-26",
     "responsable": "Codex · revisión de fuentes públicas y atribuciones documentada en REVISION_PREGUNTAS.md",
-    "css_sha256": "28b0df0146c80ef1c412b81c87e2589ba071665f0657af83c0ce8c0ec00e3991",
-    "contenido_sha256": "37c76f437411d468efe0fc04fcc7c3f588eb9f8f84643683a7f2799701dd0960"
+    "css_sha256": "a27c06f6376aaf9b1ceb70c1b4585f6d830148a2e58d15a731477cef6c180c55",
+    "contenido_sha256": "4a2030d321b0b2355fd85aa948653a7cf032d5e8b503e44a2fb88736e7b5a370"
   },
   "fuentes": {
     "bloques": {
@@ -728,6 +728,37 @@
       "clase": "Reclamo",
       "fuentes": [
         "docentes_prensa"
+      ],
+      "estado": "verificado"
+    }
+  ],
+  "panorama": [
+    {
+      "id": "PAN-01",
+      "titulo": "Dónde estamos",
+      "texto": "Impuestos, servicios, vivienda y seguridad atraviesan los planteos relevados. El monitor reúne su repercusión en medios y las posiciones por bloque.",
+      "fuentes": [
+        "hacienda_prensa",
+        "tagliaferri",
+        "po_seguridad"
+      ],
+      "estado": "verificado"
+    },
+    {
+      "id": "PAN-02",
+      "titulo": "Hacia dónde vamos",
+      "texto": "El debate avanza hacia el tratamiento legislativo. El foco está en los cambios a los proyectos y las respuestas del Ejecutivo, sin anticipar acuerdos ni votaciones.",
+      "fuentes": [
+        "agenda"
+      ],
+      "estado": "verificado"
+    },
+    {
+      "id": "PAN-03",
+      "titulo": "Próximos pasos",
+      "texto": "Seguir la sesión prevista para el 29/10, registrar novedades y contrastar las respuestas con las preguntas relevadas.",
+      "fuentes": [
+        "agenda"
       ],
       "estado": "verificado"
     }
