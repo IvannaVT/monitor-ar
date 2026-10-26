@@ -58,7 +58,7 @@ def build():
     def tiles(title, rows):
         return '<section><h2>'+e(title)+'</h2><div class="mosaico-tiles">'+''.join(map(tile, rows))+'</div></section>'
     date = '/'.join(reversed(d['corte'].split('-')))
-    body = f'<header><div class="kicker">Comisión de Presupuesto · CABA</div><h1>Presupuesto 2027 — Monitor LEG</h1><div class="meta">Seguimiento legislativo &nbsp;|&nbsp; <span class="corte">⏱ {date} ART</span></div></header>'
+    body = f'<header><div class="kicker">Comisión de Presupuesto · CABA</div><h1>Monitor LEG | Presupuesto 2027 en medios</h1><p class="meta">Repercusión de las rondas presupuestarias de la Ciudad en medios locales y nacionales: temas destacados, controversias y planteos por bloque.</p><div class="meta">Seguimiento de cobertura &nbsp;|&nbsp; <span class="corte">⏱ {date} ART</span></div></header>'
     body += '<div class="aviso">Próxima sesión ordinaria prevista: 29/10. Los dictámenes de comisión no equivalen a sanción legislativa. El cronograma anunciado de Línea F prevé adjudicación en diciembre e inicio de obras en 2027.</div><hr class="divider">'
     body += tiles('Rondas ministeriales y sesiones informativas', d['rondas'])
     body += '<hr class="divider"><section><h2>Proyectos prioritarios</h2><div style="overflow-x:auto"><table><thead><tr><th>#</th><th>Tema</th><th>Estado parlamentario</th><th>Est.</th></tr></thead><tbody>'
