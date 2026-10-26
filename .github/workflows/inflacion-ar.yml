@@ -1,0 +1,57 @@
+name: Monitor AR - extracción oficial de inflación
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 21 * * *'
+  push:
+    branches: [main]
+    paths: ['scripts/extract_inflacion.py', 'scripts/test_inflacion.py', 'tests/test_monitor_ar.py', 'data/indicadores.json', 'monitor_ar.html', 'index.html', '.github/workflows/inflacion-ar.yml']
+  pull_request:
+    paths: ['scripts/extract_inflacion.py', 'scripts/test_inflacion.py', 'tests/test_monitor_ar.py', 'data/indicadores.json', 'monitor_ar.html', 'index.html', '.github/workflows/inflacion-ar.yml']
+permissions:
+  contents: read
+  actions: read
+concurrency:
+  group: inflacion-ar-${{ github.ref }}
+  cancel-in-progress: false
+jobs:
+  extract:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install openpyxl==3.1.5
+      - name: Controles exclusivos de Monitor AR
+        run: |
+          python scripts/test_inflacion.py
+          python -m unittest discover -s tests -p test_monitor_ar.py
+      - name: Recuperar extracción válida anterior
+        if: github.event_name != 'pull_request'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          run_id=$(gh run list --workflow inflacion-ar.yml --branch main --status success --limit 1 --json databaseId --jq '.[0].databaseId // empty')
+          if [ -n "$run_id" ]; then
+            gh run download "$run_id" --name inflacion-oficial-ar --dir previous
+          fi
+      - name: Extraer fuentes oficiales
+        if: github.event_name != 'pull_request'
+        shell: bash
+        run: |
+          if [ -f previous/inflacion_oficial.json ]; then
+            python scripts/extract_inflacion.py --previous previous/inflacion_oficial.json
+          else
+            python scripts/extract_inflacion.py
+          fi
+      - name: Conservar dataset y originales para revisión
+        if: github.event_name != 'pull_request'
+        uses: actions/upload-artifact@v4
+        with:
+          name: inflacion-oficial-ar
+          path: artifacts/inflacion/
+          retention-days: 90
+          if-no-files-found: error
+
