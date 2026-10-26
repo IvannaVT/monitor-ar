@@ -6,7 +6,7 @@
     "fecha": "2026-10-26",
     "responsable": "Codex · revisión de fuentes públicas y atribuciones documentada en REVISION_PREGUNTAS.md",
     "css_sha256": "a27c06f6376aaf9b1ceb70c1b4585f6d830148a2e58d15a731477cef6c180c55",
-    "contenido_sha256": "a071a5406d160222d1f1afc80b839636cbe424e8f056ed5103ed4ce8e3b33497"
+    "contenido_sha256": "d803662ec51704af12672bfd4c6f922991de60d27427e1344a800db1729e93f5"
   },
   "fuentes": {
     "bloques": {
@@ -757,7 +757,7 @@
     },
     {
       "id": "PAN-03",
-      "titulo": "Próxima cita oficial",
+      "titulo": "Próximo encuentro oficial",
       "texto": "Sesión ordinaria prevista para el 29/10. Revisar convocatoria y temario oficial.",
       "fuentes": [
         "agenda"
