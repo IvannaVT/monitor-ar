@@ -73,10 +73,20 @@ section{margin-bottom:28px;min-width:0}
 .section-note,.bank-note{font-size:.875rem;color:#B2C4D8;margin:12px 0;line-height:1.6}
 [class^="badge-"]{font-size:.8rem;padding:3px 8px}
 footer{font-size:.85rem;line-height:1.6}
+.panorama-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;align-items:start}
+.panorama details{background:var(--surface);border:1px solid #344D6B;border-radius:8px;min-width:0;overflow-wrap:anywhere}
+.panorama summary{cursor:pointer;padding:16px;font-size:1rem;font-weight:700;color:#B9D6FF;min-height:56px}
+.panorama summary:hover{background:var(--accent-light)}
+.panorama summary:focus-visible{outline:3px solid #FFD482;outline-offset:3px;border-radius:8px}
+.panorama details[open] summary{border-bottom:1px solid #344D6B;color:var(--text)}
+.panorama-content{padding:16px;line-height:1.65}
+.panorama-content small{display:block;font-size:.85rem;margin-top:12px}
+.panorama-link{display:inline-flex;align-items:center;min-height:44px;margin-top:12px;font-weight:600}
+section[id]{scroll-margin-top:20px}
 @media(max-width:640px){
  body{padding:0 14px 40px}
  header{padding-top:24px}
- .mosaico-tiles,.mosaico-par{grid-template-columns:minmax(0,1fr)}
+ .mosaico-tiles,.mosaico-par,.panorama-grid{grid-template-columns:minmax(0,1fr)}
  .mtile{padding:16px}
  .filtros{gap:8px}
  table,tbody{display:block;width:100%}
