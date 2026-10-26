@@ -6,7 +6,7 @@
     "fecha": "2026-10-26",
     "responsable": "Codex · revisión de fuentes públicas y atribuciones documentada en REVISION_PREGUNTAS.md",
     "css_sha256": "a27c06f6376aaf9b1ceb70c1b4585f6d830148a2e58d15a731477cef6c180c55",
-    "contenido_sha256": "7528221a97e9ad97e24a21360a5282eb0e0067fc29ea48f708b9b810ce62d06d"
+    "contenido_sha256": "a071a5406d160222d1f1afc80b839636cbe424e8f056ed5103ed4ce8e3b33497"
   },
   "fuentes": {
     "bloques": {
@@ -735,7 +735,7 @@
   "panorama": [
     {
       "id": "PAN-01",
-      "titulo": "Dónde estamos",
+      "titulo": "Temas en debate",
       "texto": "IIBB · patentes · tarifas · vivienda · educación · seguridad.",
       "fuentes": [
         "hacienda_prensa",
@@ -747,7 +747,7 @@
     },
     {
       "id": "PAN-02",
-      "titulo": "Debate instalado en medios",
+      "titulo": "Cruces en medios",
       "texto": "Baja de impuestos ↔ recorte del gasto · endeudamiento ↔ ejecución de obras · operativos ↔ derecho a protesta.",
       "fuentes": [
         "hacienda_prensa",
@@ -757,8 +757,8 @@
     },
     {
       "id": "PAN-03",
-      "titulo": "Próximos pasos",
-      "texto": "Atención: sesión ordinaria prevista para el 29/10. Revisar convocatoria y temario oficial.",
+      "titulo": "Próxima cita oficial",
+      "texto": "Sesión ordinaria prevista para el 29/10. Revisar convocatoria y temario oficial.",
       "fuentes": [
         "agenda"
       ],
