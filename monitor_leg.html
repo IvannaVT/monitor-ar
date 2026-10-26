@@ -3,112 +3,418 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Monitor LEG | Presupuesto 2027 en medios</title>
+<title>Monitor LEG — Presupuesto CABA 2027</title>
 <style>
 :root {
   --bg:#071526;--surface:#0D1E35;--border:#162B48;--text:#E8F0FA;--muted:#8AAFC8;
   --accent:#5B9CF6;--accent-light:#0D2040;
-  --red:#F06070;--red-bg:#2A0D12;
-  --yellow:#F5A623;--yellow-bg:#2A1D08;
-  --green:#22C07A;--green-bg:#082516;
+  --red:#F06070;--red-bg:#2A0D12;--red-border:#5a1a20;
+  --yellow:#F5A623;--yellow-bg:#2A1D08;--yellow-border:#5a3a0a;
+  --green:#22C07A;--green-bg:#082516;--green-border:#0d4a2a;
   --grey:#8AAFC8;--grey-bg:#0D1E35;
+  --purple:#B97CF8;--purple-bg:#1A0D2E;--purple-border:#3d1a6a;
   color-scheme:dark;
 }
 *{box-sizing:border-box;margin:0;padding:0}
-body{background:var(--bg);color:var(--text);font-family:'Inter',system-ui,sans-serif;font-size:16px;line-height:1.65;padding:0 20px 60px}
-.wrap{max-width:960px;margin:0 auto}
-header{border-bottom:2px solid var(--accent);padding:18px 0 10px;margin-bottom:16px}
-header .kicker{font-family:'Arial',sans-serif;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:3px}
-header h1{font-size:clamp(1.4rem,3vw,2rem);line-height:1.25;color:var(--accent);margin:8px 0 12px;text-wrap:balance}
-header .meta{font-size:.95rem;color:#B2C4D8;margin-top:10px;max-width:75ch}
-.corte{display:inline-block;background:var(--yellow-bg);color:var(--yellow);border:1px solid #5a3a0a;border-radius:4px;padding:1px 6px;font-size:11px;font-family:'Arial',sans-serif;font-weight:600}
-.aviso{background:var(--yellow-bg);border-left:4px solid var(--yellow);padding:6px 10px;border-radius:0 5px 5px 0;margin:8px 0 16px;font-family:'Arial',sans-serif;font-size:11.5px;color:var(--yellow)}
-section{margin-bottom:20px}
-h2{font-family:'Arial',sans-serif;font-size:.85rem;font-weight:700;color:var(--accent);border-bottom:1px solid var(--border);padding-bottom:4px;margin-bottom:10px;text-transform:uppercase;letter-spacing:.02em}
-table{width:100%;border-collapse:collapse;font-size:.95rem;margin-bottom:16px}
-th{background:#0D2040;color:var(--accent);font-family:inherit;font-size:.72rem;padding:6px 8px;text-align:left;border-bottom:1px solid var(--border)}
-td{border-bottom:1px solid var(--border);padding:12px 10px;vertical-align:top;overflow-wrap:anywhere}
-tr:nth-child(even) td{background:var(--surface)}
-tr[hidden]{display:none}
-.filtros{display:flex;gap:5px;flex-wrap:wrap;margin-bottom:10px}
-.filtros button{font:inherit;font-size:.9rem;font-weight:700;min-height:44px;padding:8px 16px;border-radius:24px;border:1px solid #344D6B;background:var(--surface);color:#B2C4D8;cursor:pointer;transition:all .15s}
-.filtros button:hover{border-color:var(--accent);color:var(--accent)}
-.filtros button.activo{background:var(--accent);color:#071526;border-color:var(--accent)}
-.tag{display:inline-block;font-family:'Arial',sans-serif;font-size:.62rem;font-weight:700;padding:1px 4px;border-radius:8px;white-space:nowrap;margin-right:2px}
-.tag-cond{background:var(--red-bg);color:var(--red)}
-.tag-preg{background:var(--accent-light);color:var(--accent)}
-.tag-cuest{background:var(--yellow-bg);color:var(--yellow)}
-.tag-decl{background:var(--grey-bg);color:var(--grey)}
-.badge-lla{display:inline-block;background:#2A0D12;color:var(--red);border:1px solid #5a1a20;font-family:'Arial',sans-serif;font-size:.62rem;font-weight:700;padding:1px 5px;border-radius:10px}
-.badge-fxba{display:inline-block;background:var(--accent-light);color:var(--accent);border:1px solid #1a3a6a;font-family:'Arial',sans-serif;font-size:.62rem;font-weight:700;padding:1px 5px;border-radius:10px}
-.badge-cd{display:inline-block;background:var(--green-bg);color:var(--green);border:1px solid #0d4a2a;font-family:'Arial',sans-serif;font-size:.62rem;font-weight:700;padding:1px 5px;border-radius:10px}
-.mosaico-par{display:grid;grid-template-columns:1fr 1fr;gap:18px;align-items:start}
-@media(max-width:640px){.mosaico-par{grid-template-columns:1fr}}
-.mosaico-tiles{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:12px;align-items:stretch}
-.mtile{background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:16px;font-size:1rem;line-height:1.6;min-width:0;overflow-wrap:anywhere}
+body{background:var(--bg);color:var(--text);font-family:'Inter',system-ui,sans-serif;font-size:15px;line-height:1.55;padding:0 16px 80px}
+.wrap{max-width:980px;margin:0 auto}
+header{border-bottom:2px solid var(--accent);padding:18px 0 10px;margin-bottom:14px}
+header .kicker{font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:3px}
+header h1{font-size:1.3rem;color:var(--accent);font-weight:700}
+header .meta{font-size:11px;color:var(--muted);margin-top:4px}
+.corte{display:inline-block;background:var(--yellow-bg);color:var(--yellow);border:1px solid var(--yellow-border);border-radius:4px;padding:1px 7px;font-size:11px;font-weight:700}
+.aviso-top{background:var(--yellow-bg);border-left:4px solid var(--yellow);padding:7px 12px;border-radius:0 5px 5px 0;margin:8px 0 14px;font-size:11.5px;color:var(--yellow)}
+.nav-interna{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:18px;padding:10px 0;border-bottom:1px dashed var(--border)}
+.nav-interna a{font-size:.75rem;font-weight:700;color:var(--accent);text-decoration:none;background:var(--accent-light);border:1px solid var(--border);border-radius:20px;padding:3px 12px;transition:all .15s}
+.nav-interna a:hover{background:var(--accent);color:#071526}
+.sec-label{font-size:.7rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:3px}
+h2{font-size:.88rem;font-weight:700;color:var(--accent);border-bottom:1px solid var(--border);padding-bottom:5px;margin-bottom:12px;text-transform:uppercase;letter-spacing:.02em}
+section{margin-bottom:24px}
+.divider{border:none;border-top:1px dashed var(--border);margin:18px 0}
+.mosaico{display:grid;grid-template-columns:1fr 1fr;gap:5px}
+.mosaico-3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:5px}
+.mosaico-par{display:grid;grid-template-columns:1fr 1fr;gap:20px;align-items:start}
+@media(max-width:680px){.mosaico,.mosaico-par,.mosaico-3{grid-template-columns:1fr}}
+.mtile{background:var(--surface);border:1px solid var(--border);border-radius:5px;padding:8px 11px;font-size:.79rem;line-height:1.4}
 .mtile-red{border-left:3px solid var(--red);background:var(--red-bg)}
 .mtile-blue{border-left:3px solid var(--accent);background:var(--accent-light)}
 .mtile-yellow{border-left:3px solid var(--yellow);background:var(--yellow-bg)}
 .mtile-grey{border-left:3px solid var(--border);background:var(--grey-bg)}
 .mtile-green{border-left:3px solid var(--green);background:var(--green-bg)}
-.mtile .tl{font-size:1rem;font-weight:700;color:var(--red);margin-bottom:8px}
-.mtile-blue .tl{color:var(--accent)}
-.mtile-yellow .tl{color:var(--yellow)}
-.mtile-grey .tl{color:var(--muted)}
-.mtile-green .tl{color:var(--green)}
-.divider{border:none;border-top:1px dashed var(--border);margin:14px 0}
-.cifra{font-family:'Arial',sans-serif;font-size:.8rem;color:var(--accent)}
-footer{font-family:'Arial',sans-serif;font-size:10.5px;color:var(--muted);margin-top:24px;border-top:1px solid var(--border);padding-top:8px}
-a{color:#9FC5FF;text-decoration:underline;text-underline-offset:3px}
-a:hover{color:#C7DDFF}
-a:focus-visible,button:focus-visible{outline:3px solid #FFD482;outline-offset:4px}
-.mtile small{display:block;font-size:.85rem;margin-top:8px;color:#B2C4D8}
-.mtile p{margin-top:14px;padding-top:12px;border-top:1px solid #516078}
-.aviso{font-size:.9rem;line-height:1.6;padding:12px 16px;color:#FFD18A}
-.corte{font-size:.85rem;padding:3px 8px}
-h2{font-size:1rem;line-height:1.4;padding-bottom:10px;margin-bottom:16px}
-th{font-size:.85rem;padding:12px 10px;color:#9FC5FF}
-section{margin-bottom:28px;min-width:0}
-.mosaico-par{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:24px}
-.section-note,.bank-note{font-size:.875rem;color:#B2C4D8;margin:12px 0;line-height:1.6}
-[class^="badge-"]{font-size:.8rem;padding:3px 8px}
-footer{font-size:.85rem;line-height:1.6}
-.panorama-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;align-items:start}
-.panorama details{background:var(--surface);border:1px solid #344D6B;border-radius:8px;min-width:0;overflow-wrap:anywhere}
-.panorama summary{cursor:pointer;padding:16px;font-size:1rem;font-weight:700;color:#B9D6FF;min-height:56px}
-.panorama summary:hover{background:var(--accent-light)}
-.panorama summary:focus-visible{outline:3px solid #FFD482;outline-offset:3px;border-radius:8px}
-.panorama details[open] summary{border-bottom:1px solid #344D6B;color:var(--text)}
-.panorama-content{padding:16px;line-height:1.65}
-.panorama-content small{display:block;font-size:.85rem;margin-top:12px}
-.panorama-link{display:inline-flex;align-items:center;min-height:44px;margin-top:12px;font-weight:600}
-section[id]{scroll-margin-top:20px}
-@media(max-width:640px){
- body{padding:0 14px 40px}
- header{padding-top:24px}
- .mosaico-tiles,.mosaico-par,.panorama-grid{grid-template-columns:minmax(0,1fr)}
- .mtile{padding:16px}
- .filtros{gap:8px}
- table,tbody{display:block;width:100%}
- thead{position:absolute;width:1px;height:1px;padding:0;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
- tbody tr{display:block;border:1px solid #344D6B;border-radius:8px;margin-bottom:14px;background:var(--surface);padding:4px 14px}
- tbody td, tr:nth-child(even) td{display:grid;grid-template-columns:minmax(80px,30%) minmax(0,1fr);gap:12px;padding:10px 0;background:transparent;font-size:1rem}
- tbody td::before{content:attr(data-label);color:#B2C4D8;font-size:.85rem;font-weight:600}
- tbody td:last-child{border-bottom:0}
- tr[hidden]{display:none}
-}
+.mtile-purple{border-left:3px solid var(--purple);background:var(--purple-bg)}
+.tl{font-size:.65rem;font-weight:700;margin-bottom:2px}
+.mtile-red .tl{color:var(--red)}.mtile-blue .tl{color:var(--accent)}.mtile-yellow .tl{color:var(--yellow)}.mtile-grey .tl{color:var(--muted)}.mtile-green .tl{color:var(--green)}.mtile-purple .tl{color:var(--purple)}
+.span2{grid-column:span 2}.span3{grid-column:span 3}
+.kw{display:inline-block;background:#0D2040;color:var(--accent);border:1px solid var(--border);border-radius:3px;font-size:.68rem;font-weight:700;padding:1px 6px;margin:1px 2px 1px 0;white-space:nowrap}
+.kw-red{background:var(--red-bg);color:var(--red);border-color:var(--red-border)}
+.kw-yellow{background:var(--yellow-bg);color:var(--yellow);border-color:var(--yellow-border)}
+.kw-green{background:var(--green-bg);color:var(--green);border-color:var(--green-border)}
+.votos-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-bottom:10px}
+@media(max-width:580px){.votos-grid{grid-template-columns:1fr 1fr}}
+.voto-card{background:var(--surface);border-radius:6px;padding:10px 12px;text-align:center;border:1px solid var(--border)}
+.voto-card .bloc{font-size:.72rem;font-weight:700;margin-bottom:4px}
+.voto-card .num{font-size:1.5rem;font-weight:800;line-height:1}
+.voto-card .sub{font-size:.65rem;color:var(--muted);margin-top:2px}
+.voto-card .est{font-size:.75rem;margin-top:5px;font-weight:700}
+.vc-pro{border-top:3px solid #5B9CF6}.vc-pro .bloc{color:#5B9CF6}
+.vc-lla{border-top:3px solid var(--red)}.vc-lla .bloc{color:var(--red)}
+.vc-fxba{border-top:3px solid #22A0F8}.vc-fxba .bloc{color:#22A0F8}
+.vc-cd{border-top:3px solid var(--green)}.vc-cd .bloc{color:var(--green)}
+.quorum-bar{background:var(--surface);border:1px solid var(--border);border-radius:6px;padding:10px 14px;font-size:.82rem;margin-bottom:6px}
+.qb-row{display:flex;align-items:center;gap:10px;margin-bottom:4px}
+.qb-label{font-size:.72rem;color:var(--muted);width:160px;flex-shrink:0}
+.qb-fill{height:10px;border-radius:4px;background:linear-gradient(90deg,var(--green),#22c07a88)}
+.qb-num{font-size:.72rem;font-weight:700;color:var(--text);margin-left:4px}
+.cont-item{background:var(--surface);border:1px solid var(--border);border-radius:5px;padding:9px 12px;margin-bottom:5px;font-size:.82rem}
+.cont-item:hover{border-color:var(--accent)}
+.cont-header{display:flex;align-items:flex-start;gap:8px;margin-bottom:4px}
+.cont-num{font-size:.68rem;font-weight:800;color:var(--muted);width:36px;flex-shrink:0;padding-top:1px}
+.cont-titulo{font-weight:700;color:var(--text);font-size:.85rem}
+.cont-meta{display:flex;flex-wrap:wrap;gap:4px;margin-top:3px;margin-left:44px}
+.cont-body{margin-left:44px;font-size:.8rem;color:var(--muted);margin-top:3px;line-height:1.45}
+.resonancia{display:inline-block;font-size:.6rem;font-weight:800;padding:1px 5px;border-radius:10px;white-space:nowrap}
+.res-alta{background:var(--red-bg);color:var(--red);border:1px solid var(--red-border)}
+.res-media{background:var(--yellow-bg);color:var(--yellow);border:1px solid var(--yellow-border)}
+.res-int{background:var(--purple-bg);color:var(--purple);border:1px solid var(--purple-border)}
+.filtros{display:flex;gap:5px;flex-wrap:wrap;margin-bottom:10px}
+.filtros button{font-size:.73rem;font-weight:700;padding:3px 11px;border-radius:20px;border:1px solid var(--border);background:var(--surface);color:var(--muted);cursor:pointer;transition:all .15s}
+.filtros button:hover{border-color:var(--accent);color:var(--accent)}
+.filtros button.activo{background:var(--accent);color:#071526;border-color:var(--accent)}
+table{width:100%;border-collapse:collapse;font-size:.82rem;margin-bottom:10px}
+th{background:#0D2040;color:var(--accent);font-size:.72rem;padding:6px 8px;text-align:left;border-bottom:1px solid var(--border)}
+td{border-bottom:1px solid var(--border);padding:6px 8px;vertical-align:top}
+tr:nth-child(even) td{background:var(--surface)}
+tr[hidden]{display:none}
+.tag{display:inline-block;font-size:.6rem;font-weight:700;padding:1px 4px;border-radius:8px;white-space:nowrap;margin-right:2px}
+.tag-cond{background:var(--red-bg);color:var(--red)}.tag-preg{background:var(--accent-light);color:var(--accent)}.tag-cuest{background:var(--yellow-bg);color:var(--yellow)}.tag-decl{background:var(--grey-bg);color:var(--grey)}
+.badge-pro{display:inline-block;background:#0D2040;color:#5B9CF6;border:1px solid #1a3a6a;font-size:.6rem;font-weight:700;padding:1px 5px;border-radius:10px}
+.badge-lla{display:inline-block;background:var(--red-bg);color:var(--red);border:1px solid var(--red-border);font-size:.6rem;font-weight:700;padding:1px 5px;border-radius:10px}
+.badge-fxba{display:inline-block;background:var(--accent-light);color:var(--accent);border:1px solid #1a3a6a;font-size:.6rem;font-weight:700;padding:1px 5px;border-radius:10px}
+.badge-cd{display:inline-block;background:var(--green-bg);color:var(--green);border:1px solid var(--green-border);font-size:.6rem;font-weight:700;padding:1px 5px;border-radius:10px}
+.flag-media{font-size:.6rem;background:#2A1a28;color:#E87CF6;border:1px solid #5a2a6a;border-radius:3px;padding:0 4px;margin-left:3px;font-weight:700}
+.pend-item{display:flex;gap:10px;align-items:flex-start;padding:7px 10px;border-radius:5px;margin-bottom:4px;border:1px solid var(--border);font-size:.8rem}
+.pend-ico{font-size:1rem;flex-shrink:0;line-height:1.4}
+.pend-body strong{font-size:.82rem;display:block;margin-bottom:1px}
+.pend-body span{color:var(--muted);font-size:.77rem}
+.pi-red{background:var(--red-bg);border-color:var(--red-border)}.pi-yellow{background:var(--yellow-bg);border-color:var(--yellow-border)}.pi-green{background:var(--green-bg);border-color:var(--green-border)}.pi-blue{background:var(--accent-light);border-color:#1a3a6a}
+.ag-item{display:flex;gap:12px;align-items:flex-start;padding:8px 10px;border-radius:5px;margin-bottom:5px;border:1px solid var(--border);background:var(--surface);font-size:.82rem}
+.ag-fecha{font-size:.72rem;font-weight:800;color:var(--accent);width:52px;flex-shrink:0;padding-top:1px}
+.ag-body strong{display:block;font-size:.83rem;margin-bottom:1px}
+.ag-body span{color:var(--muted);font-size:.77rem}
+.ag-prio{font-size:.6rem;font-weight:800;padding:1px 5px;border-radius:10px;margin-left:6px;white-space:nowrap}
+.prio-critica{background:var(--red-bg);color:var(--red);border:1px solid var(--red-border)}.prio-alta{background:var(--yellow-bg);color:var(--yellow);border:1px solid var(--yellow-border)}.prio-normal{background:var(--accent-light);color:var(--accent);border:1px solid #1a3a6a}
+.cifra{font-weight:700;color:var(--accent)}
+footer{font-size:10.5px;color:var(--muted);margin-top:28px;border-top:1px solid var(--border);padding-top:8px}
 </style>
 </head>
 <body>
 <div class="wrap">
-<header><div class="kicker">Comisión de Presupuesto · CABA</div><h1>Monitor LEG | Presupuesto 2027 en medios</h1><p class="meta">Repercusión de las rondas presupuestarias de la Ciudad en medios locales y nacionales: temas destacados, controversias y planteos por bloque.</p><div class="meta">Seguimiento de cobertura &nbsp;|&nbsp; <span class="corte">⏱ 26/10/2026 ART</span></div></header><section class="panorama" aria-labelledby="panorama-titulo"><h2 id="panorama-titulo">Panorama del debate</h2><p class="section-note">Abrí cada bloque para explorar la situación y los próximos hitos.</p><div class="panorama-grid"><details open><summary>Temas en debate</summary><div class="panorama-content"><p>IIBB · patentes · tarifas · vivienda · educación · seguridad.</p><small><a href="https://www.ambito.com/politica/presupuesto-2027-caba-lla-le-reclamo-mas-ajuste-al-pro-y-el-pj-insiste-una-baja-focalizada-iibb-n6331169">Ámbito · 7/10</a> · <a href="https://www.xn--presupuestoporteo-uxb.com.ar/">Análisis FxBA</a> · <a href="https://guadalupetagliaferri.com.ar/presupuesto-2027-tagliaferri-advirtio-que-el-propio-gobierno-porteno-preve-mas-pobreza-y-mas-gente-en-la-calle/">Tagliaferri · 16/10</a> · <a href="https://po.org.ar/comunicados/vanina-biasi-y-amanda-martin-interpelaron-al-ministro-de-seguridad-horacio-gimenez/">PO · 21/10</a></small><a class="panorama-link" href="#rondas">Ver rondas →</a></div></details><details><summary>Cruces en medios</summary><div class="panorama-content"><p>Baja de impuestos ↔ recorte del gasto · endeudamiento ↔ ejecución de obras · operativos ↔ derecho a protesta.</p><small><a href="https://www.ambito.com/politica/presupuesto-2027-caba-lla-le-reclamo-mas-ajuste-al-pro-y-el-pj-insiste-una-baja-focalizada-iibb-n6331169">Ámbito · 7/10</a> · <a href="https://po.org.ar/comunicados/vanina-biasi-y-amanda-martin-interpelaron-al-ministro-de-seguridad-horacio-gimenez/">PO · 21/10</a></small><a class="panorama-link" href="#proyectos">Ver proyectos →</a></div></details><details><summary>Próximo encuentro oficial</summary><div class="panorama-content"><p>Sesión ordinaria prevista para el 29/10. Revisar convocatoria y temario oficial.</p><small><a href="https://www.legislatura.gob.ar/posts/reunion-conjunta-de-la-comisiones-de-desarrollo-economico-y-de-presupuesto4126.html">Legislatura · 19/10</a></small><a class="panorama-link" href="#preguntas">Ver preguntas →</a></div></details></div></section><div class="aviso">Próxima sesión ordinaria prevista: 29/10. Los dictámenes de comisión no equivalen a sanción legislativa. El cronograma anunciado de Línea F prevé adjudicación en diciembre e inicio de obras en 2027.</div><hr class="divider"><section id="rondas"><h2>Rondas ministeriales y sesiones informativas</h2><div class="mosaico-tiles"><div class="mtile mtile-yellow"><div class="tl">Arengo · 7/10</div>Hacienda: apertura del debate del Presupuesto 2027. <small><a href="https://www.ambito.com/politica/presupuesto-2027-caba-lla-le-reclamo-mas-ajuste-al-pro-y-el-pj-insiste-una-baja-focalizada-iibb-n6331169">Ámbito · 7/10</a></small><p><strong>En debate:</strong> IIBB · patentes · recorte del gasto <small><a href="https://www.ambito.com/politica/presupuesto-2027-caba-lla-le-reclamo-mas-ajuste-al-pro-y-el-pj-insiste-una-baja-focalizada-iibb-n6331169">Ámbito · 7/10</a></small></p></div><div class="mtile mtile-yellow"><div class="tl">Bereciartua · 13/10</div>Movilidad e Infraestructura: exposición del Presupuesto 2027, con proyectos para el subte, Línea F y movilidad. <small><a href="https://www.legislatura.gob.ar/posts/continuan-los-debates-en-torno-al-presupuesto-2027.html">Legislatura · 13/10</a></small><p><strong>Agenda al 26/10:</strong> tarifas · financiamiento · Línea F <small><a href="https://www.xn--presupuestoporteo-uxb.com.ar/">Análisis FxBA</a> · <a href="https://www.legislatura.gob.ar/posts/continuan-los-debates-en-torno-al-presupuesto-2027.html">Legislatura · 13/10</a></small></p></div><div class="mtile mtile-yellow"><div class="tl">Miguel · 15/10</div>Educación: presentación de los ejes del Presupuesto 2027. <small><a href="https://www.legislatura.gob.ar/posts/la-ministra-de-educacion-presento-los-ejes-principales-del-presupuesto-2027.html">Legislatura · 15/10</a></small><p><strong>Agenda al 26/10:</strong> sala de 3 · cierre de cursos · cargos docentes <small><a href="https://www.ambito.com/politica/presupuesto-2027-caba-lla-le-reclamo-mas-ajuste-al-pro-y-el-pj-insiste-una-baja-focalizada-iibb-n6331169">Ámbito · 7/10</a> · <a href="https://www.tiempoar.com.ar/ta_article/la-legislatura-indaga-sobre-el-despido-de-docentes-y-el-cierre-de-grados-en-escuelas-portenas/">Tiempo · 22/10</a></small></p></div><div class="mtile mtile-yellow"><div class="tl">Mraida · 16/10</div>Desarrollo Humano y Hábitat: exposición sobre políticas sociales, primera infancia y vivienda. <small><a href="https://www.legislatura.gob.ar/posts/el-ministro-de-desarrollo-humano-y-habitat-gabriel-mraida-presento-el-presupuesto-2027.html">Legislatura · 16/10</a></small><p><strong>En debate:</strong> urbanización · situación de calle · CPI · El Niño <small><a href="https://guadalupetagliaferri.com.ar/presupuesto-2027-tagliaferri-advirtio-que-el-propio-gobierno-porteno-preve-mas-pobreza-y-mas-gente-en-la-calle/">Tagliaferri · 16/10</a></small></p></div><div class="mtile mtile-yellow"><div class="tl">Giménez · 21/10</div>Seguridad: exposición ante la Comisión de Presupuesto. <small><a href="https://www.noticiasurbanas.com.ar/gimenez-presento-el-presupuesto-2027-para-seguridad">NU · 22/10</a> · <a href="https://po.org.ar/comunicados/vanina-biasi-y-amanda-martin-interpelaron-al-ministro-de-seguridad-horacio-gimenez/">PO · 21/10</a></small><p><strong>En debate:</strong> operativos · protesta · publicidad <small><a href="https://po.org.ar/comunicados/vanina-biasi-y-amanda-martin-interpelaron-al-ministro-de-seguridad-horacio-gimenez/">PO · 21/10</a></small></p></div><div class="mtile mtile-yellow"><div class="tl">Quirós · 23/10</div>Salud: presentación del Presupuesto 2027 ante la Comisión de Presupuesto. <small><a href="https://www.legislatura.gob.ar/posts/quiros-presento-el-presupuesto-2027-de-salud-ante-la-comision-de-presupuesto.html">Legislatura · 23/10</a></small><p><strong>Agenda al 26/10:</strong> partida real · prioridades de gasto <small><a href="https://www.xn--presupuestoporteo-uxb.com.ar/">Análisis FxBA</a></small></p></div><div class="mtile mtile-yellow"><div class="tl">Comisión · 8/10</div>Debate con funcionarios del Ejecutivo sobre emergencia climática, financiamiento ferroviario y bono proveedores. <small><a href="https://www.legislatura.gob.ar/posts/presupuesto-debatio-deuda-transporte-y-emergencia-climatica.html">Legislatura · 8/10</a></small><p><strong>En debate:</strong> bono proveedores · intereses · deuda <small><a href="https://www.ambito.com/economia/caba-busca-emitir-un-bono-cancelar-deuda-proveedores-la-caida-la-recaudacion-n6331758">Ámbito · 9/10</a></small></p></div><div class="mtile mtile-yellow"><div class="tl">Comisiones · 19/10</div>Tratamiento de libertad comercial, bono proveedores y emergencia hídrica con vistas a la sesión prevista para el 29/10. <small><a href="https://www.legislatura.gob.ar/posts/reunion-conjunta-de-la-comisiones-de-desarrollo-economico-y-de-presupuesto4126.html">Legislatura · 19/10</a></small><p><strong>En debate:</strong> bono proveedores · emergencia hídrica · libertad comercial <small><a href="https://www.legislatura.gob.ar/posts/reunion-conjunta-de-la-comisiones-de-desarrollo-economico-y-de-presupuesto4126.html">Legislatura · 19/10</a></small></p></div></div></section><hr class="divider"><section id="proyectos"><h2>Proyectos prioritarios</h2><div style="overflow-x:auto"><table><thead><tr><th>#</th><th>Tema</th><th>Estado parlamentario</th><th>Est.</th></tr></thead><tbody><tr><td data-label="#"><div>P-01</div></td><td data-label="Tema"><div>Emergencia hídrica</div></td><td data-label="Estado"><div>Dictamen de mayoría del 19/10. Despacho 754/2026. Vencimiento de observaciones: 28/10 a las 14:00. <a href="https://parlamentaria.legislatura.gob.ar/pages/expediente.aspx?id=142697">Exp. 3085-J-2026</a></div></td><td data-label="Indicador"><div>🟢</div></td></tr><tr><td data-label="#"><div>P-02</div></td><td data-label="Tema"><div>Belgrano Sur</div></td><td data-label="Estado"><div>Proyecto de financiamiento tratado en comisión el 8/10. Propone completar la conexión ferroviaria con Constitución. <a href="https://www.legislatura.gob.ar/posts/presupuesto-debatio-deuda-transporte-y-emergencia-climatica.html">Legislatura · 8/10</a></div></td><td data-label="Indicador"><div>🟡</div></td></tr><tr><td data-label="#"><div>P-03</div></td><td data-label="Tema"><div>Bono proveedores</div></td><td data-label="Estado"><div>Dictamen de mayoría del 19/10. Despacho 753/2026. Vencimiento de observaciones: 28/10 a las 14:00. <a href="https://parlamentaria.legislatura.gob.ar/pages/expediente.aspx?id=142694">Exp. 3082-J-2026</a></div></td><td data-label="Indicador"><div>🟢</div></td></tr></tbody></table></div></section><hr class="divider"><section id="preguntas"><h2>Preguntas y reclamos por bloque</h2><p class="section-note">Síntesis de intervenciones y posiciones públicas; no son citas textuales ni implican falta de respuesta.</p><div class="filtros"><button class="activo" onclick="filtrar('todos',this)">Todos</button><button onclick="filtrar('LLA',this)">🔴 LLA</button><button onclick="filtrar('FxBA',this)">🔵 FxBA</button><button onclick="filtrar('CD',this)">🟢 CD</button><button onclick="filtrar('FIT',this)">FIT/PO</button></div><div style="overflow-x:auto"><table id="tabla-bloques"><thead><tr><th>Bloque</th><th>Actor</th><th>Tema</th><th>Pregunta / reclamo</th><th>Fecha</th><th>Fuente</th></tr></thead><tbody><tr data-bloque="LLA"><td data-label="Bloque"><div><span class="badge-lla">LLA</span></div></td><td data-label="Actor"><div>N. Pakgojz</div></td><td data-label="Tema"><div>Gasto</div></td><td data-label="Planteo"><div>Vincular bajas impositivas con recorte del gasto.</div></td><td data-label="Fecha"><div>07/10</div></td><td data-label="Fuente"><div><a href="https://www.ambito.com/politica/presupuesto-2027-caba-lla-le-reclamo-mas-ajuste-al-pro-y-el-pj-insiste-una-baja-focalizada-iibb-n6331169">Ámbito · 7/10</a></div></td></tr><tr data-bloque="LLA"><td data-label="Bloque"><div><span class="badge-lla">LLA</span></div></td><td data-label="Actor"><div>N. Pakgojz</div></td><td data-label="Tema"><div>Estado</div></td><td data-label="Planteo"><div>Reducir estructuras y concesionar el Autódromo.</div></td><td data-label="Fecha"><div>07/10</div></td><td data-label="Fuente"><div><a href="https://www.ambito.com/politica/presupuesto-2027-caba-lla-le-reclamo-mas-ajuste-al-pro-y-el-pj-insiste-una-baja-focalizada-iibb-n6331169">Ámbito · 7/10</a></div></td></tr><tr data-bloque="FxBA"><td data-label="Bloque"><div><span class="badge-fxba">FxBA</span></div></td><td data-label="Actor"><div>C. Neira</div></td><td data-label="Tema"><div>IIBB</div></td><td data-label="Planteo"><div>Eximir a monotributistas y gastronómicos.</div></td><td data-label="Fecha"><div>07/10</div></td><td data-label="Fuente"><div><a href="https://www.ambito.com/politica/presupuesto-2027-caba-lla-le-reclamo-mas-ajuste-al-pro-y-el-pj-insiste-una-baja-focalizada-iibb-n6331169">Ámbito · 7/10</a></div></td></tr><tr data-bloque="FxBA"><td data-label="Bloque"><div><span class="badge-fxba">FxBA</span></div></td><td data-label="Actor"><div>C. Neira</div></td><td data-label="Tema"><div>Bono</div></td><td data-label="Planteo"><div>¿Qué proveedores, montos y antigüedad abarca?</div></td><td data-label="Fecha"><div>08/10</div></td><td data-label="Fuente"><div><a href="https://www.ambito.com/economia/caba-busca-emitir-un-bono-cancelar-deuda-proveedores-la-caida-la-recaudacion-n6331758">Ámbito · 9/10</a></div></td></tr><tr data-bloque="FxBA"><td data-label="Bloque"><div><span class="badge-fxba">FxBA</span></div></td><td data-label="Actor"><div>Bloque</div></td><td data-label="Tema"><div>Salud / educación</div></td><td data-label="Planteo"><div>Cuestiona las partidas en términos reales.</div></td><td data-label="Fecha"><div>26/10 · consulta</div></td><td data-label="Fuente"><div><a href="https://www.xn--presupuestoporteo-uxb.com.ar/">Análisis FxBA</a></div></td></tr><tr data-bloque="FxBA"><td data-label="Bloque"><div><span class="badge-fxba">FxBA</span></div></td><td data-label="Actor"><div>Bloque</div></td><td data-label="Tema"><div>Transporte</div></td><td data-label="Planteo"><div>Cuestiona las prioridades de inversión y las tarifas.</div></td><td data-label="Fecha"><div>26/10 · consulta</div></td><td data-label="Fuente"><div><a href="https://www.xn--presupuestoporteo-uxb.com.ar/">Análisis FxBA</a></div></td></tr><tr data-bloque="CD"><td data-label="Bloque"><div><span class="badge-cd">CD</span></div></td><td data-label="Actor"><div>S. Nagata</div></td><td data-label="Tema"><div>Patentes</div></td><td data-label="Planteo"><div>¿Cuál es el costo fiscal y cómo se financia?</div></td><td data-label="Fecha"><div>07/10</div></td><td data-label="Fuente"><div><a href="https://www.ambito.com/politica/presupuesto-2027-caba-lla-le-reclamo-mas-ajuste-al-pro-y-el-pj-insiste-una-baja-focalizada-iibb-n6331169">Ámbito · 7/10</a></div></td></tr><tr data-bloque="CD"><td data-label="Bloque"><div><span class="badge-cd">CD</span></div></td><td data-label="Actor"><div>S. Nagata</div></td><td data-label="Tema"><div>Bono</div></td><td data-label="Planteo"><div>¿Será voluntario o compulsivo?</div></td><td data-label="Fecha"><div>08/10</div></td><td data-label="Fuente"><div><a href="https://www.ambito.com/economia/caba-busca-emitir-un-bono-cancelar-deuda-proveedores-la-caida-la-recaudacion-n6331758">Ámbito · 9/10</a></div></td></tr><tr data-bloque="CD"><td data-label="Bloque"><div><span class="badge-cd">CD</span></div></td><td data-label="Actor"><div>G. Tagliaferri</div></td><td data-label="Tema"><div>Obras hídricas</div></td><td data-label="Planteo"><div>¿Qué obras justifican nuevo endeudamiento?</div></td><td data-label="Fecha"><div>07/10</div></td><td data-label="Fuente"><div><a href="https://www.ambito.com/politica/presupuesto-2027-caba-lla-le-reclamo-mas-ajuste-al-pro-y-el-pj-insiste-una-baja-focalizada-iibb-n6331169">Ámbito · 7/10</a></div></td></tr><tr data-bloque="CD"><td data-label="Bloque"><div><span class="badge-cd">CD</span></div></td><td data-label="Actor"><div>G. Tagliaferri</div></td><td data-label="Tema"><div>Vivienda</div></td><td data-label="Planteo"><div>Reclama fondos para urbanización.</div></td><td data-label="Fecha"><div>16/10</div></td><td data-label="Fuente"><div><a href="https://guadalupetagliaferri.com.ar/presupuesto-2027-tagliaferri-advirtio-que-el-propio-gobierno-porteno-preve-mas-pobreza-y-mas-gente-en-la-calle/">Tagliaferri · 16/10</a></div></td></tr><tr data-bloque="CD"><td data-label="Bloque"><div><span class="badge-cd">CD</span></div></td><td data-label="Actor"><div>G. Tagliaferri</div></td><td data-label="Tema"><div>Primera infancia</div></td><td data-label="Planteo"><div>¿Cómo se garantiza jornada completa al pasar sala de 3?</div></td><td data-label="Fecha"><div>16/10</div></td><td data-label="Fuente"><div><a href="https://guadalupetagliaferri.com.ar/presupuesto-2027-tagliaferri-advirtio-que-el-propio-gobierno-porteno-preve-mas-pobreza-y-mas-gente-en-la-calle/">Tagliaferri · 16/10</a></div></td></tr><tr data-bloque="FIT"><td data-label="Bloque"><div>FIT</div></td><td data-label="Actor"><div>V. Biasi</div></td><td data-label="Tema"><div>Seguridad</div></td><td data-label="Planteo"><div>¿Cuánto cuestan operativos y publicidad?</div></td><td data-label="Fecha"><div>21/10</div></td><td data-label="Fuente"><div><a href="https://po.org.ar/comunicados/vanina-biasi-y-amanda-martin-interpelaron-al-ministro-de-seguridad-horacio-gimenez/">PO · 21/10</a></div></td></tr><tr data-bloque="FIT"><td data-label="Bloque"><div>FIT</div></td><td data-label="Actor"><div>A. Martín</div></td><td data-label="Tema"><div>Protesta</div></td><td data-label="Planteo"><div>Reclama garantías para el derecho a protestar.</div></td><td data-label="Fecha"><div>21/10</div></td><td data-label="Fuente"><div><a href="https://po.org.ar/comunicados/vanina-biasi-y-amanda-martin-interpelaron-al-ministro-de-seguridad-horacio-gimenez/">PO · 21/10</a></div></td></tr><tr data-bloque="FIT"><td data-label="Bloque"><div>FIT</div></td><td data-label="Actor"><div>A. Martín / V. Biasi</div></td><td data-label="Tema"><div>Educación</div></td><td data-label="Planteo"><div>Piden informar cierres de cursos e impacto docente.</div></td><td data-label="Fecha"><div>22/10 · cobertura</div></td><td data-label="Fuente"><div><a href="https://www.tiempoar.com.ar/ta_article/la-legislatura-indaga-sobre-el-despido-de-docentes-y-el-cierre-de-grados-en-escuelas-portenas/">Tiempo · 22/10</a></div></td></tr></tbody></table></div><div class="bank-note">Bancas: LLA 14 · FxBA 20 · CD 6 · VPM 12 · UCR 5 · FIT 2 · TRA 1. Total: 60. <a href="https://www.legislatura.gob.ar/seccion/bloques.html">Composición oficial</a>. No determina el voto de cada proyecto.</div></section><hr class="divider"><div class="mosaico-par"><section><h2>Temas transversales</h2><div class="mosaico-tiles"><div class="mtile mtile-blue"><div class="tl">Emergencia hídrica</div>El expediente aborda la emergencia hídrica y climática por el fenómeno El Niño. <small><a href="https://parlamentaria.legislatura.gob.ar/pages/expediente.aspx?id=142697">Exp. 3085-J-2026</a></small></div><div class="mtile mtile-blue"><div class="tl">Pago a proveedores</div>El proyecto trata la emisión de títulos de deuda pública para cancelar pagos a proveedores. <small><a href="https://parlamentaria.legislatura.gob.ar/pages/expediente.aspx?id=142694">Exp. 3082-J-2026</a></small></div><div class="mtile mtile-blue"><div class="tl">Infraestructura</div>La exposición ministerial incluyó movilidad y modernización del subte. <small><a href="https://www.legislatura.gob.ar/posts/continuan-los-debates-en-torno-al-presupuesto-2027.html">Legislatura · 13/10</a></small></div><div class="mtile mtile-blue"><div class="tl">Educación</div>La propuesta educativa se enmarca en el plan Buenos Aires Aprende. <small><a href="https://www.legislatura.gob.ar/posts/la-ministra-de-educacion-presento-los-ejes-principales-del-presupuesto-2027.html">Legislatura · 15/10</a></small></div></div></section><section><h2>Anuncios y antecedentes oficiales</h2><div class="mosaico-tiles"><div class="mtile mtile-grey"><div class="tl">Línea F · licitación</div>GCBA informó la presentación de dos consorcios con propuestas técnicas. <small><a href="https://buenosaires.gob.ar/gcaba_historico/noticias/linea-f-dos-consorcios-de-empresas-nacionales-e-internacionales-se">GCBA · Línea F</a></small></div><div class="mtile mtile-grey"><div class="tl">Línea F · cronograma anunciado</div>El anuncio oficial prevé adjudicar en diciembre de 2026 e iniciar las obras a principios de 2027. <small><a href="https://buenosaires.gob.ar/gcaba_historico/noticias/linea-f-dos-consorcios-de-empresas-nacionales-e-internacionales-se">GCBA · Línea F</a></small></div><div class="mtile mtile-grey"><div class="tl">Línea F · recorrido proyectado</div>El proyecto anunciado contempla 9,8 kilómetros y 12 estaciones entre Barracas y Palermo. <small><a href="https://buenosaires.gob.ar/gcaba_historico/noticias/linea-f-dos-consorcios-de-empresas-nacionales-e-internacionales-se">GCBA · Línea F</a></small></div><div class="mtile mtile-grey"><div class="tl">Salud · exposición</div>El comunicado oficial presenta los ejes de atención primaria, prevención y salud mental. <small><a href="https://www.legislatura.gob.ar/posts/quiros-presento-el-presupuesto-2027-de-salud-ante-la-comision-de-presupuesto.html">Legislatura · 23/10</a></small></div></div></section></div><hr class="divider"><div class="mosaico-par"><section><h2>Puntos de seguimiento</h2><div class="mosaico-tiles"><div class="mtile mtile-yellow"><div class="tl">Emergencia · observaciones</div>Próximo hito: vencimiento del plazo de observaciones indicado en el expediente. <small><a href="https://parlamentaria.legislatura.gob.ar/pages/expediente.aspx?id=142697">Exp. 3085-J-2026</a></small></div><div class="mtile mtile-yellow"><div class="tl">Bono · observaciones</div>Próximo hito: vencimiento del plazo de observaciones indicado en el expediente. <small><a href="https://parlamentaria.legislatura.gob.ar/pages/expediente.aspx?id=142694">Exp. 3082-J-2026</a></small></div><div class="mtile mtile-yellow"><div class="tl">Línea F · adjudicación</div>Seguir la evolución de la licitación respecto del cronograma anunciado para diciembre. <small><a href="https://buenosaires.gob.ar/gcaba_historico/noticias/linea-f-dos-consorcios-de-empresas-nacionales-e-internacionales-se">GCBA · Línea F</a></small></div><div class="mtile mtile-yellow"><div class="tl">Línea F · inicio previsto</div>El anuncio sitúa el inicio de las obras a principios de 2027. <small><a href="https://buenosaires.gob.ar/gcaba_historico/noticias/linea-f-dos-consorcios-de-empresas-nacionales-e-internacionales-se">GCBA · Línea F</a></small></div></div></section><section><h2>Agenda legislativa</h2><div class="mosaico-tiles"><div class="mtile mtile-blue"><div class="tl">Sesión ordinaria · 29/10</div>El comunicado legislativo del 19/10 menciona una sesión prevista para el jueves 29 de octubre. <small><a href="https://www.legislatura.gob.ar/posts/reunion-conjunta-de-la-comisiones-de-desarrollo-economico-y-de-presupuesto4126.html">Legislatura · 19/10</a></small></div><div class="mtile mtile-blue"><div class="tl">Libertad comercial</div>Las comisiones acordaron continuar trabajando en la redacción del proyecto para ampliar los acuerdos. <small><a href="https://www.legislatura.gob.ar/posts/reunion-conjunta-de-la-comisiones-de-desarrollo-economico-y-de-presupuesto4126.html">Legislatura · 19/10</a></small></div><div class="mtile mtile-green"><div class="tl">Dictamen · emergencia</div>El registro del expediente consigna dictamen de mayoría del 19/10. <small><a href="https://parlamentaria.legislatura.gob.ar/pages/expediente.aspx?id=142697">Exp. 3085-J-2026</a></small></div><div class="mtile mtile-green"><div class="tl">Dictamen · bono</div>El registro del expediente consigna dictamen de mayoría del 19/10. <small><a href="https://parlamentaria.legislatura.gob.ar/pages/expediente.aspx?id=142694">Exp. 3082-J-2026</a></small></div></div></section></div><footer>Monitor LEG · CABA · 26/10/2026 ART · Fuentes oficiales, actores y prensa identificadas en cada registro.</footer>
+
+<header>
+  <div class="kicker">Presupuesto CABA 2027 · Comisión · Uso interno — Ministro</div>
+  <h1>Monitor Legislativo — Estado al 29/10</h1>
+  <div class="meta">Rondas ministeriales: 7/10 · 8/10 · 13/10 · 14/10 · 16/10 · 19/10 · 23/10/2026 &nbsp;|&nbsp; <span class="corte">⏱ 26/10/2026 ART</span> &nbsp;|&nbsp; Plenario: <strong style="color:var(--yellow)">29/10/2026</strong></div>
+</header>
+
+<div class="aviso-top">⚠ Ronda ministerial cerrada al 23/10 (Quirós-Salud). Dictámenes P-01 ✅ y P-03 ✅ (firma cuádruple 19/10). Taquigrafías 7/10, 14/10, 16/10 y <strong>23/10 (Salud)</strong> pendientes de publicación.</div>
+
+<nav class="nav-interna">
+  <a href="#conclusion">① Conclusión ejecutiva</a>
+  <a href="#votos">② Mapa de votos</a>
+  <a href="#controversiales">③ Puntos controversiales</a>
+  <a href="#posiciones">④ Posiciones por bloque</a>
+  <a href="#seguimiento">⑤ Seguimiento semaforizado</a>
+  <a href="#agenda">⑥ Agenda legislativa</a>
+</nav>
+
+<section id="conclusion">
+<div class="sec-label">Sección 1</div>
+<h2>Conclusión ejecutiva — Qué levantan los medios · Convergencias y divergencias</h2>
+<div class="mosaico" style="margin-bottom:12px">
+  <div class="mtile mtile-red span2">
+    <div class="tl">DIAGNÓSTICO EN UNA LÍNEA · 26/10/2026</div>
+    El presupuesto tiene mayoría técnica para aprobarse el 29/10, pero el quórum de LLA está condicionado a una oferta ejecutiva concreta sobre <strong>ABL · IIBB · PASO</strong> que aún no llegó. Sin respuesta en 48h, el plenario se cae.
+  </div>
+</div>
+<div class="mosaico-3" style="margin-bottom:14px">
+  <div class="mtile mtile-red">
+    <div class="tl">🔴 KEYWORDS MEDIÁTICOS — CRÍTICA</div>
+    <span class="kw-red">vaciamiento IVC</span> <span class="kw-red">ficción Línea F</span> <span class="kw-red">hídrico –44%</span> <span class="kw-red">deuda gasto corriente</span> <span class="kw-red">subte –54%</span> <span class="kw-red">tarifa +2100%</span> <span class="kw-red">superávit artificial</span> <span class="kw-red">Sala de 3 sin partida</span> <span class="kw-red">Trambús colectivo</span>
+    <div style="margin-top:5px;font-size:.75rem;color:var(--muted)">Letra P · Parlamentario · Ámbito · Pura Ciudad · X (Barroetaveña, Iáñez, Bielli)</div>
+  </div>
+  <div class="mtile mtile-yellow">
+    <div class="tl">🟡 KEYWORDS — TENSIÓN NEGOCIADORA</div>
+    <span class="kw-yellow">ABL –10% insuficiente</span> <span class="kw-yellow">IIBB manufactura</span> <span class="kw-yellow">eliminar PASO $29.000M</span> <span class="kw-yellow">6 organismos</span> <span class="kw-yellow">publicidad oficial $60.000M</span> <span class="kw-yellow">patentes híbridos</span> <span class="kw-yellow">bono voluntario/compulsivo</span>
+    <div style="margin-top:5px;font-size:.75rem;color:var(--muted)">Parlamentario · Letra P · X (Ramírez, Pakgojz)</div>
+  </div>
+  <div class="mtile mtile-green">
+    <div class="tl">🟢 KEYWORDS — ACUERDOS LOGRADOS</div>
+    <span class="kw-green">dictamen cuádruple</span> <span class="kw-green">emergencia hídrica 6m</span> <span class="kw-green">bono TAMAR $600.000M</span> <span class="kw-green">Comisión Especial control</span> <span class="kw-green">plenario 29/10</span>
+    <div style="margin-top:5px;font-size:.75rem;color:var(--muted)">Legislatura CABA · Wolff · Neira · Pakgojz · Nagata</div>
+  </div>
+</div>
+<div class="mosaico">
+  <div class="mtile mtile-blue">
+    <div class="tl">CONVERGENCIA ENTRE BLOQUES — LLA + FxBA + CD</div>
+    <strong style="color:var(--text)">① Financiamiento de cada rebaja</strong> — los tres bloques exigen saber de dónde sale el costo fiscal.<br>
+    <strong style="color:var(--text)">② IIBB / alivio fiscal</strong> — LLA (tasa 0% servicios) y FxBA (exención monotributistas + gastronomía) convergen en dirección; difieren en alcance.<br>
+    <strong style="color:var(--text)">③ No aprobar deuda para gasto corriente</strong> — LLA-11 y CD-05 coinciden textualmente.<br>
+    <strong style="color:var(--text)">④ Hídrico –44% vs Emergencia</strong> — FxBA y CD señalan incoherencia de pedir facultades con partidas recortadas.
+  </div>
+  <div class="mtile mtile-purple">
+    <div class="tl">DIVERGENCIA — Sin acuerdo interbloque</div>
+    <strong style="color:var(--text)">① IVC / Vivienda</strong> — LLA quiere cierre; FxBA lo defiende (–51,5% acum.). Caso Adorni = munición activa.<br>
+    <strong style="color:var(--text)">② Línea F / Trambús</strong> — FxBA: ficción + incumplimiento Ley 670; GCBA: adjudicación diciembre. Km en disputa: 9,8 vs 10,9.<br>
+    <strong style="color:var(--text)">③ Privatizaciones SBASE / Autopistas</strong> — LLA-09 propone; sin posición GCBA.<br>
+    <strong style="color:var(--text)">④ Coherencia fiscal</strong> — cada bloque la interpreta distinto.
+  </div>
+</div>
+</section>
+
+<hr class="divider">
+
+<section id="votos">
+<div class="sec-label">Sección 2</div>
+<h2>Mapa de votos — Plenario 29/10</h2>
+<div class="votos-grid">
+  <div class="voto-card vc-pro">
+    <div class="bloc">PRO</div>
+    <div class="num" style="color:#5B9CF6">29</div>
+    <div class="sub">bancas · mayoría relativa · Wolff preside</div>
+    <div class="est">🟢 A FAVOR confirmado</div>
+  </div>
+  <div class="voto-card vc-lla">
+    <div class="bloc">LLA</div>
+    <div class="num" style="color:var(--red)">13</div>
+    <div class="sub">bancas · condiciona quórum</div>
+    <div class="est">🔴 CONDICIONADO — sin oferta ABL/IIBB/PASO</div>
+  </div>
+  <div class="voto-card vc-fxba">
+    <div class="bloc">FxBA / Peronismo</div>
+    <div class="num" style="color:#22A0F8">20</div>
+    <div class="sub">bancas · monitor propio</div>
+    <div class="est">🟡 ACOMPAÑAN — firmaron dictámenes</div>
+  </div>
+  <div class="voto-card vc-cd">
+    <div class="bloc">CD</div>
+    <div class="num" style="color:var(--green)">7</div>
+    <div class="sub">bancas · firmó dictámenes</div>
+    <div class="est">🟡 ACOMPAÑAN — CD-01/02/03 sin respuesta</div>
+  </div>
+</div>
+<div class="quorum-bar">
+  <div style="font-size:.75rem;font-weight:700;color:var(--muted);margin-bottom:8px">QUÓRUM Y MAYORÍAS — Legislatura CABA: 60 bancas totales</div>
+  <div class="qb-row"><span class="qb-label">Quórum (mayoría simple)</span><div style="flex:1;background:var(--border);border-radius:4px;height:10px"><div class="qb-fill" style="width:50%"></div></div><span class="qb-num">30 necesarias</span></div>
+  <div class="qb-row"><span class="qb-label">PRO + FxBA + CD (sin LLA)</span><div style="flex:1;background:var(--border);border-radius:4px;height:10px"><div class="qb-fill" style="width:93%"></div></div><span class="qb-num" style="color:var(--green)">56 ✅</span></div>
+  <div class="qb-row"><span class="qb-label">PRO + LLA</span><div style="flex:1;background:var(--border);border-radius:4px;height:10px"><div class="qb-fill" style="width:70%"></div></div><span class="qb-num" style="color:var(--yellow)">42 ✅</span></div>
+  <div style="font-size:.72rem;color:var(--muted);margin-top:8px;padding-top:6px;border-top:1px solid var(--border)">
+    ⚠ <strong style="color:var(--yellow)">Riesgo real:</strong> LLA podría ausentarse para romper quórum (no votar en contra, sino no asistir). PRO+FxBA+CD = 56 → hay quórum técnico sin LLA, pero la señal política sería negativa.
+  </div>
+</div>
+<div class="mosaico">
+  <div class="mtile mtile-green"><div class="tl">✅ P-01 — EMERGENCIA HÍDRICA · Dictamen 19/10</div>Firmaron: Wolff (PRO) · Neira (FxBA) · Pakgojz (LLA) · Nagata (CD). 6 meses prorrogable + Comisión Especial. AUSA puede derivar ingresos netos. <strong>Pendiente quórum plenario.</strong></div>
+  <div class="mtile mtile-green"><div class="tl">✅ P-03 — BONO PROVEEDORES · Dictamen 19/10</div>4 bloques. Hasta <span class="cifra">$600.000M</span>, tasa TAMAR sin margen, vto. 2029. <strong>Pendientes:</strong> voluntario/compulsivo · fecha de corte deuda flotante (Iáñez-FxBA).</div>
+  <div class="mtile mtile-yellow"><div class="tl">🟡 P-02 — BELGRANO SUR · En negociación</div>Deuda hasta <span class="cifra">USD 75M</span> vía CAF. 57% avance. Convenio Nación → ene. 2027. Secuencia en disputa: Diputados quieren convenio primero.</div>
+  <div class="mtile mtile-red"><div class="tl">⏳ PRESUPUESTO 2027 — Sin dictamen de mayoría</div>Requiere negociación sobre ABL · IIBB · patentes · IVC · organismos. <strong>Fecha límite constitucional: 15/12/2026.</strong></div>
+</div>
+</section>
+
+<hr class="divider">
+
+<section id="controversiales">
+<div class="sec-label">Sección 3</div>
+<h2>Puntos controversiales — Mayor resonancia mediática e interna &nbsp;<small style="font-size:.7rem;font-weight:400;color:var(--muted)">→ <a href="#posiciones" style="color:var(--accent)">posiciones completas ↓</a></small></h2>
+
+<div class="cont-item" style="border-left:3px solid var(--red)">
+  <div class="cont-header"><div class="cont-num">C-01</div><div><div class="cont-titulo">Hídrico –44% real vs. pedido de Emergencia Climática</div>
+  <div class="cont-meta"><span class="resonancia res-alta">RESONANCIA ALTA</span><span class="resonancia res-int">INTERNA ALTA</span><span class="kw-red">hídrico –44%</span><span class="flag-media">📡 Ámbito · La Nación · Pura Ciudad</span></div></div></div>
+  <div class="cont-body">FxBA (Iáñez, Mayra, Bielli) y CD señalaron en 13/10 que obras hídricas caen 44,1% real mientras el Ejecutivo pide facultades extraordinarias por emergencia. 4 legisladoras en la misma sesión. <strong>Canal: CEPA → medios aliados (48–72h).</strong> GCBA no respondió.<br><strong style="color:var(--yellow);display:block;margin-top:4px">Negociación clave:</strong> Si GCBA no aclara antes del 29/10, FxBA y CD pueden activar en plenario. → <a href="#posiciones" style="color:var(--accent)">FB-12 · FB-14 · CD-02</a></div>
+</div>
+
+<div class="cont-item" style="border-left:3px solid var(--red)">
+  <div class="cont-header"><div class="cont-num">C-02</div><div><div class="cont-titulo">ABL: LLA pide –10% nominal permanente — Arengo ofreció congelamiento</div>
+  <div class="cont-meta"><span class="resonancia res-alta">RESONANCIA ALTA</span><span class="resonancia res-int">INTERNA CRÍTICA</span><span class="kw-red">ABL –10% insuficiente</span><span class="flag-media">📡 Letra P · X-Ramírez</span></div></div></div>
+  <div class="cont-body">Ramírez (LLA) estableció como condición no negociable la baja del 10% nominal permanente. Arengo ofreció congelamiento + exención jubilados: insuficiente para LLA. <strong>Mayor riesgo de quórum. Ventana cierra 27/10.</strong><br><strong style="color:var(--yellow);display:block;margin-top:4px">Negociación clave:</strong> oferta diferenciada congelamiento vs. baja nominal. → <a href="#posiciones" style="color:var(--accent)">LLA-02</a></div>
+</div>
+
+<div class="cont-item" style="border-left:3px solid var(--red)">
+  <div class="cont-header"><div class="cont-num">C-03</div><div><div class="cont-titulo">IIBB: convergencia LLA + FxBA — sin respuesta articulada del Ejecutivo</div>
+  <div class="cont-meta"><span class="resonancia res-alta">RESONANCIA ALTA</span><span class="resonancia res-int">INTERNA ALTA</span><span class="kw-yellow">IIBB manufactura –25%</span><span class="kw-yellow">tasa 0% monotributistas</span><span class="flag-media">📡 Ámbito · Letra P</span></div></div></div>
+  <div class="cont-body">LLA: tasa 0% servicios + manufactura –25%. FxBA: exención monotributistas D–H + gastronomía 1er sem. 2027. Pedidos distintos, misma dirección. GCBA no respondió articuladamente. Costo fiscal no cuantificado públicamente.<br><strong style="color:var(--yellow);display:block;margin-top:4px">Negociación clave:</strong> propuesta única con espacio fiscal real. → <a href="#posiciones" style="color:var(--accent)">LLA-03 · FB-08 · FB-09 · CD-01</a></div>
+</div>
+
+<div class="cont-item" style="border-left:3px solid var(--yellow)">
+  <div class="cont-header"><div class="cont-num">C-04</div><div><div class="cont-titulo">IVC / Vivienda: "vaciamiento" vs. cierre — caso Adorni como munición</div>
+  <div class="cont-meta"><span class="resonancia res-alta">RESONANCIA ALTA</span><span class="resonancia res-int">INTERNA ALTA</span><span class="kw-red">vaciamiento IVC</span><span class="kw-yellow">–51,5% acum. desde 2023</span><span class="flag-media">📡 Letra P · Infobae · X-Barroetaveña</span></div></div></div>
+  <div class="cont-body">LLA propone cerrar el IVC (~$124.000M). FxBA lo defiende (–51,5% desde dic. 2023). Barroetaveña: familia Adorni recibió crédito del organismo que LLA quiere eliminar. Alta circulación X + rebote medios.<br><strong style="color:var(--yellow);display:block;margin-top:4px">Negociación clave:</strong> posición oficial GCBA sobre IVC antes del plenario. → <a href="#posiciones" style="color:var(--accent)">LLA-05 · FB-02 · FB-10</a></div>
+</div>
+
+<div class="cont-item" style="border-left:3px solid var(--yellow)">
+  <div class="cont-header"><div class="cont-num">C-05</div><div><div class="cont-titulo">Línea F / Trambús: "ficción" vs. adjudicación diciembre</div>
+  <div class="cont-meta"><span class="resonancia res-alta">RESONANCIA ALTA</span><span class="kw-red">ficción Línea F</span><span class="kw-red">Trambús colectivo</span><span class="flag-media">📡 Clarín · La Nación · X-Barroetaveña</span></div></div></div>
+  <div class="cont-body">Barroetaveña: Línea F = "ficción"; Trambús = "colectivo con ruedas tapadas" — frases de alta circulación X, rebotadas por medios nacionales. Ministro (13/10): adjudicación diciembre, T1 en un mes. Km en disputa: 9,8 vs 10,9. Neira exigió plazos en 14/10 sin respuesta de Bereciartua.<br><strong style="color:var(--yellow);display:block;margin-top:4px">Negociación clave:</strong> cronograma concreto Línea F antes del plenario. → <a href="#posiciones" style="color:var(--accent)">FB-05 · FB-11 · FB-14</a></div>
+</div>
+
+<div class="cont-item" style="border-left:3px solid var(--yellow)">
+  <div class="cont-header"><div class="cont-num">C-06</div><div><div class="cont-titulo">Bono proveedores: ¿voluntario o compulsivo? / ¿fecha de corte?</div>
+  <div class="cont-meta"><span class="resonancia res-media">RESONANCIA MEDIA</span><span class="resonancia res-int">INTERNA ALTA</span><span class="kw-yellow">bono voluntario/compulsivo</span><span class="flag-media">📡 Parlamentario · Ámbito</span></div></div></div>
+  <div class="cont-body">Dictamen cuádruple pero Iáñez (FxBA) exige: (1) adhesión voluntaria o compulsiva; (2) fecha de corte de deuda flotante. Sin respuesta = condición de último minuto en plenario.<br><strong style="color:var(--yellow);display:block;margin-top:4px">Negociación clave:</strong> respuesta técnica a Iáñez antes del 29/10. → <a href="#posiciones" style="color:var(--accent)">CD-05 · FB-06</a></div>
+</div>
+
+<div class="cont-item" style="border-left:3px solid var(--accent)">
+  <div class="cont-header"><div class="cont-num">C-07</div><div><div class="cont-titulo">Salud — Quirós 23/10: taquigrafía pendiente / canal Pharmabiz activo</div>
+  <div class="cont-meta"><span class="resonancia res-media">RESONANCIA MEDIA</span><span class="kw-yellow">Salud +18,2% nominal = caída real</span><span class="flag-media">📡 Pharmabiz · X-Salud</span></div></div></div>
+  <div class="cont-body">Última ronda ministerial. FxBA cuestionó que +18,2% nominal = caída real ~3%. Taquigrafía no publicada al 26/10. Canal X→Pharmabiz→prensa especializada (&lt;24h) activo.<br><strong style="color:var(--yellow);display:block;margin-top:4px">Acción urgente:</strong> verificar publicación en legislatura.gob.ar antes del 29/10. → <a href="#posiciones" style="color:var(--accent)">FB-06 · FB-15</a></div>
+</div>
+</section>
+
+<hr class="divider">
+
+<section id="posiciones">
+<div class="sec-label">Sección 4</div>
+<h2>Posiciones por bloque — Tabla completa &nbsp;<small style="font-size:.7rem;font-weight:400;color:var(--muted)">← <a href="#controversiales" style="color:var(--accent)">controversiales ↑</a></small></h2>
+<div class="filtros">
+  <button class="activo" onclick="filtrar('todos',this)">Todos</button>
+  <button onclick="filtrar('LLA',this)">🔴 LLA</button>
+  <button onclick="filtrar('FxBA',this)">🔵 FxBA</button>
+  <button onclick="filtrar('CD',this)">🟢 CD</button>
+  <button onclick="filtrar('media',this)">📡 Alta resonancia</button>
+</div>
+<div style="overflow-x:auto">
+<table id="tabla-bloques">
+<thead><tr><th>#</th><th>Bloque</th><th>Legislador/a</th><th>Área</th><th>Planteo</th><th>Resonancia</th><th>Est.</th></tr></thead>
+<tbody>
+<tr data-bloque="LLA" data-media="no"><td>LLA-01</td><td><span class="badge-lla">LLA</span></td><td>Ramírez</td><td>PASO</td><td><span class="tag tag-cond">COND</span> Eliminar PASO. Ahorro <span class="cifra">$29.000M</span> → baja impositiva.</td><td>—</td><td>⏳</td></tr>
+<tr data-bloque="LLA" data-media="si"><td>LLA-02</td><td><span class="badge-lla">LLA</span></td><td>Ramírez</td><td>ABL <span class="flag-media">📡 C-02</span></td><td><span class="tag tag-cond">COND</span> –10% nominal permanente. Arengo ofreció congelamiento: insuficiente. <strong>Principal riesgo de quórum.</strong></td><td><span class="resonancia res-alta">ALTA</span></td><td>⏳</td></tr>
+<tr data-bloque="LLA" data-media="si"><td>LLA-03</td><td><span class="badge-lla">LLA</span></td><td>Ramírez</td><td>IIBB <span class="flag-media">📡 C-03</span></td><td><span class="tag tag-cond">COND</span> Manufactura –25%; tasa 0% monotributistas servicios; ampliar tope comercio.</td><td><span class="resonancia res-alta">ALTA</span></td><td>⏳</td></tr>
+<tr data-bloque="LLA" data-media="no"><td>LLA-04</td><td><span class="badge-lla">LLA</span></td><td>Ramírez / Pakgojz</td><td>Patentes híbridos</td><td><span class="tag tag-cuest">CUEST</span> Exención híbridos y eléctricos. Sin respuesta GCBA.</td><td>—</td><td>⏳</td></tr>
+<tr data-bloque="LLA" data-media="si"><td>LLA-05</td><td><span class="badge-lla">LLA</span></td><td>Ramírez</td><td>6 organismos <span class="flag-media">📡 C-04</span></td><td><span class="tag tag-cond">COND</span> Eliminar: DG Mujer · DG Ec. Circular · DG Pol. Ambiental · Sec. Est. Estratégicos · Rel. Federales · IVC (~<span class="cifra">$124.000M</span>).</td><td><span class="resonancia res-alta">ALTA</span></td><td>⏳</td></tr>
+<tr data-bloque="LLA" data-media="no"><td>LLA-06</td><td><span class="badge-lla">LLA</span></td><td>Ramírez</td><td>Autódromo</td><td><span class="tag tag-cond">COND</span> Concesión privada. Eliminar subsecretaría.</td><td>—</td><td>⏳</td></tr>
+<tr data-bloque="LLA" data-media="no"><td>LLA-07</td><td><span class="badge-lla">LLA</span></td><td>Ramírez</td><td>Publicidad oficial</td><td><span class="tag tag-cond">COND</span> Recorte ><span class="cifra">$60.000M</span>.</td><td>—</td><td>⏳</td></tr>
+<tr data-bloque="LLA" data-media="no"><td>LLA-08</td><td><span class="badge-lla">LLA</span></td><td>Pakgojz</td><td>Sostenibilidad</td><td><span class="tag tag-preg">PREG</span> ¿Las bajas se financian con recorte o con deuda?</td><td>—</td><td>⏳</td></tr>
+<tr data-bloque="LLA" data-media="no"><td>LLA-09</td><td><span class="badge-lla">LLA</span></td><td>Arenaza</td><td>Privatizaciones</td><td><span class="tag tag-preg">PREG</span> ¿Prevé privatizar SBASE y Autopistas Urbanas?</td><td>—</td><td>⏳</td></tr>
+<tr data-bloque="LLA" data-media="no"><td>LLA-10</td><td><span class="badge-lla">LLA</span></td><td>Arenaza</td><td>Estructuras</td><td><span class="tag tag-preg">PREG</span> Secretarías duplicadas. CABA gasta en seguridad más que Madrid.</td><td>—</td><td>⏳</td></tr>
+<tr data-bloque="LLA" data-media="no"><td>LLA-11</td><td><span class="badge-lla">LLA</span></td><td>Arenaza</td><td>Deuda corriente</td><td><span class="tag tag-cond">COND</span> No aprobará deuda para financiar gasto corriente.</td><td>—</td><td>⏳</td></tr>
+<tr data-bloque="LLA" data-media="no"><td>LLA-12</td><td><span class="badge-lla">LLA</span></td><td>Ramírez</td><td>Agenda leg.</td><td><span class="tag tag-decl">DECL</span> Tratar antes de fin de año: Libertad Comercial + Silencio Positivo.</td><td>—</td><td>⏳</td></tr>
+<tr data-bloque="LLA" data-media="no"><td>LLA-13</td><td><span class="badge-lla">LLA</span></td><td>Bloque · 08/10</td><td>Emergencia hídrica</td><td><span class="tag tag-decl">DECL</span> Vocación de acompañar. "No vamos a volver si no trabajan en serio."</td><td>—</td><td>🟡</td></tr>
+<tr data-bloque="FxBA" data-media="no"><td>FB-01</td><td><span class="badge-fxba">FxBA</span></td><td>Bloque</td><td>Coherencia fiscal</td><td><span class="tag tag-cuest">CUEST</span> Superávit + suba de impuestos patrimoniales.</td><td>—</td><td>🟡</td></tr>
+<tr data-bloque="FxBA" data-media="si"><td>FB-02</td><td><span class="badge-fxba">FxBA</span></td><td>Bloque</td><td>IVC / Vivienda <span class="flag-media">📡 C-04</span></td><td><span class="tag tag-cuest">CUEST</span> "Vaciamiento". –17,2% real 2027; –51,5% acum. desde dic. 2023.</td><td><span class="resonancia res-alta">ALTA</span></td><td>🔴</td></tr>
+<tr data-bloque="FxBA" data-media="no"><td>FB-03</td><td><span class="badge-fxba">FxBA</span></td><td>Bloque</td><td>Empleo</td><td><span class="tag tag-cuest">CUEST</span> –104.000 empleos; 3.117 empresas cerradas desde nov. 2023. Partidas –12,3%.</td><td>—</td><td>🔴</td></tr>
+<tr data-bloque="FxBA" data-media="no"><td>FB-04</td><td><span class="badge-fxba">FxBA</span></td><td>Bloque</td><td>Deuda</td><td><span class="tag tag-cuest">CUEST</span> Intereses +70%. <span class="cifra">$592.000M</span> vs. ~<span class="cifra">$124.000M</span> IVC (4×).</td><td>—</td><td>🔴</td></tr>
+<tr data-bloque="FxBA" data-media="si"><td>FB-05</td><td><span class="badge-fxba">FxBA</span></td><td>Neira</td><td>Transporte / LF <span class="flag-media">📡 C-05</span></td><td><span class="tag tag-cuest">CUEST</span> Inversión –13,2% real. Sin plazos Línea F (14/10). Sin respuesta.</td><td><span class="resonancia res-alta">ALTA</span></td><td>🔴</td></tr>
+<tr data-bloque="FxBA" data-media="si"><td>FB-06</td><td><span class="badge-fxba">FxBA</span></td><td>Bloque</td><td>Salud <span class="flag-media">📡 C-07</span></td><td><span class="tag tag-cuest">CUEST</span> +18,2% nominal = caída real ~3%. Taquigrafía Quirós 23/10 pendiente.</td><td><span class="resonancia res-media">MEDIA</span></td><td>🔴</td></tr>
+<tr data-bloque="FxBA" data-media="si"><td>FB-15</td><td><span class="badge-fxba">FxBA</span></td><td>Bloque · 23/10</td><td>Salud Quirós <span class="flag-media">📡 C-07</span></td><td><span class="tag tag-cuest">CUEST</span> Cierre ronda. Preguntas individuales sin documentar. Canal X→Pharmabiz activo. <strong>Verificar urgente.</strong></td><td><span class="resonancia res-media">MEDIA</span></td><td>⏳</td></tr>
+<tr data-bloque="FxBA" data-media="no"><td>FB-07</td><td><span class="badge-fxba">FxBA</span></td><td>Bloque</td><td>Educación</td><td><span class="tag tag-cuest">CUEST</span> –0,6% real. Del 26% al 19,7% del presupuesto.</td><td>—</td><td>🟡</td></tr>
+<tr data-bloque="FxBA" data-media="si"><td>FB-08</td><td><span class="badge-fxba">FxBA</span></td><td>Bloque</td><td>IIBB monot. <span class="flag-media">📡 C-03</span></td><td><span class="tag tag-preg">DEM</span> Exención 100%. Hoy categorías D–H tienen 75%.</td><td><span class="resonancia res-alta">ALTA</span></td><td>⏳</td></tr>
+<tr data-bloque="FxBA" data-media="si"><td>FB-09</td><td><span class="badge-fxba">FxBA</span></td><td>Neira</td><td>IIBB gastronomía <span class="flag-media">📡 C-03</span></td><td><span class="tag tag-preg">DEM</span> Exención gastronomía 1er sem. 2027.</td><td><span class="resonancia res-alta">ALTA</span></td><td>⏳</td></tr>
+<tr data-bloque="FxBA" data-media="si"><td>FB-10</td><td><span class="badge-fxba">FxBA</span></td><td>Barroetaveña</td><td>IVC Adorni <span class="flag-media">📡 C-04</span></td><td><span class="tag tag-cuest">CUEST</span> LLA pide cerrar IVC pero familia Adorni recibió crédito del organismo.</td><td><span class="resonancia res-alta">ALTA</span></td><td>🟡</td></tr>
+<tr data-bloque="FxBA" data-media="si"><td>FB-11</td><td><span class="badge-fxba">FxBA</span></td><td>Barroetaveña · 13/10</td><td>Transporte <span class="flag-media">📡 C-05</span></td><td><span class="tag tag-cuest">CUEST</span> Línea F = "ficción." Trambús = "colectivo con ruedas tapadas." Ley 670 incumplida 20 años.</td><td><span class="resonancia res-alta">ALTA</span></td><td>🔴</td></tr>
+<tr data-bloque="FxBA" data-media="si"><td>FB-12</td><td><span class="badge-fxba">FxBA</span></td><td>Iáñez · 13/10</td><td>Transp./Hídrico <span class="flag-media">📡 C-01</span></td><td><span class="tag tag-cuest">CUEST</span> Hídrico –44,1% real contradice emergencia. Subte tarifa 1.817$. Acarreos +64%.</td><td><span class="resonancia res-alta">ALTA</span></td><td>🔴</td></tr>
+<tr data-bloque="FxBA" data-media="no"><td>FB-13</td><td><span class="badge-fxba">FxBA</span></td><td>Bielli · 13/10</td><td>Transporte / Educ.</td><td><span class="tag tag-cuest">CUEST</span> Subte –54% pasajeros histórico. Tarifa +2100%. Boleto estudiantil: meta 36.750 vs 201.000.</td><td>—</td><td>🔴</td></tr>
+<tr data-bloque="FxBA" data-media="si"><td>FB-14</td><td><span class="badge-fxba">FxBA</span></td><td>Mayra · 13/10</td><td>Presup. / Infra <span class="flag-media">📡 C-01</span></td><td><span class="tag tag-cuest">CUEST</span> Ministerio –12,6% real. Hídrico –44% + emergencia = incoherente. Ejecución 24,6% vs 35,7%.</td><td><span class="resonancia res-alta">ALTA</span></td><td>🔴</td></tr>
+<tr data-bloque="CD" data-media="si"><td>CD-01</td><td><span class="badge-cd">CD</span></td><td>Nagata</td><td>IIBB / Sostenib. <span class="flag-media">📡 C-03</span></td><td><span class="tag tag-cuest">CUEST</span> IIBB cae pero presupuesto "casi expansivo". ¿Cómo se financia rebaja patentes?</td><td><span class="resonancia res-alta">ALTA</span></td><td>🔴</td></tr>
+<tr data-bloque="CD" data-media="si"><td>CD-02</td><td><span class="badge-cd">CD</span></td><td>Tagliaferri</td><td>Emergencia hídrica <span class="flag-media">📡 C-01</span></td><td><span class="tag tag-preg">PREG</span> Uso del Fondo Anticíclico. Esp. Público –26%; Infraestructura –12%.</td><td><span class="resonancia res-alta">ALTA</span></td><td>🔴</td></tr>
+<tr data-bloque="CD" data-media="no"><td>CD-03</td><td><span class="badge-cd">CD</span></td><td>Tagliaferri</td><td>Sala de 3</td><td><span class="tag tag-preg">PREG</span> Ley obliga a readecuar jardines. Sin partida. Miguel sin respuesta formal.</td><td>—</td><td>🔴</td></tr>
+<tr data-bloque="CD" data-media="no"><td>CD-04</td><td><span class="badge-cd">CD</span></td><td>Nagata · 08/10</td><td>Emergencia hídrica</td><td><span class="tag tag-cuest">CUEST</span> "Ni en la pandemia se pidió tanto." Propone 2 etapas.</td><td>—</td><td>🟢</td></tr>
+<tr data-bloque="CD" data-media="si"><td>CD-05</td><td><span class="badge-cd">CD</span></td><td>Nagata · 08/10</td><td>Bono proveedores <span class="flag-media">📡 C-06</span></td><td><span class="tag tag-preg">PREG</span> ¿Universo total deuda flotante? ¿Voluntario o compulsivo?</td><td><span class="resonancia res-media">MEDIA</span></td><td>🟢</td></tr>
+</tbody>
+</table>
+</div>
+<div style="font-size:.72rem;color:var(--muted);margin-top:8px;border-top:1px solid var(--border);padding-top:7px;display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:4px 12px">
+  <div><span class="badge-lla">LLA</span> <strong style="color:var(--text)">13 b.</strong> · condiciona quórum</div>
+  <div><span class="badge-fxba">FxBA</span> <strong style="color:var(--text)">20 b.</strong> · monitor propio</div>
+  <div><span class="badge-cd">CD</span> <strong style="color:var(--text)">7 b.</strong> · CD-01/02/03 sin respuesta</div>
+  <div><span class="badge-pro">PRO</span> <strong style="color:var(--text)">29 b.</strong> · Wolff preside</div>
+  <div style="grid-column:span 4;margin-top:3px">⏳ pendiente · 🟡 en negociación · 🟢 acordado · 🔴 posición crítica · <span class="flag-media">📡</span> = resonancia mediática alta</div>
+</div>
+</section>
+
+<hr class="divider">
+
+<section id="seguimiento">
+<div class="sec-label">Sección 5</div>
+<h2>Seguimiento semaforizado &nbsp;<small style="font-size:.7rem;font-weight:400;color:var(--muted)">← <a href="#controversiales" style="color:var(--accent)">controversiales ↑</a> · <a href="#votos" style="color:var(--accent)">votos ↑</a></small></h2>
+<div class="mosaico-par">
+<div>
+<div style="font-size:.72rem;font-weight:700;color:var(--red);margin-bottom:6px;text-transform:uppercase">🔴 URGENTE — antes del 29/10</div>
+<div class="pend-item pi-red"><div class="pend-ico">🔴</div><div class="pend-body"><strong>RP-02 · ABL –10% nominal (LLA-02)</strong><span>Oferta ejecutiva diferenciada. Sin respuesta = LLA no da quórum. → <a href="#controversiales" style="color:var(--accent)">C-02</a></span></div></div>
+<div class="pend-item pi-red"><div class="pend-ico">🔴</div><div class="pend-body"><strong>RP-03 · IIBB — propuesta articulada (LLA-03 · FB-08 · FB-09)</strong><span>GCBA sin propuesta unificada frente a convergencia LLA+FxBA. → <a href="#controversiales" style="color:var(--accent)">C-03</a></span></div></div>
+<div class="pend-item pi-red"><div class="pend-ico">🔴</div><div class="pend-body"><strong>RP-18 · Taquigrafía Quirós 23/10 (FB-06 · FB-15)</strong><span>Verificar legislatura.gob.ar. Si hay compromisos, comunicar antes del plenario. → <a href="#controversiales" style="color:var(--accent)">C-07</a></span></div></div>
+<div class="pend-item pi-red"><div class="pend-ico">🔴</div><div class="pend-body"><strong>RP-14b · Bono: voluntario/compulsivo + fecha corte (CD-05)</strong><span>Iáñez (FxBA) exige antes del plenario. → <a href="#controversiales" style="color:var(--accent)">C-06</a></span></div></div>
+<div class="pend-item pi-red"><div class="pend-ico">🔴</div><div class="pend-body"><strong>RP-08 · Posición GCBA sobre IVC (LLA-05 · FB-02)</strong><span>LLA quiere cerrar, FxBA defiende. Caso Adorni activo. → <a href="#controversiales" style="color:var(--accent)">C-04</a></span></div></div>
+<div style="font-size:.72rem;font-weight:700;color:var(--yellow);margin:10px 0 6px;text-transform:uppercase">🟡 ALTA PRIORIDAD — antes del 15/11</div>
+<div class="pend-item pi-yellow"><div class="pend-ico">🟡</div><div class="pend-body"><strong>RP-01 · Eliminar PASO — $29.000M (LLA-01)</strong><span>Condición estructural LLA. Sin respuesta GCBA.</span></div></div>
+<div class="pend-item pi-yellow"><div class="pend-ico">🟡</div><div class="pend-body"><strong>RP-15 · Línea F — cronograma adjudicación dic. (FB-05 · FB-11)</strong><span>Km en disputa: 9,8 vs 10,9. → <a href="#controversiales" style="color:var(--accent)">C-05</a></span></div></div>
+<div class="pend-item pi-yellow"><div class="pend-ico">🟡</div><div class="pend-body"><strong>RP-16 · Belgrano Sur — secuencia convenio/deuda (P-02)</strong><span>Diputados: convenio primero. GCBA: ambos en paralelo.</span></div></div>
+<div class="pend-item pi-yellow"><div class="pend-ico">🟡</div><div class="pend-body"><strong>RP-13 · Sala de 3 — partida Educación (CD-03)</strong><span>Ley obliga; presupuesto no tiene partida.</span></div></div>
+</div>
+<div>
+<div style="font-size:.72rem;font-weight:700;color:var(--accent);margin-bottom:6px;text-transform:uppercase">🔵 PENDIENTES INFORMATIVOS</div>
+<div class="pend-item pi-blue"><div class="pend-ico">🔵</div><div class="pend-body"><strong>RP-11 · Taquigrafías sin publicar</strong><span>7/10 · 14/10 · 16/10 · <strong>23/10 (Quirós)</strong>. Verificar legislatura.gob.ar.</span></div></div>
+<div class="pend-item pi-blue"><div class="pend-ico">🔵</div><div class="pend-body"><strong>RP-12 · Fondo Anticíclico (CD-02)</strong><span>Tagliaferri preguntó en 7/10. Sin respuesta formal.</span></div></div>
+<div class="pend-item pi-blue"><div class="pend-ico">🔵</div><div class="pend-body"><strong>RP-09 · Intereses deuda $592.000M (FB-04)</strong><span>Cifra FxBA. Cotejar con planillas oficiales.</span></div></div>
+<div class="pend-item pi-blue"><div class="pend-ico">🔵</div><div class="pend-body"><strong>RP-10 · Privatizaciones SBASE / Autopistas (LLA-09)</strong><span>Sin posición oficial. Alta sensibilidad sindical.</span></div></div>
+<div class="pend-item pi-blue"><div class="pend-ico">🔵</div><div class="pend-body"><strong>RP-04 · Patentes híbridos/eléctricos (LLA-04)</strong><span>Exención + costo fiscal. Sin respuesta GCBA.</span></div></div>
+<div class="pend-item pi-blue"><div class="pend-ico">🔵</div><div class="pend-body"><strong>RP-17 · Intermodalidad tren-subte</strong><span>Descuento interrumpido agosto 2026. FxBA exige restablecimiento.</span></div></div>
+<div class="pend-item pi-blue"><div class="pend-ico">🔵</div><div class="pend-body"><strong>RP-06 · Autódromo (LLA-06)</strong><span>Concesión privada. Sin valuación ni contrato.</span></div></div>
+<div class="pend-item pi-blue"><div class="pend-ico">🔵</div><div class="pend-body"><strong>RP-07 · Publicidad oficial (LLA-07)</strong><span>Recorte exigido >$60.000M. Sin respuesta.</span></div></div>
+<div style="font-size:.72rem;font-weight:700;color:var(--green);margin:10px 0 6px;text-transform:uppercase">🟢 CERRADOS / DICTAMINADOS</div>
+<div class="pend-item pi-green"><div class="pend-ico">✅</div><div class="pend-body"><strong>P-01 · Emergencia Hídrica — Dictamen 19/10</strong><span>6m prorrogable + Comisión Especial. Firma cuádruple. Pendiente: plenario.</span></div></div>
+<div class="pend-item pi-green"><div class="pend-ico">✅</div><div class="pend-body"><strong>P-03 · Bono Proveedores — Dictamen 19/10</strong><span>$600.000M · TAMAR · 2029. Pendiente: voluntario/compulsivo.</span></div></div>
+</div>
+</div>
+</section>
+
+<hr class="divider">
+
+<section id="agenda">
+<div class="sec-label">Sección 6</div>
+<h2>Agenda legislativa — Hitos clave &nbsp;<small style="font-size:.7rem;font-weight:400;color:var(--muted)">← <a href="#seguimiento" style="color:var(--accent)">seguimiento ↑</a></small></h2>
+<div class="ag-item" style="border-left:3px solid var(--red);background:var(--red-bg)">
+  <div class="ag-fecha">29 OCT</div>
+  <div class="ag-body"><strong>Sesión plenaria ordinaria <span class="ag-prio prio-critica">CRÍTICA</span></strong><span>Votación P-01 y P-03. Escenario base: PRO+FxBA+CD = 56 ✅. Riesgo: LLA frena quórum sin oferta ejecutiva ABL/IIBB. Presupuesto 2027 NO en esta sesión.</span></div>
+</div>
+<div class="ag-item" style="border-left:3px solid var(--yellow)">
+  <div class="ag-fecha">30 OCT – 7 NOV</div>
+  <div class="ag-body"><strong>Ventana negociación Presupuesto 2027 <span class="ag-prio prio-alta">ALTA</span></strong><span>Negociaciones bilaterales GCBA–LLA sobre ABL · IIBB · PASO. Acuerdo → dictamen mayoría en 2ª quincena nov. Sin acuerdo → tratamiento sobre tablas en diciembre.</span></div>
+</div>
+<div class="ag-item">
+  <div class="ag-fecha">2ª QUINCENA NOV</div>
+  <div class="ag-body"><strong>Dictamen de mayoría — Presupuesto 2027 <span class="ag-prio prio-alta">ALTA</span></strong><span>Condicionado a cierre con LLA. Sin dictamen en noviembre → sesión diciembre urgente.</span></div>
+</div>
+<div class="ag-item">
+  <div class="ag-fecha">DIC 2026</div>
+  <div class="ag-body"><strong>Sesión Presupuesto 2027 <span class="ag-prio prio-alta">ALTA</span></strong><span>Límite constitucional: 15/12/2026. Si no se aprueba, rige presupuesto prorrogado 2026. Señal negativa de cara a 2027 electoral.</span></div>
+</div>
+<div class="ag-item">
+  <div class="ag-fecha">DIC 2026</div>
+  <div class="ag-body"><strong>Agenda LLA — condición paralela <span class="ag-prio prio-normal">NORMAL</span></strong><span>Ramírez exige tratar: Ley Libertad Comercial + Silencio Positivo. No es condición formal pero integra el paquete. (LLA-12)</span></div>
+</div>
+<div class="ag-item">
+  <div class="ag-fecha">DIC 2026</div>
+  <div class="ag-body"><strong>Adjudicación Línea F — compromiso Ministro Infra · 13/10 <span class="ag-prio prio-normal">NORMAL</span></strong><span>Si no se cumple = argumento de campaña opositor activo. (FB-05 · FB-11)</span></div>
+</div>
+<div class="ag-item">
+  <div class="ag-fecha">OCT-NOV</div>
+  <div class="ag-body"><strong>Trambús T1 — "menos de un mes" desde 13/10 <span class="ag-prio prio-alta">ALTA</span></strong><span>Compromiso público: fecha ~13/11. Si no arranca = citación opositora segura.</span></div>
+</div>
+<div class="ag-item">
+  <div class="ag-fecha">ENE 2027</div>
+  <div class="ag-body"><strong>Convenio Nación — Belgrano Sur <span class="ag-prio prio-normal">NORMAL</span></strong><span>Firma → ene. 2027. Habilita deuda USD 75M vía CAF. Condicionado a secuencia acordada.</span></div>
+</div>
+</section>
+
+<footer>Uso interno · Comisión de Presupuesto · CABA · <strong>26/10/2026 ART</strong> · Fuentes: transcripciones 08/10 y 13/10 (Drive); dictámenes Exp. 3085-J y 3082-J firmados 19/10; ronda Quirós 23/10 (parcial — taquigrafía pendiente); SL_GA 06/10–26/10; Parlamentario, Letra P, Pura Ciudad, Ámbito, La Nación, Pharmabiz · Taquigrafías 7/10, 14/10, 16/10 y <strong>23/10</strong> pendientes.</footer>
+
 </div>
 <script>
-function filtrar(b,btn){
-  document.querySelectorAll('.filtros button').forEach(x=>x.classList.remove('activo'));
+function filtrar(b, btn) {
+  document.querySelectorAll('.filtros button').forEach(x => x.classList.remove('activo'));
   btn.classList.add('activo');
-  document.querySelectorAll('#tabla-bloques tbody tr').forEach(tr=>{
-    tr.hidden=b!=='todos'&&tr.dataset.bloque!==b;
+  document.querySelectorAll('#tabla-bloques tbody tr').forEach(tr => {
+    if (b === 'todos') { tr.hidden = false; return; }
+    if (b === 'media') { tr.hidden = tr.dataset.media !== 'si'; return; }
+    tr.hidden = tr.dataset.bloque !== b;
   });
 }
 </script>
