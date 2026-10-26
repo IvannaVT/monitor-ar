@@ -1,141 +1,414 @@
 {
-  "meta": {
-    "titulo": "Presupuesto 2027 — Posiciones legislativas",
-    "kicker": "Comisión de Presupuesto · CABA · Uso interno",
-    "sesiones": "Sesiones 7/10 · 8/10 · 13/10/2026",
-    "corte": "20/10/2026 ART",
-    "aviso": "⚠ Taquigrafía 7/10 no publicada. Fuentes: transcripciones 08/10 (Emergencia Hídrica + Belgrano Sur + Bono) y 13/10 (Infra/Transporte); dictámenes Exp. 3085-J y 3082-J. Rondas 13–16/10: Bereciartua (14/10) y Miguel (16/10) — sin acuerdo. <strong>Dictámenes de mayoría firmados 19/10 (PRO + FxBA + LLA + CD):</strong> P-01 ✅ y P-03 ✅ — pendiente sesión plenaria.",
-    "footer": "Uso interno · Comisión de Presupuesto · CABA · 20/10/2026 ART · Fuentes: transcripciones 08/10 y 13/10 (Drive); dictámenes de mayoría Exp. 3085-J y 3082-J firmados 19/10; Ámbito, La Nación, Letra P, Parlamentario, Pura Ciudad · Taquigrafías 7/10, 14/10, 16/10 pendientes."
+  "schema_version": 1,
+  "corte": "2026-10-26",
+  "revision": {
+    "estado": "aprobado",
+    "fecha": "2026-10-26",
+    "responsable": "Codex · cotejo de fuentes oficiales documentado en docs/AUDITORIA-2026-10-26.md",
+    "css_sha256": "a437628833d4dce8256147b74311698428c31f35c1355af860d1f58256486ecb",
+    "contenido_sha256": "f5b06443b9fbcf4de6a66e158d635456471d4f4ba30d42846023ddb41837694c"
   },
-
+  "fuentes": {
+    "bloques": {
+      "etiqueta": "Composición oficial",
+      "url": "https://www.legislatura.gob.ar/seccion/bloques.html",
+      "consultada": "2026-10-26"
+    },
+    "infra": {
+      "etiqueta": "Legislatura · 13/10",
+      "url": "https://www.legislatura.gob.ar/posts/continuan-los-debates-en-torno-al-presupuesto-2027.html",
+      "consultada": "2026-10-26"
+    },
+    "educacion": {
+      "etiqueta": "Legislatura · 15/10",
+      "url": "https://www.legislatura.gob.ar/posts/la-ministra-de-educacion-presento-los-ejes-principales-del-presupuesto-2027.html",
+      "consultada": "2026-10-26"
+    },
+    "habitat": {
+      "etiqueta": "Legislatura · 16/10",
+      "url": "https://www.legislatura.gob.ar/posts/el-ministro-de-desarrollo-humano-y-habitat-gabriel-mraida-presento-el-presupuesto-2027.html",
+      "consultada": "2026-10-26"
+    },
+    "salud": {
+      "etiqueta": "Legislatura · 23/10",
+      "url": "https://www.legislatura.gob.ar/posts/quiros-presento-el-presupuesto-2027-de-salud-ante-la-comision-de-presupuesto.html",
+      "consultada": "2026-10-26"
+    },
+    "emergencia": {
+      "etiqueta": "Exp. 3085-J-2026",
+      "url": "https://parlamentaria.legislatura.gob.ar/pages/expediente.aspx?id=142697",
+      "consultada": "2026-10-26"
+    },
+    "bono": {
+      "etiqueta": "Exp. 3082-J-2026",
+      "url": "https://parlamentaria.legislatura.gob.ar/pages/expediente.aspx?id=142694",
+      "consultada": "2026-10-26"
+    },
+    "agenda": {
+      "etiqueta": "Legislatura · 19/10",
+      "url": "https://www.legislatura.gob.ar/posts/reunion-conjunta-de-la-comisiones-de-desarrollo-economico-y-de-presupuesto4126.html",
+      "consultada": "2026-10-26"
+    },
+    "debate": {
+      "etiqueta": "Legislatura · 8/10",
+      "url": "https://www.legislatura.gob.ar/posts/presupuesto-debatio-deuda-transporte-y-emergencia-climatica.html",
+      "consultada": "2026-10-26"
+    },
+    "lineaf": {
+      "etiqueta": "GCBA · Línea F",
+      "url": "https://buenosaires.gob.ar/gcaba_historico/noticias/linea-f-dos-consorcios-de-empresas-nacionales-e-internacionales-se",
+      "consultada": "2026-10-26"
+    }
+  },
   "rondas": [
-    { "tipo": "yellow", "titulo": "Bereciartua (Infraestructura) · 14/10", "texto": "Neira (FxBA) exigió plazos <strong>Línea F</strong>. Sin respuesta. Política de transporte sin criterio unificado." },
-    { "tipo": "yellow", "titulo": "Miguel (Educación) · 16/10", "texto": "Plan \"BA Aprende\" (horizonte 2037). Sala de 3: \"articulación en la obligatoriedad\" — sin partida. CD-03 sin respuesta." },
-    { "tipo": "yellow", "titulo": "Sesión informativa · Emergencia Hídrica · 08/10", "texto": "Nagata (CD): \"ni en la pandemia se pidió esto.\" LLA: vocación de acompañar pero exige informes previos. FxBA: cuestionó redundancia facultades AUSA." },
-    { "tipo": "yellow", "titulo": "Sesión informativa · Infraestructura/Transporte · 13/10", "texto": "Barroetaveña: F = \"ficción,\" Trambús = \"colectivo con ruedas tapadas.\" Iáñez: hídrico –44% vs emergencia ⚠. Bielli: subte –54% histórico. Ministro: Línea F adjudicación diciembre; Trambús T1 en un mes." }
+    {
+      "id": "R-01",
+      "titulo": "Bereciartua · 13/10",
+      "texto": "Movilidad e Infraestructura: exposición del Presupuesto 2027, con proyectos para el subte, Línea F y movilidad.",
+      "fuentes": [
+        "infra"
+      ],
+      "estado": "verificado",
+      "tipo": "yellow"
+    },
+    {
+      "id": "R-02",
+      "titulo": "Miguel · 15/10",
+      "texto": "Educación: presentación de los ejes del Presupuesto 2027.",
+      "fuentes": [
+        "educacion"
+      ],
+      "estado": "verificado",
+      "tipo": "yellow"
+    },
+    {
+      "id": "R-03",
+      "titulo": "Mraida · 16/10",
+      "texto": "Desarrollo Humano y Hábitat: exposición sobre políticas sociales, primera infancia y vivienda.",
+      "fuentes": [
+        "habitat"
+      ],
+      "estado": "verificado",
+      "tipo": "yellow"
+    },
+    {
+      "id": "R-04",
+      "titulo": "Quirós · 23/10",
+      "texto": "Salud: presentación del Presupuesto 2027 ante la Comisión de Presupuesto.",
+      "fuentes": [
+        "salud"
+      ],
+      "estado": "verificado",
+      "tipo": "yellow"
+    },
+    {
+      "id": "R-05",
+      "titulo": "Comisión · 8/10",
+      "texto": "Debate con funcionarios del Ejecutivo sobre emergencia climática, financiamiento ferroviario y bono proveedores.",
+      "fuentes": [
+        "debate"
+      ],
+      "estado": "verificado",
+      "tipo": "yellow"
+    },
+    {
+      "id": "R-06",
+      "titulo": "Comisiones · 19/10",
+      "texto": "Tratamiento de libertad comercial, bono proveedores y emergencia hídrica con vistas a la sesión prevista para el 29/10.",
+      "fuentes": [
+        "agenda"
+      ],
+      "estado": "verificado",
+      "tipo": "yellow"
+    }
   ],
-
   "preguntas": [
     {
       "id": "P-01",
-      "tema": "Emergencia hídrica",
-      "texto": "¿Qué facultades otorga la ley y cómo se vincula con obras ya previstas? <strong>DICTAMEN DE MAYORÍA 19/10 (Wolff-PRO, Neira-FxBA, Pakgojz-LLA, Nagata-CD)</strong>: duración 6 meses (prorrogable), Comisión Especial de control legislativo, AUSA puede derivar ingresos netos a obras. Nagata y FxBA cuestionaron amplitud de delegación — firmaron incorporando sus límites.",
-      "est": "🟢"
+      "titulo": "Emergencia hídrica",
+      "texto": "Dictamen de mayoría del 19/10. Despacho 754/2026. Vencimiento de observaciones: 28/10 a las 14:00.",
+      "fuentes": [
+        "emergencia"
+      ],
+      "estado": "verificado",
+      "tipo": "grey",
+      "simbolo": "🟢"
     },
     {
       "id": "P-02",
-      "tema": "Belgrano Sur",
-      "texto": "¿Cómo se financia el viaducto a Constitución? Deuda hasta <span class=\"cifra\">USD 75M</span> vía CAF; 57% avance físico; firma convenio Nación → ene. 2027; obra 24 meses. Mercado de Hacienda en negociación como compensación.",
-      "est": "🟡"
+      "titulo": "Belgrano Sur",
+      "texto": "Proyecto de financiamiento tratado en comisión el 8/10. Propone completar la conexión ferroviaria con Constitución.",
+      "fuentes": [
+        "debate"
+      ],
+      "estado": "verificado",
+      "tipo": "grey",
+      "simbolo": "🟡"
     },
     {
       "id": "P-03",
-      "tema": "Bono proveedores",
-      "texto": "¿Difiere pagos o convierte deuda corriente en financiera? <strong>DICTAMEN DE MAYORÍA 19/10 (Wolff-PRO, Neira-FxBA, Pakgojz-LLA, Nagata-CD)</strong>: hasta <span class=\"cifra\">$600.000M</span>, tasa TAMAR sin margen, vto. 2029, amortización bullet. Iáñez: sin fecha de corte; voluntario/compulsivo pendiente.",
-      "est": "🟢"
+      "titulo": "Bono proveedores",
+      "texto": "Dictamen de mayoría del 19/10. Despacho 753/2026. Vencimiento de observaciones: 28/10 a las 14:00.",
+      "fuentes": [
+        "bono"
+      ],
+      "estado": "verificado",
+      "tipo": "grey",
+      "simbolo": "🟢"
     }
   ],
-
   "bloques": [
-    { "id": "LLA-01", "bloque": "LLA", "legislador": "Ramírez",         "area": "PASO",                       "tags": [{"cls":"cond","lbl":"COND"}], "planteo": "Eliminar PASO. Ahorro $29.000M → baja impositiva.", "est": "⏳" },
-    { "id": "LLA-02", "bloque": "LLA", "legislador": "Ramírez",         "area": "ABL",                        "tags": [{"cls":"cond","lbl":"COND"}], "planteo": "–10% nominal permanente. Arengo ofreció congelamiento: insuficiente.", "est": "⏳" },
-    { "id": "LLA-03", "bloque": "LLA", "legislador": "Ramírez",         "area": "IIBB",                       "tags": [{"cls":"cond","lbl":"COND"}], "planteo": "Manufactura –25%; tasa 0% monotributistas servicios; ampliar tope comercio.", "est": "⏳" },
-    { "id": "LLA-04", "bloque": "LLA", "legislador": "Ramírez / Pakgojz","area": "Patentes híbridos/eléctricos","tags": [{"cls":"cuest","lbl":"CUEST"}],"planteo": "Exención híbridos y eléctricos. Sin respuesta GCBA.", "est": "⏳" },
-    { "id": "LLA-05", "bloque": "LLA", "legislador": "Ramírez",         "area": "6 organismos",               "tags": [{"cls":"cond","lbl":"COND"}], "planteo": "Eliminar: DG Mujer · DG Economía Circular · DG Pol. Ambiental · Sec. Asuntos Estratégicos · Unidad Rel. Federales · IVC (~$124.000M).", "est": "⏳" },
-    { "id": "LLA-06", "bloque": "LLA", "legislador": "Ramírez",         "area": "Autódromo",                  "tags": [{"cls":"cond","lbl":"COND"}], "planteo": "Concesión privada. Eliminar subsecretaría.", "est": "⏳" },
-    { "id": "LLA-07", "bloque": "LLA", "legislador": "Ramírez",         "area": "Publicidad oficial",         "tags": [{"cls":"cond","lbl":"COND"}], "planteo": "Recorte >$60.000M.", "est": "⏳" },
-    { "id": "LLA-08", "bloque": "LLA", "legislador": "Pakgojz",         "area": "Sostenibilidad fiscal",      "tags": [{"cls":"preg","lbl":"PREG"}], "planteo": "¿Las bajas se financian con recorte o con deuda?", "est": "⏳" },
-    { "id": "LLA-09", "bloque": "LLA", "legislador": "Arenaza",         "area": "Privatizaciones",            "tags": [{"cls":"preg","lbl":"PREG"}], "planteo": "¿Prevé privatizar SBASE y Autopistas Urbanas?", "est": "⏳" },
-    { "id": "LLA-10", "bloque": "LLA", "legislador": "Arenaza",         "area": "Estructuras superpuestas",   "tags": [{"cls":"preg","lbl":"PREG"}], "planteo": "Escrutinio secretarías duplicadas. CABA gasta en seguridad más que Madrid.", "est": "⏳" },
-    { "id": "LLA-11", "bloque": "LLA", "legislador": "Arenaza",         "area": "Deuda gasto corriente",      "tags": [{"cls":"cond","lbl":"COND"}], "planteo": "No aprobará deuda para financiar gasto corriente.", "est": "⏳" },
-    { "id": "LLA-12", "bloque": "LLA", "legislador": "Ramírez",         "area": "Agenda legislativa",         "tags": [{"cls":"decl","lbl":"DECL"}], "planteo": "Exige tratar antes de fin de año: Libertad Comercial + Silencio Positivo.", "est": "⏳" },
-    { "id": "LLA-13", "bloque": "LLA", "legislador": "Bloque · 08/10",  "area": "Emergencia hídrica",         "tags": [{"cls":"decl","lbl":"DECL"}], "planteo": "Vocación de acompañar. Condición: informes previos a cada reunión. \"No vamos a volver si no trabajan en serio.\"", "est": "🟡" },
-
-    { "id": "FB-01",  "bloque": "FxBA","legislador": "Bloque",          "area": "Coherencia fiscal",          "tags": [{"cls":"cuest","lbl":"CUEST"}],"planteo": "Superávit + suba de impuestos patrimoniales.", "est": "🟡" },
-    { "id": "FB-02",  "bloque": "FxBA","legislador": "Bloque",          "area": "IVC / Vivienda",             "tags": [{"cls":"cuest","lbl":"CUEST"}],"planteo": "\"Vaciamiento\" del IVC. –17,2% real 2027; –51,5% acum. desde dic. 2023.", "est": "🔴" },
-    { "id": "FB-03",  "bloque": "FxBA","legislador": "Bloque",          "area": "Empleo",                     "tags": [{"cls":"cuest","lbl":"CUEST"}],"planteo": "–104.000 empleos; 3.117 empresas cerradas desde nov. 2023. Partidas –12,3%.", "est": "🔴" },
-    { "id": "FB-04",  "bloque": "FxBA","legislador": "Bloque",          "area": "Deuda",                      "tags": [{"cls":"cuest","lbl":"CUEST"}],"planteo": "Intereses +70%. $592.000M vs. ~$124.000M IVC (4×).", "est": "🔴" },
-    { "id": "FB-05",  "bloque": "FxBA","legislador": "Neira",           "area": "Transporte / Línea F",       "tags": [{"cls":"cuest","lbl":"CUEST"}],"planteo": "Inversión –13,2% real. Sin plazos Línea F (14/10). Sin respuesta.", "est": "🔴" },
-    { "id": "FB-06",  "bloque": "FxBA","legislador": "Bloque",          "area": "Salud",                      "tags": [{"cls":"cuest","lbl":"CUEST"}],"planteo": "+18,2% nominal = caída real ~3%.", "est": "🟡" },
-    { "id": "FB-07",  "bloque": "FxBA","legislador": "Bloque",          "area": "Educación",                  "tags": [{"cls":"cuest","lbl":"CUEST"}],"planteo": "–0,6% real. Del 26% al 19,7% del presupuesto.", "est": "🟡" },
-    { "id": "FB-08",  "bloque": "FxBA","legislador": "Bloque",          "area": "IIBB monotributistas",       "tags": [{"cls":"preg","lbl":"DEM"}],  "planteo": "Exención 100%. Hoy categorías D–H tienen 75%.", "est": "⏳" },
-    { "id": "FB-09",  "bloque": "FxBA","legislador": "Neira",           "area": "IIBB gastronomía + copart.", "tags": [{"cls":"preg","lbl":"DEM"}],  "planteo": "Exención gastronomía 1er sem. 2027. Coparticipación cae estructuralmente.", "est": "⏳" },
-    { "id": "FB-10",  "bloque": "FxBA","legislador": "Barroetaveña",    "area": "IVC — contradicción",        "tags": [{"cls":"cuest","lbl":"CUEST"}],"planteo": "LLA pide cerrar IVC pero familia Adorni recibió crédito del organismo.", "est": "🟡" },
-    { "id": "FB-11",  "bloque": "FxBA","legislador": "Barroetaveña · 13/10","area": "Transporte",             "tags": [{"cls":"cuest","lbl":"CUEST"}],"planteo": "Línea F video = \"ficción.\" Trambús = \"colectivo con ruedas tapadas.\" Prog.74: meta 360.000 km vs ~3.800.000 km reales. Ley 670 no cumplida en 20 años: incompatible con corredor Trambús.", "est": "🔴" },
-    { "id": "FB-12",  "bloque": "FxBA","legislador": "Iáñez · 13/10",  "area": "Transporte / Hídrico",       "tags": [{"cls":"cuest","lbl":"CUEST"}],"planteo": "Subte tarifa 1.817$: ¿plan de reducción? Descuento intermodal tren-subte interrumpido ago.2026. Accesibilidad: 50% estaciones sin plan. Riesgo hídrico –44,1% real ⚠: contradice emergencia declarada. Acarreos +64%.", "est": "🔴" },
-    { "id": "FB-13",  "bloque": "FxBA","legislador": "Bielli · 13/10", "area": "Transporte / Educación",     "tags": [{"cls":"cuest","lbl":"CUEST"}],"planteo": "Subte –54% pasajeros vs histórico; –20% en gestión actual. Tarifa +2100% como causa. Boleto estudiantil: meta 36.750 vs 201.000 del año anterior (¿error?). Ley 6.770 acompañantes menores: aprobada 2024, 2 años sin implementar.", "est": "🔴" },
-    { "id": "FB-14",  "bloque": "FxBA","legislador": "Mayra · 13/10",  "area": "Presupuesto / Infra",        "tags": [{"cls":"cuest","lbl":"CUEST"}],"planteo": "Ministerio –12,6% real: contradice función anticíclica. Hídrico –44% + pedido de emergencia = incoherente. Ejecución 24,6% vs promedio ciudad 35,7%. Km Línea F: 10,9 (doc. ambiental) vs 9,8 (mensaje presupuesto) — ¿cuál es el real?", "est": "🔴" },
-
-    { "id": "CD-01",  "bloque": "CD",  "legislador": "Nagata",          "area": "Sostenibilidad / IIBB",      "tags": [{"cls":"cuest","lbl":"CUEST"}],"planteo": "IIBB cae pero presupuesto \"casi expansivo\". ¿Cómo se financia rebaja patentes?", "est": "🔴" },
-    { "id": "CD-02",  "bloque": "CD",  "legislador": "Tagliaferri",     "area": "Emergencia hídrica",         "tags": [{"cls":"preg","lbl":"PREG"}], "planteo": "Uso del Fondo Anticíclico. Esp. Público –26%; Infraestructura –12%.", "est": "🔴" },
-    { "id": "CD-03",  "bloque": "CD",  "legislador": "Tagliaferri",     "area": "Educación — Sala de 3",      "tags": [{"cls":"preg","lbl":"PREG"}], "planteo": "Ley obliga a readecuar jardines. Sin partida. Miguel sin respuesta formal.", "est": "🔴" },
-    { "id": "CD-04",  "bloque": "CD",  "legislador": "Nagata · 08/10",  "area": "Emergencia hídrica",         "tags": [{"cls":"cuest","lbl":"CUEST"}],"planteo": "\"Ni en la pandemia se pidió tanto.\" Facultades para modificar partidas ya existen en ley 70; ¿por qué ir por más? Sugirió dos etapas (6m prevención + 6m asistencia social). ¿Sería \"emergencia hídrica, climática y social\"? Preguntó sobre AUSA.", "est": "🟢" },
-    { "id": "CD-05",  "bloque": "CD",  "legislador": "Nagata · 08/10",  "area": "Bono proveedores",           "tags": [{"cls":"preg","lbl":"PREG"}], "planteo": "¿Cuál es el universo total de deuda flotante? ¿Voluntario o compulsivo para proveedores? Endeudar para gasto corriente genera intereses y modifica relaciones contractuales futuras.", "est": "🟢" }
+    {
+      "id": "B-01",
+      "titulo": "La Libertad Avanza",
+      "texto": "Composición oficial consultada al corte.",
+      "fuentes": [
+        "bloques"
+      ],
+      "estado": "verificado",
+      "tipo": "grey",
+      "bancas": 14,
+      "filtro": "LLA"
+    },
+    {
+      "id": "B-02",
+      "titulo": "Fuerza por Buenos Aires",
+      "texto": "Composición oficial consultada al corte.",
+      "fuentes": [
+        "bloques"
+      ],
+      "estado": "verificado",
+      "tipo": "grey",
+      "bancas": 20,
+      "filtro": "FxBA"
+    },
+    {
+      "id": "B-03",
+      "titulo": "Confianza y Desarrollo",
+      "texto": "Composición oficial consultada al corte.",
+      "fuentes": [
+        "bloques"
+      ],
+      "estado": "verificado",
+      "tipo": "grey",
+      "bancas": 6,
+      "filtro": "CD"
+    },
+    {
+      "id": "B-04",
+      "titulo": "Vamos por más",
+      "texto": "Composición oficial consultada al corte.",
+      "fuentes": [
+        "bloques"
+      ],
+      "estado": "verificado",
+      "tipo": "grey",
+      "bancas": 12,
+      "filtro": "VPM"
+    },
+    {
+      "id": "B-05",
+      "titulo": "Ciudadanos Unidos / UCR",
+      "texto": "Composición oficial consultada al corte.",
+      "fuentes": [
+        "bloques"
+      ],
+      "estado": "verificado",
+      "tipo": "grey",
+      "bancas": 5,
+      "filtro": "UCR"
+    },
+    {
+      "id": "B-06",
+      "titulo": "Frente de Izquierda de los Trabajadores / PO",
+      "texto": "Composición oficial consultada al corte.",
+      "fuentes": [
+        "bloques"
+      ],
+      "estado": "verificado",
+      "tipo": "grey",
+      "bancas": 2,
+      "filtro": "FIT"
+    },
+    {
+      "id": "B-07",
+      "titulo": "Transformación",
+      "texto": "Composición oficial consultada al corte.",
+      "fuentes": [
+        "bloques"
+      ],
+      "estado": "verificado",
+      "tipo": "grey",
+      "bancas": 1,
+      "filtro": "TRA"
+    }
   ],
-
-  "resumen_bloques": [
-    { "bloque": "LLA",  "cls": "lla",  "bancas": "13", "nota": "alivio exigido <span class=\"cifra\">$435.000M</span> · condiciona quórum" },
-    { "bloque": "FxBA", "cls": "fxba", "bancas": "20", "nota": "monitor propio · posición coordinada" },
-    { "bloque": "CD",   "cls": "cd",   "bancas": "7",  "nota": "CD-01/02/03 sin respuesta al 19/10" },
-    { "bloque": "PRO",  "cls": "pro",  "bancas": "29", "nota": "mayoría relativa · Wolff preside" }
+  "temas": [
+    {
+      "id": "T-01",
+      "titulo": "Emergencia hídrica",
+      "texto": "El expediente aborda la emergencia hídrica y climática por el fenómeno El Niño.",
+      "fuentes": [
+        "emergencia"
+      ],
+      "estado": "verificado",
+      "tipo": "blue"
+    },
+    {
+      "id": "T-02",
+      "titulo": "Pago a proveedores",
+      "texto": "El proyecto trata la emisión de títulos de deuda pública para cancelar pagos a proveedores.",
+      "fuentes": [
+        "bono"
+      ],
+      "estado": "verificado",
+      "tipo": "blue"
+    },
+    {
+      "id": "T-03",
+      "titulo": "Infraestructura",
+      "texto": "La exposición ministerial incluyó movilidad y modernización del subte.",
+      "fuentes": [
+        "infra"
+      ],
+      "estado": "verificado",
+      "tipo": "blue"
+    },
+    {
+      "id": "T-04",
+      "titulo": "Educación",
+      "texto": "La propuesta educativa se enmarca en el plan Buenos Aires Aprende.",
+      "fuentes": [
+        "educacion"
+      ],
+      "estado": "verificado",
+      "tipo": "blue"
+    }
   ],
-
-  "transversales": [
-    { "tipo": "red",    "titulo": "CONVERGENCIA · IIBB",                  "texto": "LLA (tasa 0% servicios) · FxBA (exención total monotributistas + gastronomía). Sin respuesta articulada GCBA.", "span": 1 },
-    { "tipo": "red",    "titulo": "CONVERGENCIA · IVC / Vivienda",        "texto": "LLA pide cerrarlo; peronismo lo defiende. Caso Adorni: munición política.", "span": 1 },
-    { "tipo": "yellow", "titulo": "TENSIÓN · Coherencia fiscal",          "texto": "Superávit + impuestos patrimoniales (FxBA) · superávit + recorte organismos (LLA) · \"casi expansivo\" con IIBB cayendo (CD).", "span": 1 },
-    { "tipo": "yellow", "titulo": "TENSIÓN · Deuda + gasto corriente",   "texto": "LLA no aprobará deuda para gasto corriente · intereses +70% (FxBA) · Bono $600.000M dictaminado agudiza el debate.", "span": 1 },
-    { "tipo": "red",    "titulo": "TENSIÓN · Hídrico –44% vs Emergencia","texto": "FxBA (Iáñez, Mayra, Bielli): presupuesto de obras hídricas cayó 44% real pero se piden facultades por emergencia climática. Contradicción señalada por 4 diputadas en sesión 13/10.", "span": 1 },
-    { "tipo": "red",    "titulo": "CONVERGENCIA · Financiamiento de rebajas","texto": "LLA, FxBA y CD exigen saber cómo se financia cada medida. Puntos de fractura: ABL, patentes, IIBB.", "span": 2 }
-  ],
-
   "declaraciones": [
-    { "tipo": "grey",  "titulo": "Arengo · 7/10",                         "texto": "Superávit $1.000M · –15% planta · bono $600.000M · patentes sin suba · ABL congelado + exención jubilados · hoteles/rest./librerías exentos 1er sem. 2027.", "span": 1 },
-    { "tipo": "grey",  "titulo": "Ramírez (LLA) · 7/10",                  "texto": "Condiciones \"en las próximas semanas.\" Invitó a otros bloques.", "span": 1 },
-    { "tipo": "grey",  "titulo": "Pakgojz (LLA) · 2/10",                  "texto": "\"Muy rígidos.\" Superávit \"artificial y poco sostenible.\" Condiciona apoyo a recorte.", "span": 1 },
-    { "tipo": "grey",  "titulo": "Arenaza (LLA) · 2/10",                  "texto": "Privatizar SBASE y Autopistas (\"Ley Bases porteña\").", "span": 1 },
-    { "tipo": "grey",  "titulo": "Wolff (PRO) · 2/10",                    "texto": "Gobierno \"escuchará\" a LLA. Advirtió caída recaudación >6%.", "span": 1 },
-    { "tipo": "grey",  "titulo": "Neira (FxBA) · 6/10",                   "texto": "Lanzó monitor propio. IVC = \"vaciamiento.\"", "span": 1 },
-    { "tipo": "grey",  "titulo": "Nagata / Tagliaferri (CD) · 7/10",      "texto": "\"Presupuesto real.\" ¿Cómo se financia rebaja patentes? Obras hídricas paralizadas. Sala de 3 sin partida.", "span": 1 },
-    { "tipo": "grey",  "titulo": "Nagata (CD) · 08/10 — Emergencia",      "texto": "\"Ni en la pandemia se pidió esto.\" Propone emergencia en 2 etapas. Sugiere denominarla \"hídrica, climática y social.\"", "span": 1 },
-    { "tipo": "grey",  "titulo": "Neira (FxBA) · 14/10",                  "texto": "Exigió plazos Línea F. Sin respuesta de Bereciartua.", "span": 1 },
-    { "tipo": "grey",  "titulo": "Barroetaveña (FxBA) · 13/10",           "texto": "Línea F = \"ficción.\" Trambús = \"colectivo con ruedas tapadas.\" Fondo del subte desde 2012 debería tener ~USD 2.800M: ¿en qué se gastan?", "span": 1 },
-    { "tipo": "green", "titulo": "Ministro Infra · 13/10 — Respuestas",   "texto": "Línea F: adjudicación diciembre; 3 estaciones en obra (Cochabamba, Constitución, Branzen); 6 años plazo. Trambús T1: \"menos de un mes.\" Km reales: 9,8 (pasajeros) + 1,1 (cocheras/talleres) = 10,9. BASE: trenes 0km línea C salen fábrica esta semana.", "span": 1 },
-    { "tipo": "grey",  "titulo": "Miguel (GCBA) · 16/10",                  "texto": "\"BA Aprende.\" Sala de 3: \"articulación en la obligatoriedad\" — sin partida. CD-03 sin respuesta formal.", "span": 2 },
-    { "tipo": "green", "titulo": "Wolff · Neira · Pakgojz · Nagata — Firma dictámenes de mayoría · 19/10","texto": "PRO, FxBA, LLA y CD firman conjuntamente Exp. 3085-J (Emergencia Hídrica) y Exp. 3082-J (Bono Proveedores). Señal política: los cuatro bloques principales alinean posición antes del plenario. Cuestionamientos previos de FxBA y CD se incorporaron como límites en el texto.", "span": 2 }
+    {
+      "id": "D-01",
+      "titulo": "Línea F · licitación",
+      "texto": "GCBA informó la presentación de dos consorcios con propuestas técnicas.",
+      "fuentes": [
+        "lineaf"
+      ],
+      "estado": "verificado",
+      "tipo": "grey"
+    },
+    {
+      "id": "D-02",
+      "titulo": "Línea F · cronograma anunciado",
+      "texto": "El anuncio oficial prevé adjudicar en diciembre de 2026 e iniciar las obras a principios de 2027.",
+      "fuentes": [
+        "lineaf"
+      ],
+      "estado": "verificado",
+      "tipo": "grey"
+    },
+    {
+      "id": "D-03",
+      "titulo": "Línea F · recorrido proyectado",
+      "texto": "El proyecto anunciado contempla 9,8 kilómetros y 12 estaciones entre Barracas y Palermo.",
+      "fuentes": [
+        "lineaf"
+      ],
+      "estado": "verificado",
+      "tipo": "grey"
+    },
+    {
+      "id": "D-04",
+      "titulo": "Salud · exposición",
+      "texto": "El comunicado oficial presenta los ejes de atención primaria, prevención y salud mental.",
+      "fuentes": [
+        "salud"
+      ],
+      "estado": "verificado",
+      "tipo": "grey"
+    }
   ],
-
-  "pendientes": [
-    { "id": "RP-01", "titulo": "PASO",                     "tipo": "red",    "texto": "$29.000M → baja impositiva. Sin respuesta.", "span": 1 },
-    { "id": "RP-02", "titulo": "ABL –10%",                 "tipo": "red",    "texto": "Arengo ofreció congelamiento. Brecha sin cerrar.", "span": 1 },
-    { "id": "RP-03", "titulo": "IIBB",                     "tipo": "red",    "texto": "Manufactura / monotributistas / gastronomía. Sin respuesta GCBA.", "span": 1 },
-    { "id": "RP-04", "titulo": "Patentes híbridos/eléctricos","tipo": "red", "texto": "Exención + costo fiscal. Sin respuesta.", "span": 1 },
-    { "id": "RP-05", "titulo": "6 organismos",             "tipo": "red",    "texto": "DG Mujer · Economía Circular · Pol. Ambiental · Asuntos Estratégicos · Rel. Federales · IVC.", "span": 1 },
-    { "id": "RP-06", "titulo": "Autódromo",                "tipo": "red",    "texto": "Concesión privada. Sin valuación ni contrato.", "span": 1 },
-    { "id": "RP-07", "titulo": "Publicidad oficial",       "tipo": "red",    "texto": "Recorte $60.000M+. Sin respuesta.", "span": 1 },
-    { "id": "RP-08", "titulo": "IVC",                      "tipo": "red",    "texto": "Peronismo defiende; LLA quiere cerrar. Requiere posición GCBA.", "span": 1 },
-    { "id": "RP-09", "titulo": "Intereses deuda",          "tipo": "red",    "texto": "$592.000M (FxBA). Cotejar con planillas.", "span": 1 },
-    { "id": "RP-10", "titulo": "SBASE / Autopistas",       "tipo": "red",    "texto": "Sin posición oficial. Alta sensibilidad sindical.", "span": 1 },
-    { "id": "RP-11", "titulo": "Taquigrafías",             "tipo": "red",    "texto": "7/10, 14/10 y 16/10 sin publicar.", "span": 1 },
-    { "id": "RP-12", "titulo": "Fondo Anticíclico",        "tipo": "red",    "texto": "Verificar saldo y aplicaciones previas.", "span": 1 },
-    { "id": "RP-13", "titulo": "Sala de 3",                "tipo": "red",    "texto": "Sin partida en Educación. Miguel sin respuesta formal.", "span": 1 },
-    { "id": "RP-14", "titulo": "Bono proveedores ✅",       "tipo": "yellow", "texto": "Dictaminado 20/10. Pendiente plenario: voluntario/compulsivo, fecha de corte, criterios pymes (Iáñez). Intereses $114.000M ya en presupuesto.", "span": 1 },
-    { "id": "RP-15", "titulo": "Línea F",                  "tipo": "red",    "texto": "Adjudicación anunciada para dic. Kilómetros: 9,8 vs 10,9. Contingencia financiera sin plan B (Moderelli).", "span": 1 },
-    { "id": "RP-16", "titulo": "Belgrano Sur — secuencia", "tipo": "red",    "texto": "Diputados: convenio primero, autorización deuda después. GCBA quiere ambas en paralelo. Pendiente: término convenio Nación, composición $65M, deuda cero proveedores.", "span": 1 },
-    { "id": "RP-17", "titulo": "Intermodalidad tren-subte","tipo": "red",    "texto": "Descuento interrumpido agosto 2026. Sin justificación pública. FxBA exige restablecimiento. Afecta porteños Villa del Parque y bonaerenses combinados.", "span": 2 }
+  "seguimiento": [
+    {
+      "id": "S-01",
+      "titulo": "Emergencia · observaciones",
+      "texto": "Próximo hito: vencimiento del plazo de observaciones indicado en el expediente.",
+      "fuentes": [
+        "emergencia"
+      ],
+      "estado": "verificado",
+      "tipo": "yellow"
+    },
+    {
+      "id": "S-02",
+      "titulo": "Bono · observaciones",
+      "texto": "Próximo hito: vencimiento del plazo de observaciones indicado en el expediente.",
+      "fuentes": [
+        "bono"
+      ],
+      "estado": "verificado",
+      "tipo": "yellow"
+    },
+    {
+      "id": "S-03",
+      "titulo": "Línea F · adjudicación",
+      "texto": "Seguir la evolución de la licitación respecto del cronograma anunciado para diciembre.",
+      "fuentes": [
+        "lineaf"
+      ],
+      "estado": "verificado",
+      "tipo": "yellow"
+    },
+    {
+      "id": "S-04",
+      "titulo": "Línea F · inicio previsto",
+      "texto": "El anuncio sitúa el inicio de las obras a principios de 2027.",
+      "fuentes": [
+        "lineaf"
+      ],
+      "estado": "verificado",
+      "tipo": "yellow"
+    }
   ],
-
-  "semana": {
-    "titulo": "Semana 20/10 — Qué monitorear",
-    "items": [
-      { "tipo": "green", "titulo": "✅ 1 · Dictamen de mayoría P-01 — Emergencia Hídrica · 19/10", "texto": "PRO + FxBA + LLA + CD firmaron. UNICOMISIÓN: 6 meses prorrogable + Comisión Especial. Pendiente: sesión plenaria. Quórum y posiciones finales de LLA.", "span": 1 },
-      { "tipo": "green", "titulo": "✅ 2 · Dictamen de mayoría P-03 — Bono Proveedores · 19/10",  "texto": "PRO + FxBA + LLA + CD firmaron. Comisión Presupuesto: $600.000M, TAMAR, 2029. Pendiente: plenario. Voluntario/compulsivo y fecha de corte aún sin definir.", "span": 1 },
-      { "tipo": "blue",  "titulo": "🔴 3 · Ejecutivo → LLA y CD",     "texto": "¿Oferta formal sobre ABL, IIBB, PASO u organismos?", "span": 1 },
-      { "tipo": "blue",  "titulo": "🔴 4 · CD",                        "texto": "CD-01/02/03 sin respuesta. Nagata firma dictámenes pero mantiene cuestionamientos. Segundo bloque clave.", "span": 1 },
-      { "tipo": "blue",  "titulo": "🔴 5 · UCR / Ciudadanos Unidos",   "texto": "Sin declaraciones al 10/10. Votos necesarios.", "span": 1 },
-      { "tipo": "blue",  "titulo": "🔴 6 · Contradicción hídrico –44%","texto": "Iáñez, Mayra, Bielli y Bieri señalaron la incoherencia. ¿GCBA responde en plenario?", "span": 1 },
-      { "tipo": "blue",  "titulo": "🟡 7 · Línea F adjudicación",      "texto": "Ministro anunció diciembre. Monitorear si se cumple. Km real (9,8 vs 10,9) sigue en discusión.", "span": 1 },
-      { "tipo": "blue",  "titulo": "🟡 8 · Taquigrafías",              "texto": "7/10, 14/10 y 16/10 sin publicar. Verificar legislatura.gob.ar.", "span": 1 }
-    ]
-  }
+  "agenda": [
+    {
+      "id": "A-01",
+      "titulo": "Sesión ordinaria · 29/10",
+      "texto": "El comunicado legislativo del 19/10 menciona una sesión prevista para el jueves 29 de octubre.",
+      "fuentes": [
+        "agenda"
+      ],
+      "estado": "verificado",
+      "tipo": "blue"
+    },
+    {
+      "id": "A-02",
+      "titulo": "Libertad comercial",
+      "texto": "Las comisiones acordaron continuar trabajando en la redacción del proyecto para ampliar los acuerdos.",
+      "fuentes": [
+        "agenda"
+      ],
+      "estado": "verificado",
+      "tipo": "blue"
+    },
+    {
+      "id": "A-03",
+      "titulo": "Dictamen · emergencia",
+      "texto": "El registro del expediente consigna dictamen de mayoría del 19/10.",
+      "fuentes": [
+        "emergencia"
+      ],
+      "estado": "verificado",
+      "tipo": "green"
+    },
+    {
+      "id": "A-04",
+      "titulo": "Dictamen · bono",
+      "texto": "El registro del expediente consigna dictamen de mayoría del 19/10.",
+      "fuentes": [
+        "bono"
+      ],
+      "estado": "verificado",
+      "tipo": "green"
+    }
+  ]
 }
