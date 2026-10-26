@@ -4,9 +4,9 @@
   "revision": {
     "estado": "aprobado",
     "fecha": "2026-10-26",
-    "responsable": "Codex · cotejo de fuentes oficiales documentado en docs/AUDITORIA-2026-10-26.md",
+    "responsable": "Codex · revisión de fuentes públicas y atribuciones documentada en REVISION_PREGUNTAS.md",
     "css_sha256": "a437628833d4dce8256147b74311698428c31f35c1355af860d1f58256486ecb",
-    "contenido_sha256": "f5b06443b9fbcf4de6a66e158d635456471d4f4ba30d42846023ddb41837694c"
+    "contenido_sha256": "37c76f437411d468efe0fc04fcc7c3f588eb9f8f84643683a7f2799701dd0960"
   },
   "fuentes": {
     "bloques": {
@@ -58,9 +58,70 @@
       "etiqueta": "GCBA · Línea F",
       "url": "https://buenosaires.gob.ar/gcaba_historico/noticias/linea-f-dos-consorcios-de-empresas-nacionales-e-internacionales-se",
       "consultada": "2026-10-26"
+    },
+    "hacienda_prensa": {
+      "etiqueta": "Ámbito · 7/10",
+      "url": "https://www.ambito.com/politica/presupuesto-2027-caba-lla-le-reclamo-mas-ajuste-al-pro-y-el-pj-insiste-una-baja-focalizada-iibb-n6331169",
+      "consultada": "2026-10-26",
+      "clase": "prensa"
+    },
+    "bono_prensa": {
+      "etiqueta": "Ámbito · 9/10",
+      "url": "https://www.ambito.com/economia/caba-busca-emitir-un-bono-cancelar-deuda-proveedores-la-caida-la-recaudacion-n6331758",
+      "consultada": "2026-10-26",
+      "clase": "prensa"
+    },
+    "tagliaferri": {
+      "etiqueta": "Tagliaferri · 16/10",
+      "url": "https://guadalupetagliaferri.com.ar/presupuesto-2027-tagliaferri-advirtio-que-el-propio-gobierno-porteno-preve-mas-pobreza-y-mas-gente-en-la-calle/",
+      "consultada": "2026-10-26",
+      "clase": "actor"
+    },
+    "po_seguridad": {
+      "etiqueta": "PO · 21/10",
+      "url": "https://po.org.ar/comunicados/vanina-biasi-y-amanda-martin-interpelaron-al-ministro-de-seguridad-horacio-gimenez/",
+      "consultada": "2026-10-26",
+      "clase": "actor"
+    },
+    "docentes_prensa": {
+      "etiqueta": "Tiempo · 22/10",
+      "url": "https://www.tiempoar.com.ar/ta_article/la-legislatura-indaga-sobre-el-despido-de-docentes-y-el-cierre-de-grados-en-escuelas-portenas/",
+      "consultada": "2026-10-26",
+      "clase": "prensa"
+    },
+    "fxba": {
+      "etiqueta": "Análisis FxBA",
+      "url": "https://www.xn--presupuestoporteo-uxb.com.ar/",
+      "consultada": "2026-10-26",
+      "clase": "actor"
+    },
+    "seguridad_prensa": {
+      "etiqueta": "NU · 22/10",
+      "url": "https://www.noticiasurbanas.com.ar/gimenez-presento-el-presupuesto-2027-para-seguridad",
+      "consultada": "2026-10-26",
+      "clase": "prensa"
     }
   },
   "rondas": [
+    {
+      "id": "R-07",
+      "titulo": "Arengo · 7/10",
+      "texto": "Hacienda: apertura del debate del Presupuesto 2027.",
+      "fuentes": [
+        "hacienda_prensa"
+      ],
+      "palabras_clave": [
+        "IIBB",
+        "patentes",
+        "recorte del gasto"
+      ],
+      "fuentes_debate": [
+        "hacienda_prensa"
+      ],
+      "estado": "verificado",
+      "tipo": "yellow",
+      "alcance_debate": "En debate"
+    },
     {
       "id": "R-01",
       "titulo": "Bereciartua · 13/10",
@@ -69,7 +130,17 @@
         "infra"
       ],
       "estado": "verificado",
-      "tipo": "yellow"
+      "tipo": "yellow",
+      "palabras_clave": [
+        "tarifas",
+        "financiamiento",
+        "Línea F"
+      ],
+      "fuentes_debate": [
+        "fxba",
+        "infra"
+      ],
+      "alcance_debate": "Agenda al 26/10"
     },
     {
       "id": "R-02",
@@ -79,7 +150,17 @@
         "educacion"
       ],
       "estado": "verificado",
-      "tipo": "yellow"
+      "tipo": "yellow",
+      "palabras_clave": [
+        "sala de 3",
+        "cierre de cursos",
+        "cargos docentes"
+      ],
+      "fuentes_debate": [
+        "hacienda_prensa",
+        "docentes_prensa"
+      ],
+      "alcance_debate": "Agenda al 26/10"
     },
     {
       "id": "R-03",
@@ -89,7 +170,37 @@
         "habitat"
       ],
       "estado": "verificado",
-      "tipo": "yellow"
+      "tipo": "yellow",
+      "palabras_clave": [
+        "urbanización",
+        "situación de calle",
+        "CPI",
+        "El Niño"
+      ],
+      "fuentes_debate": [
+        "tagliaferri"
+      ],
+      "alcance_debate": "En debate"
+    },
+    {
+      "id": "R-08",
+      "titulo": "Giménez · 21/10",
+      "texto": "Seguridad: exposición ante la Comisión de Presupuesto.",
+      "fuentes": [
+        "seguridad_prensa",
+        "po_seguridad"
+      ],
+      "palabras_clave": [
+        "operativos",
+        "protesta",
+        "publicidad"
+      ],
+      "fuentes_debate": [
+        "po_seguridad"
+      ],
+      "estado": "verificado",
+      "tipo": "yellow",
+      "alcance_debate": "En debate"
     },
     {
       "id": "R-04",
@@ -99,7 +210,15 @@
         "salud"
       ],
       "estado": "verificado",
-      "tipo": "yellow"
+      "tipo": "yellow",
+      "palabras_clave": [
+        "partida real",
+        "prioridades de gasto"
+      ],
+      "fuentes_debate": [
+        "fxba"
+      ],
+      "alcance_debate": "Agenda al 26/10"
     },
     {
       "id": "R-05",
@@ -109,7 +228,16 @@
         "debate"
       ],
       "estado": "verificado",
-      "tipo": "yellow"
+      "tipo": "yellow",
+      "palabras_clave": [
+        "bono proveedores",
+        "intereses",
+        "deuda"
+      ],
+      "fuentes_debate": [
+        "bono_prensa"
+      ],
+      "alcance_debate": "En debate"
     },
     {
       "id": "R-06",
@@ -119,7 +247,16 @@
         "agenda"
       ],
       "estado": "verificado",
-      "tipo": "yellow"
+      "tipo": "yellow",
+      "palabras_clave": [
+        "bono proveedores",
+        "emergencia hídrica",
+        "libertad comercial"
+      ],
+      "fuentes_debate": [
+        "agenda"
+      ],
+      "alcance_debate": "En debate"
     }
   ],
   "preguntas": [
@@ -409,6 +546,190 @@
       ],
       "estado": "verificado",
       "tipo": "green"
+    }
+  ],
+  "preguntas_bloques": [
+    {
+      "id": "Q-01",
+      "filtro": "LLA",
+      "actor": "N. Pakgojz",
+      "tema": "Gasto",
+      "texto": "Vincular bajas impositivas con recorte del gasto.",
+      "fecha": "2026-10-07",
+      "clase": "Reclamo",
+      "fuentes": [
+        "hacienda_prensa"
+      ],
+      "estado": "verificado"
+    },
+    {
+      "id": "Q-02",
+      "filtro": "LLA",
+      "actor": "N. Pakgojz",
+      "tema": "Estado",
+      "texto": "Reducir estructuras y concesionar el Autódromo.",
+      "fecha": "2026-10-07",
+      "clase": "Reclamo",
+      "fuentes": [
+        "hacienda_prensa"
+      ],
+      "estado": "verificado"
+    },
+    {
+      "id": "Q-03",
+      "filtro": "FxBA",
+      "actor": "C. Neira",
+      "tema": "IIBB",
+      "texto": "Eximir a monotributistas y gastronómicos.",
+      "fecha": "2026-10-07",
+      "clase": "Reclamo",
+      "fuentes": [
+        "hacienda_prensa"
+      ],
+      "estado": "verificado"
+    },
+    {
+      "id": "Q-04",
+      "filtro": "FxBA",
+      "actor": "C. Neira",
+      "tema": "Bono",
+      "texto": "¿Qué proveedores, montos y antigüedad abarca?",
+      "fecha": "2026-10-08",
+      "clase": "Pregunta",
+      "fuentes": [
+        "bono_prensa"
+      ],
+      "estado": "verificado"
+    },
+    {
+      "id": "Q-05",
+      "filtro": "FxBA",
+      "actor": "Bloque",
+      "tema": "Salud / educación",
+      "texto": "Cuestiona las partidas en términos reales.",
+      "fecha": "2026-10-26",
+      "clase": "Reclamo",
+      "fuentes": [
+        "fxba"
+      ],
+      "estado": "verificado"
+    },
+    {
+      "id": "Q-06",
+      "filtro": "FxBA",
+      "actor": "Bloque",
+      "tema": "Transporte",
+      "texto": "Cuestiona las prioridades de inversión y las tarifas.",
+      "fecha": "2026-10-26",
+      "clase": "Reclamo",
+      "fuentes": [
+        "fxba"
+      ],
+      "estado": "verificado"
+    },
+    {
+      "id": "Q-07",
+      "filtro": "CD",
+      "actor": "S. Nagata",
+      "tema": "Patentes",
+      "texto": "¿Cuál es el costo fiscal y cómo se financia?",
+      "fecha": "2026-10-07",
+      "clase": "Pregunta",
+      "fuentes": [
+        "hacienda_prensa"
+      ],
+      "estado": "verificado"
+    },
+    {
+      "id": "Q-08",
+      "filtro": "CD",
+      "actor": "S. Nagata",
+      "tema": "Bono",
+      "texto": "¿Será voluntario o compulsivo?",
+      "fecha": "2026-10-08",
+      "clase": "Pregunta",
+      "fuentes": [
+        "bono_prensa"
+      ],
+      "estado": "verificado"
+    },
+    {
+      "id": "Q-09",
+      "filtro": "CD",
+      "actor": "G. Tagliaferri",
+      "tema": "Obras hídricas",
+      "texto": "¿Qué obras justifican nuevo endeudamiento?",
+      "fecha": "2026-10-07",
+      "clase": "Pregunta",
+      "fuentes": [
+        "hacienda_prensa"
+      ],
+      "estado": "verificado"
+    },
+    {
+      "id": "Q-10",
+      "filtro": "CD",
+      "actor": "G. Tagliaferri",
+      "tema": "Vivienda",
+      "texto": "Reclama fondos para urbanización.",
+      "fecha": "2026-10-16",
+      "clase": "Reclamo",
+      "fuentes": [
+        "tagliaferri"
+      ],
+      "estado": "verificado"
+    },
+    {
+      "id": "Q-11",
+      "filtro": "CD",
+      "actor": "G. Tagliaferri",
+      "tema": "Primera infancia",
+      "texto": "¿Cómo se garantiza jornada completa al pasar sala de 3?",
+      "fecha": "2026-10-16",
+      "clase": "Pregunta",
+      "fuentes": [
+        "tagliaferri"
+      ],
+      "estado": "verificado"
+    },
+    {
+      "id": "Q-12",
+      "filtro": "FIT",
+      "actor": "V. Biasi",
+      "tema": "Seguridad",
+      "texto": "¿Cuánto cuestan operativos y publicidad?",
+      "fecha": "2026-10-21",
+      "clase": "Pregunta",
+      "fuentes": [
+        "po_seguridad"
+      ],
+      "estado": "verificado"
+    },
+    {
+      "id": "Q-13",
+      "filtro": "FIT",
+      "actor": "A. Martín",
+      "tema": "Protesta",
+      "texto": "Reclama garantías para el derecho a protestar.",
+      "fecha": "2026-10-21",
+      "clase": "Reclamo",
+      "fuentes": [
+        "po_seguridad"
+      ],
+      "estado": "verificado"
+    },
+    {
+      "id": "Q-14",
+      "filtro": "FIT",
+      "actor": "A. Martín / V. Biasi",
+      "tema": "Educación",
+      "texto": "Piden informar cierres de cursos e impacto docente.",
+      "fecha": "2026-10-22",
+      "clase": "Reclamo",
+      "fuentes": [
+        "docentes_prensa"
+      ],
+      "estado": "verificado"
     }
   ]
 }

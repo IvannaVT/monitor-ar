@@ -22,4 +22,6 @@ El workflow publica únicamente index.html, monitor_ar.html, monitor_leg.html y 
 
 ## Versión del 26/10/2026
 
+Para preguntas y controversias, priorizar registro oficial y publicaciones del propio actor. Si la atribución solo aparece en prensa, identificarla. La fuente acredita el planteo, no la veracidad de la acusación. Usar síntesis sin comillas y no presumir falta de respuesta. Distinguir fecha del hecho, cobertura y consulta. Las palabras clave son selección editorial; indicar si pertenecen a agenda posterior o general. Ver `REVISION_PREGUNTAS.md`.
+
 Se reemplazaron antecedentes sin evidencia accesible por hechos respaldados: exposiciones ministeriales, estado de expedientes, composición completa y cronograma anunciado de Línea F. Se conservaron colores, clases, mosaicos y filtros. Cambiaron los textos, el número de filas y la longitud de la página. El registro histórico está en `docs/AUDITORIA-2026-10-26.md`.
