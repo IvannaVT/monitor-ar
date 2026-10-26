@@ -20,7 +20,7 @@ def render_monitor(d):
         return tile(row['titulo'], e(row['texto']), row['tipo'], row, extra)
 
     def section(number, anchor, title, content):
-        return f'<section id="{anchor}"><div class="sec-label">Sección {number}</div><h2>{e(title)}</h2>{content}</section>'
+        return f'<section id="{anchor}"><div class="sec-label">Sección {number} · Social Listening GA</div><h2>{e(title)}</h2>{content}</section>'
 
     def group(rows):
         return '<div class="mosaico">'+''.join(map(record_tile, rows))+'</div>'
@@ -30,10 +30,10 @@ def render_monitor(d):
     nav = [('conclusion','Conclusión ejecutiva'),('votos','Composición del recinto'),('controversiales','Temas y controversias'),('posiciones','Posiciones por bloque'),('seguimiento','Seguimiento'),('agenda','Agenda legislativa'),('rondas','Rondas ministeriales')]
     body += '<nav class="nav-interna" aria-label="Secciones del monitor">'+''.join(f'<a href="#{anchor}">{i} {e(label)}</a>' for i,(anchor,label) in enumerate(nav,1))+'</nav>'
 
-    conclusion = tile('Síntesis del debate · '+date, 'Impuestos, gasto público, vivienda, educación y seguridad concentran los planteos relevados. La cobertura reúne preguntas y posiciones atribuidas a sus fuentes.', 'red', d['panorama'][0])
+    conclusion = tile('Síntesis del debate · '+date+' · Social Listening GA', 'Impuestos, gasto público, vivienda, educación y seguridad concentran los planteos relevados. La cobertura reúne preguntas y posiciones atribuidas a sus fuentes.', 'red', d['panorama'][0])
     actors = ''
     for block, color in [('LLA','red'),('FxBA','blue'),('CD','green'),('FIT','purple')]:
-        names = list(dict.fromkeys(r['actor'] for r in d['preguntas_bloques'] if r['filtro']==block and r['actor']!='Bloque'))
+        names = list(dict.fromkeys(name for r in d['preguntas_bloques'] if r['filtro']==block and r['actor']!='Bloque' for name in r['actor'].split(' / ')))
         actors += f'<p><strong class="actor-{color}">{block}:</strong> {e(" · ".join(names))}</p>'
     press = [key for key,s in sources.items() if s.get('clase')=='prensa']
     actor_sources = [key for key,s in sources.items() if s.get('clase')=='actor']

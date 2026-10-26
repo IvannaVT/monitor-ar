@@ -2,6 +2,8 @@
 
 Referencia: «Monitor LEG — Presupuesto CABA 2027 (1).html», exportado por la usuaria. Se extrae únicamente su CSS de diseño; no se incorpora el contenedor HTML duplicado de la exportación ni sus afirmaciones sin cotejo.
 
+La identificación editorial se escribe «Social Listening GA», según la corrección de la usuaria, en las etiquetas de sección y síntesis. No se usa la abreviatura SL_GA ni se le atribuyen métricas sin método.
+
 Se reproducen ancho de 980px, paleta, tipografía de escritorio, navegación por anclas, secuencias de mosaicos 1/2/3/2, tarjetas numéricas, controversias, tabla por bloque, seguimiento y agenda. Se conservan fuentes legibles, foco de teclado, filtros con aria-pressed y fichas móviles. Los tres bloques del panorama siguen siendo desplegables, abiertos inicialmente para mostrar la síntesis completa.
 
 No es una copia textual: conserva el título público aprobado, los datos cotejados y el corte 26/10; no reproduce «uso interno», estado futuro al 29/10, probabilidades, resonancia sin metodología, latencias de medios ni predicciones de quórum. Las alturas y longitudes cambian porque cambia el contenido. Se agrega una séptima sección para conservar las ocho rondas ministeriales.
