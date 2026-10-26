@@ -6,7 +6,7 @@
     "fecha": "2026-10-26",
     "responsable": "Codex · revisión de fuentes públicas y atribuciones documentada en REVISION_PREGUNTAS.md",
     "css_sha256": "a27c06f6376aaf9b1ceb70c1b4585f6d830148a2e58d15a731477cef6c180c55",
-    "contenido_sha256": "e8a1be4c8bc533cf889fffeb21f3e320909a6031af99052b383f0f028f77deb1"
+    "contenido_sha256": "7528221a97e9ad97e24a21360a5282eb0e0067fc29ea48f708b9b810ce62d06d"
   },
   "fuentes": {
     "bloques": {
@@ -747,7 +747,7 @@
     },
     {
       "id": "PAN-02",
-      "titulo": "Hacia dónde vamos",
+      "titulo": "Debate instalado en medios",
       "texto": "Baja de impuestos ↔ recorte del gasto · endeudamiento ↔ ejecución de obras · operativos ↔ derecho a protesta.",
       "fuentes": [
         "hacienda_prensa",
