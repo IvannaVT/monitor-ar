@@ -3,6 +3,7 @@ import argparse
 import hashlib
 import html
 import json
+import re
 from datetime import date as CalendarDate
 from pathlib import Path
 from urllib.parse import urlparse
@@ -63,8 +64,8 @@ def build():
     body += tiles('Rondas ministeriales y sesiones informativas', d['rondas'])
     body += '<hr class="divider"><section><h2>Proyectos prioritarios</h2><div style="overflow-x:auto"><table><thead><tr><th>#</th><th>Tema</th><th>Estado parlamentario</th><th>Est.</th></tr></thead><tbody>'
     for r in d['preguntas']:
-        body += f'<tr><td>{e(r["id"])}</td><td>{e(r["titulo"])}</td><td>{e(r["texto"])} {refs(r)}</td><td>{e(r["simbolo"])}</td></tr>'
-    body += '</tbody></table></div></section><hr class="divider"><section><h2>Preguntas y reclamos por bloque</h2><p style="font-size:.72rem;color:var(--muted)">Síntesis de intervenciones y posiciones públicas; no son citas textuales ni implican falta de respuesta.</p><div class="filtros">'
+        body += f'<tr><td data-label="#">{e(r["id"])}</td><td data-label="Tema">{e(r["titulo"])}</td><td data-label="Estado">{e(r["texto"])} {refs(r)}</td><td data-label="Indicador">{e(r["simbolo"])}</td></tr>'
+    body += '</tbody></table></div></section><hr class="divider"><section><h2>Preguntas y reclamos por bloque</h2><p class="section-note">Síntesis de intervenciones y posiciones públicas; no son citas textuales ni implican falta de respuesta.</p><div class="filtros">'
     for key, label in [('todos','Todos'),('LLA','🔴 LLA'),('FxBA','🔵 FxBA'),('CD','🟢 CD'),('FIT','FIT/PO')]:
         active = ' class="activo"' if key == 'todos' else ''
         body += f'<button{active} onclick="filtrar(\'{key}\',this)">{label}</button>'
@@ -76,13 +77,15 @@ def build():
         fecha = '/'.join(reversed(r['fecha'].split('-')[1:]))
         if r['fuentes'] == ['fxba']: fecha += ' · consulta'
         if r['fuentes'] == ['docentes_prensa']: fecha += ' · cobertura'
-        body += f'<tr data-bloque="{e(r["filtro"])}"><td>{label}</td><td>{e(r["actor"])}</td><td>{e(r["tema"])}</td><td>{e(r["texto"])}</td><td>{fecha}</td><td>{refs(r)}</td></tr>'
+        body += f'<tr data-bloque="{e(r["filtro"])}"><td data-label="Bloque">{label}</td><td data-label="Actor">{e(r["actor"])}</td><td data-label="Tema">{e(r["tema"])}</td><td data-label="Planteo">{e(r["texto"])}</td><td data-label="Fecha">{fecha}</td><td data-label="Fuente">{refs(r)}</td></tr>'
     banks = ' · '.join(f'{e(r["filtro"])} {r["bancas"]}' for r in d['bloques'])
-    body += f'</tbody></table></div><div style="font-size:.72rem;color:var(--muted)">Bancas: {banks}. Total: 60. {refs(d["bloques"][0])}. No determina el voto de cada proyecto.</div></section><hr class="divider"><div class="mosaico-par">'
+    body += f'</tbody></table></div><div class="bank-note">Bancas: {banks}. Total: 60. {refs(d["bloques"][0])}. No determina el voto de cada proyecto.</div></section><hr class="divider"><div class="mosaico-par">'
     body += tiles('Temas transversales', d['temas']) + tiles('Anuncios y antecedentes oficiales', d['declaraciones'])
     body += '</div><hr class="divider"><div class="mosaico-par">'
     body += tiles('Puntos de seguimiento', d['seguimiento']) + tiles('Agenda legislativa', d['agenda'])
     body += f'</div><footer>Monitor LEG · CABA · {date} ART · Fuentes oficiales, actores y prensa identificadas en cada registro.</footer>'
+    # One content wrapper per cell keeps links and text together in mobile grids.
+    body = re.sub(r'(<td data-label="[^"]*">)(.*?)(</td>)', r'\1<div>\2</div>\3', body)
     template = (ROOT / 'monitor_leg.template.html').read_text(encoding='utf-8')
     assert template.count('{{CONTENT}}') == 1
     css = template.split('<style>',1)[1].split('</style>',1)[0]
