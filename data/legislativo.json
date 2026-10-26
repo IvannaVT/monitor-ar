@@ -6,7 +6,7 @@
     "fecha": "2026-10-26",
     "responsable": "Codex · revisión de fuentes públicas y atribuciones documentada en REVISION_PREGUNTAS.md",
     "css_sha256": "a27c06f6376aaf9b1ceb70c1b4585f6d830148a2e58d15a731477cef6c180c55",
-    "contenido_sha256": "4a2030d321b0b2355fd85aa948653a7cf032d5e8b503e44a2fb88736e7b5a370"
+    "contenido_sha256": "e8a1be4c8bc533cf889fffeb21f3e320909a6031af99052b383f0f028f77deb1"
   },
   "fuentes": {
     "bloques": {
@@ -736,9 +736,10 @@
     {
       "id": "PAN-01",
       "titulo": "Dónde estamos",
-      "texto": "Impuestos, servicios, vivienda y seguridad atraviesan los planteos relevados. El monitor reúne su repercusión en medios y las posiciones por bloque.",
+      "texto": "IIBB · patentes · tarifas · vivienda · educación · seguridad.",
       "fuentes": [
         "hacienda_prensa",
+        "fxba",
         "tagliaferri",
         "po_seguridad"
       ],
@@ -747,16 +748,17 @@
     {
       "id": "PAN-02",
       "titulo": "Hacia dónde vamos",
-      "texto": "El debate avanza hacia el tratamiento legislativo. El foco está en los cambios a los proyectos y las respuestas del Ejecutivo, sin anticipar acuerdos ni votaciones.",
+      "texto": "Baja de impuestos ↔ recorte del gasto · endeudamiento ↔ ejecución de obras · operativos ↔ derecho a protesta.",
       "fuentes": [
-        "agenda"
+        "hacienda_prensa",
+        "po_seguridad"
       ],
       "estado": "verificado"
     },
     {
       "id": "PAN-03",
       "titulo": "Próximos pasos",
-      "texto": "Seguir la sesión prevista para el 29/10, registrar novedades y contrastar las respuestas con las preguntas relevadas.",
+      "texto": "Atención: sesión ordinaria prevista para el 29/10. Revisar convocatoria y temario oficial.",
       "fuentes": [
         "agenda"
       ],
