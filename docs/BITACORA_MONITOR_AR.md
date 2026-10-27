@@ -43,3 +43,7 @@ La propuesta de sitio NO fue subida ni publicada. La revisión automática recha
 ## AR-20261026-02 · autorización para presentar la propuesta
 
 La usuaria autorizó explícitamente «Sí, autorizo crear la rama y la PR» para subir el paquete preparado. Alcance: crear la rama y abrir la propuesta, sin integrarla ni publicarla. La aceptación de la edición completa y la revisión visual siguen pendientes.
+
+## AR-20261026-02 · propuesta presentada
+
+Se creó la rama autorizada y se abrió el borrador https://github.com/IvannaVT/monitor-ar/pull/12. Commit inicial de la propuesta: 2d154901257fe87b947795fe2f1c6907afc775ee. Los controles de GitHub check, extract y audit aprobaron sobre ese commit; el despliegue quedó omitido. Se mantiene EN REVISIÓN, sin integración ni publicación. Esta entrada resuelve la autorización pendiente del registro anterior, que se conserva como antecedente.
