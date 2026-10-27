@@ -48,6 +48,25 @@ header .meta{font-size:11px;color:var(--muted);margin-top:4px}
 .theme-switch button{font:inherit;font-size:.85rem;font-weight:600;min-height:44px;padding:8px 14px;border:1px solid transparent;border-radius:22px;background:transparent;color:var(--muted);cursor:pointer}
 .theme-switch button[aria-pressed="true"]{background:var(--accent);color:var(--on-accent)}
 .theme-switch button:hover{border-color:var(--accent)}
+.header-top{align-items:flex-start}
+.header-tools{display:flex;flex-direction:column;align-items:flex-end;gap:8px;margin-left:auto}
+.header-links{display:flex;justify-content:flex-end;flex-wrap:wrap;gap:16px}
+.header-links a{display:inline-flex;align-items:center;min-height:44px;font-size:.85rem;font-weight:700}
+.section-heading{display:flex;align-items:baseline;justify-content:space-between;flex-wrap:wrap;gap:4px 16px;margin-bottom:12px;border-bottom:1px solid var(--border)}
+.section-heading h2{border:0;margin-bottom:0;min-width:0}
+.back-top{display:inline-flex;align-items:center;min-height:44px;font-size:.8rem;white-space:nowrap}
+.section-end{display:flex;justify-content:flex-end;margin-top:8px}
+.banks-strip{overflow-x:auto;white-space:nowrap;font-size:.8rem;padding:8px 12px;border:1px solid var(--border);background:var(--surface);border-radius:5px;margin:18px 0}
+.banks-strip:focus-visible{outline:3px solid var(--focus);outline-offset:3px}
+.banks-strip p{margin:0;white-space:nowrap}
+.utility-panel{position:fixed;inset:0;width:min(900px,calc(100% - 28px));max-height:88dvh;margin:auto;padding:20px;border:1px solid var(--border);border-radius:10px;background:var(--bg);color:var(--text);overflow-y:auto;overscroll-behavior:contain}
+.utility-panel::backdrop{background:rgba(7,21,38,.75)}
+body:has(.utility-panel[open]){overflow:hidden}
+.panel-heading{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;margin-bottom:16px}
+.panel-heading h2{margin:0;flex:1}
+.panel-close{font:inherit;font-size:.9rem;min-height:44px;padding:8px 12px;border:1px solid var(--border);border-radius:6px;background:var(--surface);color:var(--text);cursor:pointer}
+.panel-close:hover{border-color:var(--accent)}
+.panel-content{margin-bottom:12px}
 .corte{display:inline-block;background:var(--yellow-bg);color:var(--yellow);border:1px solid var(--yellow-border);border-radius:4px;padding:1px 7px;font-size:11px;font-weight:700}
 .aviso-top{background:var(--yellow-bg);border-left:4px solid var(--yellow);padding:7px 12px;border-radius:0 5px 5px 0;margin:8px 0 14px;font-size:11.5px;color:var(--yellow)}
 .nav-interna{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:18px;padding:10px 0;border-bottom:1px dashed var(--border)}
@@ -147,6 +166,9 @@ h3{font-size:.85rem;color:var(--accent);margin:14px 0 8px}.cont-titulo{margin:0}
 section[id],#proyectos,#preguntas{scroll-margin-top:16px}
 .filtros button,.nav-interna a{min-height:34px;display:inline-flex;align-items:center}
 @media(max-width:680px){
+ .header-tools{width:100%}.header-links a{font-size:.9rem}
+ .utility-panel{padding:16px}.section-heading{align-items:flex-start}
+ .banks-strip{font-size:.85rem}
  body{font-size:16px;padding:0 14px 50px}
  header h1{font-size:1.4rem;line-height:1.3}header .meta{font-size:.9rem;line-height:1.6;margin-top:10px}
  .corte{font-size:.85rem}.aviso-top{font-size:.9rem;padding:12px;line-height:1.6}
@@ -181,6 +203,24 @@ function setTheme(theme){
  try { localStorage.setItem('monitor-leg-theme',selected); } catch (_) { /* The switch still works without storage. */ }
 }
 setTheme(document.documentElement.dataset.theme);
+function abrirPanel(id,event){
+ const panel=document.getElementById(id);
+ if(!panel || panel.tagName!=='DIALOG')return;
+ if(event)event.preventDefault();
+ if(!panel.open)panel.showModal();
+}
+function cerrarPanel(id){
+ const panel=document.getElementById(id);
+ if(panel && panel.open)panel.close();
+}
+document.querySelectorAll('a[data-panel]').forEach(link=>link.addEventListener('click',event=>abrirPanel(link.dataset.panel,event)));
+// Preserve direct links to the former long sections without showing them below.
+function panelDesdeEnlace(){
+ const id=location.hash.slice(1);
+ if(id==='agenda'||id==='rondas')abrirPanel(id);
+}
+window.addEventListener('hashchange',panelDesdeEnlace);
+panelDesdeEnlace();
 function filtrar(b,btn){
  document.querySelectorAll('.filtros button').forEach(x=>{x.classList.remove('activo');x.setAttribute('aria-pressed','false');});
  btn.classList.add('activo');btn.setAttribute('aria-pressed','true');

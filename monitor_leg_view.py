@@ -20,17 +20,20 @@ def render_monitor(d):
         return tile(row['titulo'], e(row['texto']), row['tipo'], row, extra)
 
     def section(number, anchor, title, content):
-        return f'<section id="{anchor}"><div class="sec-label">Sección {number} · Social Listening GA</div><h2>{e(title)}</h2>{content}</section>'
+        return f'<section id="{anchor}" aria-labelledby="{anchor}-titulo"><div class="section-heading"><h2 id="{anchor}-titulo">{e(title)}</h2><a class="back-top" href="#inicio">↑ Volver arriba</a></div>{content}<div class="section-end"><a class="back-top" href="#inicio">↑ Volver arriba</a></div></section>'
+
+    def panel(anchor, title, content):
+        return f'<dialog id="{anchor}" class="utility-panel" aria-labelledby="{anchor}-titulo"><div class="panel-heading"><h2 id="{anchor}-titulo">{e(title)}</h2><button type="button" class="panel-close" onclick="cerrarPanel(\'{anchor}\')">Cerrar ×</button></div><div class="panel-content">{content}</div><a class="back-top" href="#inicio" onclick="cerrarPanel(\'{anchor}\')">↑ Volver arriba</a></dialog>'
 
     def group(rows):
         return '<div class="mosaico">'+''.join(map(record_tile, rows))+'</div>'
 
-    body = f'<header><div class="header-top"><div class="kicker">Presupuesto CABA 2027 · Seguimiento legislativo y de medios</div><div class="theme-switch" role="group" aria-label="Apariencia"><button type="button" data-theme-choice="light" aria-pressed="false" onclick="setTheme(\'light\')">Claro</button><button type="button" data-theme-choice="dark" aria-pressed="true" onclick="setTheme(\'dark\')">Oscuro azul</button></div></div><h1>Monitor LEG | Presupuesto 2027 en medios</h1><p class="meta">Repercusión de las rondas presupuestarias de la Ciudad en medios locales y nacionales: temas destacados, controversias y planteos por bloque.</p><div class="meta">Corte de información: <span class="corte">⏱ {date} ART</span></div></header>'
+    body = f'<header id="inicio" tabindex="-1"><div class="header-top"><div class="kicker">Presupuesto CABA 2027 · Seguimiento legislativo y de medios</div><div class="header-tools"><nav class="header-links" aria-label="Agenda y rondas ministeriales"><a href="#agenda" data-panel="agenda" aria-haspopup="dialog" aria-controls="agenda">Agenda</a><a href="#rondas" data-panel="rondas" aria-haspopup="dialog" aria-controls="rondas">Rondas ministeriales</a></nav><div class="theme-switch" role="group" aria-label="Apariencia"><button type="button" data-theme-choice="light" aria-pressed="false" onclick="setTheme(\'light\')">Claro</button><button type="button" data-theme-choice="dark" aria-pressed="true" onclick="setTheme(\'dark\')">Oscuro azul</button></div></div></div><h1>Monitor LEG | Presupuesto 2027 en medios</h1><p class="meta">Repercusión de las rondas presupuestarias de la Ciudad en medios locales y nacionales: temas destacados, controversias y planteos por bloque.</p><div class="meta">Corte de información: <span class="corte">⏱ {date} ART</span></div></header>'
     body += '<div class="aviso-top">Sesión ordinaria prevista: <strong>29/10</strong>. Los dictámenes no equivalen a sanción. Línea F: adjudicación anunciada para diciembre e inicio de obras previsto en 2027.</div>'
-    nav = [('conclusion','Síntesis'),('votos','Bancas'),('controversiales','Debates'),('posiciones','Posiciones'),('seguimiento','Seguimiento'),('agenda','Agenda'),('rondas','Rondas')]
+    nav = [('conclusion','Síntesis'),('controversiales','Debates'),('posiciones','Posiciones'),('seguimiento','Seguimiento')]
     body += '<nav class="nav-interna" aria-label="Secciones del monitor">'+''.join(f'<a href="#{anchor}">{e(label)}</a>' for anchor,label in nav)+'</nav>'
 
-    conclusion = tile('Síntesis del debate · '+date+' · Social Listening GA', 'Impuestos, gasto público, vivienda, educación y seguridad concentran los planteos relevados. La cobertura reúne preguntas y posiciones atribuidas a sus fuentes.', 'red', d['panorama'][0])
+    conclusion = tile('Síntesis del debate · '+date, 'Impuestos, gasto público, vivienda, educación y seguridad concentran los planteos relevados. La cobertura reúne preguntas y posiciones atribuidas a sus fuentes.', 'red', d['panorama'][0])
     actors = ''
     for block, color in [('LLA','red'),('FxBA','blue'),('CD','green'),('FIT','purple')]:
         names = list(dict.fromkeys(name for r in d['preguntas_bloques'] if r['filtro']==block and r['actor']!='Bloque' for name in r['actor'].split(' / ')))
@@ -45,20 +48,13 @@ def render_monitor(d):
     conclusion += '</div>'
     # Existing reviewed themes are displayed in the reference's paired panels.
     conclusion += '<div class="mosaico spaced">'+tile('Temas transversales', '<br>'.join(f'<strong>{e(r["titulo"])}</strong> — {e(r["texto"])}' for r in d['temas'][:2]),'blue',{'fuentes':['emergencia','bono']})+tile('Servicios e infraestructura', '<br>'.join(f'<strong>{e(r["titulo"])}</strong> — {e(r["texto"])}' for r in d['temas'][2:]),'purple',{'fuentes':['infra','educacion']})+'</div>'
-    body += section(1,'conclusion','Conclusión ejecutiva — Temas, cruces en medios y agenda',conclusion)
-
-    colors = {'LLA':'lla','FxBA':'fxba','CD':'cd','VPM':'pro'}
-    banks = '<div class="votos-grid">'
-    for block in d['bloques']:
-        banks += f'<div class="voto-card vc-{colors.get(block["filtro"],"other")}"><div class="bloc">{e(block["titulo"])}</div><div class="num">{block["bancas"]}</div><div class="sub">bancas · {block["bancas"]/60*100:.1f}% del recinto</div></div>'
-    banks += '</div><div class="quorum-bar"><strong>Total: 60 bancas</strong><p class="section-note">Composición oficial al corte. La pertenencia a un bloque y la firma de un dictamen no confirman el voto en el recinto.</p>'+refs(d['bloques'][0])+'</div>'
-    banks += '<h3 id="proyectos">Proyectos prioritarios</h3><div class="mosaico">'+''.join(tile(r['titulo'], e(r['texto']), 'green' if r['id']!='P-02' else 'yellow', r) for r in d['preguntas'])+'</div>'
-    body += '<hr class="divider">'+section(2,'votos','Composición del recinto y proyectos',banks)
+    body += section(1,'conclusion','Síntesis',conclusion)
 
     controversies = ''
     for i,row in enumerate(d['panorama'][:2],1):
         controversies += f'<article class="cont-item"><div class="cont-header"><span class="cont-num">C-{i:02}</span><h3 class="cont-titulo">{e(row["titulo"])}</h3></div><div class="cont-body">{e(row["texto"])}<small class="sources">{refs(row)}</small><a class="text-link" href="#posiciones">Ver preguntas y posiciones →</a></div></article>'
     controversies += '<p class="section-note">Selección de ejes documentados; no representa un ranking de impacto ni una medición de frecuencia de cobertura.</p>'
+    controversies += '<h3 id="proyectos">Proyectos prioritarios</h3><div class="mosaico">'+''.join(tile(r['titulo'], e(r['texto']), 'green' if r['id']!='P-02' else 'yellow', r) for r in d['preguntas'])+'</div>'
     body += '<hr class="divider">'+section(3,'controversiales','Temas y controversias — Planteos relevados',controversies)
 
     questions = '<p class="section-note">Síntesis de intervenciones y posiciones públicas; no son citas textuales ni implican falta de respuesta.</p><div class="filtros" role="group" aria-label="Filtrar posiciones por bloque">'
@@ -87,7 +83,9 @@ def render_monitor(d):
     agenda=''
     for row,day in zip(d['agenda'],['29/10','En curso','19/10','19/10']):
         agenda+=f'<div class="ag-item"><span class="ag-fecha">{day}</span><div class="ag-body"><strong>{e(row["titulo"])}</strong><span>{e(row["texto"])}</span><small class="sources">{refs(row)}</small></div></div>'
-    body += '<hr class="divider">'+section(6,'agenda','Agenda legislativa',agenda)
-    body += '<hr class="divider">'+section(7,'rondas','Rondas ministeriales y sesiones informativas',group(d['rondas']))
+    banks = ' · '.join(f'<span title="{e(block["titulo"], quote=True)}">{e(block["filtro"])} <strong>{block["bancas"]}</strong></span>' for block in d['bloques'])
+    body += f'<aside id="votos" class="banks-strip" tabindex="0" aria-label="Bancas por bloque. Desplazamiento horizontal en pantallas pequeñas."><p><strong>Bancas</strong> · {banks} · <strong>Total: 60</strong> · {refs(d["bloques"][0])} · <a class="back-top" href="#inicio">↑ Volver arriba</a></p></aside>'
     body += f'<footer>Monitor LEG · CABA · {date} ART · Fuentes oficiales, actores y prensa identificadas en cada registro.</footer>'
+    body += panel('agenda','Agenda legislativa',agenda)
+    body += panel('rondas','Rondas ministeriales y sesiones informativas',group(d['rondas']))
     return body
