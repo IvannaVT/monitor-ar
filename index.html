@@ -1,4 +1,6 @@
-<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}
+.audit-controls{display:flex;flex-wrap:wrap;gap:14px;margin:20px 0}.audit-controls label{display:grid;gap:5px;font-size:12px;color:var(--fg-dim)}.audit-controls select{max-width:100%;background:var(--surface);color:var(--fg);border:1px solid var(--border);padding:9px;border-radius:6px}.audit-controls select:focus{outline:2px solid var(--accent)}#tab-auditoria .table-wrap{overflow-x:auto}#tab-auditoria table{min-width:1000px}#tab-auditoria small{color:var(--fg-dim);overflow-wrap:anywhere}.audit-period-notice{border-left:3px solid var(--warn)}
+</style></head><body>
 <title>Monitor AR</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
@@ -296,6 +298,7 @@ footer a{color:var(--accent)}
     <button class="tab-btn" data-tab="agenda">Agenda pública</button>
     <button class="tab-btn" data-tab="semaforo">Semáforo</button>
     <button class="tab-btn" data-tab="gap">GAP CONV–SL</button>
+    <button class="tab-btn" data-tab="auditoria">Datos · auditoría</button>
     <button class="tab-btn" data-tab="voto"><em>Int. de voto</em></button>
   </div>
 </nav>
@@ -304,6 +307,7 @@ footer a{color:var(--accent)}
 
 <!-- ── TAB 1: INDICADORES ───────────────────── -->
 <section class="panel active" id="tab-indicadores">
+  <div class="notice audit-period-notice">Octubre: el IPCBA publicado en este mes corresponde a septiembre. Ver ambas fechas en Datos · auditoría.</div>
   <p class="sec">Clima macroeconómico · Argentina</p>
   <div class="kpi-grid" style="grid-template-columns:repeat(auto-fit,minmax(180px,1fr))">
     <!-- IPC Nacional -->
@@ -385,6 +389,7 @@ footer a{color:var(--accent)}
 
 <!-- ── TAB 2: VOTO ──────────────────────────── -->
 <section class="panel" id="tab-voto">
+  <div class="notice audit-period-notice">Octubre: cierre de cobertura en revisión. Los gráficos heredados conservan su corte y aún no acreditan el nuevo filtro de tres publicaciones consecutivas.</div>
   <p class="sec">Intención de voto presidencial · serie intra-consultora</p>
 
   <!-- KPIs con Δ numérico -->
@@ -484,6 +489,7 @@ footer a{color:var(--accent)}
 
 <!-- ── TAB 3: IMAGEN + GESTIÓN ──────────────── -->
 <section class="panel" id="tab-imagen">
+  <div class="notice audit-period-notice">Octubre: cierre de cobertura en revisión. Los gráficos heredados conservan su corte y aún no acreditan el nuevo filtro de tres publicaciones consecutivas.</div>
   <p class="sec">Imagen presidencial · Gestión nacional · Milei</p>
   <div class="chart-wrap">
     <div class="chart-head">
@@ -592,6 +598,7 @@ footer a{color:var(--accent)}
 
 <!-- ── TAB 5: CONV. DIGITAL ──────────────────── -->
 <section class="panel" id="tab-sl">
+  <div class="notice audit-period-notice">Octubre: cierre de cobertura en revisión. Los gráficos heredados conservan su corte y aún no acreditan el nuevo filtro de tres publicaciones consecutivas.</div>
   <p class="sec">Conversación digital · Social Listening</p>
 
   <div class="kpi-grid">
@@ -887,6 +894,7 @@ footer a{color:var(--accent)}
 
 <!-- ── TAB 6: GAP CONV–SL ────────────────────── -->
 <section class="panel" id="tab-gap">
+  <div class="notice audit-period-notice">Octubre: cierre de cobertura en revisión. Los gráficos heredados conservan su corte y aún no acreditan el nuevo filtro de tres publicaciones consecutivas.</div>
   <p class="sec">GAP CONV–SL · cruce encuestas × conversación digital</p>
   <div class="notice">SL estructural cargado (32 informes) · métricas de volumen y sentimiento exactas pendientes · hallazgos cualitativos disponibles en tab Conv. digital</div>
 
@@ -1048,6 +1056,7 @@ footer a{color:var(--accent)}
 
 <!-- ── TAB 7: SEMÁFORO ───────────────────────── -->
 <section class="panel" id="tab-semaforo">
+  <div class="notice audit-period-notice">Octubre: cierre de cobertura en revisión. Los gráficos heredados conservan su corte y aún no acreditan el nuevo filtro de tres publicaciones consecutivas.</div>
   <p class="sec">Semáforo ejecutivo · may–sep 2026</p>
   <div class="info-box" style="margin-bottom:18px;font-size:11px;line-height:1.6">
     Estado de cada indicador según la evidencia acumulada may–sep 2026.
@@ -1242,6 +1251,7 @@ footer a{color:var(--accent)}
 
 <!-- ── TAB 8: AGENDA PÚBLICA ─────────────────── -->
 <section class="panel" id="tab-agenda">
+  <div class="notice audit-period-notice">Octubre: cierre de cobertura en revisión. Los gráficos heredados conservan su corte y aún no acreditan el nuevo filtro de tres publicaciones consecutivas.</div>
   <p class="sec">Agenda pública · principales problemas</p>
 
   <div class="info-box" style="margin-bottom:16px;font-size:11px;line-height:1.6">
@@ -1346,6 +1356,7 @@ footer a{color:var(--accent)}
   <p class="source" style="margin-top:16px">Fuentes: Realle Dalla Torre, M&amp;F, Isasi-Burdman, UDESA, Explanans, OPSA · may–sep 2026 · respuesta espontánea y guiada: no comparar porcentajes como equivalentes</p>
 </section>
 
+<section class="panel" id="tab-auditoria"><p class="sec">Consultora · variable · mes · delta</p><div id="auditoriaAR">Cargando auditoría trazable…</div></section>
 </main>
 
 <footer>
@@ -1353,6 +1364,7 @@ footer a{color:var(--accent)}
   <a href="https://ivannatravaini.netlify.app/metodologia" target="_blank">metodología ↗</a>
 </footer>
 
+<script src="./scripts/auditoria_ar.js"></script>
 <script>
 /* ── THEME ─────────────────────────────────── */
 const chartRegistry={};
@@ -1380,7 +1392,7 @@ document.querySelectorAll('.tab-btn').forEach(btn=>{
     initTab(btn.dataset.tab);
   });
 });
-(function(){const h=location.hash.replace('#','');if(h){const b=document.querySelector(`[data-tab="${h}"]`);if(b)b.click();}})();
+(function(){const h=location.hash.replace('#','');const b=document.querySelector(`[data-tab="${h}"]`);const p=document.getElementById('tab-'+h);if(b&&p){document.querySelectorAll('.tab-btn,.panel').forEach(e=>e.classList.remove('active'));b.classList.add('active');p.classList.add('active');}})();
 
 /* ── HELPERS ───────────────────────────────── */
 function cv(v){const d=document.createElement('div');d.style.color=v;document.body.appendChild(d);const c=getComputedStyle(d).color;document.body.removeChild(d);return c;}
