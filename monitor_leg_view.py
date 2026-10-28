@@ -33,7 +33,7 @@ def render_monitor(d):
     nav = [('conclusion','Síntesis'),('controversiales','Debates'),('posiciones','Posiciones'),('seguimiento','Seguimiento')]
     body += '<nav class="nav-interna" aria-label="Secciones del monitor">'+''.join(f'<a href="#{anchor}">{e(label)}</a>' for anchor,label in nav)+'</nav>'
 
-    conclusion = tile('Síntesis del debate · '+date, 'Impuestos y gasto; vivienda, educación y seguridad. Planteos atribuidos y fuentes en cada registro.', 'red', d['panorama'][0])
+    conclusion = tile('Diagnóstico breve · '+date, 'Las bajas tributarias y su financiamiento cruzan el debate. Vivienda, educación y seguridad reúnen otros planteos relevados.', 'red', d['panorama'][0])
     actors = ''
     for block, color in [('LLA','red'),('FxBA','blue'),('CD','green'),('FIT','purple')]:
         names = list(dict.fromkeys(name for r in d['preguntas_bloques'] if r['filtro']==block and r['actor']!='Bloque' for name in r['actor'].split(' / ')))
@@ -45,8 +45,12 @@ def render_monitor(d):
     conclusion += '<details class="compact-details"><summary>Actores y fuentes consultadas</summary><div class="mosaico spaced">'+tile('Actores con planteos relevados', actors, 'grey', {'fuentes':actor_evidence})+tile('Medios y fuentes de seguimiento', coverage, 'grey', {'fuentes':['agenda']})+'</div></details>'
     conclusion += '<div class="mosaico-3 spaced panorama">'
     for row,color in zip(d['panorama'],['red','yellow','green']):
-        conclusion += f'<details open class="mtile mtile-{color}"><summary class="tl">{e(row["titulo"])}</summary><p>{e(row["texto"])}</p><small class="sources">{refs(row)}</small></details>'
+        content = e(row['texto'])
+        if row['id'] in ['PAN-01','PAN-02']:
+            content = ' '.join(f'<span class="kw kw-{color}">{e(word.strip().rstrip("."))}</span>' for word in row['texto'].split(' · '))
+        conclusion += f'<details open class="mtile mtile-{color}"><summary class="tl">{e(row["titulo"])}</summary><p>{content}</p><small class="sources">{refs(row)}</small></details>'
     conclusion += '</div>'
+    conclusion += '<div class="spaced">'+group(d['lecturas'])+'</div><p class="section-note">Lectura temática: no acredita acuerdos entre actores ni votos comprometidos.</p>'
     conclusion += '<h3>Novedades y contexto</h3><div class="mosaico-3">'+''.join(map(record_tile,d['novedades']))+'</div>'
     # Existing reviewed themes are displayed in the reference's paired panels.
     conclusion += '<details class="compact-details"><summary>Contexto de los proyectos y servicios</summary><div class="mosaico spaced">'+tile('Temas transversales', '<br>'.join(f'<strong>{e(r["titulo"])}</strong> — {e(r["texto"])}' for r in d['temas'][:2]),'blue',{'fuentes':['emergencia','bono']})+tile('Servicios e infraestructura', '<br>'.join(f'<strong>{e(r["titulo"])}</strong> — {e(r["texto"])}' for r in d['temas'][2:]),'purple',{'fuentes':['infra','educacion']})+'</div></details>'

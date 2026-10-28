@@ -4,9 +4,9 @@
   "revision": {
     "estado": "aprobado",
     "fecha": "2026-10-28",
-    "responsable": "Codex · fuentes: docs/IMPORTACION-2026-10-28.md; síntesis y vista compacta autorizadas el 28/10, PUBLICACION.md",
+    "responsable": "Codex · fuentes: docs/IMPORTACION-2026-10-28.md; síntesis visual autorizada el 28/10, PUBLICACION.md",
     "css_sha256": "956e775386fb2b963d0b727db0c01931f5ca69a902ec421f601e9a990a2bc1dc",
-    "contenido_sha256": "7a086ddb70fdc4d4707998bfb7754a52084cca39ee6be22724ceac58f2224c6c"
+    "contenido_sha256": "3ae87c2c968664fe443b7ddaf1bd598ae730237443e16956f3c620a600ac0935"
   },
   "fuentes": {
     "bloques": {
@@ -991,6 +991,30 @@
       ],
       "estado": "verificado",
       "tipo": "grey"
+    }
+  ],
+  "lecturas": [
+    {
+      "id": "L-01",
+      "titulo": "Coincidencias temáticas",
+      "texto": "LLA y FxBA proponen alivio en IIBB, con distinto alcance.",
+      "fuentes": [
+        "hacienda_prensa"
+      ],
+      "estado": "verificado",
+      "tipo": "blue"
+    },
+    {
+      "id": "L-02",
+      "titulo": "Diferencias de enfoque",
+      "texto": "LLA vincula rebajas con recortes; FxBA prioriza exenciones. LLA propone cerrar el IVC; ACIJ cuestiona la reducción de recursos de vivienda.",
+      "fuentes": [
+        "hacienda_prensa",
+        "lla_prensa",
+        "acij"
+      ],
+      "estado": "verificado",
+      "tipo": "purple"
     }
   ]
 }
