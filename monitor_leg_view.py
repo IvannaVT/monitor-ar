@@ -41,7 +41,8 @@ def render_monitor(d):
     press = [key for key,s in sources.items() if s.get('clase')=='prensa']
     actor_sources = [key for key,s in sources.items() if s.get('clase')=='actor']
     coverage = '<strong>Cobertura periodística</strong><br>'+refs({'fuentes':press})+'<p class="debate"><strong>Publicaciones de actores</strong><br>'+refs({'fuentes':actor_sources})+'</p>'
-    conclusion += '<div class="mosaico spaced">'+tile('Actores con planteos relevados', actors, 'grey', {'fuentes':['hacienda_prensa','tagliaferri','po_seguridad']})+tile('Medios y fuentes de seguimiento', coverage, 'grey', {'fuentes':['agenda']})+'</div>'
+    actor_evidence = list(dict.fromkeys(s for r in d['preguntas_bloques'] if r['actor'] != 'Bloque' for s in r['fuentes']))
+    conclusion += '<div class="mosaico spaced">'+tile('Actores con planteos relevados', actors, 'grey', {'fuentes':actor_evidence})+tile('Medios y fuentes de seguimiento', coverage, 'grey', {'fuentes':['agenda']})+'</div>'
     conclusion += '<div class="mosaico-3 spaced panorama">'
     for row,color in zip(d['panorama'],['red','yellow','green']):
         conclusion += f'<details open class="mtile mtile-{color}"><summary class="tl">{e(row["titulo"])}</summary><p>{e(row["texto"])}</p><small class="sources">{refs(row)}</small></details>'

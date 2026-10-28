@@ -6,7 +6,7 @@
     "fecha": "2026-10-28",
     "responsable": "Codex · revisión de fuentes y alcance documentada en docs/IMPORTACION-2026-10-28.md",
     "css_sha256": "e8da182ba943ce5193a744e638443d532f559be5c2cf3aa3fd1d335f75077d63",
-    "contenido_sha256": "d6a03eccf7ab70657503546258cc561230bf20ccdab3a0ddd12d7dfac1d1f3e9"
+    "contenido_sha256": "283da65edb621be69f29c9d4fca493d29a6a20c65c556511ea5d2fbb9738284f"
   },
   "fuentes": {
     "bloques": {
@@ -830,7 +830,7 @@
     {
       "id": "Q-21",
       "filtro": "CD",
-      "actor": "E. Nagata",
+      "actor": "S. Nagata",
       "tema": "Finanzas",
       "texto": "Cuestionó el uso del Fondo Anticíclico y nueva deuda.",
       "fecha": "2026-10-07",
