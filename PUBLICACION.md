@@ -18,6 +18,8 @@ Actores, inventario de fuentes y contexto ampliado pasan a desplegables nativos,
 
 Comprobar escritorio/móvil, despliegue de ambas áreas de contexto, todos los filtros, paneles Agenda/Rondas, retorno al inicio y ausencia de desborde antes de fusionar.
 
+La revisión visual del artefacto de Claude se incorpora al mismo cambio: diagnóstico breve, palabras clave como etiquetas y dos tarjetas de lectura temática con fuentes. Las coincidencias en IIBB y diferencias sobre recortes, exenciones e IVC son una síntesis editorial de propuestas atribuidas; no se interpretan como acuerdos, coordinación o votos. Se conserva el enlace al próximo encuentro oficial, el tamaño móvil y los controles accesibles. No se importan del artefacto métricas sin método, predicciones de sesión ni el mapa incompleto de bancas. El encargo reutilizable para Claude está en `docs/CLAUDE-CONTENIDO.md`.
+
 `data/legislativo.json` es la fuente de Monitor LEG. `monitor_leg.template.html` conserva el diseño. `monitor_leg_build.py` genera `monitor_leg.html` de forma determinista. No modificar manualmente el HTML generado.
 
 Claude es opcional: recibe solo registros que cambian y extractos oficiales suficientes, y devuelve una propuesta JSON con ID, valor anterior, valor propuesto, URL, localización en la fuente y motivo. No regenerar HTML ni enviarle el repositorio o el historial completo. No se integra una API paga ni se crean secretos.

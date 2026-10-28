@@ -36,7 +36,7 @@ def build():
         assert u.scheme == 'https' and (official or (u.hostname in attributed and attributed[u.hostname] == source.get('clase')))
         CalendarDate.fromisoformat(source['consultada'])
         assert source['consultada'] == d['corte']
-    records = d['rondas'] + d['preguntas'] + d['temas'] + d['declaraciones'] + d['seguimiento'] + d['agenda'] + d['bloques'] + d['preguntas_bloques'] + d['panorama'] + d['novedades'] + d['controversias']
+    records = d['rondas'] + d['preguntas'] + d['temas'] + d['declaraciones'] + d['seguimiento'] + d['agenda'] + d['bloques'] + d['preguntas_bloques'] + d['panorama'] + d['novedades'] + d['controversias'] + d['lecturas']
     assert len({r['id'] for r in records}) == len(records)
     for r in records:
         assert r['estado'] == 'verificado', r['id']
