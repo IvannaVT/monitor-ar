@@ -41,17 +41,19 @@ def render_monitor(d):
     press = [key for key,s in sources.items() if s.get('clase')=='prensa']
     actor_sources = [key for key,s in sources.items() if s.get('clase')=='actor']
     coverage = '<strong>Cobertura periodística</strong><br>'+refs({'fuentes':press})+'<p class="debate"><strong>Publicaciones de actores</strong><br>'+refs({'fuentes':actor_sources})+'</p>'
-    conclusion += '<div class="mosaico spaced">'+tile('Actores con planteos relevados', actors, 'grey', {'fuentes':['hacienda_prensa','tagliaferri','po_seguridad']})+tile('Medios y fuentes de seguimiento', coverage, 'grey', {'fuentes':['agenda']})+'</div>'
+    actor_evidence = list(dict.fromkeys(s for r in d['preguntas_bloques'] if r['actor'] != 'Bloque' for s in r['fuentes']))
+    conclusion += '<div class="mosaico spaced">'+tile('Actores con planteos relevados', actors, 'grey', {'fuentes':actor_evidence})+tile('Medios y fuentes de seguimiento', coverage, 'grey', {'fuentes':['agenda']})+'</div>'
     conclusion += '<div class="mosaico-3 spaced panorama">'
     for row,color in zip(d['panorama'],['red','yellow','green']):
         conclusion += f'<details open class="mtile mtile-{color}"><summary class="tl">{e(row["titulo"])}</summary><p>{e(row["texto"])}</p><small class="sources">{refs(row)}</small></details>'
     conclusion += '</div>'
+    conclusion += '<h3>Novedades y contexto</h3>'+group(d['novedades'])
     # Existing reviewed themes are displayed in the reference's paired panels.
     conclusion += '<div class="mosaico spaced">'+tile('Temas transversales', '<br>'.join(f'<strong>{e(r["titulo"])}</strong> — {e(r["texto"])}' for r in d['temas'][:2]),'blue',{'fuentes':['emergencia','bono']})+tile('Servicios e infraestructura', '<br>'.join(f'<strong>{e(r["titulo"])}</strong> — {e(r["texto"])}' for r in d['temas'][2:]),'purple',{'fuentes':['infra','educacion']})+'</div>'
     body += section(1,'conclusion','Síntesis',conclusion)
 
     controversies = ''
-    for i,row in enumerate(d['panorama'][:2],1):
+    for i,row in enumerate(d['controversias'],1):
         controversies += f'<article class="cont-item"><div class="cont-header"><span class="cont-num">C-{i:02}</span><h3 class="cont-titulo">{e(row["titulo"])}</h3></div><div class="cont-body">{e(row["texto"])}<small class="sources">{refs(row)}</small><a class="text-link" href="#posiciones">Ver preguntas y posiciones →</a></div></article>'
     controversies += '<p class="section-note">Selección de ejes documentados; no representa un ranking de impacto ni una medición de frecuencia de cobertura.</p>'
     controversies += '<h3 id="proyectos">Proyectos prioritarios</h3><div class="mosaico">'+''.join(tile(r['titulo'], e(r['texto']), 'green' if r['id']!='P-02' else 'yellow', r) for r in d['preguntas'])+'</div>'

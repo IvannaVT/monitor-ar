@@ -1,104 +1,122 @@
 {
   "schema_version": 1,
-  "corte": "2026-10-26",
+  "corte": "2026-10-28",
   "revision": {
     "estado": "aprobado",
-    "fecha": "2026-10-26",
-    "responsable": "Codex · revisión de fuentes públicas y atribuciones documentada en REVISION_PREGUNTAS.md",
+    "fecha": "2026-10-28",
+    "responsable": "Codex · revisión de fuentes y alcance documentada en docs/IMPORTACION-2026-10-28.md",
     "css_sha256": "e8da182ba943ce5193a744e638443d532f559be5c2cf3aa3fd1d335f75077d63",
-    "contenido_sha256": "d803662ec51704af12672bfd4c6f922991de60d27427e1344a800db1729e93f5"
+    "contenido_sha256": "283da65edb621be69f29c9d4fca493d29a6a20c65c556511ea5d2fbb9738284f"
   },
   "fuentes": {
     "bloques": {
       "etiqueta": "Composición oficial",
       "url": "https://www.legislatura.gob.ar/seccion/bloques.html",
-      "consultada": "2026-10-26"
+      "consultada": "2026-10-28"
     },
     "infra": {
       "etiqueta": "Legislatura · 13/10",
       "url": "https://www.legislatura.gob.ar/posts/continuan-los-debates-en-torno-al-presupuesto-2027.html",
-      "consultada": "2026-10-26"
+      "consultada": "2026-10-28"
     },
     "educacion": {
       "etiqueta": "Legislatura · 15/10",
       "url": "https://www.legislatura.gob.ar/posts/la-ministra-de-educacion-presento-los-ejes-principales-del-presupuesto-2027.html",
-      "consultada": "2026-10-26"
+      "consultada": "2026-10-28"
     },
     "habitat": {
       "etiqueta": "Legislatura · 16/10",
       "url": "https://www.legislatura.gob.ar/posts/el-ministro-de-desarrollo-humano-y-habitat-gabriel-mraida-presento-el-presupuesto-2027.html",
-      "consultada": "2026-10-26"
+      "consultada": "2026-10-28"
     },
     "salud": {
       "etiqueta": "Legislatura · 23/10",
       "url": "https://www.legislatura.gob.ar/posts/quiros-presento-el-presupuesto-2027-de-salud-ante-la-comision-de-presupuesto.html",
-      "consultada": "2026-10-26"
+      "consultada": "2026-10-28"
     },
     "emergencia": {
       "etiqueta": "Exp. 3085-J-2026",
       "url": "https://parlamentaria.legislatura.gob.ar/pages/expediente.aspx?id=142697",
-      "consultada": "2026-10-26"
+      "consultada": "2026-10-28"
     },
     "bono": {
       "etiqueta": "Exp. 3082-J-2026",
       "url": "https://parlamentaria.legislatura.gob.ar/pages/expediente.aspx?id=142694",
-      "consultada": "2026-10-26"
+      "consultada": "2026-10-28"
     },
     "agenda": {
       "etiqueta": "Legislatura · 19/10",
       "url": "https://www.legislatura.gob.ar/posts/reunion-conjunta-de-la-comisiones-de-desarrollo-economico-y-de-presupuesto4126.html",
-      "consultada": "2026-10-26"
+      "consultada": "2026-10-28"
     },
     "debate": {
       "etiqueta": "Legislatura · 8/10",
       "url": "https://www.legislatura.gob.ar/posts/presupuesto-debatio-deuda-transporte-y-emergencia-climatica.html",
-      "consultada": "2026-10-26"
+      "consultada": "2026-10-28"
     },
     "lineaf": {
       "etiqueta": "GCBA · Línea F",
-      "url": "https://buenosaires.gob.ar/gcaba_historico/noticias/linea-f-dos-consorcios-de-empresas-nacionales-e-internacionales-se",
-      "consultada": "2026-10-26"
+      "url": "https://buenosaires.gob.ar/noticias/linea-f-dos-consorcios-de-empresas-nacionales-e-internacionales-se",
+      "consultada": "2026-10-28"
     },
     "hacienda_prensa": {
       "etiqueta": "Ámbito · 7/10",
       "url": "https://www.ambito.com/politica/presupuesto-2027-caba-lla-le-reclamo-mas-ajuste-al-pro-y-el-pj-insiste-una-baja-focalizada-iibb-n6331169",
-      "consultada": "2026-10-26",
+      "consultada": "2026-10-28",
       "clase": "prensa"
     },
     "bono_prensa": {
       "etiqueta": "Ámbito · 9/10",
       "url": "https://www.ambito.com/economia/caba-busca-emitir-un-bono-cancelar-deuda-proveedores-la-caida-la-recaudacion-n6331758",
-      "consultada": "2026-10-26",
+      "consultada": "2026-10-28",
       "clase": "prensa"
     },
     "tagliaferri": {
       "etiqueta": "Tagliaferri · 16/10",
       "url": "https://guadalupetagliaferri.com.ar/presupuesto-2027-tagliaferri-advirtio-que-el-propio-gobierno-porteno-preve-mas-pobreza-y-mas-gente-en-la-calle/",
-      "consultada": "2026-10-26",
+      "consultada": "2026-10-28",
       "clase": "actor"
     },
     "po_seguridad": {
       "etiqueta": "PO · 21/10",
       "url": "https://po.org.ar/comunicados/vanina-biasi-y-amanda-martin-interpelaron-al-ministro-de-seguridad-horacio-gimenez/",
-      "consultada": "2026-10-26",
+      "consultada": "2026-10-28",
       "clase": "actor"
     },
     "docentes_prensa": {
       "etiqueta": "Tiempo · 22/10",
       "url": "https://www.tiempoar.com.ar/ta_article/la-legislatura-indaga-sobre-el-despido-de-docentes-y-el-cierre-de-grados-en-escuelas-portenas/",
-      "consultada": "2026-10-26",
+      "consultada": "2026-10-28",
       "clase": "prensa"
     },
     "fxba": {
       "etiqueta": "Análisis FxBA",
       "url": "https://www.xn--presupuestoporteo-uxb.com.ar/",
-      "consultada": "2026-10-26",
+      "consultada": "2026-10-28",
       "clase": "actor"
     },
     "seguridad_prensa": {
       "etiqueta": "NU · 22/10",
       "url": "https://www.noticiasurbanas.com.ar/gimenez-presento-el-presupuesto-2027-para-seguridad",
-      "consultada": "2026-10-26",
+      "consultada": "2026-10-28",
+      "clase": "prensa"
+    },
+    "acij": {
+      "etiqueta": "ACIJ · 26/10",
+      "url": "https://acij.org.ar/vivienda_presupuesto2027/",
+      "consultada": "2026-10-28",
+      "clase": "actor"
+    },
+    "lla_prensa": {
+      "etiqueta": "Letra P · 6/10",
+      "url": "https://www.letrap.com.ar/politica/la-libertad-avanza-le-quiere-marcar-la-cancha-jorge-macri-y-pone-condiciones-acompanar-el-presupuesto-n5427157?noredirect=1",
+      "consultada": "2026-10-28",
+      "clase": "prensa"
+    },
+    "nacional_prensa": {
+      "etiqueta": "Página/12 · 28/10",
+      "url": "https://www.pagina12.com.ar/2026/10/28/el-pro-y-los-aliados-le-ponen-palos-en-la-rueda-al-presupuesto/",
+      "consultada": "2026-10-28",
       "clase": "prensa"
     }
   },
@@ -140,7 +158,7 @@
         "fxba",
         "infra"
       ],
-      "alcance_debate": "Agenda al 26/10"
+      "alcance_debate": "Agenda al 28/10"
     },
     {
       "id": "R-02",
@@ -160,7 +178,7 @@
         "hacienda_prensa",
         "docentes_prensa"
       ],
-      "alcance_debate": "Agenda al 26/10"
+      "alcance_debate": "Agenda al 28/10"
     },
     {
       "id": "R-03",
@@ -218,7 +236,7 @@
       "fuentes_debate": [
         "fxba"
       ],
-      "alcance_debate": "Agenda al 26/10"
+      "alcance_debate": "Agenda al 28/10"
     },
     {
       "id": "R-05",
@@ -263,7 +281,7 @@
     {
       "id": "P-01",
       "titulo": "Emergencia hídrica",
-      "texto": "Dictamen de mayoría del 19/10. Despacho 754/2026. Vencimiento de observaciones: 28/10 a las 14:00.",
+      "texto": "Dictamen de mayoría del 19/10. Despacho 754/2026. Plazo de observaciones fijado para el 28/10 a las 14:00.",
       "fuentes": [
         "emergencia"
       ],
@@ -285,7 +303,7 @@
     {
       "id": "P-03",
       "titulo": "Bono proveedores",
-      "texto": "Dictamen de mayoría del 19/10. Despacho 753/2026. Vencimiento de observaciones: 28/10 a las 14:00.",
+      "texto": "Dictamen de mayoría del 19/10. Despacho 753/2026. Plazo de observaciones fijado para el 28/10 a las 14:00.",
       "fuentes": [
         "bono"
       ],
@@ -468,7 +486,7 @@
     {
       "id": "S-01",
       "titulo": "Emergencia · observaciones",
-      "texto": "Próximo hito: vencimiento del plazo de observaciones indicado en el expediente.",
+      "texto": "Plazo de observaciones fijado para el 28/10/2026 a las 14:00. Seguir las actuaciones posteriores; el dictamen no acredita sanción.",
       "fuentes": [
         "emergencia"
       ],
@@ -478,7 +496,7 @@
     {
       "id": "S-02",
       "titulo": "Bono · observaciones",
-      "texto": "Próximo hito: vencimiento del plazo de observaciones indicado en el expediente.",
+      "texto": "Plazo de observaciones fijado para el 28/10/2026 a las 14:00. Seguir las actuaciones posteriores; el dictamen no acredita sanción.",
       "fuentes": [
         "bono"
       ],
@@ -730,6 +748,110 @@
         "docentes_prensa"
       ],
       "estado": "verificado"
+    },
+    {
+      "id": "Q-15",
+      "filtro": "LLA",
+      "actor": "P. Ramírez",
+      "tema": "ABL",
+      "texto": "Reducir el ABL un 10%.",
+      "fecha": "2026-10-06",
+      "clase": "Reclamo",
+      "fuentes": [
+        "lla_prensa"
+      ],
+      "estado": "verificado"
+    },
+    {
+      "id": "Q-16",
+      "filtro": "LLA",
+      "actor": "P. Ramírez",
+      "tema": "Patentes",
+      "texto": "Eximir híbridos y eléctricos.",
+      "fecha": "2026-10-06",
+      "clase": "Reclamo",
+      "fuentes": [
+        "lla_prensa"
+      ],
+      "estado": "verificado"
+    },
+    {
+      "id": "Q-17",
+      "filtro": "LLA",
+      "actor": "P. Ramírez",
+      "tema": "IIBB",
+      "texto": "Bajar alícuotas y ampliar exenciones.",
+      "fecha": "2026-10-06",
+      "clase": "Reclamo",
+      "fuentes": [
+        "lla_prensa"
+      ],
+      "estado": "verificado"
+    },
+    {
+      "id": "Q-18",
+      "filtro": "LLA",
+      "actor": "P. Ramírez",
+      "tema": "PASO",
+      "texto": "Eliminar las primarias porteñas.",
+      "fecha": "2026-10-06",
+      "clase": "Reclamo",
+      "fuentes": [
+        "lla_prensa"
+      ],
+      "estado": "verificado"
+    },
+    {
+      "id": "Q-19",
+      "filtro": "LLA",
+      "actor": "P. Ramírez",
+      "tema": "IVC y publicidad",
+      "texto": "Cerrar el IVC y reducir publicidad.",
+      "fecha": "2026-10-06",
+      "clase": "Reclamo",
+      "fuentes": [
+        "lla_prensa"
+      ],
+      "estado": "verificado"
+    },
+    {
+      "id": "Q-20",
+      "filtro": "LLA",
+      "actor": "P. Ramírez",
+      "tema": "Comercio",
+      "texto": "Aprobar libertad comercial y silencio positivo.",
+      "fecha": "2026-10-06",
+      "clase": "Reclamo",
+      "fuentes": [
+        "lla_prensa"
+      ],
+      "estado": "verificado"
+    },
+    {
+      "id": "Q-21",
+      "filtro": "CD",
+      "actor": "S. Nagata",
+      "tema": "Finanzas",
+      "texto": "Cuestionó el uso del Fondo Anticíclico y nueva deuda.",
+      "fecha": "2026-10-07",
+      "clase": "Reclamo",
+      "fuentes": [
+        "hacienda_prensa"
+      ],
+      "estado": "verificado"
+    },
+    {
+      "id": "Q-22",
+      "filtro": "CD",
+      "actor": "G. Tagliaferri",
+      "tema": "Educación",
+      "texto": "¿Con qué infraestructura se ampliará sala de 3?",
+      "fecha": "2026-10-07",
+      "clase": "Pregunta",
+      "fuentes": [
+        "hacienda_prensa"
+      ],
+      "estado": "verificado"
     }
   ],
   "panorama": [
@@ -763,6 +885,112 @@
         "agenda"
       ],
       "estado": "verificado"
+    }
+  ],
+  "novedades": [
+    {
+      "id": "N-01",
+      "titulo": "Vivienda · análisis de ACIJ",
+      "texto": "ACIJ estima una caída real del 20,4% en el conjunto de organismos de vivienda frente a 2026. Publicación del 26/10; presentación del 14/10.",
+      "fuentes": [
+        "acij"
+      ],
+      "estado": "verificado",
+      "tipo": "blue"
+    },
+    {
+      "id": "N-02",
+      "titulo": "Fondos para CABA · debate nacional",
+      "texto": "Página/12 vincula los reclamos del PRO por fondos para CABA con la negociación del Presupuesto nacional. Es un trámite distinto del presupuesto porteño.",
+      "fuentes": [
+        "nacional_prensa"
+      ],
+      "estado": "verificado",
+      "tipo": "yellow"
+    },
+    {
+      "id": "N-03",
+      "titulo": "Salud · comunicación oficial",
+      "texto": "La Legislatura difundió el 23/10 los ejes presentados por Quirós. La publicación es un comunicado de prensa.",
+      "fuentes": [
+        "salud"
+      ],
+      "estado": "verificado",
+      "tipo": "green"
+    }
+  ],
+  "controversias": [
+    {
+      "id": "C-01",
+      "titulo": "Impuestos y gasto",
+      "texto": "LLA pide bajas tributarias y recortes; FxBA reclama exenciones de IIBB para monotributistas y gastronómicos.",
+      "fuentes": [
+        "hacienda_prensa"
+      ],
+      "estado": "verificado",
+      "tipo": "grey"
+    },
+    {
+      "id": "C-02",
+      "titulo": "IVC y vivienda",
+      "texto": "LLA propone cerrar el IVC. ACIJ cuestiona la reducción de recursos habitacionales del proyecto.",
+      "fuentes": [
+        "lla_prensa",
+        "acij"
+      ],
+      "estado": "verificado",
+      "tipo": "grey"
+    },
+    {
+      "id": "C-03",
+      "titulo": "Deuda y proveedores",
+      "texto": "Neira pide identificar acreedores; Nagata consulta si el bono será voluntario.",
+      "fuentes": [
+        "bono_prensa"
+      ],
+      "estado": "verificado",
+      "tipo": "grey"
+    },
+    {
+      "id": "C-04",
+      "titulo": "Obras y financiamiento",
+      "texto": "Tagliaferri contrasta el endeudamiento para obras hídricas con la ejecución presupuestaria.",
+      "fuentes": [
+        "hacienda_prensa"
+      ],
+      "estado": "verificado",
+      "tipo": "grey"
+    },
+    {
+      "id": "C-05",
+      "titulo": "Educación",
+      "texto": "Martín y Biasi impulsan pedidos de informes sobre cierres de grados y cargos docentes.",
+      "fuentes": [
+        "docentes_prensa"
+      ],
+      "estado": "verificado",
+      "tipo": "grey"
+    },
+    {
+      "id": "C-06",
+      "titulo": "Seguridad y protesta",
+      "texto": "Biasi pregunta por costos de operativos; Martín cuestiona restricciones a la protesta.",
+      "fuentes": [
+        "po_seguridad"
+      ],
+      "estado": "verificado",
+      "tipo": "grey"
+    },
+    {
+      "id": "C-07",
+      "titulo": "Transporte",
+      "texto": "FxBA cuestiona tarifas y recursos del transporte. El Ejecutivo presenta proyectos de movilidad y subte.",
+      "fuentes": [
+        "fxba",
+        "infra"
+      ],
+      "estado": "verificado",
+      "tipo": "grey"
     }
   ]
 }
