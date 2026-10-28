@@ -10,6 +10,14 @@ La página pública es un monitor legislativo. No lleva rótulos de auditoría. 
 
 ## Fuente única y roles
 
+### Vista compacta · 28/10/2026
+
+Por pedido de la titular se compacta la nueva versión del 28/10: menor espacio entre tarjetas y secciones, controles de cabecera en una fila cuando caben y debates en dos columnas de escritorio. Las fichas móviles agrupan bloque/actor y tema/fecha en pares, con planteo y fuente a todo el ancho. Se mantienen el texto de preguntas a 16px en móvil, foco visible, modos claro/azul oscuro y controles de al menos 44px en móvil.
+
+Actores, inventario de fuentes y contexto ampliado pasan a desplegables nativos, cerrados al iniciar. Las fuentes de cada registro siguen visibles. Se conservan las 22 preguntas, siete ejes, tres novedades, ocho rondas y todos los enlaces. Se acortan seis resúmenes conservando atribución, fechas y alcance de las cifras. No se cambia la fecha de corte ni se añaden afirmaciones. La actualización de la huella CSS corresponde a esta solicitud explícita de diseño.
+
+Comprobar escritorio/móvil, despliegue de ambas áreas de contexto, todos los filtros, paneles Agenda/Rondas, retorno al inicio y ausencia de desborde antes de fusionar.
+
 `data/legislativo.json` es la fuente de Monitor LEG. `monitor_leg.template.html` conserva el diseño. `monitor_leg_build.py` genera `monitor_leg.html` de forma determinista. No modificar manualmente el HTML generado.
 
 Claude es opcional: recibe solo registros que cambian y extractos oficiales suficientes, y devuelve una propuesta JSON con ID, valor anterior, valor propuesto, URL, localización en la fuente y motivo. No regenerar HTML ni enviarle el repositorio o el historial completo. No se integra una API paga ni se crean secretos.

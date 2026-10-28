@@ -4,9 +4,9 @@
   "revision": {
     "estado": "aprobado",
     "fecha": "2026-10-28",
-    "responsable": "Codex · revisión de fuentes y alcance documentada en docs/IMPORTACION-2026-10-28.md",
-    "css_sha256": "e8da182ba943ce5193a744e638443d532f559be5c2cf3aa3fd1d335f75077d63",
-    "contenido_sha256": "283da65edb621be69f29c9d4fca493d29a6a20c65c556511ea5d2fbb9738284f"
+    "responsable": "Codex · fuentes: docs/IMPORTACION-2026-10-28.md; síntesis y vista compacta autorizadas el 28/10, PUBLICACION.md",
+    "css_sha256": "956e775386fb2b963d0b727db0c01931f5ca69a902ec421f601e9a990a2bc1dc",
+    "contenido_sha256": "7a086ddb70fdc4d4707998bfb7754a52084cca39ee6be22724ceac58f2224c6c"
   },
   "fuentes": {
     "bloques": {
@@ -891,7 +891,7 @@
     {
       "id": "N-01",
       "titulo": "Vivienda · análisis de ACIJ",
-      "texto": "ACIJ estima una caída real del 20,4% en el conjunto de organismos de vivienda frente a 2026. Publicación del 26/10; presentación del 14/10.",
+      "texto": "ACIJ: recursos de los organismos de vivienda −20,4% real frente a 2026. Presentado el 14/10; publicado el 26/10.",
       "fuentes": [
         "acij"
       ],
@@ -901,7 +901,7 @@
     {
       "id": "N-02",
       "titulo": "Fondos para CABA · debate nacional",
-      "texto": "Página/12 vincula los reclamos del PRO por fondos para CABA con la negociación del Presupuesto nacional. Es un trámite distinto del presupuesto porteño.",
+      "texto": "Página/12: el PRO reclama fondos para CABA en la negociación del Presupuesto nacional, distinta del trámite porteño.",
       "fuentes": [
         "nacional_prensa"
       ],
@@ -911,7 +911,7 @@
     {
       "id": "N-03",
       "titulo": "Salud · comunicación oficial",
-      "texto": "La Legislatura difundió el 23/10 los ejes presentados por Quirós. La publicación es un comunicado de prensa.",
+      "texto": "Quirós: ejes de Salud en el comunicado oficial del 23/10.",
       "fuentes": [
         "salud"
       ],
@@ -954,7 +954,7 @@
     {
       "id": "C-04",
       "titulo": "Obras y financiamiento",
-      "texto": "Tagliaferri contrasta el endeudamiento para obras hídricas con la ejecución presupuestaria.",
+      "texto": "Tagliaferri cuestiona nueva deuda hídrica frente a la ejecución de obras.",
       "fuentes": [
         "hacienda_prensa"
       ],
@@ -964,7 +964,7 @@
     {
       "id": "C-05",
       "titulo": "Educación",
-      "texto": "Martín y Biasi impulsan pedidos de informes sobre cierres de grados y cargos docentes.",
+      "texto": "Martín y Biasi piden informes sobre cierres de grados y cargos docentes.",
       "fuentes": [
         "docentes_prensa"
       ],
@@ -984,7 +984,7 @@
     {
       "id": "C-07",
       "titulo": "Transporte",
-      "texto": "FxBA cuestiona tarifas y recursos del transporte. El Ejecutivo presenta proyectos de movilidad y subte.",
+      "texto": "FxBA cuestiona tarifas e inversión; el Ejecutivo presenta proyectos de movilidad y subte.",
       "fuentes": [
         "fxba",
         "infra"
