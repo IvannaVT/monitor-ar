@@ -28,12 +28,15 @@ def build():
         attributed = {
             'www.ambito.com': 'prensa', 'www.tiempoar.com.ar': 'prensa',
             'www.noticiasurbanas.com.ar': 'prensa',
+            'www.letrap.com.ar': 'prensa', 'www.pagina12.com.ar': 'prensa',
+            'acij.org.ar': 'actor',
             'po.org.ar': 'actor', 'guadalupetagliaferri.com.ar': 'actor',
             'www.xn--presupuestoporteo-uxb.com.ar': 'actor',
         }
         assert u.scheme == 'https' and (official or (u.hostname in attributed and attributed[u.hostname] == source.get('clase')))
+        CalendarDate.fromisoformat(source['consultada'])
         assert source['consultada'] == d['corte']
-    records = d['rondas'] + d['preguntas'] + d['temas'] + d['declaraciones'] + d['seguimiento'] + d['agenda'] + d['bloques'] + d['preguntas_bloques'] + d['panorama']
+    records = d['rondas'] + d['preguntas'] + d['temas'] + d['declaraciones'] + d['seguimiento'] + d['agenda'] + d['bloques'] + d['preguntas_bloques'] + d['panorama'] + d['novedades'] + d['controversias']
     assert len({r['id'] for r in records}) == len(records)
     for r in records:
         assert r['estado'] == 'verificado', r['id']
@@ -41,7 +44,7 @@ def build():
     for r in d['rondas']:
         assert 1 <= len(r['palabras_clave']) <= 4
         assert r['fuentes_debate'] and all(s in sources for s in r['fuentes_debate'])
-        assert r['alcance_debate'] in ['En debate', 'Agenda al 26/10']
+        assert r['alcance_debate'] in ['En debate', 'Agenda al ' + CalendarDate.fromisoformat(d['corte']).strftime('%d/%m')]
     for r in d['preguntas_bloques']:
         assert r['filtro'] in {b['filtro'] for b in d['bloques']}
         assert r['clase'] in ['Pregunta', 'Reclamo'] and r['actor'].strip()
