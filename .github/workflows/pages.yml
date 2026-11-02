@@ -20,7 +20,7 @@ jobs:
         if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
         run: |
           mkdir -p _site/data
-          cp index.html monitor_ar.html monitor_leg.html _site/
+          cp index.html monitor_ar.html monitor_leg.html radar_eeuu_2026.html _site/
           cp data/indicadores.json _site/data/
       - uses: actions/upload-pages-artifact@v4
         if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
