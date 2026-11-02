@@ -183,7 +183,7 @@ footer a{color:var(--accent)}
 .kpi-compare{font-size:9px;color:var(--fg-dim);margin-top:2px;font-style:italic}
 
 @media(max-width:500px){.gap-zone-cards{grid-template-columns:1fr 1fr}.kpi-num{font-size:22px}}
-@media(max-width:620px){.cross-grid{grid-template-columns:1fr!important}}
+@media(max-width:620px){.cross-grid{grid-template-columns:1fr!important}.agenda-mosaico{grid-template-columns:1fr!important}}
 /* ── MOBILE ─────────────────────────────────── */
 @media(max-width:640px){
   .gap-legend-grid{grid-template-columns:1fr!important}
@@ -873,27 +873,10 @@ footer a{color:var(--accent)}
     <div class="chart-box"><canvas id="chartSLMes"></canvas></div>
   </div>
 
-  <div class="chart-wrap">
-    <div class="chart-head"><div><h3>Informes SL por consultora</h3><p>Ene–Oct 2026</p></div></div>
-    <div class="chart-box" style="height:220px"><canvas id="chartSLConsult"></canvas></div>
-  </div>
-
-  <div class="chart-wrap">
-    <div class="chart-head">
-      <div>
-        <h3>Registro completo de informes SL</h3>
-        <p style="margin-top:4px">
-          <a href="https://drive.google.com/drive/folders/1SDS2YXZCqEuwdIzkRhF3JYGR13S9NMvJ" target="_blank" rel="noopener" style="color:var(--fg-dim);text-decoration:underline;text-underline-offset:2px;font-size:11px">Estado de cobertura SL ↗</a>
-        </p>
-      </div>
-    </div>
-    <div class="table-wrap">
-      <table>
-        <thead><tr><th>Mes</th><th>Consultora</th><th>Informe</th><th>Tipo</th></tr></thead>
-        <tbody id="slRows"></tbody>
-      </table>
-    </div>
-  </div>
+  <p class="source" style="margin-top:6px;margin-bottom:4px">
+    <a href="https://drive.google.com/drive/folders/1SDS2YXZCqEuwdIzkRhF3JYGR13S9NMvJ" target="_blank" rel="noopener" style="color:var(--fg-dim);text-decoration:underline;text-underline-offset:2px">Registro completo de informes SL en Drive ↗</a>
+    &nbsp;·&nbsp;32 informes ene–oct 2026 · serie regular mayo 2026 en adelante · Reputación Digital · AD HOC · Monitor Digital y otros
+  </p>
 </section>
 
 <!-- ── TAB 6: GAP CONV–SL ────────────────────── -->
@@ -1099,10 +1082,10 @@ footer a{color:var(--accent)}
       <tr>
         <td><strong>Imagen Milei · negativa</strong></td>
         <td>🟡</td>
-        <td class="num">~55–58%</td>
-        <td class="num" style="color:var(--fg-dim)">Synopsis / Isasi ago-26</td>
+        <td class="num">56–57% (2 fuentes oct)</td>
+        <td class="num" style="color:var(--fg-dim)">Giacobbe / AtlasIntel oct-26†</td>
         <td><span class="signal conv">ALTA</span></td>
-        <td>Techo de negatividad estable; sin deterioro ni mejora sostenida</td>
+        <td>Oct: Giacobbe 56% (campo 30 sep–5 oct) · AtlasIntel 57,2% (campo 2–7 oct). Techo de negatividad estable; sin deterioro ni mejora sostenida. †fuente secundaria encuestas-argentinas.com</td>
       </tr>
       <tr>
         <td><strong>ICG · confianza gobierno</strong></td>
@@ -1119,6 +1102,14 @@ footer a{color:var(--accent)}
         <td class="num" style="color:var(--fg-dim)">UTDT sep-26</td>
         <td><span class="signal conv">ALTA</span></td>
         <td>Estabilidad en nivel bajo may–sep; CABA en mínimo del período</td>
+      </tr>
+      <tr>
+        <td><strong>Agenda pública · problema #1</strong></td>
+        <td>🟡</td>
+        <td class="num">Ingresos/empleo → #1</td>
+        <td class="num" style="color:var(--fg-dim)">Multi-fuente sep-26</td>
+        <td><span class="signal conv">ALTA</span></td>
+        <td>Sin dato oct-26. Tendencia establecida en sep-26 con 6 fuentes: ingresos/empleo desplazó a inflación. Pendiente confirmación oct-26.</td>
       </tr>
       <tr>
         <td><strong>Rumbo del país · correcto</strong></td>
@@ -1157,26 +1148,26 @@ footer a{color:var(--accent)}
       <tr>
         <td><strong>Intención voto LLA</strong></td>
         <td>🟡</td>
-        <td class="num">30–40%</td>
-        <td class="num" style="color:var(--fg-dim)">Multi-fuente sep-26</td>
+        <td class="num">26–40% (5 fuentes oct)</td>
+        <td class="num" style="color:var(--fg-dim)">Multi-fuente oct-26†</td>
         <td><span class="signal mix">MEDIA</span></td>
-        <td>Rango amplio entre consultoras; dispersión metodológica alta</td>
+        <td>Oct: Proyección 38 · DC Consultores 40,2 · QSocial 26 · ESPOP 26 · OPSA 37. Rango muy amplio (14 p.p.); dispersión metodológica alta. †encuestas-argentinas.com</td>
       </tr>
       <tr>
         <td><strong>Intención voto PJ</strong></td>
         <td>🟡</td>
-        <td class="num">27–35%</td>
-        <td class="num" style="color:var(--fg-dim)">Multi-fuente sep-26</td>
+        <td class="num">28–36% (5 fuentes oct)</td>
+        <td class="num" style="color:var(--fg-dim)">Multi-fuente oct-26†</td>
         <td><span class="signal mix">MEDIA</span></td>
-        <td>Rango similar a LLA; diferencia inter-consultora supera diferencia entre espacios</td>
+        <td>Oct: Proyección 36 · DC Consultores 28,2 · QSocial 36 · ESPOP 24 · OPSA 34. Rango similar a LLA. †encuestas-argentinas.com</td>
       </tr>
       <tr>
         <td><strong>Balotaje Milei–Kicillof</strong></td>
         <td>🟡</td>
-        <td class="num">CELAG 42,7/42,5 · RDT 49,3/50,7</td>
-        <td class="num" style="color:var(--fg-dim)">CELAG / RDT oct-26</td>
+        <td class="num">4 fuentes oct · sin consenso</td>
+        <td class="num" style="color:var(--fg-dim)">Multi-fuente oct-26†</td>
         <td><span class="signal mix">MEDIA</span></td>
-        <td>CELAG: empate técnico (42,7 Milei / 42,5 Kicillof). RDT: Kicillof 50,7 / Milei 49,3 votos válidos. Divergencia entre consultoras: no promediar. Señal pendiente de confirmación</td>
+        <td>Oct: CELAG 42,7 Milei / 42,5 Kicillof (empate) · RDT 49,3/50,7 (Kicillof) · Proyección 41/39 (Milei) · Afiches AC 35/37 (Kicillof). Divergencia entre consultoras: no promediar. †encuestas-argentinas.com</td>
       </tr>
       <tr>
         <td><strong>Retención voto Milei 2023</strong></td>
@@ -1289,17 +1280,27 @@ footer a{color:var(--accent)}
       <div><h3>Agenda pública · ranking comparativo sep-26</h3><p>% de menciones como problema principal · respuesta espontánea o guiada según consultora</p></div>
     </div>
     <div class="chart-box" style="height:260px"><canvas id="chartAgenda"></canvas></div>
-    <p class="source">Realle Dalla Torre, Isasi-Burdman, Equipo Mide, D'Alessio, Explanans, OPSA · sep-26 · respuesta múltiple en varios casos: porcentajes no suman 100</p>
+    <p class="source">Realle Dalla Torre, Isasi-Burdman, Equipo Mide, D'Alessio, Explanans, OPSA · sep-26 · sin dato oct-26 · respuesta múltiple en varios casos: porcentajes no suman 100</p>
   </div>
 
-  <!-- Serie inflación como problema -->
-  <div class="chart-wrap">
-    <div class="chart-head">
-      <div><h3>Inflación como problema principal · evolución may–sep 2026</h3><p>Serie intra-consultora · comparabilidad MEDIA entre fuentes</p></div>
+  <!-- Mosaico: inflación y cambio de agenda -->
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:0" class="agenda-mosaico">
+    <div class="chart-wrap" style="margin-bottom:0">
+      <div class="chart-head">
+        <div><h3>Inflación como problema · may–sep 2026</h3><p>Serie intra-consultora · sin dato oct-26 · comp. MEDIA</p></div>
+      </div>
+      <div class="chart-box"><canvas id="chartInflProb"></canvas></div>
+      <div class="legend" id="legendInflProb"></div>
+      <p class="source">Isasi-Burdman · Equipo Mide · OPSA · no promediar</p>
     </div>
-    <div class="chart-box"><canvas id="chartInflProb"></canvas></div>
-    <div class="legend" id="legendInflProb"></div>
-    <p class="source">Isasi-Burdman, Equipo Mide, OPSA · may–sep 2026 · no promediar: escalas y metodologías distintas</p>
+    <div class="chart-wrap" style="margin-bottom:0">
+      <div class="chart-head">
+        <div><h3>Cambio de agenda · may vs sep 2026</h3><p>Top 3 problemas · orientativo multi-fuente · sin dato oct-26</p></div>
+      </div>
+      <div class="chart-box" style="height:220px"><canvas id="chartAgendaShift"></canvas></div>
+      <div class="legend" id="legendAgendaShift"></div>
+      <p class="source">Evidencia ALTA · 6 fuentes · inflación ↓ · ingresos/empleo ↑</p>
+    </div>
   </div>
 
   <!-- Tabla detallada por fuente -->
@@ -1781,6 +1782,20 @@ function initTab(tab){
         lc.innerHTML+=`<span class="legend-item" onclick="toggleDataset('chartInflProb',${i})"><span class="legend-dot" style="background:${c}"></span>${l}</span>`;
       });
     }
+    // Cambio de agenda: may-26 vs sep-26 · top 3 problemas · orientativo multi-fuente
+    mkGroupBar('chartAgendaShift',
+      ['Ingresos / empleo','Inseguridad','Inflación'],
+      [
+        {label:'May-26',data:[35,42,61],color:'var(--fg-dim)'},
+        {label:'Sep-26',data:[52,44,38],color:'var(--c1)'}
+      ]
+    );
+    const la=document.getElementById('legendAgendaShift');
+    if(la&&!la.children.length){
+      [['May-26','var(--fg-dim)'],['Sep-26','var(--c1)']].forEach(([l,c],i)=>{
+        la.innerHTML+=`<span class="legend-item" onclick="toggleDataset('chartAgendaShift',${i})"><span class="legend-dot" style="background:${c}"></span>${l}</span>`;
+      });
+    }
   }
 
   if(tab==='sl'){
@@ -1824,14 +1839,7 @@ function initTab(tab){
         y:{ticks:{font:{family:"'IBM Plex Mono',monospace",size:10},color:tok('--fg-dim'),stepSize:1},grid:{color:tok('--border')}}
       }
     });
-    mkBar('chartSLConsult',SL_CONSULT_LABELS,[{label:'Informes',data:SL_CONSULT_VALS,color:'var(--c2)'}],{
-      indexAxis:'y',
-      plugins:{legend:{display:false}},
-      scales:{
-        x:{ticks:{font:{family:"'IBM Plex Mono',monospace",size:10},color:tok('--fg-dim')},grid:{color:tok('--border')}},
-        y:{ticks:{font:{family:"'IBM Plex Mono',monospace",size:10},color:tok('--fg-dim')},grid:{display:false}}
-      }
-    });
+    renderSLRows(); // rendered silently; accessible via link in Drive
   }
 }
 
