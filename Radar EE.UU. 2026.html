@@ -1,0 +1,1162 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Radar EE.UU. 2026</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@400;600&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+
+<style>
+/* ─── Design tokens — light */
+:root {
+  --bg:         #F4F5F8;
+  --surface:    #FFFFFF;
+  --surface-2:  #F0F2F6;
+  --fg:         #0E1929;
+  --fg-soft:    #4A5568;
+  --fg-muted:   #718096;
+  --accent:     #1A3660;
+  --accent-lt:  #E8EDF5;
+  --dem:        #1B56A5;
+  --dem-lt:     #E6EFF8;
+  --rep:        #B52C2C;
+  --rep-lt:     #FAE8E8;
+  --tossup:     #6B46C1;
+  --tossup-lt:  #EDE9F8;
+  --lean-dem:   #4A7EC0;
+  --lean-rep:   #C96060;
+  --likely-dem: #2D6BBD;
+  --likely-rep: #C04545;
+  --warn:       #B45309;
+  --warn-lt:    #FEF3C7;
+  --border:     #DDE1EA;
+  --border-soft:#EEF0F5;
+  --cut-bg:     #1A3660;
+  --cut-fg:     #FFFFFF;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg:         #0C1220;
+    --surface:    #141E30;
+    --surface-2:  #1A2840;
+    --fg:         #E8ECF4;
+    --fg-soft:    #A0AABF;
+    --fg-muted:   #6B7A96;
+    --accent:     #6B9ED6;
+    --accent-lt:  #1A2840;
+    --dem:        #5B8FD8;
+    --dem-lt:     #0D1D33;
+    --rep:        #D96060;
+    --rep-lt:     #2A0F0F;
+    --tossup:     #9B7FE8;
+    --tossup-lt:  #1E1632;
+    --lean-dem:   #7AAAE0;
+    --lean-rep:   #E08080;
+    --likely-dem: #5A90D8;
+    --likely-rep: #D06060;
+    --warn:       #F59E0B;
+    --warn-lt:    #1C1505;
+    --border:     #263347;
+    --border-soft:#1C2A3C;
+    --cut-bg:     #6B9ED6;
+    --cut-fg:     #0C1220;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg:         #0C1220;
+  --surface:    #141E30;
+  --surface-2:  #1A2840;
+  --fg:         #E8ECF4;
+  --fg-soft:    #A0AABF;
+  --fg-muted:   #6B7A96;
+  --accent:     #6B9ED6;
+  --accent-lt:  #1A2840;
+  --dem:        #5B8FD8;
+  --dem-lt:     #0D1D33;
+  --rep:        #D96060;
+  --rep-lt:     #2A0F0F;
+  --tossup:     #9B7FE8;
+  --tossup-lt:  #1E1632;
+  --lean-dem:   #7AAAE0;
+  --lean-rep:   #E08080;
+  --likely-dem: #5A90D8;
+  --likely-rep: #D06060;
+  --warn:       #F59E0B;
+  --warn-lt:    #1C1505;
+  --border:     #263347;
+  --border-soft:#1C2A3C;
+  --cut-bg:     #6B9ED6;
+  --cut-fg:     #0C1220;
+  color-scheme: dark;
+}
+
+/* ─── Reset & base */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: 'IBM Plex Sans', system-ui, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  padding-left:  max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  padding-block: 0 40px;
+}
+h1, h2, h3, h4 { font-family: 'IBM Plex Serif', Georgia, serif; text-wrap: balance; }
+a { color: var(--dem); text-decoration: none; }
+a:hover { text-decoration: underline; }
+.mono { font-family: 'IBM Plex Mono', monospace; }
+
+/* ─── Header band */
+.site-header {
+  background: var(--surface);
+  border-bottom: 3px solid var(--accent);
+  padding-block: 28px 22px;
+  margin-left:  calc(-1 * max(16px, env(safe-area-inset-left, 0px)));
+  margin-right: calc(-1 * max(16px, env(safe-area-inset-right, 0px)));
+  padding-left:  max(24px, env(safe-area-inset-left, 0px));
+  padding-right: max(24px, env(safe-area-inset-right, 0px));
+}
+.header-eyebrow {
+  font-size: 10px;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--fg-muted);
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-weight: 700;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.header-eyebrow::before {
+  content: '';
+  display: inline-block;
+  width: 20px; height: 3px;
+  background: var(--accent);
+  border-radius: 2px;
+  flex-shrink: 0;
+}
+.header-title {
+  font-family: 'IBM Plex Serif', serif;
+  font-size: clamp(22px, 4vw, 34px);
+  font-weight: 600;
+  line-height: 1.15;
+  color: var(--fg);
+  margin-bottom: 5px;
+  text-wrap: balance;
+}
+.header-sub {
+  font-size: 13.5px;
+  color: var(--fg-soft);
+  margin-bottom: 18px;
+}
+.header-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 16px;
+  align-items: center;
+}
+.cutoff-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--accent-lt);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 4px 10px;
+  font-size: 11.5px;
+  font-weight: 600;
+  color: var(--accent);
+  font-family: 'IBM Plex Mono', monospace;
+}
+.cutoff-badge .dot {
+  width: 7px; height: 7px; border-radius: 50%;
+  background: #F59E0B;
+  flex-shrink: 0;
+}
+.election-countdown {
+  font-size: 12px;
+  color: var(--fg-muted);
+  font-weight: 500;
+}
+
+/* ─── Content wrapper */
+.content { max-width: 900px; margin: 0 auto; padding-top: 28px; }
+
+/* ─── Section blocks */
+.section {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+.section-header {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  padding: 14px 20px 12px;
+  border-bottom: 1px solid var(--border-soft);
+  background: var(--surface);
+}
+.section-num {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--fg-muted);
+  flex-shrink: 0;
+  padding-top: 2px;
+}
+.section-title {
+  font-family: 'IBM Plex Serif', serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--fg);
+  line-height: 1.3;
+}
+.section-body { padding: 20px; }
+
+/* ─── Key indicators row */
+.kpi-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 12px;
+  margin-bottom: 20px;
+}
+.kpi {
+  background: var(--surface-2);
+  border: 1px solid var(--border-soft);
+  border-radius: 5px;
+  padding: 12px 14px;
+}
+.kpi-label {
+  font-size: 10.5px;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  color: var(--fg-muted);
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+.kpi-value {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 1;
+  margin-bottom: 2px;
+}
+.kpi-source {
+  font-size: 10px;
+  color: var(--fg-muted);
+}
+.dem-color { color: var(--dem); }
+.rep-color { color: var(--rep); }
+.tossup-color { color: var(--tossup); }
+
+/* ─── Senate map bar */
+.senate-bar-wrap { margin-bottom: 18px; }
+.senate-bar-label {
+  display: flex;
+  justify-content: space-between;
+  font-size: 11px;
+  color: var(--fg-soft);
+  margin-bottom: 6px;
+  font-weight: 500;
+}
+.senate-bar {
+  display: flex;
+  height: 28px;
+  border-radius: 4px;
+  overflow: hidden;
+  width: 100%;
+}
+.sb-seg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 11px;
+  font-weight: 500;
+  color: #fff;
+  transition: flex .3s;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.sb-solid-dem  { background: var(--dem); }
+.sb-likely-dem { background: var(--likely-dem); }
+.sb-lean-dem   { background: var(--lean-dem); }
+.sb-tossup     { background: var(--tossup); }
+.sb-lean-rep   { background: var(--lean-rep); }
+.sb-likely-rep { background: var(--likely-rep); }
+.sb-solid-rep  { background: var(--rep); }
+.senate-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 14px;
+  margin-top: 10px;
+  font-size: 11px;
+  color: var(--fg-soft);
+}
+.leg-dot {
+  display: inline-block;
+  width: 9px; height: 9px;
+  border-radius: 2px;
+  margin-right: 4px;
+  vertical-align: middle;
+}
+.majority-line {
+  font-size: 11px;
+  color: var(--fg-muted);
+  margin-top: 6px;
+  padding: 6px 10px;
+  background: var(--warn-lt);
+  border-radius: 4px;
+  border-left: 3px solid var(--warn);
+}
+.majority-line strong { color: var(--warn); }
+
+/* ─── Generic ballot bar */
+.generic-ballot { margin-bottom: 18px; }
+.gb-bar {
+  display: flex;
+  height: 22px;
+  border-radius: 3px;
+  overflow: hidden;
+  margin-bottom: 6px;
+}
+.gb-dem { background: var(--dem); display: flex; align-items: center; justify-content: flex-end; padding-right: 8px; }
+.gb-rep { background: var(--rep); display: flex; align-items: center; justify-content: flex-start; padding-left: 8px; }
+.gb-label {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 11px;
+  font-weight: 500;
+  color: #fff;
+}
+
+/* ─── Comparison table */
+.ctable-wrap { overflow-x: auto; }
+table.ctable {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 12.5px;
+  min-width: 520px;
+}
+table.ctable th {
+  font-size: 10.5px;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  color: var(--fg-muted);
+  font-weight: 600;
+  font-family: 'IBM Plex Sans', sans-serif;
+  padding: 8px 12px;
+  border-bottom: 2px solid var(--border);
+  text-align: left;
+  background: var(--surface-2);
+}
+table.ctable td {
+  padding: 9px 12px;
+  border-bottom: 1px solid var(--border-soft);
+  vertical-align: top;
+  line-height: 1.4;
+}
+table.ctable tr:last-child td { border-bottom: none; }
+table.ctable tr:hover td { background: var(--surface-2); }
+table.ctable tr.group-head td {
+  background: var(--accent-lt);
+  color: var(--accent);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  padding: 6px 12px;
+  border-bottom: 1px solid var(--border);
+  border-top: 2px solid var(--accent);
+}
+table.ctable tr.group-head:first-child td { border-top: none; }
+.type-badge {
+  display: inline-block;
+  font-size: 9.5px;
+  font-weight: 600;
+  letter-spacing: .05em;
+  text-transform: uppercase;
+  padding: 2px 6px;
+  border-radius: 3px;
+}
+.badge-poll    { background: var(--dem-lt); color: var(--dem); }
+.badge-model   { background: var(--tossup-lt); color: var(--tossup); }
+.badge-ratings { background: var(--accent-lt); color: var(--accent); }
+.badge-agg     { background: var(--surface-2); color: var(--fg-muted); border: 1px solid var(--border); }
+.nd { color: var(--fg-muted); font-style: italic; font-size: 11px; }
+.val-dem { color: var(--dem); font-weight: 600; font-family: 'IBM Plex Mono', monospace; }
+.val-rep { color: var(--rep); font-weight: 600; font-family: 'IBM Plex Mono', monospace; }
+.val-tossup { color: var(--tossup); font-weight: 600; font-family: 'IBM Plex Mono', monospace; }
+
+/* ─── Scenario cards */
+.scenarios {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 14px;
+}
+.scenario-card {
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  overflow: hidden;
+}
+.scenario-head {
+  padding: 12px 14px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+  color: #fff;
+}
+.sc-rep  .scenario-head { background: var(--rep); }
+.sc-split .scenario-head { background: var(--tossup); }
+.sc-dem  .scenario-head { background: var(--dem); }
+.scenario-body {
+  padding: 12px 14px;
+  background: var(--surface);
+}
+.scenario-subtitle {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--fg);
+  margin-bottom: 8px;
+  font-family: 'IBM Plex Serif', serif;
+}
+.scenario-implication {
+  font-size: 12px;
+  color: var(--fg-soft);
+  line-height: 1.5;
+}
+.scenario-note {
+  margin-top: 8px;
+  font-size: 11px;
+  color: var(--fg-muted);
+  border-top: 1px solid var(--border-soft);
+  padding-top: 8px;
+}
+.sc-probability {
+  display: inline-block;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 10.5px;
+  font-weight: 500;
+  color: var(--fg-muted);
+  margin-top: 2px;
+}
+
+/* ─── Impacts matrix */
+.impacts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: 12px;
+}
+.impact-card {
+  border: 1px solid var(--border-soft);
+  border-radius: 5px;
+  padding: 12px 14px;
+  background: var(--surface-2);
+}
+.impact-area {
+  font-size: 10.5px;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--accent);
+  margin-bottom: 8px;
+}
+.impact-item {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 6px;
+  font-size: 12px;
+  color: var(--fg-soft);
+  line-height: 1.4;
+}
+.impact-item::before {
+  content: '→';
+  flex-shrink: 0;
+  color: var(--fg-muted);
+  font-family: monospace;
+}
+.impact-caveat {
+  margin-top: 8px;
+  font-size: 10.5px;
+  color: var(--fg-muted);
+  font-style: italic;
+}
+
+/* ─── Mosaic pair (sections 04+05 side by side) */
+.mosaic-sections {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  align-items: start;
+  max-width: 1140px;
+  margin: 0 auto;
+}
+.mosaic-panel { margin: 0; }
+
+/* ─── Watch list */
+.watch-list { display: flex; flex-direction: column; gap: 10px; }
+.watch-item {
+  display: flex;
+  gap: 12px;
+  padding: 12px 14px;
+  background: var(--surface-2);
+  border: 1px solid var(--border-soft);
+  border-radius: 5px;
+  align-items: flex-start;
+}
+.watch-num {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--accent);
+  flex-shrink: 0;
+  min-width: 24px;
+  padding-top: 1px;
+}
+.watch-title {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--fg);
+  margin-bottom: 3px;
+}
+.watch-detail {
+  font-size: 12px;
+  color: var(--fg-soft);
+  line-height: 1.5;
+}
+.watch-state-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  margin-top: 5px;
+}
+.state-chip {
+  font-size: 10.5px;
+  font-weight: 600;
+  padding: 2px 7px;
+  border-radius: 3px;
+  font-family: 'IBM Plex Mono', monospace;
+}
+.chip-tossup { background: var(--tossup-lt); color: var(--tossup); }
+.chip-dem    { background: var(--dem-lt); color: var(--dem); }
+.chip-rep    { background: var(--rep-lt); color: var(--rep); }
+
+/* ─── Approval mini chart */
+.approval-track {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-bottom: 14px;
+}
+.atrack-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 11.5px;
+}
+.atrack-label {
+  width: 160px;
+  flex-shrink: 0;
+  color: var(--fg-soft);
+  font-size: 11px;
+  line-height: 1.3;
+}
+.atrack-bar-wrap {
+  flex: 1;
+  display: flex;
+  gap: 2px;
+  align-items: center;
+}
+.atrack-approv {
+  height: 14px;
+  background: var(--dem);
+  border-radius: 2px 0 0 2px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 4px;
+}
+.atrack-disapprov {
+  height: 14px;
+  background: var(--rep);
+  border-radius: 0 2px 2px 0;
+  display: flex;
+  align-items: center;
+  padding-left: 4px;
+}
+.atrack-bar-val {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 9.5px;
+  color: rgba(255,255,255,.9);
+  font-weight: 500;
+}
+.atrack-net {
+  width: 50px;
+  flex-shrink: 0;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 11px;
+  color: var(--rep);
+  font-weight: 600;
+  text-align: right;
+}
+
+/* ─── Methodology notes */
+.meth-box {
+  background: var(--warn-lt);
+  border: 1px solid rgba(180,83,9,.2);
+  border-radius: 5px;
+  padding: 10px 14px;
+  margin-top: 14px;
+  font-size: 11.5px;
+  color: var(--fg-soft);
+  line-height: 1.55;
+}
+.meth-box strong { color: var(--warn); }
+.meth-icon { color: var(--warn); margin-right: 4px; }
+
+/* ─── Source attribution */
+.source-line {
+  font-size: 10.5px;
+  color: var(--fg-muted);
+  margin-top: 10px;
+  line-height: 1.5;
+}
+.source-line a { color: var(--fg-muted); text-decoration: underline; text-underline-offset: 2px; }
+
+/* ─── Update slot */
+.update-slot {
+  background: var(--surface);
+  border: 1px dashed var(--border);
+  border-radius: 5px;
+  padding: 12px 16px;
+  margin-top: 14px;
+  font-size: 12px;
+  color: var(--fg-muted);
+}
+.update-slot strong { color: var(--fg-soft); }
+
+/* ─── Divider within section */
+.intra-div {
+  border: none;
+  border-top: 1px solid var(--border-soft);
+  margin: 16px 0;
+}
+
+/* ─── Footer */
+footer {
+  margin-top: 32px;
+  padding-top: 20px;
+  border-top: 1px solid var(--border);
+  font-size: 11px;
+  color: var(--fg-muted);
+  line-height: 1.7;
+}
+footer a { color: var(--fg-muted); }
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 12px;
+  align-items: start;
+}
+@media (max-width: 480px) {
+  .footer-grid { grid-template-columns: 1fr; }
+}
+
+/* ─── Responsive tweaks */
+@media (max-width: 600px) {
+  .section-body { padding: 14px; }
+  .scenarios { grid-template-columns: 1fr; }
+  .impacts-grid { grid-template-columns: 1fr; }
+  .mosaic-sections { grid-template-columns: 1fr; }
+  .atrack-label { width: 120px; font-size: 10px; }
+}
+</style>
+
+<!-- ═══ HEADER ═══ -->
+<header class="site-header">
+  <div style="max-width:1140px;margin:0 auto;">
+    <div class="header-eyebrow">Radar Internacional · Módulo EE.UU.</div>
+    <h1 class="header-title">Elecciones de Medio Término 2026</h1>
+    <p class="header-sub">Panorama preelectoral — Cámara de Representantes y Senado</p>
+    <div class="header-meta">
+      <div class="cutoff-badge">
+        <span class="dot"></span>
+        Corte: 1/11/2026 — 23:59 ET
+      </div>
+      <div class="election-countdown">Elección: martes 3 de noviembre de 2026</div>
+    </div>
+  </div>
+</header>
+
+<!-- ═══ CONTENT ═══ -->
+<div class="content">
+
+<!-- ─── BLOQUE 1: Panorama Electoral ─── -->
+<section class="section">
+  <div class="section-header">
+    <span class="section-num">01</span>
+    <h2 class="section-title">Panorama Electoral</h2>
+  </div>
+  <div class="section-body">
+
+    <!-- Indicadores clave -->
+    <div class="kpi-row">
+      <div class="kpi">
+        <div class="kpi-label">Aprobación Trump — rango oct.</div>
+        <div class="kpi-value rep-color">30–39%</div>
+        <div class="kpi-source">Pew (30%) · Emerson LV (39%) · Promedio PollCheck: 34,7%</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi-label">Voto genérico Cámara (LV)</div>
+        <div class="kpi-value dem-color">D +8</div>
+        <div class="kpi-source">NPR/PBS/Marist, 19–20/oct | PollCheck avg: D +8,7</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi-label">Clasificación Cámara — Cook PR (editorial)</div>
+        <div class="kpi-value dem-color">Dem 231 · Rep 204</div>
+        <div class="kpi-source">Se necesitan 218 para mayoría · clasificación editorial, no resultado</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi-label">Escaños indefinidos — Senado</div>
+        <div class="kpi-value tossup-color">6 Toss-up</div>
+        <div class="kpi-source">MI · ME · OH · IA · AK · TX — Cook PR, 30/oct</div>
+      </div>
+    </div>
+
+    <hr class="intra-div">
+    <p style="font-size:11.5px;font-weight:600;color:var(--fg-soft);text-transform:uppercase;letter-spacing:.07em;margin-bottom:10px;">Aprobación presidencial — selección verificada (sep–oct 2026)</p>
+    <div class="approval-track">
+      <div style="font-size:10.5px;color:var(--fg-muted);display:flex;gap:8px;margin-bottom:2px;padding-left:0;">
+        <span style="width:160px;flex-shrink:0;">Institución (campo)</span>
+        <span style="flex:1">Aprobación / Desaprobación</span>
+        <span style="width:50px;text-align:right;">Neto</span>
+      </div>
+      <div class="atrack-row">
+        <div class="atrack-label">Pew (28 sep–4 oct)<br><span style="color:var(--fg-muted);font-size:10px;">n=5.062 adultos</span></div>
+        <div class="atrack-bar-wrap">
+          <div class="atrack-approv" style="flex:30;min-width:20px;"><span class="atrack-bar-val">30%</span></div>
+          <div class="atrack-disapprov" style="flex:68;"><span class="atrack-bar-val">68%</span></div>
+        </div>
+        <div class="atrack-net">−38</div>
+      </div>
+      <div class="atrack-row">
+        <div class="atrack-label">Reuters/Ipsos (26 oct)<br><span style="color:var(--fg-muted);font-size:10px;">n=1.679 adultos</span></div>
+        <div class="atrack-bar-wrap">
+          <div class="atrack-approv" style="flex:32;min-width:20px;"><span class="atrack-bar-val">32%</span></div>
+          <div class="atrack-disapprov" style="flex:66;"><span class="atrack-bar-val">66%</span></div>
+        </div>
+        <div class="atrack-net">−34</div>
+      </div>
+      <div class="atrack-row">
+        <div class="atrack-label">Reuters/Ipsos (5 oct)<br><span style="color:var(--fg-muted);font-size:10px;">n=4.506 adultos</span></div>
+        <div class="atrack-bar-wrap">
+          <div class="atrack-approv" style="flex:32;min-width:20px;"><span class="atrack-bar-val">32%</span></div>
+          <div class="atrack-disapprov" style="flex:65;"><span class="atrack-bar-val">65%</span></div>
+        </div>
+        <div class="atrack-net">−33</div>
+      </div>
+      <div class="atrack-row">
+        <div class="atrack-label">FT/Focaldata (4 oct)<br><span style="color:var(--fg-muted);font-size:10px;">n=2.275 RV</span></div>
+        <div class="atrack-bar-wrap">
+          <div class="atrack-approv" style="flex:34;min-width:20px;"><span class="atrack-bar-val">34%</span></div>
+          <div class="atrack-disapprov" style="flex:59;"><span class="atrack-bar-val">59%</span></div>
+        </div>
+        <div class="atrack-net">−25</div>
+      </div>
+      <div class="atrack-row">
+        <div class="atrack-label">Quinnipiac (27 sep)<br><span style="color:var(--fg-muted);font-size:10px;">n=1.032 RV</span></div>
+        <div class="atrack-bar-wrap">
+          <div class="atrack-approv" style="flex:34;min-width:20px;"><span class="atrack-bar-val">34%</span></div>
+          <div class="atrack-disapprov" style="flex:61;"><span class="atrack-bar-val">61%</span></div>
+        </div>
+        <div class="atrack-net">−27</div>
+      </div>
+      <div class="atrack-row">
+        <div class="atrack-label">Emerson College (22 sep)<br><span style="color:var(--fg-muted);font-size:10px;">n=1.000 LV — máximo oct</span></div>
+        <div class="atrack-bar-wrap">
+          <div class="atrack-approv" style="flex:39;min-width:24px;"><span class="atrack-bar-val">39%</span></div>
+          <div class="atrack-disapprov" style="flex:58;"><span class="atrack-bar-val">57,9%</span></div>
+        </div>
+        <div class="atrack-net">−19</div>
+      </div>
+    </div>
+    <div class="meth-box" style="margin-top:10px;">
+      <span class="meth-icon">⚠</span>
+      <strong>Rango oct:</strong> 30% (Pew, adultos) a 39% (Emerson, LV). Diferencia multifactorial: fechas, universo y método distintos. PollCheck avg: 34,7% — no es fuente independiente. Gallup discontinuó tracking en feb 2026 (último: 36%).
+    </div>
+
+    <hr class="intra-div">
+    <!-- Cámara: voto genérico -->
+    <p style="font-size:11.5px;font-weight:600;color:var(--fg-soft);text-transform:uppercase;letter-spacing:.07em;margin-bottom:8px;">Voto genérico — Cámara de Representantes</p>
+    <div class="generic-ballot">
+      <div class="gb-bar" style="width:100%">
+        <div class="gb-dem" style="flex: 54"><span class="gb-label">Dem 54%</span></div>
+        <div class="gb-rep" style="flex: 46"><span class="gb-label">Rep 46%</span></div>
+      </div>
+      <div style="font-size:11px;color:var(--fg-muted);">NPR/PBS/Marist — universo LV — campo 19–20/oct/2026 — n=1.289 RV (submuestra LV no informada separadamente)</div>
+    </div>
+
+    <hr class="intra-div">
+
+    <!-- Senado: barra de asientos -->
+    <p style="font-size:11.5px;font-weight:600;color:var(--fg-soft);text-transform:uppercase;letter-spacing:.07em;margin-bottom:10px;">Senado — clasificación Cook PR al 30/10/2026 (33 ordinarias Clase II + especiales OH y FL · 35 carreras totales)</p>
+
+    <div class="senate-bar-wrap">
+      <div class="senate-bar-label">
+        <span style="color:var(--dem)">← Demócrata</span>
+        <span style="color:var(--rep)">Republicano →</span>
+      </div>
+      <!--
+        Sólido Dem: CO, DE, IL, MA, NJ, NM, OR, RI, VA = 9
+        Likely Dem: GA, NC = 2
+        Lean Dem: NH, MN = 2
+        Toss-up: MI, ME, OH, IA, AK, TX = 6
+        Lean Rep: NE, KS = 2
+        Likely Rep: FL (especial) = 1
+        Sólido Rep: AL, AR, ID, KY, LA, MS*, MT, OK, SC*, SD, TN, WV, WY = 13
+        (* MS y SC con ajuste leve oct20, siguen en campo rep)
+        Total: 9+2+2+6+2+1+13 = 35 ✓
+      -->
+      <div class="senate-bar">
+        <div class="sb-seg sb-solid-dem"  style="flex:9"  title="Solid Dem (9)">9</div>
+        <div class="sb-seg sb-likely-dem" style="flex:2"  title="Likely Dem (2): GA, NC">2</div>
+        <div class="sb-seg sb-lean-dem"   style="flex:2"  title="Lean Dem (2): NH, MN">2</div>
+        <div class="sb-seg sb-tossup"     style="flex:6"  title="Toss-up (6): MI, ME, OH, IA, AK, TX">6</div>
+        <div class="sb-seg sb-lean-rep"   style="flex:2"  title="Lean Rep (2): NE, KS">2</div>
+        <div class="sb-seg sb-likely-rep" style="flex:1"  title="Likely Rep (1): FL esp.">1</div>
+        <div class="sb-seg sb-solid-rep"  style="flex:13" title="Solid Rep (13)">13</div>
+      </div>
+      <div class="senate-legend">
+        <span><span class="leg-dot" style="background:var(--dem)"></span>Sólido Dem (9)</span>
+        <span><span class="leg-dot" style="background:var(--likely-dem)"></span>Likely Dem (2): GA, NC</span>
+        <span><span class="leg-dot" style="background:var(--lean-dem)"></span>Lean Dem (2): NH, MN</span>
+        <span><span class="leg-dot" style="background:var(--tossup)"></span>Toss-up (6): MI · ME · OH · IA · AK · TX</span>
+        <span><span class="leg-dot" style="background:var(--lean-rep)"></span>Lean Rep (2): NE, KS</span>
+        <span><span class="leg-dot" style="background:var(--likely-rep)"></span>Likely Rep (1): FL esp.</span>
+        <span><span class="leg-dot" style="background:var(--rep)"></span>Sólido Rep (13)</span>
+      </div>
+    </div>
+
+    <div class="majority-line">
+      <strong>Control del Senado:</strong> El balance final depende de las 35 carreras en juego <em>más</em> los 65 escaños que no se renuevan (Clases I y III, en ejercicio desde 2020 y 2022). Los 6 Toss-up inciden en el resultado pero no lo determinan de forma aislada; su peso depende del punto de partida de cada bloque. Republicanos favorecidos según Cook PR y Sabato's Crystal Ball (al 30/10/2026). <strong>Nota:</strong> en caso de empate 50–50, el/la vicepresidente/a ejerce voto de desempate.
+    </div>
+
+    <div class="source-line">
+      Fuentes: Cook Political Report (clasificaciones publicadas al 30/10/2026; cookpolitical.com). Clasificación editorial Cámara: Cook PR. PollCheck reproduce el cómputo de Cook. <strong>Nota:</strong> las clasificaciones de competitividad no son predicciones de resultado; reflejan evaluación editorial de márgenes esperados.
+    </div>
+
+    <div class="update-slot">
+      <strong>Espacio para actualización 2/11/2026:</strong> Incorporar encuestas finales publicadas hasta las 23:59 ET del 2/11. No sobreescribir base original — registrar como addendum.
+    </div>
+
+  </div>
+</section>
+
+<!-- ─── BLOQUES 2+3: Mosaico ─── -->
+<div class="mosaic-sections">
+<section class="section mosaic-panel">
+  <div class="section-header">
+    <span class="section-num">02</span>
+    <h2 class="section-title">Fuentes: Estimaciones y Proyecciones Comparadas</h2>
+  </div>
+  <div class="section-body">
+    <div class="ctable-wrap">
+      <table class="ctable">
+        <thead>
+          <tr>
+            <th>Fuente</th>
+            <th>Tipo</th>
+            <th>Fecha / Campo</th>
+            <th>Cámara</th>
+            <th>Senado</th>
+            <th>Universo</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Grupo 1: Encuestas primarias -->
+          <tr class="group-head"><td colspan="6">Encuestas primarias — mediciones directas con muestra propia</td></tr>
+          <tr>
+            <td><strong>NPR/PBS/Marist</strong></td>
+            <td><span class="type-badge badge-poll">Encuesta</span></td>
+            <td class="mono" style="font-size:11px;">19–20 oct 2026</td>
+            <td><span class="val-dem">D+8 LV · D+10 RV</span></td>
+            <td class="nd">No preguntado</td>
+            <td>RV n=1.289 · LV (subconjunto)</td>
+          </tr>
+          <tr>
+            <td><strong>Reuters/Ipsos</strong></td>
+            <td><span class="type-badge badge-poll">Encuesta</span></td>
+            <td class="mono" style="font-size:11px;">26 oct 2026</td>
+            <td><span class="val-dem">D+9 LV</span></td>
+            <td class="nd">No preguntado</td>
+            <td>LV n=1.164</td>
+          </tr>
+          <tr>
+            <td><strong>Pew Research Center</strong></td>
+            <td><span class="type-badge badge-poll">Encuesta</span></td>
+            <td class="mono" style="font-size:11px;">28 sep–4 oct 2026</td>
+            <td class="nd">Voto genérico no reportado</td>
+            <td class="nd">No preguntado</td>
+            <td>Adultos n=5.062 / RV submuestra</td>
+          </tr>
+          <!-- Grupo 2: Ratings de competitividad -->
+          <tr class="group-head"><td colspan="6">Ratings de competitividad — evaluación editorial de márgenes esperados (no son encuestas)</td></tr>
+          <tr>
+            <td><strong>Cook Political Report</strong></td>
+            <td><span class="type-badge badge-ratings">Ratings</span></td>
+            <td class="mono" style="font-size:11px;">30 oct 2026</td>
+            <td><span class="val-dem">Dem 231 · Rep 204</span></td>
+            <td><span class="val-tossup">6 Toss-up</span> · Rep favorecido</td>
+            <td>Análisis editorial — no encuesta</td>
+          </tr>
+          <tr>
+            <td><strong>Sabato's Crystal Ball</strong></td>
+            <td><span class="type-badge badge-ratings">Ratings</span></td>
+            <td class="mono" style="font-size:11px;">oct 2026</td>
+            <td class="nd">No publicado en base de trabajo</td>
+            <td>Rep favorecido</td>
+            <td>Análisis editorial — no encuesta</td>
+          </tr>
+          <!-- Grupo 3: Agregadores -->
+          <tr class="group-head"><td colspan="6">Agregadores — promedios ponderados de encuestas primarias (no son fuentes independientes)</td></tr>
+          <tr>
+            <td><strong>PollCheck (UK)</strong></td>
+            <td><span class="type-badge badge-agg">Agregador</span></td>
+            <td class="mono" style="font-size:11px;">27 oct 2026</td>
+            <td><span class="val-dem">D+8,7</span> (promedio pond.) · Cám. est.: Dem 231 (toma clasificación Cook)</td>
+            <td class="nd">No reportado</td>
+            <td>Mixto · promedio ponderado</td>
+          </tr>
+          <tr>
+            <td><strong>Poliwave</strong></td>
+            <td><span class="type-badge badge-agg">Agregador</span></td>
+            <td class="mono" style="font-size:11px;">oct 2026</td>
+            <td><span class="val-dem">D+8</span></td>
+            <td class="nd">No reportado</td>
+            <td>Mixto</td>
+          </tr>
+          <tr>
+            <td><strong>USPollingData</strong></td>
+            <td><span class="type-badge badge-agg">Agregador</span></td>
+            <td class="mono" style="font-size:11px;">oct 2026</td>
+            <td><span class="val-dem">D+7,4</span></td>
+            <td class="nd">No reportado</td>
+            <td>Mixto</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="meth-box">
+      <span class="meth-icon">⚠</span>
+      <strong>Diferencias metodológicas:</strong> Los agregadores no son fuentes independientes — recopilan las mismas encuestas primarias. NPR/Marist RV y LV son la <em>misma</em> encuesta con dos universos informados. Los ratings editoriales (Cook, Sabato) no son proyecciones estadísticas; reflejan evaluación experta de condiciones de competencia. <strong>Ninguna fuente citada aquí constituye un pronóstico propio de este Radar.</strong>
+    </div>
+  </div>
+</section>
+
+<section class="section mosaic-panel">
+  <div class="section-header">
+    <span class="section-num">03</span>
+    <h2 class="section-title">Escenarios Institucionales</h2>
+  </div>
+  <div class="section-body">
+    <p style="font-size:12.5px;color:var(--fg-soft);margin-bottom:16px;line-height:1.55;">
+      Los escenarios describen consecuencias institucionales verificables, no probabilidades asignadas por este análisis. La distinción entre escenarios depende centralmente de los 6 escaños Toss-up del Senado y de si la proyección de la Cámara se concreta.
+    </p>
+    <div class="scenarios">
+
+      <!-- Escenario A: Republicanos controlan ambas cámaras -->
+      <div class="scenario-card sc-rep">
+        <div class="scenario-head">Escenario A</div>
+        <div class="scenario-body">
+          <div class="scenario-subtitle">Control republicano — ambas cámaras</div>
+          <p class="scenario-implication">
+            Trump obtiene mayor capacidad legislativa, aunque las reglas del Senado (filibúster, quórum, Byrd Rule) y los controles institucionales ordinarios siguen vigentes. La agenda fiscal puede avanzar por reconciliación presupuestaria, sujeta a los requisitos procedimentales de la Byrd Rule y a la cohesión interna de la mayoría. La política exterior ejecutiva no requiere aprobación legislativa ordinaria, pero el Congreso conserva potestades presupuestarias y de supervisión.
+          </p>
+          <p class="scenario-note">
+            Requiere que suficientes Toss-up del Senado se definan a favor de republicanos y que la proyección demócrata de la Cámara no se confirme. El número exacto de Toss-up necesarios depende del balance de los escaños no renovados. Sin clasificación propia de probabilidad.
+          </p>
+        </div>
+      </div>
+
+      <!-- Escenario B: División — Cámara Dem + Senado Rep -->
+      <div class="scenario-card sc-split">
+        <div class="scenario-head">Escenario B</div>
+        <div class="scenario-body">
+          <div class="scenario-subtitle">Cámara Demócrata · Senado Republicano</div>
+          <p class="scenario-implication">
+            Gobierno dividido. La Cámara puede bloquear legislación y activar investigaciones (comisiones, citaciones). El Senado confirma nombramientos; presta consentimiento a tratados formales por dos tercios de los presentes (no todos los acuerdos internacionales requieren ese procedimiento). Las prioridades de la agenda ejecutiva de Trump enfrentan obstáculo legislativo en la Cámara.
+          </p>
+          <p class="scenario-note">
+            Consistente con las proyecciones de Cook (Cámara Dem 231) y la ventaja republicana en el Senado. Escenario de máxima tensión institucional.
+          </p>
+        </div>
+      </div>
+
+      <!-- Escenario C: Demócratas controlan ambas cámaras -->
+      <div class="scenario-card sc-dem">
+        <div class="scenario-head">Escenario C</div>
+        <div class="scenario-body">
+          <div class="scenario-subtitle">Control demócrata — ambas cámaras</div>
+          <p class="scenario-implication">
+            Requiere que los demócratas ganen suficientes Toss-up para superar el balance republicano en los escaños no renovados. Capacidad legislativa condicionada por el filibúster (60 votos para clotura en legislación ordinaria; no aplica a nominaciones ni a reconciliación presupuestaria). El presidente conserva poder de veto. Agenda de supervisión del ejecutivo activa.
+          </p>
+          <p class="scenario-note">
+            Requiere ganar todos o casi todos los Toss-up y que el balance de escaños no renovados lo permita. Sin clasificación propia de probabilidad.
+          </p>
+        </div>
+      </div>
+
+    </div>
+    <div class="meth-box" style="margin-top:14px;">
+      <span class="meth-icon">⚠</span>
+      <strong>Nota:</strong> El Senado actual (clase en ejercicio) es republicano. La mayoría que resulte del 3/11 entra en funciones en enero de 2027. El análisis de escenarios se basa en clasificaciones editoriales (Cook, Sabato) y en proyecciones de agregadores; <strong>no constituye pronóstico propio.</strong>
+    </div>
+  </div>
+</section>
+</div>
+
+<!-- ─── BLOQUES 4+5: Mosaico ─── -->
+<div class="mosaic-sections">
+<section class="section mosaic-panel">
+  <div class="section-header">
+    <span class="section-num">04</span>
+    <h2 class="section-title">Impactos Potenciales por Área</h2>
+  </div>
+  <div class="section-body">
+    <p style="font-size:12px;color:var(--fg-soft);margin-bottom:14px;">
+      Impactos institucionales directos (verificables) separados de hipótesis económicas y geopolíticas (especulativas). Solo se consignan tendencias respaldadas por análisis publicado.
+    </p>
+    <div class="impacts-grid">
+
+      <div class="impact-card">
+        <div class="impact-area">Gobernanza y presupuesto</div>
+        <div class="impact-item">Límite de deuda federal: cualquier configuración requiere negociación. Cámara Dem = bloqueo más probable.</div>
+        <div class="impact-item">Reconciliación presupuestaria requiere que ambas cámaras aprueben una resolución presupuestaria conjunta; procedimentalmente más factible con el mismo partido en control, pero también sujeta a cohesión interna y a los límites de la Byrd Rule.</div>
+        <div class="impact-item">Investigaciones legislativas sobre ejecutivo se activan con mayoría demócrata en Cámara.</div>
+        <p class="impact-caveat">Fuente: análisis institucional Cook PR / Brookings Institution</p>
+      </div>
+
+      <div class="impact-card">
+        <div class="impact-area">Economía y regulación</div>
+        <div class="impact-item">Sentimiento del consumidor en mínimo de 5 meses (Michigan: 48,0 en oct). 65% dice que políticas Trump empeoraron la economía.</div>
+        <div class="impact-item">Disposiciones fiscales: legislación de 2025 hizo permanentes varias medidas de la TCJA. Las provisiones con fecha de vencimiento vigente o excluidas de esa ley están <em>[pendientes de verificación con publicación primaria — no se afirma vencimiento]</em>.</div>
+        <div class="impact-item">Regulación financiera y energética: reversión más factible con gobierno unificado.</div>
+        <p class="impact-caveat">Datos: U. of Michigan Surveys of Consumers; Pew Research Oct 2026</p>
+      </div>
+
+      <div class="impact-card">
+        <div class="impact-area">Política exterior y seguridad</div>
+        <div class="impact-item">El consentimiento a tratados formales es potestad del Senado (dos tercios de presentes); no todos los acuerdos internacionales siguen ese procedimiento. La composición puede condicionar — pero no determina automáticamente — los compromisos internacionales.</div>
+        <div class="impact-item">Financiamiento a Ucrania y compromisos OTAN: sujetos a asignación presupuestaria del Congreso.</div>
+        <div class="impact-item">Política migratoria: los cambios legislativos requieren ambas cámaras; las medidas ejecutivas pueden implementarse con mayor rapidez, sujetas a control judicial.</div>
+        <p class="impact-caveat">Nota: la política exterior ejecutiva no está sujeta a confirmación legislativa ordinaria</p>
+      </div>
+
+      <div class="impact-card">
+        <div class="impact-area">América Latina y Argentina</div>
+        <div class="impact-item">Relación bilateral: canal ejecutivo-ejecutivo más relevante que composición del Congreso.</div>
+        <div class="impact-item">Política comercial (aranceles): competencia mayormente ejecutiva vía USTR; Congreso puede legislar marcos.</div>
+        <div class="impact-item">FMI y multilaterales: posición de EE.UU. determinada por ejecutivo, no por Congreso directamente.</div>
+        <p class="impact-caveat">Hipótesis sobre impacto directo en Argentina requieren evidencia específica, no disponible en base auditada</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="section mosaic-panel">
+  <div class="section-header">
+    <span class="section-num">05</span>
+    <h2 class="section-title">Variables a Monitorear el 3 de Noviembre</h2>
+  </div>
+  <div class="section-body">
+    <div class="watch-list">
+
+      <div class="watch-item">
+        <div class="watch-num">1.</div>
+        <div>
+          <div class="watch-title">Participación y voto anticipado como señal</div>
+          <div class="watch-detail">
+            Al 26/oct se superaron 30 millones de votos anticipados (UF Election Lab, reportado por medios). Datos de composición partidaria del voto anticipado en NC y PA circularon en medios, pero los porcentajes exactos, universos y denominadores precisos están <em>[pendientes de verificación con publicación primaria de UF Election Lab o secretaría de estado]</em>.
+            <br>
+            <strong>Precaución:</strong> registro de partido ≠ intención de voto ni resultado. La composición del voto anticipado no anticipa por sí sola el resultado de la elección.
+          </div>
+        </div>
+      </div>
+
+      <div class="watch-item">
+        <div class="watch-num">2.</div>
+        <div>
+          <div class="watch-title">Escaños Toss-up del Senado — los 6 que deciden el control</div>
+          <div class="watch-detail">
+            Estos seis escaños determinan cuál partido controla el Senado. Seguir en tiempo real: resultados de cada uno afectan el balance total.
+          </div>
+          <div class="watch-state-chips">
+            <span class="state-chip chip-tossup">MI</span>
+            <span class="state-chip chip-tossup">ME</span>
+            <span class="state-chip chip-tossup">OH</span>
+            <span class="state-chip chip-tossup">IA</span>
+            <span class="state-chip chip-tossup">AK</span>
+            <span class="state-chip chip-tossup">TX</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="watch-item">
+        <div class="watch-num">3.</div>
+        <div>
+          <div class="watch-title">Margen real vs. voto genérico: prueba del +8</div>
+          <div class="watch-detail">
+            Las encuestas muestran D+8 a D+10 en voto genérico LV/RV. La traducción en escaños depende de la distribución distrital. Comparar el margen nacional real con el proyectado por Cook (Dem 231 / Rep 204) es el cotejo de calidad metodológica central para este Radar.
+            <br>
+            La base preelectoral registrada al 1/11 queda congelada como referencia para este contraste.
+          </div>
+        </div>
+      </div>
+
+      <div class="watch-item">
+        <div class="watch-num">4.</div>
+        <div>
+          <div class="watch-title">Timing y fuente de resultados oficiales</div>
+          <div class="watch-detail">
+            Los resultados definitivos pueden tardar días (votos por correo, Alaska, estados ajustados). <strong>Fuentes a consultar el 3/N:</strong> Associated Press (proyecciones periodísticas de carreras — no son certificaciones oficiales). Los resultados certificados son emitidos por las secretarías de estado de cada jurisdicción. La FEC publica compilaciones federales con posterioridad; no administra ni certifica las elecciones estatales. No incorporar al Radar proyecciones periodísticas como resultados finales.
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+</div>
+
+<!-- ─── Footer ─── -->
+<footer>
+  <div class="footer-grid">
+    <div>
+      <strong>Radar Internacional — Módulo EE.UU. 2026</strong><br>
+      Proyecto Analítico · Corte de datos: 1/11/2026, 23:59 ET · Presentación prevista: 2/11/2026.<br>
+      Encuestas: G1 (aprobación), G2 (voto genérico), G3 (Michigan Sentiment), G4 (Senado), G5 (voto anticipado), G6 (prioridades ciudadanas).<br>
+      Google Drive: <em>Radar Internacional | EE.UU. 2026 — Base de trabajo 2026-11-01</em> · BIT-20261101-004.<br>
+      <br>
+      <strong>Fuentes primarias:</strong>
+      <a href="https://maristpoll.marist.edu/" target="_blank">NPR/PBS/Marist</a> ·
+      <a href="https://www.pewresearch.org/politics/2026/10/08/" target="_blank">Pew Research Center</a> ·
+      <a href="https://cookpolitical.com" target="_blank">Cook Political Report</a> ·
+      <a href="https://election.lab.ufl.edu" target="_blank">UF Election Lab</a> ·
+      <a href="https://www.pollcheck.co.uk/us-midterms-2026/" target="_blank">PollCheck</a>.<br>
+      <br>
+      <em>Este documento no elabora pronósticos propios. Todos los datos tienen fuente verificable indicada. Las proyecciones corresponden a fuentes externas identificadas. Los escenarios describen consecuencias institucionales, no probabilidades asignadas.</em>
+    </div>
+    <div style="text-align:right;font-size:10px;color:var(--fg-muted);min-width:100px;">
+      Corte de datos: 1/11/2026<br>
+      Elección: 3/11/2026<br>
+      Presentación prevista: 2/11/2026
+    </div>
+  </div>
+</footer>
+
+</div><!-- /content -->
+
+</body></html>
