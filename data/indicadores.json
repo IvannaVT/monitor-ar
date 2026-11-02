@@ -694,7 +694,7 @@
         null,
         null,
         null,
-        null
+        58.2
       ]
     }
   },
@@ -1251,6 +1251,16 @@
       "campo": "oct-26",
       "pregunta": "imagen positiva Milei",
       "estado": "verificado - confirmado por usuaria 2026-11-02"
+    },
+    "IMG_CELAG_neg_oct26": {
+      "id_indicador": "IMG_CELAG_NEGATIVA_NAC",
+      "fuente": "CELAG",
+      "fecha_campo": "octubre 2026",
+      "valor": 58.2,
+      "unidad": "%",
+      "descripcion": "Imagen negativa de Milei – CELAG oct-26. Primer dato de esta consultora; punto aislado, sin serie comparable. No mezclar con negativas de otras consultoras (distintas escalas/formulaciones).",
+      "comparabilidad": "BAJA (1er dato CELAG; sin serie previa de la misma consultora)",
+      "pendiente": "Verificar página y redacción exacta de pregunta en informe CELAG oct-26"
     }
   }
 }
