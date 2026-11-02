@@ -74,7 +74,7 @@
     2.1,
     1.9,
     2.1,
-    1.9,
+    1.94,
     1.95
   ],
   "MINFL": [
@@ -610,7 +610,7 @@
         61.3,
         null,
         61.8,
-        null
+        64.1
       ],
       "pos": [
         null,
@@ -696,7 +696,7 @@
         39.4,
         39.7,
         42,
-        null
+        42.0
       ],
       "desaprob": [
         null,
@@ -1185,5 +1185,46 @@
       "motivo": "Corregida inversión en visualización;maestro ya42/48/10."
     },
     "Oct-26 update 2026-11-02: ICG 1.95, gestion oct (Zuban 34.1, Zentrix 36.2 adhesion, RDT 29.5 adhesion, Pulso 28.9, CELAG 38.7), imagen oct (Zuban pos 34.9, Zentrix 35.9, RDT 36.6 ranking, Pulso 32.4)"
-  ]
+  ],
+  "_notas": {
+    "ICG_sep26": {
+      "valor": 1.94,
+      "fuente": "Di Tella CIF",
+      "publicado": "oct-26",
+      "variacion_publicada": "+0.9%",
+      "pregunta": "ICG escala 0-5",
+      "campo": "sep-26",
+      "estado": "verificado"
+    },
+    "ICG_oct26": {
+      "valor": 1.95,
+      "fuente": "Di Tella CIF",
+      "publicado": "oct-26",
+      "variacion_publicada": "+0.9% vs sep",
+      "pregunta": "ICG escala 0-5",
+      "campo": "oct-26",
+      "estado": "verificado"
+    },
+    "GESTION_Proyeccion_oct26": {
+      "valor": 42.0,
+      "fuente": "Proyección",
+      "campo": "oct-26",
+      "pregunta": "evaluación positiva del Gobierno (≠ aprobación presidencial)",
+      "nota": "no equiparar con series de aprobación de gestión de otras consultoras",
+      "estado": "verificado"
+    },
+    "IMG_Zuban_neg_oct26": {
+      "valor": 64.1,
+      "fuente": "Zuban Córdoba",
+      "campo": "oct-26",
+      "pregunta": "imagen negativa",
+      "estado": "verificado - pendiente cotejo sep en histórico informe"
+    },
+    "CELAG_balotaje_oct26": {
+      "correccion": "Milei 42.5 / Kicillof 42.7 (no 42.7/42.5)",
+      "nota": "diferencia dentro del ME; no declarar empate sin sustento estadístico",
+      "fuente": "CELAG oct-26",
+      "estado": "corregido 2026-11-02"
+    }
+  }
 }
