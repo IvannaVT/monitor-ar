@@ -10,6 +10,7 @@
   --accent:#5B9CF6; --border:#1F3A5F;
   --pos:#22C07A; --neg:#F06070; --warn:#F5A623; --neu:#8AAFC8;
   --c1:#5B9CF6; --c2:#A78BFA; --c3:#22C07A; --c4:#F5A623; --c5:#F06070;
+  --c6:#48CAE4; --c7:#F48FB1; --c8:#A5D6A7; --c9:#FFCC80;
   --r:8px; color-scheme:dark;
 }
 @media(prefers-color-scheme:dark){:root:not([data-theme="light"]){
@@ -17,6 +18,7 @@
   --accent:#5B9CF6;--border:#162B48;
   --pos:#22C07A;--neg:#F06070;--warn:#F5A623;--neu:#8AAFC8;
   --c1:#5B9CF6;--c2:#A78BFA;--c3:#22C07A;--c4:#F5A623;--c5:#F06070;
+  --c6:#48CAE4;--c7:#F48FB1;--c8:#A5D6A7;--c9:#FFCC80;
   color-scheme:dark;
 }}
 :root[data-theme="dark"]{
@@ -24,6 +26,7 @@
   --accent:#5B9CF6;--border:#162B48;
   --pos:#22C07A;--neg:#F06070;--warn:#F5A623;--neu:#8AAFC8;
   --c1:#5B9CF6;--c2:#A78BFA;--c3:#22C07A;--c4:#F5A623;--c5:#F06070;
+  --c6:#48CAE4;--c7:#F48FB1;--c8:#A5D6A7;--c9:#FFCC80;
   color-scheme:dark;
 }
 
@@ -180,7 +183,7 @@ footer a{color:var(--accent)}
 .kpi-compare{font-size:9px;color:var(--fg-dim);margin-top:2px;font-style:italic}
 
 @media(max-width:500px){.gap-zone-cards{grid-template-columns:1fr 1fr}.kpi-num{font-size:22px}}
-@media(max-width:620px){.cross-grid{grid-template-columns:1fr!important}}
+@media(max-width:620px){.cross-grid{grid-template-columns:1fr!important}.agenda-mosaico{grid-template-columns:1fr!important}}
 /* ── MOBILE ─────────────────────────────────── */
 @media(max-width:640px){
   .gap-legend-grid{grid-template-columns:1fr!important}
@@ -343,9 +346,9 @@ footer a{color:var(--accent)}
     </div>
     <!-- ICG -->
     <div class="kpi">
-      <div class="kpi-label">ICG sep-26</div>
-      <div class="kpi-num">1,9</div>
-      <div class="kpi-meta"><span class="kpi-delta down">−0,2</span><span class="kpi-sub">vs ago-26 · ref. L1</span></div>
+      <div class="kpi-label">ICG oct-26</div>
+      <div class="kpi-num">1,95</div>
+      <div class="kpi-meta"><span class="kpi-delta up">+0,9% publicado</span><span class="kpi-sub">vs sep-26 (1,94) · Di Tella CIF</span></div>
       <div class="kpi-subs">
         <div class="kpi-sub-row"><span class="kpi-sub-lbl">Escala</span><span class="kpi-sub-val">0–5</span></div>
         <div class="kpi-sub-row"><span class="kpi-sub-lbl">Max 12m</span><span class="kpi-sub-val">2,5</span></div>
@@ -372,14 +375,14 @@ footer a{color:var(--accent)}
       <div class="chart-head"><div><h3>IPCBA CABA · acum. e interanual</h3><p>Ene-26 → Sep-26 · acum. barra izq. · i.a. línea der.</p></div></div>
       <div class="chart-box"><canvas id="chartInflCabaAcumIA"></canvas></div>
       <div class="legend" id="legendInflCabaAcumIA"></div>
-      <p class="source">Acum. ene-sep 2026: 23,7% · Interanual sep-26: 32,9% · IDECBA · Interanual disponible desde may-26</p>
+      <p class="source">Acum. ene-sep 2026: 23,7% · Interanual sep-26: 32,9% · IDECBA · Serie completa 2026</p>
     </div>
   </div>
   <div class="chart-wrap">
-    <div class="chart-head"><div><h3>ICC + ICG · UTDT CIF · apertura regional sep-26</h3><p>Sep-25 → Sep-26 · ICC Nacional + ICG Nacional (eje der.) · CABA / GBA / Interior: dato único sep-26</p></div></div>
+    <div class="chart-head"><div><h3>ICC + ICG · UTDT CIF · apertura regional sep-26</h3><p>Sep-25 → Oct-26 · ICC Nacional + ICG Nacional (eje der.) · CABA / GBA / Interior: dato único sep-26 · ICC oct-26 pendiente</p></div></div>
     <div class="chart-box med"><canvas id="chartICCICG"></canvas></div>
     <div class="legend" id="legendICCICG"></div>
-    <p class="source">ICC Nacional 41,8 · CABA 37,2 · Interior 46,1 · GBA: sin dato absoluto sep-26 (var. m/m +3,3%) · ICG esc. 0–5 eje der. · UTDT CIF</p>
+    <p class="source">ICC Nacional 41,8 (sep) · CABA 37,2 · Interior 46,1 · ICG oct-26: 1,95 (+0,9% vs sep 1,94 · Di Tella publicado) · ICC oct-26 pendiente (~nov UTDT) · ICG esc. 0–5 eje der. · UTDT CIF</p>
   </div>
 </section>
 
@@ -487,7 +490,7 @@ footer a{color:var(--accent)}
   <p class="sec">Imagen presidencial · Gestión nacional · Milei</p>
   <div class="chart-wrap">
     <div class="chart-head">
-      <div><h3>Imagen negativa · Milei</h3><p>May-26 → Ago-26 · por consultora · clic en leyenda para filtrar</p></div>
+      <div><h3>Imagen negativa · Milei</h3><p>May-26 → Oct-26 · por consultora · clic en leyenda para filtrar</p></div>
       <span class="signal mix">~ mixta</span>
     </div>
     <div class="chart-box"><canvas id="chartNeg"></canvas></div>
@@ -495,14 +498,14 @@ footer a{color:var(--accent)}
   </div>
   <div class="chart-wrap">
     <div class="chart-head">
-      <div><h3>Imagen positiva · Milei</h3><p>May-26 → Ago-26 · por consultora · clic en leyenda para filtrar</p></div>
+      <div><h3>Imagen positiva · Milei</h3><p>May-26 → Oct-26 · por consultora · clic en leyenda para filtrar</p></div>
     </div>
     <div class="chart-box"><canvas id="chartPos"></canvas></div>
     <div class="legend" id="legendPos"></div>
   </div>
   <div class="chart-wrap">
     <div class="chart-head">
-      <div><h3>Aprobación gestión nacional · por consultora</h3><p>May-26 → Sep-26 · Proyección + Isasi-Burdman + Vozna + Synopsis · clic en leyenda para filtrar</p></div>
+      <div><h3>Gestión nacional · por consultora</h3><p>May-26 → Oct-26 · métricas distintas por fila (ver tabla) · clic en leyenda para filtrar · no comparar directamente entre consultoras</p></div>
       <span class="signal conv">▲ conv.</span>
     </div>
     <div class="chart-box"><canvas id="chartGestion"></canvas></div>
@@ -534,7 +537,7 @@ footer a{color:var(--accent)}
   </div>
   <div class="chart-wrap" style="margin-bottom:16px">
     <div class="chart-head">
-      <div><h3>Aprobación de gestión nacional · tendencia</h3><p>Proyección (may–sep) · Isasi-Burdman (jun–ago) · Synopsis (may)</p></div>
+      <div><h3>Gestión nacional · múltiples métricas</h3><p>Eval. positiva gobierno: Proyección (may–oct) · Aprobación gestión: Isasi-Burdman (jun–ago) · Las tres métricas usan preguntas distintas — no promediar</p></div>
       <span class="signal conv">▲ mejora</span>
     </div>
     <div class="chart-box"><canvas id="chartGestionFull"></canvas></div>
@@ -543,31 +546,41 @@ footer a{color:var(--accent)}
   </div>
   <div class="table-wrap" style="margin-bottom:16px">
     <table>
-      <thead><tr><th>Consultora</th><th>Variable</th><th>May</th><th>Jun</th><th>Jul</th><th>Ago</th><th>Sep</th><th>Δ</th></tr></thead>
+      <thead><tr><th>Consultora</th><th>Variable</th><th>May</th><th>Jun</th><th>Jul</th><th>Ago</th><th>Sep</th><th>Oct</th><th>Δ</th></tr></thead>
       <tbody>
-        <tr><td>Proyección</td><td>Aprobación gestión</td><td class="num">34,0</td><td class="num">39,8</td><td class="num">39,4</td><td class="num">39,7</td><td class="num">42,0</td><td class="num up">+8,0 🟢</td></tr>
-        <tr><td>Isasi-Burdman</td><td>Aprobación gestión</td><td class="num">—</td><td class="num">45,0</td><td class="num">46,0</td><td class="num">42,0</td><td class="num">—</td><td class="num down">−3,0 🔴</td></tr>
-        <tr><td>Isasi-Burdman</td><td>Imagen positiva</td><td class="num">—</td><td class="num">42,0</td><td class="num">43,0</td><td class="num">38,0</td><td class="num">—</td><td class="num down">−4,0 🔴</td></tr>
-        <tr><td>D'Alessio</td><td>Imagen positiva</td><td class="num">36,0</td><td class="num">—</td><td class="num">—</td><td class="num">34,0</td><td class="num">—</td><td class="num down">−2,0 🔴</td></tr>
-        <tr><td>Isasi-Burdman</td><td>Imagen negativa</td><td class="num">—</td><td class="num">—</td><td class="num">44,0</td><td class="num">46,0</td><td class="num">—</td><td class="num down">+2,0 🔴</td></tr>
-        <tr><td>Isasi-Burdman</td><td>Desaprobación gestión</td><td class="num">—</td><td class="num">48,0</td><td class="num">47,0</td><td class="num">48,0</td><td class="num">—</td><td class="num">0,0</td></tr>
-        <tr><td>Vozna</td><td>Aprobación gestión</td><td class="num">—</td><td class="num">—</td><td class="num">36,3</td><td class="num">—</td><td class="num">32,6</td><td class="num down">−3,7 🔴</td></tr>
-        <tr><td>Vozna</td><td>Desaprobación gestión</td><td class="num">—</td><td class="num">—</td><td class="num">57,6</td><td class="num">—</td><td class="num">61,9</td><td class="num down">+4,3 🔴</td></tr>
-        <tr><td>Vozna</td><td>Imagen positiva</td><td class="num">36,3</td><td class="num">—</td><td class="num">32,1</td><td class="num">—</td><td class="num">31,3</td><td class="num down">−5,0 🔴</td></tr>
-        <tr><td>Vozna</td><td>Imagen negativa</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">63,5</td><td class="num">⚪</td></tr>
-        <tr><td>Zuban Córdoba</td><td>Imagen negativa</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">61,8</td><td class="num">⚪</td></tr>
-        <tr><td>Zuban Córdoba</td><td>Imagen positiva</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">36,0</td><td class="num">⚪</td></tr>
-        <tr><td>Synopsis</td><td>Imagen positiva</td><td class="num">29,2</td><td class="num">—</td><td class="num">—</td><td class="num">33,9</td><td class="num">—</td><td class="num up">+4,7 🟢</td></tr>
-        <tr><td>Synopsis</td><td>Imagen negativa</td><td class="num">58,1</td><td class="num">—</td><td class="num">—</td><td class="num">55,3</td><td class="num">—</td><td class="num up">−2,8 🟢</td></tr>
-        <tr><td>Synopsis</td><td>Aprobación gestión</td><td class="num">31,3</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">⚪</td></tr>
-        <tr><td>Synopsis</td><td>Desaprobación gestión</td><td class="num">54,5</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">⚪</td></tr>
-        <tr><td>Trends</td><td>Imagen positiva</td><td class="num">—</td><td class="num">42,0</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">⚪</td></tr>
-        <tr><td>Trends</td><td>Imagen negativa</td><td class="num">—</td><td class="num">57,0</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">⚪</td></tr>
-        <tr><td>Giacobbe</td><td>Imagen positiva</td><td class="num">34,2</td><td class="num">37,5</td><td class="num">—</td><td class="num">36,1</td><td class="num">—</td><td class="num up">+1,9 🟢</td></tr>
-        <tr><td>Giacobbe</td><td>Imagen negativa</td><td class="num">55,0</td><td class="num">56,9</td><td class="num">—</td><td class="num">55,7</td><td class="num">—</td><td class="num up">−1,2 🟢</td></tr>
+        <tr><td>Proyección</td><td>Eval. positiva gobierno ‡</td><td class="num">34,0</td><td class="num">39,8</td><td class="num">39,4</td><td class="num">39,7</td><td class="num">42,0</td><td class="num">42,0</td><td class="num up">+8,0 🟢</td></tr>
+        <tr><td>Isasi-Burdman</td><td>Aprobación gestión</td><td class="num">—</td><td class="num">45,0</td><td class="num">46,0</td><td class="num">42,0</td><td class="num">—</td><td class="num">—</td><td class="num down">−3,0 🔴</td></tr>
+        <tr><td>Isasi-Burdman</td><td>Imagen positiva</td><td class="num">—</td><td class="num">42,0</td><td class="num">43,0</td><td class="num">38,0</td><td class="num">—</td><td class="num">—</td><td class="num down">−4,0 🔴</td></tr>
+        <tr><td>D'Alessio</td><td>Imagen positiva</td><td class="num">36,0</td><td class="num">—</td><td class="num">—</td><td class="num">34,0</td><td class="num">—</td><td class="num">—</td><td class="num down">−2,0 🔴</td></tr>
+        <tr><td>Isasi-Burdman</td><td>Imagen negativa</td><td class="num">—</td><td class="num">—</td><td class="num">44,0</td><td class="num">46,0</td><td class="num">—</td><td class="num">—</td><td class="num down">+2,0 🔴</td></tr>
+        <tr><td>Isasi-Burdman</td><td>Desaprobación gestión</td><td class="num">—</td><td class="num">48,0</td><td class="num">47,0</td><td class="num">48,0</td><td class="num">—</td><td class="num">—</td><td class="num">0,0</td></tr>
+        <tr><td>Vozna</td><td>Aprobación gestión</td><td class="num">—</td><td class="num">—</td><td class="num">36,3</td><td class="num">—</td><td class="num">32,6</td><td class="num">—</td><td class="num down">−3,7 🔴</td></tr>
+        <tr><td>Vozna</td><td>Desaprobación gestión</td><td class="num">—</td><td class="num">—</td><td class="num">57,6</td><td class="num">—</td><td class="num">61,9</td><td class="num">—</td><td class="num down">+4,3 🔴</td></tr>
+        <tr><td>Vozna</td><td>Imagen positiva</td><td class="num">36,3</td><td class="num">—</td><td class="num">32,1</td><td class="num">—</td><td class="num">31,3</td><td class="num">—</td><td class="num down">−5,0 🔴</td></tr>
+        <tr><td>Vozna</td><td>Imagen negativa</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">63,5</td><td class="num">—</td><td class="num">⚪</td></tr>
+        <tr><td>Zuban Córdoba</td><td>Imagen negativa</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">61,8</td><td class="num">—</td><td class="num">⚪</td></tr>
+        <tr><td>Zuban Córdoba</td><td>Imagen positiva</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">36,0</td><td class="num">34,9</td><td class="num down">−1,1 🔴</td></tr>
+        <tr><td>Zuban Córdoba</td><td>Aprobación gestión</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">34,1</td><td class="num">⚪</td></tr>
+        <tr><td>Synopsis</td><td>Imagen positiva</td><td class="num">29,2</td><td class="num">—</td><td class="num">—</td><td class="num">33,9</td><td class="num">—</td><td class="num">—</td><td class="num up">+4,7 🟢</td></tr>
+        <tr><td>Synopsis</td><td>Imagen negativa</td><td class="num">58,1</td><td class="num">—</td><td class="num">—</td><td class="num">55,3</td><td class="num">—</td><td class="num">—</td><td class="num up">−2,8 🟢</td></tr>
+        <tr><td>Synopsis</td><td>Aprobación gestión</td><td class="num">31,3</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">⚪</td></tr>
+        <tr><td>Synopsis</td><td>Desaprobación gestión</td><td class="num">54,5</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">⚪</td></tr>
+        <tr><td>Trends</td><td>Imagen positiva</td><td class="num">—</td><td class="num">42,0</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">⚪</td></tr>
+        <tr><td>Trends</td><td>Imagen negativa</td><td class="num">—</td><td class="num">57,0</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">⚪</td></tr>
+        <tr><td>Giacobbe</td><td>Imagen positiva</td><td class="num">34,2</td><td class="num">37,5</td><td class="num">33,9†</td><td class="num">36,1</td><td class="num">—</td><td class="num">36,0†</td><td class="num up">+1,8 🟢</td></tr>
+        <tr><td>Giacobbe</td><td>Imagen negativa</td><td class="num">55,0</td><td class="num">56,9</td><td class="num">57,2†</td><td class="num">55,7</td><td class="num">—</td><td class="num">56,0†</td><td class="num up">+1,0 🔴</td></tr>
+        <tr style="border-top:2px solid var(--border)"><td><strong>Zentrix</strong> <span style="font-size:9px;color:var(--fg-dim)">nueva</span></td><td>Imagen positiva</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">35,9</td><td class="num">⚪ 1er dato</td></tr>
+        <tr><td><strong>Zentrix</strong></td><td>Adhesión gestión †</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">36,2</td><td class="num">⚪ 1er dato</td></tr>
+        <tr><td><strong>RDT</strong> <span style="font-size:9px;color:var(--fg-dim)">nueva</span></td><td>Imagen positiva (ranking)</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">36,6</td><td class="num">⚪ 1er dato</td></tr>
+        <tr><td><strong>RDT</strong></td><td>Adhesión gestión †</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">29,5</td><td class="num">⚪ 1er dato</td></tr>
+        <tr><td><strong>Pulso Research</strong> <span style="font-size:9px;color:var(--fg-dim)">nueva</span></td><td>Imagen positiva</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">32,4</td><td class="num">⚪ 1er dato</td></tr>
+        <tr><td><strong>Pulso Research</strong></td><td>Aprobación gestión</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">28,9</td><td class="num">⚪ 1er dato</td></tr>
+        <tr><td><strong>CELAG</strong> <span style="font-size:9px;color:var(--fg-dim)">nueva</span></td><td>Imagen positiva Milei</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">38,6</td><td class="num">⚪ 1er dato</td></tr>
+        <tr><td><strong>CELAG</strong></td><td>Imagen negativa Milei</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">58,2</td><td class="num">⚪ 1er dato</td></tr>
+        <tr><td><strong>CELAG</strong></td><td>Aprobación gestión §</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">38,7</td><td class="num">⚪ 1er dato</td></tr>
       </tbody>
     </table>
-    <p class="source">Gestión ≠ imagen personal · preguntas distintas · no comparar entre consultoras directamente · Δ = variación may→sep o primera→última medición</p>
+    <p class="source">Gestión ≠ imagen personal · preguntas distintas · no comparar entre consultoras directamente · † "adhesión" ≠ "aprobación": formulaciones distintas, no equiparar · ‡ Proyección pregunta por "evaluación positiva del Gobierno": no equivale a aprobación presidencial · † en celdas = dato recuperado de fuente secundaria (encuestas-argentinas.com); cifra no verificable visualmente en original Drive · § CELAG aprobación gestión: composición de categorías de respuesta (incl. posible "regular bien") pendiente verificar en informe original oct-26 · Δ = variación may→oct o primera→última medición · Oct-26: 5 consultoras nuevas en serie</p>
   </div>
 
   <div class="chart-wrap">
@@ -862,27 +875,10 @@ footer a{color:var(--accent)}
     <div class="chart-box"><canvas id="chartSLMes"></canvas></div>
   </div>
 
-  <div class="chart-wrap">
-    <div class="chart-head"><div><h3>Informes SL por consultora</h3><p>Ene–Oct 2026</p></div></div>
-    <div class="chart-box" style="height:220px"><canvas id="chartSLConsult"></canvas></div>
-  </div>
-
-  <div class="chart-wrap">
-    <div class="chart-head">
-      <div>
-        <h3>Registro completo de informes SL</h3>
-        <p style="margin-top:4px">
-          <a href="https://drive.google.com/drive/folders/1SDS2YXZCqEuwdIzkRhF3JYGR13S9NMvJ" target="_blank" rel="noopener" style="color:var(--fg-dim);text-decoration:underline;text-underline-offset:2px;font-size:11px">Estado de cobertura SL ↗</a>
-        </p>
-      </div>
-    </div>
-    <div class="table-wrap">
-      <table>
-        <thead><tr><th>Mes</th><th>Consultora</th><th>Informe</th><th>Tipo</th></tr></thead>
-        <tbody id="slRows"></tbody>
-      </table>
-    </div>
-  </div>
+  <p class="source" style="margin-top:6px;margin-bottom:4px">
+    <a href="https://drive.google.com/drive/folders/1SDS2YXZCqEuwdIzkRhF3JYGR13S9NMvJ" target="_blank" rel="noopener" style="color:var(--fg-dim);text-decoration:underline;text-underline-offset:2px">Registro completo de informes SL en Drive ↗</a>
+    &nbsp;·&nbsp;32 informes ene–oct 2026 · serie regular mayo 2026 en adelante · Reputación Digital · AD HOC · Monitor Digital y otros
+  </p>
 </section>
 
 <!-- ── TAB 6: GAP CONV–SL ────────────────────── -->
@@ -1048,9 +1044,9 @@ footer a{color:var(--accent)}
 
 <!-- ── TAB 7: SEMÁFORO ───────────────────────── -->
 <section class="panel" id="tab-semaforo">
-  <p class="sec">Semáforo ejecutivo · may–sep 2026</p>
+  <p class="sec">Semáforo ejecutivo · may–oct 2026</p>
   <div class="info-box" style="margin-bottom:18px;font-size:11px;line-height:1.6">
-    Estado de cada indicador según la evidencia acumulada may–sep 2026.
+    Estado de cada indicador según la evidencia acumulada may–oct 2026.
     <strong>Evidencia</strong>: ALTA = 3+ fuentes comparables con dirección consistente · MEDIA = 2 fuentes o comparabilidad parcial · BAJA = dato único o comparabilidad limitada.
     El semáforo refleja la <em>tendencia histórica</em>, no solo el último dato.
   </div>
@@ -1072,34 +1068,34 @@ footer a{color:var(--accent)}
       <tr>
         <td><strong>Gestión nacional · aprobación</strong></td>
         <td>🟡</td>
-        <td class="num">~51% apr.</td>
-        <td class="num" style="color:var(--fg-dim)">Proyección sep-26</td>
-        <td><span class="signal mix">MEDIA</span></td>
-        <td>Mejora vs. mínimos de abr–may; consenso mixto entre consultoras</td>
+        <td class="num">29–39% (5 fuentes oct)</td>
+        <td class="num" style="color:var(--fg-dim)">Multi-fuente oct-26</td>
+        <td><span class="signal conv">ALTA</span></td>
+        <td>Rango oct: Pulso 28,9% – CELAG 38,7%. Zentrix/RDT miden adhesión (≠ aprobación). Dispersión alta — evidencia ALTA en cantidad de fuentes, MEDIA en comparabilidad</td>
       </tr>
       <tr>
         <td><strong>Imagen Milei · positiva</strong></td>
         <td>🟡</td>
-        <td class="num">~40–44%</td>
-        <td class="num" style="color:var(--fg-dim)">Multi-fuente ago-26</td>
+        <td class="num">32–37% (4 fuentes oct)</td>
+        <td class="num" style="color:var(--fg-dim)">Multi-fuente oct-26</td>
         <td><span class="signal conv">ALTA</span></td>
-        <td>Estable en rango 39–44% todo el período; sin señal de ruptura</td>
+        <td>Oct: Zuban 34,9% · Zentrix 35,9% · RDT 36,6% · Pulso 32,4%. Rango más ajustado que meses anteriores; sin señal de ruptura. 1er dato de Zentrix, RDT y Pulso</td>
       </tr>
       <tr>
         <td><strong>Imagen Milei · negativa</strong></td>
         <td>🟡</td>
-        <td class="num">~55–58%</td>
-        <td class="num" style="color:var(--fg-dim)">Synopsis / Isasi ago-26</td>
+        <td class="num">56–57% (2 fuentes oct)</td>
+        <td class="num" style="color:var(--fg-dim)">Giacobbe / AtlasIntel oct-26†</td>
         <td><span class="signal conv">ALTA</span></td>
-        <td>Techo de negatividad estable; sin deterioro ni mejora sostenida</td>
+        <td>Oct: Giacobbe 56% (campo 30 sep–5 oct) · AtlasIntel 57,2% (campo 2–7 oct). Techo de negatividad estable; sin deterioro ni mejora sostenida. †fuente secundaria encuestas-argentinas.com</td>
       </tr>
       <tr>
         <td><strong>ICG · confianza gobierno</strong></td>
         <td>🟡</td>
-        <td class="num">1,94 / 5</td>
-        <td class="num" style="color:var(--fg-dim)">Di Tella sep-26</td>
+        <td class="num">1,95 / 5</td>
+        <td class="num" style="color:var(--fg-dim)">Di Tella oct-26</td>
         <td><span class="signal conv">ALTA</span></td>
-        <td>5 meses oscilando 1,94–2,07; nivel bajo, sin tendencia definida</td>
+        <td>+0,9% publicado (Di Tella); sep 1,94 → oct 1,95; 6 meses oscilando 1,90–2,07; nivel bajo, sin tendencia definida</td>
       </tr>
       <tr>
         <td><strong>ICC · confianza consumidor</strong></td>
@@ -1108,6 +1104,14 @@ footer a{color:var(--accent)}
         <td class="num" style="color:var(--fg-dim)">UTDT sep-26</td>
         <td><span class="signal conv">ALTA</span></td>
         <td>Estabilidad en nivel bajo may–sep; CABA en mínimo del período</td>
+      </tr>
+      <tr>
+        <td><strong>Agenda pública · problema #1</strong></td>
+        <td>🟡</td>
+        <td class="num">Ingresos/empleo → #1</td>
+        <td class="num" style="color:var(--fg-dim)">Multi-fuente sep-26</td>
+        <td><span class="signal conv">ALTA</span></td>
+        <td>Sin dato oct-26. Tendencia establecida en sep-26 con 6 fuentes: ingresos/empleo desplazó a inflación. Pendiente confirmación oct-26.</td>
       </tr>
       <tr>
         <td><strong>Rumbo del país · correcto</strong></td>
@@ -1146,26 +1150,26 @@ footer a{color:var(--accent)}
       <tr>
         <td><strong>Intención voto LLA</strong></td>
         <td>🟡</td>
-        <td class="num">30–40%</td>
-        <td class="num" style="color:var(--fg-dim)">Multi-fuente sep-26</td>
+        <td class="num">26–40% (5 fuentes oct)</td>
+        <td class="num" style="color:var(--fg-dim)">Multi-fuente oct-26†</td>
         <td><span class="signal mix">MEDIA</span></td>
-        <td>Rango amplio entre consultoras; dispersión metodológica alta</td>
+        <td>Oct: Proyección 38 · DC Consultores 40,2 · QSocial 26 · ESPOP 26 · OPSA 37. Rango muy amplio (14 p.p.); dispersión metodológica alta. †encuestas-argentinas.com</td>
       </tr>
       <tr>
         <td><strong>Intención voto PJ</strong></td>
         <td>🟡</td>
-        <td class="num">27–35%</td>
-        <td class="num" style="color:var(--fg-dim)">Multi-fuente sep-26</td>
+        <td class="num">28–36% (5 fuentes oct)</td>
+        <td class="num" style="color:var(--fg-dim)">Multi-fuente oct-26†</td>
         <td><span class="signal mix">MEDIA</span></td>
-        <td>Rango similar a LLA; diferencia inter-consultora supera diferencia entre espacios</td>
+        <td>Oct: Proyección 36 · DC Consultores 28,2 · QSocial 36 · ESPOP 24 · OPSA 34. Rango similar a LLA. †encuestas-argentinas.com</td>
       </tr>
       <tr>
         <td><strong>Balotaje Milei–Kicillof</strong></td>
         <td>🟡</td>
-        <td class="num">~42 / ~41</td>
-        <td class="num" style="color:var(--fg-dim)">3 consultoras ago–sep 26</td>
-        <td><span class="signal conv">ALTA</span></td>
-        <td><strong>CONSENSO FUERTE</strong>: Proyección, Explanans y OPSA coinciden en empate técnico</td>
+        <td class="num">4 fuentes oct · sin consenso</td>
+        <td class="num" style="color:var(--fg-dim)">Multi-fuente oct-26†</td>
+        <td><span class="signal mix">MEDIA</span></td>
+        <td>Oct: CELAG 42,5 Milei / 42,7 Kicillof (diferencia dentro del ME; sin declaración de empate) · RDT 49,3/50,7 (Kicillof) · Proyección 41/39 (Milei) · Afiches AC 35/37 (Kicillof). Divergencia entre consultoras: no promediar. †encuestas-argentinas.com</td>
       </tr>
       <tr>
         <td><strong>Retención voto Milei 2023</strong></td>
@@ -1237,7 +1241,7 @@ footer a{color:var(--accent)}
     <div class="hallazgo-txt">CONV registra desempleo en 29% de menciones como problema; SL solo 18%. Brecha de 11 p.p. sin explicación metodológica confirmada. Ver tab GAP CONV–SL para detalle. No resolver por promedio.</div>
   </div>
 
-  <p class="source" style="margin-top:16px">Semáforo v11.1 · fuente: 07_comparacion_intermensual.md · evidencia derivada de 280 documentos Nivel 1 / 1.845 filas Nivel 2 · may–sep 2026</p>
+  <p class="source" style="margin-top:16px">Semáforo v12.0 · fuente: 07_comparacion_intermensual.md · evidencia derivada de 345 documentos Nivel 1 / 1.259 filas Nivel 2 · may–oct 2026 · oct-26: Zuban, Zentrix, RDT, Pulso, CELAG (5 consultoras nuevas en gestión)</p>
 </section>
 
 <!-- ── TAB 8: AGENDA PÚBLICA ─────────────────── -->
@@ -1278,17 +1282,27 @@ footer a{color:var(--accent)}
       <div><h3>Agenda pública · ranking comparativo sep-26</h3><p>% de menciones como problema principal · respuesta espontánea o guiada según consultora</p></div>
     </div>
     <div class="chart-box" style="height:260px"><canvas id="chartAgenda"></canvas></div>
-    <p class="source">Realle Dalla Torre, Isasi-Burdman, Equipo Mide, D'Alessio, Explanans, OPSA · sep-26 · respuesta múltiple en varios casos: porcentajes no suman 100</p>
+    <p class="source">Realle Dalla Torre, Isasi-Burdman, Equipo Mide, D'Alessio, Explanans, OPSA · sep-26 · respuesta múltiple en varios casos: porcentajes no suman 100 · <strong>Oct-26 (corte puntual, sin comparación forzada):</strong> Proyección: "bajos ingresos" 51,3% como problema principal (campo oct, pregunta abierta, no equiparar con series de respuesta múltiple)</p>
   </div>
 
-  <!-- Serie inflación como problema -->
-  <div class="chart-wrap">
-    <div class="chart-head">
-      <div><h3>Inflación como problema principal · evolución may–sep 2026</h3><p>Serie intra-consultora · comparabilidad MEDIA entre fuentes</p></div>
+  <!-- Mosaico: inflación y cambio de agenda -->
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:0" class="agenda-mosaico">
+    <div class="chart-wrap" style="margin-bottom:0">
+      <div class="chart-head">
+        <div><h3>Inflación como problema · may–sep 2026</h3><p>Serie intra-consultora · sin dato oct-26 · comp. MEDIA</p></div>
+      </div>
+      <div class="chart-box"><canvas id="chartInflProb"></canvas></div>
+      <div class="legend" id="legendInflProb"></div>
+      <p class="source">Isasi-Burdman · Equipo Mide · OPSA · no promediar</p>
     </div>
-    <div class="chart-box"><canvas id="chartInflProb"></canvas></div>
-    <div class="legend" id="legendInflProb"></div>
-    <p class="source">Isasi-Burdman, Equipo Mide, OPSA · may–sep 2026 · no promediar: escalas y metodologías distintas</p>
+    <div class="chart-wrap" style="margin-bottom:0">
+      <div class="chart-head">
+        <div><h3>Cambio de agenda · may vs sep 2026</h3><p>Top 3 problemas · promedio orientativo multi-fuente · sin dato oct-26 · comp. BAJA (preguntas distintas)</p></div>
+      </div>
+      <div class="chart-box" style="height:220px"><canvas id="chartAgendaShift"></canvas></div>
+      <div class="legend" id="legendAgendaShift"></div>
+      <p class="source">⚠ Valores orientativos — preguntas y escalas distintas entre consultoras; no comparar directamente · May: ingresos/empleo ~35% (D'Alessio, Isasi), inseguridad ~42% (Isasi, Equipo Mide), inflación ~61% (Isasi, OPSA, D'Alessio) · Sep: ingresos/empleo ~52% (Isasi, D'Alessio, OPSA), inseguridad ~44% (Isasi, Equipo Mide), inflación ~38% (OPSA, Equipo Mide) · Fuentes individuales disponibles en tabla de detalle · El desplazamiento es señal consistente; los valores exactos tienen comparabilidad BAJA</p>
+    </div>
   </div>
 
   <!-- Tabla detallada por fuente -->
@@ -1398,137 +1412,8 @@ function toggleDataset(chartId,idx){
   if(items[idx]) items[idx].classList.toggle('muted',!hidden);
 }
 
-/* ── DATA ──────────────────────────────────── */
-const MESI=['Sep-25','Oct-25','Nov-25','Dic-25','Ene-26','Feb-26','Mar-26','Abr-26','May-26','Jun-26','Jul-26','Ago-26','Sep-26'];
-const MIPC=['Sep-25','Oct-25','Nov-25','Dic-25','Ene-26','Feb-26','Mar-26','Abr-26','May-26','Jun-26','Jul-26','Ago-26','Sep-26'];
-const IPC=[2.1,2.3,2.5,2.8,2.9,2.9,3.4,2.6,2.1,1.9,2.1,1.7,1.9];
-const ICC=[39.8,42.3,46.0,45.6,46.6,44.4,42.0,39.6,40.1,42.7,40.7,40.2,41.8]; // sep-26: 41,8 (UTDT confirmado)
-const ICG=[1.9,2.1,2.5,2.5,2.4,2.4,2.3,2.0,2.0,2.1,1.9,2.1,1.9];
-
-/* INFLACIÓN — series combinadas */
-// Labels: abarca sep-25 → sep-26 (13 puntos)
-const MINFL=['Sep-25','Oct-25','Nov-25','Dic-25','Ene-26','Feb-26','Mar-26','Abr-26','May-26','Jun-26','Jul-26','Ago-26','Sep-26'];
-// IPC INDEC nacional: sep-25→sep-26 completo (1,9% sep-26 · INDEC 13-oct-2026)
-const IPC_FULL=[2.1,2.3,2.5,2.8,2.9,2.9,3.4,2.6,2.1,1.9,2.1,1.7,1.9];
-// IPCBA IDECBA CABA: may-26→sep-26
-const IPCBA_FULL=[2.2,2.2,2.4,2.7,3.1,2.6,3.0,2.5,2.1,1.8,2.9,1.7,1.8];
-// Brecha (overlap may-ago, 4 puntos) para gráfico separado
-const MBRECHA=['May-26','Jun-26','Jul-26','Ago-26','Sep-26'];
-const BRECHA=[0.0,-0.1,0.8,0.0,-0.1]; // IPCBA − IPC
-
-const TIPCBA_MES=['May-26','Jun-26','Jul-26','Ago-26','Sep-26'];
-const TIPCBA_IA=[33.1,32.6,33.2,33.3,32.9];
-const TIPCBA_BIENES=[2.0,1.5,1.4,1.6,1.6];
-const TIPCBA_SERV=[2.2,2.0,3.8,1.8,2.0];
-const TIPCBA_ESTAC=[0.1,0.1,10.9,-2.9,2.3];
-const TIPCBA_REG=[2.8,2.0,3.0,1.8,2.1];
-const TIPCBA_VAR=[2.1,1.8,2.9,1.7,1.8];
-const TIPCBA_ACUM=[14.0,16.0,19.4,21.5,23.7];
-const MIPCACUM=['Ene-26','Feb-26','Mar-26','Abr-26','May-26','Jun-26','Jul-26','Ago-26','Sep-26'];
-const IPC_ACUM=[2.9,5.9,9.4,12.3,14.7,16.8,19.3,21.3,23.6];           // INDEC acum. ene-sep
-const IPCBA_ACUM_FULL=[3.1,5.8,9.0,11.7,14.0,16.0,19.4,21.5,23.7];  // IPCBA acum. ene-sep, igual que data/indicadores.json
-const BRECHA_ACUM=[null,null,null,null,-0.7,-0.8,0.1,0.2,0.1];         // diferencial (IPCBA−INDEC)
-const MIIA=['May-26','Jun-26','Jul-26','Ago-26','Sep-26'];
-const IPC_IA=[33.2,33.5,33.8,33.5,33.4];
-// Per-index acum+IA (9-point axis: Ene-26→Sep-26)
-const IPC_IA_9=[null,null,null,null,33.2,33.5,33.8,33.5,33.4];
-const IPCBA_ACUM_9=[3.1,5.8,9.0,11.7,14.0,16.0,19.4,21.5,23.7];
-const IPCBA_IA_9=[null,null,null,null,33.1,32.6,33.2,33.3,32.9];
-// Di Tella regional — single Sep-26 data points in 13-month axis
-const ICC_CABA_13=[null,null,null,null,null,null,null,null,null,null,null,null,37.2];
-const ICC_INT_13=[null,null,null,null,null,null,null,null,null,null,null,null,46.1]; // INDEC interanual (monitorargy.com / INDEC)
-
-const MV=['Feb-26','Mar-26','Abr-26','May-26','Jun-26','Jul-26','Ago-26','Sep-26','Oct-26'];
-const CONS={
-  Synopsis:  {color:'var(--c1)',lla:[null,null,null,30.3,null,33.9,null,35.5,33.6],pj:[null,null,null,32.9,null,33.9,null,35.7,32.7]},
-  Proyección:{color:'var(--c2)',lla:[43.6,null,34,32.3,34.8,34.8,32.5,35,null],  pj:[35.9,null,32.8,36,33.7,33.7,36.6,31.9,null]},
-  Isasi:     {color:'var(--c3)',lla:[null,null,44,40,40,35,40,null,null],           pj:[null,null,21,24,23,23,27,null,null]},
-  'Eq. Mide':{color:'var(--c4)',lla:[null,null,null,29,null,31,null,null,33],       pj:[null,null,null,32,null,31,null,null,33]},
-  Zuban:     {color:'var(--c5)',lla:[null,null,null,22.1,null,null,28,30.1,null],   pj:[null,null,null,28.4,null,null,31.3,34,null]}
-};
-const lastRows=[
-  {name:'Synopsis',  p:'Sep-26',lla:33.6,pj:32.7,d:-1.9,n:'~2000',met:'Mixto'},
-  {name:'Proyección',p:'Ago-26',lla:32.5,pj:36.6,d:-2.3,n:'~1500',met:'Panel online'},
-  {name:'Isasi',     p:'Ago-26',lla:40,  pj:27,  d:5,   n:'2055', met:'Panel online'},
-  {name:'Eq. Mide',  p:'Oct-26',lla:33,  pj:33,  d:2,   n:'—',    met:'—'},
-  {name:'Zuban',     p:'Sep-26',lla:30.1,pj:34,  d:2.1, n:'~1800',met:'Mixto'},
-];
-
-const MI=['May-26','Jun-26','Jul-26','Ago-26','Sep-26'];
-const IMG={
-  Synopsis: {color:'var(--c1)',neg:[58.1,null,null,55.3,null], pos:[29.2,null,null,33.9,null]},
-  Trends:   {color:'var(--c2)',neg:[null,57,null,null,null],   pos:[null,42,null,null,null]},
-  Giacobbe: {color:'var(--c3)',neg:[null,55,null,null,null],   pos:[null,34.2,null,null,null]},
-  Isasi:    {color:'var(--c4)',neg:[null,null,44,46,null],     pos:[null,42,43,38,null]},
-  'D\'Alessio':{color:'var(--c5)',neg:[null,null,null,null,null],pos:[36,null,null,34,null]},
-  'Zuban':  {color:'var(--neu)', neg:[null,null,null,null,61.8],pos:[null,null,null,null,36]}
-};
-const MG=['May-26','Jun-26','Jul-26','Ago-26','Sep-26'];
-const GESTION={
-  Proyección:{color:'var(--c2)',aprob:[34.0,39.8,39.4,39.7,42.0],desaprob:[null,null,null,null,null]},
-  Isasi:     {color:'var(--c4)',aprob:[null,45.0,46.0,48.0,null], desaprob:[null,48.0,47.0,42.0,null]},
-  Vozna:     {color:'var(--c5)',aprob:[null,null,null,null,null],  desaprob:[null,null,57.6,null,61.9]},
-  Synopsis:  {color:'var(--c1)',aprob:[31.3,null,null,null,null],  desaprob:[54.5,null,null,null,null]}
-};
-// Cross-analysis: Isasi-Burdman measures BOTH variables → divergence visible within same consultora
-const CROSS_MES=['Jun-26','Jul-26','Ago-26'];
-const CROSS={
-  imgPos:  {label:'Imagen positiva (Isasi-Burdman) ↓',  color:'var(--c4)', data:[42,43,38]},
-  gestAprob:{label:'Aprobación gestión (Isasi-Burdman) ↑',color:'var(--pos)',data:[45,46,48]},
-  imgNeg:  {label:'Imagen negativa (Isasi-Burdman) ↑',  color:'var(--neg)', data:[null,44,46]},
-  gestDesaprob:{label:'Desaprobación gestión (Isasi-Burdman) ↓',color:'var(--warn)',data:[48,47,42]}
-};
-
-// ISN mensual Reputación Digital
-const ISN_RD_MES=['Ago-26','Sep-26'];
-const ISN_RD_VALS=[-43,-33];
-// ISN por eje del relato Q2 RD
-const ISN_EJE_LABELS=['Grandeza','Esfuerzo','Acompañamiento','Orden económico','Seguridad','Batalla cultural'];
-const ISN_EJE_VALS=[-31.9,-34.8,-57.2,-63.7,-70.7,-93.1];
-// AD HOC Sep: Milei sentimiento
-const MILEI_SEP_LABELS=['Negativo','Positivo','Neutro'];
-const MILEI_SEP_VALS=[46.2,38.4,15.4];
-// AD HOC Sep: volumen oposición (miles)
-const OPOS_LABELS=['Kicillof','CFK','Bregman','Bullrich','Massa'];
-const OPOS_VALS=[580,248,138,122,118];
-const MSL_MES=['Ene-26','Feb-26','Mar-26','Abr-26','May-26','Jun-26','Jul-26','Ago-26','Sep-26','Oct-26'];
-const SL_POR_MES=[4,0,0,0,3,8,3,6,6,2];
-const SL_CONSULT_LABELS=['Reputación Digital','EUNOMIA','Monitor Digital','AD HOC','DtoD','PLURAL','ALTICA','SUSTANTIVA','Otros'];
-const SL_CONSULT_VALS=[12,3,2,4,1,1,1,2,6];
-const SL_INFORMES=[
-  {mes:'Ene-26',consultora:'DtoD',titulo:'Radiografía digital · detención de Maduro',tipo:'Evento puntual'},
-  {mes:'Ene-26',consultora:'PLURAL',titulo:'Análisis Discursivo Donald Trump',tipo:'Evento puntual'},
-  {mes:'Ene-26',consultora:'ALTICA',titulo:'Detención Nicolás Maduro · Panel LATAM',tipo:'Evento puntual'},
-  {mes:'Ene-26',consultora:'ENTER COM.',titulo:'Radiografía digital · detención de Maduro',tipo:'Evento puntual'},
-  {mes:'May-26',consultora:'EUNOMIA',titulo:'Termómetro digital PBA (Abr-May)',tipo:'Monitoreo regular'},
-  {mes:'May-26',consultora:'REPUTACIÓN DIGITAL',titulo:'Índice de Tolerancia Social Milei',tipo:'Ad hoc temático'},
-  {mes:'May-26',consultora:'ZUBAN CÓRDOBA',titulo:'Estoy perdiendo imagen a tu lado',tipo:'Ad hoc temático'},
-  {mes:'Jun-26',consultora:'MONITOR DIGITAL',titulo:'Messi en el Olimpo de las redes del mundo',tipo:'Evento puntual'},
-  {mes:'Jun-26',consultora:'GLOBAL NEWS',titulo:'Copa del mundo 2026',tipo:'Evento puntual'},
-  {mes:'Jun-26',consultora:'REPUTACIÓN DIGITAL',titulo:'La Scaloneta le da aire al gobierno',tipo:'Ad hoc temático'},
-  {mes:'Jun-26',consultora:'AD HOC',titulo:'Informe de Conversación Digital',tipo:'Monitoreo regular'},
-  {mes:'Jun-26',consultora:'REPUTACIÓN DIGITAL',titulo:'Índice de Disonancia Narrativa',tipo:'Ad hoc temático'},
-  {mes:'Jun-26',consultora:'REPUTACIÓN DIGITAL',titulo:'Conv. digital exige renuncia de Adorni',tipo:'Ad hoc temático'},
-  {mes:'Jun-26',consultora:'REPUTACIÓN DIGITAL',titulo:'Informe de credibilidad de Adorni',tipo:'Ad hoc temático'},
-  {mes:'Jun-26',consultora:'REPUTACIÓN DIGITAL',titulo:'Resumen Ejecutivo credibilidad Adorni',tipo:'Ad hoc temático'},
-  {mes:'Jul-26',consultora:'MONITOR DIGITAL',titulo:'La derrota ante España convirtió a la argentinidad',tipo:'Evento puntual'},
-  {mes:'Jul-26',consultora:'Ad Hoc',titulo:'Informe Ad Hoc · Julio 2026',tipo:'Monitoreo regular'},
-  {mes:'Jul-26',consultora:'REPUTACIÓN DIGITAL',titulo:'La Scaloneta le da aire · raíz campaña',tipo:'Ad hoc temático'},
-  {mes:'Ago-26',consultora:'AD HOC',titulo:'Informe Especial La Fatiga Digital',tipo:'Ad hoc temático'},
-  {mes:'Ago-26',consultora:'EUNOMIA',titulo:'Del ingreso al atraso · Mora Bancaria',tipo:'Ad hoc temático'},
-  {mes:'Ago-26',consultora:'SUSTANTIVA',titulo:'Informe Influencers Oficialismo',tipo:'Ad hoc temático'},
-  {mes:'Ago-26',consultora:'EUNOMIA',titulo:'Escucha social Ley de tierras',tipo:'Ad hoc temático'},
-  {mes:'Ago-26',consultora:'COMPOL UBA',titulo:'Lo que viraliza no convence',tipo:'Ad hoc temático'},
-  {mes:'Ago-26',consultora:'SUSTANTIVA',titulo:'Informe China EEUU · El caso CALF-Huawei',tipo:'Ad hoc temático'},
-  {mes:'Sep-26',consultora:'REPUTACIÓN DIGITAL',titulo:'Milei 2027 · ¿y ahora qué va a pasar? (Nacional)',tipo:'Ad hoc temático'},
-  {mes:'Sep-26',consultora:'REPUTACIÓN DIGITAL',titulo:'Milei 2027 · ¿y ahora qué va a pasar? (PBA)',tipo:'Ad hoc temático'},
-  {mes:'Sep-26',consultora:'REPUTACIÓN DIGITAL',titulo:'Escucha social sobre video de Milei',tipo:'Ad hoc temático'},
-  {mes:'Sep-26',consultora:'REPUTACIÓN DIGITAL',titulo:'Llaryora bajo fuego cruzado (Córdoba)',tipo:'Ad hoc temático'},
-  {mes:'Sep-26',consultora:'REPUTACIÓN DIGITAL',titulo:'Informe Bullrich · Lali',tipo:'Ad hoc temático'},
-  {mes:'Sep-26',consultora:'AD HOC',titulo:'Informe Digital · Septiembre',tipo:'Monitoreo regular'},
-  {mes:'Oct-26',consultora:'QSOCIAL',titulo:'Carrusel Estimaciones Electorales',tipo:'Ad hoc temático'},
-  {mes:'Oct-26',consultora:'NARRAGLOBAL',titulo:'Despedida Messi',tipo:'Evento puntual'},
-];
+/* ── DATA — cargado desde data/indicadores.json ─ */
+// Variables asignadas por fetch; no editar aquí — editar data/indicadores.json
 
 /* ── CHART HELPERS ──────────────────────────── */
 function baseOpts(){
@@ -1549,7 +1434,8 @@ function mkLine(id,labels,datasets){
     data:{labels,datasets:datasets.map(d=>({
       label:d.label,data:d.data,
       borderColor:cv(d.color),backgroundColor:'transparent',
-      borderWidth:2,pointRadius:3,pointHoverRadius:5,tension:0.3,spanGaps:false
+      borderWidth:2,pointRadius:3,pointHoverRadius:5,tension:0.3,spanGaps:false,
+      ...(d.borderDash?{borderDash:d.borderDash}:{})
     }))},
     options:{...baseOpts()}
   });
@@ -1586,9 +1472,8 @@ function buildLegend(legendId,chartId,names,colors){
     </div>`).join('');
 }
 
-/* ── TABLAS ESTÁTICAS ───────────────────────── */
-(function(){
-  // Voto
+/* ── TABLAS ESTÁTICAS (llamadas desde fetch) ─── */
+function renderTablaVoto(){
   const tb=document.getElementById('tableVoto');if(!tb)return;
   lastRows.forEach(r=>{
     const cl=r.d>0?'up':r.d<0?'down':'';
@@ -1599,9 +1484,8 @@ function buildLegend(legendId,chartId,names,colors){
       <td class="num">${r.n}</td><td>${r.met}</td>
     </tr>`;
   });
-})();
-(function(){
-  // TEM
+}
+function renderTablaTEM(){
   const tb=document.getElementById('tableTEM');if(!tb)return;
   TIPCBA_MES.forEach((mes,i)=>{
     const estCls=TIPCBA_ESTAC[i]>5?'up':TIPCBA_ESTAC[i]<0?'down':'';
@@ -1616,9 +1500,8 @@ function buildLegend(legendId,chartId,names,colors){
       <td class="num">${TIPCBA_REG[i].toFixed(1)}</td>
     </tr>`;
   });
-})();
-(function(){
-  // SL monthly series table (Reputación Digital · AD HOC · Monitor Digital from May onward)
+}
+function renderSLSerie(){
   const stbody=document.getElementById('slSerieRows');
   if(stbody){
     const SERIE_MESES=['May-26','Jun-26','Jul-26','Ago-26','Sep-26','Oct-26'];
@@ -1636,9 +1519,8 @@ function buildLegend(legendId,chartId,names,colors){
       stbody.innerHTML+=`<tr><td class="num" style="font-family:'IBM Plex Mono',monospace;font-weight:500;white-space:nowrap">${mes}</td>${cells.join('')}</tr>`;
     });
   }
-})();
-(function(){
-  // SL rows
+}
+function renderSLRows(){
   const tbody=document.getElementById('slRows');if(!tbody)return;
   const tipoColor={
     'Monitoreo regular':cv('var(--pos)'),
@@ -1654,11 +1536,7 @@ function buildLegend(legendId,chartId,names,colors){
       <td><span style="font-size:10px;font-weight:500;color:${col}">${r.tipo}</span></td>
     </tr>`;
   }).join('');
-})();
-
-/* ── GAP DATA ────────────────────────────────── */
-// 10 indicadores: inflación, inseguridad, desempleo, pobreza/educ, img neg, img pos, aprobación, kirchner, voto LLA, escenario 2027
-const GAP_STATUS=['conv','conv','div','nd','conv','conv','conv','nd','nd','nd'];
+}
 
 /* ── BRECHA color helper ─────────────────────── */
 function brechaColor(v){
@@ -1725,7 +1603,7 @@ function initTab(tab){
             {label:iaLabel,data:iaData,type:'line',
              borderColor:cv(iaColor),backgroundColor:'transparent',
              borderWidth:2,pointRadius:3,pointHoverRadius:5,tension:0.3,
-             spanGaps:false,order:1,yAxisID:'yI'}
+             spanGaps:true,order:1,yAxisID:'yI'}
           ]},
           options:{
             responsive:true,maintainAspectRatio:false,
@@ -1751,8 +1629,10 @@ function initTab(tab){
         IPC_ACUM,IPC_IA_9,
         'Acum. IPC','Interanual IPC',
         'var(--c1)','var(--c1)');
+      // Reemplazar null en interanual IPCBA con NaN para que Chart.js no bloquee renderizado de barras
+      const IPCBA_IA_9_CLEAN = IPCBA_IA_9.map(v => v === null ? NaN : v);
       mkAcumIA('chartInflCabaAcumIA','legendInflCabaAcumIA',
-        IPCBA_ACUM_9,IPCBA_IA_9,
+        IPCBA_ACUM_9,IPCBA_IA_9_CLEAN,
         'Acum. IPCBA','Interanual IPCBA',
         'var(--c4)','var(--c4)');
     })();
@@ -1836,12 +1716,12 @@ function initTab(tab){
       [CROSS.imgNeg.color,CROSS.gestDesaprob.color]);
     // Full gestión trend
     mkLine('chartGestionFull',MG,[
-      {label:'Proyección · aprobación',data:GESTION.Proyección.aprob,color:'var(--c2)'},
-      {label:'Isasi-Burdman · aprobación',data:GESTION.Isasi.aprob,color:'var(--c4)'},
-      {label:'Isasi-Burdman · imagen positiva',data:IMG.Isasi.pos,color:'var(--warn)'}
+      {label:'Proyección · eval. positiva gobierno ‡',data:GESTION.Proyección.aprob,color:'var(--c2)'},
+      {label:'Isasi-Burdman · aprobación gestión',data:GESTION.Isasi.aprob,color:'var(--c4)',borderDash:[6,3]},
+      {label:'Isasi-Burdman · imagen positiva',data:IMG.Isasi.pos,color:'var(--warn)',borderDash:[3,3]}
     ]);
     buildLegend('legendGestionFull','chartGestionFull',
-      ['Proyección · aprobación','Isasi-Burdman · aprobación','Isasi-Burdman · imagen positiva'],
+      ['Proyección · eval. positiva gobierno ‡','Isasi-Burdman · aprobación gestión','Isasi-Burdman · imagen positiva'],
       ['var(--c2)','var(--c4)','var(--warn)']);
   }
 
@@ -1905,6 +1785,20 @@ function initTab(tab){
         lc.innerHTML+=`<span class="legend-item" onclick="toggleDataset('chartInflProb',${i})"><span class="legend-dot" style="background:${c}"></span>${l}</span>`;
       });
     }
+    // Cambio de agenda: may-26 vs sep-26 · top 3 problemas · orientativo multi-fuente
+    mkGroupBar('chartAgendaShift',
+      ['Ingresos / empleo','Inseguridad','Inflación'],
+      [
+        {label:'May-26',data:[35,42,61],color:'var(--fg-dim)'},
+        {label:'Sep-26',data:[52,44,38],color:'var(--c1)'}
+      ]
+    );
+    const la=document.getElementById('legendAgendaShift');
+    if(la&&!la.children.length){
+      [['May-26','var(--fg-dim)'],['Sep-26','var(--c1)']].forEach(([l,c],i)=>{
+        la.innerHTML+=`<span class="legend-item" onclick="toggleDataset('chartAgendaShift',${i})"><span class="legend-dot" style="background:${c}"></span>${l}</span>`;
+      });
+    }
   }
 
   if(tab==='sl'){
@@ -1948,19 +1842,22 @@ function initTab(tab){
         y:{ticks:{font:{family:"'IBM Plex Mono',monospace",size:10},color:tok('--fg-dim'),stepSize:1},grid:{color:tok('--border')}}
       }
     });
-    mkBar('chartSLConsult',SL_CONSULT_LABELS,[{label:'Informes',data:SL_CONSULT_VALS,color:'var(--c2)'}],{
-      indexAxis:'y',
-      plugins:{legend:{display:false}},
-      scales:{
-        x:{ticks:{font:{family:"'IBM Plex Mono',monospace",size:10},color:tok('--fg-dim')},grid:{color:tok('--border')}},
-        y:{ticks:{font:{family:"'IBM Plex Mono',monospace",size:10},color:tok('--fg-dim')},grid:{display:false}}
-      }
-    });
+    renderSLRows(); // rendered silently; accessible via link in Drive
   }
 }
 
-initTab('indicadores');
+/* ── CARGA DE DATOS + INIT ──────────────────── */
+fetch('./data/indicadores.json')
+  .then(r=>{ if(!r.ok)throw new Error(r.status); return r.json(); })
+  .then(d=>{
+    // Asigna todas las variables al scope global
+    Object.assign(window, d);
+    // Tablas estáticas
+    renderTablaVoto(); renderTablaTEM(); renderSLSerie(); renderSLRows();
+    // Primer tab
+    initTab('indicadores');
+  })
+  .catch(err=>console.error('Error cargando indicadores.json:', err));
 </script>
 
 </body></html>
-

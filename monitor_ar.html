@@ -348,7 +348,7 @@ footer a{color:var(--accent)}
     <div class="kpi">
       <div class="kpi-label">ICG oct-26</div>
       <div class="kpi-num">1,95</div>
-      <div class="kpi-meta"><span class="kpi-delta up">+0,05</span><span class="kpi-sub">vs sep-26 · Di Tella CIF</span></div>
+      <div class="kpi-meta"><span class="kpi-delta up">+0,9% publicado</span><span class="kpi-sub">vs sep-26 (1,94) · Di Tella CIF</span></div>
       <div class="kpi-subs">
         <div class="kpi-sub-row"><span class="kpi-sub-lbl">Escala</span><span class="kpi-sub-val">0–5</span></div>
         <div class="kpi-sub-row"><span class="kpi-sub-lbl">Max 12m</span><span class="kpi-sub-val">2,5</span></div>
@@ -382,7 +382,7 @@ footer a{color:var(--accent)}
     <div class="chart-head"><div><h3>ICC + ICG · UTDT CIF · apertura regional sep-26</h3><p>Sep-25 → Oct-26 · ICC Nacional + ICG Nacional (eje der.) · CABA / GBA / Interior: dato único sep-26 · ICC oct-26 pendiente</p></div></div>
     <div class="chart-box med"><canvas id="chartICCICG"></canvas></div>
     <div class="legend" id="legendICCICG"></div>
-    <p class="source">ICC Nacional 41,8 (sep) · CABA 37,2 · Interior 46,1 · ICG oct-26: 1,95 (+0,05 vs sep) · ICC oct-26 pendiente (~nov UTDT) · ICG esc. 0–5 eje der. · UTDT CIF</p>
+    <p class="source">ICC Nacional 41,8 (sep) · CABA 37,2 · Interior 46,1 · ICG oct-26: 1,95 (+0,9% vs sep 1,94 · Di Tella publicado) · ICC oct-26 pendiente (~nov UTDT) · ICG esc. 0–5 eje der. · UTDT CIF</p>
   </div>
 </section>
 
@@ -505,7 +505,7 @@ footer a{color:var(--accent)}
   </div>
   <div class="chart-wrap">
     <div class="chart-head">
-      <div><h3>Aprobación gestión nacional · por consultora</h3><p>May-26 → Oct-26 · Proyección · Isasi-Burdman · Vozna · Synopsis · Zuban · Zentrix · RDT · Pulso · CELAG · clic en leyenda para filtrar</p></div>
+      <div><h3>Gestión nacional · por consultora</h3><p>May-26 → Oct-26 · métricas distintas por fila (ver tabla) · clic en leyenda para filtrar · no comparar directamente entre consultoras</p></div>
       <span class="signal conv">▲ conv.</span>
     </div>
     <div class="chart-box"><canvas id="chartGestion"></canvas></div>
@@ -537,7 +537,7 @@ footer a{color:var(--accent)}
   </div>
   <div class="chart-wrap" style="margin-bottom:16px">
     <div class="chart-head">
-      <div><h3>Aprobación de gestión nacional · tendencia</h3><p>Proyección (may–sep) · Isasi-Burdman (jun–ago) · Synopsis (may) · Zuban / Zentrix / RDT / Pulso / CELAG (oct)</p></div>
+      <div><h3>Gestión nacional · múltiples métricas</h3><p>Eval. positiva gobierno: Proyección (may–oct) · Aprobación gestión: Isasi-Burdman (jun–ago) · Las tres métricas usan preguntas distintas — no promediar</p></div>
       <span class="signal conv">▲ mejora</span>
     </div>
     <div class="chart-box"><canvas id="chartGestionFull"></canvas></div>
@@ -548,7 +548,7 @@ footer a{color:var(--accent)}
     <table>
       <thead><tr><th>Consultora</th><th>Variable</th><th>May</th><th>Jun</th><th>Jul</th><th>Ago</th><th>Sep</th><th>Oct</th><th>Δ</th></tr></thead>
       <tbody>
-        <tr><td>Proyección</td><td>Aprobación gestión</td><td class="num">34,0</td><td class="num">39,8</td><td class="num">39,4</td><td class="num">39,7</td><td class="num">42,0</td><td class="num">—</td><td class="num up">+8,0 🟢</td></tr>
+        <tr><td>Proyección</td><td>Eval. positiva gobierno ‡</td><td class="num">34,0</td><td class="num">39,8</td><td class="num">39,4</td><td class="num">39,7</td><td class="num">42,0</td><td class="num">42,0</td><td class="num up">+8,0 🟢</td></tr>
         <tr><td>Isasi-Burdman</td><td>Aprobación gestión</td><td class="num">—</td><td class="num">45,0</td><td class="num">46,0</td><td class="num">42,0</td><td class="num">—</td><td class="num">—</td><td class="num down">−3,0 🔴</td></tr>
         <tr><td>Isasi-Burdman</td><td>Imagen positiva</td><td class="num">—</td><td class="num">42,0</td><td class="num">43,0</td><td class="num">38,0</td><td class="num">—</td><td class="num">—</td><td class="num down">−4,0 🔴</td></tr>
         <tr><td>D'Alessio</td><td>Imagen positiva</td><td class="num">36,0</td><td class="num">—</td><td class="num">—</td><td class="num">34,0</td><td class="num">—</td><td class="num">—</td><td class="num down">−2,0 🔴</td></tr>
@@ -575,10 +575,12 @@ footer a{color:var(--accent)}
         <tr><td><strong>RDT</strong></td><td>Adhesión gestión †</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">29,5</td><td class="num">⚪ 1er dato</td></tr>
         <tr><td><strong>Pulso Research</strong> <span style="font-size:9px;color:var(--fg-dim)">nueva</span></td><td>Imagen positiva</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">32,4</td><td class="num">⚪ 1er dato</td></tr>
         <tr><td><strong>Pulso Research</strong></td><td>Aprobación gestión</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">28,9</td><td class="num">⚪ 1er dato</td></tr>
-        <tr><td><strong>CELAG</strong> <span style="font-size:9px;color:var(--fg-dim)">nueva</span></td><td>Aprobación gestión</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">38,7</td><td class="num">⚪ 1er dato</td></tr>
+        <tr><td><strong>CELAG</strong> <span style="font-size:9px;color:var(--fg-dim)">nueva</span></td><td>Imagen positiva Milei</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">38,6</td><td class="num">⚪ 1er dato</td></tr>
+        <tr><td><strong>CELAG</strong></td><td>Imagen negativa Milei</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">58,2</td><td class="num">⚪ 1er dato</td></tr>
+        <tr><td><strong>CELAG</strong></td><td>Aprobación gestión §</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">38,7</td><td class="num">⚪ 1er dato</td></tr>
       </tbody>
     </table>
-    <p class="source">Gestión ≠ imagen personal · preguntas distintas · no comparar entre consultoras directamente · † "adhesión" ≠ "aprobación": formulaciones distintas, no equiparar · † en celdas = dato recuperado de fuente secundaria (encuestas-argentinas.com); cifra no verificable visualmente en original Drive · Δ = variación may→oct o primera→última medición · Oct-26: 5 consultoras nuevas en serie</p>
+    <p class="source">Gestión ≠ imagen personal · preguntas distintas · no comparar entre consultoras directamente · † "adhesión" ≠ "aprobación": formulaciones distintas, no equiparar · ‡ Proyección pregunta por "evaluación positiva del Gobierno": no equivale a aprobación presidencial · † en celdas = dato recuperado de fuente secundaria (encuestas-argentinas.com); cifra no verificable visualmente en original Drive · § CELAG aprobación gestión: composición de categorías de respuesta (incl. posible "regular bien") pendiente verificar en informe original oct-26 · Δ = variación may→oct o primera→última medición · Oct-26: 5 consultoras nuevas en serie</p>
   </div>
 
   <div class="chart-wrap">
@@ -1093,7 +1095,7 @@ footer a{color:var(--accent)}
         <td class="num">1,95 / 5</td>
         <td class="num" style="color:var(--fg-dim)">Di Tella oct-26</td>
         <td><span class="signal conv">ALTA</span></td>
-        <td>+0,05 vs sep-26; 6 meses oscilando 1,90–2,07; nivel bajo, sin tendencia definida</td>
+        <td>+0,9% publicado (Di Tella); sep 1,94 → oct 1,95; 6 meses oscilando 1,90–2,07; nivel bajo, sin tendencia definida</td>
       </tr>
       <tr>
         <td><strong>ICC · confianza consumidor</strong></td>
@@ -1167,7 +1169,7 @@ footer a{color:var(--accent)}
         <td class="num">4 fuentes oct · sin consenso</td>
         <td class="num" style="color:var(--fg-dim)">Multi-fuente oct-26†</td>
         <td><span class="signal mix">MEDIA</span></td>
-        <td>Oct: CELAG 42,7 Milei / 42,5 Kicillof (empate) · RDT 49,3/50,7 (Kicillof) · Proyección 41/39 (Milei) · Afiches AC 35/37 (Kicillof). Divergencia entre consultoras: no promediar. †encuestas-argentinas.com</td>
+        <td>Oct: CELAG 42,5 Milei / 42,7 Kicillof (diferencia dentro del ME; sin declaración de empate) · RDT 49,3/50,7 (Kicillof) · Proyección 41/39 (Milei) · Afiches AC 35/37 (Kicillof). Divergencia entre consultoras: no promediar. †encuestas-argentinas.com</td>
       </tr>
       <tr>
         <td><strong>Retención voto Milei 2023</strong></td>
@@ -1280,7 +1282,7 @@ footer a{color:var(--accent)}
       <div><h3>Agenda pública · ranking comparativo sep-26</h3><p>% de menciones como problema principal · respuesta espontánea o guiada según consultora</p></div>
     </div>
     <div class="chart-box" style="height:260px"><canvas id="chartAgenda"></canvas></div>
-    <p class="source">Realle Dalla Torre, Isasi-Burdman, Equipo Mide, D'Alessio, Explanans, OPSA · sep-26 · sin dato oct-26 · respuesta múltiple en varios casos: porcentajes no suman 100</p>
+    <p class="source">Realle Dalla Torre, Isasi-Burdman, Equipo Mide, D'Alessio, Explanans, OPSA · sep-26 · respuesta múltiple en varios casos: porcentajes no suman 100 · <strong>Oct-26 (corte puntual, sin comparación forzada):</strong> Proyección: "bajos ingresos" 51,3% como problema principal (campo oct, pregunta abierta, no equiparar con series de respuesta múltiple)</p>
   </div>
 
   <!-- Mosaico: inflación y cambio de agenda -->
@@ -1295,11 +1297,11 @@ footer a{color:var(--accent)}
     </div>
     <div class="chart-wrap" style="margin-bottom:0">
       <div class="chart-head">
-        <div><h3>Cambio de agenda · may vs sep 2026</h3><p>Top 3 problemas · orientativo multi-fuente · sin dato oct-26</p></div>
+        <div><h3>Cambio de agenda · may vs sep 2026</h3><p>Top 3 problemas · promedio orientativo multi-fuente · sin dato oct-26 · comp. BAJA (preguntas distintas)</p></div>
       </div>
       <div class="chart-box" style="height:220px"><canvas id="chartAgendaShift"></canvas></div>
       <div class="legend" id="legendAgendaShift"></div>
-      <p class="source">Evidencia ALTA · 6 fuentes · inflación ↓ · ingresos/empleo ↑</p>
+      <p class="source">⚠ Valores orientativos — preguntas y escalas distintas entre consultoras; no comparar directamente · May: ingresos/empleo ~35% (D'Alessio, Isasi), inseguridad ~42% (Isasi, Equipo Mide), inflación ~61% (Isasi, OPSA, D'Alessio) · Sep: ingresos/empleo ~52% (Isasi, D'Alessio, OPSA), inseguridad ~44% (Isasi, Equipo Mide), inflación ~38% (OPSA, Equipo Mide) · Fuentes individuales disponibles en tabla de detalle · El desplazamiento es señal consistente; los valores exactos tienen comparabilidad BAJA</p>
     </div>
   </div>
 
@@ -1432,7 +1434,8 @@ function mkLine(id,labels,datasets){
     data:{labels,datasets:datasets.map(d=>({
       label:d.label,data:d.data,
       borderColor:cv(d.color),backgroundColor:'transparent',
-      borderWidth:2,pointRadius:3,pointHoverRadius:5,tension:0.3,spanGaps:false
+      borderWidth:2,pointRadius:3,pointHoverRadius:5,tension:0.3,spanGaps:false,
+      ...(d.borderDash?{borderDash:d.borderDash}:{})
     }))},
     options:{...baseOpts()}
   });
@@ -1713,12 +1716,12 @@ function initTab(tab){
       [CROSS.imgNeg.color,CROSS.gestDesaprob.color]);
     // Full gestión trend
     mkLine('chartGestionFull',MG,[
-      {label:'Proyección · aprobación',data:GESTION.Proyección.aprob,color:'var(--c2)'},
-      {label:'Isasi-Burdman · aprobación',data:GESTION.Isasi.aprob,color:'var(--c4)'},
-      {label:'Isasi-Burdman · imagen positiva',data:IMG.Isasi.pos,color:'var(--warn)'}
+      {label:'Proyección · eval. positiva gobierno ‡',data:GESTION.Proyección.aprob,color:'var(--c2)'},
+      {label:'Isasi-Burdman · aprobación gestión',data:GESTION.Isasi.aprob,color:'var(--c4)',borderDash:[6,3]},
+      {label:'Isasi-Burdman · imagen positiva',data:IMG.Isasi.pos,color:'var(--warn)',borderDash:[3,3]}
     ]);
     buildLegend('legendGestionFull','chartGestionFull',
-      ['Proyección · aprobación','Isasi-Burdman · aprobación','Isasi-Burdman · imagen positiva'],
+      ['Proyección · eval. positiva gobierno ‡','Isasi-Burdman · aprobación gestión','Isasi-Burdman · imagen positiva'],
       ['var(--c2)','var(--c4)','var(--warn)']);
   }
 

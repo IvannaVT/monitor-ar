@@ -1,3 +1,6 @@
 *.work.csv
 nivel2_work.csv
 base_maestra_work.csv
+__pycache__/
+*.pyc
+*.pyo
