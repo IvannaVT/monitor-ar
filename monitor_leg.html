@@ -106,6 +106,29 @@ tr[hidden]{display:none}
 .prio-critica{background:var(--red-bg);color:var(--red);border:1px solid var(--red-border)}.prio-alta{background:var(--yellow-bg);color:var(--yellow);border:1px solid var(--yellow-border)}.prio-normal{background:var(--accent-light);color:var(--accent);border:1px solid #1a3a6a}
 .cifra{font-weight:700;color:var(--accent)}
 .ley-badge{display:inline-block;background:var(--green-bg);color:var(--green);border:1px solid var(--green-border);border-radius:4px;font-size:.65rem;font-weight:800;padding:1px 6px;margin-left:4px}
+/* ── búsqueda + exportación ── */
+.search-bar{display:flex;gap:8px;margin-bottom:8px;flex-wrap:wrap}
+.search-bar input{flex:1;min-width:180px;background:var(--surface);color:var(--text);border:1px solid var(--border);border-radius:20px;padding:5px 14px;font-size:.8rem;outline:none}
+.search-bar input::placeholder{color:var(--muted)}
+.search-bar input:focus{border-color:var(--accent)}
+.search-bar button.export-btn{font-size:.73rem;font-weight:700;padding:5px 13px;border-radius:20px;border:1px solid var(--border);background:var(--surface);color:var(--muted);cursor:pointer}
+.search-bar button.export-btn:hover{border-color:var(--green);color:var(--green)}
+#search-count{font-size:.72rem;color:var(--muted);margin-bottom:6px}
+/* ── tipo de dato ── */
+.tipo{display:inline-block;font-size:.58rem;font-weight:800;padding:1px 5px;border-radius:3px;white-space:nowrap;margin-left:4px;letter-spacing:.03em}
+.tipo-h{background:#082516;color:#22C07A;border:1px solid #0d4a2a}
+.tipo-d{background:#0D2040;color:#8AAFC8;border:1px solid #162B48}
+.tipo-i{background:#1A0D2E;color:#B97CF8;border:1px solid #3d1a6a}
+/* ── metodología colapsable ── */
+.metodo-section{background:var(--surface);border:1px solid var(--border);border-radius:6px;margin-bottom:6px;overflow:hidden}
+.metodo-section summary{cursor:pointer;padding:9px 13px;font-size:.8rem;font-weight:700;color:var(--accent);list-style:none;display:flex;justify-content:space-between}
+.metodo-section summary::after{content:'▸';color:var(--muted);font-size:.75rem}
+.metodo-section[open] summary::after{content:'▾'}
+.metodo-section .metodo-body{padding:0 13px 10px;font-size:.79rem;color:var(--muted);line-height:1.5}
+.hallazgo-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:6px}
+@media(max-width:580px){.hallazgo-grid{grid-template-columns:1fr}}
+.hallazgo{background:var(--bg);border:1px solid var(--border);border-radius:4px;padding:8px 10px;font-size:.77rem}
+.hallazgo strong{display:block;color:var(--text);margin-bottom:2px;font-size:.78rem}
 footer{font-size:10.5px;color:var(--muted);margin-top:28px;border-top:1px solid var(--border);padding-top:8px}
 </style>
 </head>
@@ -135,6 +158,7 @@ footer{font-size:10.5px;color:var(--muted);margin-top:28px;border-top:1px solid 
   <a href="#posiciones">④ Posiciones por bloque</a>
   <a href="#seguimiento">⑤ Seguimiento semaforizado</a>
   <a href="#agenda">⑥ Agenda legislativa</a>
+  <a href="#auditoria">⑦ Auditoría metodológica</a>
 </nav>
 
 <!-- ① CONCLUSIÓN EJECUTIVA -->
@@ -292,49 +316,49 @@ footer{font-size:10.5px;color:var(--muted);margin-top:28px;border-top:1px solid 
 
 <div class="cont-item" style="border-left:3px solid var(--red)">
   <div class="cont-header"><div class="cont-num">C-01</div><div><div class="cont-titulo">Hídrico –44% real vs. Ley 7009 de Emergencia Hídrica sancionada</div>
-  <div class="cont-meta"><span class="resonancia res-alta">RESONANCIA ALTA</span><span class="resonancia res-int">INTERNA ALTA</span><span class="kw-red">hídrico –44%</span><span class="flag-media">📡 Ámbito · La Nación · Pura Ciudad</span></div></div></div>
-  <div class="cont-body">FxBA (Iáñez, Mayra, Bielli) y CD señalaron que obras hídricas caen 44,1% real mientras el Ejecutivo pedía facultades extraordinarias. Ley 7009 ya sancionada. <strong>Seguimiento activo: reglamentación, contrataciones y ejecución real de obras.</strong><br><strong style="color:var(--yellow);display:block;margin-top:4px">Seguimiento:</strong> ¿las reasignaciones presupuestarias compensan la caída? → <a href="#posiciones" style="color:var(--accent)">FB-12 · FB-14 · CD-02</a></div>
+  <div class="cont-meta"><span class="resonancia res-alta">RESONANCIA ALTA</span><span class="resonancia res-int">INTERNA ALTA</span><span class="kw-red">hídrico –44%</span><span class="flag-media">📡 Ámbito · La Nación · Pura Ciudad</span><span class="tipo tipo-h">HECHO</span></div></div></div>
+  <div class="cont-body">FxBA (Iáñez, Mayra, Bielli) y CD señalaron que obras hídricas caen 44,1% real mientras el Ejecutivo pedía facultades extraordinarias. Ley 7009 ya sancionada. <strong>Seguimiento activo: reglamentación, contrataciones y ejecución real de obras.</strong><br><span style="font-size:.72rem;color:var(--muted)">📅 Hecho verificable: debate comisión 08/10 y 13/10 · Taquigrafía pendiente revalidación</span><br><strong style="color:var(--yellow);display:block;margin-top:4px">Seguimiento:</strong> ¿las reasignaciones presupuestarias compensan la caída? → <a href="#posiciones" style="color:var(--accent)">FB-12 · FB-14 · CD-02</a></div>
 </div>
 
 <div class="cont-item" style="border-left:3px solid var(--red)">
   <div class="cont-header"><div class="cont-num">C-02</div><div><div class="cont-titulo">ABL: LLA pide –10% nominal permanente — negociación abierta</div>
-  <div class="cont-meta"><span class="resonancia res-alta">RESONANCIA ALTA</span><span class="resonancia res-int">INTERNA CRÍTICA</span><span class="kw-red">ABL –10% insuficiente</span><span class="flag-media">📡 Letra P · X-Ramírez</span></div></div></div>
-  <div class="cont-body">Ramírez (LLA) mantiene como condición la baja del 10% nominal permanente para el Presupuesto 2027. Arengo ofreció congelamiento + exención jubilados: insuficiente para LLA. <strong>Negociación continúa activa al 02/11.</strong><br><strong style="color:var(--yellow);display:block;margin-top:4px">Negociación clave:</strong> oferta ejecutiva diferenciada. → <a href="#posiciones" style="color:var(--accent)">LLA-02</a></div>
+  <div class="cont-meta"><span class="resonancia res-alta">RESONANCIA ALTA</span><span class="resonancia res-int">INTERNA CRÍTICA</span><span class="kw-red">ABL –10% insuficiente</span><span class="flag-media">📡 Letra P · X-Ramírez</span><span class="tipo tipo-d">DECLARACIÓN</span></div></div></div>
+  <div class="cont-body">Ramírez (LLA) mantiene como condición la baja del 10% nominal permanente para el Presupuesto 2027. Arengo ofreció congelamiento + exención jubilados: insuficiente para LLA. <strong>Negociación continúa activa al 02/11.</strong><br><span style="font-size:.72rem;color:var(--muted)">📅 Declaración pública: X-Ramírez · Letra P · fecha exacta pendiente de taquigrafía</span><br><strong style="color:var(--yellow);display:block;margin-top:4px">Negociación clave:</strong> oferta ejecutiva diferenciada. → <a href="#posiciones" style="color:var(--accent)">LLA-02</a></div>
 </div>
 
 <div class="cont-item" style="border-left:3px solid var(--red)">
   <div class="cont-header"><div class="cont-num">C-03</div><div><div class="cont-titulo">IIBB: convergencia LLA + FxBA — sin respuesta articulada del Ejecutivo</div>
-  <div class="cont-meta"><span class="resonancia res-alta">RESONANCIA ALTA</span><span class="resonancia res-int">INTERNA ALTA</span><span class="kw-yellow">IIBB manufactura –25%</span><span class="kw-yellow">tasa 0% monotributistas</span><span class="flag-media">📡 Ámbito · Letra P</span></div></div></div>
+  <div class="cont-meta"><span class="resonancia res-alta">RESONANCIA ALTA</span><span class="resonancia res-int">INTERNA ALTA</span><span class="kw-yellow">IIBB manufactura –25%</span><span class="kw-yellow">tasa 0% monotributistas</span><span class="flag-media">📡 Ámbito · Letra P</span><span class="tipo tipo-d">DECLARACIÓN</span></div></div></div>
   <div class="cont-body">LLA: tasa 0% servicios + manufactura –25%. FxBA: exención monotributistas D–H + gastronomía 1er sem. 2027. GCBA sin propuesta unificada al 02/11. Costo fiscal no cuantificado públicamente.<br><strong style="color:var(--yellow);display:block;margin-top:4px">Negociación clave:</strong> propuesta única con espacio fiscal real. → <a href="#posiciones" style="color:var(--accent)">LLA-03 · FB-08 · FB-09 · CD-01</a></div>
 </div>
 
 <div class="cont-item" style="border-left:3px solid var(--yellow)">
   <div class="cont-header"><div class="cont-num">C-04</div><div><div class="cont-titulo">IVC / Vivienda: "vaciamiento" vs. cierre — caso Adorni activo</div>
-  <div class="cont-meta"><span class="resonancia res-alta">RESONANCIA ALTA</span><span class="resonancia res-int">INTERNA ALTA</span><span class="kw-red">vaciamiento IVC</span><span class="flag-media">📡 Letra P · Infobae · X-Barroetaveña</span></div></div></div>
+  <div class="cont-meta"><span class="resonancia res-alta">RESONANCIA ALTA</span><span class="resonancia res-int">INTERNA ALTA</span><span class="kw-red">vaciamiento IVC</span><span class="flag-media">📡 Letra P · Infobae · X-Barroetaveña</span><span class="tipo tipo-d">DECLARACIÓN</span></div></div></div>
   <div class="cont-body">LLA propone cerrar el IVC. FxBA lo defiende. Las cifras de caída acumulada que circulan en medios son atribuidas a ACIJ — no representan datos oficiales del GCBA. Barroetaveña: familia Adorni recibió crédito del organismo que LLA quiere eliminar. Alta circulación X + rebote medios.<br><strong style="color:var(--yellow);display:block;margin-top:4px">Seguimiento:</strong> posición oficial GCBA sobre IVC en el Presupuesto 2027. → <a href="#posiciones" style="color:var(--accent)">LLA-05 · FB-02 · FB-10</a></div>
 </div>
 
 <div class="cont-item" style="border-left:3px solid var(--yellow)">
   <div class="cont-header"><div class="cont-num">C-05</div><div><div class="cont-titulo">Línea F / Trambús: "ficción" vs. adjudicación diciembre</div>
-  <div class="cont-meta"><span class="resonancia res-alta">RESONANCIA ALTA</span><span class="kw-red">ficción Línea F</span><span class="kw-red">Trambús colectivo</span><span class="flag-media">📡 Clarín · La Nación · X-Barroetaveña</span></div></div></div>
+  <div class="cont-meta"><span class="resonancia res-alta">RESONANCIA ALTA</span><span class="kw-red">ficción Línea F</span><span class="kw-red">Trambús colectivo</span><span class="flag-media">📡 Clarín · La Nación · X-Barroetaveña</span><span class="tipo tipo-d">DECLARACIÓN</span></div></div></div>
   <div class="cont-body">Barroetaveña: Línea F = "ficción"; Trambús = "colectivo con ruedas tapadas". Ministro (13/10): adjudicación diciembre, T1 en un mes. Km en disputa: 9,8 vs 10,9. Sin cronograma oficial publicado al 02/11. No modificar plazos ni cifras sin fuente oficial nueva.<br><strong style="color:var(--yellow);display:block;margin-top:4px">Seguimiento:</strong> adjudicación Línea F y arranque Trambús T1 (compromiso ~13/11). → <a href="#posiciones" style="color:var(--accent)">FB-05 · FB-11 · FB-14</a></div>
 </div>
 
 <div class="cont-item" style="border-left:3px solid var(--green)">
   <div class="cont-header"><div class="cont-num">C-06</div><div><div class="cont-titulo">Bono proveedores: Ley 7008 sancionada — pasa a seguimiento de implementación</div>
-  <div class="cont-meta"><span class="resonancia res-media">RESONANCIA MEDIA</span><span class="resonancia res-int">IMPLEMENTACIÓN ACTIVA</span><span class="kw-green">Ley 7008 sancionada</span><span class="flag-media">📡 Parlamentario · Ámbito</span></div></div></div>
+  <div class="cont-meta"><span class="resonancia res-media">RESONANCIA MEDIA</span><span class="resonancia res-int">IMPLEMENTACIÓN ACTIVA</span><span class="kw-green">Ley 7008 sancionada</span><span class="flag-media">📡 Parlamentario · Ámbito</span><span class="tipo tipo-h">HECHO</span></div></div></div>
   <div class="cont-body">Dictamen cuádruple → Ley 7008 sancionada el 29/10. Autoriza emitir títulos para cancelar obligaciones del Sector Público. <strong>Próximo control:</strong> instrumentación de la emisión, monto efectivamente utilizado, condiciones financieras (tasa, vencimiento), obligaciones alcanzadas e impacto durante 2027. No confundir con deuda presupuestaria ni intereses del Presupuesto 2027. → <a href="#posiciones" style="color:var(--accent)">CD-05 · FB-06</a></div>
 </div>
 
 <div class="cont-item" style="border-left:3px solid var(--accent)">
   <div class="cont-header"><div class="cont-num">C-07</div><div><div class="cont-titulo">Salud — Quirós 23/10: taquigrafía pendiente / canal Pharmabiz activo</div>
-  <div class="cont-meta"><span class="resonancia res-media">RESONANCIA MEDIA</span><span class="kw-yellow">Salud +18,2% nominal = caída real</span><span class="flag-media">📡 Pharmabiz · X-Salud</span></div></div></div>
+  <div class="cont-meta"><span class="resonancia res-media">RESONANCIA MEDIA</span><span class="kw-yellow">Salud +18,2% nominal = caída real</span><span class="flag-media">📡 Pharmabiz · X-Salud</span><span class="tipo tipo-i">PENDIENTE VERIF.</span></div></div></div>
   <div class="cont-body">Última ronda ministerial (23/10). FxBA cuestionó que +18,2% nominal = caída real ~3%. Taquigrafía no publicada al 02/11 — verificar legislatura.gob.ar. Canal X→Pharmabiz→prensa especializada activo.<br><strong style="color:var(--yellow);display:block;margin-top:4px">Acción:</strong> verificar publicación taquigrafía 23/10. → <a href="#posiciones" style="color:var(--accent)">FB-06 · FB-15</a></div>
 </div>
 
 <div class="cont-item" style="border-left:3px solid var(--accent)">
   <div class="cont-header"><div class="cont-num">C-08</div><div><div class="cont-titulo">Silencio Positivo ✅ vs. Libertad Comercial — no son el mismo proyecto</div>
-  <div class="cont-meta"><span class="resonancia res-media">RESONANCIA MEDIA</span><span class="kw-green">Ley 7010 sancionada</span><span class="kw-yellow">Libertad Comercial pendiente</span></div></div></div>
+  <div class="cont-meta"><span class="resonancia res-media">RESONANCIA MEDIA</span><span class="kw-green">Ley 7010 sancionada</span><span class="kw-yellow">Libertad Comercial pendiente</span><span class="tipo tipo-h">HECHO</span></div></div></div>
   <div class="cont-body">LLA reclamaba ambos proyectos. <strong>Silencio Positivo (Exp. 2431-D-2026): ✅ Ley 7010 sancionada el 29/10.</strong> Libertad Comercial: verificar estado actual en fuente oficial antes de mostrar como aprobado. Son expedientes distintos.<br><strong style="color:var(--yellow);display:block;margin-top:4px">Seguimiento:</strong> estado de Libertad Comercial en sistema parlamentario. → <a href="#posiciones" style="color:var(--accent)">LLA-12</a></div>
 </div>
 </section>
@@ -345,6 +369,11 @@ footer{font-size:10.5px;color:var(--muted);margin-top:28px;border-top:1px solid 
 <section id="posiciones">
 <div class="sec-label">Sección 4</div>
 <h2>Posiciones por bloque — Tabla completa &nbsp;<small style="font-size:.7rem;font-weight:400;color:var(--muted)">← <a href="#controversiales" style="color:var(--accent)">controversiales ↑</a></small></h2>
+<div class="search-bar">
+  <input type="text" id="tabla-search" placeholder="🔍  Buscar en la tabla... bloque, legislador, área, planteo" oninput="buscarTabla(this.value)">
+  <button class="export-btn" onclick="exportarCSV()">⬇ Exportar CSV</button>
+</div>
+<div id="search-count"></div>
 <div class="filtros">
   <button class="activo" onclick="filtrar('todos',this)">Todos</button>
   <button onclick="filtrar('LLA',this)">🔴 LLA</button>
@@ -492,9 +521,83 @@ footer{font-size:10.5px;color:var(--muted);margin-top:28px;border-top:1px solid 
 </div>
 </section>
 
+<hr class="divider">
+
+<!-- ⑦ AUDITORÍA METODOLÓGICA -->
+<section id="auditoria">
+<div class="sec-label">Sección 7</div>
+<h2>Auditoría metodológica — Fuentes, pendientes y trazabilidad &nbsp;<small style="font-size:.7rem;font-weight:400;color:var(--muted)">← <a href="#agenda" style="color:var(--accent)">agenda ↑</a></small></h2>
+
+<div class="mosaico" style="margin-bottom:10px;gap:8px">
+  <div class="mtile" style="border-left:3px solid var(--green)">
+    <div class="tl" style="color:var(--green)">HECHOS VERIFICADOS</div>
+    Leyes 7008, 7009, 7010 sancionadas el 29/10/2026 con 58/60 presentes. Fuente primaria: <a href="https://parlamentaria.legislatura.gob.ar" style="color:var(--accent)" target="_blank">parlamentaria.legislatura.gob.ar</a>. Las cifras de la Ley 7008 reemplazan cualquier mención previa a "dictamen de bono de proveedores".
+  </div>
+  <div class="mtile" style="border-left:3px solid var(--yellow)">
+    <div class="tl" style="color:var(--yellow)">PENDIENTES DE REVALIDACIÓN</div>
+    Taquigrafías 7/10, 14/10, 16/10 y 23/10 (Quirós-Salud) no descargadas · Estado Libertad Comercial sin verificar · Respuestas del Ejecutivo a preguntas formales sin documentar · Cifras IVC sólo en fuente ACIJ
+  </div>
+</div>
+
+<details class="metodo-section">
+  <summary>① Actualización temporal — Separar fecha de hecho, publicación y consulta</summary>
+  <div class="metodo-body">
+    Cada afirmación requiere tres fechas diferenciadas: <strong>(a) fecha del hecho</strong> (sesión, declaración, votación); <strong>(b) fecha de publicación</strong> (taquigrafía, medios, BOCBA); <strong>(c) fecha de consulta/carga</strong> (cuándo fue incluida en este monitor). Sin esta separación, no es posible determinar si una "afirmación reciente" refleja un hecho nuevo o una publicación tardía. Ejemplo: la taquigrafía de Quirós del 23/10 puede publicarse semanas después — no es lo mismo que una declaración nueva.<br>
+    <span class="kw-yellow" style="margin-top:4px;display:inline-block">Acción:</span> En próximas actualizaciones, registrar las tres fechas para cada ítem crítico.
+  </div>
+</details>
+
+<details class="metodo-section">
+  <summary>② Cobertura de actores — Brechas de representación</summary>
+  <div class="metodo-body">
+    El social listening (SL_GA 06–26/10) cubre legisladores con alta presencia en X y medios. <strong>Riesgo:</strong> posiciones negociadas en privado, por Ciudadanos Unidos/UCR, FIT/PO y Transformación, no quedan registradas. Arengo, Wolff y voceros de VxM tienen presencia institucional pero baja amplificación mediática propia. El monitor puede sobreponderar la oposición visible sobre la negociación real.<br>
+    <span class="kw-yellow" style="margin-top:4px;display:inline-block">Acción:</span> Incorporar seguimiento directo de fuentes oficiales GCBA (BOCBA, transcripciones ministeriales) para balancear la visibilidad opositora.
+  </div>
+</details>
+
+<details class="metodo-section">
+  <summary>③ Línea F — Consolidar hitos, no duplicar</summary>
+  <div class="metodo-body">
+    Los hitos de Línea F/Trambús aparecen en C-05, FB-05, FB-11, FB-14 y RP-11/12. Los datos en disputa (9,8 vs 10,9 km; "colectivo con ruedas tapadas" vs adjudicación diciembre) son los mismos en todos los puntos. <strong>Riesgo:</strong> la repetición puede crear la impresión de múltiples hechos cuando es un único punto abierto.<br>
+    <span class="kw-yellow" style="margin-top:4px;display:inline-block">Acción:</span> En próximo corte: consolidar en un único hito de seguimiento con todas las referencias cruzadas. Actualizar solo cuando haya cronograma oficial publicado.
+  </div>
+</details>
+
+<details class="metodo-section">
+  <summary>④ Bancas y votos — Distinguir composición, asistencia y posición</summary>
+  <div class="metodo-body">
+    El monitor mezcla en algunos puntos: (a) composición del bloque (bancas actuales); (b) asistencia a sesión (58/60 el 29/10); (c) posición de voto o negociadora. Son datos distintos. VxM tiene 12 bancas; que 58/60 asistieran no implica que todos votarían el presupuesto. <strong>Riesgo:</strong> inducir a error sobre cuántos votos tiene garantizados el Ejecutivo.<br>
+    <span class="kw-yellow" style="margin-top:4px;display:inline-block">Acción:</span> En §2 y mayorías, mantener separadas las tres dimensiones: composición · asistencia · voto declarado.
+  </div>
+</details>
+
+<details class="metodo-section">
+  <summary>⑤ Respuestas del Ejecutivo — Completar con fuentes verificables</summary>
+  <div class="metodo-body">
+    Varias preguntas legislativas (RP-13 Fondo Anticíclico; LLA-04 patentes; LLA-09 privatizaciones; LLA-10 estructuras) figuran sin respuesta formal documentada. Esto puede reflejar que el Ejecutivo no respondió, o que respondió por canales no monitoreados (reuniones cerradas, notas técnicas no públicas).<br>
+    <span class="kw-yellow" style="margin-top:4px;display:inline-block">Acción:</span> Distinguir explícitamente "sin respuesta pública" de "sin respuesta". Buscar actas y notas técnicas en fuentes GCBA antes de asumir silencio.
+  </div>
+</details>
+
+<details class="metodo-section">
+  <summary>⑥ Mantenimiento — Cadencia de actualización</summary>
+  <div class="metodo-body">
+    El monitor cubre un período de negociación activa con plazos cortos (15/12/2026). La información puede quedar desactualizada en horas (nueva oferta del Ejecutivo, dictamen sorpresivo, sesión no programada). <strong>Cadencia mínima recomendada:</strong> actualización bisemanal durante noviembre; semanal si hay dictamen en vista.<br>
+    <span class="kw-yellow" style="margin-top:4px;display:inline-block">Próximo corte sugerido:</span> 10/11/2026 — verificar taquigrafías pendientes, estado Libertad Comercial, cronograma Trambús T1 y avance negociación presupuestaria.
+  </div>
+</details>
+
+<div style="font-size:.72rem;color:var(--muted);margin-top:10px;padding:8px 12px;background:var(--surface);border:1px solid var(--border);border-radius:5px">
+  <strong style="color:var(--text)">Leyenda de tipos de dato:</strong>
+  <span class="tipo tipo-h">HECHO</span> verificado en fuente primaria oficial ·
+  <span class="tipo tipo-d">DECLARACIÓN</span> atribuida a legislador/funcionario en medio o canal verificable ·
+  <span class="tipo tipo-i">PENDIENTE VERIF.</span> requiere confirmación en fuente primaria antes de citar · Las cifras sin fuente explícita no deben usarse en comunicación oficial.
+</div>
+</section>
+
 <footer>
   Uso interno · Comisión de Presupuesto · CABA · <strong>Corte: 02/11/2026 ART</strong> ·
-  Fuentes primarias: <a href="https://legislatura.gob.ar" style="color:var(--accent)" target="_blank">Legislatura CABA</a> (Leyes 7008, 7009, 7010 — sesión 29/10); Exp. 3083-J-2026 (Presupuesto 2027); Exp. 2431-D-2026 (Silencio Positivo) ·
+  Fuentes primarias: <a href="https://legislatura.gob.ar" style="color:var(--accent)" target="_blank">Legislatura CABA</a> (Leyes 7008, 7009, 7010 — sesión 29/10 · <a href="https://parlamentaria.legislatura.gob.ar/pages/expediente.aspx?id=142694" style="color:var(--accent)" target="_blank">Exp. 3082-J</a>); Exp. 3083-J-2026 (Presupuesto 2027); Exp. 2431-D-2026 (Silencio Positivo) ·
   Fuentes complementarias: transcripciones comisión 08/10 y 13/10; SL_GA 06/10–26/10; Parlamentario, Letra P, Pura Ciudad, Ámbito, La Nación, Pharmabiz ·
   Cifras de caída IVC atribuidas a ACIJ — no son datos oficiales del GCBA ·
   $435.000M = estimación presentada por LLA, no cifra oficial del Proyecto de Presupuesto ·
@@ -504,15 +607,59 @@ footer{font-size:10.5px;color:var(--muted);margin-top:28px;border-top:1px solid 
 
 </div>
 <script>
+// ── Filtros por bloque ──
+let filtroActivo = 'todos';
 function filtrar(b, btn) {
+  filtroActivo = b;
   document.querySelectorAll('.filtros button').forEach(x => x.classList.remove('activo'));
   btn.classList.add('activo');
-  document.querySelectorAll('#tabla-bloques tbody tr').forEach(tr => {
-    if (b === 'todos') { tr.hidden = false; return; }
-    if (b === 'media') { tr.hidden = tr.dataset.media !== 'si'; return; }
-    tr.hidden = tr.dataset.bloque !== b;
-  });
+  aplicarFiltros();
 }
+
+// ── Búsqueda en tabla ──
+function buscarTabla(q) {
+  aplicarFiltros(q.trim().toLowerCase());
+}
+
+function aplicarFiltros(query) {
+  const q = query !== undefined ? query : (document.getElementById('tabla-search') ? document.getElementById('tabla-search').value.trim().toLowerCase() : '');
+  let visible = 0;
+  document.querySelectorAll('#tabla-bloques tbody tr').forEach(tr => {
+    // filtro bloque
+    let pasaBloque = true;
+    if (filtroActivo === 'media') pasaBloque = tr.dataset.media === 'si';
+    else if (filtroActivo !== 'todos') pasaBloque = tr.dataset.bloque === filtroActivo;
+    // filtro texto
+    let pasaBusqueda = true;
+    if (q) pasaBusqueda = tr.textContent.toLowerCase().includes(q);
+    tr.hidden = !(pasaBloque && pasaBusqueda);
+    if (!tr.hidden) visible++;
+  });
+  const cnt = document.getElementById('search-count');
+  if (cnt) {
+    const total = document.querySelectorAll('#tabla-bloques tbody tr').length;
+    cnt.textContent = q ? `${visible} de ${total} filas coinciden con "${q}"` : '';
+  }
+}
+
+// ── Exportar CSV ──
+function exportarCSV() {
+  const headers = ['#','Bloque','Legislador/a','Área','Planteo / Reclamo','Resonancia','Estado'];
+  const rows = [];
+  document.querySelectorAll('#tabla-bloques tbody tr:not([hidden])').forEach(tr => {
+    const celdas = Array.from(tr.querySelectorAll('td')).map(td => td.textContent.trim().replace(/\s+/g,' '));
+    rows.push(celdas);
+  });
+  const csv = '﻿' + [headers, ...rows]
+    .map(r => r.map(v => '"' + String(v).replaceAll('"','""') + '"').join(';'))
+    .join('\r\n');
+  const u = URL.createObjectURL(new Blob([csv], {type:'text/csv;charset=utf-8'}));
+  const a = document.createElement('a');
+  a.href = u; a.download = 'monitor_leg_posiciones_02-11-2026.csv'; a.click();
+  setTimeout(() => URL.revokeObjectURL(u), 1000);
+}
+
+// ── Ordenar agenda ──
 function agOrdenar(modo, btn) {
   btn.closest('.filtros').querySelectorAll('button').forEach(x => x.classList.remove('activo'));
   btn.classList.add('activo');
