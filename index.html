@@ -352,9 +352,9 @@ footer a{color:var(--accent)}
     </div>
     <!-- ICG -->
     <div class="kpi">
-      <div class="kpi-label">ICG sep-26</div>
-      <div class="kpi-num">1,9</div>
-      <div class="kpi-meta"><span class="kpi-delta down">−0,2</span><span class="kpi-sub">vs ago-26 · ref. L1</span></div>
+      <div class="kpi-label">ICG oct-26</div>
+      <div class="kpi-num">1,95</div>
+      <div class="kpi-meta"><span class="kpi-delta up">+0,9%</span><span class="kpi-sub">vs sep-26 · UTDT Escuela de Gobierno</span></div>
       <div class="kpi-subs">
         <div class="kpi-sub-row"><span class="kpi-sub-lbl">Escala</span><span class="kpi-sub-val">0–5</span></div>
         <div class="kpi-sub-row"><span class="kpi-sub-lbl">Max 12m</span><span class="kpi-sub-val">2,5</span></div>
@@ -385,10 +385,10 @@ footer a{color:var(--accent)}
     </div>
   </div>
   <div class="chart-wrap">
-    <div class="chart-head"><div><h3>ICC + ICG · UTDT CIF · apertura regional oct-26</h3><p>Sep-25 → Oct-26 · ICC Nacional + ICG Nacional (eje der., sin dato oct) · CABA / GBA / Interior: dato único oct-26</p></div></div>
+    <div class="chart-head"><div><h3>ICC + ICG · UTDT · apertura regional ICC oct-26</h3><p>Sep-25 → Oct-26 · ICC Nacional + ICG Nacional (eje der.) · CABA / GBA / Interior: dato único oct-26</p></div></div>
     <div class="chart-box med"><canvas id="chartICCICG"></canvas></div>
     <div class="legend" id="legendICCICG"></div>
-    <p class="source">ICC Nacional 41,52 · CABA 39,68 · GBA 39,49 · Interior 46,00 · oct-26 · campo 5-16 oct · n≈1.000 · CATI · ICG esc. 0–5 eje der. (sin dato oct) · UTDT CIF / Poliarquía</p>
+    <p class="source">ICC Nacional 41,52 · CABA 39,68 · GBA 39,49 · Interior 46,00 · oct-26 · campo 5-16 oct · n≈1.000 · CATI · ICC: UTDT CIF / Poliarquía · ICG oct-26: 1,95 (+0,9% m/m; −7,0% i.a.), esc. 0–5 eje der. · UTDT Escuela de Gobierno / Poliarquía · campo 5–16 oct · n=1.000 · IC 95%: 1,83–2,08 · oscilaciones compatibles con error muestral</p>
   </div>
 </section>
 
@@ -1200,10 +1200,10 @@ footer a{color:var(--accent)}
       <tr>
         <td><strong>ICG · confianza gobierno</strong></td>
         <td>🟡</td>
-        <td class="num">1,94 / 5</td>
-        <td class="num" style="color:var(--fg-dim)">Di Tella sep-26</td>
+        <td class="num">1,95 / 5</td>
+        <td class="num" style="color:var(--fg-dim)">Di Tella oct-26</td>
         <td><span class="signal conv">ALTA</span></td>
-        <td>5 meses oscilando 1,94–2,07; nivel bajo, sin tendencia definida</td>
+        <td>Octubre: +0,9% m/m; −7,0% i.a.; −20,7% desde fin de 2025. Oscilaciones compatibles con el error muestral, sin tendencia clara.</td>
       </tr>
       <tr>
         <td><strong>ICC · confianza consumidor</strong></td>
@@ -1528,7 +1528,7 @@ const MESI=['Sep-25','Oct-25','Nov-25','Dic-25','Ene-26','Feb-26','Mar-26','Abr-
 const MIPC=['Sep-25','Oct-25','Nov-25','Dic-25','Ene-26','Feb-26','Mar-26','Abr-26','May-26','Jun-26','Jul-26','Ago-26','Sep-26','Oct-26'];
 const IPC=[2.1,2.3,2.5,2.8,2.9,2.9,3.4,2.6,2.1,1.9,2.1,1.7,1.9,null]; // oct-26: sin dato INDEC aún
 const ICC=[39.8,42.3,46.0,45.6,46.6,44.4,42.0,39.6,40.1,42.7,40.7,40.2,41.18,41.52]; // oct-26: 41,52 · CIF/UTDT · campo 5-16 oct
-const ICG=[1.9,2.1,2.5,2.5,2.4,2.4,2.3,2.0,2.0,2.1,1.9,2.1,1.9,null]; // oct-26: sin informe ICG aún
+const ICG=[1.9,2.1,2.5,2.5,2.4,2.4,2.3,2.0,2.0,2.1,1.9,2.1,1.9,1.95]; // oct-26: informe ICG UTDT Escuela de Gobierno, 1,95; +0,9% m/m. Historia previa conserva redondeo original.
 
 /* INFLACIÓN — series combinadas */
 // Labels: abarca sep-25 → sep-26 (13 puntos)
@@ -1884,7 +1884,7 @@ function initTab(tab){
         'Acum. IPCBA','Interanual IPCBA',
         'var(--c4)','var(--c4)');
     })();
-    // ── ICC + ICG combinados (dual-axis) + apertura regional sep-26 ─
+    // ── ICC + ICG combinados (dual-axis) + apertura regional oct-26 ─
     (function(){
       const ctx=document.getElementById('chartICCICG');if(!ctx)return;
       if(chartRegistry['chartICCICG'])try{chartRegistry['chartICCICG'].destroy();}catch(e){}
@@ -1915,7 +1915,7 @@ function initTab(tab){
             const v=c.parsed.y;
             if(v===null)return null;
             const suf=c.dataset.yAxisID==='yICG'?' (esc.0-5)':'';
-            return c.dataset.label+': '+v.toFixed(1)+suf;
+            return c.dataset.label+': '+v.toFixed(2)+suf;
           }}}},
           scales:{
             x:{ticks:{font:{family:"'IBM Plex Mono',monospace",size:10},color:tok('--fg-dim')},grid:{color:tok('--border')}},
@@ -1930,7 +1930,7 @@ function initTab(tab){
       });
       buildLegend('legendICCICG','chartICCICG',
         ['ICC Nacional','ICC CABA oct-26','ICC Interior oct-26','ICC GBA oct-26','ICG Nacional'],
-        ['var(--c2)','var(--c5)','var(--c4)','var(--c3)']);
+        ['var(--c2)','var(--c5)','var(--c4)','var(--c1)','var(--c3)']);
     })();
   }
 
