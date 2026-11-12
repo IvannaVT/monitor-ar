@@ -1,0 +1,69 @@
+fila	carpeta	mes	consultora	informe_titulo	capa_analitica	file_id	estado_ficha
+274	2026_10	10	QSOCIAL	Carrusel Estimaciones Electorales (Octubre)	CONV	1TPl8RhzyyzGywmfndetSCSLxXqGcb_WO	Completa
+304	2026_09	10	ATLAS INTEL / BLOOMBERG	Latam Pulse Argentina (Septiembre)	CONV	1mSXcyw7ZrO31lVCEhJ7c-cePMnuyDzKS	Parcial
+306	2026_10	9	DALESSIO IROL BERENSZTEIN	Humor Social y Político Nacional (Septiembre)	CONV	15xCCxnLfLvu_VZihlCtlLG8Izil_23de	Completa
+307	2026_10	10	PROYECCION CONSULTORES	Estudio Nacional (Octubre)	CONV	1uIfhBnDL_bPLmziw4yTPefaYkySxN_A3	Completa
+308	2026_10	10	QSOCIAL / QMONITOR	QMonitor - Clima político, económico y social (Octubre)	CONV	1_0CncFQAaw9BvGZpNLs-GwTmsXAlFWSt	Parcial
+309	2026_10	9	QSOCIAL	Tercera Alternativa (Septiembre)	CONV	1pFCt3u-aEaJ_VorcKGOIiHrjrjHqXxA0	Completa
+310	2026_10	10	CB GLOBAL DATA	Ranking Presidentes de Latinoamérica (Octubre)	CONV	1hyu3UO5bh4eHZOzhtY5C9Uabx8OWAigD	Parcial
+311	2026_10	10	EUNOMIA	Radiografía del electorado Sub35 (Octubre)	TEM	1E0rcIkislVMaNbfUVYBnZIumKHmlhFAA	Completa
+312	2026_10/Pcias	10	SIRI & ORTEGA ASOC	Informe Medición (Octubre) — Gran Mendoza	CONV	1zvTE2QGEEO8pOyZ0e8uFv3vOtJrSDIcR	Completa
+313	2026_10	10	SIRI & ORTEGA ASOC	Informe Medición Mendoza — DUPLICADO	CONV	14j0svQLkfjNSgUqNQTMfIL-5rsaYzL_I	Duplicado
+314	2026_10	10	REPUTACION DIGITAL	Bullrich candidata a vice (Octubre)	SL	1o_mlbWD7SUDJlJt2mIKK1BwXp2o4zKwk	Completa
+315	2026_10	10	NARRAGLOBAL	Despedida de Leo Messi (Octubre)	SL	11hGDB-qeAlP7dXi5gOvYPGJdxTkUMaLY	Parcial
+316	2026_10	10	ANALOGIAS	Encuesta Nacional (Octubre)	CONV	17cFXTzTZ--jC7cpCObgWJ86n7mUumsIb	Completa
+317	2026_10	10	PDM ARGENTINA	Cómo y por dónde se informan los argentinos (Octubre)	SL	1xYC7Z3_k7YGeqCUcPsBhars91SpErm5Y	Completa
+318	2026_10	10	PULSAR UBA (IGEDECO)	Aprobación Presidencial — Octubre 2026	TEM	1h9YAWN_mQ295_x4VVR6tKI3UIxskYFPk	Completa
+319	2026_10	10	AtlasIntel	Aprobación de gestión — Octubre 2026 (medios)	CONV		Parcial
+320	2026_10	10	Management & Fit	Aprobación de gestión — sep 2026 (pub 12/10, medios)	CONV		Parcial
+321	2026_10	10	Giacobbe	Imagen de Milei — Octubre 2026 (medios)	CONV		Parcial
+322	2026_10	10	ESPOP (UdeSA)	Intención de voto por espacio — Octubre 2026 (medios)	CONV		Parcial
+323	2026_10	10	Synopsis	Intención de voto y ballotage — sep 2026 (pub 2/10, medios)	CONV		Parcial
+324	2026_10	10	Equipo Mide	Intención de voto por espacio — sep 2026 (pub 2/10, medios)	CONV		Parcial
+325	2026_10	10	Afiches AC	Ballotage Milei vs. Kicillof — Octubre 2026 (medios)	CONV		Parcial
+326	2026_09	9	IDECBA	IPCBA — Septiembre 2026	TEM		Parcial (sin file_id)
+327	2026_10	10	ICG - Di Tella / Poliarquía	ICG (Octubre 2026)	TEM	1DDjurK-G4liSV0Z8ne17-MYXdp4jPxOg	PROCESADO
+328	2026_10	10	CIF - UTDT / Poliarquía	Encuesta de Expectativas de Inflación - Octubre 2026	CONV	1XV5dXF09qnGytqsnn__2hjec0ZUKXtxI	PROCESADO
+329	2026_10	10	CELAG	Panorama Político y Social Argentina - Octubre 2026	CONV	1WysBN1BT8CNTY04roaS3YyxYGXIeIVxs	PROCESADO
+330	2026_10	10	Zuban Córdoba y Asociados	El silencio de la Mayoría - Octubre 2026	CONV	1pKNoWnAz0S1BsTZqZnbKKJGwshJLQzpQ	PROCESADO
+331	2026_10	10	Zentrix Consultora	Monitor de Opinión Pública - Octubre 2026	CONV	1KH2QATvGsehaEKBh3fDuLXtb5S93qEWx	PROCESADO
+332	2026_10	10	Reale Dalla Torre (RDT)	Estudio de Opinión Nacional - Octubre 2026	CONV	1thu4zIYs1sLkULpQqXY2SIudpO99n8kG	PROCESADO
+333	2026_10	10	Pulso Research	Brújula Social - Octubre 2026	CONV	1SYJnQQ_LTJGcLQV4hkx0PjLOwmDmP-aj	PROCESADO
+334	2026_10	10	QSocial	Formas del Presidente y el triunfo de Lula (Octubre 2026)	CONV	1uMotkuW7KH5YL_q7--TiG9TqnaYjwi-t	PROCESADO
+335	2026_10	10	DC Consultores	Encuesta CABA (Octubre 2026)	CONV	1VkNLWxNczcAL9T-48vA-0wvKIj3UMk5q	PROCESADO
+336	2026_10	10	OCREAR / CONICET-UCA	Barómetro de las Religiones (Octubre 2026)	CONV	1BZZXCDk_2I-As9CQFyg6u68GmPbI6X3G	PARCIAL
+337	2026_10/Pcias	10	INNOVA Opinión Pública	Rosario y Santa Fe - Octubre 2026	CONV	1h2p2v8TLWvHzM4yiw4qnfKbpbXlmxDyx	PROCESADO
+338	2026_10/Pcias	10	DC Consultores	Encuesta Santa Fe (Octubre 2026)	CONV	1JqgC0cKoSoCdsjjWYH9ksrkCsfb9peXQ	PROCESADO
+339	2026_10/Pcias	10	Grupo Feedback	Imagen de Bullrich y Brito — Córdoba (Octubre 2026)	CONV	1e0lSn--DYWy0bj2-ST4h95pvI7fnT5eE	PARCIAL
+340	2026_10/Pcias	10	Consultora Belgrano	Mora en Catamarca (Octubre 2026)	TEM	1iCoOeZtq6WpJVIfNLFAKz0iZJIrsKCXj	PROCESADO
+341	2026_10	10	Observatorio Electoral	Participación Electoral Joven 2023-2025	TEM	1SkP-P_yHIvI1mDW1ymxDC6KSnvP6VsPL	PARCIAL
+342	2026_10	10	Dinamarca PR	Cumple Maradona (Octubre 2026)	SL	1liCpHBzW7Ra3D319_dSgovy0FlcsC6N-	PARCIAL
+343	2026_10	10	Electolab	Cómo remontó Lula (Octubre 2026)	TEM	15kKPYQbuOTymr-zwk0gCokvFP-w78WCe	PARCIAL
+344	2026_10	10	CEPA	Dotación sector público nacional (Octubre 2026)	TEM	1reiZqcsL_q9GjTJWcqEHgiOJh8TOpwhO	PARCIAL
+345	2026_10	10	ENTER	Minería en foco (Octubre 2026)	SL	1No0CKua-4FNAsBQQEmG9Sk084-mNca3h	PARCIAL
+346	IDECBA	10	IDECBA	IPCBA — Octubre 2026 (IR 2069)	TEM	1AtaqaBQri3qBugGjVA9xDBfus9E5aMD2	Completa
+347	2026_11	11	CB Global Data	Ranking CB de Intendentes GBA — Noviembre 2026	CONV	1haL5Bd0Xw1kXugLdekJcpcdbAvVPG2RA	NIVEL2 CARGADO
+348	2026_11	11	Reputación Digital	¿Se le acabó el aura a Milei? — sep–nov 2026	SL	1kd9sW5yHrlMiZLq3_bxYTCnCHZjaCFGL	NIVEL2 CARGADO
+349	2026_11	11	QMonitor	Clima político, económico y social — Noviembre 2026	CONV	1rD7VKuwogWSGUEFj8D7yy_Qe8BUjez3S	Parcial (lectura visual 11/11)
+350	2026_11	11	Delfos	La religión y los argentinos ante la visita del Papa	CONV	1XSnnD6kIk-2YQvkPMHTj7kEPF1eVmhvG	NIVEL2 CARGADO
+351	2026_10	10	Infomedia Consulting	Argentina Briefing — Octubre 2026	TEM	18LGgTH1v-6hcoVnxQrxQRTwEltFzJe7T	NIVEL2 CARGADO
+352	2026_10	10	Pulso Research	Fútbol Argentino — Octubre 2026	CONV	1thsNKhMCUFolEpMuduqggd7YKTYd4qX1	NIVEL2 CARGADO
+353	2026_10	10	Opina Argentina	Informe visita Papa León XIV — Octubre 2026	CONV	1PvEhvUMZnqCJ_nwY0atepWS6__3H-ke6	NIVEL2 CARGADO
+354	Radar_Internacional	11	Producción propia	Radar Internacional EE.UU. 2026	PROPIO/REF	1BK0zXMXcVY3I4r_YNQZ5HtDaWUHE1yUe6zU6DNbC9FM	INCIPIENTE
+355	2026_10	10	PDM Comunicación	Mapa político del streaming (Octubre 2026)	SL	16RVKjAv4_AYBgVUk9mcT07_1ZWpW8P8Q	INCIPIENTE
+356	2026_10	10	DC CONSULTORES	Encuesta Nacional (Octubre)	CONV	1uznLYGdcQW-2F2alisYrLtkdxGrgNrRT	Parcial
+357	2026_10	10	PULSAR UBA	Aprobación Presidencial (Octubre) — documento asociado	TEM (duplicado)	1vi6yMWwaGNgfm4f9Ym5ONd7xkYVty-pL	Pendiente
+358	2026_10	10	QSOCIAL / QMONITOR	QMonitor (Octubre) — versión comprimida, documento asociado	CONV (duplicado)	16HiGngQwowwu7o6kj1Nc2iBoizH8kkTT	Parcial
+359	2026_10	10	REUTERS INSTITUTE	IA generativa y noticias (2026)	TEM	1Oj5_2AFBsXLBLltKVrwHoNVPSX63-9pY	Pendiente
+360	2026_10	10	EUNOMIA	Casino en el bolsillo (Octubre)	SL	1PK6CaoCwAUaosuQVn1cNU7NeJX9UDNpc	Pendiente
+361	2026_11	11	RADAR PUBLICO	No estamos solos (Noviembre) [cualitativo]	TEM	18E4ce-z7R6g1x0_8nNDkNZ3qwQhnqCsI	Completa
+362	2026_11	11	SUSTANTIVA	Informe de impacto León XIV (Noviembre)	SL	1qv2yEfHbaOobwWLvoI03F7QratGK_6C4	Pendiente
+363	2026_11	11	PDM COMUNICACION	León XIV — La dimensión política de una visión pastoral	TEM	1rGEFu4v9P9OIAIvbZbKDfyNvIFnRFHYk	Pendiente
+364	2026_11	11	RADAR PUBLICO	Papa León XIV — conversación digital (Corte 11-09)	SL	1T2AugmKM8XeaW-9QGnL6vaLlcEfe9rFn	Pendiente
+365	2026_11	11	PDM COMUNICACION	Hacer Lugar (Noviembre)	TEM	1X9xo-MknM_JMBGqtFnAvVffLTV9EUpAX	Pendiente
+366	2026_11	11	LATINOBARÓMETRO	La Religión en América Latina 1995–2026	CONV	1UkvYhqmHu9dd-eSffoRxzUkUfW7RFvHx	Pendiente
+367	2026_11	11	CEPA	La Argentina que recibe al Papa (Noviembre)	TEM	1OQxQ7ckp7dLZA-vylA35ptQyDiVAQE8K	Pendiente
+368	2026_11	11	PDM COMUNICACION	El bien común (Noviembre)	TEM	1WJAb8do-srngEMWMrWSYO7WV9r7WVS3t	Pendiente
+369	2026_10	10	CIF (UTDT) / Poliarquía	Índice de Confianza del Consumidor — Octubre 2026	CONV	1uD_RKIA3E5i3Hm0WU6347wZ_A_rGrkEg	Completa
+370	No aplica (fuente secundaria)	9	INDEC	IPC Nacional — Septiembre 2026 [fuente secundaria: monitorargy.com]	TEM	No aplica (fuente secundaria)	Parcial
+371	No aplica (informe en línea; no descargado a Drive)	10	INDEC	IPC Nacional — Octubre 2026 (informe técnico, publicado 12/11/2026)	TEM	No aplica (informe en línea; no descargado a Drive)	Parcial

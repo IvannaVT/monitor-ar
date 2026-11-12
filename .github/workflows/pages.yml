@@ -15,13 +15,16 @@ jobs:
     steps:
       - uses: actions/checkout@v6
       - name: Comprobar contenido antes de publicar
-        run: python3 monitor_leg_build.py --check
+        run: |
+          python3 monitor_leg_build.py --check
+          python3 scripts/build_radar_data.py --check
+          python3 -m unittest discover -s tests -p 'test_radar_data.py'
       - name: Preparar sitio público
         if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
         run: |
           mkdir -p _site/data
           cp index.html monitor_ar.html monitor_leg.html radar_eeuu_2026.html _site/
-          cp data/indicadores.json _site/data/
+          cp data/indicadores.json data/radar_data.json _site/data/
       - uses: actions/upload-pages-artifact@v4
         if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
         with:

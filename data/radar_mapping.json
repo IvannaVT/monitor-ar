@@ -1,0 +1,2033 @@
+{
+  "_descripcion": "Especificación de qué fila de las bases alimenta cada celda del Radar. No contiene valores: build_radar_data.py los lee de data/bases/*.tsv (extractos de base_maestra_2026 y nivel2_indicadores). Las filas son números de fila de Google Sheets.",
+  "corte": {
+    "fecha": "2026-11-11",
+    "mes_parcial": "Nov-26",
+    "etiqueta": "Noviembre 2026 · corte parcial al 11/11/2026",
+    "base_publicada": "b43fcb8 (index.html publicado en ivannavt.github.io/monitor-ar)"
+  },
+  "extender_ejes": {
+    "MESI": {
+      "mes": "Nov-26",
+      "series": [
+        "ICC",
+        "ICG",
+        "ICC_CABA_13",
+        "ICC_INT_13",
+        "ICC_GBA_14"
+      ]
+    },
+    "MI": {
+      "mes": "Nov-26",
+      "grupos": [
+        "IMG"
+      ]
+    },
+    "MG": {
+      "mes": "Nov-26",
+      "grupos": [
+        "GESTION"
+      ]
+    },
+    "MV": {
+      "mes": "Nov-26",
+      "grupos": [
+        "CONS"
+      ]
+    }
+  },
+  "nuevas_series": {
+    "IMG.Analogías": {
+      "color": "var(--c6)",
+      "campos": [
+        "pos",
+        "neg"
+      ]
+    },
+    "IMG.Proyección": {
+      "color": "var(--c2)",
+      "campos": [
+        "pos",
+        "neg"
+      ]
+    },
+    "IMG.CELAG": {
+      "color": "var(--c7)",
+      "campos": [
+        "pos",
+        "neg"
+      ]
+    },
+    "IMG.QMonitor": {
+      "color": "var(--c8)",
+      "campos": [
+        "pos",
+        "neg"
+      ]
+    },
+    "IMG.Zentrix": {
+      "color": "var(--c9)",
+      "campos": [
+        "pos",
+        "neg"
+      ]
+    },
+    "IMG.Pulso Research": {
+      "color": "var(--warn)",
+      "campos": [
+        "pos",
+        "neg"
+      ]
+    },
+    "IMG.DC Consultores": {
+      "color": "var(--fg-dim)",
+      "campos": [
+        "pos",
+        "neg"
+      ]
+    },
+    "GESTION.Analogías": {
+      "color": "var(--c6)",
+      "campos": [
+        "aprob",
+        "desaprob"
+      ]
+    },
+    "GESTION.CELAG": {
+      "color": "var(--c7)",
+      "campos": [
+        "aprob",
+        "desaprob"
+      ]
+    },
+    "GESTION.QMonitor": {
+      "color": "var(--c8)",
+      "campos": [
+        "aprob",
+        "desaprob"
+      ]
+    },
+    "GESTION.AtlasIntel": {
+      "color": "var(--c9)",
+      "campos": [
+        "aprob",
+        "desaprob"
+      ]
+    },
+    "GESTION.M&F": {
+      "color": "var(--warn)",
+      "campos": [
+        "aprob",
+        "desaprob"
+      ]
+    },
+    "GESTION.Zentrix": {
+      "color": "var(--neu)",
+      "campos": [
+        "aprob",
+        "desaprob"
+      ]
+    },
+    "GESTION.RDT": {
+      "color": "var(--fg-dim)",
+      "campos": [
+        "aprob",
+        "desaprob"
+      ]
+    },
+    "GESTION.Pulso Research": {
+      "color": "var(--pos)",
+      "campos": [
+        "aprob",
+        "desaprob"
+      ]
+    },
+    "GESTION.D'Alessio": {
+      "color": "var(--c5)",
+      "campos": [
+        "aprob",
+        "desaprob"
+      ]
+    },
+    "CONS.QMonitor": {
+      "color": "var(--c8)",
+      "campos": [
+        "lla",
+        "pj"
+      ]
+    },
+    "CONS.Analogías": {
+      "color": "var(--c6)",
+      "campos": [
+        "lla",
+        "pj"
+      ]
+    },
+    "CONS.ESPOP": {
+      "color": "var(--c7)",
+      "campos": [
+        "lla",
+        "pj"
+      ]
+    },
+    "CONS.DC Consultores": {
+      "color": "var(--fg-dim)",
+      "campos": [
+        "lla",
+        "pj"
+      ]
+    }
+  },
+  "asignaciones": [
+    {
+      "modulo": "ICG",
+      "ruta": "ICG",
+      "eje": "MESI",
+      "fila": 1030
+    },
+    {
+      "modulo": "ICG",
+      "ruta": "ICG",
+      "eje": "MESI",
+      "fila": 1031
+    },
+    {
+      "modulo": "ICG",
+      "ruta": "ICG",
+      "eje": "MESI",
+      "fila": 1032
+    },
+    {
+      "modulo": "ICG",
+      "ruta": "ICG",
+      "eje": "MESI",
+      "fila": 1033
+    },
+    {
+      "modulo": "ICG",
+      "ruta": "ICG",
+      "eje": "MESI",
+      "fila": 1034
+    },
+    {
+      "modulo": "ICG",
+      "ruta": "ICG",
+      "eje": "MESI",
+      "fila": 1086
+    },
+    {
+      "modulo": "ICC",
+      "ruta": "ICC",
+      "eje": "MESI",
+      "fila": 1035
+    },
+    {
+      "modulo": "ICC",
+      "ruta": "ICC",
+      "eje": "MESI",
+      "fila": 1036
+    },
+    {
+      "modulo": "ICC",
+      "ruta": "ICC",
+      "eje": "MESI",
+      "fila": 1037
+    },
+    {
+      "modulo": "ICC",
+      "ruta": "ICC",
+      "eje": "MESI",
+      "fila": 1038
+    },
+    {
+      "modulo": "ICC",
+      "ruta": "ICC",
+      "eje": "MESI",
+      "fila": 1039
+    },
+    {
+      "modulo": "IPC Nación",
+      "ruta": "IPC",
+      "eje": "MIPC",
+      "fila": 1040
+    },
+    {
+      "modulo": "IPC Nación",
+      "ruta": "IPC",
+      "eje": "MIPC",
+      "fila": 1041
+    },
+    {
+      "modulo": "IPC Nación",
+      "ruta": "IPC",
+      "eje": "MIPC",
+      "fila": 1042
+    },
+    {
+      "modulo": "IPC Nación",
+      "ruta": "IPC",
+      "eje": "MIPC",
+      "fila": 1044
+    },
+    {
+      "modulo": "IPC Nación",
+      "ruta": "IPC_FULL",
+      "eje": "MINFL",
+      "fila": 1040
+    },
+    {
+      "modulo": "IPC Nación",
+      "ruta": "IPC_FULL",
+      "eje": "MINFL",
+      "fila": 1041
+    },
+    {
+      "modulo": "IPC Nación",
+      "ruta": "IPC_FULL",
+      "eje": "MINFL",
+      "fila": 1042
+    },
+    {
+      "modulo": "IPC Nación",
+      "ruta": "IPC_FULL",
+      "eje": "MINFL",
+      "fila": 1044
+    },
+    {
+      "modulo": "IPC Nación",
+      "ruta": "IPC_FULL",
+      "eje": "MINFL",
+      "fila": 1365,
+      "rotulo": "FUENTE SECUNDARIA · monitorargy.com · https://monitorargy.com/serie/ipc_mensual · consultado 2026-11-11 · fuente original: INDEC",
+      "nota": "Completado desde fuente secundaria; sin informe primario en Drive. Evidencia máxima MEDIA."
+    },
+    {
+      "modulo": "IPC Nación",
+      "ruta": "IPC",
+      "eje": "MIPC",
+      "fila": 1365,
+      "rotulo": "FUENTE SECUNDARIA · monitorargy.com · https://monitorargy.com/serie/ipc_mensual · consultado 2026-11-11 · fuente original: INDEC",
+      "nota": "Completado desde fuente secundaria; sin informe primario en Drive. Evidencia máxima MEDIA."
+    },
+    {
+      "modulo": "IPCBA CABA",
+      "ruta": "IPCBA_FULL",
+      "eje": "MINFL",
+      "fila": 1213
+    },
+    {
+      "modulo": "IPCBA CABA",
+      "ruta": "IPCBA_FULL",
+      "eje": "MINFL",
+      "fila": 1260
+    },
+    {
+      "modulo": "IPCBA CABA",
+      "ruta": "TIPCBA_VAR",
+      "eje": "TIPCBA_MES",
+      "fila": 1213
+    },
+    {
+      "modulo": "IPCBA CABA",
+      "ruta": "TIPCBA_VAR",
+      "eje": "TIPCBA_MES",
+      "fila": 1260
+    },
+    {
+      "modulo": "IPCBA CABA",
+      "ruta": "TIPCBA_IA",
+      "eje": "TIPCBA_MES",
+      "fila": 1214
+    },
+    {
+      "modulo": "IPCBA CABA",
+      "ruta": "TIPCBA_IA",
+      "eje": "TIPCBA_MES",
+      "fila": 1261
+    },
+    {
+      "modulo": "IPCBA CABA",
+      "ruta": "TIPCBA_ACUM",
+      "eje": "TIPCBA_MES",
+      "fila": 1215
+    },
+    {
+      "modulo": "IPCBA CABA",
+      "ruta": "TIPCBA_ACUM",
+      "eje": "TIPCBA_MES",
+      "fila": 1262
+    },
+    {
+      "modulo": "IPCBA CABA",
+      "ruta": "TIPCBA_BIENES",
+      "eje": "TIPCBA_MES",
+      "fila": 1264
+    },
+    {
+      "modulo": "IPCBA CABA",
+      "ruta": "TIPCBA_SERV",
+      "eje": "TIPCBA_MES",
+      "fila": 1265
+    },
+    {
+      "modulo": "IPCBA CABA",
+      "ruta": "TIPCBA_ESTAC",
+      "eje": "TIPCBA_MES",
+      "fila": 1266
+    },
+    {
+      "modulo": "IPCBA CABA",
+      "ruta": "TIPCBA_REG",
+      "eje": "TIPCBA_MES",
+      "fila": 1267
+    },
+    {
+      "modulo": "IPCBA CABA",
+      "ruta": "IPCBA_ACUM_FULL",
+      "eje": "MIPCACUM",
+      "fila": 1215
+    },
+    {
+      "modulo": "IPCBA CABA",
+      "ruta": "IPCBA_ACUM_FULL",
+      "eje": "MIPCACUM",
+      "fila": 1262
+    },
+    {
+      "modulo": "IPCBA CABA",
+      "ruta": "IPCBA_ACUM_9",
+      "eje": "MIPCACUM",
+      "fila": 1215
+    },
+    {
+      "modulo": "IPCBA CABA",
+      "ruta": "IPCBA_ACUM_9",
+      "eje": "MIPCACUM",
+      "fila": 1262
+    },
+    {
+      "modulo": "IPCBA CABA",
+      "ruta": "IPCBA_IA_9",
+      "eje": "MIPCACUM",
+      "fila": 1214
+    },
+    {
+      "modulo": "IPCBA CABA",
+      "ruta": "IPCBA_IA_9",
+      "eje": "MIPCACUM",
+      "fila": 1261
+    },
+    {
+      "modulo": "Imagen Milei",
+      "ruta": "IMG.Zuban.pos",
+      "eje": "MI",
+      "fila": 1114
+    },
+    {
+      "modulo": "Imagen Milei",
+      "ruta": "IMG.Zuban.neg",
+      "eje": "MI",
+      "fila": 1115
+    },
+    {
+      "modulo": "Imagen Milei",
+      "ruta": "IMG.Analogías.pos",
+      "eje": "MI",
+      "fila": 1092
+    },
+    {
+      "modulo": "Imagen Milei",
+      "ruta": "IMG.Analogías.neg",
+      "eje": "MI",
+      "fila": 1093
+    },
+    {
+      "modulo": "Imagen Milei",
+      "ruta": "IMG.Proyección.pos",
+      "eje": "MI",
+      "fila": 1138
+    },
+    {
+      "modulo": "Imagen Milei",
+      "ruta": "IMG.Proyección.neg",
+      "eje": "MI",
+      "fila": 1139
+    },
+    {
+      "modulo": "Imagen Milei",
+      "ruta": "IMG.CELAG.pos",
+      "eje": "MI",
+      "fila": 1152
+    },
+    {
+      "modulo": "Imagen Milei",
+      "ruta": "IMG.CELAG.neg",
+      "eje": "MI",
+      "fila": 1231
+    },
+    {
+      "modulo": "Imagen Milei",
+      "ruta": "IMG.QMonitor.pos",
+      "eje": "MI",
+      "fila": 1182
+    },
+    {
+      "modulo": "Imagen Milei",
+      "ruta": "IMG.QMonitor.neg",
+      "eje": "MI",
+      "fila": 1183
+    },
+    {
+      "modulo": "Imagen Milei",
+      "ruta": "IMG.Giacobbe.neg",
+      "eje": "MI",
+      "fila": 1206
+    },
+    {
+      "modulo": "Imagen Milei",
+      "ruta": "IMG.Giacobbe.pos",
+      "eje": "MI",
+      "fila_n1": 321,
+      "mes": "Oct-26",
+      "texto": "Pos 36%",
+      "valor_texto": "36"
+    },
+    {
+      "modulo": "Imagen Milei",
+      "ruta": "IMG.Zentrix.pos",
+      "eje": "MI",
+      "fila": 1240
+    },
+    {
+      "modulo": "Imagen Milei",
+      "ruta": "IMG.Pulso Research.pos",
+      "eje": "MI",
+      "fila": 1247
+    },
+    {
+      "modulo": "Imagen Milei",
+      "ruta": "IMG.DC Consultores.pos",
+      "eje": "MI",
+      "fila": 1337,
+      "nota": "muestreo no probabilístico; comparabilidad BAJA"
+    },
+    {
+      "modulo": "Imagen Milei",
+      "ruta": "IMG.DC Consultores.neg",
+      "eje": "MI",
+      "fila": 1364,
+      "nota": "muestreo no probabilístico; comparabilidad BAJA. Relevada visualmente de la lámina 12 (pág. 19)."
+    },
+    {
+      "modulo": "Imagen Milei",
+      "ruta": "IMG.D'Alessio.pos",
+      "eje": "MI",
+      "fila": 1170
+    },
+    {
+      "modulo": "Gestión nacional",
+      "ruta": "GESTION.Zuban.aprob",
+      "eje": "MG",
+      "fila": 1112
+    },
+    {
+      "modulo": "Gestión nacional",
+      "ruta": "GESTION.Zuban.desaprob",
+      "eje": "MG",
+      "fila": 1113
+    },
+    {
+      "modulo": "Gestión nacional",
+      "ruta": "GESTION.Analogías.aprob",
+      "eje": "MG",
+      "fila": 1094,
+      "nota": "calificación 4–5 sobre escala 1–5; no es aprueba/desaprueba"
+    },
+    {
+      "modulo": "Gestión nacional",
+      "ruta": "GESTION.Analogías.desaprob",
+      "eje": "MG",
+      "fila": 1095,
+      "nota": "calificación 1–2 sobre escala 1–5"
+    },
+    {
+      "modulo": "Gestión nacional",
+      "ruta": "GESTION.CELAG.aprob",
+      "eje": "MG",
+      "fila": 1150,
+      "nota": "positiva incluye «regular bien»"
+    },
+    {
+      "modulo": "Gestión nacional",
+      "ruta": "GESTION.CELAG.desaprob",
+      "eje": "MG",
+      "fila": 1229
+    },
+    {
+      "modulo": "Gestión nacional",
+      "ruta": "GESTION.QMonitor.aprob",
+      "eje": "MG",
+      "fila": 1217
+    },
+    {
+      "modulo": "Gestión nacional",
+      "ruta": "GESTION.QMonitor.desaprob",
+      "eje": "MG",
+      "fila": 1218
+    },
+    {
+      "modulo": "Gestión nacional",
+      "ruta": "GESTION.AtlasIntel.aprob",
+      "eje": "MG",
+      "fila": 1204,
+      "nota": "sin PDF en Drive (rescatado de portal)"
+    },
+    {
+      "modulo": "Gestión nacional",
+      "ruta": "GESTION.AtlasIntel.desaprob",
+      "eje": "MG",
+      "fila": 1203,
+      "nota": "sin PDF en Drive (rescatado de portal)"
+    },
+    {
+      "modulo": "Gestión nacional",
+      "ruta": "GESTION.M&F.desaprob",
+      "eje": "MG",
+      "fila": 1205,
+      "nota": "mes 10 según la base: se aplica la fecha indicada por el informe/publicación de la consultora (criterio confirmado 11/11); campo en septiembre"
+    },
+    {
+      "modulo": "Gestión nacional",
+      "ruta": "GESTION.M&F.aprob",
+      "eje": "MG",
+      "fila_n1": 320,
+      "mes": "Oct-26",
+      "texto": "Pos 36,6%",
+      "valor_texto": "36,6",
+      "nota": "sin fila N2; valor citado en resultados_clave de N1 (mes 10 según la base)"
+    },
+    {
+      "modulo": "Gestión nacional",
+      "ruta": "GESTION.Zentrix.aprob",
+      "eje": "MG",
+      "fila": 1239
+    },
+    {
+      "modulo": "Gestión nacional",
+      "ruta": "GESTION.RDT.aprob",
+      "eje": "MG",
+      "fila": 1243,
+      "nota": "«adhesión al rumbo»"
+    },
+    {
+      "modulo": "Gestión nacional",
+      "ruta": "GESTION.Pulso Research.aprob",
+      "eje": "MG",
+      "fila": 1246
+    },
+    {
+      "modulo": "Gestión nacional",
+      "ruta": "GESTION.Proyección.desaprob",
+      "eje": "MG",
+      "fila": 1128,
+      "nota": "malo + muy malo (ICP); positiva de oct no cargada en N2"
+    },
+    {
+      "modulo": "Gestión nacional",
+      "ruta": "GESTION.D'Alessio.aprob",
+      "eje": "MG",
+      "fila": 1164
+    },
+    {
+      "modulo": "Gestión nacional",
+      "ruta": "GESTION.D'Alessio.desaprob",
+      "eje": "MG",
+      "fila": 1165
+    },
+    {
+      "modulo": "Intención de voto",
+      "ruta": "CONS.Zuban.lla",
+      "eje": "MV",
+      "fila": 1125
+    },
+    {
+      "modulo": "Intención de voto",
+      "ruta": "CONS.Zuban.pj",
+      "eje": "MV",
+      "fila": 1124
+    },
+    {
+      "modulo": "Intención de voto",
+      "ruta": "CONS.Eq. Mide.lla",
+      "eje": "MV",
+      "fila": 1210,
+      "nota": "mes 10 según la base: se aplica la fecha indicada por el informe/publicación de la consultora (criterio confirmado 11/11); campo en septiembre"
+    },
+    {
+      "modulo": "Intención de voto",
+      "ruta": "CONS.Eq. Mide.pj",
+      "eje": "MV",
+      "fila_n1": 324,
+      "mes": "Oct-26",
+      "texto": "PJ 33%",
+      "valor_texto": "33",
+      "nota": "sin fila N2; valor citado en resultados_clave de N1 (mes 10 según la base)"
+    },
+    {
+      "modulo": "Intención de voto",
+      "ruta": "CONS.Synopsis.lla",
+      "eje": "MV",
+      "fila": 1208,
+      "nota": "mes 10 según la base: se aplica la fecha indicada por el informe/publicación de la consultora (criterio confirmado 11/11); campo en septiembre"
+    },
+    {
+      "modulo": "Intención de voto",
+      "ruta": "CONS.Synopsis.pj",
+      "eje": "MV",
+      "fila_n1": 323,
+      "mes": "Oct-26",
+      "texto": "PJ 32,7%",
+      "valor_texto": "32,7",
+      "nota": "sin fila N2; valor citado en resultados_clave de N1 (mes 10 según la base)"
+    },
+    {
+      "modulo": "ICC",
+      "ruta": "ICC",
+      "eje": "MESI",
+      "fila": 1345
+    },
+    {
+      "modulo": "ICC",
+      "ruta": "ICC_CABA_13",
+      "eje": "MESI",
+      "fila": 1346
+    },
+    {
+      "modulo": "ICC",
+      "ruta": "ICC_GBA_14",
+      "eje": "MESI",
+      "fila": 1347
+    },
+    {
+      "modulo": "ICC",
+      "ruta": "ICC_INT_13",
+      "eje": "MESI",
+      "fila": 1348
+    },
+    {
+      "modulo": "Gestión nacional",
+      "ruta": "GESTION.QMonitor.aprob",
+      "eje": "MG",
+      "fila": 1351,
+      "nota": "valor leído del gráfico (p. 13); campo 8–26 oct, informe noviembre"
+    },
+    {
+      "modulo": "Gestión nacional",
+      "ruta": "GESTION.QMonitor.desaprob",
+      "eje": "MG",
+      "fila": 1352,
+      "nota": "valor leído del gráfico (p. 13)"
+    },
+    {
+      "modulo": "Imagen Milei",
+      "ruta": "IMG.QMonitor.pos",
+      "eje": "MI",
+      "fila": 1353,
+      "nota": "valor leído del gráfico (p. 25)"
+    },
+    {
+      "modulo": "Imagen Milei",
+      "ruta": "IMG.QMonitor.neg",
+      "eje": "MI",
+      "fila": 1354,
+      "nota": "valor leído del gráfico (p. 25)"
+    },
+    {
+      "modulo": "Intención de voto",
+      "ruta": "CONS.QMonitor.lla",
+      "eje": "MV",
+      "fila": 1199,
+      "nota": "línea propia de la consultora; ver serie de evolución para comparabilidad"
+    },
+    {
+      "modulo": "Intención de voto",
+      "ruta": "CONS.QMonitor.pj",
+      "eje": "MV",
+      "fila": 1198,
+      "nota": "línea propia de la consultora; ver serie de evolución para comparabilidad"
+    },
+    {
+      "modulo": "Intención de voto",
+      "ruta": "CONS.QMonitor.lla",
+      "eje": "MV",
+      "fila": 1361,
+      "nota": "línea propia de la consultora; ver serie de evolución para comparabilidad"
+    },
+    {
+      "modulo": "Intención de voto",
+      "ruta": "CONS.QMonitor.pj",
+      "eje": "MV",
+      "fila": 1362,
+      "nota": "línea propia de la consultora; ver serie de evolución para comparabilidad"
+    },
+    {
+      "modulo": "Intención de voto",
+      "ruta": "CONS.Analogías.lla",
+      "eje": "MV",
+      "fila": 1110,
+      "nota": "línea propia de la consultora; ver serie de evolución para comparabilidad"
+    },
+    {
+      "modulo": "Intención de voto",
+      "ruta": "CONS.Analogías.pj",
+      "eje": "MV",
+      "fila": 1109,
+      "nota": "línea propia de la consultora; ver serie de evolución para comparabilidad"
+    },
+    {
+      "modulo": "Intención de voto",
+      "ruta": "CONS.ESPOP.lla",
+      "eje": "MV",
+      "fila": 1207,
+      "nota": "línea propia de la consultora; ver serie de evolución para comparabilidad"
+    },
+    {
+      "modulo": "Intención de voto",
+      "ruta": "CONS.DC Consultores.lla",
+      "eje": "MV",
+      "fila": 1333,
+      "nota": "línea propia de la consultora; ver serie de evolución para comparabilidad"
+    },
+    {
+      "modulo": "Intención de voto",
+      "ruta": "CONS.DC Consultores.pj",
+      "eje": "MV",
+      "fila": 1334,
+      "nota": "línea propia de la consultora; ver serie de evolución para comparabilidad"
+    },
+    {
+      "modulo": "ICC",
+      "ruta": "ICC_CABA_13",
+      "eje": "MESI",
+      "fila": 1371,
+      "mes_etiqueta": "Oct-25"
+    },
+    {
+      "modulo": "ICC",
+      "ruta": "ICC_CABA_13",
+      "eje": "MESI",
+      "fila": 825
+    },
+    {
+      "modulo": "ICC",
+      "ruta": "ICC_CABA_13",
+      "eje": "MESI",
+      "fila": 831
+    },
+    {
+      "modulo": "ICC",
+      "ruta": "ICC_CABA_13",
+      "eje": "MESI",
+      "fila": 1366
+    },
+    {
+      "modulo": "ICC",
+      "ruta": "ICC_GBA_14",
+      "eje": "MESI",
+      "fila": 1372,
+      "mes_etiqueta": "Oct-25"
+    },
+    {
+      "modulo": "ICC",
+      "ruta": "ICC_GBA_14",
+      "eje": "MESI",
+      "fila": 826
+    },
+    {
+      "modulo": "ICC",
+      "ruta": "ICC_GBA_14",
+      "eje": "MESI",
+      "fila": 832
+    },
+    {
+      "modulo": "ICC",
+      "ruta": "ICC_GBA_14",
+      "eje": "MESI",
+      "fila": 1367
+    },
+    {
+      "modulo": "ICC",
+      "ruta": "ICC_INT_13",
+      "eje": "MESI",
+      "fila": 1373,
+      "mes_etiqueta": "Oct-25"
+    },
+    {
+      "modulo": "ICC",
+      "ruta": "ICC_INT_13",
+      "eje": "MESI",
+      "fila": 827
+    },
+    {
+      "modulo": "ICC",
+      "ruta": "ICC_INT_13",
+      "eje": "MESI",
+      "fila": 833
+    },
+    {
+      "modulo": "ICC",
+      "ruta": "ICC_INT_13",
+      "eje": "MESI",
+      "fila": 1368
+    },
+    {
+      "modulo": "IPC Nación",
+      "ruta": "IPC_IA_9",
+      "eje": "MIPCACUM",
+      "fila": 1376
+    },
+    {
+      "modulo": "IPC Nación",
+      "ruta": "IPC_IA_9",
+      "eje": "MIPCACUM",
+      "fila": 1377
+    },
+    {
+      "modulo": "IPC Nación",
+      "ruta": "IPC_IA_9",
+      "eje": "MIPCACUM",
+      "fila": 1378
+    },
+    {
+      "modulo": "IPC Nación",
+      "ruta": "IPC_IA_9",
+      "eje": "MIPCACUM",
+      "fila": 1379
+    },
+    {
+      "modulo": "IPC Nación",
+      "ruta": "IPC",
+      "eje": "MIPC",
+      "fila": 1384
+    },
+    {
+      "modulo": "IPC Nación",
+      "ruta": "IPC_FULL",
+      "eje": "MINFL",
+      "fila": 1384
+    },
+    {
+      "modulo": "IPC Nación",
+      "ruta": "IPC_IA",
+      "eje": "MIIA",
+      "fila": 1385,
+      "rotulo": "FUENTE SECUNDARIA · monitorargy.com · https://monitorargy.com/mcp (obtener_serie, id ipc_interanual) · consultado 2026-11-12 · fuente original: INDEC"
+    },
+    {
+      "modulo": "IPC Nación",
+      "ruta": "IPC_IA_9",
+      "eje": "MIPCACUM",
+      "fila": 1385,
+      "rotulo": "FUENTE SECUNDARIA · monitorargy.com · https://monitorargy.com/mcp (obtener_serie, id ipc_interanual) · consultado 2026-11-12 · fuente original: INDEC"
+    },
+    {
+      "modulo": "IPC Nación",
+      "ruta": "IPC_ACUM",
+      "eje": "MIPCACUM",
+      "fila": 1386,
+      "rotulo": "FUENTE SECUNDARIA · monitorargy.com · https://monitorargy.com/mcp (obtener_serie, id ipc_nivel_general) · consultado 2026-11-12 · fuente original: INDEC · acumulado calculado sobre el nivel general"
+    }
+  ],
+  "retiros": [],
+  "correcciones_documentadas": [
+    {
+      "modulo": "Gestión nacional",
+      "ruta": "GESTION.Isasi.aprob",
+      "eje": "MG",
+      "mes": "Ago-26",
+      "valor": 42,
+      "fuente": "data/indicadores.json · _trazabilidad_correcciones ISASI_GESTION_2026_08 (Drive 1Phw7mb5Dy9q7of8G-5wbfxUqy2lwxKgT, p. 3)",
+      "motivo": "El index.html publicado mostraba 48/42 invertido respecto de la corrección del 26/10 (42 aprueba / 48 desaprueba / 10 NS)."
+    },
+    {
+      "modulo": "Gestión nacional",
+      "ruta": "GESTION.Isasi.desaprob",
+      "eje": "MG",
+      "mes": "Ago-26",
+      "valor": 48,
+      "fuente": "ídem",
+      "motivo": "ídem"
+    },
+    {
+      "modulo": "Gestión nacional",
+      "ruta": "CROSS.gestAprob.data",
+      "eje": "CROSS_MES",
+      "mes": "Ago-26",
+      "valor": 42,
+      "fuente": "ídem",
+      "motivo": "ídem"
+    },
+    {
+      "modulo": "Gestión nacional",
+      "ruta": "CROSS.gestDesaprob.data",
+      "eje": "CROSS_MES",
+      "mes": "Ago-26",
+      "valor": 48,
+      "fuente": "ídem",
+      "motivo": "ídem"
+    }
+  ],
+  "pendientes": [
+    {
+      "modulo": "Agenda pública",
+      "mes": "Nov-26",
+      "texto": "Sin mediciones nacionales con fila en nivel 2.",
+      "necesita": "—"
+    },
+    {
+      "modulo": "Gestión nacional",
+      "mes": "Oct-26",
+      "texto": "Proyección octubre: solo la valoración negativa (52,4%) está en N2.",
+      "necesita": "cargar la positiva del ICP de octubre"
+    },
+    {
+      "modulo": "Imagen Milei",
+      "mes": "Oct-26",
+      "texto": "CB Global Data octubre (ranking LATAM): valor en gráfico, no extraíble.",
+      "necesita": "relevar a mano (N2 fila 1177)"
+    },
+    {
+      "modulo": "Conversación digital",
+      "mes": "Nov-26",
+      "texto": "Sustantiva (León XIV) y Radar Público (conversación digital) registrados sin relevar.",
+      "necesita": "lectura de los PDF (N1 filas 362 y 364)"
+    },
+    {
+      "modulo": "Territorio",
+      "mes": "Nov-26",
+      "texto": "Solo CB Global Data GBA (24 intendentes).",
+      "necesita": "—"
+    },
+    {
+      "modulo": "Intención de voto",
+      "mes": "Nov-26",
+      "texto": "QMonitor noviembre: balotaje y pisos/techos no relevados todavía.",
+      "necesita": "lectura de las pp. 47–55 del PDF"
+    },
+    {
+      "modulo": "Intención de voto",
+      "mes": "Oct-26",
+      "texto": "Synopsis, ola con campo 12–17/10 (difundida 31/10): Peronismo 35 / LLA 33,6, localizada en encuestas-argentinas.com (registro https://x.com/_EncuestAR_/status/2116669248479047801, consultado 2026-11-11). Candidato pendiente: no hay informe en Drive ni enlace al original, y no se puede acreditar pregunta ni mes enunciado por Synopsis. No se carga y no reemplaza la ola 8–15/9 que hoy ocupa oct-26 (N2 fila 1208).",
+      "necesita": "informe original de Synopsis de esa ola, para fijar el mes que enuncia"
+    }
+  ],
+  "secciones_cobertura": [
+    "IPC Nación",
+    "IPCBA CABA",
+    "ICC",
+    "ICG",
+    "Gestión nacional",
+    "Imagen Milei",
+    "Imagen otros dirigentes",
+    "Intención de voto",
+    "Economía percibida",
+    "Expectativas",
+    "Clima / rumbo",
+    "Agenda pública",
+    "Conversación digital",
+    "Territorio"
+  ],
+  "evolucion": [
+    {
+      "tab": "voto",
+      "modulo": "Intención de voto",
+      "titulo": "Intención de voto · series por consultora (no se promedian entre consultoras)",
+      "filas": [
+        {
+          "etiqueta": "Proyección · voto por espacio · LLA",
+          "consultora": "Proyección",
+          "celdas": [
+            {
+              "fila": 1211
+            }
+          ],
+          "nota": "pregunta distinta del candidato nominal de la serie: no se encadena"
+        },
+        {
+          "etiqueta": "Proyección · candidato · Milei",
+          "consultora": "Proyección",
+          "celdas": [
+            {
+              "fila": 1142
+            }
+          ],
+          "nota": ""
+        },
+        {
+          "etiqueta": "Proyección · candidato · Kicillof",
+          "consultora": "Proyección",
+          "celdas": [
+            {
+              "fila": 1143
+            }
+          ],
+          "nota": ""
+        },
+        {
+          "etiqueta": "Analogías · escenario I · Milei/LLA",
+          "consultora": "Analogías",
+          "celdas": [
+            {
+              "fila": 1110
+            }
+          ],
+          "nota": ""
+        },
+        {
+          "etiqueta": "Analogías · escenario I · Peronismo Unido",
+          "consultora": "Analogías",
+          "celdas": [
+            {
+              "fila": 1109
+            }
+          ],
+          "nota": ""
+        },
+        {
+          "etiqueta": "ESPOP (UdeSA) · espacio · LLA",
+          "consultora": "ESPOP (UdeSA)",
+          "celdas": [
+            {
+              "fila": 1207
+            }
+          ],
+          "nota": "21% NS; panel online"
+        },
+        {
+          "etiqueta": "ESPOP (UdeSA) · espacio · PJ",
+          "consultora": "ESPOP (UdeSA)",
+          "celdas": [
+            {
+              "fila_n1": 322,
+              "mes": "Oct-26",
+              "texto": "PJ 24%",
+              "valor_texto": "24"
+            }
+          ],
+          "nota": ""
+        },
+        {
+          "etiqueta": "RDT · primera vuelta · Milei",
+          "consultora": "RDT",
+          "celdas": [
+            {
+              "fila": 1244
+            }
+          ],
+          "nota": ""
+        },
+        {
+          "etiqueta": "DC Consultores · espacio · LLA",
+          "consultora": "DC Consultores",
+          "celdas": [
+            {
+              "fila": 1333
+            }
+          ],
+          "nota": "NO COMPARABLE: separa Peronismo y Kirchnerismo; muestreo no probabilístico"
+        },
+        {
+          "etiqueta": "DC Consultores · espacio · Peronismo",
+          "consultora": "DC Consultores",
+          "celdas": [
+            {
+              "fila": 1334
+            }
+          ],
+          "nota": ""
+        },
+        {
+          "etiqueta": "QMonitor · espacio · LLA",
+          "consultora": "QMonitor",
+          "celdas": [
+            {
+              "fila": 1199
+            },
+            {
+              "fila": 1361
+            }
+          ],
+          "nota": "oct: el informe agrupa Peronismo; nov: separa Peronismo y Kirchnerismo (14%) — comparabilidad BAJA entre ambos cortes",
+          "evidencia": "BAJA"
+        },
+        {
+          "etiqueta": "QMonitor · espacio · Peronismo",
+          "consultora": "QMonitor",
+          "celdas": [
+            {
+              "fila": 1198
+            },
+            {
+              "fila": 1362
+            }
+          ],
+          "nota": "oct: el informe agrupa Peronismo; nov: separa Peronismo y Kirchnerismo (14%) — comparabilidad BAJA entre ambos cortes",
+          "evidencia": "BAJA"
+        },
+        {
+          "etiqueta": "QMonitor · espacio · Kirchnerismo",
+          "consultora": "QMonitor",
+          "celdas": [
+            {
+              "fila": 1363
+            }
+          ],
+          "nota": ""
+        }
+      ]
+    },
+    {
+      "tab": "agenda",
+      "modulo": "Agenda pública",
+      "titulo": "Agenda pública · problema principal por consultora",
+      "filas": [
+        {
+          "etiqueta": "Proyección · bajos ingresos",
+          "consultora": "Proyección",
+          "celdas": [
+            {
+              "fila": 1133
+            }
+          ],
+          "nota": "respuesta múltiple (hasta 3)"
+        },
+        {
+          "etiqueta": "Proyección · inseguridad",
+          "consultora": "Proyección",
+          "celdas": [
+            {
+              "fila": 1134
+            }
+          ],
+          "nota": ""
+        },
+        {
+          "etiqueta": "Proyección · inflación",
+          "consultora": "Proyección",
+          "celdas": [
+            {
+              "fila": 1135
+            }
+          ],
+          "nota": ""
+        },
+        {
+          "etiqueta": "Proyección · corrupción",
+          "consultora": "Proyección",
+          "celdas": [
+            {
+              "fila": 1136
+            }
+          ],
+          "nota": ""
+        },
+        {
+          "etiqueta": "Proyección · desempleo",
+          "consultora": "Proyección",
+          "celdas": [
+            {
+              "fila": 1137
+            }
+          ],
+          "nota": ""
+        },
+        {
+          "etiqueta": "CELAG · economía del día a día",
+          "consultora": "CELAG",
+          "celdas": [
+            {
+              "fila": 1145
+            }
+          ],
+          "nota": "respuesta única guiada"
+        },
+        {
+          "etiqueta": "CELAG · inseguridad",
+          "consultora": "CELAG",
+          "celdas": [
+            {
+              "fila": 1146
+            }
+          ],
+          "nota": ""
+        },
+        {
+          "etiqueta": "D'Alessio · costo de servicios públicos",
+          "consultora": "D'Alessio",
+          "celdas": [
+            {
+              "fila": 1166
+            }
+          ],
+          "nota": "respuesta múltiple; rotulado septiembre, campo 6–7 oct"
+        },
+        {
+          "etiqueta": "D'Alessio · incertidumbre económica",
+          "consultora": "D'Alessio",
+          "celdas": [
+            {
+              "fila": 1167
+            }
+          ],
+          "nota": ""
+        },
+        {
+          "etiqueta": "D'Alessio · inseguridad",
+          "consultora": "D'Alessio",
+          "celdas": [
+            {
+              "fila": 1168
+            }
+          ],
+          "nota": ""
+        },
+        {
+          "etiqueta": "D'Alessio · inflación",
+          "consultora": "D'Alessio",
+          "celdas": [
+            {
+              "fila": 1169
+            }
+          ],
+          "nota": ""
+        }
+      ]
+    },
+    {
+      "tab": "indicadores",
+      "modulo": "Economía percibida",
+      "titulo": "Economía percibida · series por consultora",
+      "filas": [
+        {
+          "etiqueta": "D'Alessio · economía país peor que hace un año",
+          "consultora": "D'Alessio",
+          "celdas": [
+            {
+              "fila": 1161
+            }
+          ],
+          "nota": ""
+        },
+        {
+          "etiqueta": "D'Alessio · economía personal peor que hace un año",
+          "consultora": "D'Alessio",
+          "celdas": [
+            {
+              "fila": 1163
+            }
+          ],
+          "nota": ""
+        },
+        {
+          "etiqueta": "Pulso Research · la economía está en recesión",
+          "consultora": "Pulso Research",
+          "celdas": [
+            {
+              "fila": 1248
+            }
+          ],
+          "nota": ""
+        },
+        {
+          "etiqueta": "CIF/UTDT · ICC subíndice Condiciones presentes",
+          "consultora": "CIF/UTDT",
+          "celdas": [
+            {
+              "fila": 1375,
+              "mes_etiqueta": "Oct-25"
+            },
+            {
+              "fila": 1370
+            },
+            {
+              "fila": 835
+            },
+            {
+              "fila": 829
+            },
+            {
+              "fila": 1349
+            }
+          ],
+          "nota": ""
+        },
+        {
+          "etiqueta": "QMonitor · economía del país: positiva",
+          "consultora": "QMonitor",
+          "celdas": [
+            {
+              "fila": 1189
+            },
+            {
+              "fila": 1359
+            }
+          ],
+          "nota": "oct: campo 5–28/9 · nov: campo 8–26/10 (mes enunciado por QMonitor)"
+        },
+        {
+          "etiqueta": "QMonitor · economía del país: negativa",
+          "consultora": "QMonitor",
+          "celdas": [
+            {
+              "fila": 1190
+            },
+            {
+              "fila": 1360
+            }
+          ],
+          "nota": "oct: campo 5–28/9 · nov: campo 8–26/10 (mes enunciado por QMonitor)"
+        }
+      ]
+    },
+    {
+      "tab": "indicadores",
+      "modulo": "Expectativas",
+      "titulo": "Expectativas · series por consultora",
+      "filas": [
+        {
+          "etiqueta": "D'Alessio · expectativa país 12 meses: peor",
+          "consultora": "D'Alessio",
+          "celdas": [
+            {
+              "fila": 1162
+            }
+          ],
+          "nota": ""
+        },
+        {
+          "etiqueta": "CIF/UTDT · inflación esperada 12 meses (promedio)",
+          "consultora": "CIF/UTDT",
+          "celdas": [
+            {
+              "fila": 1225
+            }
+          ],
+          "nota": "CONV; no se compara con el IPC medido"
+        },
+        {
+          "etiqueta": "CIF/UTDT · ICC subíndice Expectativas futuras",
+          "consultora": "CIF/UTDT",
+          "celdas": [
+            {
+              "fila": 1374,
+              "mes_etiqueta": "Oct-25"
+            },
+            {
+              "fila": 1369
+            },
+            {
+              "fila": 834
+            },
+            {
+              "fila": 828
+            },
+            {
+              "fila": 1350
+            }
+          ],
+          "nota": ""
+        }
+      ]
+    },
+    {
+      "tab": "indicadores",
+      "modulo": "Clima / rumbo",
+      "titulo": "Clima / rumbo del país",
+      "filas": [
+        {
+          "etiqueta": "DC Consultores · el país va por el camino correcto",
+          "consultora": "DC Consultores",
+          "celdas": [
+            {
+              "fila": 1330
+            }
+          ],
+          "nota": ""
+        },
+        {
+          "etiqueta": "DC Consultores · por el camino que se puede",
+          "consultora": "DC Consultores",
+          "celdas": [
+            {
+              "fila": 1331
+            }
+          ],
+          "nota": ""
+        },
+        {
+          "etiqueta": "DC Consultores · por el camino incorrecto",
+          "consultora": "DC Consultores",
+          "celdas": [
+            {
+              "fila": 1332
+            }
+          ],
+          "nota": ""
+        }
+      ]
+    },
+    {
+      "tab": "imagen",
+      "modulo": "Imagen otros dirigentes",
+      "titulo": "Imagen de otros dirigentes · series por consultora",
+      "filas": [
+        {
+          "etiqueta": "DC Consultores · Bullrich positiva",
+          "consultora": "DC Consultores",
+          "celdas": [
+            {
+              "fila": 1336
+            }
+          ],
+          "nota": "solo positiva"
+        },
+        {
+          "etiqueta": "QMonitor · CFK positiva",
+          "consultora": "QMonitor",
+          "celdas": [
+            {
+              "fila": 1184
+            },
+            {
+              "fila": 1355
+            }
+          ],
+          "nota": "oct: campo 5–28/9 · nov: campo 8–26/10"
+        },
+        {
+          "etiqueta": "QMonitor · CFK negativa",
+          "consultora": "QMonitor",
+          "celdas": [
+            {
+              "fila": 1356
+            }
+          ],
+          "nota": ""
+        },
+        {
+          "etiqueta": "QMonitor · Bullrich positiva",
+          "consultora": "QMonitor",
+          "celdas": [
+            {
+              "fila": 1185
+            },
+            {
+              "fila": 1357
+            }
+          ],
+          "nota": "oct: campo 5–28/9 · nov: campo 8–26/10"
+        },
+        {
+          "etiqueta": "QMonitor · Kicillof positiva",
+          "consultora": "QMonitor",
+          "celdas": [
+            {
+              "fila": 1186
+            },
+            {
+              "fila": 1358
+            }
+          ],
+          "nota": "oct: campo 5–28/9 · nov: campo 8–26/10"
+        }
+      ]
+    },
+    {
+      "tab": "sl",
+      "modulo": "Conversación digital",
+      "titulo": "Conversación digital (SL) · no comparable con encuestas",
+      "filas": [
+        {
+          "etiqueta": "Reputación Digital · publicaciones sobre Milei (5/9–4/11)",
+          "consultora": "Reputación Digital",
+          "celdas": [
+            {
+              "fila": 1292
+            }
+          ],
+          "nota": "ventana de 61 días; 96% X"
+        },
+        {
+          "etiqueta": "Reputación Digital · tono negativo (total)",
+          "consultora": "Reputación Digital",
+          "celdas": [
+            {
+              "fila": 1293
+            }
+          ],
+          "nota": ""
+        },
+        {
+          "etiqueta": "Reputación Digital · tono positivo (total)",
+          "consultora": "Reputación Digital",
+          "celdas": [
+            {
+              "fila": 1294
+            }
+          ],
+          "nota": ""
+        },
+        {
+          "etiqueta": "Reputación Digital · tono negativo (cuentas reales)",
+          "consultora": "Reputación Digital",
+          "celdas": [
+            {
+              "fila": 1296
+            }
+          ],
+          "nota": ""
+        },
+        {
+          "etiqueta": "Reputación Digital · tono positivo (cuentas reales)",
+          "consultora": "Reputación Digital",
+          "celdas": [
+            {
+              "fila": 1297
+            }
+          ],
+          "nota": ""
+        },
+        {
+          "etiqueta": "Reputación Digital · participación de Milei en la conversación política",
+          "consultora": "Reputación Digital",
+          "celdas": [
+            {
+              "fila": 1299
+            }
+          ],
+          "nota": ""
+        },
+        {
+          "etiqueta": "Reputación Digital · menciones sobre Bullrich (1/7–5/10)",
+          "consultora": "Reputación Digital",
+          "celdas": [
+            {
+              "fila": 1080
+            }
+          ],
+          "nota": "informe ad hoc; ventana de 97 días"
+        },
+        {
+          "etiqueta": "Reputación Digital · menciones que ubican a Bullrich como vice de Milei",
+          "consultora": "Reputación Digital",
+          "celdas": [
+            {
+              "fila": 1081
+            }
+          ],
+          "nota": ""
+        }
+      ]
+    },
+    {
+      "tab": "semaforo",
+      "modulo": "Territorio",
+      "titulo": "Territorio · mediciones subnacionales",
+      "filas": [
+        {
+          "etiqueta": "CB GBA · Nardini (Malvinas Arg.) · diferencial",
+          "consultora": "CB GBA",
+          "celdas": [
+            {
+              "fila": 1268
+            }
+          ],
+          "nota": ""
+        },
+        {
+          "etiqueta": "CB GBA · Sujarchuk (Escobar) · diferencial",
+          "consultora": "CB GBA",
+          "celdas": [
+            {
+              "fila": 1269
+            }
+          ],
+          "nota": ""
+        },
+        {
+          "etiqueta": "CB GBA · Otermín (Lomas) · diferencial",
+          "consultora": "CB GBA",
+          "celdas": [
+            {
+              "fila": 1270
+            }
+          ],
+          "nota": ""
+        },
+        {
+          "etiqueta": "CB GBA · R. Lanús (San Isidro) · diferencial",
+          "consultora": "CB GBA",
+          "celdas": [
+            {
+              "fila": 1286
+            }
+          ],
+          "nota": ""
+        },
+        {
+          "etiqueta": "CB GBA · Ghi (Morón) · diferencial",
+          "consultora": "CB GBA",
+          "celdas": [
+            {
+              "fila": 1289
+            }
+          ],
+          "nota": ""
+        },
+        {
+          "etiqueta": "CB GBA · J. Álvarez (Lanús) · diferencial",
+          "consultora": "CB GBA",
+          "celdas": [
+            {
+              "fila": 1290
+            }
+          ],
+          "nota": ""
+        },
+        {
+          "etiqueta": "CB GBA · Menéndez (Merlo) · diferencial",
+          "consultora": "CB GBA",
+          "celdas": [
+            {
+              "fila": 1291
+            }
+          ],
+          "nota": ""
+        },
+        {
+          "etiqueta": "DC · CABA · voto por espacio · LLA",
+          "consultora": "DC",
+          "celdas": [
+            {
+              "fila": 1251
+            }
+          ],
+          "nota": ""
+        },
+        {
+          "etiqueta": "DC · CABA · Jefatura de Gobierno · Jorge Macri",
+          "consultora": "DC",
+          "celdas": [
+            {
+              "fila": 1252
+            }
+          ],
+          "nota": ""
+        },
+        {
+          "etiqueta": "INNOVA · Rosario · gestión Milei positiva",
+          "consultora": "INNOVA",
+          "celdas": [
+            {
+              "fila": 1255
+            }
+          ],
+          "nota": ""
+        },
+        {
+          "etiqueta": "INNOVA · Santa Fe ciudad · gestión Milei positiva",
+          "consultora": "INNOVA",
+          "celdas": [
+            {
+              "fila": 1257
+            }
+          ],
+          "nota": ""
+        }
+      ]
+    }
+  ],
+  "calendario": [
+    {
+      "modulo": "ICC",
+      "mes": "Nov-26",
+      "icono": "🎯",
+      "nombre": "ICC UTDT",
+      "periodo": "nov-26",
+      "fecha": "~17 nov",
+      "fuente": "UTDT CIF",
+      "metodo": "fecha estimada por regularidad histórica, vía monitorargy.com (MCP, herramienta calendario, consultado 2026-11-11)",
+      "clase": "upcoming"
+    },
+    {
+      "modulo": "ICG",
+      "mes": "Nov-26",
+      "icono": "🏛️",
+      "nombre": "ICG UTDT",
+      "periodo": "nov-26",
+      "fecha": "~17 nov",
+      "fuente": "UTDT Esc. de Gobierno",
+      "metodo": "fecha estimada por regularidad histórica, vía monitorargy.com (MCP, herramienta calendario, consultado 2026-11-11)",
+      "clase": "upcoming"
+    },
+    {
+      "modulo": "IPCBA CABA",
+      "mes": "Nov-26",
+      "icono": "🏙️",
+      "nombre": "IPCBA CABA",
+      "periodo": "nov-26",
+      "fecha": "~dic",
+      "fuente": "IDECBA",
+      "metodo": "según calendario habitual de IDECBA (no figura en monitorargy)",
+      "clase": "upcoming"
+    },
+    {
+      "modulo": "IPC Nación",
+      "mes": "Nov-26",
+      "icono": "📊",
+      "nombre": "IPC Nacional",
+      "periodo": "nov-26",
+      "fecha": "15 dic · 16:00",
+      "fuente": "INDEC",
+      "metodo": "calendario oficial INDEC, vía monitorargy.com (MCP, herramienta calendario, consultado 2026-11-11)",
+      "clase": "upcoming"
+    }
+  ],
+  "encabezado_publicados": [
+    {
+      "icono": "📊",
+      "nombre": "IPC Nacional",
+      "serie": "IPC",
+      "eje": "MIPC",
+      "unidad": "%",
+      "fuente": "INDEC",
+      "fecha": "12 nov",
+      "clase_valor": "pos"
+    },
+    {
+      "icono": "🏙️",
+      "nombre": "IPCBA CABA",
+      "serie": "IPCBA_FULL",
+      "eje": "MINFL",
+      "unidad": "%",
+      "fuente": "IDECBA",
+      "fecha": "6 nov",
+      "clase_valor": "pos"
+    },
+    {
+      "icono": "🎯",
+      "nombre": "ICC UTDT",
+      "serie": "ICC",
+      "eje": "MESI",
+      "unidad": "",
+      "fuente": "UTDT CIF",
+      "fecha": "oct",
+      "clase_valor": "neu"
+    },
+    {
+      "icono": "🏛️",
+      "nombre": "ICG UTDT",
+      "serie": "ICG",
+      "eje": "MESI",
+      "unidad": "",
+      "fuente": "UTDT",
+      "fecha": "oct",
+      "clase_valor": "neu"
+    },
+    {
+      "icono": "🏭",
+      "nombre": "IPIM",
+      "valor": 3.2,
+      "unidad": "%",
+      "periodo": "sep-26",
+      "fuente": "INDEC",
+      "fecha": "oct",
+      "clase_valor": "warn",
+      "secundaria": "",
+      "nota": "valor del Radar publicado; sin fila en la base (coincide con monitorargy ipim_mensual 3,16)"
+    }
+  ],
+  "sl_tramos": [
+    {
+      "fila": 1380,
+      "etiqueta": "5–14 sep"
+    },
+    {
+      "fila": 1381,
+      "etiqueta": "15–24 sep"
+    },
+    {
+      "fila": 1382,
+      "etiqueta": "25 sep–14 oct"
+    },
+    {
+      "fila": 1383,
+      "etiqueta": "15–24 oct"
+    }
+  ],
+  "agenda_inflacion": {
+    "meses": [
+      "May-26",
+      "Jun-26",
+      "Jul-26",
+      "Ago-26",
+      "Sep-26",
+      "Oct-26"
+    ],
+    "series": [
+      {
+        "label": "D'Alessio IROL-Berensztein",
+        "color": "var(--c2)",
+        "celdas": [
+          {
+            "fila": 1169
+          }
+        ],
+        "nota": "respuesta múltiple; mes enunciado sep (campo 6–7 oct)"
+      },
+      {
+        "label": "Proyección",
+        "color": "var(--c4)",
+        "celdas": [
+          {
+            "fila": 1135
+          }
+        ],
+        "nota": "respuesta múltiple (hasta 3)"
+      }
+    ]
+  },
+  "sl_registro": {
+    "_nota": "Vínculo de los informes SL del Radar publicado (ene–sep) con su file_id en base_maestra_2026 (capa SL). Coincidencia automática por mes, consultora y título (≥1,0); excepciones explícitas abajo. file_id verificados contra la columna I de la hoja el 2026-11-11. Forzados por búsqueda de título en Drive (file_id presentes en la columna I de base_maestra): Zuban, Eunomia Mora, Compol UBA, Bullrich·Lali.",
+    "forzar": {
+      "Informe Bullrich · Lali": "1D0FOVSXs8WRU7RGWngwTrchNXJxwJj8J",
+      "Estoy perdiendo imagen a tu lado": "1OJtLNk-wTXD2WMdcEpuNFdHPcJ7j8z8k",
+      "Del ingreso al atraso · Mora Bancaria": "18aiF7lmmSC6wLoCo2Q5jN9rYDPWC2TPr",
+      "Lo que viraliza no convence": "1dBSR69Q4-Bq7HKuV0fT-mhBdNTVb4HCz"
+    },
+    "sin_vinculo": [
+      "Escucha social sobre video de Milei",
+      "Milei 2027 · ¿y ahora qué va a pasar? (PBA)"
+    ]
+  },
+  "sl_estudios": [
+    {
+      "titulo": "Visita de León XIV · impacto digital",
+      "src": "Sustantiva · desde 8 nov-26 · X, TikTok, IG, FB",
+      "mes": "Nov-26",
+      "dir": "neg",
+      "metricas": [
+        {
+          "lbl": "Menciones estimadas",
+          "fila": 1389,
+          "fmt": "miles"
+        },
+        {
+          "lbl": "Reproducciones (mín.)",
+          "fila": 1390,
+          "fmt": "millones"
+        },
+        {
+          "lbl": "Posteos políticos que reprochan al Gobierno",
+          "fila": 1391,
+          "suf": "%"
+        }
+      ],
+      "txt": "La visita concentró 195 mil menciones; dentro de la conversación política, 64 % de los posteos reprocha algo al Gobierno.",
+      "file_id": "1qv2yEfHbaOobwWLvoI03F7QratGK_6C4"
+    },
+    {
+      "titulo": "Papa León XIV · conversación digital",
+      "src": "Radar Público · 1–9 nov-26 · X, IG, TikTok, YouTube",
+      "mes": "Nov-26",
+      "dir": "neg",
+      "metricas": [
+        {
+          "lbl": "Clima positivo",
+          "fila": 1392,
+          "suf": "%"
+        },
+        {
+          "lbl": "Clima negativo",
+          "fila": 1393,
+          "suf": "%"
+        },
+        {
+          "lbl": "Vinculan la visita con Milei",
+          "fila": 1394,
+          "suf": "%"
+        },
+        {
+          "lbl": "Tono negativo hacia Milei",
+          "fila": 1395,
+          "suf": "%"
+        }
+      ],
+      "txt": "Clima mayormente neutro/positivo hacia el Papa; 21 % de las menciones lo vincula con Milei y en ese tramo el tono hacia el Presidente es 60 % negativo.",
+      "file_id": "1T2AugmKM8XeaW-9QGnL6vaLlcEfe9rFn"
+    },
+    {
+      "titulo": "¿Bullrich candidata a vice?",
+      "src": "RD · 1 jul–5 oct-26 · nacional",
+      "mes": "Oct-26",
+      "dir": "neu",
+      "metricas": [
+        {
+          "lbl": "Menciones Bullrich",
+          "fila": 1080,
+          "fmt": "miles"
+        },
+        {
+          "lbl": "La ubican como vice de Milei",
+          "fila": 1081,
+          "suf": "%"
+        }
+      ],
+      "txt": "7 de cada 10 menciones sobre el futuro de Bullrich la ubican como vice de Milei en 2027.",
+      "file_id": "1o_mlbWD7SUDJlJt2mIKK1BwXp2o4zKwk"
+    },
+    {
+      "titulo": "¿Se le acabó el aura a Milei?",
+      "src": "RD · 5 sep–4 nov-26 · 326.638 publicaciones (rotulado nov)",
+      "mes": "Nov-26",
+      "dir": "neg",
+      "metricas": [
+        {
+          "lbl": "Negativo (total)",
+          "fila": 1293,
+          "suf": "%"
+        },
+        {
+          "lbl": "Positivo (total)",
+          "fila": 1294,
+          "suf": "%"
+        },
+        {
+          "lbl": "Negativo · cuentas reales",
+          "fila": 1296,
+          "suf": "%"
+        },
+        {
+          "lbl": "Participación en la conversación política",
+          "fila": 1299,
+          "suf": "%"
+        }
+      ],
+      "txt": "Milei pasa de ~1 de cada 4 a ~1 de cada 10 publicaciones políticas entre septiembre y noviembre; la negatividad entre cuentas reales tocó 74 % el 15–24 oct.",
+      "file_id": "1kd9sW5yHrlMiZLq3_bxYTCnCHZjaCFGL"
+    }
+  ],
+  "nota_secundaria_extra": [
+    {
+      "fila": 1387,
+      "etiqueta": "IPC núcleo mensual",
+      "rotulo": "FUENTE SECUNDARIA · monitorargy.com · https://monitorargy.com/mcp (obtener_serie, id ipc_nucleo_mensual) · consultado 2026-11-12 · fuente original: INDEC"
+    },
+    {
+      "fila": 1388,
+      "etiqueta": "IPC regulados mensual",
+      "rotulo": "FUENTE SECUNDARIA · monitorargy.com · https://monitorargy.com/mcp (obtener_serie, id ipc_regulados_mensual) · consultado 2026-11-12 · fuente original: INDEC"
+    }
+  ],
+  "gap_n_indicadores": 8
+}
