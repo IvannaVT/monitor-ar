@@ -10,6 +10,7 @@
   --accent:#5B9CF6; --border:#1F3A5F;
   --pos:#22C07A; --neg:#F06070; --warn:#F5A623; --neu:#8AAFC8;
   --c1:#5B9CF6; --c2:#A78BFA; --c3:#22C07A; --c4:#F5A623; --c5:#F06070;
+  --c6:#48CAE4;--c7:#F48FB1;--c8:#A5D6A7;--c9:#FFCC80;
   --r:8px; color-scheme:dark;
 }
 @media(prefers-color-scheme:dark){:root:not([data-theme="light"]){
@@ -17,6 +18,7 @@
   --accent:#5B9CF6;--border:#162B48;
   --pos:#22C07A;--neg:#F06070;--warn:#F5A623;--neu:#8AAFC8;
   --c1:#5B9CF6;--c2:#A78BFA;--c3:#22C07A;--c4:#F5A623;--c5:#F06070;
+  --c6:#48CAE4;--c7:#F48FB1;--c8:#A5D6A7;--c9:#FFCC80;
   color-scheme:dark;
 }}
 :root[data-theme="dark"]{
@@ -24,6 +26,7 @@
   --accent:#5B9CF6;--border:#162B48;
   --pos:#22C07A;--neg:#F06070;--warn:#F5A623;--neu:#8AAFC8;
   --c1:#5B9CF6;--c2:#A78BFA;--c3:#22C07A;--c4:#F5A623;--c5:#F06070;
+  --c6:#48CAE4;--c7:#F48FB1;--c8:#A5D6A7;--c9:#FFCC80;
   color-scheme:dark;
 }
 
@@ -39,6 +42,11 @@ img{max-width:100%}
 .logo small{font-size:10px;color:var(--fg-dim);margin-left:6px;letter-spacing:.5px}
 .theme-btn{background:none;border:1px solid var(--border);border-radius:20px;padding:4px 12px;font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--fg-dim);cursor:pointer}
 .theme-btn:hover{border-color:var(--accent);color:var(--accent)}
+.header-tools{display:flex;align-items:center;gap:8px}
+.site-nav{display:flex;align-items:stretch;height:52px}
+.site-nav-link{display:inline-flex;align-items:center;min-height:44px;border-bottom:2px solid transparent;padding:0 14px;font-family:'IBM Plex Sans',sans-serif;font-size:13px;font-weight:500;color:var(--fg-dim);text-decoration:none;white-space:nowrap;letter-spacing:.2px}
+.site-nav-link:hover{color:var(--fg);border-bottom-color:var(--accent)}
+.site-nav-link:focus-visible{outline:2px solid var(--accent);outline-offset:-2px}
 
 .nav-tabs{background:var(--surface);border-bottom:1px solid var(--border);padding:0 20px}
 .nav-inner{max-width:920px;margin:0 auto;display:flex;overflow-x:auto;scrollbar-width:none}
@@ -205,96 +213,27 @@ footer a{color:var(--accent)}
   table{font-size:11px;min-width:300px}
   th,td{padding:6px 8px}
   .tab-btn{font-size:12px;padding:9px 10px}
+  .site-nav-link{font-size:12px;padding:0 10px}
+  .logo{line-height:1.15}
+  .logo small{display:block;margin-left:0;font-size:9px}
 }
 </style>
 
 <header class="site-header">
   <div class="header-inner">
-    <div class="logo">Monitor<span>AR</span><small>OCT 2026</small></div>
-    <button class="theme-btn" onclick="toggleTheme()">◐</button>
+    <div class="logo">Monitor<span>AR</span><small>NOV 2026 · parcial 11/11</small></div>
+    <div class="header-tools">
+      <nav class="site-nav" aria-label="Monitores del sitio">
+        <a class="site-nav-link" href="./monitor_leg.html">Monitor LEG</a>
+      </nav>
+      <button class="theme-btn" onclick="toggleTheme()">◐</button>
+    </div>
   </div>
 </header>
 
 <!-- ── TIMELINE "ÚLTIMOS DATOS Y LO QUE VIENE" ── -->
-<div class="timeline-strip" title="Últimos datos publicados y próximas fechas">
-  <div class="tl-inner">
-    <!-- publicados -->
-    <div class="tl-item published">
-      <div class="tl-dot"></div>
-      <div class="tl-date">13 oct</div>
-      <div class="tl-icon">📊</div>
-      <div class="tl-name">IPC Nacional</div>
-      <div class="tl-val pos">1,9%</div>
-      <div class="tl-period">sep-26</div>
-      <div class="tl-src">INDEC</div>
-    </div>
-    <div class="tl-item published">
-      <div class="tl-dot"></div>
-      <div class="tl-date">6 nov</div>
-      <div class="tl-icon">🏙️</div>
-      <div class="tl-name">IPCBA CABA</div>
-      <div class="tl-val pos">1,9%</div>
-      <div class="tl-period">oct-26</div>
-      <div class="tl-src">IDECBA</div>
-    </div>
-    <div class="tl-item published">
-      <div class="tl-dot"></div>
-      <div class="tl-date">oct</div>
-      <div class="tl-icon">🎯</div>
-      <div class="tl-name">ICC UTDT</div>
-      <div class="tl-val neu">41,18</div>
-      <div class="tl-period">sep-26</div>
-      <div class="tl-src">UTDT</div>
-    </div>
-    <div class="tl-item published">
-      <div class="tl-dot"></div>
-      <div class="tl-date">nov</div>
-      <div class="tl-icon">🎯</div>
-      <div class="tl-name">ICC UTDT</div>
-      <div class="tl-val neu">41,52</div>
-      <div class="tl-period">oct-26</div>
-      <div class="tl-src">UTDT CIF</div>
-    </div>
-    <div class="tl-item published">
-      <div class="tl-dot"></div>
-      <div class="tl-date">oct</div>
-      <div class="tl-icon">🏭</div>
-      <div class="tl-name">IPIM</div>
-      <div class="tl-val warn">3,2%</div>
-      <div class="tl-period">sep-26</div>
-      <div class="tl-src">INDEC</div>
-    </div>
-    <!-- divisor próximos -->
-    <div class="tl-divider"></div>
-    <!-- próximos -->
-    <div class="tl-item soon">
-      <div class="tl-dot"></div>
-      <div class="tl-upcoming-lbl">próximo</div>
-      <div class="tl-icon">📊</div>
-      <div class="tl-name">IPC Nacional</div>
-      <div class="tl-val neu">oct-26</div>
-      <div class="tl-period">~13 nov</div>
-      <div class="tl-src">INDEC</div>
-    </div>
-    <div class="tl-item soon">
-      <div class="tl-dot"></div>
-      <div class="tl-upcoming-lbl">próximo</div>
-      <div class="tl-icon">🏙️</div>
-      <div class="tl-name">IPCBA CABA</div>
-      <div class="tl-val neu">nov-26</div>
-      <div class="tl-period">~dic</div>
-      <div class="tl-src">IDECBA</div>
-    </div>
-    <div class="tl-item upcoming">
-      <div class="tl-dot"></div>
-      <div class="tl-upcoming-lbl">próximo</div>
-      <div class="tl-icon">🎯</div>
-      <div class="tl-name">ICC UTDT</div>
-      <div class="tl-val neu">nov-26</div>
-      <div class="tl-period">~dic</div>
-      <div class="tl-src">UTDT</div>
-    </div>
-  </div>
+<div class="timeline-strip" title="Últimos datos publicados y próximas publicaciones">
+  <div class="tl-inner" id="tlInner"></div>
 </div>
 
 <nav class="nav-tabs">
@@ -309,6 +248,7 @@ footer a{color:var(--accent)}
   </div>
 </nav>
 
+
 <main class="main-content">
 
 <!-- ── TAB 1: INDICADORES ───────────────────── -->
@@ -317,21 +257,21 @@ footer a{color:var(--accent)}
   <div class="kpi-grid" style="grid-template-columns:repeat(auto-fit,minmax(180px,1fr))">
     <!-- IPC Nacional -->
     <div class="kpi highlight">
-      <div class="kpi-label">IPC Nacional · sep-26</div>
-      <div class="kpi-num">1,9%</div>
-      <div class="kpi-meta"><span class="arrow up">↑</span><span class="kpi-sub">INDEC · mensual · vs 1,7% ago</span></div>
+      <div class="kpi-label">IPC Nacional · oct-26</div>
+      <div class="kpi-num">2,2%</div>
+      <div class="kpi-meta"><span class="arrow up">↑</span><span class="kpi-sub">INDEC · mensual · vs 1,9% sep · publicado 12/11</span></div>
       <div class="kpi-subs">
-        <div class="kpi-sub-row"><span class="kpi-sub-lbl">Núcleo</span><span class="kpi-sub-val">1,7%</span></div>
-        <div class="kpi-sub-row"><span class="kpi-sub-lbl">Regulados</span><span class="kpi-sub-val">2,8%</span></div>
-        <div class="kpi-sub-row"><span class="kpi-sub-lbl">Acumulado</span><span class="kpi-sub-val">23,6%</span></div>
-        <div class="kpi-sub-row"><span class="kpi-sub-lbl">Interanual</span><span class="kpi-sub-val ia">33,4%</span></div>
+        <div class="kpi-sub-row"><span class="kpi-sub-lbl">Núcleo</span><span class="kpi-sub-val">1,5%</span></div>
+        <div class="kpi-sub-row"><span class="kpi-sub-lbl">Regulados</span><span class="kpi-sub-val">2,9%</span></div>
+        <div class="kpi-sub-row"><span class="kpi-sub-lbl">Acumulado ene–oct</span><span class="kpi-sub-val">26,3%</span></div>
+        <div class="kpi-sub-row"><span class="kpi-sub-lbl">Interanual</span><span class="kpi-sub-val ia">33,1%</span></div>
       </div>
     </div>
     <!-- IPCBA CABA -->
     <div class="kpi">
       <div class="kpi-label">IPCBA CABA · oct-26</div>
       <div class="kpi-num">1,9%</div>
-      <div class="kpi-meta"><span class="arrow up">↑</span><span class="kpi-sub">IDECBA · vs sep 1,8% · brecha s/d IPC oct</span></div>
+      <div class="kpi-meta"><span class="arrow up">↑</span><span class="kpi-sub">IDECBA · vs sep 1,8% · brecha vs IPC Nación oct: −0,3 p.p.</span></div>
       <div class="kpi-subs">
         <div class="kpi-sub-row"><span class="kpi-sub-lbl">Bienes</span><span class="kpi-sub-val">1,9%</span></div>
         <div class="kpi-sub-row"><span class="kpi-sub-lbl">Servicios</span><span class="kpi-sub-val">1,9%</span></div>
@@ -339,43 +279,24 @@ footer a{color:var(--accent)}
         <div class="kpi-sub-row"><span class="kpi-sub-lbl">Interanual</span><span class="kpi-sub-val ia">32,5%</span></div>
       </div>
     </div>
-    <!-- ICC -->
-    <div class="kpi">
-      <div class="kpi-label">ICC oct-26</div>
-      <div class="kpi-num">41,5</div>
-      <div class="kpi-meta"><span class="kpi-delta up">+0,8</span><span class="kpi-sub">vs sep-26 · UTDT CIF</span></div>
-      <div class="kpi-subs">
-        <div class="kpi-sub-row"><span class="kpi-sub-lbl">CABA</span><span class="kpi-sub-val">39,7</span></div>
-        <div class="kpi-sub-row"><span class="kpi-sub-lbl">Interior</span><span class="kpi-sub-val">46,0</span></div>
-        <div class="kpi-sub-row"><span class="kpi-sub-lbl">GBA</span><span class="kpi-sub-val">39,5</span></div>
-      </div>
-    </div>
-    <!-- ICG -->
-    <div class="kpi">
-      <div class="kpi-label">ICG oct-26</div>
-      <div class="kpi-num">1,95</div>
-      <div class="kpi-meta"><span class="kpi-delta up">+0,9%</span><span class="kpi-sub">vs sep-26 · UTDT Escuela de Gobierno</span></div>
-      <div class="kpi-subs">
-        <div class="kpi-sub-row"><span class="kpi-sub-lbl">Escala</span><span class="kpi-sub-val">0–5</span></div>
-        <div class="kpi-sub-row"><span class="kpi-sub-lbl">Max 12m</span><span class="kpi-sub-val">2,5</span></div>
-        <div class="kpi-sub-row"><span class="kpi-sub-lbl">Min 12m</span><span class="kpi-sub-val">1,9</span></div>
-      </div>
-    </div>
+    <!-- ICC e ICG: generados desde data/radar_data.json (KPI) -->
+    <div class="kpi" id="kpiICC"></div>
+    <div class="kpi" id="kpiICG"></div>
   </div>
   <div class="chart-wrap">
     <div class="chart-head">
-      <div><h3>Inflación mensual · IPC Nacional vs IPCBA CABA</h3><p>Sep-25 → Oct-26 · barras + media móvil 3 meses · IPC Nacional hasta sep-26</p></div>
+      <div><h3>Inflación mensual · IPC Nacional vs IPCBA CABA</h3><p>Sep-25 → Oct-26 · barras + media móvil 3 meses</p></div>
     </div>
     <div class="chart-box med"><canvas id="chartInflComp"></canvas></div>
     <div class="legend" id="legendInflComp"></div>
-    <p class="source">IPC INDEC: sep-25→sep-26 (1,9% sep · acum. 23,6% · i.a. 33,4%) · IPCBA oct-26: 1,9% (acum. 26,1% · i.a. 32,5%) · IDECBA/GCBA · MM3: media móvil 3 meses · IPC oct-26 pendiente ~12 nov</p>
+    <p class="source">IPC INDEC: sep-25→oct-26 (2,2% oct · acum. 26,3% · i.a. 33,1%, publicado 12/11) · IPCBA oct-26: 1,9% (acum. 26,1% · i.a. 32,5%) · IDECBA/GCBA · brecha oct IPCBA − IPC: −0,3 p.p. · MM3: media móvil 3 meses</p>
   </div>
   <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px">
     <div class="chart-wrap" style="margin:0">
-      <div class="chart-head"><div><h3>IPC Nacional · acum. e interanual</h3><p>Ene-26 → Sep-26 · acum. barra izq. · i.a. línea der.</p></div></div>
+      <div class="chart-head"><div><h3>IPC Nacional · acum. e interanual</h3><p>Ene-26 → Oct-26 · acum. barra izq. · i.a. línea der.</p></div></div>
       <div class="chart-box"><canvas id="chartInflNacAcumIA"></canvas></div>
       <div class="legend" id="legendInflNacAcumIA"></div>
-      <p class="source">Acum. ene-sep 2026: 23,6% · Interanual sep-26: 33,4% · INDEC</p>
+      <p class="source">Acum. ene-oct 2026: 26,3% · Interanual oct-26: 33,1% · INDEC</p>
     </div>
     <div class="chart-wrap" style="margin:0">
       <div class="chart-head"><div><h3>IPCBA CABA · acum. e interanual</h3><p>Ene-26 → Oct-26 · acum. barra izq. · i.a. línea der.</p></div></div>
@@ -385,11 +306,16 @@ footer a{color:var(--accent)}
     </div>
   </div>
   <div class="chart-wrap">
-    <div class="chart-head"><div><h3>ICC + ICG · UTDT · apertura regional ICC oct-26</h3><p>Sep-25 → Oct-26 · ICC Nacional + ICG Nacional (eje der.) · CABA / GBA / Interior: dato único oct-26</p></div></div>
+    <div class="chart-head"><div><h3>ICC + ICG · UTDT</h3><p>Sep-25 → Nov-26* · ICC Nacional + ICG Nacional (eje der.) · *nov-26: corte parcial, sin publicación aún</p></div></div>
     <div class="chart-box med"><canvas id="chartICCICG"></canvas></div>
     <div class="legend" id="legendICCICG"></div>
-    <p class="source">ICC Nacional 41,52 · CABA 39,68 · GBA 39,49 · Interior 46,00 · oct-26 · campo 5-16 oct · n≈1.000 · CATI · ICC: UTDT CIF / Poliarquía · ICG oct-26: 1,95 (+0,9% m/m; −7,0% i.a.), esc. 0–5 eje der. · UTDT Escuela de Gobierno / Poliarquía · campo 5–16 oct · n=1.000 · IC 95%: 1,83–2,08 · oscilaciones compatibles con error muestral</p>
+    <p class="source" id="srcICCICG"></p>
   </div>
+  <div class="evolc-box" data-evolc="indicadores"></div>
+  <details class="det-fin" data-fin="indicadores"><summary>Detalle por fuente y trazabilidad · <span class="det-fin-n" data-finn="indicadores"></span></summary>
+    <div class="upd-box" data-upd="indicadores"></div>
+    <div class="evol-box" data-evol="indicadores"></div>
+  </details>
 </section>
 
 <!-- ── TAB 2: VOTO ──────────────────────────── -->
@@ -424,7 +350,7 @@ footer a{color:var(--accent)}
 
   <div class="chart-wrap">
     <div class="chart-head">
-      <div><h3>LLA</h3><p>Feb-26 → Oct-26 · por consultora · clic en leyenda para filtrar</p></div>
+      <div><h3>LLA</h3><p><span data-rango="CONS.lla"></span> · por consultora · clic en leyenda para filtrar</p></div>
       <span class="signal conv">▲ 4/5</span>
     </div>
     <div class="chart-box tall"><canvas id="chartLLA"></canvas></div>
@@ -433,20 +359,21 @@ footer a{color:var(--accent)}
   </div>
   <div class="chart-wrap">
     <div class="chart-head">
-      <div><h3>PJ / Unión por la Patria</h3><p>Feb-26 → Oct-26 · por consultora · clic en leyenda para filtrar</p></div>
+      <div><h3>PJ / Unión por la Patria</h3><p><span data-rango="CONS.lla"></span> · por consultora · clic en leyenda para filtrar</p></div>
       <span class="signal mix">~ 3/5</span>
     </div>
     <div class="chart-box tall"><canvas id="chartPJ"></canvas></div>
     <div class="legend" id="legendPJ"></div>
   </div>
   <div class="chart-wrap">
-    <p class="sec" style="margin-bottom:10px">Última lectura disponible por consultora</p>
+    <details class="det-tab"><summary><b>Última lectura disponible por consultora</b></summary>
     <div class="table-wrap">
       <table>
         <thead><tr><th>Consultora</th><th>Período</th><th>LLA %</th><th>PJ %</th><th>Δ LLA</th><th>Muestra</th><th>Método</th></tr></thead>
         <tbody id="tableVoto"></tbody>
       </table>
     </div>
+  </details>
   </div>
 
   <!-- HALLAZGOS OCTUBRE 2026 -->
@@ -534,6 +461,11 @@ footer a{color:var(--accent)}
     </div>
     <p class="source" style="margin-top:10px">SL = Social Listening · ISN = Índice de Sentimiento Neto · Proxy: señal complementaria, no equivalente a CONV · Ver metodología completa en pestaña GAP</p>
   </div>
+  <div class="evolc-box" data-evolc="voto"></div>
+  <details class="det-fin" data-fin="voto"><summary>Detalle por fuente y trazabilidad · <span class="det-fin-n" data-finn="voto"></span></summary>
+    <div class="upd-box" data-upd="voto"></div>
+    <div class="evol-box" data-evol="voto"></div>
+  </details>
 </section>
 
 <!-- ── TAB 3: IMAGEN + GESTIÓN ──────────────── -->
@@ -541,7 +473,7 @@ footer a{color:var(--accent)}
   <p class="sec">Imagen presidencial · Gestión nacional · Milei</p>
   <div class="chart-wrap">
     <div class="chart-head">
-      <div><h3>Imagen negativa · Milei</h3><p>May-26 → Ago-26 · por consultora · clic en leyenda para filtrar</p></div>
+      <div><h3>Imagen negativa · Milei</h3><p><span data-rango="IMG.neg"></span> · por consultora · clic en leyenda para filtrar</p></div>
       <span class="signal mix">~ mixta</span>
     </div>
     <div class="chart-box"><canvas id="chartNeg"></canvas></div>
@@ -549,14 +481,14 @@ footer a{color:var(--accent)}
   </div>
   <div class="chart-wrap">
     <div class="chart-head">
-      <div><h3>Imagen positiva · Milei</h3><p>May-26 → Ago-26 · por consultora · clic en leyenda para filtrar</p></div>
+      <div><h3>Imagen positiva · Milei</h3><p><span data-rango="IMG.neg"></span> · por consultora · clic en leyenda para filtrar</p></div>
     </div>
     <div class="chart-box"><canvas id="chartPos"></canvas></div>
     <div class="legend" id="legendPos"></div>
   </div>
   <div class="chart-wrap">
     <div class="chart-head">
-      <div><h3>Aprobación gestión nacional · por consultora</h3><p>May-26 → Sep-26 · Proyección + Isasi-Burdman + Vozna + Synopsis · clic en leyenda para filtrar</p></div>
+      <div><h3>Aprobación gestión nacional · por consultora</h3><p><span data-rango="GESTION.aprob"></span> · <span data-consultoras="GESTION"></span> · clic en leyenda para filtrar</p></div>
       <span class="signal conv">▲ conv.</span>
     </div>
     <div class="chart-box"><canvas id="chartGestion"></canvas></div>
@@ -595,36 +527,8 @@ footer a{color:var(--accent)}
     <div class="legend" id="legendGestionFull"></div>
     <p class="source">Proyección: campo 1–10 de cada mes · Isasi-Burdman: campo en torno al 20 de cada mes · preguntas distintas entre consultoras</p>
   </div>
-  <div class="table-wrap" style="margin-bottom:16px">
-    <table>
-      <thead><tr><th>Consultora</th><th>Variable</th><th>May</th><th>Jun</th><th>Jul</th><th>Ago</th><th>Sep</th><th>Oct</th><th>Δ</th></tr></thead>
-      <tbody>
-        <tr><td>Proyección</td><td>Aprobación gestión</td><td class="num">34,0</td><td class="num">39,8</td><td class="num">39,4</td><td class="num">39,7</td><td class="num">42,0</td><td class="num">—</td><td class="num up">+8,0 🟢</td></tr>
-        <tr><td>Isasi-Burdman</td><td>Aprobación gestión</td><td class="num">—</td><td class="num">45,0</td><td class="num">46,0</td><td class="num">42,0</td><td class="num">—</td><td class="num">—</td><td class="num down">−3,0 🔴</td></tr>
-        <tr><td>Isasi-Burdman</td><td>Imagen positiva</td><td class="num">—</td><td class="num">42,0</td><td class="num">43,0</td><td class="num">38,0</td><td class="num">—</td><td class="num">—</td><td class="num down">−4,0 🔴</td></tr>
-        <tr><td>D'Alessio</td><td>Imagen positiva</td><td class="num">36,0</td><td class="num">—</td><td class="num">—</td><td class="num">34,0</td><td class="num">—</td><td class="num">—</td><td class="num down">−2,0 🔴</td></tr>
-        <tr><td>Isasi-Burdman</td><td>Imagen negativa</td><td class="num">—</td><td class="num">—</td><td class="num">44,0</td><td class="num">46,0</td><td class="num">—</td><td class="num">—</td><td class="num down">+2,0 🔴</td></tr>
-        <tr><td>Isasi-Burdman</td><td>Desaprobación gestión</td><td class="num">—</td><td class="num">48,0</td><td class="num">47,0</td><td class="num">48,0</td><td class="num">—</td><td class="num">—</td><td class="num">0,0</td></tr>
-        <tr><td>Vozna</td><td>Aprobación gestión</td><td class="num">—</td><td class="num">—</td><td class="num">36,3</td><td class="num">—</td><td class="num">32,6</td><td class="num">—</td><td class="num down">−3,7 🔴</td></tr>
-        <tr><td>Vozna</td><td>Desaprobación gestión</td><td class="num">—</td><td class="num">—</td><td class="num">57,6</td><td class="num">—</td><td class="num">61,9</td><td class="num">—</td><td class="num down">+4,3 🔴</td></tr>
-        <tr><td>Vozna</td><td>Imagen positiva</td><td class="num">36,3</td><td class="num">—</td><td class="num">32,1</td><td class="num">—</td><td class="num">31,3</td><td class="num">—</td><td class="num down">−5,0 🔴</td></tr>
-        <tr><td>Vozna</td><td>Imagen negativa</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">63,5</td><td class="num">—</td><td class="num">⚪</td></tr>
-        <tr><td>Zuban Córdoba</td><td>Imagen negativa</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">61,8</td><td class="num">64,1</td><td class="num down">+2,3 🔴</td></tr>
-        <tr><td>Zuban Córdoba</td><td>Imagen positiva</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">36,0</td><td class="num">34,9</td><td class="num down">−1,1 🔴</td></tr>
-        <tr><td>Zuban Córdoba</td><td>Aprobación gestión</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">34,1</td><td class="num">⚪</td></tr>
-        <tr><td>Zuban Córdoba</td><td>Desaprobación gestión</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">65,2</td><td class="num">⚪</td></tr>
-        <tr><td>Synopsis</td><td>Imagen positiva</td><td class="num">29,2</td><td class="num">—</td><td class="num">—</td><td class="num">33,9</td><td class="num">—</td><td class="num">—</td><td class="num up">+4,7 🟢</td></tr>
-        <tr><td>Synopsis</td><td>Imagen negativa</td><td class="num">58,1</td><td class="num">—</td><td class="num">—</td><td class="num">55,3</td><td class="num">—</td><td class="num">—</td><td class="num up">−2,8 🟢</td></tr>
-        <tr><td>Synopsis</td><td>Aprobación gestión</td><td class="num">31,3</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">⚪</td></tr>
-        <tr><td>Synopsis</td><td>Desaprobación gestión</td><td class="num">54,5</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">⚪</td></tr>
-        <tr><td>Trends</td><td>Imagen positiva</td><td class="num">—</td><td class="num">42,0</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">⚪</td></tr>
-        <tr><td>Trends</td><td>Imagen negativa</td><td class="num">—</td><td class="num">57,0</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">⚪</td></tr>
-        <tr><td>Giacobbe</td><td>Imagen positiva</td><td class="num">34,2</td><td class="num">37,5</td><td class="num">—</td><td class="num">36,1</td><td class="num">—</td><td class="num">—</td><td class="num up">+1,9 🟢</td></tr>
-        <tr><td>Giacobbe</td><td>Imagen negativa</td><td class="num">55,0</td><td class="num">56,9</td><td class="num">—</td><td class="num">55,7</td><td class="num">—</td><td class="num">—</td><td class="num up">−1,2 🟢</td></tr>
-      </tbody>
-    </table>
-    <p class="source">Gestión ≠ imagen personal · preguntas distintas · no comparar entre consultoras directamente · Δ = variación sep→oct o primera→última medición disponible</p>
-  </div>
+  <div id="tablaVar" style="margin-bottom:16px"></div>
+  <p class="source" style="margin-top:-8px;margin-bottom:16px">Tabla por variable desplegable · filas = consultoras · Δ = última medición vs. la anterior de la misma consultora · gestión ≠ imagen personal · preguntas distintas: no comparar niveles entre consultoras · * valor del Radar publicado sin fila en la base (pendiente de cargar)</p>
 
   <!-- HALLAZGOS OCTUBRE 2026 -->
   <div class="chart-wrap" style="margin-top:20px">
@@ -675,7 +579,7 @@ footer a{color:var(--accent)}
   </div>
 
   <div class="chart-wrap">
-    <p class="sec" style="margin-bottom:10px">Isasi-Burdman ago-26 · Escenario presidencial 2027</p>
+    <details class="det-tab"><summary><b>Isasi-Burdman ago-26 · Escenario presidencial 2027</b></summary>
     <div class="table-wrap">
       <table>
         <thead><tr><th>Candidato</th><th>Esc. 1 %</th><th>Esc. 2 %</th></tr></thead>
@@ -689,14 +593,85 @@ footer a{color:var(--accent)}
         </tbody>
       </table>
     </div>
+  </details>
     <p class="source">n=2055 · campo 12–21/08/2026 · LLA no publicado desagregado</p>
   </div>
+  <div class="evolc-box" data-evolc="imagen"></div>
+  <details class="det-fin" data-fin="imagen"><summary>Detalle por fuente y trazabilidad · <span class="det-fin-n" data-finn="imagen"></span></summary>
+    <div class="upd-box" data-upd="imagen"></div>
+    <div class="evol-box" data-evol="imagen"></div>
+  </details>
 </section>
 
 
 <!-- ── TAB 5: CONV. DIGITAL ──────────────────── -->
 <section class="panel" id="tab-sl">
   <p class="sec">Conversación digital · Social Listening</p>
+
+  <!-- ISN Scaloneta + Llaryora + Bullrich-Lali -->
+  <p class="sec" style="margin-bottom:12px">Estudios puntuales · conversación digital · jul–nov 2026 <span style="font-weight:400;text-transform:none;letter-spacing:0">· lo más reciente del período: visita de León XIV (Sustantiva, Radar Público, nov-26)</span></p>
+  <div id="slEstudios" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px;margin-bottom:16px">
+
+    <div class="hallazgo" style="border-left-color:var(--neg)">
+      <div class="hallazgo-head">
+        <span style="font-size:12px;font-weight:600">ISN Scaloneta · Julio 2026</span>
+        <span class="hallazgo-src">RD · 1–8 jul-26 · 162k menciones</span>
+        <span class="hallazgo-dir h-neg">↓ negativo</span>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:6px;margin:6px 0 4px">
+        <div>
+          <div style="font-size:9px;color:var(--fg-dim);letter-spacing:.5px;text-transform:uppercase">Fútbol + política</div>
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:18px;font-weight:500;color:var(--neg)">−72,2</div>
+        </div>
+        <div>
+          <div style="font-size:9px;color:var(--fg-dim);letter-spacing:.5px;text-transform:uppercase">Casa Rosada</div>
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:18px;font-weight:500;color:var(--neg)">−80,5</div>
+        </div>
+        <div>
+          <div style="font-size:9px;color:var(--fg-dim);letter-spacing:.5px;text-transform:uppercase">Milei</div>
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:18px;font-weight:500;color:var(--neg)">−66,9</div>
+        </div>
+        <div>
+          <div style="font-size:9px;color:var(--fg-dim);letter-spacing:.5px;text-transform:uppercase">Emociones</div>
+          <div style="font-size:11px;color:var(--fg);margin-top:3px">Ira <b>36%</b> · Asco <b>31%</b><br>Alegría <b>3%</b></div>
+        </div>
+      </div>
+      <div class="hallazgo-txt">El buen rendimiento deportivo no derramó sentimiento positivo hacia el gobierno.</div>
+    </div>
+
+    <div class="hallazgo" style="border-left-color:var(--neg)">
+      <div class="hallazgo-head">
+        <span style="font-size:12px;font-weight:600">Llaryora bajo fuego cruzado</span>
+        <span class="hallazgo-src">RD · sep-26 · Córdoba</span>
+        <span class="hallazgo-dir h-neg">↓ negativo</span>
+      </div>
+      <div style="margin:6px 0 4px">
+        <div style="font-size:9px;color:var(--fg-dim);letter-spacing:.5px;text-transform:uppercase">ISN Llaryora (Córdoba)</div>
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:28px;font-weight:500;color:var(--neg)">−61</div>
+      </div>
+      <div class="hallazgo-txt">Conversación territorial cordobesa con sentimiento dominantemente negativo hacia el gobernador.</div>
+    </div>
+
+    <div class="hallazgo" style="border-left-color:var(--warn)">
+      <div class="hallazgo-head">
+        <span style="font-size:12px;font-weight:600">Bullrich · Lali · sep-26</span>
+        <span class="hallazgo-src">RD · sep-26 · Nacional</span>
+        <span class="hallazgo-dir h-mix">~ ambivalente</span>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:6px;margin:6px 0 4px">
+        <div>
+          <div style="font-size:9px;color:var(--fg-dim);letter-spacing:.5px;text-transform:uppercase">Diversión/espectáculo</div>
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:18px;font-weight:500;color:var(--pos)">43%</div>
+        </div>
+        <div>
+          <div style="font-size:9px;color:var(--fg-dim);letter-spacing:.5px;text-transform:uppercase">Reproche/política</div>
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:18px;font-weight:500;color:var(--neg)">27%</div>
+        </div>
+      </div>
+      <div class="hallazgo-txt">Tono predominante de espectáculo; lectura política minoritaria pero consistente.</div>
+    </div>
+
+  </div>
 
   <div class="kpi-grid">
     <div class="kpi">
@@ -722,7 +697,7 @@ footer a{color:var(--accent)}
   </div>
 
   <!-- Sentimiento Milei · AD HOC · Septiembre 2026 -->
-  <p class="sec" style="margin-bottom:12px">AD HOC · Septiembre 2026 · Conversación digital nacional</p>
+  <p class="sec" style="margin-bottom:12px">AD HOC · Septiembre 2026 · Conversación digital nacional · último informe AD HOC en Drive (sin informe de octubre)</p>
   <div class="chart-wrap">
     <div class="chart-head">
       <div><h3>Sentimiento Milei · AD HOC · Septiembre 2026</h3><p>5,2M menciones · Twitter/X y otras plataformas</p></div>
@@ -755,11 +730,16 @@ footer a{color:var(--accent)}
   <!-- ISN mensual RD -->
   <div class="chart-wrap">
     <div class="chart-head">
-      <div><h3>Evolución sentimiento neto negativo</h3><p>Ago–Sep 2026 · ISN Reputación Digital · serie en construcción · escala −100 a +100</p></div>
+      <div><h3>Evolución sentimiento neto negativo</h3><p>Ago–Sep 2026 · ISN Reputación Digital · serie en construcción · escala −100 a +100 · oct-26: sin informe mensual de ISN; ver tono por tramos sep–oct</p></div>
       <span class="signal mix">~ mejora parcial</span>
     </div>
     <div class="chart-box" style="height:160px"><canvas id="chartISNMensual"></canvas></div>
     <p class="source">ISN = (menciones positivas − negativas) / total × 100 · Ago-26: −43 · Sep-26: −33 · mejora +10 pp · Reputación Digital</p>
+  </div>
+  <div class="chart-wrap">
+    <div class="chart-head"><div><h3>Tono entre cuentas reales · sep–oct 2026</h3><p>% de publicaciones negativas sobre Milei, cuentas reales (sin bots ni trolls) · tramos del informe Reputación Digital «¿Se le acabó el aura?» (5/9–4/11, rotulado nov)</p></div></div>
+    <div class="chart-box" style="height:180px"><canvas id="chartSLTramos"></canvas></div>
+    <p class="source" id="srcSLTramos"></p>
   </div>
 
   <!-- IDN Q2 + ISN por eje del relato -->
@@ -829,73 +809,10 @@ footer a{color:var(--accent)}
   </div>
 
 
-  <!-- ISN Scaloneta + Llaryora + Bullrich-Lali -->
-  <p class="sec" style="margin-bottom:12px">Estudios puntuales · Reputación Digital · jul–sep 2026</p>
-  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px;margin-bottom:16px">
 
-    <div class="hallazgo" style="border-left-color:var(--neg)">
-      <div class="hallazgo-head">
-        <span style="font-size:12px;font-weight:600">ISN Scaloneta · Julio 2026</span>
-        <span class="hallazgo-src">RD · 1–8 jul-26 · 162k menciones</span>
-        <span class="hallazgo-dir h-neg">↓ negativo</span>
-      </div>
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:6px;margin:6px 0 4px">
-        <div>
-          <div style="font-size:9px;color:var(--fg-dim);letter-spacing:.5px;text-transform:uppercase">Fútbol + política</div>
-          <div style="font-family:'IBM Plex Mono',monospace;font-size:18px;font-weight:500;color:var(--neg)">−72,2</div>
-        </div>
-        <div>
-          <div style="font-size:9px;color:var(--fg-dim);letter-spacing:.5px;text-transform:uppercase">Casa Rosada</div>
-          <div style="font-family:'IBM Plex Mono',monospace;font-size:18px;font-weight:500;color:var(--neg)">−80,5</div>
-        </div>
-        <div>
-          <div style="font-size:9px;color:var(--fg-dim);letter-spacing:.5px;text-transform:uppercase">Milei</div>
-          <div style="font-family:'IBM Plex Mono',monospace;font-size:18px;font-weight:500;color:var(--neg)">−66,9</div>
-        </div>
-        <div>
-          <div style="font-size:9px;color:var(--fg-dim);letter-spacing:.5px;text-transform:uppercase">Emociones</div>
-          <div style="font-size:11px;color:var(--fg);margin-top:3px">Ira <b>36%</b> · Asco <b>31%</b><br>Alegría <b>3%</b></div>
-        </div>
-      </div>
-      <div class="hallazgo-txt">El buen rendimiento deportivo no derramó sentimiento positivo hacia el gobierno.</div>
-    </div>
-
-    <div class="hallazgo" style="border-left-color:var(--neg)">
-      <div class="hallazgo-head">
-        <span style="font-size:12px;font-weight:600">Llaryora bajo fuego cruzado</span>
-        <span class="hallazgo-src">RD · sep-26 · Córdoba</span>
-        <span class="hallazgo-dir h-neg">↓ negativo</span>
-      </div>
-      <div style="margin:6px 0 4px">
-        <div style="font-size:9px;color:var(--fg-dim);letter-spacing:.5px;text-transform:uppercase">ISN Llaryora (Córdoba)</div>
-        <div style="font-family:'IBM Plex Mono',monospace;font-size:28px;font-weight:500;color:var(--neg)">−61</div>
-      </div>
-      <div class="hallazgo-txt">Conversación territorial cordobesa con sentimiento dominantemente negativo hacia el gobernador.</div>
-    </div>
-
-    <div class="hallazgo" style="border-left-color:var(--warn)">
-      <div class="hallazgo-head">
-        <span style="font-size:12px;font-weight:600">Bullrich · Lali · sep-26</span>
-        <span class="hallazgo-src">RD · sep-26 · Nacional</span>
-        <span class="hallazgo-dir h-mix">~ ambivalente</span>
-      </div>
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:6px;margin:6px 0 4px">
-        <div>
-          <div style="font-size:9px;color:var(--fg-dim);letter-spacing:.5px;text-transform:uppercase">Diversión/espectáculo</div>
-          <div style="font-family:'IBM Plex Mono',monospace;font-size:18px;font-weight:500;color:var(--pos)">43%</div>
-        </div>
-        <div>
-          <div style="font-size:9px;color:var(--fg-dim);letter-spacing:.5px;text-transform:uppercase">Reproche/política</div>
-          <div style="font-family:'IBM Plex Mono',monospace;font-size:18px;font-weight:500;color:var(--neg)">27%</div>
-        </div>
-      </div>
-      <div class="hallazgo-txt">Tono predominante de espectáculo; lectura política minoritaria pero consistente.</div>
-    </div>
-
-  </div>
 
   <!-- Serie mensual por fuente -->
-  <p class="sec" style="margin-top:8px">Serie mensual · Reputación Digital · AD HOC · Monitor Digital</p>
+  <details class="det-tab"><summary><b>Serie mensual · Reputación Digital · AD HOC · Monitor Digital</b></summary>
   <div class="chart-wrap" style="padding:0;overflow:hidden">
     <div class="table-wrap" style="margin:0">
       <table id="tableSLSerie">
@@ -911,6 +828,7 @@ footer a{color:var(--accent)}
       </table>
     </div>
   </div>
+  </details>
   <p class="source" style="margin-top:6px;margin-bottom:16px">Serie regular mayo 2026 en adelante · informes de otras fuentes en tabla completa al pie · ⚪ sin dato disponible</p>
 
   <!-- Hallazgos cualitativos -->
@@ -962,31 +880,34 @@ footer a{color:var(--accent)}
   </div>
 
   <div class="chart-wrap">
-    <div class="chart-head"><div><h3>Informes SL por mes</h3><p>Ene–Oct 2026 · 4 informes Ene-26 = evento puntual (Maduro) · serie regular desde May-26</p></div></div>
+    <div class="chart-head"><div><h3>Informes SL por mes</h3><p>Ene–Nov 2026 (nov: corte parcial 11/11) · 4 informes Ene-26 = evento puntual (Maduro) · serie regular desde May-26</p></div></div>
     <div class="chart-box"><canvas id="chartSLMes"></canvas></div>
   </div>
 
   <div class="chart-wrap">
-    <div class="chart-head"><div><h3>Informes SL por consultora</h3><p>Ene–Oct 2026</p></div></div>
+    <div class="chart-head"><div><h3>Informes SL por consultora</h3><p>Ene–Nov 2026 (nov: corte parcial)</p></div></div>
     <div class="chart-box" style="height:220px"><canvas id="chartSLConsult"></canvas></div>
   </div>
 
   <div class="chart-wrap">
     <div class="chart-head">
       <div>
-        <h3>Registro completo de informes SL</h3>
+        <h3>Registro completo de informes SL · por consultora</h3>
         <p style="margin-top:4px">
           <a href="https://drive.google.com/drive/folders/1SDS2YXZCqEuwdIzkRhF3JYGR13S9NMvJ" target="_blank" rel="noopener" style="color:var(--fg-dim);text-decoration:underline;text-underline-offset:2px;font-size:11px">Estado de cobertura SL ↗</a>
         </p>
       </div>
     </div>
-    <div class="table-wrap">
-      <table>
-        <thead><tr><th>Mes</th><th>Consultora</th><th>Informe</th><th>Tipo</th></tr></thead>
-        <tbody id="slRows"></tbody>
-      </table>
-    </div>
+    <div class="chart-box" id="slRegBox" style="height:320px"><canvas id="chartSLRegistro"></canvas></div>
+    <div class="legend" id="legendSLRegistro"></div>
+    <div id="slRegGrupos" class="slreg"></div>
+    <p class="source">Agrupado por consultora (variantes de nombre unificadas) · barras: informes por mes · ↗ abre el informe en Drive · «gráficos»: lleva al gráfico de esta sección que usa ese proveedor · los informes de distintas consultoras no se comparan ni se suman como serie.</p>
   </div>
+  <div class="evolc-box" data-evolc="sl"></div>
+  <details class="det-fin" data-fin="sl"><summary>Detalle por fuente y trazabilidad · <span class="det-fin-n" data-finn="sl"></span></summary>
+    <div class="upd-box" data-upd="sl"></div>
+    <div class="evol-box" data-evol="sl"></div>
+  </details>
 </section>
 
 <!-- ── TAB 6: GAP CONV–SL ────────────────────── -->
@@ -1118,36 +1039,12 @@ footer a{color:var(--accent)}
     <div class="explore-body">CONV muestra aprobación estable (43%); SL detecta 38%, posiblemente influido por picos de crítica en eventos puntuales (decretos, tarifas). La divergencia puede ser temporal: el promedio mensual SL suaviza picos que la encuesta no captura si su trabajo de campo ocurrió en otro momento del mes. No clasificar como divergente definitivo — monitorear en el próximo corte.</div>
   </div>
 
-  <!-- GRUPO: Intención de voto (proxy) -->
-  <div class="gap-zone-group" style="margin-top:18px">
-    <div style="display:flex;align-items:baseline;gap:8px;margin-bottom:8px;padding-left:2px">
-      <div class="gap-zone-title" style="margin-bottom:0">Intención de voto</div>
-      <span style="font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:.4px;padding:2px 8px;border-radius:10px;background:color-mix(in srgb,var(--fg-dim) 12%,transparent);color:var(--fg-dim);font-weight:600">PROXY — SL no mide voto directo</span>
-    </div>
-    <div class="gap-zone-cards">
-
-      <div class="gap-card zn">
-        <div class="gap-card-label">Intención voto LLA</div>
-        <div class="gap-card-avg sm">—</div>
-        <div class="gap-card-sources">
-          <span style="color:var(--c1)">CONV 34</span><span style="color:var(--fg-dim)">·</span><span style="color:var(--fg-dim)">SL s/d</span>
-        </div>
-        <div class="gap-card-ev"><span class="gap-delta-badge dn">sin dato SL</span></div>
-      </div>
-
-      <div class="gap-card zn">
-        <div class="gap-card-label">Escenario 2027</div>
-        <div class="gap-card-avg sm">—</div>
-        <div class="gap-card-sources">
-          <span style="color:var(--fg-dim)">CONV s/d</span><span style="color:var(--fg-dim)">·</span><span style="color:var(--c4)">SL 52</span>
-        </div>
-        <div class="gap-card-ev"><span class="gap-delta-badge dn">sin dato CONV</span></div>
-      </div>
-
-    </div>
-  </div>
-
   <p class="source" style="margin-top:12px">★ mayor convergencia = Agenda: inflación e inseguridad (Δ3) · ▲ mayor divergencia = Agenda: desempleo (Δ11) · ⚑ hallazgo para explorar = indicadores con explicación analítica pendiente · Datos estimados may–sep 2026 · comparabilidad MEDIA–ALTA salvo donde se indica · no promediar capas</p>
+  <div class="evolc-box" data-evolc="gap"></div>
+  <details class="det-fin" data-fin="gap"><summary>Detalle por fuente y trazabilidad · <span class="det-fin-n" data-finn="gap"></span></summary>
+    <div class="upd-box" data-upd="gap"></div>
+    <div class="evol-box" data-evol="gap"></div>
+  </details>
 </section>
 
 <!-- ── TAB 7: SEMÁFORO ───────────────────────── -->
@@ -1168,7 +1065,7 @@ footer a{color:var(--accent)}
   </div>
 
   <!-- BLOQUE NACIONAL -->
-  <p class="sec" style="margin-top:0">Nacional</p>
+  <details class="det-tab" open><summary><b>Nacional</b></summary>
   <div class="table-wrap" style="margin-bottom:20px">
   <table>
     <thead><tr><th>Indicador</th><th>Estado</th><th>Último dato</th><th>Referencia</th><th>Evidencia</th><th>Nota</th></tr></thead>
@@ -1240,9 +1137,10 @@ footer a{color:var(--accent)}
     </tbody>
   </table>
   </div>
+  </details>
 
   <!-- BLOQUE ELECTORAL -->
-  <p class="sec">Electoral</p>
+  <details class="det-tab"><summary><b>Electoral</b></summary>
   <div class="table-wrap" style="margin-bottom:20px">
   <table>
     <thead><tr><th>Indicador</th><th>Estado</th><th>Último dato</th><th>Referencia</th><th>Evidencia</th><th>Nota</th></tr></thead>
@@ -1282,9 +1180,10 @@ footer a{color:var(--accent)}
     </tbody>
   </table>
   </div>
+  </details>
 
   <!-- BLOQUE TERRITORIAL -->
-  <p class="sec">Territorial</p>
+  <details class="det-tab"><summary><b>Territorial</b></summary>
   <div class="table-wrap" style="margin-bottom:20px">
   <table>
     <thead><tr><th>Indicador</th><th>Estado</th><th>Último dato</th><th>Referencia</th><th>Evidencia</th><th>Nota</th></tr></thead>
@@ -1316,6 +1215,38 @@ footer a{color:var(--accent)}
     </tbody>
   </table>
   </div>
+  </details>
+
+  <!-- CONTEXTO TERRITORIAL · GOBIERNOS LOCALES (TEM) -->
+  <div class="chart-wrap" style="margin-bottom:20px">
+    <div class="chart-head">
+      <div><h3>Contexto territorial · gobiernos locales · «municipalización de la crisis»</h3><p>Pulso Social · nov-26 · estudio cualitativo (20 entrevistas a intendentes y funcionarios) · capa TEM: contexto, no se cruza con encuestas</p></div>
+      <span class="signal mix">TEM · cualitativo</span>
+    </div>
+    <div class="ps-grid">
+      <div class="ps-box">
+        <div class="ps-lbl">Dónde y a quién</div>
+        <div class="ps-big">20 <small>entrevistas en profundidad</small></div>
+        <div class="ps-chips"><span class="ps-chip">Córdoba</span><span class="ps-chip">Santa Fe</span><span class="ps-chip">Entre Ríos</span><span class="ps-chip">Provincia de Buenos Aires</span></div>
+        <div class="ps-lbl" style="margin-top:10px">Escala de los municipios (habitantes)</div>
+        <div class="ps-tramos"><div class="ps-tramo">&lt;30 mil</div><div class="ps-tramo">30–70 mil</div><div class="ps-tramo">70–300 mil</div><div class="ps-tramo">300 mil–1 M</div><div class="ps-tramo">&gt;1 M</div></div>
+      </div>
+      <div class="ps-box">
+        <div class="ps-lbl">La tensión que describe el estudio</div>
+        <div class="ps-gap">
+          <div class="ps-gap-a">Responsabilidad<br>percibida</div>
+          <div class="ps-gap-m"><svg viewBox="0 0 120 30" width="100%" height="30" aria-hidden="true"><line x1="4" y1="15" x2="116" y2="15" stroke="var(--neg)" stroke-width="2" stroke-dasharray="4 3"/><path d="M4 15 l8 -6 M4 15 l8 6 M116 15 l-8 -6 M116 15 l-8 6" stroke="var(--neg)" stroke-width="2" fill="none"/></svg><span>distancia</span></div>
+          <div class="ps-gap-b">Capacidad<br>efectiva</div>
+        </div>
+        <div class="ps-txt">Problemas de otros niveles del Estado llegan al municipio como «primera puerta», sin más competencias ni recursos.</div>
+        <div class="ps-lbl" style="margin-top:10px">Cómo responden los liderazgos</div>
+        <div class="ps-mods"><div class="ps-mod"><span class="ps-mod-n">1</span><b>Absorber</b></div><div class="ps-mod"><span class="ps-mod-n">2</span><b>Mediar</b></div><div class="ps-mod"><span class="ps-mod-n">3</span><b>Derivar</b></div><div class="ps-mod"><span class="ps-mod-n">4</span><b>Delimitar</b></div></div>
+      </div>
+    </div>
+    <div class="ps-lbl" style="margin:14px 0 6px">Cinco trayectorias de legitimidad local <span style="font-weight:400;text-transform:none;letter-spacing:0">· esquema ilustrativo del estudio, sin datos numéricos</span></div>
+    <div class="ps-trays"><div class="ps-tray"><div class="ps-tray-h"><svg viewBox="0 0 60 24" width="60" height="24" aria-hidden="true"><path d="M2 18 L14 6 L26 16 L38 5 L50 17 L58 12" fill="none" stroke="var(--warn)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><b>Volátil</b></div><div class="ps-tray-t">sube con recursos y obras, cae cuando el impulso se debilita</div></div><div class="ps-tray"><div class="ps-tray-h"><svg viewBox="0 0 60 24" width="60" height="24" aria-hidden="true"><path d="M2 7 L20 6 L38 8 L58 7" fill="none" stroke="var(--pos)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><b>Sedimentada</b></div><div class="ps-tray-t">confianza acumulada; atraviesa coyunturas sin perder todo su capital</div></div><div class="ps-tray"><div class="ps-tray-h"><svg viewBox="0 0 60 24" width="60" height="24" aria-hidden="true"><path d="M2 14 L20 14 L38 13 L58 14" fill="none" stroke="var(--fg-dim)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><b>Estancada</b></div><div class="ps-tray-t">estable, sin cambios pese a los esfuerzos de gestión</div></div><div class="ps-tray"><div class="ps-tray-h"><svg viewBox="0 0 60 24" width="60" height="24" aria-hidden="true"><path d="M2 20 L20 16 L38 11 L58 5" fill="none" stroke="var(--c2)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><b>En construcción</b></div><div class="ps-tray-t">los resultados empiezan a modificar la percepción</div></div><div class="ps-tray"><div class="ps-tray-h"><svg viewBox="0 0 60 24" width="60" height="24" aria-hidden="true"><path d="M2 4 L20 4 L38 9 L58 18" fill="none" stroke="var(--neg)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><b>Erosionada</b></div><div class="ps-tray-t">trayectoria larga y dominante que empieza a desgastarse</div></div></div>
+    <p class="source">Pulso Social, «Municipalización de crisis y construcción de legitimidad» (láminas 2–6 y 20–22; trayectorias según el texto del estudio) · municipios anonimizados · sin fechas de campo informadas · base maestra filas 372–373 · <a href="https://drive.google.com/file/d/1gxt2w4KZpz-TUBZh1R__mncgAPDWRY_q/view" target="_blank" rel="noopener">informe ↗</a></p>
+  </div>
 
   <!-- BLOQUE ALERTAS -->
   <p class="sec">Alertas activas</p>
@@ -1341,7 +1272,12 @@ footer a{color:var(--accent)}
     <div class="hallazgo-txt">CONV registra desempleo en 29% de menciones como problema; SL solo 18%. Brecha de 11 p.p. sin explicación metodológica confirmada. Ver tab GAP CONV–SL para detalle. No resolver por promedio.</div>
   </div>
 
-  <p class="source" style="margin-top:16px">Semáforo v12.1 · fuente: 07_comparacion_intermensual.md · evidencia derivada de 281+ documentos Nivel 1 / 1.267+ filas Nivel 2 · may–oct 2026 · IPCBA oct-26 cargado 06-nov-2026</p>
+  <p class="source" style="margin-top:16px">Semáforo v12.1 (texto may–oct; novedades oct–nov arriba, generadas desde las bases) · fuente: 07_comparacion_intermensual.md · evidencia derivada de 281+ documentos Nivel 1 / 1.267+ filas Nivel 2 · may–oct 2026 · IPCBA oct-26 cargado 06-nov-2026</p>
+  <div class="evolc-box" data-evolc="semaforo"></div>
+  <details class="det-fin" data-fin="semaforo"><summary>Detalle por fuente y trazabilidad · <span class="det-fin-n" data-finn="semaforo"></span></summary>
+    <div class="upd-box" data-upd="semaforo"></div>
+    <div class="evol-box" data-evol="semaforo"></div>
+  </details>
 </section>
 
 <!-- ── TAB 8: AGENDA PÚBLICA ─────────────────── -->
@@ -1349,54 +1285,67 @@ footer a{color:var(--accent)}
   <p class="sec">Agenda pública · principales problemas</p>
 
   <div class="info-box" style="margin-bottom:16px;font-size:11px;line-height:1.6">
-    <strong>Hallazgo más robusto del período</strong>: cambio de agenda documentado por 6 fuentes independientes. <strong>Ingresos / empleo / salarios</strong> desplaza a inflación como preocupación principal. En OPSA (sep-26), inflación quedó <em>última</em> de la lista. Evidencia ALTA.
+    <strong>Hallazgo más robusto del período</strong>: <strong>ingresos / empleo / salarios</strong> desplaza a inflación como preocupación principal (6 fuentes may–sep). Octubre lo confirma: Proyección ubica <em>bajos ingresos</em> #1 (51,3 %) e inflación #3 (29,2 %); CELAG, <em>economía del día a día</em> #1 (45,4 %). Evidencia ALTA. Nov-26: sin mediciones de agenda cargadas al 12/11.
   </div>
 
   <!-- KPIs ranking actual -->
   <div class="kpi-grid" style="grid-template-columns:repeat(auto-fit,minmax(140px,1fr));margin-bottom:20px">
     <div class="kpi" style="border-top:3px solid var(--neg)">
-      <div class="kpi-label">#1 · sep-26</div>
-      <div class="kpi-num" style="font-size:18px;line-height:1.3">Ingresos / empleo</div>
-      <div class="kpi-meta"><span class="kpi-sub">OPSA, Equipo Mide, D'Alessio</span></div>
+      <div class="kpi-label">#1 · oct-26</div>
+      <div class="kpi-num" style="font-size:18px;line-height:1.3">Ingresos bajos</div>
+      <div class="kpi-meta"><span class="kpi-sub">Proyección 51,3 % · CELAG: economía cotidiana 45,4 %</span></div>
     </div>
     <div class="kpi" style="border-top:3px solid var(--warn)">
-      <div class="kpi-label">#2 · sep-26</div>
+      <div class="kpi-label">#2 · oct-26</div>
       <div class="kpi-num" style="font-size:18px;line-height:1.3">Inseguridad</div>
-      <div class="kpi-meta"><span class="kpi-sub">Isasi-Burdman, CB Global</span></div>
+      <div class="kpi-meta"><span class="kpi-sub">Proyección 40,5 % · CELAG 22,2 %</span></div>
     </div>
     <div class="kpi" style="border-top:3px solid var(--fg-dim)">
-      <div class="kpi-label">#3 · sep-26</div>
+      <div class="kpi-label">#3 · oct-26</div>
       <div class="kpi-num" style="font-size:18px;line-height:1.3">Inflación</div>
-      <div class="kpi-meta"><span class="kpi-sub">↓ desde #1 en may-26</span></div>
+      <div class="kpi-meta"><span class="kpi-sub">Proyección 29,2 % · ↓ desde #1 en may-26</span></div>
     </div>
     <div class="kpi" style="border-top:3px solid var(--c2)">
       <div class="kpi-label">Fuentes</div>
-      <div class="kpi-num">6</div>
-      <div class="kpi-meta"><span class="kpi-sub">confirmando la tendencia</span></div>
+      <div class="kpi-num">8</div>
+      <div class="kpi-meta"><span class="kpi-sub">6 may–sep + 2 oct · confirman la tendencia</span></div>
     </div>
   </div>
 
   <!-- Gráfico: agenda pública comparativa -->
   <div class="chart-wrap">
     <div class="chart-head">
-      <div><h3>Agenda pública · ranking comparativo sep-26</h3><p>% de menciones como problema principal · respuesta espontánea o guiada según consultora</p></div>
+      <div><h3>Agenda pública · ranking comparativo sep-26 (oct-26 por consultora, abajo)</h3><p>% de menciones como problema principal · respuesta espontánea o guiada según consultora</p></div>
     </div>
     <div class="chart-box" style="height:260px"><canvas id="chartAgenda"></canvas></div>
     <p class="source">Realle Dalla Torre, Isasi-Burdman, Equipo Mide, D'Alessio, Explanans, OPSA · sep-26 · respuesta múltiple en varios casos: porcentajes no suman 100</p>
   </div>
+  <div class="evolc-box" data-evolc="agenda"></div>
 
   <!-- Serie inflación como problema -->
   <div class="chart-wrap">
     <div class="chart-head">
-      <div><h3>Inflación como problema principal · evolución may–sep 2026</h3><p>Serie intra-consultora · comparabilidad MEDIA entre fuentes</p></div>
+      <div><h3>Inflación como problema principal · evolución may–oct 2026</h3><p>Serie intra-consultora · comparabilidad MEDIA entre fuentes</p></div>
     </div>
     <div class="chart-box"><canvas id="chartInflProb"></canvas></div>
     <div class="legend" id="legendInflProb"></div>
-    <p class="source">Isasi-Burdman, Equipo Mide, OPSA · may–sep 2026 · no promediar: escalas y metodologías distintas</p>
+    <p class="source">Isasi-Burdman, Equipo Mide, OPSA · may–sep 2026 · D'Alessio (sep, N2 1169) y Proyección (oct, N2 1135): respuesta múltiple, primera medición en la serie · no promediar: escalas y metodologías distintas</p>
   </div>
 
-  <!-- Tabla detallada por fuente -->
-  <p class="sec" style="margin-top:4px">Detalle por consultora · sep-26</p>
+  <!-- Tablas por consultora · desplegables -->
+  <details class="det-tab"><summary><b>Detalle por consultora · oct-26</b> · 2 fuentes · N2 1133–1137, 1145–1147</summary>
+  <div class="table-wrap">
+  <table>
+    <thead><tr><th>Consultora</th><th>Campo</th><th>#1</th><th>#2</th><th>#3</th><th>Tipo pregunta</th><th>Comparabilidad</th></tr></thead>
+    <tbody>
+      <tr><td>Proyección</td><td class="num">1–13 oct</td><td><strong>Bajos ingresos 51,3</strong></td><td>Inseguridad 40,5</td><td>Inflación 29,2</td><td>Múltiple (hasta 3)</td><td><span class="signal mix">MEDIA</span></td></tr>
+      <tr><td>CELAG</td><td class="num">30 sep–20 oct</td><td><strong>Economía del día a día 45,4</strong></td><td>Inseguridad 22,2</td><td>—</td><td>Única guiada</td><td><span class="signal mix">MEDIA</span></td></tr>
+      <tr><td>CELAG · problema económico cotidiano</td><td class="num">30 sep–20 oct</td><td><strong>Ingresos bajos 37,4</strong></td><td>—</td><td>—</td><td>Única guiada (económica)</td><td><span class="signal mix">BAJA</span></td></tr>
+    </tbody>
+  </table>
+  </div>
+  </details>
+  <details class="det-tab"><summary><b>Detalle por consultora · sep-26</b> · 6 fuentes</summary>
   <div class="table-wrap">
   <table>
     <thead><tr><th>Consultora</th><th>Campo</th><th>#1</th><th>#2</th><th>#3</th><th>Tipo pregunta</th><th>Comparabilidad</th></tr></thead>
@@ -1434,26 +1383,32 @@ footer a{color:var(--accent)}
     </tbody>
   </table>
   </div>
+  </details>
 
   <!-- Hallazgo analítico -->
   <div class="hallazgo" style="margin-top:20px;border-left-color:var(--warn)">
     <div class="hallazgo-head">
       <span class="hallazgo-dir h-mix">CAMBIO DE AGENDA</span>
-      <span class="hallazgo-src">Evidencia ALTA · 6 fuentes</span>
+      <span class="hallazgo-src">Evidencia ALTA · 8 fuentes may–oct</span>
     </div>
     <div class="hallazgo-txt">
-      En mayo 2026, <strong>inflación era el problema #1</strong> en la mayoría de las mediciones. En septiembre, <strong>ingresos / empleo / salarios</strong> lidera en al menos 4 de 6 consultoras. El desplazamiento es consistente con la baja del IPC mensual a ~1,8% y el deterioro de expectativas de ingreso real documentado por D'Alessio y UDESA.<br><br>
+      En mayo 2026, <strong>inflación era el problema #1</strong> en la mayoría de las mediciones. En septiembre, <strong>ingresos / empleo / salarios</strong> lidera en al menos 4 de 6 consultoras; en octubre lidera en las 2 fuentes con dato (Proyección, CELAG). El desplazamiento es consistente con la baja del IPC mensual a ~1,8% y el deterioro de expectativas de ingreso real documentado por D'Alessio y UDESA.<br><br>
       <em>Implicancia política</em>: el problema que el gobierno está resolviendo (inflación) dejó de ser el problema que más preocupa a la ciudadanía. La agenda de demanda social se trasladó hacia el poder adquisitivo.
     </div>
   </div>
 
-  <p class="source" style="margin-top:16px">Fuentes: Realle Dalla Torre, M&amp;F, Isasi-Burdman, UDESA, Explanans, OPSA · may–sep 2026 · respuesta espontánea y guiada: no comparar porcentajes como equivalentes</p>
+  <p class="source" style="margin-top:16px">Fuentes: Realle Dalla Torre, M&amp;F, Isasi-Burdman, UDESA, Explanans, OPSA · may–sep 2026 · Proyección, CELAG · oct-26 · respuesta espontánea y guiada: no comparar porcentajes como equivalentes</p>
+  <details class="det-fin" data-fin="agenda"><summary>Detalle por fuente y trazabilidad · <span class="det-fin-n" data-finn="agenda"></span></summary>
+    <div class="upd-box" data-upd="agenda"></div>
+    <div class="evol-box" data-evol="agenda"></div>
+  </details>
 </section>
 
+  <details class="nota-metod" id="notaSecundaria"><summary>Nota metodológica · uso de fuentes secundarias</summary><div id="notaSecBody"></div></details>
 </main>
 
 <footer>
-  Monitor AR · oct-26 · actualizado 06-nov-2026 · uso interno ·
+  Monitor AR · nov-26 (corte parcial 11/11) · datos: data/radar_data.json generado desde las bases · uso interno ·
   <a href="https://ivannatravaini.netlify.app/metodologia" target="_blank">metodología ↗</a>
 </footer>
 
@@ -1464,6 +1419,35 @@ footer a{color:var(--accent)}
 .mes-contenido-anterior{display:none}
 .btn-ver-anteriores{background:color-mix(in srgb,var(--fg-dim) 10%,transparent);border:1px solid var(--border);color:var(--fg-dim);font:500 10px 'IBM Plex Mono',monospace;padding:5px 12px;border-radius:var(--r);cursor:pointer;letter-spacing:.4px;margin-top:8px;margin-bottom:4px}
 .btn-ver-anteriores:hover{background:color-mix(in srgb,var(--fg-dim) 18%,transparent)}
+/* ── NOVEDADES POR MES · COBERTURA (nov-26) ── */
+.mes-bar{background:var(--surface);border-bottom:1px solid var(--border);padding:6px 20px}
+.mes-bar-inner{max-width:920px;margin:0 auto;display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.mes-bar-lbl{font:600 10px 'IBM Plex Mono',monospace;letter-spacing:.6px;text-transform:uppercase;color:var(--fg-dim);margin-right:4px}
+.mes-btn{background:transparent;border:1px solid var(--border);color:var(--fg);font:500 12px 'IBM Plex Sans',sans-serif;padding:6px 12px;border-radius:var(--r);cursor:pointer;min-height:36px}
+.mes-btn em{font-style:normal;font-size:10px;color:var(--warn);margin-left:4px}
+.mes-btn.active{border-color:var(--accent);background:color-mix(in srgb,var(--accent) 14%,transparent);font-weight:600}
+.mes-btn:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.upd{border:1px solid var(--border);border-left:3px solid var(--accent);border-radius:var(--r);padding:10px 14px;margin-bottom:20px;background:color-mix(in srgb,var(--accent) 4%,transparent)}
+.upd summary{cursor:pointer;font-size:12px;color:var(--fg-dim)}
+.upd-badge{font:600 10px 'IBM Plex Mono',monospace;letter-spacing:.4px;text-transform:uppercase;color:var(--accent);margin-right:6px}
+.upd-list{list-style:none;margin:10px 0 4px;padding:0;display:grid;gap:6px}
+.upd-it{font-size:12.5px;line-height:1.45;padding:6px 8px;border-radius:6px;background:var(--surface)}
+.upd-it.pend{background:color-mix(in srgb,var(--warn) 8%,transparent)}
+.upd-it.ret{background:color-mix(in srgb,var(--neg) 8%,transparent)}
+.upd-tag{display:inline-block;font:600 9px 'IBM Plex Mono',monospace;text-transform:uppercase;letter-spacing:.4px;padding:1px 6px;border-radius:8px;border:1px solid var(--border);margin-right:6px;color:var(--fg-dim)}
+.upd-it.secu{border-left:3px dashed var(--warn)}.upd-nov{font-size:12px;color:var(--fg-dim);margin:6px 0}.slreg-g{border-bottom:1px solid var(--border);padding:6px 2px}.slreg-g summary{cursor:pointer;font-size:12px}.slreg-n{color:var(--fg-dim);font-size:11px;margin-left:6px}.slreg-graf{font-size:11px;margin-left:8px}.slreg-g ul{margin:6px 0 4px 16px;padding:0;font-size:12px;line-height:1.6}.slreg-mes{font-family:'IBM Plex Mono',monospace;font-size:10px;color:var(--fg-dim);margin-right:4px}.slreg-nolink{color:var(--fg-dim);font-size:10px}.nota-metod{max-width:920px;margin:24px auto 8px;padding:10px 14px;border:1px solid var(--border);border-radius:8px;font-size:12px;color:var(--fg-dim)}.nota-metod>summary{cursor:pointer;font-weight:600;font-size:11px;letter-spacing:.5px;text-transform:uppercase}.nota-metod p{margin:8px 0;line-height:1.5}.nota-metod td{font-size:11px;vertical-align:top}.nota-metod td:nth-child(2){white-space:nowrap}.ps-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px}.ps-box{border:1px solid var(--border);border-radius:8px;padding:10px 12px}.ps-lbl{font-size:10px;font-weight:600;letter-spacing:.5px;text-transform:uppercase;color:var(--fg-dim)}.ps-big{font-family:'IBM Plex Mono',monospace;font-size:26px;margin:4px 0 6px}.ps-big small{font-family:'IBM Plex Sans',sans-serif;font-size:12px;color:var(--fg-dim)}.ps-chips{display:flex;flex-wrap:wrap;gap:6px}.ps-chip{font-size:11px;padding:3px 9px;border-radius:12px;border:1px solid var(--c2);color:var(--c2)}.ps-tramos{display:grid;grid-template-columns:repeat(5,1fr);gap:4px;margin-top:6px}.ps-tramo{font-size:10.5px;text-align:center;padding:5px 2px;border-radius:4px;background:color-mix(in srgb,var(--c2) 14%,transparent)}.ps-gap{display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:8px;margin:8px 0}.ps-gap-a,.ps-gap-b{font-size:11.5px;font-weight:600;text-align:center}.ps-gap-m{text-align:center;font-size:10px;color:var(--neg)}.ps-txt{font-size:12px;line-height:1.45}.ps-mods{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin-top:6px}.ps-mod{font-size:12px;text-align:center;padding:6px 4px;border:1px solid var(--border);border-radius:6px}.ps-mod-n{display:block;font-family:'IBM Plex Mono',monospace;font-size:10px;color:var(--fg-dim)}.ps-trays{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:8px}.ps-tray{border:1px solid var(--border);border-radius:8px;padding:8px 10px}.ps-tray-h{display:flex;align-items:center;gap:8px;font-size:12.5px}.ps-tray-t{font-size:11px;color:var(--fg-dim);margin-top:4px;line-height:1.4}.det-var,.det-tab{border:1px solid var(--border);border-radius:8px;padding:6px 12px;margin:0 0 8px}.det-var>summary,.det-tab>summary{cursor:pointer;font-size:12px;padding:4px 0}.det-var .table-wrap,.det-tab .table-wrap{margin-top:6px}.cob-sec{font-size:11.5px;color:var(--fg-dim);margin:6px 0 4px}.cob-sec b{color:var(--fg)}.det-fin{margin:18px 0 8px;border:1px solid var(--border);border-radius:8px;padding:8px 12px}.det-fin>summary{cursor:pointer;font-size:11px;font-weight:600;letter-spacing:.5px;text-transform:uppercase;color:var(--fg-dim)}.evol-na{color:var(--fg-dim)}.evol-sec{color:var(--warn)}.evol-nota{font-size:10.5px;color:var(--fg-dim);margin-top:2px}.evol-pdf{font-size:10px;text-decoration:none}.evol-ev{font-size:10px;font-weight:600;padding:1px 6px;border-radius:8px;border:1px solid var(--border)}.ev-ALTA{color:var(--pos)}.ev-MEDIA{color:var(--warn)}.ev-BAJA{color:var(--fg-dim)}.tl-sec{color:var(--warn)}td.num,th.num{text-align:right;white-space:nowrap}.sec-note{display:block;margin-top:3px;color:var(--warn);font-size:11px;line-height:1.35}.sec-note a{color:inherit}
+.upd-it.punt .upd-tag{color:var(--c2);border-color:var(--c2)}
+.upd-it.pend .upd-tag{color:var(--warn);border-color:var(--warn)}
+.upd-mod{font-size:11px;color:var(--fg-dim);margin-right:2px}
+.upd-val{font-family:'IBM Plex Mono',monospace;font-weight:600}
+.upd-ant,.upd-nota,.upd-need{font-size:11px;color:var(--fg-dim)}
+.upd-ref{display:block;font-size:10.5px;color:var(--fg-dim);font-family:'IBM Plex Mono',monospace;margin-top:2px}
+.upd-ref a{color:var(--accent)}
+.upd-empty,.upd-foot{font-size:11px;color:var(--fg-dim);margin:8px 0 0}
+.cob-table td{vertical-align:top;font-size:12px}
+.cob-f{font-size:10.5px;color:var(--fg-dim);font-family:'IBM Plex Mono',monospace}
+.cob-p div{margin-bottom:3px}
+@media(max-width:640px){.mes-btn{min-height:44px}.upd-it{font-size:13px}.cob-table{min-width:640px}}
 </style>
 <script>
 /* ── THEME ─────────────────────────────────── */
@@ -1492,7 +1476,7 @@ document.querySelectorAll('.tab-btn').forEach(btn=>{
     initTab(btn.dataset.tab);
   });
 });
-(function(){const h=location.hash.replace('#','');if(h){const b=document.querySelector(`[data-tab="${h}"]`);if(b)b.click();}})();
+function applyHash(){const h=location.hash.replace('#','');if(h){const b=document.querySelector(`[data-tab="${h}"]`);if(b)b.click();}}
 
 /* ── MES ACCORDION ─────────────────────────── */
 function toggleMesAnterior(id){
@@ -1523,140 +1507,9 @@ function toggleDataset(chartId,idx){
   if(items[idx]) items[idx].classList.toggle('muted',!hidden);
 }
 
-/* ── DATA ──────────────────────────────────── */
-const MESI=['Sep-25','Oct-25','Nov-25','Dic-25','Ene-26','Feb-26','Mar-26','Abr-26','May-26','Jun-26','Jul-26','Ago-26','Sep-26','Oct-26'];
-const MIPC=['Sep-25','Oct-25','Nov-25','Dic-25','Ene-26','Feb-26','Mar-26','Abr-26','May-26','Jun-26','Jul-26','Ago-26','Sep-26','Oct-26'];
-const IPC=[2.1,2.3,2.5,2.8,2.9,2.9,3.4,2.6,2.1,1.9,2.1,1.7,1.9,null]; // oct-26: sin dato INDEC aún
-const ICC=[39.8,42.3,46.0,45.6,46.6,44.4,42.0,39.6,40.1,42.7,40.7,40.2,41.18,41.52]; // oct-26: 41,52 · CIF/UTDT · campo 5-16 oct
-const ICG=[1.9,2.1,2.5,2.5,2.4,2.4,2.3,2.0,2.0,2.1,1.9,2.1,1.9,1.95]; // oct-26: informe ICG UTDT Escuela de Gobierno, 1,95; +0,9% m/m. Historia previa conserva redondeo original.
-
-/* INFLACIÓN — series combinadas */
-// Labels: abarca sep-25 → oct-26 (14 puntos); IPC Nacional hasta sep-26 (null en oct)
-const MINFL=['Sep-25','Oct-25','Nov-25','Dic-25','Ene-26','Feb-26','Mar-26','Abr-26','May-26','Jun-26','Jul-26','Ago-26','Sep-26','Oct-26'];
-// IPC INDEC nacional: sep-25→sep-26 completo (1,9% sep-26 · INDEC 13-oct-2026); oct-26 pendiente ~12 nov
-const IPC_FULL=[2.1,2.3,2.5,2.8,2.9,2.9,3.4,2.6,2.1,1.9,2.1,1.7,1.9,null];
-// IPCBA IDECBA CABA: may-26→oct-26 (1,9% oct-26 · IDECBA 06-nov-2026)
-const IPCBA_FULL=[2.2,2.2,2.4,2.7,3.1,2.6,3.0,2.5,2.1,1.8,2.9,1.7,1.8,1.9];
-// Brecha (may-oct; oct null hasta IPC Nacional oct-26)
-const MBRECHA=['May-26','Jun-26','Jul-26','Ago-26','Sep-26','Oct-26'];
-const BRECHA=[0.0,-0.1,0.8,0.0,-0.1,null]; // IPCBA − IPC; oct null: IPC Nacional oct no publicado
-
-const TIPCBA_MES=['May-26','Jun-26','Jul-26','Ago-26','Sep-26','Oct-26'];
-const TIPCBA_IA=[33.1,32.6,33.2,33.3,32.9,32.5];
-const TIPCBA_BIENES=[2.0,1.5,1.4,1.6,1.6,1.9];
-const TIPCBA_SERV=[2.2,2.0,3.8,1.8,2.0,1.9];
-const TIPCBA_ESTAC=[0.1,0.1,10.9,-2.9,2.3,3.3];
-const TIPCBA_REG=[2.8,2.0,3.0,1.8,2.1,1.8];
-const TIPCBA_VAR=[2.1,1.8,2.9,1.7,1.8,1.9];
-const TIPCBA_ACUM=[14.0,16.0,19.4,21.5,23.7,26.1];
-const MIPCACUM=['Ene-26','Feb-26','Mar-26','Abr-26','May-26','Jun-26','Jul-26','Ago-26','Sep-26','Oct-26'];
-const IPC_ACUM=[2.9,5.9,9.4,12.3,14.7,16.8,19.3,21.3,23.6,null];       // INDEC acum. ene-sep; oct pendiente
-const IPCBA_ACUM_FULL=[3.1,5.8,9.0,11.7,14.0,16.0,19.4,21.5,23.7,26.1];  // IPCBA acum. ene-oct
-const BRECHA_ACUM=[null,null,null,null,-0.7,-0.8,0.1,0.2,0.1,null];     // diferencial (IPCBA−INDEC); oct null
-const MIIA=['May-26','Jun-26','Jul-26','Ago-26','Sep-26','Oct-26'];
-const IPC_IA=[33.2,33.5,33.8,33.5,33.4,null];
-// Per-index acum+IA (10-point axis: Ene-26→Oct-26)
-const IPC_IA_9=[null,null,null,null,33.2,33.5,33.8,33.5,33.4,null];
-const IPCBA_ACUM_9=[3.1,5.8,9.0,11.7,14.0,16.0,19.4,21.5,23.7,26.1];
-const IPCBA_IA_9=[null,null,null,null,33.1,32.6,33.2,33.3,32.9,32.5];
-// CIF/UTDT regional — 14-month axis (Sep-25 → Oct-26)
-const ICC_CABA_13=[null,null,null,null,null,null,null,null,null,null,null,null,37.16,39.68]; // oct-26: +6,77% m/m
-const ICC_INT_13=[null,null,null,null,null,null,null,null,null,null,null,null,46.11,46.00];  // oct-26: −0,25% m/m
-// GBA disponible en oct: 39,49 (−0,14%)
-const ICC_GBA_14=[null,null,null,null,null,null,null,null,null,null,null,null,null,39.49];
-
-const MV=['Feb-26','Mar-26','Abr-26','May-26','Jun-26','Jul-26','Ago-26','Sep-26','Oct-26'];
-const CONS={
-  Synopsis:  {color:'var(--c1)',lla:[null,null,null,30.3,null,33.9,null,35.5,33.6],pj:[null,null,null,32.9,null,33.9,null,35.7,32.7]},
-  Proyección:{color:'var(--c2)',lla:[43.6,null,34,32.3,34.8,34.8,32.5,35,null],  pj:[35.9,null,32.8,36,33.7,33.7,36.6,31.9,null]},
-  Isasi:     {color:'var(--c3)',lla:[null,null,44,40,40,35,40,null,null],           pj:[null,null,21,24,23,23,27,null,null]},
-  'Eq. Mide':{color:'var(--c4)',lla:[null,null,null,29,null,31,null,null,33],       pj:[null,null,null,32,null,31,null,null,33]},
-  Zuban:     {color:'var(--c5)',lla:[null,null,null,22.1,null,null,28,30.1,31.5],   pj:[null,null,null,28.4,null,null,31.3,34,36.6]}
-};
-const lastRows=[
-  {name:'Synopsis',  p:'Sep-26',lla:33.6,pj:32.7,d:-1.9,n:'~2000',met:'Mixto'},
-  {name:'Proyección',p:'Ago-26',lla:32.5,pj:36.6,d:-2.3,n:'~1500',met:'Panel online'},
-  {name:'Isasi',     p:'Ago-26',lla:40,  pj:27,  d:5,   n:'2055', met:'Panel online'},
-  {name:'Eq. Mide',  p:'Oct-26',lla:33,  pj:33,  d:2,   n:'—',    met:'—'},
-  {name:'Zuban (I)', p:'Oct-26',lla:31.5,pj:36.6,d:1.4, n:'~1800',met:'Mixto'},
-];
-
-const MI=['May-26','Jun-26','Jul-26','Ago-26','Sep-26','Oct-26'];
-const IMG={
-  Synopsis: {color:'var(--c1)',neg:[58.1,null,null,55.3,null,null], pos:[29.2,null,null,33.9,null,null]},
-  Trends:   {color:'var(--c2)',neg:[null,57,null,null,null,null],   pos:[null,42,null,null,null,null]},
-  Giacobbe: {color:'var(--c3)',neg:[null,55,null,null,null,null],   pos:[null,34.2,null,null,null,null]},
-  Isasi:    {color:'var(--c4)',neg:[null,null,44,46,null,null],     pos:[null,42,43,38,null,null]},
-  'D\'Alessio':{color:'var(--c5)',neg:[null,null,null,null,null,null],pos:[36,null,null,34,null,null]},
-  'Zuban':  {color:'var(--neu)', neg:[null,null,null,null,61.8,64.1],pos:[null,null,null,null,36,34.9]}
-};
-const MG=['May-26','Jun-26','Jul-26','Ago-26','Sep-26','Oct-26'];
-const GESTION={
-  Proyección:{color:'var(--c2)',aprob:[34.0,39.8,39.4,39.7,42.0,null],desaprob:[null,null,null,null,null,null]},
-  Isasi:     {color:'var(--c4)',aprob:[null,45.0,46.0,48.0,null,null], desaprob:[null,48.0,47.0,42.0,null,null]},
-  Vozna:     {color:'var(--c5)',aprob:[null,null,null,null,null,null],  desaprob:[null,null,57.6,null,61.9,null]},
-  Synopsis:  {color:'var(--c1)',aprob:[31.3,null,null,null,null,null],  desaprob:[54.5,null,null,null,null,null]},
-  Zuban:     {color:'var(--c3)',aprob:[null,null,null,null,null,34.1],  desaprob:[null,null,null,null,null,65.2]}
-};
-// Cross-analysis: Isasi-Burdman measures BOTH variables → divergence visible within same consultora
-const CROSS_MES=['Jun-26','Jul-26','Ago-26'];
-const CROSS={
-  imgPos:  {label:'Imagen positiva (Isasi-Burdman) ↓',  color:'var(--c4)', data:[42,43,38]},
-  gestAprob:{label:'Aprobación gestión (Isasi-Burdman) ↑',color:'var(--pos)',data:[45,46,48]},
-  imgNeg:  {label:'Imagen negativa (Isasi-Burdman) ↑',  color:'var(--neg)', data:[null,44,46]},
-  gestDesaprob:{label:'Desaprobación gestión (Isasi-Burdman) ↓',color:'var(--warn)',data:[48,47,42]}
-};
-
-// ISN mensual Reputación Digital
-const ISN_RD_MES=['Ago-26','Sep-26'];
-const ISN_RD_VALS=[-43,-33];
-// ISN por eje del relato Q2 RD
-const ISN_EJE_LABELS=['Grandeza','Esfuerzo','Acompañamiento','Orden económico','Seguridad','Batalla cultural'];
-const ISN_EJE_VALS=[-31.9,-34.8,-57.2,-63.7,-70.7,-93.1];
-// AD HOC Sep: Milei sentimiento
-const MILEI_SEP_LABELS=['Negativo','Positivo','Neutro'];
-const MILEI_SEP_VALS=[46.2,38.4,15.4];
-// AD HOC Sep: volumen oposición (miles)
-const OPOS_LABELS=['Kicillof','CFK','Bregman','Bullrich','Massa'];
-const OPOS_VALS=[580,248,138,122,118];
-const MSL_MES=['Ene-26','Feb-26','Mar-26','Abr-26','May-26','Jun-26','Jul-26','Ago-26','Sep-26','Oct-26'];
-const SL_POR_MES=[4,0,0,0,3,8,3,6,6,2];
-const SL_CONSULT_LABELS=['Reputación Digital','EUNOMIA','Monitor Digital','AD HOC','DtoD','PLURAL','ALTICA','SUSTANTIVA','Otros'];
-const SL_CONSULT_VALS=[12,3,2,4,1,1,1,2,6];
-const SL_INFORMES=[
-  {mes:'Ene-26',consultora:'DtoD',titulo:'Radiografía digital · detención de Maduro',tipo:'Evento puntual'},
-  {mes:'Ene-26',consultora:'PLURAL',titulo:'Análisis Discursivo Donald Trump',tipo:'Evento puntual'},
-  {mes:'Ene-26',consultora:'ALTICA',titulo:'Detención Nicolás Maduro · Panel LATAM',tipo:'Evento puntual'},
-  {mes:'Ene-26',consultora:'ENTER COM.',titulo:'Radiografía digital · detención de Maduro',tipo:'Evento puntual'},
-  {mes:'May-26',consultora:'EUNOMIA',titulo:'Termómetro digital PBA (Abr-May)',tipo:'Monitoreo regular'},
-  {mes:'May-26',consultora:'REPUTACIÓN DIGITAL',titulo:'Índice de Tolerancia Social Milei',tipo:'Ad hoc temático'},
-  {mes:'May-26',consultora:'ZUBAN CÓRDOBA',titulo:'Estoy perdiendo imagen a tu lado',tipo:'Ad hoc temático'},
-  {mes:'Jun-26',consultora:'MONITOR DIGITAL',titulo:'Messi en el Olimpo de las redes del mundo',tipo:'Evento puntual'},
-  {mes:'Jun-26',consultora:'GLOBAL NEWS',titulo:'Copa del mundo 2026',tipo:'Evento puntual'},
-  {mes:'Jun-26',consultora:'REPUTACIÓN DIGITAL',titulo:'La Scaloneta le da aire al gobierno',tipo:'Ad hoc temático'},
-  {mes:'Jun-26',consultora:'AD HOC',titulo:'Informe de Conversación Digital',tipo:'Monitoreo regular'},
-  {mes:'Jun-26',consultora:'REPUTACIÓN DIGITAL',titulo:'Índice de Disonancia Narrativa',tipo:'Ad hoc temático'},
-  {mes:'Jun-26',consultora:'REPUTACIÓN DIGITAL',titulo:'Conv. digital exige renuncia de Adorni',tipo:'Ad hoc temático'},
-  {mes:'Jun-26',consultora:'REPUTACIÓN DIGITAL',titulo:'Informe de credibilidad de Adorni',tipo:'Ad hoc temático'},
-  {mes:'Jun-26',consultora:'REPUTACIÓN DIGITAL',titulo:'Resumen Ejecutivo credibilidad Adorni',tipo:'Ad hoc temático'},
-  {mes:'Jul-26',consultora:'MONITOR DIGITAL',titulo:'La derrota ante España convirtió a la argentinidad',tipo:'Evento puntual'},
-  {mes:'Jul-26',consultora:'Ad Hoc',titulo:'Informe Ad Hoc · Julio 2026',tipo:'Monitoreo regular'},
-  {mes:'Jul-26',consultora:'REPUTACIÓN DIGITAL',titulo:'La Scaloneta le da aire · raíz campaña',tipo:'Ad hoc temático'},
-  {mes:'Ago-26',consultora:'AD HOC',titulo:'Informe Especial La Fatiga Digital',tipo:'Ad hoc temático'},
-  {mes:'Ago-26',consultora:'EUNOMIA',titulo:'Del ingreso al atraso · Mora Bancaria',tipo:'Ad hoc temático'},
-  {mes:'Ago-26',consultora:'SUSTANTIVA',titulo:'Informe Influencers Oficialismo',tipo:'Ad hoc temático'},
-  {mes:'Ago-26',consultora:'EUNOMIA',titulo:'Escucha social Ley de tierras',tipo:'Ad hoc temático'},
-  {mes:'Ago-26',consultora:'COMPOL UBA',titulo:'Lo que viraliza no convence',tipo:'Ad hoc temático'},
-  {mes:'Ago-26',consultora:'SUSTANTIVA',titulo:'Informe China EEUU · El caso CALF-Huawei',tipo:'Ad hoc temático'},
-  {mes:'Sep-26',consultora:'REPUTACIÓN DIGITAL',titulo:'Milei 2027 · ¿y ahora qué va a pasar? (Nacional)',tipo:'Ad hoc temático'},
-  {mes:'Sep-26',consultora:'REPUTACIÓN DIGITAL',titulo:'Milei 2027 · ¿y ahora qué va a pasar? (PBA)',tipo:'Ad hoc temático'},
-  {mes:'Sep-26',consultora:'REPUTACIÓN DIGITAL',titulo:'Escucha social sobre video de Milei',tipo:'Ad hoc temático'},
-  {mes:'Sep-26',consultora:'REPUTACIÓN DIGITAL',titulo:'Llaryora bajo fuego cruzado (Córdoba)',tipo:'Ad hoc temático'},
-  {mes:'Sep-26',consultora:'REPUTACIÓN DIGITAL',titulo:'Informe Bullrich · Lali',tipo:'Ad hoc temático'},
-  {mes:'Sep-26',consultora:'AD HOC',titulo:'Informe Digital · Septiembre',tipo:'Monitoreo regular'},
-  {mes:'Oct-26',consultora:'QSOCIAL',titulo:'Carrusel Estimaciones Electorales',tipo:'Ad hoc temático'},
-  {mes:'Oct-26',consultora:'NARRAGLOBAL',titulo:'Despedida Messi',tipo:'Evento puntual'},
-];
+/* ── DATA — generado por scripts/build_radar_data.py en data/radar_data.json; no editar valores aquí ─ */
+let MESI,MIPC,IPC,ICC,ICG,MINFL,IPC_FULL,IPCBA_FULL,MBRECHA,BRECHA,TIPCBA_MES,TIPCBA_IA,TIPCBA_BIENES,TIPCBA_SERV,TIPCBA_ESTAC,TIPCBA_REG,TIPCBA_VAR,TIPCBA_ACUM,MIPCACUM,IPC_ACUM,IPCBA_ACUM_FULL,BRECHA_ACUM,MIIA,IPC_IA,IPC_IA_9,IPCBA_ACUM_9,IPCBA_IA_9,ICC_CABA_13,ICC_INT_13,ICC_GBA_14,MV,CONS,lastRows,MI,IMG,MG,GESTION,CROSS_MES,CROSS,ISN_RD_MES,ISN_RD_VALS,ISN_EJE_LABELS,ISN_EJE_VALS,MILEI_SEP_LABELS,MILEI_SEP_VALS,OPOS_LABELS,OPOS_VALS,MSL_MES,SL_POR_MES,SL_CONSULT_LABELS,SL_CONSULT_VALS,SL_INFORMES,GAP_STATUS,KPI,UPD,COBERTURA,META,SECUNDARIA,EVOL,ENCABEZADO,SL_TRAMOS,AGENDA_INFL,SL_ESTUDIOS,NOTA_SECUNDARIA;
+function applyData(D){MESI=D.MESI;MIPC=D.MIPC;IPC=D.IPC;ICC=D.ICC;ICG=D.ICG;MINFL=D.MINFL;IPC_FULL=D.IPC_FULL;IPCBA_FULL=D.IPCBA_FULL;MBRECHA=D.MBRECHA;BRECHA=D.BRECHA;TIPCBA_MES=D.TIPCBA_MES;TIPCBA_IA=D.TIPCBA_IA;TIPCBA_BIENES=D.TIPCBA_BIENES;TIPCBA_SERV=D.TIPCBA_SERV;TIPCBA_ESTAC=D.TIPCBA_ESTAC;TIPCBA_REG=D.TIPCBA_REG;TIPCBA_VAR=D.TIPCBA_VAR;TIPCBA_ACUM=D.TIPCBA_ACUM;MIPCACUM=D.MIPCACUM;IPC_ACUM=D.IPC_ACUM;IPCBA_ACUM_FULL=D.IPCBA_ACUM_FULL;BRECHA_ACUM=D.BRECHA_ACUM;MIIA=D.MIIA;IPC_IA=D.IPC_IA;IPC_IA_9=D.IPC_IA_9;IPCBA_ACUM_9=D.IPCBA_ACUM_9;IPCBA_IA_9=D.IPCBA_IA_9;ICC_CABA_13=D.ICC_CABA_13;ICC_INT_13=D.ICC_INT_13;ICC_GBA_14=D.ICC_GBA_14;MV=D.MV;CONS=D.CONS;lastRows=D.lastRows;MI=D.MI;IMG=D.IMG;MG=D.MG;GESTION=D.GESTION;CROSS_MES=D.CROSS_MES;CROSS=D.CROSS;ISN_RD_MES=D.ISN_RD_MES;ISN_RD_VALS=D.ISN_RD_VALS;ISN_EJE_LABELS=D.ISN_EJE_LABELS;ISN_EJE_VALS=D.ISN_EJE_VALS;MILEI_SEP_LABELS=D.MILEI_SEP_LABELS;MILEI_SEP_VALS=D.MILEI_SEP_VALS;OPOS_LABELS=D.OPOS_LABELS;OPOS_VALS=D.OPOS_VALS;MSL_MES=D.MSL_MES;SL_POR_MES=D.SL_POR_MES;SL_CONSULT_LABELS=D.SL_CONSULT_LABELS;SL_CONSULT_VALS=D.SL_CONSULT_VALS;SL_INFORMES=D.SL_INFORMES;GAP_STATUS=D.GAP_STATUS;KPI=D.KPI;UPD=D.UPD;COBERTURA=D.COBERTURA;META=D.META;SECUNDARIA=D.SECUNDARIA||[];EVOL=D.EVOL||{};ENCABEZADO=D.ENCABEZADO;SL_TRAMOS=D.SL_TRAMOS||[];AGENDA_INFL=D.AGENDA_INFL;SL_ESTUDIOS=D.SL_ESTUDIOS||[];NOTA_SECUNDARIA=D.NOTA_SECUNDARIA||[];}
 
 /* ── CHART HELPERS ──────────────────────────── */
 function baseOpts(){
@@ -1715,6 +1568,7 @@ function buildLegend(legendId,chartId,names,colors){
 }
 
 /* ── TABLAS ESTÁTICAS ───────────────────────── */
+function renderStaticTables(){
 (function(){
   // Voto
   const tb=document.getElementById('tableVoto');if(!tb)return;
@@ -1766,7 +1620,35 @@ function buildLegend(legendId,chartId,names,colors){
   }
 })();
 (function(){
-  // SL rows
+  // Registro SL agrupado por consultora: gráfico + hipervínculos
+  const cont=document.getElementById('slRegGrupos');if(!cont)return;
+  const canon=c=>{const n=c.normalize('NFD').replace(/[̀-ͯ]/g,'').toUpperCase().replace(/\./g,' ').replace(/\s+/g,' ').trim();
+    if(n.startsWith('REPUTACION'))return 'Reputación Digital';if(n.includes('AD HOC'))return 'AD HOC';if(n.startsWith('ENTER'))return 'Enter';
+    if(n.startsWith('PDM'))return 'PDM';if(n.startsWith('EUNOMIA'))return 'Eunomia';if(n.startsWith('MONITOR DIGITAL'))return 'Monitor Digital';
+    if(/[a-z]/.test(c))return c;const AC=['UBA','PR','AD','PDM','LATAM'];return c.split(' ').map(w=>AC.includes(w)?w:w.charAt(0)+w.slice(1).toLowerCase()).join(' ');};
+  const GRAF={'Reputación Digital':[['ISN mensual','chartISNMensual'],['Tono por tramos sep–oct','chartSLTramos'],['ISN por eje','chartISNEje']],'AD HOC':[['Sentimiento Milei sep','chartMileiSentSep']]};
+  const grupos={};SL_INFORMES.forEach(r=>{const k=canon(r.consultora);(grupos[k]=grupos[k]||[]).push(r);});
+  const orden=Object.keys(grupos).sort((a,b)=>grupos[b].length-grupos[a].length||a.localeCompare(b));
+  const meses=MSL_MES;const pal=['var(--c1)','var(--c2)','var(--c3)','var(--c4)','var(--c5)','var(--c6)','var(--c7)','var(--c8)','var(--c9)'];
+  const top=orden.filter(k=>grupos[k].length>1);const otros=orden.filter(k=>grupos[k].length===1);
+  const filas=top.concat(otros.length?['Otras ('+otros.length+')']:[]);
+  const cuenta=(k,m)=>k.startsWith('Otras (')?otros.reduce((a,o)=>a+grupos[o].filter(r=>r.mes===m).length,0):grupos[k].filter(r=>r.mes===m).length;
+  const box=document.getElementById('slRegBox');if(box)box.style.height=Math.max(200,filas.length*26+60)+'px';
+  const ctx=document.getElementById('chartSLRegistro');
+  if(ctx){chartRegistry['chartSLRegistro']=new Chart(ctx,{type:'bar',
+    data:{labels:filas,datasets:meses.map((m,i)=>({label:m,data:filas.map(k=>cuenta(k,m)),backgroundColor:cv(pal[i%pal.length]),borderWidth:0}))},
+    options:{indexAxis:'y',responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false},tooltip:{filter:i=>i.raw>0}},
+      scales:{x:{stacked:true,ticks:{precision:0,font:{size:10},color:tok('--fg-dim')},grid:{color:tok('--border')}},y:{stacked:true,ticks:{font:{size:11},color:tok('--fg')},grid:{display:false}}}}});
+    buildLegend('legendSLRegistro','chartSLRegistro',meses,meses.map((_,i)=>pal[i%pal.length]));}
+  const tipoColor={'Monitoreo regular':cv('var(--pos)'),'Ad hoc temático':cv('var(--c2)'),'Evento puntual':cv('var(--fg-dim)')};
+  cont.innerHTML=orden.map(k=>{
+    const it=grupos[k].slice().sort((a,b)=>meses.indexOf(a.mes)-meses.indexOf(b.mes));
+    const g=(GRAF[k]||[]).map(([t,id])=>`<a href="#" onclick="document.getElementById('${id}').scrollIntoView({behavior:'smooth',block:'center'});return false">${t}</a>`).join(' · ');
+    return `<details class="slreg-g"${it.length>1?' open':''}><summary><strong>${esc(k)}</strong> <span class="slreg-n">${it.length} informe${it.length>1?'s':''} · ${esc(it[0].mes)}${it.length>1?' → '+esc(it[it.length-1].mes):''}</span>${g?` <span class="slreg-graf">gráficos: ${g}</span>`:''}</summary>
+      <ul>${it.map(r=>`<li><span class="slreg-mes">${esc(r.mes)}</span> ${r.file_id?`<a href="https://drive.google.com/file/d/${esc(r.file_id)}/view" target="_blank" rel="noopener">${esc(r.titulo)} ↗</a>`:`${esc(r.titulo)} <span class="slreg-nolink">(sin vínculo en la base)</span>`} <span style="font-size:10px;color:${tipoColor[r.tipo]||cv('var(--fg-dim)')}">${esc(r.tipo)}</span></li>`).join('')}</ul></details>`}).join('');
+})();
+(function(){
+  // SL rows (tabla anterior; se mantiene solo si existe el contenedor)
   const tbody=document.getElementById('slRows');if(!tbody)return;
   const tipoColor={
     'Monitoreo regular':cv('var(--pos)'),
@@ -1783,10 +1665,11 @@ function buildLegend(legendId,chartId,names,colors){
     </tr>`;
   }).join('');
 })();
+}
 
 /* ── GAP DATA ────────────────────────────────── */
-// 10 indicadores: inflación, inseguridad, desempleo, pobreza/educ, img neg, img pos, aprobación, kirchner, voto LLA, escenario 2027
-const GAP_STATUS=['conv','conv','div','nd','conv','conv','conv','nd','nd','nd'];
+// 8 indicadores: inflación, inseguridad, desempleo, pobreza/educ, img neg, img pos, aprobación, kirchner (intención de voto excluida del GAP: SL no mide voto)
+// GAP_STATUS: en radar_data.json
 
 /* ── BRECHA color helper ─────────────────────── */
 function brechaColor(v){
@@ -1799,6 +1682,7 @@ function brechaColor(v){
 function initTab(tab){
   if(tabInited[tab])return;
   tabInited[tab]=true;
+  try{renderEvolCharts(tab);}catch(e){console.error(e);}
 
   if(tab==='indicadores'){
     // ── Inflación mensual bar+MM3 combo ─
@@ -1893,15 +1777,15 @@ function initTab(tab){
         data:{labels:MESI,datasets:[
           {label:'ICC Nacional',data:ICC,borderColor:cv('var(--c2)'),backgroundColor:'transparent',
            borderWidth:2,pointRadius:3,pointHoverRadius:5,tension:0.3,yAxisID:'yICC',order:1},
-          {label:'ICC CABA (oct-26)',data:ICC_CABA_13,borderColor:cv('var(--c5)'),
+          {label:'ICC CABA',data:ICC_CABA_13,borderColor:cv('var(--c5)'),
            backgroundColor:cv('var(--c5)')+'88',
            borderWidth:0,pointRadius:8,pointHoverRadius:10,pointStyle:'rectRot',
            spanGaps:false,yAxisID:'yICC',order:0},
-          {label:'ICC Interior (oct-26)',data:ICC_INT_13,borderColor:cv('var(--c4)'),
+          {label:'ICC Interior',data:ICC_INT_13,borderColor:cv('var(--c4)'),
            backgroundColor:cv('var(--c4)')+'88',
            borderWidth:0,pointRadius:8,pointHoverRadius:10,pointStyle:'triangle',
            spanGaps:false,yAxisID:'yICC',order:0},
-          {label:'ICC GBA (oct-26)',data:ICC_GBA_14,borderColor:cv('var(--c1)'),
+          {label:'ICC GBA',data:ICC_GBA_14,borderColor:cv('var(--c1)'),
            backgroundColor:cv('var(--c1)')+'88',
            borderWidth:0,pointRadius:8,pointHoverRadius:10,pointStyle:'star',
            spanGaps:false,yAxisID:'yICC',order:0},
@@ -2020,10 +1904,12 @@ function initTab(tab){
       }
     });
     // Inflación como problema · serie may–sep
-    mkLine('chartInflProb',['May-26','Jun-26','Jul-26','Ago-26','Sep-26'],[
-      {label:'Isasi-Burdman',data:[55,52,49,47,44],color:'var(--c1)'},
-      {label:'Equipo Mide',  data:[61,null,55,null,49],color:'var(--c3)'},
-      {label:'OPSA',         data:[null,null,null,50,38],color:'var(--c5)'}
+    const AIX=(AGENDA_INFL&&AGENDA_INFL.series)||[];const pad=a=>a.concat(Array(AGENDA_INFL.meses.length-a.length).fill(null));
+    mkLine('chartInflProb',AGENDA_INFL.meses,[
+      {label:'Isasi-Burdman',data:pad([55,52,49,47,44]),color:'var(--c1)'},
+      {label:'Equipo Mide',  data:pad([61,null,55,null,49]),color:'var(--c3)'},
+      {label:'OPSA',         data:pad([null,null,null,50,38]),color:'var(--c5)'},
+      ...AIX.map(x=>({label:x.label,data:x.data,color:x.color}))
     ],{
       plugins:{legend:{display:false}},
       scales:{
@@ -2034,7 +1920,7 @@ function initTab(tab){
     // legend manual
     const lc=document.getElementById('legendInflProb');
     if(lc&&!lc.children.length){
-      [['Isasi-Burdman','var(--c1)'],['Equipo Mide','var(--c3)'],['OPSA','var(--c5)']].forEach(([l,c],i)=>{
+      [['Isasi-Burdman','var(--c1)'],['Equipo Mide','var(--c3)'],['OPSA','var(--c5)'],...AIX.map(x=>[x.label,x.color])].forEach(([l,c],i)=>{
         lc.innerHTML+=`<span class="legend-item" onclick="toggleDataset('chartInflProb',${i})"><span class="legend-dot" style="background:${c}"></span>${l}</span>`;
       });
     }
@@ -2049,6 +1935,13 @@ function initTab(tab){
         y:{min:-100,max:0,ticks:{font:{family:"'IBM Plex Mono',monospace",size:10},color:tok('--fg-dim')},grid:{color:tok('--border')}}
       }
     });
+    if(SL_TRAMOS&&SL_TRAMOS.length){
+      mkLine('chartSLTramos',SL_TRAMOS.map(t=>t.tramo),[{label:'% negativo (cuentas reales)',data:SL_TRAMOS.map(t=>t.valor),color:'var(--neg)'}],{
+        plugins:{legend:{display:false}},
+        scales:{x:{ticks:{font:{family:"'IBM Plex Mono',monospace",size:10},color:tok('--fg-dim')},grid:{color:tok('--border')}},
+                y:{min:40,max:90,ticks:{font:{size:10},color:tok('--fg-dim'),callback:v=>v+'%'},grid:{color:tok('--border')}}}});
+      const st=document.getElementById('srcSLTramos');if(st)st.textContent='N2 filas '+SL_TRAMOS.map(t=>t.fila).join(', ')+' · tramos de distinta duración · tramo 25 oct–4 nov sin % negativo informado (positivas 24 %) · no comparable con ISN mensual ni con encuestas';
+    }
     // ISN por eje del relato — horizontal bar
     mkBar('chartISNEje',ISN_EJE_LABELS,[{label:'ISN',data:ISN_EJE_VALS,color:'var(--neg)'}],{
       indexAxis:'y',
@@ -2092,7 +1985,199 @@ function initTab(tab){
   }
 }
 
-initTab('indicadores');
+/* ── ARRANQUE: datos desde data/radar_data.json ─────────────── */
+const fmt=(v,u)=>v==null?'s/d':(typeof v==='number'?v.toLocaleString('es-AR',{maximumFractionDigits:2}):v)+(u==='%'?'%':(u&&u!=='%'&&!/puntos|publicaciones|menciones|pp/.test(u)?'':''));
+const esc=t=>String(t??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const driveLink=id=>id?` · <a href="https://drive.google.com/file/d/${esc(id)}/view" target="_blank" rel="noopener">PDF ↗</a>`:'';
+let MES_SEL='Nov-26';
+function renderKPIs(){
+  const k=KPI.ICC,g=KPI.ICG,el=document.getElementById('kpiICC'),eg=document.getElementById('kpiICG');
+  const iO=MESI.indexOf('Oct-26'),iS=MESI.indexOf('Sep-26'),dC=k.valor!=null&&ICC[iS]!=null?((ICC[iO]/ICC[iS]-1)*100):null;
+  if(el)el.innerHTML=`<div class="kpi-label">ICC · ${esc(k.mes.toLowerCase())}</div><div class="kpi-num">${fmt(k.valor)}</div>
+    <div class="kpi-meta"><span class="kpi-delta ${dC>0?'up':'down'}">${dC==null?'':(dC>0?'+':'')+dC.toFixed(2).replace('.',',')+'%'}</span><span class="kpi-sub">vs sep-26 · UTDT CIF · N2 fila 1345</span></div>
+    <div class="kpi-subs"><div class="kpi-sub-row"><span class="kpi-sub-lbl">CABA</span><span class="kpi-sub-val">${fmt(ICC_CABA_13[iO])}</span></div>
+    <div class="kpi-sub-row"><span class="kpi-sub-lbl">Interior</span><span class="kpi-sub-val">${fmt(ICC_INT_13[iO])}</span></div>
+    <div class="kpi-sub-row"><span class="kpi-sub-lbl">GBA</span><span class="kpi-sub-val">${fmt(ICC_GBA_14[iO])}</span></div></div>`;
+  if(eg){const d=g.anterior?((g.valor/g.anterior-1)*100):null;
+    eg.innerHTML=`<div class="kpi-label">ICG · ${esc(g.mes.toLowerCase())}</div><div class="kpi-num">${fmt(g.valor)}</div>
+    <div class="kpi-meta"><span class="kpi-delta ${d>0?'up':'down'}">${d==null?'':(d>0?'+':'')+d.toFixed(1).replace('.',',')+'%'}</span><span class="kpi-sub">vs ${fmt(g.anterior)} sep-26 · UTDT Escuela de Gobierno</span></div>
+    <div class="kpi-subs"><div class="kpi-sub-row"><span class="kpi-sub-lbl">Escala</span><span class="kpi-sub-val">0–5</span></div>
+    <div class="kpi-sub-row"><span class="kpi-sub-lbl">Máx 12m</span><span class="kpi-sub-val">${fmt(g.max12)}</span></div>
+    <div class="kpi-sub-row"><span class="kpi-sub-lbl">Mín 12m</span><span class="kpi-sub-val">${fmt(g.min12)}</span></div></div>`;}
+  const src=document.getElementById('srcICCICG');
+  if(src)src.innerHTML=`ICC ${esc(k.mes)}: ${fmt(k.valor)} (N2 filas 1345–1348, PDF CIF oct-26) · campo 5–16 oct · n=1.000 · CATI · ICG ${esc(g.mes)}: ${fmt(g.valor)} (N2 fila 1086; una sola vez) · ICG may–sep desde N2 filas 1030–1034 · UTDT / Poliarquía`;
+  document.querySelectorAll('[data-bind="ICC_OCT_TL"]').forEach(e=>e.textContent=k.oct_pendiente?'s/d':fmt(ICC[MESI.indexOf('Oct-26')]));
+}
+function itemHTML(it){
+  if(it.tipo==='pendiente')return `<li class="upd-it pend"><span class="upd-tag">pendiente</span><span class="upd-mod">${esc(it.modulo)}</span> ${esc(it.etiqueta)}${it.necesita&&it.necesita!=='—'?` <span class="upd-need">Necesita: ${esc(it.necesita)}</span>`:''}</li>`;
+  const tag=it.tipo==='puntual'?'puntual':({nuevo:'serie · nuevo',corregido:'serie · corregido',retirado:'retirado','sin cambio':'serie · verificado'}[it.estado]||'serie');
+  const ant=it.estado==='corregido'||it.estado==='retirado'?` <span class="upd-ant">antes ${fmt(it.anterior)}</span>`:'';
+  const ref=it.fila?`<span class="upd-ref">${it.base==='base_maestra_2026'?'N1':'N2'} fila ${esc(it.fila)}${it.campo?' · campo '+esc(it.campo):''}${driveLink(it.file_id)}</span>`:(it.base?`<span class="upd-ref">${esc(it.base)}${driveLink(it.file_id)}</span>`:'');
+  if(it.secundaria){const url=(it.secundaria.match(/https?:\/\/\S+/)||[''])[0];
+    return `<li class="upd-it secu"><span class="upd-tag">serie · fuente secundaria</span><span class="upd-mod">${esc(it.modulo)}</span> <strong>${esc(it.consultora)} · ${esc(it.categoria||it.etiqueta)}</strong>: <span class="upd-val">${it.valor==null?'—':fmt(it.valor)+(it.unidad==='%'?'%':'')}</span> <span class="upd-nota">${esc(it.secundaria)}${url?` · <a href="${esc(url)}" target="_blank" rel="noopener">ver registro</a>`:''} · evidencia máx. MEDIA</span> <span class="upd-ref">N2 fila ${esc(it.fila)}${it.campo?' · período '+esc(it.campo):''}</span></li>`;}
+  return `<li class="upd-it ${it.tipo==='puntual'?'punt':''} ${it.estado==='retirado'?'ret':''}"><span class="upd-tag">${tag}</span><span class="upd-mod">${esc(it.modulo)}</span> <strong>${esc(it.etiqueta)}</strong>: <span class="upd-val">${it.valor==null?'—':fmt(it.valor)+(it.unidad==='%'?'%':it.unidad==='pp'?' pp':'')}</span>${ant}${it.nota?` <span class="upd-nota">${esc(it.nota)}</span>`:''} ${ref}</li>`;
+}
+function renderUpd(){
+  document.querySelectorAll('.upd-box').forEach(box=>{
+    const tabX=box.dataset.upd;let html='';
+    ['Nov-26','Oct-26','Sep-26'].forEach(M=>{MES_SEL=M;html+=updHTML(box,tabX);});
+    box.innerHTML=html;
+  });
+}
+function updHTML(box,tabX){
+    if(MES_SEL==='Nov-26'){const tab=box.dataset.upd,it=((UPD[tab]||{})['Nov-26']||[]).filter(i=>i.tipo!=='pendiente');
+      const tabla=(EVOL[tab]||[]).reduce((a,g)=>a+g.filas.filter(f=>f.n===1&&f.celdas['Nov-26']).length,0);
+      return (it.length||tabla)?`<p class="upd-nov">Noviembre 2026 · corte parcial al 11/11: ${it.length} valor${it.length===1?'':'es'} ya en los gráficos de la sección${tabla?` · ${tabla} medición${tabla===1?'':'es'} única${tabla===1?'':'s'} en la tabla de abajo`:''} · publicaciones pendientes en el encabezado.</p>`:'';}
+    const tab=box.dataset.upd,porMes=(UPD[tab]||{}),items=(porMes[MES_SEL]||[]);
+    if(!items.length)return '';
+    const titulo=MES_SEL==='Nov-26'?'Noviembre 2026 · corte parcial al 11/11':MES_SEL==='Oct-26'?'Octubre 2026':'Septiembre 2026 · valores cargados o corregidos en esta corrida';
+    const orden={serie:0,puntual:1,pendiente:2};
+    const ord=a=>a.slice().sort((a,b)=>(orden[a.tipo]-orden[b.tipo])||String(a.modulo).localeCompare(b.modulo)).map(itemHTML).join('');
+    const vistos=new Set(),uno=items.filter(i=>{if(!i.secundaria)return true;const k=i.fila+'|'+i.mes+'|'+i.secundaria;if(vistos.has(k))return false;vistos.add(k);return true});
+    const lis=ord(uno);
+    return `<details class="upd"><summary><span class="upd-badge">${esc(titulo)}</span> ${items.length?items.filter(i=>i.tipo!=='pendiente').length+' valores · '+items.filter(i=>i.tipo==='pendiente').length+' pendientes':'sin novedades para esta sección'}</summary>
+      ${lis?`<ul class="upd-list">${lis}</ul>`:'<p class="upd-empty">No hay filas en las bases para esta sección y mes.</p>'}
+      <p class="upd-foot">«serie»: valor incorporado a los gráficos de la sección · «fuente secundaria»: cubre un hueco de una serie existente; lleva su rótulo y evidencia máxima MEDIA · cada valor sale de la fila indicada de la base.</p></details>`;
+}
+function renderEncabezado(){
+  const el=document.getElementById('tlInner');if(!el||!ENCABEZADO)return;
+  const pub=ENCABEZADO.publicados.map(t=>`<div class="tl-item published" title="${esc(t.secundaria||t.nota||'')}">
+      <div class="tl-dot"></div><div class="tl-date">${esc(t.fecha)}</div><div class="tl-icon">${t.icono}</div>
+      <div class="tl-name">${esc(t.nombre)}</div><div class="tl-val ${t.clase_valor}">${t.valor==null?'s/d':fmt(t.valor)+(t.unidad||'')}</div>
+      <div class="tl-period">${esc(t.periodo)}</div><div class="tl-src">${esc(t.fuente)}</div></div>`).join('');
+  const prox=ENCABEZADO.proximos.map(c=>`<div class="tl-item ${c.clase}" title="${esc(c.metodo)}">
+      <div class="tl-dot"></div><div class="tl-upcoming-lbl">próximo</div><div class="tl-icon">${c.icono}</div>
+      <div class="tl-name">${esc(c.nombre)}</div><div class="tl-val neu">${esc(c.periodo)}</div>
+      <div class="tl-period">${esc(c.fecha)}</div><div class="tl-src">${esc(c.fuente)}</div></div>`).join('');
+  el.innerHTML=pub+'<div class="tl-divider"></div>'+prox;
+}
+function renderRangos(){
+  const ejes={IMG:MI,CONS:MV,GESTION:MG},grp={IMG,CONS,GESTION};
+  document.querySelectorAll('[data-rango]').forEach(el=>{const [g,c]=el.dataset.rango.split('.');const ax=ejes[g];let lo=null,hi=null;
+    Object.values(grp[g]||{}).forEach(s=>(s[c]||[]).forEach((v,i)=>{if(v!=null){lo=lo==null?i:Math.min(lo,i);hi=hi==null?i:Math.max(hi,i);}}));
+    if(lo!=null)el.textContent=ax[lo]+' → '+ax[hi]+(ax[hi]==='Nov-26'?' (nov: corte parcial 11/11)':'');});
+  document.querySelectorAll('[data-consultoras]').forEach(el=>{const g=el.dataset.consultoras,grp={IMG,CONS,GESTION};el.textContent=Object.keys(grp[g]||{}).length+' consultoras';});
+}
+function renderTablaVar(){
+  const box=document.getElementById('tablaVar');if(!box)return;
+  const EXTRA={'Vozna':{pos:{0:36.3,2:32.1,4:31.3},neg:{4:63.5},aprob:{2:36.3,4:32.6}}};
+  const defs=[['Imagen positiva · Milei',IMG,'pos',MI,1],['Imagen negativa · Milei',IMG,'neg',MI,-1],['Aprobación de gestión nacional',GESTION,'aprob',MG,1],['Desaprobación de gestión nacional',GESTION,'desaprob',MG,-1]];
+  const f1=v=>v==null?'—':fmt(v);
+  box.innerHTML=defs.map(([tit,G,k,M,sg],di)=>{
+    const filas=[];
+    Object.entries(G).forEach(([c,s])=>{const v=(s[k]||[]).slice();const ex=(EXTRA[c]||{})[k]||{};const st={};
+      Object.entries(ex).forEach(([i,x])=>{if(v[i]==null){v[i]=x;st[i]=1;}});
+      if(v.some(x=>x!=null))filas.push({c,v,st});});
+    Object.entries(EXTRA).forEach(([c,e])=>{if(!G[c]&&e[k]){const v=M.map(()=>null),st={};Object.entries(e[k]).forEach(([i,x])=>{v[i]=x;st[i]=1});filas.push({c,v,st});}});
+    const last=r=>{let i=r.v.length-1;while(i>=0&&r.v[i]==null)i--;return i};
+    filas.sort((a,b)=>last(b)-last(a)||(b.v[last(b)]-a.v[last(a)]));
+    const body=filas.map(r=>{const idx=r.v.map((x,i)=>x!=null?i:-1).filter(i=>i>=0);
+      let d='⚪',cl='';if(idx.length>1){const dv=r.v[idx[idx.length-1]]-r.v[idx[idx.length-2]];const good=dv*sg>0;
+        d=(dv>0?'+':dv<0?'−':'')+fmt(Math.abs(dv))+(dv===0?'':good?' 🟢':' 🔴');cl=dv===0?'':good?'up':'down';}
+      return `<tr><td>${esc(r.c)}</td>${r.v.map((x,i)=>`<td class="num">${f1(x)}${r.st[i]?'*':''}</td>`).join('')}<td class="num ${cl}">${d}</td></tr>`}).join('');
+    const ult=filas.filter(r=>r.v[M.length-2]!=null||r.v[M.length-1]!=null).length;
+    return `<details class="det-var"${di===0?' open':''}><summary><b>${tit}</b> · ${filas.length} consultoras · ${ult} con dato oct–nov</summary>
+      <div class="table-wrap"><table><thead><tr><th>Consultora</th>${M.map(m=>`<th>${m.slice(0,3)}</th>`).join('')}<th>Δ</th></tr></thead><tbody>${body}</tbody></table></div></details>`}).join('');
+}
+function renderSLEstudios(){
+  const g=document.getElementById('slEstudios');if(!g||!SL_ESTUDIOS)return;
+  const fv=(m)=>m.fmt==='millones'?fmt(m.valor/1e6)+' M':m.fmt==='miles'?Number(m.valor).toLocaleString('es-AR'):fmt(m.valor)+(m.suf||'');
+  g.insertAdjacentHTML('afterbegin',SL_ESTUDIOS.map(c=>`<div class="hallazgo" style="border-left-color:var(--${c.dir==='neg'?'neg':'warn'})">
+    <div class="hallazgo-head"><span style="font-size:12px;font-weight:600">${esc(c.titulo)}</span><span class="hallazgo-src">${esc(c.src)}</span>
+      <span class="hallazgo-dir h-${c.dir==='neg'?'neg':'neu'}">${c.dir==='neg'?'↓ negativo':'· contexto'}</span></div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:6px;margin:6px 0 4px">${c.metricas.map(m=>`<div><div style="font-size:9px;color:var(--fg-dim);letter-spacing:.5px;text-transform:uppercase">${esc(m.lbl)}</div>
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:18px;font-weight:500" title="N2 fila ${m.fila}">${fv(m)}</div></div>`).join('')}</div>
+    <div class="hallazgo-txt">${esc(c.txt)} <a href="https://drive.google.com/file/d/${esc(c.file_id)}/view" target="_blank" rel="noopener">informe ↗</a></div></div>`).join(''));
+}
+function renderEvolCharts(tab){
+  const box=document.querySelector(`[data-evolc="${tab}"]`);if(!box)return;
+  const pal=['var(--c1)','var(--c2)','var(--c3)','var(--c4)','var(--c5)','var(--c6)','var(--c7)','var(--c8)','var(--c9)'];
+  (EVOL[tab]||[]).forEach((g,gi)=>{
+    const ser=g.filas.filter(f=>f.n>1);
+    if(!ser.length){ // sin series de 2+ cortes: barras del último corte con 3+ mediciones de la misma unidad
+      const mes=[...g.meses].reverse().find(m=>g.filas.filter(f=>f.celdas[m]).length>=3);if(!mes)return;
+      const fs0=g.filas.filter(f=>f.celdas[mes]);const cnt={};fs0.forEach(f=>{const u=f.celdas[mes].unidad||'';cnt[u]=(cnt[u]||0)+1});
+      const uni=Object.keys(cnt).sort((a,b)=>cnt[b]-cnt[a])[0];const fs=fs0.filter(f=>(f.celdas[mes].unidad||'')===uni);if(fs.length<3)return;
+      const id=`evolc_${tab}_${gi}`;
+      box.insertAdjacentHTML('beforeend',`<div class="chart-wrap"><div class="chart-head"><div><h3>${esc(g.titulo.split(' · ')[0])} · ${esc(mes.toLowerCase())}</h3><p>medición única por serie (sin corte anterior comparable) · ${esc(uni||'valor')} · no se promedian ni se comparan entre consultoras</p></div></div>
+        <div class="chart-box" style="height:${Math.max(180,fs.length*30+40)}px"><canvas id="${id}"></canvas></div></div>`);
+      chartRegistry[id]=new Chart(document.getElementById(id),{type:'bar',
+        data:{labels:fs.map(f=>f.etiqueta),datasets:[{label:mes,data:fs.map(f=>f.celdas[mes].v),backgroundColor:fs.map((_,i)=>cv(pal[i%pal.length])+'99'),borderColor:fs.map((_,i)=>cv(pal[i%pal.length])),borderWidth:1,borderRadius:3}]},
+        options:{indexAxis:'y',responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>fmt(c.parsed.x)+(uni==='%'?'%':' '+uni)}}},
+          scales:{x:{ticks:{font:{size:10},color:tok('--fg-dim')},grid:{color:tok('--border')}},y:{ticks:{font:{size:10},color:tok('--fg')},grid:{display:false}}}}});
+      return;}
+    const id=`evolc_${tab}_${gi}`;
+    box.insertAdjacentHTML('beforeend',`<div class="chart-wrap"><div class="chart-head"><div><h3>${esc(g.titulo.split(' · ')[0])} · evolución</h3><p>${esc(g.meses[0])} → ${esc(g.meses[g.meses.length-1])} · una línea por consultora e indicador · no se promedian · clic en leyenda para filtrar</p></div></div>
+      <div class="chart-box"><canvas id="${id}"></canvas></div><div class="legend" id="${id}_lg"></div>
+      <p class="source">${esc(ser.map(f=>f.etiqueta+(f.nota?' ('+f.nota+')':'')).join(' · '))}</p></div>`);
+    const cols=ser.map((_,i)=>pal[i%pal.length]);
+    chartRegistry[id]=new Chart(document.getElementById(id),{type:'line',
+      data:{labels:g.meses,datasets:ser.map((f,i)=>({label:f.etiqueta,data:g.meses.map(m=>f.celdas[m]?f.celdas[m].v:null),
+        borderColor:cv(cols[i]),backgroundColor:cv(cols[i]),borderWidth:2,pointRadius:4,spanGaps:true,tension:0.25,
+        borderDash:f.evidencia==='BAJA'?[5,4]:[]}))},
+      options:{responsive:true,maintainAspectRatio:false,interaction:{mode:'index',intersect:false},
+        plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>c.dataset.label+': '+(c.parsed.y==null?'—':fmt(c.parsed.y))}}},
+        scales:{x:{ticks:{font:{family:"'IBM Plex Mono',monospace",size:10},color:tok('--fg-dim')},grid:{color:tok('--border')}},
+                y:{ticks:{font:{size:10},color:tok('--fg-dim')},grid:{color:tok('--border')}}}}});
+    buildLegend(id+'_lg',id,ser.map(f=>f.etiqueta+(f.evidencia==='BAJA'?' (línea punteada: comparabilidad baja)':'')),cols);
+  });
+}
+function renderEvol(){
+  document.querySelectorAll('.evol-box').forEach(box=>{
+    const gs=(EVOL[box.dataset.evol]||[]);
+    const nn=document.querySelector(`[data-finn="${box.dataset.evol}"]`);if(nn)nn.textContent=gs.reduce((a,g)=>a+g.filas.length,0)+' series';
+    box.innerHTML=gs.map(g=>{
+      const head=g.meses.map(m=>`<th class="num">${esc(m)}</th>`).join('');
+      const rows=g.filas.map(f=>{
+        const tds=g.meses.map(m=>{const c=f.celdas[m];if(!c)return '<td class="num evol-na">—</td>';
+          const tip=(c.base==='nivel2_indicadores'?'N2':'N1')+' fila '+c.fila+(c.campo?' · campo '+c.campo:'')+(c.secundaria?' · '+c.secundaria:'');
+          return `<td class="num" title="${esc(tip)}">${fmt(c.v)}${c.file_id&&!c.file_id.startsWith('No aplica')?` <a class="evol-pdf" href="https://drive.google.com/file/d/${esc(c.file_id)}/view" target="_blank" rel="noopener">↗</a>`:''}</td>`}).join('');
+        const d=f.delta==null?'—':(f.delta>0?'+':'')+fmt(f.delta);
+        return `<tr><td><strong>${esc(f.etiqueta)}</strong>${f.nota?`<div class="evol-nota">${esc(f.nota)}</div>`:''}</td>${tds}<td class="num">${d}</td><td><span class="evol-ev ev-${f.evidencia}">${f.evidencia}</span></td></tr>`}).join('');
+      return `<div class="evol"><p class="sec">${esc(g.titulo)}</p>${g.nota?`<p class="source">${esc(g.nota)}</p>`:''}
+        <div class="table-wrap"><table><thead><tr><th>Serie</th>${head}<th class="num">Δ últ.</th><th>Evidencia</th></tr></thead><tbody>${rows}</tbody></table></div>
+        <p class="source">Cada celda sale de la fila indicada de la base (pasar el mouse) · ↗ informe original · series intra-consultora: no se promedian · evidencia: ALTA ≥3 mediciones comparables, MEDIA 2, BAJA 1 o comparabilidad limitada.</p></div>`}).join('');
+  });
+}
+function secDe(ruta,mes){return (SECUNDARIA||[]).find(x=>x.ruta===ruta&&x.mes===mes);}
+function renderNotaSec(){
+  const el=document.getElementById('notaSecBody');if(!el)return;const NS=(window.__NS=(typeof NOTA_SECUNDARIA!=='undefined'?NOTA_SECUNDARIA:[]));
+  el.innerHTML=`<p>Cuando falta un dato en una serie ya existente y no hay informe primario en Drive, se completa con una fuente secundaria autorizada (Parte XVI): monitorargy.com para indicadores económicos y encuestas-argentinas.com para encuestas. La fuente secundaria es solo la vía de localización: se cita el organismo o la consultora original y el dato lleva evidencia máxima MEDIA. Cuando el informe primario llega a Drive, lo reemplaza. Los gráficos no marcan estos valores; el detalle está acá y en la trazabilidad de cada sección.</p>
+  <table><thead><tr><th>Indicador</th><th>Mes</th><th class="num">Valor</th><th>Rótulo de origen</th><th>Base</th></tr></thead><tbody>${NS.map(x=>{const url=(x.rotulo.match(/https?:\/\/[^\s)]+/)||[''])[0];
+    return `<tr><td>${esc(x.indicador)}</td><td>${esc(x.mes)}</td><td class="num">${fmt(x.valor)}</td><td>${esc(x.rotulo)}${url?` · <a href="${esc(url)}" target="_blank" rel="noopener">ver</a>`:''}</td><td>N2 fila ${esc(x.fila)}</td></tr>`}).join('')}</tbody></table>`;
+}
+function renderSec(){
+  document.querySelectorAll('[data-sec]').forEach(el=>{
+    const it=(SECUNDARIA||[]).find(x=>x.ruta===el.dataset.sec&&x.mes===el.dataset.secMes);
+    if(!it){el.textContent='';return;}
+    const url=(it.rotulo.match(/https?:\/\/\S+/)||[''])[0];
+    el.innerHTML=el.dataset.secCorto?`${esc(it.mes.toLowerCase())}: fuente secundaria · <a href="${esc(url)}" target="_blank" rel="noopener">monitorargy.com</a> · evidencia MEDIA`
+      :`${esc(it.mes.toLowerCase())} (${fmt(it.valor)}%): ${esc(it.rotulo)} · evidencia máx. MEDIA · N2 fila ${esc(it.fila)}`;
+  });
+}
+function renderCobertura(){
+  const TAB={'IPC Nación':'indicadores','IPCBA CABA':'indicadores','ICC':'indicadores','ICG':'indicadores','Economía percibida':'indicadores','Expectativas':'indicadores','Clima / rumbo':'indicadores',
+    'Gestión nacional':'imagen','Imagen Milei':'imagen','Imagen otros dirigentes':'imagen','Territorio':'imagen','Intención de voto':'voto','Agenda pública':'agenda','Conversación digital':'sl'};
+  const ic={'con datos':'🟢','parcial':'🟡','pendiente':'🔴','sin dato':'⚪'};
+  const cel=(m,c)=>`${m} ${ic[c.estado]||''} ${c.n_fuentes?c.n_fuentes+' fuente'+(c.n_fuentes>1?'s':''):esc(c.estado)}`;
+  const por={};(COBERTURA||[]).forEach(r=>{const t=TAB[r.seccion];if(t)(por[t]=por[t]||[]).push(r)});
+  Object.entries(por).forEach(([t,rs])=>{const d=document.querySelector(`[data-fin="${t}"]`);if(!d)return;
+    const line=`<div class="cob-sec"><b>Cobertura oct–nov:</b> ${rs.map(r=>`${esc(r.seccion)} · ${cel('Oct',r['Oct-26'])} · ${cel('Nov',r['Nov-26'])}`).join(' &nbsp;|&nbsp; ')}</div>`;
+    d.insertAdjacentHTML('beforebegin',line);
+    const pend=rs.flatMap(r=>[...r['Oct-26'].pendiente.map(x=>'Oct · '+x),...r['Nov-26'].pendiente.map(x=>'Nov · '+x)]);
+    const fu=rs.map(r=>`${esc(r.seccion)}: ${esc([...new Set([...r['Oct-26'].fuentes,...r['Nov-26'].fuentes])].join(', ')||'—')}`);
+    d.querySelector('summary').insertAdjacentHTML('afterend',`<div class="cob-sec"><b>Fuentes oct–nov</b> — ${fu.join(' · ')}</div>${pend.length?`<div class="cob-sec"><b>Pendiente</b><ul style="margin:4px 0 6px 16px;padding:0">${pend.map(x=>`<li>${esc(x)}</li>`).join('')}</ul></div>`:''}`);});
+}
+document.querySelectorAll('.mes-btn').forEach(b=>b.addEventListener('click',()=>{
+  document.querySelectorAll('.mes-btn').forEach(x=>{x.classList.remove('active');x.setAttribute('aria-pressed','false')});
+  b.classList.add('active');b.setAttribute('aria-pressed','true');MES_SEL=b.dataset.mes;renderUpd();
+}));
+fetch('./data/radar_data.json',{cache:'no-store'})
+  .then(r=>{if(!r.ok)throw new Error('HTTP '+r.status);return r.json();})
+  .then(D=>{applyData(D);renderStaticTables();renderKPIs();renderEncabezado();renderRangos();renderTablaVar();renderSLEstudios();renderEvol();renderUpd();renderSec();renderNotaSec();renderCobertura();initTab('indicadores');applyHash();})
+  .catch(err=>{console.error('Error cargando radar_data.json:',err);
+    document.querySelector('.main-content').insertAdjacentHTML('afterbegin',`<p class="notice" style="color:var(--neg)">No se pudieron cargar los datos (data/radar_data.json): ${esc(err.message)}. Abrir el sitio desde un servidor (no como archivo local).</p>`);});
+
 </script>
 
 </body></html>
