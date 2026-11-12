@@ -124,6 +124,9 @@ tr:hover td{background:color-mix(in srgb,var(--accent) 5%,transparent)}
 .h-mix{background:color-mix(in srgb,var(--warn) 14%,transparent);color:var(--warn)}
 .h-pos{background:color-mix(in srgb,var(--pos) 14%,transparent);color:var(--pos)}
 .hallazgo-txt{font-size:12px;color:var(--fg);line-height:1.5}
+#slEstudios>.hallazgo,#slEstudios>.hallazgo *{min-width:0;overflow-wrap:break-word}
+#slEstudios>.hallazgo [style*="uppercase"]{letter-spacing:0!important}
+#slEstudios>.hallazgo [style*="grid-template-columns"]{grid-template-columns:repeat(2,minmax(0,1fr))!important}
 
 .brecha-pos{color:var(--neg)}.brecha-neg{color:var(--pos)}.brecha-zero{color:var(--fg-dim)}
 
@@ -660,11 +663,11 @@ footer a{color:var(--accent)}
       </div>
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:6px;margin:6px 0 4px">
         <div>
-          <div style="font-size:9px;color:var(--fg-dim);letter-spacing:.5px;text-transform:uppercase">Diversión/espectáculo</div>
+          <div style="font-size:9px;color:var(--fg-dim);letter-spacing:.5px;text-transform:uppercase">Diversión/<wbr>espectáculo</div>
           <div style="font-family:'IBM Plex Mono',monospace;font-size:18px;font-weight:500;color:var(--pos)">43%</div>
         </div>
         <div>
-          <div style="font-size:9px;color:var(--fg-dim);letter-spacing:.5px;text-transform:uppercase">Reproche/política</div>
+          <div style="font-size:9px;color:var(--fg-dim);letter-spacing:.5px;text-transform:uppercase">Reproche/<wbr>política</div>
           <div style="font-family:'IBM Plex Mono',monospace;font-size:18px;font-weight:500;color:var(--neg)">27%</div>
         </div>
       </div>
