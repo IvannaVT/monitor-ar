@@ -5997,9 +5997,9 @@
  ],
  "META": {
   "corte": {
-   "fecha": "2026-11-11",
+   "fecha": "2026-11-12",
    "mes_parcial": "Nov-26",
-   "etiqueta": "Noviembre 2026 · corte parcial al 11/11/2026",
+   "etiqueta": "Noviembre 2026 · corte parcial al 12/11/2026",
    "base_publicada": "b43fcb8 (index.html publicado en ivannavt.github.io/monitor-ar)"
   },
   "generado_por": "scripts/build_radar_data.py",

@@ -224,7 +224,7 @@ footer a{color:var(--accent)}
 
 <header class="site-header">
   <div class="header-inner">
-    <div class="logo">Monitor<span>AR</span><small>NOV 2026 · parcial 11/11</small></div>
+    <div class="logo">Monitor<span>AR</span><small>NOV 2026 · parcial 12/11</small></div>
     <div class="header-tools">
       <nav class="site-nav" aria-label="Monitores del sitio">
         <a class="site-nav-link" href="./monitor_leg.html">Monitor LEG</a>
@@ -883,7 +883,7 @@ footer a{color:var(--accent)}
   </div>
 
   <div class="chart-wrap">
-    <div class="chart-head"><div><h3>Informes SL por mes</h3><p>Ene–Nov 2026 (nov: corte parcial 11/11) · 4 informes Ene-26 = evento puntual (Maduro) · serie regular desde May-26</p></div></div>
+    <div class="chart-head"><div><h3>Informes SL por mes</h3><p>Ene–Nov 2026 (nov: corte parcial 12/11) · 4 informes Ene-26 = evento puntual (Maduro) · serie regular desde May-26</p></div></div>
     <div class="chart-box"><canvas id="chartSLMes"></canvas></div>
   </div>
 
@@ -1411,7 +1411,7 @@ footer a{color:var(--accent)}
 </main>
 
 <footer>
-  Monitor AR · nov-26 (corte parcial 11/11) · datos: data/radar_data.json generado desde las bases · uso interno ·
+  Monitor AR · nov-26 (corte parcial 12/11) · datos: data/radar_data.json generado desde las bases · uso interno ·
   <a href="https://ivannatravaini.netlify.app/metodologia" target="_blank">metodología ↗</a>
 </footer>
 
@@ -2030,10 +2030,10 @@ function renderUpd(){
 function updHTML(box,tabX){
     if(MES_SEL==='Nov-26'){const tab=box.dataset.upd,it=((UPD[tab]||{})['Nov-26']||[]).filter(i=>i.tipo!=='pendiente');
       const tabla=(EVOL[tab]||[]).reduce((a,g)=>a+g.filas.filter(f=>f.n===1&&f.celdas['Nov-26']).length,0);
-      return (it.length||tabla)?`<p class="upd-nov">Noviembre 2026 · corte parcial al 11/11: ${it.length} valor${it.length===1?'':'es'} ya en los gráficos de la sección${tabla?` · ${tabla} medición${tabla===1?'':'es'} única${tabla===1?'':'s'} en la tabla de abajo`:''} · publicaciones pendientes en el encabezado.</p>`:'';}
+      return (it.length||tabla)?`<p class="upd-nov">Noviembre 2026 · corte parcial al 12/11: ${it.length} valor${it.length===1?'':'es'} ya en los gráficos de la sección${tabla?` · ${tabla} medición${tabla===1?'':'es'} única${tabla===1?'':'s'} en la tabla de abajo`:''} · publicaciones pendientes en el encabezado.</p>`:'';}
     const tab=box.dataset.upd,porMes=(UPD[tab]||{}),items=(porMes[MES_SEL]||[]);
     if(!items.length)return '';
-    const titulo=MES_SEL==='Nov-26'?'Noviembre 2026 · corte parcial al 11/11':MES_SEL==='Oct-26'?'Octubre 2026':'Septiembre 2026 · valores cargados o corregidos en esta corrida';
+    const titulo=MES_SEL==='Nov-26'?'Noviembre 2026 · corte parcial al 12/11':MES_SEL==='Oct-26'?'Octubre 2026':'Septiembre 2026 · valores cargados o corregidos en esta corrida';
     const orden={serie:0,puntual:1,pendiente:2};
     const ord=a=>a.slice().sort((a,b)=>(orden[a.tipo]-orden[b.tipo])||String(a.modulo).localeCompare(b.modulo)).map(itemHTML).join('');
     const vistos=new Set(),uno=items.filter(i=>{if(!i.secundaria)return true;const k=i.fila+'|'+i.mes+'|'+i.secundaria;if(vistos.has(k))return false;vistos.add(k);return true});
@@ -2058,7 +2058,7 @@ function renderRangos(){
   const ejes={IMG:MI,CONS:MV,GESTION:MG},grp={IMG,CONS,GESTION};
   document.querySelectorAll('[data-rango]').forEach(el=>{const [g,c]=el.dataset.rango.split('.');const ax=ejes[g];let lo=null,hi=null;
     Object.values(grp[g]||{}).forEach(s=>(s[c]||[]).forEach((v,i)=>{if(v!=null){lo=lo==null?i:Math.min(lo,i);hi=hi==null?i:Math.max(hi,i);}}));
-    if(lo!=null)el.textContent=ax[lo]+' → '+ax[hi]+(ax[hi]==='Nov-26'?' (nov: corte parcial 11/11)':'');});
+    if(lo!=null)el.textContent=ax[lo]+' → '+ax[hi]+(ax[hi]==='Nov-26'?' (nov: corte parcial 12/11)':'');});
   document.querySelectorAll('[data-consultoras]').forEach(el=>{const g=el.dataset.consultoras,grp={IMG,CONS,GESTION};el.textContent=Object.keys(grp[g]||{}).length+' consultoras';});
 }
 function renderTablaVar(){
