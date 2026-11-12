@@ -113,3 +113,6 @@ Los datos de fuente secundaria ya no se marcan dentro de gráficos, KPIs ni enca
 - `index.html`: botón «Monitor LEG» en el encabezado (`href="./monitor_leg.html"`), con la tipografía, el color y el subrayado al pasar el cursor de las pestañas del sitio. En móvil la fecha del corte pasa debajo del logo para que entren el enlace y el botón de tema.
 - `monitor_leg.html` regenerado con `python3 monitor_leg_build.py` desde `data/legislativo.json` + `monitor_leg.template.html` + `monitor_leg_view.py` (sin cambios en las fuentes). El HTML anterior no coincidía con el generador (el chequeo ya fallaba en b43fcb8).
 - Chequeos: `monitor_leg_build.py --check` OK · `scripts/build_radar_data.py --check` OK · `unittest discover -s tests -p 'test_radar_data.py'` 6 tests OK.
+
+### 2026-11-12 · Corte actualizado a 12/11
+- Etiqueta del corte parcial de noviembre: 11/11 → 12/11 (encabezado, pie, rangos, avisos por sección y `corte` en `radar_mapping.json`). Las fechas de consulta de fuentes (2026-11-11) no cambian: son el registro de cuándo se consultó cada una.
