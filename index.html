@@ -193,6 +193,11 @@ footer a{color:var(--accent)}
 @media(max-width:500px){.gap-zone-cards{grid-template-columns:1fr 1fr}.kpi-num{font-size:22px}}
 @media(max-width:620px){.cross-grid{grid-template-columns:1fr!important}}
 .cross-grid>*{min-width:0}
+.mosaic{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));gap:12px;margin-bottom:16px;align-items:start}
+.mosaic>*{min-width:0;margin-top:0!important;margin-bottom:0!important}
+.mosaic>.mos-full,.mosaic>details[open],.mosaic>.chart-wrap:has(details[open]){grid-column:1/-1}
+.mosaic>.hallazgo{height:100%}
+.mosaic.mos-sm{grid-template-columns:repeat(auto-fit,minmax(min(100%,200px),1fr))}
 /* ── MOBILE ─────────────────────────────────── */
 @media(max-width:640px){
   .gap-legend-grid{grid-template-columns:1fr!important}
@@ -352,6 +357,7 @@ footer a{color:var(--accent)}
 
   <div class="notice">Series mostradas solo donde existe dato propio verificado. Cada serie es intra-consultora — no se promedian. Los cambios en la vista pueden reflejar entrada/salida de consultoras, no solo movimientos de opinión.</div>
 
+  <div class="mosaic">
   <div class="chart-wrap">
     <div class="chart-head">
       <div><h3>LLA</h3><p><span data-rango="CONS.lla"></span> · por consultora · clic en leyenda para filtrar</p></div>
@@ -381,7 +387,7 @@ footer a{color:var(--accent)}
   </div>
 
   <!-- HALLAZGOS OCTUBRE 2026 -->
-  <div class="chart-wrap" style="margin-top:20px">
+  <div class="chart-wrap mos-full">
     <div class="mes-titulo">
       <span>OCTUBRE 2026</span>
       <span class="mes-badge">MES ACTIVO</span>
@@ -425,6 +431,9 @@ footer a{color:var(--accent)}
     <p class="source" style="margin-top:10px">Escenario I: LLA vs. PJ · Zuban Córdoba · oct-26 · comparabilidad ALTA intra-serie</p>
   </div>
 
+  
+  </div>
+
   <!-- PROXY SL -->
   <div style="margin-top:28px">
     <div style="display:flex;align-items:baseline;gap:10px;margin-bottom:10px">
@@ -432,7 +441,7 @@ footer a{color:var(--accent)}
       <span style="font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:.4px;padding:2px 8px;border-radius:10px;background:color-mix(in srgb,var(--fg-dim) 12%,transparent);color:var(--fg-dim);font-weight:600">SL NO MIDE VOTO DIRECTO</span>
     </div>
     <div class="notice" style="margin-bottom:14px">La capa SL no releva intención de voto explícita. Los indicadores de sentimiento y menciones sobre LLA y Milei actúan como <strong>señales complementarias</strong> — no sustituyen la encuesta CONV. Divergencias CONV–SL se registran en la pestaña <a href="#gap" onclick="try{history.replaceState(null,'','#gap');}catch(e){}" style="color:var(--accent)">GAP ↗</a>.</div>
-    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px">
+    <div class="mosaic mos-sm">
 
       <div class="chart-wrap" style="margin-bottom:0;padding:14px 16px">
         <div style="font-size:11px;font-weight:600;letter-spacing:.5px;text-transform:uppercase;color:var(--fg-dim);margin-bottom:6px">Sentimiento neto · Milei</div>
@@ -677,6 +686,52 @@ footer a{color:var(--accent)}
 
   </div>
 
+  <!-- Hallazgos clave (mosaico) -->
+  <p class="sec" style="margin-top:4px">Hallazgos clave · informes con mayor riqueza analítica</p>
+  <div class="mosaic">
+<div class="hallazgo">
+    <div class="hallazgo-head">
+      <span style="font-size:12px;font-weight:600">Índice de Tolerancia Social · Milei</span>
+      <span class="hallazgo-src">Reputación Digital · may-26</span>
+      <span class="hallazgo-dir h-neg">↓ negativo</span>
+    </div>
+    <div class="hallazgo-txt">Tolerancia social hacia Milei en baja. La conversación digital refleja menor disposición a defender públicamente al gobierno, incluso entre votantes propios. Señal de fatiga de imagen antes que de cambio de voto.</div>
+  </div>
+<div class="hallazgo">
+    <div class="hallazgo-head">
+      <span style="font-size:12px;font-weight:600">Índice de Disonancia Narrativa</span>
+      <span class="hallazgo-src">Reputación Digital · jun-26</span>
+      <span class="hallazgo-dir h-neg">⚠ divergente</span>
+    </div>
+    <div class="hallazgo-txt">Alta brecha entre el discurso oficial y la percepción digital ciudadana. Los relatos de éxito económico del gobierno no se replican en la conversación espontánea: predominan referencias a precios, poder adquisitivo y empleo informal.</div>
+  </div>
+<div class="hallazgo">
+    <div class="hallazgo-head">
+      <span style="font-size:12px;font-weight:600">La Scaloneta le da aire al gobierno</span>
+      <span class="hallazgo-src">Reputación Digital · jun-26</span>
+      <span class="hallazgo-dir h-pos">↑ positivo transitorio</span>
+    </div>
+    <div class="hallazgo-txt">Copa del Mundo 2026: el buen desempeño de la selección impulsó sentimiento positivo hacia el gobierno de forma transitoria (+18% menciones positivas Milei durante el torneo). Efecto acotado: no se sostuvo después de la eliminación.</div>
+  </div>
+<div class="hallazgo">
+    <div class="hallazgo-head">
+      <span style="font-size:12px;font-weight:600">Informe Especial La Fatiga Digital</span>
+      <span class="hallazgo-src">AD HOC · ago-26</span>
+      <span class="hallazgo-dir h-mix">~ ambivalente</span>
+    </div>
+    <div class="hallazgo-txt">Fatiga digital del electorado libertario: caída sostenida en engagement de contenidos oficialistas (-31% vs. mar-26). Los críticos mantienen mayor actividad y consistencia. Señal de alerta para el ecosistema digital prooficialista de cara a 2027.</div>
+  </div>
+<div class="hallazgo">
+    <div class="hallazgo-head">
+      <span style="font-size:12px;font-weight:600">Milei 2027: ¿y ahora qué va a pasar?</span>
+      <span class="hallazgo-src">Reputación Digital · sep-26 · Nacional + PBA</span>
+      <span class="hallazgo-dir h-mix">~ mixto</span>
+    </div>
+    <div class="hallazgo-txt">Dos versiones (nacional y PBA): la conversación sobre el escenario electoral 2027 ya está activa en redes desde septiembre. En PBA, Kicillof concentra mayor volumen de mención opositora. A nivel nacional, la incertidumbre sobre la alianza electoral de LLA domina el debate digital.</div>
+  </div>
+  </div>
+
+
   <div class="kpi-grid">
     <div class="kpi">
       <div class="kpi-label">Informes SL</div>
@@ -700,86 +755,9 @@ footer a{color:var(--accent)}
     </div>
   </div>
 
-  <!-- Sentimiento Milei · AD HOC · Septiembre 2026 -->
-  <p class="sec" style="margin-bottom:12px">AD HOC · Septiembre 2026 · Conversación digital nacional · último informe AD HOC en Drive (sin informe de octubre)</p>
-  <div class="chart-wrap">
-    <div class="chart-head">
-      <div><h3>Sentimiento Milei · AD HOC · Septiembre 2026</h3><p>5,2M menciones · Twitter/X y otras plataformas</p></div>
-    </div>
-    <div style="display:flex;gap:14px;align-items:center;padding:4px 0 8px">
-      <div style="position:relative;width:110px;height:110px;flex-shrink:0"><canvas id="chartMileiSentSep"></canvas></div>
-      <div style="display:flex;flex-direction:column;gap:7px">
-        <div style="display:flex;align-items:center;gap:6px">
-          <div style="width:10px;height:10px;border-radius:50%;background:var(--neg);flex-shrink:0"></div>
-          <span style="font-size:12px;color:var(--fg)">Negativo</span>
-          <span style="font-family:'IBM Plex Mono',monospace;font-size:14px;font-weight:600;color:var(--neg);margin-left:auto">46,2%</span>
-        </div>
-        <div style="display:flex;align-items:center;gap:6px">
-          <div style="width:10px;height:10px;border-radius:50%;background:var(--pos);flex-shrink:0"></div>
-          <span style="font-size:12px;color:var(--fg)">Positivo</span>
-          <span style="font-family:'IBM Plex Mono',monospace;font-size:14px;font-weight:600;color:var(--pos);margin-left:auto">38,4%</span>
-        </div>
-        <div style="display:flex;align-items:center;gap:6px">
-          <div style="width:10px;height:10px;border-radius:50%;background:var(--neu);flex-shrink:0"></div>
-          <span style="font-size:12px;color:var(--fg)">Neutro</span>
-          <span style="font-family:'IBM Plex Mono',monospace;font-size:14px;font-weight:600;color:var(--neu);margin-left:auto">15,4%</span>
-        </div>
-      </div>
-    </div>
-    <p class="source">5,2M menciones Milei · Twitter/X y otras plataformas · AD HOC sep-26
-      &nbsp;·&nbsp;<a href="https://drive.google.com/drive/folders/1SDS2YXZCqEuwdIzkRhF3JYGR13S9NMvJ" target="_blank" rel="noopener" style="color:var(--fg-dim);text-decoration:underline;text-underline-offset:2px">Sentimiento por evento · AD HOC · Septiembre 2026 ↗</a>
-    </p>
-  </div>
-
-  <!-- ISN mensual RD -->
-  <div class="chart-wrap">
-    <div class="chart-head">
-      <div><h3>Evolución sentimiento neto negativo</h3><p>Ago–Sep 2026 · ISN Reputación Digital · serie en construcción · escala −100 a +100 · oct-26: sin informe mensual de ISN; ver tono por tramos sep–oct</p></div>
-      <span class="signal mix">~ mejora parcial</span>
-    </div>
-    <div class="chart-box" style="height:160px"><canvas id="chartISNMensual"></canvas></div>
-    <p class="source">ISN = (menciones positivas − negativas) / total × 100 · Ago-26: −43 · Sep-26: −33 · mejora +10 pp · Reputación Digital</p>
-  </div>
-  <div class="chart-wrap">
-    <div class="chart-head"><div><h3>Tono entre cuentas reales · sep–oct 2026</h3><p>% de publicaciones negativas sobre Milei, cuentas reales (sin bots ni trolls) · tramos del informe Reputación Digital «¿Se le acabó el aura?» (5/9–4/11, rotulado nov)</p></div></div>
-    <div class="chart-box" style="height:180px"><canvas id="chartSLTramos"></canvas></div>
-    <p class="source" id="srcSLTramos"></p>
-  </div>
-
-  <!-- IDN Q2 + ISN por eje del relato -->
-  <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:16px" class="cross-grid">
-    <div class="chart-wrap" style="margin-bottom:0">
-      <div class="chart-head">
-        <div><h3>IDN · Índice de Disonancia Narrativa · Q2 2026</h3><p>Abr–Jun 2026 · Reputación Digital · Nacional</p></div>
-      </div>
-      <div style="display:flex;flex-direction:column;align-items:center;justify-content:center;padding:12px 0 8px">
-        <div style="font-family:'IBM Plex Mono',monospace;font-size:60px;font-weight:500;color:var(--warn);line-height:1">61</div>
-        <div style="font-size:11px;color:var(--fg-dim);margin-top:4px">escala 0–100</div>
-        <div style="margin-top:10px;width:100%;max-width:190px">
-          <div style="display:flex;justify-content:space-between;font-size:9px;color:var(--fg-dim);margin-bottom:3px">
-            <span>Alineación</span><span style="color:var(--warn)">⚠ umbral 60</span><span>Divorcio</span>
-          </div>
-          <div style="height:8px;border-radius:4px;background:linear-gradient(90deg,var(--pos) 0%,var(--warn) 55%,var(--neg) 100%);position:relative">
-            <div style="position:absolute;left:61%;top:-3px;width:2px;height:14px;background:var(--fg);border-radius:1px"></div>
-          </div>
-        </div>
-        <div style="margin-top:10px;font-size:11px;color:var(--warn);font-weight:600;text-align:center">Relato divorciado de la conversación ciudadana</div>
-        <div style="font-size:10px;color:var(--fg-dim);margin-top:3px;text-align:center">6,5M menciones · 550k depuradas (Filtro Sudor)</div>
-        <div style="font-size:10px;color:var(--fg-dim);text-align:center">NLP + LLM tropicalizados · redes + radio streaming</div>
-      </div>
-      <p class="source" style="text-align:center">Estudio Q2 2026 versión preliminar · dataset definitivo pendiente</p>
-    </div>
-    <div class="chart-wrap" style="margin-bottom:0">
-      <div class="chart-head">
-        <div><h3>ISN por eje del relato · Q2 2026</h3><p>Sentimiento neto por narrativa oficial · RD · Nacional · escala −100 a 0</p></div>
-      </div>
-      <div class="chart-box" style="height:220px"><canvas id="chartISNEje"></canvas></div>
-      <p class="source">Todos los ejes con sentimiento neto negativo · Q2 2026 · Reputación Digital</p>
-    </div>
-  </div>
-
-  <!-- ITS Mayo RD -->
-  <div class="chart-wrap">
+  <p class="sec" style="margin-bottom:12px">Reputación Digital y AD HOC · índices y series · último informe AD HOC en Drive: septiembre (sin informe de octubre)</p>
+  <div class="mosaic">
+<div class="chart-wrap">
     <div class="chart-head">
       <div><h3>ITS · Índice de Tolerancia Social · Mayo 2026 · Reputación Digital</h3><p>Disposición a defender públicamente al gobierno en espacios digitales</p></div>
       <span class="signal div">↓ negativo</span>
@@ -811,6 +789,90 @@ footer a{color:var(--accent)}
     </div>
     <p class="source">Fatiga de imagen antes que cambio de voto · mayo 2026 · Reputación Digital</p>
   </div>
+<div class="chart-wrap">
+    <div class="chart-head">
+      <div><h3>Sentimiento Milei · AD HOC · Septiembre 2026</h3><p>5,2M menciones · Twitter/X y otras plataformas</p></div>
+    </div>
+    <div style="display:flex;gap:14px;align-items:center;padding:4px 0 8px">
+      <div style="position:relative;width:110px;height:110px;flex-shrink:0"><canvas id="chartMileiSentSep"></canvas></div>
+      <div style="display:flex;flex-direction:column;gap:7px">
+        <div style="display:flex;align-items:center;gap:6px">
+          <div style="width:10px;height:10px;border-radius:50%;background:var(--neg);flex-shrink:0"></div>
+          <span style="font-size:12px;color:var(--fg)">Negativo</span>
+          <span style="font-family:'IBM Plex Mono',monospace;font-size:14px;font-weight:600;color:var(--neg);margin-left:auto">46,2%</span>
+        </div>
+        <div style="display:flex;align-items:center;gap:6px">
+          <div style="width:10px;height:10px;border-radius:50%;background:var(--pos);flex-shrink:0"></div>
+          <span style="font-size:12px;color:var(--fg)">Positivo</span>
+          <span style="font-family:'IBM Plex Mono',monospace;font-size:14px;font-weight:600;color:var(--pos);margin-left:auto">38,4%</span>
+        </div>
+        <div style="display:flex;align-items:center;gap:6px">
+          <div style="width:10px;height:10px;border-radius:50%;background:var(--neu);flex-shrink:0"></div>
+          <span style="font-size:12px;color:var(--fg)">Neutro</span>
+          <span style="font-family:'IBM Plex Mono',monospace;font-size:14px;font-weight:600;color:var(--neu);margin-left:auto">15,4%</span>
+        </div>
+      </div>
+    </div>
+    <p class="source">5,2M menciones Milei · Twitter/X y otras plataformas · AD HOC sep-26
+      &nbsp;·&nbsp;<a href="https://drive.google.com/drive/folders/1SDS2YXZCqEuwdIzkRhF3JYGR13S9NMvJ" target="_blank" rel="noopener" style="color:var(--fg-dim);text-decoration:underline;text-underline-offset:2px">Sentimiento por evento · AD HOC · Septiembre 2026 ↗</a>
+    </p>
+  </div>
+<div class="chart-wrap">
+    <div class="chart-head">
+      <div><h3>Evolución sentimiento neto negativo</h3><p>Ago–Sep 2026 · ISN Reputación Digital · serie en construcción · escala −100 a +100 · oct-26: sin informe mensual de ISN; ver tono por tramos sep–oct</p></div>
+      <span class="signal mix">~ mejora parcial</span>
+    </div>
+    <div class="chart-box" style="height:160px"><canvas id="chartISNMensual"></canvas></div>
+    <p class="source">ISN = (menciones positivas − negativas) / total × 100 · Ago-26: −43 · Sep-26: −33 · mejora +10 pp · Reputación Digital</p>
+  </div>
+<div class="chart-wrap">
+    <div class="chart-head"><div><h3>Tono entre cuentas reales · sep–oct 2026</h3><p>% de publicaciones negativas sobre Milei, cuentas reales (sin bots ni trolls) · tramos del informe Reputación Digital «¿Se le acabó el aura?» (5/9–4/11, rotulado nov)</p></div></div>
+    <div class="chart-box" style="height:180px"><canvas id="chartSLTramos"></canvas></div>
+    <p class="source" id="srcSLTramos"></p>
+  </div>
+<div class="chart-wrap" style="margin-bottom:0">
+      <div class="chart-head">
+        <div><h3>IDN · Índice de Disonancia Narrativa · Q2 2026</h3><p>Abr–Jun 2026 · Reputación Digital · Nacional</p></div>
+      </div>
+      <div style="display:flex;flex-direction:column;align-items:center;justify-content:center;padding:12px 0 8px">
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:60px;font-weight:500;color:var(--warn);line-height:1">61</div>
+        <div style="font-size:11px;color:var(--fg-dim);margin-top:4px">escala 0–100</div>
+        <div style="margin-top:10px;width:100%;max-width:190px">
+          <div style="display:flex;justify-content:space-between;font-size:9px;color:var(--fg-dim);margin-bottom:3px">
+            <span>Alineación</span><span style="color:var(--warn)">⚠ umbral 60</span><span>Divorcio</span>
+          </div>
+          <div style="height:8px;border-radius:4px;background:linear-gradient(90deg,var(--pos) 0%,var(--warn) 55%,var(--neg) 100%);position:relative">
+            <div style="position:absolute;left:61%;top:-3px;width:2px;height:14px;background:var(--fg);border-radius:1px"></div>
+          </div>
+        </div>
+        <div style="margin-top:10px;font-size:11px;color:var(--warn);font-weight:600;text-align:center">Relato divorciado de la conversación ciudadana</div>
+        <div style="font-size:10px;color:var(--fg-dim);margin-top:3px;text-align:center">6,5M menciones · 550k depuradas (Filtro Sudor)</div>
+        <div style="font-size:10px;color:var(--fg-dim);text-align:center">NLP + LLM tropicalizados · redes + radio streaming</div>
+      </div>
+      <p class="source" style="text-align:center">Estudio Q2 2026 versión preliminar · dataset definitivo pendiente</p>
+    </div>
+<div class="chart-wrap" style="margin-bottom:0">
+      <div class="chart-head">
+        <div><h3>ISN por eje del relato · Q2 2026</h3><p>Sentimiento neto por narrativa oficial · RD · Nacional · escala −100 a 0</p></div>
+      </div>
+      <div class="chart-box" style="height:220px"><canvas id="chartISNEje"></canvas></div>
+      <p class="source">Todos los ejes con sentimiento neto negativo · Q2 2026 · Reputación Digital</p>
+    </div>
+  </div>
+
+
+  <!-- Sentimiento Milei · AD HOC · Septiembre 2026 -->
+  
+  
+
+  <!-- ISN mensual RD -->
+  
+  
+
+  
+
+  <!-- ITS Mayo RD -->
+  
 
 
 
@@ -835,62 +897,21 @@ footer a{color:var(--accent)}
   </details>
   <p class="source" style="margin-top:6px;margin-bottom:16px">Serie regular mayo 2026 en adelante · informes de otras fuentes en tabla completa al pie · ⚪ sin dato disponible</p>
 
-  <!-- Hallazgos cualitativos -->
-  <p class="sec" style="margin-top:4px">Hallazgos clave · informes con mayor riqueza analítica</p>
+  
 
-  <div class="hallazgo">
-    <div class="hallazgo-head">
-      <span style="font-size:12px;font-weight:600">Índice de Tolerancia Social · Milei</span>
-      <span class="hallazgo-src">Reputación Digital · may-26</span>
-      <span class="hallazgo-dir h-neg">↓ negativo</span>
-    </div>
-    <div class="hallazgo-txt">Tolerancia social hacia Milei en baja. La conversación digital refleja menor disposición a defender públicamente al gobierno, incluso entre votantes propios. Señal de fatiga de imagen antes que de cambio de voto.</div>
-  </div>
+  
 
-  <div class="hallazgo">
-    <div class="hallazgo-head">
-      <span style="font-size:12px;font-weight:600">Índice de Disonancia Narrativa</span>
-      <span class="hallazgo-src">Reputación Digital · jun-26</span>
-      <span class="hallazgo-dir h-neg">⚠ divergente</span>
-    </div>
-    <div class="hallazgo-txt">Alta brecha entre el discurso oficial y la percepción digital ciudadana. Los relatos de éxito económico del gobierno no se replican en la conversación espontánea: predominan referencias a precios, poder adquisitivo y empleo informal.</div>
-  </div>
+  
 
-  <div class="hallazgo">
-    <div class="hallazgo-head">
-      <span style="font-size:12px;font-weight:600">La Scaloneta le da aire al gobierno</span>
-      <span class="hallazgo-src">Reputación Digital · jun-26</span>
-      <span class="hallazgo-dir h-pos">↑ positivo transitorio</span>
-    </div>
-    <div class="hallazgo-txt">Copa del Mundo 2026: el buen desempeño de la selección impulsó sentimiento positivo hacia el gobierno de forma transitoria (+18% menciones positivas Milei durante el torneo). Efecto acotado: no se sostuvo después de la eliminación.</div>
-  </div>
-
-  <div class="hallazgo">
-    <div class="hallazgo-head">
-      <span style="font-size:12px;font-weight:600">Informe Especial La Fatiga Digital</span>
-      <span class="hallazgo-src">AD HOC · ago-26</span>
-      <span class="hallazgo-dir h-mix">~ ambivalente</span>
-    </div>
-    <div class="hallazgo-txt">Fatiga digital del electorado libertario: caída sostenida en engagement de contenidos oficialistas (-31% vs. mar-26). Los críticos mantienen mayor actividad y consistencia. Señal de alerta para el ecosistema digital prooficialista de cara a 2027.</div>
-  </div>
-
-  <div class="hallazgo">
-    <div class="hallazgo-head">
-      <span style="font-size:12px;font-weight:600">Milei 2027: ¿y ahora qué va a pasar?</span>
-      <span class="hallazgo-src">Reputación Digital · sep-26 · Nacional + PBA</span>
-      <span class="hallazgo-dir h-mix">~ mixto</span>
-    </div>
-    <div class="hallazgo-txt">Dos versiones (nacional y PBA): la conversación sobre el escenario electoral 2027 ya está activa en redes desde septiembre. En PBA, Kicillof concentra mayor volumen de mención opositora. A nivel nacional, la incertidumbre sobre la alianza electoral de LLA domina el debate digital.</div>
-  </div>
-
-  <div class="chart-wrap">
+    <div class="mosaic">
+<div class="chart-wrap">
     <div class="chart-head"><div><h3>Informes SL por mes</h3><p>Ene–Nov 2026 (nov: corte al 12/11) · 4 informes Ene-26 = evento puntual (Maduro) · serie regular desde May-26</p></div></div>
     <div class="chart-box"><canvas id="chartSLMes"></canvas></div>
   </div>
-
-  <div class="chart-wrap">
+<div class="chart-wrap">
     <div class="chart-head"><div><h3>Informes SL por consultora</h3><p>Ene–Nov 2026 (nov: corte al 12/11)</p></div></div>
     <div class="chart-box" style="height:220px"><canvas id="chartSLConsult"></canvas></div>
+  </div>
   </div>
 
   <div class="chart-wrap">
@@ -1317,6 +1338,19 @@ footer a{color:var(--accent)}
   </div>
 
   <!-- Gráfico: agenda pública comparativa -->
+  
+  
+
+  <!-- Serie inflación como problema -->
+  
+
+  <!-- Tablas por consultora · desplegables -->
+  
+  
+
+  
+
+  <div class="mosaic">
   <div class="chart-wrap">
     <div class="chart-head">
       <div><h3>Agenda pública · ranking comparativo sep-26 (oct-26 por consultora, abajo)</h3><p>% de menciones como problema principal · respuesta espontánea o guiada según consultora</p></div>
@@ -1324,9 +1358,6 @@ footer a{color:var(--accent)}
     <div class="chart-box" style="height:260px"><canvas id="chartAgenda"></canvas></div>
     <p class="source">Realle Dalla Torre, Isasi-Burdman, Equipo Mide, D'Alessio, Explanans, OPSA · sep-26 · respuesta múltiple en varios casos: porcentajes no suman 100</p>
   </div>
-  <div class="evolc-box" data-evolc="agenda"></div>
-
-  <!-- Serie inflación como problema -->
   <div class="chart-wrap">
     <div class="chart-head">
       <div><h3>Inflación como problema principal · evolución may–oct 2026</h3><p>Serie intra-consultora · comparabilidad MEDIA entre fuentes</p></div>
@@ -1335,8 +1366,16 @@ footer a{color:var(--accent)}
     <div class="legend" id="legendInflProb"></div>
     <p class="source">Isasi-Burdman, Equipo Mide, OPSA · may–sep 2026 · D'Alessio (sep, N2 1169) y Proyección (oct, N2 1135): respuesta múltiple, primera medición en la serie · no promediar: escalas y metodologías distintas</p>
   </div>
-
-  <!-- Tablas por consultora · desplegables -->
+  <div class="hallazgo" style="border-left-color:var(--warn)">
+    <div class="hallazgo-head">
+      <span class="hallazgo-dir h-mix">CAMBIO DE AGENDA</span>
+      <span class="hallazgo-src">Evidencia ALTA · 8 fuentes may–oct</span>
+    </div>
+    <div class="hallazgo-txt">
+      En mayo 2026, <strong>inflación era el problema #1</strong> en la mayoría de las mediciones. En septiembre, <strong>ingresos / empleo / salarios</strong> lidera en al menos 4 de 6 consultoras; en octubre lidera en las 2 fuentes con dato (Proyección, CELAG). El desplazamiento es consistente con la baja del IPC mensual a ~1,8% y el deterioro de expectativas de ingreso real documentado por D'Alessio y UDESA.<br><br>
+      <em>Implicancia política</em>: el problema que el gobierno está resolviendo (inflación) dejó de ser el problema que más preocupa a la ciudadanía. La agenda de demanda social se trasladó hacia el poder adquisitivo.
+    </div>
+  </div>
   <details class="det-tab"><summary><b>Detalle por consultora · oct-26</b> · 2 fuentes · N2 1133–1137, 1145–1147</summary>
   <div class="table-wrap">
   <table>
@@ -1388,18 +1427,8 @@ footer a{color:var(--accent)}
   </table>
   </div>
   </details>
-
-  <!-- Hallazgo analítico -->
-  <div class="hallazgo" style="margin-top:20px;border-left-color:var(--warn)">
-    <div class="hallazgo-head">
-      <span class="hallazgo-dir h-mix">CAMBIO DE AGENDA</span>
-      <span class="hallazgo-src">Evidencia ALTA · 8 fuentes may–oct</span>
-    </div>
-    <div class="hallazgo-txt">
-      En mayo 2026, <strong>inflación era el problema #1</strong> en la mayoría de las mediciones. En septiembre, <strong>ingresos / empleo / salarios</strong> lidera en al menos 4 de 6 consultoras; en octubre lidera en las 2 fuentes con dato (Proyección, CELAG). El desplazamiento es consistente con la baja del IPC mensual a ~1,8% y el deterioro de expectativas de ingreso real documentado por D'Alessio y UDESA.<br><br>
-      <em>Implicancia política</em>: el problema que el gobierno está resolviendo (inflación) dejó de ser el problema que más preocupa a la ciudadanía. La agenda de demanda social se trasladó hacia el poder adquisitivo.
-    </div>
   </div>
+  <div class="evolc-box" data-evolc="agenda"></div>
 
   <p class="source" style="margin-top:16px">Fuentes: Realle Dalla Torre, M&amp;F, Isasi-Burdman, UDESA, Explanans, OPSA · may–sep 2026 · Proyección, CELAG · oct-26 · respuesta espontánea y guiada: no comparar porcentajes como equivalentes</p>
   <details class="det-fin" data-fin="agenda"><summary>Detalle por fuente y trazabilidad · <span class="det-fin-n" data-finn="agenda"></span></summary>
