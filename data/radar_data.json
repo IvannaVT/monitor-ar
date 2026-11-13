@@ -1405,7 +1405,7 @@
   6,
   6,
   7,
-  3
+  4
  ],
  "SL_CONSULT_LABELS": [
   "Reputación Digital",
@@ -1422,7 +1422,7 @@
   14,
   4,
   2,
-  4,
+  5,
   1,
   1,
   1,
@@ -1717,6 +1717,14 @@
    "tipo": "Pendiente de relevar",
    "fila_n1": 364,
    "file_id": "1T2AugmKM8XeaW-9QGnL6vaLlcEfe9rFn"
+  },
+  {
+   "mes": "Nov-26",
+   "consultora": "AD HOC",
+   "titulo": "Informe Digital Visita del Papa (Noviembre)",
+   "tipo": "Ad hoc temático",
+   "fila_n1": 374,
+   "file_id": "1fEv2loBqIR2SRiqmxtw8b9d_zWBgHafB"
   }
  ],
  "GAP_STATUS": [
@@ -3332,6 +3340,52 @@
   }
  ],
  "SL_ESTUDIOS": [
+  {
+   "titulo": "Visita de León XIV · conversación digital",
+   "src": "Ad Hoc · 8–11 nov-26 · todas las redes públicas y portales (Onclusive)",
+   "mes": "Nov-26",
+   "dir": "neg",
+   "metricas": [
+    {
+     "lbl": "Menciones en 96 hs",
+     "fila": 1396,
+     "fmt": "millones",
+     "valor": 1600000
+    },
+    {
+     "lbl": "Pico diario (9/11)",
+     "fila": 1398,
+     "fmt": "miles",
+     "valor": 509000
+    },
+    {
+     "lbl": "Sentimiento positivo",
+     "fila": 1401,
+     "suf": "%",
+     "valor": 70
+    },
+    {
+     "lbl": "Sentimiento negativo",
+     "fila": 1403,
+     "suf": "%",
+     "valor": 17
+    },
+    {
+     "lbl": "Negatividad hacia Milei",
+     "fila": 1409,
+     "suf": "%",
+     "valor": 54
+    },
+    {
+     "lbl": "Carpas VIP · pico 24 hs",
+     "fila": 1416,
+     "fmt": "miles",
+     "valor": 108000
+    }
+   ],
+   "txt": "1,6 M de menciones en 96 hs; sentimiento 70 % positivo, con el 17 % negativo concentrado en usuarios politizados. 36 % de la conversación de Milei fue sobre la visita y 54 % de esas menciones fue negativa. Carpas VIP: pico de 108 mil en 24 hs, sin sostenerse como crisis.",
+   "file_id": "1fEv2loBqIR2SRiqmxtw8b9d_zWBgHafB"
+  },
   {
    "titulo": "Visita de León XIV · impacto digital",
    "src": "Sustantiva · desde 8 nov-26 · X, TikTok, IG, FB",
@@ -6010,8 +6064,8 @@
    "data/bases/base_maestra_resultados_clave.tsv",
    "data/radar_mapping.json"
   ],
-  "valores_trazados": 221,
-  "nuevos": 87,
+  "valores_trazados": 227,
+  "nuevos": 93,
   "corregidos": 13,
   "retirados": 0,
   "puntuales": 0,
