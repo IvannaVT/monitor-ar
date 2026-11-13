@@ -223,9 +223,15 @@ footer a{color:var(--accent)}
   table{font-size:11px;min-width:300px}
   th,td{padding:6px 8px}
   .tab-btn{font-size:12px;padding:9px 10px}
-  .site-nav-link{font-size:12px;padding:0 10px}
+  .site-nav-link{font-size:12px;padding:0 8px}
+  .nav-pre{display:none}
   .logo{line-height:1.15}
   .logo small{display:block;margin-left:0;font-size:9px}
+}
+@media(max-width:340px){
+  .site-nav-link{font-size:11px;padding:0 5px}
+  .logo{font-size:15px}
+  .theme-btn{padding:0 8px}
 }
 </style>
 
@@ -235,6 +241,7 @@ footer a{color:var(--accent)}
     <div class="header-tools">
       <nav class="site-nav" aria-label="Monitores del sitio">
         <a class="site-nav-link" href="./monitor_leg.html">Monitor LEG</a>
+        <a class="site-nav-link" href="./radar_eeuu_2026.html"><span class="nav-pre">Elecciones </span>USA</a>
       </nav>
       <button class="theme-btn" onclick="toggleTheme()">◐</button>
     </div>
