@@ -192,6 +192,7 @@ footer a{color:var(--accent)}
 
 @media(max-width:500px){.gap-zone-cards{grid-template-columns:1fr 1fr}.kpi-num{font-size:22px}}
 @media(max-width:620px){.cross-grid{grid-template-columns:1fr!important}}
+.cross-grid>*{min-width:0}
 /* ── MOBILE ─────────────────────────────────── */
 @media(max-width:640px){
   .gap-legend-grid{grid-template-columns:1fr!important}
@@ -294,7 +295,7 @@ footer a{color:var(--accent)}
     <div class="legend" id="legendInflComp"></div>
     <p class="source">IPC INDEC: sep-25→oct-26 (2,2% oct · acum. 26,3% · i.a. 33,1%, publicado 12/11) · IPCBA oct-26: 1,9% (acum. 26,1% · i.a. 32,5%) · IDECBA/GCBA · brecha oct IPCBA − IPC: −0,3 p.p. · MM3: media móvil 3 meses</p>
   </div>
-  <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px">
+  <div class="cross-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:20px">
     <div class="chart-wrap" style="margin:0">
       <div class="chart-head"><div><h3>IPC Nacional · acum. e interanual</h3><p>Ene-26 → Oct-26 · acum. barra izq. · i.a. línea der.</p></div></div>
       <div class="chart-box"><canvas id="chartInflNacAcumIA"></canvas></div>
