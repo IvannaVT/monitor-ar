@@ -412,7 +412,7 @@
     34.8,
     32.5,
     35,
-    null,
+    37.8,
     null
    ],
    "pj": [
@@ -424,7 +424,7 @@
     33.7,
     36.6,
     31.9,
-    null,
+    35.9,
     null
    ]
   },
@@ -630,10 +630,10 @@
   },
   {
    "name": "Proyección",
-   "p": "Sep-26",
-   "lla": 35,
-   "pj": 31.9,
-   "d": 2.5,
+   "p": "Oct-26",
+   "lla": 37.8,
+   "pj": 35.9,
+   "d": 2.8,
    "n": "~1500",
    "met": "Panel online"
   },
@@ -1946,10 +1946,29 @@
       "consultora": "Proyección",
       "celdas": {
        "Oct-26": {
-        "v": 38,
+        "v": 37.8,
         "fila": 1211,
         "base": "nivel2_indicadores",
-        "file_id": "",
+        "file_id": "1uIfhBnDL_bPLmziw4yTPefaYkySxN_A3",
+        "campo": "2026-10-01→2026-10-13",
+        "secundaria": "",
+        "unidad": "%"
+       }
+      },
+      "n": 1,
+      "delta": null,
+      "evidencia": "BAJA",
+      "nota": "pregunta distinta del candidato nominal de la serie: no se encadena"
+     },
+     {
+      "etiqueta": "Proyección · voto por espacio · PJ",
+      "consultora": "Proyección",
+      "celdas": {
+       "Oct-26": {
+        "v": 35.9,
+        "fila": 1427,
+        "base": "nivel2_indicadores",
+        "file_id": "1uIfhBnDL_bPLmziw4yTPefaYkySxN_A3",
         "campo": "2026-10-01→2026-10-13",
         "secundaria": "",
         "unidad": "%"
@@ -2053,7 +2072,7 @@
       "n": 1,
       "delta": null,
       "evidencia": "BAJA",
-      "nota": "21% NS; panel online"
+      "nota": "21% NS; panel online. FUENTE SECUNDARIA (EncuestAR, consultado 13/11): sin informe en Drive; identidad de pregunta no acreditada; evidencia máx. MEDIA"
      },
      {
       "etiqueta": "ESPOP (UdeSA) · espacio · PJ",
@@ -5417,6 +5436,40 @@
     {
      "tipo": "serie",
      "modulo": "Intención de voto",
+     "etiqueta": "CONS · Proyección · lla",
+     "valor": 37.8,
+     "anterior": null,
+     "estado": "nuevo",
+     "consultora": "Proyección",
+     "fila": 1211,
+     "base": "nivel2_indicadores",
+     "file_id": "1uIfhBnDL_bPLmziw4yTPefaYkySxN_A3",
+     "campo": "2026-10-01→2026-10-13",
+     "unidad": "%",
+     "nota": "línea propia de la consultora; ver serie de evolución para comparabilidad",
+     "secundaria": "",
+     "categoria": "La Libertad Avanza"
+    },
+    {
+     "tipo": "serie",
+     "modulo": "Intención de voto",
+     "etiqueta": "CONS · Proyección · pj",
+     "valor": 35.9,
+     "anterior": null,
+     "estado": "nuevo",
+     "consultora": "Proyección",
+     "fila": 1427,
+     "base": "nivel2_indicadores",
+     "file_id": "1uIfhBnDL_bPLmziw4yTPefaYkySxN_A3",
+     "campo": "2026-10-01→2026-10-13",
+     "unidad": "%",
+     "nota": "línea propia de la consultora; ver serie de evolución para comparabilidad",
+     "secundaria": "",
+     "categoria": "Fuerza Patria (Peronismo/Kirchnerismo)"
+    },
+    {
+     "tipo": "serie",
+     "modulo": "Intención de voto",
      "etiqueta": "CONS · DC Consultores · lla",
      "valor": 42.6,
      "anterior": null,
@@ -5827,7 +5880,8 @@
      "NI:1211",
      "NI:1244",
      "NI:1333",
-     "NI:1334"
+     "NI:1334",
+     "NI:1427"
     ],
     "pendiente": [
      "Synopsis, ola con campo 12–17/10 (difundida 31/10): Peronismo 35 / LLA 33,6, localizada en encuestas-argentinas.com (registro https://x.com/_EncuestAR_/status/2116669248479047801, consultado 2026-11-11). Candidato pendiente: no hay informe en Drive ni enlace al original, y no se puede acreditar pregunta ni mes enunciado por Synopsis. No se carga y no reemplaza la ola 8–15/9 que hoy ocupa oct-26 (N2 fila 1208). Necesita: informe original de Synopsis de esa ola, para fijar el mes que enuncia"
@@ -6064,12 +6118,12 @@
    "data/bases/base_maestra_resultados_clave.tsv",
    "data/radar_mapping.json"
   ],
-  "valores_trazados": 227,
-  "nuevos": 93,
+  "valores_trazados": 230,
+  "nuevos": 95,
   "corregidos": 13,
   "retirados": 0,
   "puntuales": 0,
-  "en_series_de_evolucion": 75,
+  "en_series_de_evolucion": 76,
   "fuente_secundaria": [
    "FUENTE SECUNDARIA · monitorargy.com · https://monitorargy.com/mcp (obtener_serie, id ipc_interanual) · consultado 2026-11-12 · fuente original: INDEC",
    "FUENTE SECUNDARIA · monitorargy.com · https://monitorargy.com/mcp (obtener_serie, id ipc_nivel_general) · consultado 2026-11-12 · fuente original: INDEC · acumulado calculado sobre el nivel general",
