@@ -1912,6 +1912,46 @@
   },
   "sl_estudios": [
     {
+      "titulo": "Visita de León XIV · conversación digital",
+      "src": "Ad Hoc · 8–11 nov-26 · todas las redes públicas y portales (Onclusive)",
+      "mes": "Nov-26",
+      "dir": "neg",
+      "metricas": [
+        {
+          "lbl": "Menciones en 96 hs",
+          "fila": 1396,
+          "fmt": "millones"
+        },
+        {
+          "lbl": "Pico diario (9/11)",
+          "fila": 1398,
+          "fmt": "miles"
+        },
+        {
+          "lbl": "Sentimiento positivo",
+          "fila": 1401,
+          "suf": "%"
+        },
+        {
+          "lbl": "Sentimiento negativo",
+          "fila": 1403,
+          "suf": "%"
+        },
+        {
+          "lbl": "Negatividad hacia Milei",
+          "fila": 1409,
+          "suf": "%"
+        },
+        {
+          "lbl": "Carpas VIP · pico 24 hs",
+          "fila": 1416,
+          "fmt": "miles"
+        }
+      ],
+      "txt": "1,6 M de menciones en 96 hs; sentimiento 70 % positivo, con el 17 % negativo concentrado en usuarios politizados. 36 % de la conversación de Milei fue sobre la visita y 54 % de esas menciones fue negativa. Carpas VIP: pico de 108 mil en 24 hs, sin sostenerse como crisis.",
+      "file_id": "1fEv2loBqIR2SRiqmxtw8b9d_zWBgHafB"
+    },
+    {
       "titulo": "Visita de León XIV · impacto digital",
       "src": "Sustantiva · desde 8 nov-26 · X, TikTok, IG, FB",
       "mes": "Nov-26",
