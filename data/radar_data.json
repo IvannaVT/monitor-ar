@@ -2063,7 +2063,7 @@
         "v": 26,
         "fila": 1207,
         "base": "nivel2_indicadores",
-        "file_id": "",
+        "file_id": "1sqyEKazoQMuF5nDAeIDl1Crp0dO43qbY",
         "campo": "2026-10-05→2026-10-13",
         "secundaria": "",
         "unidad": "%"
@@ -2072,7 +2072,7 @@
       "n": 1,
       "delta": null,
       "evidencia": "BAJA",
-      "nota": "21% NS; panel online. FUENTE SECUNDARIA (EncuestAR, consultado 13/11): sin informe en Drive; identidad de pregunta no acreditada; evidencia máx. MEDIA"
+      "nota": "21% NS. Fuente primaria: informe ESPOP Oct-26 (Drive); campo 5–13/10; 1.000 casos"
      },
      {
       "etiqueta": "ESPOP (UdeSA) · espacio · PJ",
@@ -5426,7 +5426,7 @@
      "consultora": "ESPOP (UdeSA)",
      "fila": 1207,
      "base": "nivel2_indicadores",
-     "file_id": "",
+     "file_id": "1sqyEKazoQMuF5nDAeIDl1Crp0dO43qbY",
      "campo": "2026-10-05→2026-10-13",
      "unidad": "%",
      "nota": "línea propia de la consultora; ver serie de evolución para comparabilidad",
