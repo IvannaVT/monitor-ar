@@ -39,7 +39,7 @@ class RadarDataTests(unittest.TestCase):
     def test_noviembre_parcial_presente(self):
         for eje in ('MESI', 'MI', 'MG', 'MV'):
             self.assertEqual(self.D[eje][-1], 'Nov-26')
-        self.assertIn('parcial', self.D['META']['corte']['etiqueta'])
+        self.assertIn('corte al 12/11', self.D['META']['corte']['etiqueta'])
 
     def test_html_no_trae_valores_embebidos(self):
         html = (ROOT / 'index.html').read_text(encoding='utf-8')
