@@ -29,7 +29,7 @@ def render_monitor(d):
         return '<div class="mosaico">'+''.join(map(record_tile, rows))+'</div>'
 
     body = f'<header id="inicio" tabindex="-1"><div class="header-top"><div class="kicker">Presupuesto CABA 2027 · Seguimiento legislativo y de medios</div><div class="header-tools"><nav class="header-links" aria-label="Agenda y rondas ministeriales"><a href="#agenda" data-panel="agenda" aria-haspopup="dialog" aria-controls="agenda">Agenda</a><a href="#rondas" data-panel="rondas" aria-haspopup="dialog" aria-controls="rondas">Rondas ministeriales</a></nav><div class="theme-switch" role="group" aria-label="Apariencia"><button type="button" data-theme-choice="light" aria-pressed="false" onclick="setTheme(\'light\')">Claro</button><button type="button" data-theme-choice="dark" aria-pressed="true" onclick="setTheme(\'dark\')">Oscuro azul</button></div></div></div><h1>Monitor LEG | Presupuesto 2027 en medios</h1><p class="meta">Repercusión de las rondas presupuestarias de la Ciudad en medios locales y nacionales: temas destacados, controversias y planteos por bloque.</p><div class="meta">Corte de información: <span class="corte">⏱ {date} ART</span></div></header>'
-    body += '<div class="aviso-top">Sesión ordinaria prevista: <strong>29/10</strong>. Los dictámenes no equivalen a sanción. Línea F: adjudicación anunciada para diciembre e inicio de obras previsto en 2027.</div>'
+    body += f'<div class="aviso-top">{e(d["panorama"][2]["texto"])} <small class="sources">{refs(d["panorama"][2])}</small></div>'
     nav = [('conclusion','Síntesis'),('controversiales','Debates'),('posiciones','Posiciones'),('seguimiento','Seguimiento')]
     body += '<nav class="nav-interna" aria-label="Secciones del monitor">'+''.join(f'<a href="#{anchor}">{e(label)}</a>' for anchor,label in nav)+'</nav>'
 
@@ -49,7 +49,7 @@ def render_monitor(d):
     conclusion += '</div>'
     conclusion += '<h3>Novedades y contexto</h3><div class="mosaico-3">'+''.join(map(record_tile,d['novedades']))+'</div>'
     # Existing reviewed themes are displayed in the reference's paired panels.
-    conclusion += '<details class="compact-details"><summary>Contexto de los proyectos y servicios</summary><div class="mosaico spaced">'+tile('Temas transversales', '<br>'.join(f'<strong>{e(r["titulo"])}</strong> — {e(r["texto"])}' for r in d['temas'][:2]),'blue',{'fuentes':['emergencia','bono']})+tile('Servicios e infraestructura', '<br>'.join(f'<strong>{e(r["titulo"])}</strong> — {e(r["texto"])}' for r in d['temas'][2:]),'purple',{'fuentes':['infra','educacion']})+'</div></details>'
+    conclusion += '<details class="compact-details"><summary>Contexto de los proyectos y servicios</summary><div class="mosaico spaced">'+tile('Temas transversales', '<br>'.join(f'<strong>{e(r["titulo"])}</strong> — {e(r["texto"])}' for r in d['temas'][:2]),'blue',{'fuentes':list(dict.fromkeys(s for row in d['temas'][:2] for s in row['fuentes']))})+tile('Servicios e infraestructura', '<br>'.join(f'<strong>{e(r["titulo"])}</strong> — {e(r["texto"])}' for r in d['temas'][2:]),'purple',{'fuentes':['infra','educacion']})+'</div></details>'
     body += section(1,'conclusion','Síntesis',conclusion)
 
     controversies = '<div class="controversy-grid">'
@@ -59,7 +59,7 @@ def render_monitor(d):
     controversies += '<h3 id="proyectos">Proyectos prioritarios</h3><div class="mosaico">'+''.join(tile(r['titulo'], e(r['texto']), 'green' if r['id']!='P-02' else 'yellow', r) for r in d['preguntas'])+'</div>'
     body += '<hr class="divider">'+section(3,'controversiales','Temas y controversias — Planteos relevados',controversies)
 
-    questions = '<p class="section-note">Síntesis de intervenciones y posiciones públicas; no son citas textuales ni implican falta de respuesta.</p><div class="filtros" role="group" aria-label="Filtrar posiciones por bloque">'
+    questions = '<p class="section-note">22 planteos registrados entre el 6 y el 26/10. Cobertura: LLA, FxBA, CD y FIT/PO. Sin posiciones relevadas en esta tabla para Vamos por Más, Ciudadanos Unidos/UCR y Transformación. Posiciones de noviembre y votos sobre el Presupuesto 2027 pendientes de confirmación.</p><div class="filtros" role="group" aria-label="Filtrar posiciones por bloque">'
     for key,label in [('todos','Todos'),('LLA','🔴 LLA'),('FxBA','🔵 FxBA'),('CD','🟢 CD'),('FIT','FIT/PO')]:
         active = ' class="activo" aria-pressed="true"' if key=='todos' else ' aria-pressed="false"'
         questions += f'<button type="button"{active} onclick="filtrar(\'{key}\',this)">{label}</button>'
@@ -83,11 +83,12 @@ def render_monitor(d):
     body += '<hr class="divider">'+section(5,'seguimiento','Seguimiento — Hitos y anuncios oficiales', following)
 
     agenda=''
-    for row,day in zip(d['agenda'],['29/10','En curso','19/10','19/10']):
+    for row in d['agenda']:
+        day = '/'.join(reversed(row['fecha'].split('-')[1:]))
         agenda+=f'<div class="ag-item"><span class="ag-fecha">{day}</span><div class="ag-body"><strong>{e(row["titulo"])}</strong><span>{e(row["texto"])}</span><small class="sources">{refs(row)}</small></div></div>'
     banks = ' · '.join(f'<span title="{e(block["titulo"], quote=True)}">{e(block["filtro"])} <strong>{block["bancas"]}</strong></span>' for block in d['bloques'])
     body += f'<aside id="votos" class="banks-strip" tabindex="0" aria-label="Bancas por bloque. Desplazamiento horizontal en pantallas pequeñas."><p><strong>Bancas</strong> · {banks} · <strong>Total: 60</strong> · {refs(d["bloques"][0])} · <a class="back-top" href="#inicio">↑ Volver arriba</a></p></aside>'
     body += f'<footer>Monitor LEG · CABA · {date} ART · Fuentes oficiales, actores y prensa identificadas en cada registro.</footer>'
-    body += panel('agenda','Agenda legislativa',agenda)
-    body += panel('rondas','Rondas ministeriales y sesiones informativas',group(d['rondas']))
+    body += panel('agenda','Cronología legislativa',agenda)
+    body += panel('rondas','Rondas ministeriales y reuniones informativas',group(d['rondas']))
     return body

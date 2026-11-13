@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
-  "corte": "2026-10-28",
+  "corte": "2026-11-13",
   "revision": {
     "estado": "aprobado",
-    "fecha": "2026-10-28",
-    "responsable": "Codex · fuentes: docs/IMPORTACION-2026-10-28.md; síntesis y vista compacta autorizadas el 28/10, PUBLICACION.md",
+    "fecha": "2026-11-13",
+    "responsable": "Codex · actualización documental del 13/11/2026",
     "css_sha256": "956e775386fb2b963d0b727db0c01931f5ca69a902ec421f601e9a990a2bc1dc",
-    "contenido_sha256": "7a086ddb70fdc4d4707998bfb7754a52084cca39ee6be22724ceac58f2224c6c"
+    "contenido_sha256": "bc79c067472886b25f6789266df83a9f8b1ebfc0bb34e3d7d889b578f6fdf324"
   },
   "fuentes": {
     "bloques": {
@@ -118,6 +118,41 @@
       "url": "https://www.pagina12.com.ar/2026/10/28/el-pro-y-los-aliados-le-ponen-palos-en-la-rueda-al-presupuesto/",
       "consultada": "2026-10-28",
       "clase": "prensa"
+    },
+    "ley7008": {
+      "etiqueta": "Ley 7008 · Boletín Oficial",
+      "url": "https://boletinoficial.buenosaires.gob.ar/normativaba/norma/886197",
+      "consultada": "2026-11-13"
+    },
+    "ley7009": {
+      "etiqueta": "Ley 7009 · Boletín Oficial",
+      "url": "https://boletinoficial.buenosaires.gob.ar/normativaba/norma/886198",
+      "consultada": "2026-11-13"
+    },
+    "ley7011": {
+      "etiqueta": "Expediente 2430-D-2026 · Ley 7011",
+      "url": "https://parlamentaria.legislatura.gob.ar/pages/expediente.aspx?id=141993",
+      "consultada": "2026-11-13"
+    },
+    "defensoria": {
+      "etiqueta": "Legislatura · Defensoría · 2/11",
+      "url": "https://www.legislatura.gob.ar/posts/la-defensoria-del-pueblo-expuso-ante-la-comision-de-presupuesto.html",
+      "consultada": "2026-11-13"
+    },
+    "agenda_nov": {
+      "etiqueta": "Agenda oficial · expediente 3083-J-2026",
+      "url": "https://www.legislatura.gob.ar/AgendaLCABADetalle/4841/30719",
+      "consultada": "2026-11-13"
+    },
+    "hacienda_oficial": {
+      "etiqueta": "Agenda oficial · Hacienda · 7/10",
+      "url": "https://www.legislatura.gob.ar/AgendaLCABADetalle/4824/30598",
+      "consultada": "2026-11-13"
+    },
+    "proyecto2027": {
+      "etiqueta": "Proyecto y planillas · GCBA",
+      "url": "https://buenosaires.gob.ar/gcaba_historico/proyecto-de-ley-presupuesto-2027",
+      "consultada": "2026-11-13"
     }
   },
   "rondas": [
@@ -126,6 +161,7 @@
       "titulo": "Arengo · 7/10",
       "texto": "Hacienda: apertura del debate del Presupuesto 2027.",
       "fuentes": [
+        "hacienda_oficial",
         "hacienda_prensa"
       ],
       "palabras_clave": [
@@ -158,7 +194,7 @@
         "fxba",
         "infra"
       ],
-      "alcance_debate": "Agenda al 28/10"
+      "alcance_debate": "Agenda de octubre"
     },
     {
       "id": "R-02",
@@ -178,7 +214,7 @@
         "hacienda_prensa",
         "docentes_prensa"
       ],
-      "alcance_debate": "Agenda al 28/10"
+      "alcance_debate": "Agenda de octubre"
     },
     {
       "id": "R-03",
@@ -236,7 +272,7 @@
       "fuentes_debate": [
         "fxba"
       ],
-      "alcance_debate": "Agenda al 28/10"
+      "alcance_debate": "Agenda de octubre"
     },
     {
       "id": "R-05",
@@ -275,14 +311,35 @@
         "agenda"
       ],
       "alcance_debate": "En debate"
+    },
+    {
+      "id": "R-09",
+      "titulo": "Defensoría del Pueblo · 2/11",
+      "texto": "María Rosa Muiño presentó las prioridades de la Defensoría del Pueblo ante la Comisión de Presupuesto.",
+      "fuentes": [
+        "defensoria",
+        "agenda_nov"
+      ],
+      "palabras_clave": [
+        "atención vecinal",
+        "modernización",
+        "derechos humanos"
+      ],
+      "fuentes_debate": [
+        "defensoria"
+      ],
+      "alcance_debate": "Ejes de la exposición",
+      "estado": "verificado",
+      "tipo": "blue"
     }
   ],
   "preguntas": [
     {
       "id": "P-01",
       "titulo": "Emergencia hídrica",
-      "texto": "Dictamen de mayoría del 19/10. Despacho 754/2026. Plazo de observaciones fijado para el 28/10 a las 14:00.",
+      "texto": "Sancionada el 29/10 como Ley 7009. Promulgada el 4/11 y publicada el 5/11.",
       "fuentes": [
+        "ley7009",
         "emergencia"
       ],
       "estado": "verificado",
@@ -302,9 +359,10 @@
     },
     {
       "id": "P-03",
-      "titulo": "Bono proveedores",
-      "texto": "Dictamen de mayoría del 19/10. Despacho 753/2026. Plazo de observaciones fijado para el 28/10 a las 14:00.",
+      "titulo": "Bono a proveedores",
+      "texto": "Sancionada el 29/10 como Ley 7008. Promulgada el 4/11 y publicada el 5/11.",
       "fuentes": [
+        "ley7008",
         "bono"
       ],
       "estado": "verificado",
@@ -402,19 +460,19 @@
     {
       "id": "T-01",
       "titulo": "Emergencia hídrica",
-      "texto": "El expediente aborda la emergencia hídrica y climática por el fenómeno El Niño.",
+      "texto": "Sancionada el 29/10 como Ley 7009. Promulgada el 4/11 y publicada el 5/11.",
       "fuentes": [
-        "emergencia"
+        "ley7009"
       ],
       "estado": "verificado",
       "tipo": "blue"
     },
     {
       "id": "T-02",
-      "titulo": "Pago a proveedores",
-      "texto": "El proyecto trata la emisión de títulos de deuda pública para cancelar pagos a proveedores.",
+      "titulo": "Bono a proveedores",
+      "texto": "Sancionada el 29/10 como Ley 7008. Promulgada el 4/11 y publicada el 5/11.",
       "fuentes": [
-        "bono"
+        "ley7008"
       ],
       "estado": "verificado",
       "tipo": "blue"
@@ -485,23 +543,25 @@
   "seguimiento": [
     {
       "id": "S-01",
-      "titulo": "Emergencia · observaciones",
-      "texto": "Plazo de observaciones fijado para el 28/10/2026 a las 14:00. Seguir las actuaciones posteriores; el dictamen no acredita sanción.",
+      "titulo": "Emergencia hídrica · sanción y publicación",
+      "texto": "Dictamen de mayoría del 19/10 (despacho 754/2026). Sancionada el 29/10 como Ley 7009. Promulgada el 4/11 y publicada el 5/11.",
       "fuentes": [
-        "emergencia"
+        "emergencia",
+        "ley7009"
       ],
       "estado": "verificado",
-      "tipo": "yellow"
+      "tipo": "green"
     },
     {
       "id": "S-02",
-      "titulo": "Bono · observaciones",
-      "texto": "Plazo de observaciones fijado para el 28/10/2026 a las 14:00. Seguir las actuaciones posteriores; el dictamen no acredita sanción.",
+      "titulo": "Bono a proveedores · sanción y publicación",
+      "texto": "Dictamen de mayoría del 19/10 (despacho 753/2026). Sancionada el 29/10 como Ley 7008. Promulgada el 4/11 y publicada el 5/11.",
       "fuentes": [
-        "bono"
+        "bono",
+        "ley7008"
       ],
       "estado": "verificado",
-      "tipo": "yellow"
+      "tipo": "green"
     },
     {
       "id": "S-03",
@@ -526,44 +586,63 @@
   ],
   "agenda": [
     {
-      "id": "A-01",
-      "titulo": "Sesión ordinaria · 29/10",
-      "texto": "El comunicado legislativo del 19/10 menciona una sesión prevista para el jueves 29 de octubre.",
+      "id": "A-05",
+      "fecha": "2026-11-02",
+      "titulo": "Presupuesto general 2027 · reunión informativa",
+      "texto": "María Rosa Muiño presentó las prioridades de la Defensoría del Pueblo ante la Comisión de Presupuesto.",
       "fuentes": [
-        "agenda"
+        "agenda_nov",
+        "defensoria",
+        "proyecto2027"
+      ],
+      "estado": "verificado",
+      "tipo": "blue"
+    },
+    {
+      "id": "A-01",
+      "fecha": "2026-10-29",
+      "titulo": "Sesión ordinaria · sanciones",
+      "texto": "El recinto sancionó las leyes de bono a proveedores, emergencia hídrica y libertad comercial en expedientes propios.",
+      "fuentes": [
+        "ley7008",
+        "ley7009",
+        "ley7011"
       ],
       "estado": "verificado",
       "tipo": "blue"
     },
     {
       "id": "A-02",
-      "titulo": "Libertad comercial",
-      "texto": "Las comisiones acordaron continuar trabajando en la redacción del proyecto para ampliar los acuerdos.",
+      "fecha": "2026-10-29",
+      "titulo": "Libertad Comercial",
+      "texto": "Sancionada el 29/10 como Ley 7011, según el expediente 2430-D-2026.",
       "fuentes": [
-        "agenda"
+        "ley7011"
       ],
       "estado": "verificado",
       "tipo": "blue"
     },
     {
       "id": "A-03",
-      "titulo": "Dictamen · emergencia",
-      "texto": "El registro del expediente consigna dictamen de mayoría del 19/10.",
+      "fecha": "2026-10-29",
+      "titulo": "Emergencia hídrica",
+      "texto": "Sancionada el 29/10 como Ley 7009. Promulgada el 4/11 y publicada el 5/11.",
       "fuentes": [
-        "emergencia"
+        "ley7009"
       ],
       "estado": "verificado",
-      "tipo": "green"
+      "tipo": "blue"
     },
     {
       "id": "A-04",
-      "titulo": "Dictamen · bono",
-      "texto": "El registro del expediente consigna dictamen de mayoría del 19/10.",
+      "fecha": "2026-10-29",
+      "titulo": "Bono a proveedores",
+      "texto": "Sancionada el 29/10 como Ley 7008. Promulgada el 4/11 y publicada el 5/11.",
       "fuentes": [
-        "bono"
+        "ley7008"
       ],
       "estado": "verificado",
-      "tipo": "green"
+      "tipo": "blue"
     }
   ],
   "preguntas_bloques": [
@@ -819,11 +898,12 @@
       "filtro": "LLA",
       "actor": "P. Ramírez",
       "tema": "Comercio",
-      "texto": "Aprobar libertad comercial y silencio positivo.",
+      "texto": "Aprobar libertad comercial y silencio positivo. Libertad Comercial fue sancionada el 29/10 (Ley 7011).",
       "fecha": "2026-10-06",
       "clase": "Reclamo",
       "fuentes": [
-        "lla_prensa"
+        "lla_prensa",
+        "ley7011"
       ],
       "estado": "verificado"
     },
@@ -879,15 +959,27 @@
     },
     {
       "id": "PAN-03",
-      "titulo": "Próximo encuentro oficial",
-      "texto": "Sesión ordinaria prevista para el 29/10. Revisar convocatoria y temario oficial.",
+      "titulo": "Estado del Presupuesto 2027",
+      "texto": "Último hito confirmado en esta revisión: exposición de la Defensoría del Pueblo el 2/11 sobre el expediente 3083-J-2026. Sin próximo encuentro confirmado en las fuentes consultadas.",
       "fuentes": [
-        "agenda"
+        "agenda_nov",
+        "defensoria",
+        "proyecto2027"
       ],
       "estado": "verificado"
     }
   ],
   "novedades": [
+    {
+      "id": "NOV-DEF-02",
+      "titulo": "Defensoría del Pueblo · 2/11",
+      "texto": "María Rosa Muiño presentó las prioridades de la Defensoría del Pueblo ante la Comisión de Presupuesto.",
+      "fuentes": [
+        "defensoria"
+      ],
+      "estado": "verificado",
+      "tipo": "blue"
+    },
     {
       "id": "N-01",
       "titulo": "Vivienda · análisis de ACIJ",
