@@ -2007,26 +2007,6 @@
       "file_id": "1T2AugmKM8XeaW-9QGnL6vaLlcEfe9rFn"
     },
     {
-      "titulo": "¿Bullrich candidata a vice?",
-      "src": "RD · 1 jul–5 oct-26 · nacional",
-      "mes": "Oct-26",
-      "dir": "neu",
-      "metricas": [
-        {
-          "lbl": "Menciones Bullrich",
-          "fila": 1080,
-          "fmt": "miles"
-        },
-        {
-          "lbl": "La ubican como vice de Milei",
-          "fila": 1081,
-          "suf": "%"
-        }
-      ],
-      "txt": "7 de cada 10 menciones sobre el futuro de Bullrich la ubican como vice de Milei en 2027.",
-      "file_id": "1o_mlbWD7SUDJlJt2mIKK1BwXp2o4zKwk"
-    },
-    {
       "titulo": "¿Se le acabó el aura a Milei?",
       "src": "RD · 5 sep–4 nov-26 · 326.638 publicaciones (rotulado nov)",
       "mes": "Nov-26",
@@ -2055,6 +2035,26 @@
       ],
       "txt": "Milei pasa de ~1 de cada 4 a ~1 de cada 10 publicaciones políticas entre septiembre y noviembre; la negatividad entre cuentas reales tocó 74 % el 15–24 oct.",
       "file_id": "1kd9sW5yHrlMiZLq3_bxYTCnCHZjaCFGL"
+    },
+    {
+      "titulo": "¿Bullrich candidata a vice?",
+      "src": "RD · 1 jul–5 oct-26 · nacional",
+      "mes": "Oct-26",
+      "dir": "neu",
+      "metricas": [
+        {
+          "lbl": "Menciones Bullrich",
+          "fila": 1080,
+          "fmt": "miles"
+        },
+        {
+          "lbl": "La ubican como vice de Milei",
+          "fila": 1081,
+          "suf": "%"
+        }
+      ],
+      "txt": "7 de cada 10 menciones sobre el futuro de Bullrich la ubican como vice de Milei en 2027.",
+      "file_id": "1o_mlbWD7SUDJlJt2mIKK1BwXp2o4zKwk"
     }
   ],
   "nota_secundaria_extra": [
