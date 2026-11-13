@@ -793,6 +793,20 @@
     },
     {
       "modulo": "Intención de voto",
+      "ruta": "CONS.Proyección.lla",
+      "eje": "MV",
+      "fila": 1211,
+      "nota": "línea propia de la consultora; ver serie de evolución para comparabilidad"
+    },
+    {
+      "modulo": "Intención de voto",
+      "ruta": "CONS.Proyección.pj",
+      "eje": "MV",
+      "fila": 1427,
+      "nota": "línea propia de la consultora; ver serie de evolución para comparabilidad"
+    },
+    {
+      "modulo": "Intención de voto",
       "ruta": "CONS.DC Consultores.lla",
       "eje": "MV",
       "fila": 1333,
@@ -1054,6 +1068,16 @@
           "nota": "pregunta distinta del candidato nominal de la serie: no se encadena"
         },
         {
+          "etiqueta": "Proyección · voto por espacio · PJ",
+          "consultora": "Proyección",
+          "celdas": [
+            {
+              "fila": 1427
+            }
+          ],
+          "nota": "pregunta distinta del candidato nominal de la serie: no se encadena"
+        },
+        {
           "etiqueta": "Proyección · candidato · Milei",
           "consultora": "Proyección",
           "celdas": [
@@ -1101,7 +1125,7 @@
               "fila": 1207
             }
           ],
-          "nota": "21% NS; panel online"
+          "nota": "21% NS; panel online. FUENTE SECUNDARIA (EncuestAR, consultado 13/11): sin informe en Drive; identidad de pregunta no acreditada; evidencia máx. MEDIA"
         },
         {
           "etiqueta": "ESPOP (UdeSA) · espacio · PJ",
