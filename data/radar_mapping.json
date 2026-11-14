@@ -789,7 +789,14 @@
       "ruta": "CONS.ESPOP.lla",
       "eje": "MV",
       "fila": 1207,
-      "nota": "línea propia de la consultora; ver serie de evolución para comparabilidad"
+      "nota": "Comparabilidad intra-ESPOP alta entre septiembre y octubre: misma pregunta, universo y denominador, verificados en los informes de UdeSA."
+    },
+    {
+      "modulo": "Intención de voto",
+      "ruta": "CONS.ESPOP.pj",
+      "eje": "MV",
+      "fila": 1428,
+      "nota": "Comparabilidad intra-ESPOP alta entre septiembre y octubre: misma pregunta, universo y denominador, verificados en los informes de UdeSA."
     },
     {
       "modulo": "Intención de voto",
@@ -1125,20 +1132,17 @@
               "fila": 1207
             }
           ],
-          "nota": "21% NS. Fuente primaria: informe ESPOP Oct-26 (Drive); campo 5–13/10; 1.000 casos"
+          "nota": "Informe primario ESPOP octubre, p. 45. Campo 5–13/10, 1.000 casos. 21% no sabe y 5% prefiere no responder. Comparabilidad intra-ESPOP alta entre septiembre y octubre: misma pregunta, universo y denominador, verificados en los informes de UdeSA."
         },
         {
           "etiqueta": "ESPOP (UdeSA) · espacio · PJ",
           "consultora": "ESPOP (UdeSA)",
           "celdas": [
             {
-              "fila_n1": 322,
-              "mes": "Oct-26",
-              "texto": "PJ 24%",
-              "valor_texto": "24"
+              "fila": 1428
             }
           ],
-          "nota": ""
+          "nota": "Informe primario ESPOP octubre, p. 45. Campo 5–13/10, 1.000 casos. 21% no sabe y 5% prefiere no responder. Comparabilidad intra-ESPOP alta entre septiembre y octubre: misma pregunta, universo y denominador, verificados en los informes de UdeSA."
         },
         {
           "etiqueta": "RDT · primera vuelta · Milei",
