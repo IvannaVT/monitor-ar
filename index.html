@@ -1489,6 +1489,11 @@ footer a{color:var(--accent)}
 .cob-f{font-size:10.5px;color:var(--fg-dim);font-family:'IBM Plex Mono',monospace}
 .cob-p div{margin-bottom:3px}
 @media(max-width:640px){.mes-btn{min-height:44px}.upd-it{font-size:13px}.cob-table{min-width:640px}}
+.dirigentes-mes { margin: 0 0 10px; }
+.dirigentes-mosaico { display: grid; grid-template-columns: repeat(auto-fit,minmax(min(100%,200px),1fr)); gap: 8px; margin: 8px 0; }
+.dirigentes-tarjeta { border: 1px solid var(--border); border-radius: 8px; padding: 9px 12px; background: var(--surface); font-size: 12px; }
+.dirigentes-valor { font-family: 'IBM Plex Mono',monospace; font-size: 21px; margin-top: 4px; }
+.dirigentes-valor .evol-pdf { margin-left: 4px; }
 </style>
 <script>
 /* ── THEME ─────────────────────────────────── */
@@ -2140,11 +2145,44 @@ function renderSLEstudios(){
       <div style="font-family:'IBM Plex Mono',monospace;font-size:18px;font-weight:500" title="N2 fila ${m.fila}">${fv(m)}</div></div>`).join('')}</div>
     <div class="hallazgo-txt">${esc(c.txt)} <a href="https://drive.google.com/file/d/${esc(c.file_id)}/view" target="_blank" rel="noopener">informe ↗</a></div></div>`).join(''));
 }
+function renderDirigentesMosaico(box, meses, series) {
+  const periodos = meses.slice().reverse().map(mes => ({
+    mes,
+    filas: series.filter(f => f.celdas[mes]?.v != null)
+  })).filter(periodo => periodo.filas.length);
+  if (!periodos.length) return;
+  const periodoFmt = new Intl.DateTimeFormat('es-AR', {month: 'long', year: 'numeric', timeZone: 'UTC'});
+  const abreviaturas = ['Ene','Feb','Mar','Abr','May','Jun','Jul','Ago','Sep','Oct','Nov','Dic'];
+  const html = periodos.map(({mes, filas}, i) => {
+    const [abreviatura, anio] = mes.split('-');
+    const etiqueta = periodoFmt.format(new Date(Date.UTC(2000 + Number(anio), abreviaturas.indexOf(abreviatura), 1)));
+    const tarjetas = filas.map(f => {
+      const c = f.celdas[mes];
+      const origen = (c.base === 'nivel2_indicadores' ? 'N2' : 'N1') + ' fila ' + c.fila;
+      const fuente = c.file_id && !c.file_id.startsWith('No aplica')
+        ? `<a class="evol-pdf" href="https://drive.google.com/file/d/${esc(c.file_id)}/view" target="_blank" rel="noopener" aria-label="Informe original de ${esc(f.etiqueta)}">↗</a>`
+        : '';
+      return `<article class="dirigentes-tarjeta"><strong>${esc(f.etiqueta)}</strong>
+        <div class="dirigentes-valor" title="${esc(origen + (c.campo ? ' · campo ' + c.campo : ''))}">${fmt(c.v, c.unidad)}${fuente}</div>
+        ${f.nota ? `<div class="evol-nota">${esc(f.nota)}</div>` : ''}</article>`;
+    }).join('');
+    return `<details class="det-tab dirigentes-mes"${i === 0 ? ' open' : ''}><summary><b>${esc(etiqueta)}</b></summary>
+      <div class="dirigentes-mosaico">${tarjetas}</div></details>`;
+  }).join('');
+  box.insertAdjacentHTML('beforeend', `<div class="chart-wrap"><div class="chart-head"><div>
+    <h3>Imagen de otros dirigentes · evolución</h3><p>Mediciones por mes</p></div></div>${html}</div>`);
+}
 function renderEvolCharts(tab){
   const box=document.querySelector(`[data-evolc="${tab}"]`);if(!box)return;
   const pal=['var(--c1)','var(--c2)','var(--c3)','var(--c4)','var(--c5)','var(--c6)','var(--c7)','var(--c8)','var(--c9)'];
   (EVOL[tab]||[]).forEach((g,gi)=>{
-    const ser=g.filas.filter(f=>f.n>1);
+    const dirigentes = g.modulo === 'Imagen otros dirigentes';
+    const conDatos = f => g.meses.filter(m => f.celdas[m]?.v != null).length;
+    const ser = dirigentes ? g.filas.filter(f => conDatos(f) >= 3) : g.filas.filter(f => f.n > 1);
+    if (dirigentes) {
+      renderDirigentesMosaico(box, g.meses, g.filas.filter(f => conDatos(f) < 3));
+      if (!ser.length) return;
+    }
     if(!ser.length){ // sin series de 2+ cortes: barras del último corte con 3+ mediciones de la misma unidad
       const mes=[...g.meses].reverse().find(m=>g.filas.filter(f=>f.celdas[m]).length>=3);if(!mes)return;
       const fs0=g.filas.filter(f=>f.celdas[mes]);const cnt={};fs0.forEach(f=>{const u=f.celdas[mes].unidad||'';cnt[u]=(cnt[u]||0)+1});
