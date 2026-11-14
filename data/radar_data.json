@@ -3364,6 +3364,7 @@
    "src": "Ad Hoc · 8–11 nov-26 · todas las redes públicas y portales (Onclusive)",
    "mes": "Nov-26",
    "dir": "neg",
+   "rotulo": "Tono crítico hacia Milei",
    "metricas": [
     {
      "lbl": "Menciones en 96 hs",
@@ -3410,6 +3411,7 @@
    "src": "Sustantiva · desde 8 nov-26 · X, TikTok, IG, FB",
    "mes": "Nov-26",
    "dir": "neg",
+   "rotulo": "Reproches al Gobierno nacional",
    "metricas": [
     {
      "lbl": "Menciones estimadas",
@@ -3438,6 +3440,7 @@
    "src": "Radar Público · 1–9 nov-26 · X, IG, TikTok, YouTube",
    "mes": "Nov-26",
    "dir": "neg",
+   "rotulo": "Tono crítico hacia Milei",
    "metricas": [
     {
      "lbl": "Clima positivo",
@@ -3472,6 +3475,7 @@
    "src": "RD · 5 sep–4 nov-26 · 326.638 publicaciones (rotulado nov)",
    "mes": "Nov-26",
    "dir": "neg",
+   "rotulo": "Tono crítico hacia Milei",
    "metricas": [
     {
      "lbl": "Negativo (total)",
