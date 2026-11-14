@@ -2140,7 +2140,7 @@ function renderSLEstudios(){
   const fv=(m)=>m.fmt==='millones'?fmt(m.valor/1e6)+' M':m.fmt==='miles'?Number(m.valor).toLocaleString('es-AR'):fmt(m.valor)+(m.suf||'');
   g.insertAdjacentHTML('afterbegin',SL_ESTUDIOS.map(c=>`<div class="hallazgo" style="border-left-color:var(--${c.dir==='neg'?'neg':'warn'})">
     <div class="hallazgo-head"><span style="font-size:12px;font-weight:600">${esc(c.titulo)}</span><span class="hallazgo-src">${esc(c.src)}</span>
-      <span class="hallazgo-dir h-${c.dir==='neg'?'neg':'neu'}">${c.dir==='neg'?'↓ negativo':'· contexto'}</span></div>
+      <span class="hallazgo-dir h-${c.dir==='neg'?'neg':'neu'}">${esc(c.rotulo || (c.dir==='neg' ? '↓ negativo' : '· contexto'))}</span></div>
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:6px;margin:6px 0 4px">${c.metricas.map(m=>`<div><div style="font-size:9px;color:var(--fg-dim);letter-spacing:.5px;text-transform:uppercase">${esc(m.lbl)}</div>
       <div style="font-family:'IBM Plex Mono',monospace;font-size:18px;font-weight:500" title="N2 fila ${m.fila}">${fv(m)}</div></div>`).join('')}</div>
     <div class="hallazgo-txt">${esc(c.txt)} <a href="https://drive.google.com/file/d/${esc(c.file_id)}/view" target="_blank" rel="noopener">informe ↗</a></div></div>`).join(''));
