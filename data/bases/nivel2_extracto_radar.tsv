@@ -220,3 +220,4 @@ fila	id_informe	mes	fecha_campo_inicio	fecha_campo_fin	consultora	id_indicador	c
 1425	ADHOC_2026_11_SL_LEONXIV	11	2026-11-08	2026-11-11	Ad Hoc	SL_TEMA_LEONXIV_DISCURSO_VOLUMEN_NAC	Menciones	71000	menciones	1fEv2loBqIR2SRiqmxtw8b9d_zWBgHafB	ok
 1426	ADHOC_2026_11_SL_LEONXIV	11	2026-11-08	2026-11-11	Ad Hoc	SL_TEMA_LEONXIV_TRABAJO_VOLUMEN_NAC	Menciones	45000	menciones	1fEv2loBqIR2SRiqmxtw8b9d_zWBgHafB	ok
 1427	PROYECCION_2026_10_NAC	10	2026-10-01	2026-10-13	Proyección	VOTO_ESPACIO_PERONISMO_PROYECCION	Fuerza Patria (Peronismo/Kirchnerismo)	35.9	%	1uIfhBnDL_bPLmziw4yTPefaYkySxN_A3	ok
+1428	ESPOP_2026_10_NAC	10	2026-10-05	2026-10-13	ESPOP (UdeSA)	VOTO_ESPACIO_PJ_ESPOP	Peronismo / Unión por la Patria	24	%	1sqyEKazoQMuF5nDAeIDl1Crp0dO43qbY	ok
