@@ -885,57 +885,6 @@ footer a{color:var(--accent)}
 
 
 
-  <!-- Serie mensual por fuente -->
-  <details class="det-tab"><summary><b>Serie mensual · Reputación Digital · AD HOC · Monitor Digital</b></summary>
-  <div class="chart-wrap" style="padding:0;overflow:hidden">
-    <div class="table-wrap" style="margin:0">
-      <table id="tableSLSerie">
-        <thead>
-          <tr>
-            <th style="width:70px">Mes</th>
-            <th>Reputación Digital</th>
-            <th>AD HOC</th>
-            <th>Monitor Digital</th>
-          </tr>
-        </thead>
-        <tbody id="slSerieRows"></tbody>
-      </table>
-    </div>
-  </div>
-  </details>
-  <p class="source" style="margin-top:6px;margin-bottom:16px">Serie regular mayo 2026 en adelante · informes de otras fuentes en tabla completa al pie · ⚪ sin dato disponible</p>
-
-  
-
-  
-
-  
-
-    <div class="mosaic">
-<div class="chart-wrap">
-    <div class="chart-head"><div><h3>Informes SL por mes</h3><p>Ene–Nov 2026 (nov: corte al 12/11) · 4 informes Ene-26 = evento puntual (Maduro) · serie regular desde May-26</p></div></div>
-    <div class="chart-box"><canvas id="chartSLMes"></canvas></div>
-  </div>
-<div class="chart-wrap">
-    <div class="chart-head"><div><h3>Informes SL por consultora</h3><p>Ene–Nov 2026 (nov: corte al 12/11)</p></div></div>
-    <div class="chart-box" style="height:220px"><canvas id="chartSLConsult"></canvas></div>
-  </div>
-  </div>
-
-  <div class="chart-wrap">
-    <div class="chart-head">
-      <div>
-        <h3>Registro completo de informes SL · por consultora</h3>
-        <p style="margin-top:4px">
-          <a href="https://drive.google.com/drive/folders/1SDS2YXZCqEuwdIzkRhF3JYGR13S9NMvJ" target="_blank" rel="noopener" style="color:var(--fg-dim);text-decoration:underline;text-underline-offset:2px;font-size:11px">Estado de cobertura SL ↗</a>
-        </p>
-      </div>
-    </div>
-    <div class="chart-box" id="slRegBox" style="height:320px"><canvas id="chartSLRegistro"></canvas></div>
-    <div class="legend" id="legendSLRegistro"></div>
-    <div id="slRegGrupos" class="slreg"></div>
-    <p class="source">Agrupado por consultora (variantes de nombre unificadas) · barras: informes por mes · ↗ abre el informe en Drive · «gráficos»: lleva al gráfico de esta sección que usa ese proveedor · los informes de distintas consultoras no se comparan ni se suman como serie.</p>
-  </div>
   <div class="evolc-box" data-evolc="sl"></div>
   <details class="det-fin" data-fin="sl"><summary>Detalle por fuente y trazabilidad · <span class="det-fin-n" data-finn="sl"></span></summary>
     <div class="upd-box" data-upd="sl"></div>
@@ -1653,72 +1602,6 @@ function renderStaticTables(){
     </tr>`;
   });
 })();
-(function(){
-  // SL monthly series table (Reputación Digital · AD HOC · Monitor Digital from May onward)
-  const stbody=document.getElementById('slSerieRows');
-  if(stbody){
-    const SERIE_MESES=['Nov-26','Oct-26','Sep-26','Ago-26','Jul-26','Jun-26','May-26']; // más reciente arriba
-    const FUENTES=['REPUTACIÓN DIGITAL','AD HOC','MONITOR DIGITAL'];
-    const normalize=s=>s.toUpperCase().replace(/[^A-Z0-9]/g,' ').replace(/\s+/g,' ').trim();
-    const fNorm=FUENTES.map(normalize);
-    SERIE_MESES.forEach(mes=>{
-      const items=SL_INFORMES.filter(r=>r.mes===mes);
-      const cells=fNorm.map(fn=>{
-        const match=items.filter(r=>normalize(r.consultora).includes(fn.split(' ')[0])||fn.includes(normalize(r.consultora)));
-        if(!match.length)return `<td style="color:var(--fg-dim);font-size:11px">⚪ —</td>`;
-        const list=match.map(r=>`<div style="margin-bottom:2px">· ${r.titulo}</div>`).join('');
-        return `<td style="font-size:11px;line-height:1.4">${list}</td>`;
-      });
-      stbody.innerHTML+=`<tr><td class="num" style="font-family:'IBM Plex Mono',monospace;font-weight:500;white-space:nowrap">${mes}</td>${cells.join('')}</tr>`;
-    });
-  }
-})();
-(function(){
-  // Registro SL agrupado por consultora: gráfico + hipervínculos
-  const cont=document.getElementById('slRegGrupos');if(!cont)return;
-  const canon=c=>{const n=c.normalize('NFD').replace(/[̀-ͯ]/g,'').toUpperCase().replace(/\./g,' ').replace(/\s+/g,' ').trim();
-    if(n.startsWith('REPUTACION'))return 'Reputación Digital';if(n.includes('AD HOC'))return 'AD HOC';if(n.startsWith('ENTER'))return 'Enter';
-    if(n.startsWith('PDM'))return 'PDM';if(n.startsWith('EUNOMIA'))return 'Eunomia';if(n.startsWith('MONITOR DIGITAL'))return 'Monitor Digital';
-    if(/[a-z]/.test(c))return c;const AC=['UBA','PR','AD','PDM','LATAM'];return c.split(' ').map(w=>AC.includes(w)?w:w.charAt(0)+w.slice(1).toLowerCase()).join(' ');};
-  const GRAF={'Reputación Digital':[['ISN mensual','chartISNMensual'],['Tono por tramos sep–oct','chartSLTramos'],['ISN por eje','chartISNEje']],'AD HOC':[['Sentimiento Milei sep','chartMileiSentSep']]};
-  const grupos={};SL_INFORMES.forEach(r=>{const k=canon(r.consultora);(grupos[k]=grupos[k]||[]).push(r);});
-  const orden=Object.keys(grupos).sort((a,b)=>grupos[b].length-grupos[a].length||a.localeCompare(b));
-  const meses=MSL_MES;const pal=['var(--c1)','var(--c2)','var(--c3)','var(--c4)','var(--c5)','var(--c6)','var(--c7)','var(--c8)','var(--c9)'];
-  const top=orden.filter(k=>grupos[k].length>1);const otros=orden.filter(k=>grupos[k].length===1);
-  const filas=top.concat(otros.length?['Otras ('+otros.length+')']:[]);
-  const cuenta=(k,m)=>k.startsWith('Otras (')?otros.reduce((a,o)=>a+grupos[o].filter(r=>r.mes===m).length,0):grupos[k].filter(r=>r.mes===m).length;
-  const box=document.getElementById('slRegBox');if(box)box.style.height=Math.max(200,filas.length*26+60)+'px';
-  const ctx=document.getElementById('chartSLRegistro');
-  if(ctx){chartRegistry['chartSLRegistro']=new Chart(ctx,{type:'bar',
-    data:{labels:filas,datasets:meses.map((m,i)=>({label:m,data:filas.map(k=>cuenta(k,m)),backgroundColor:cv(pal[i%pal.length]),borderWidth:0}))},
-    options:{indexAxis:'y',responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false},tooltip:{filter:i=>i.raw>0}},
-      scales:{x:{stacked:true,ticks:{precision:0,font:{size:10},color:tok('--fg-dim')},grid:{color:tok('--border')}},y:{stacked:true,ticks:{font:{size:11},color:tok('--fg')},grid:{display:false}}}}});
-    buildLegend('legendSLRegistro','chartSLRegistro',meses,meses.map((_,i)=>pal[i%pal.length]));}
-  const tipoColor={'Monitoreo regular':cv('var(--pos)'),'Ad hoc temático':cv('var(--c2)'),'Evento puntual':cv('var(--fg-dim)')};
-  cont.innerHTML=orden.map(k=>{
-    const it=grupos[k].slice().sort((a,b)=>meses.indexOf(b.mes)-meses.indexOf(a.mes)); // más reciente primero
-    const g=(GRAF[k]||[]).map(([t,id])=>`<a href="#" onclick="document.getElementById('${id}').scrollIntoView({behavior:'smooth',block:'center'});return false">${t}</a>`).join(' · ');
-    return `<details class="slreg-g"${it.length>1?' open':''}><summary><strong>${esc(k)}</strong> <span class="slreg-n">${it.length} informe${it.length>1?'s':''} · ${it.length>1?'último '+esc(it[0].mes)+' · desde '+esc(it[it.length-1].mes):esc(it[0].mes)}</span>${g?` <span class="slreg-graf">gráficos: ${g}</span>`:''}</summary>
-      <ul>${it.map(r=>`<li><span class="slreg-mes">${esc(r.mes)}</span> ${r.file_id?`<a href="https://drive.google.com/file/d/${esc(r.file_id)}/view" target="_blank" rel="noopener">${esc(r.titulo)} ↗</a>`:`${esc(r.titulo)} <span class="slreg-nolink">(sin vínculo en la base)</span>`} <span style="font-size:10px;color:${tipoColor[r.tipo]||cv('var(--fg-dim)')}">${esc(r.tipo)}</span></li>`).join('')}</ul></details>`}).join('');
-})();
-(function(){
-  // SL rows (tabla anterior; se mantiene solo si existe el contenedor)
-  const tbody=document.getElementById('slRows');if(!tbody)return;
-  const tipoColor={
-    'Monitoreo regular':cv('var(--pos)'),
-    'Ad hoc temático':cv('var(--c2)'),
-    'Evento puntual':cv('var(--fg-dim)')
-  };
-  tbody.innerHTML=SL_INFORMES.map(r=>{
-    const col=tipoColor[r.tipo]||cv('var(--fg-dim)');
-    return `<tr>
-      <td class="num">${r.mes}</td>
-      <td>${r.consultora}</td>
-      <td>${r.titulo}</td>
-      <td><span style="font-size:10px;font-weight:500;color:${col}">${r.tipo}</span></td>
-    </tr>`;
-  }).join('');
-})();
 }
 
 /* ── GAP DATA ────────────────────────────────── */
@@ -2022,22 +1905,6 @@ function initTab(tab){
         }
       });
     }
-    // SL por mes
-    mkBar('chartSLMes',MSL_MES,[{label:'Informes SL',data:SL_POR_MES,color:'var(--c1)'}],{
-      plugins:{legend:{display:false}},
-      scales:{
-        x:{ticks:{font:{family:"'IBM Plex Mono',monospace",size:10},color:tok('--fg-dim')},grid:{color:tok('--border')}},
-        y:{ticks:{font:{family:"'IBM Plex Mono',monospace",size:10},color:tok('--fg-dim'),stepSize:1},grid:{color:tok('--border')}}
-      }
-    });
-    mkBar('chartSLConsult',SL_CONSULT_LABELS,[{label:'Informes',data:SL_CONSULT_VALS,color:'var(--c2)'}],{
-      indexAxis:'y',
-      plugins:{legend:{display:false}},
-      scales:{
-        x:{ticks:{font:{family:"'IBM Plex Mono',monospace",size:10},color:tok('--fg-dim')},grid:{color:tok('--border')}},
-        y:{ticks:{font:{family:"'IBM Plex Mono',monospace",size:10},color:tok('--fg-dim')},grid:{display:false}}
-      }
-    });
   }
 }
 
