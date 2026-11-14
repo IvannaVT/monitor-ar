@@ -586,7 +586,7 @@
     null,
     null,
     null,
-    null,
+    24,
     null
    ]
   },
@@ -686,7 +686,7 @@
    "name": "ESPOP",
    "p": "Oct-26",
    "lla": 26,
-   "pj": null,
+   "pj": 24,
    "d": null,
    "n": "—",
    "met": "—"
@@ -2072,7 +2072,7 @@
       "n": 1,
       "delta": null,
       "evidencia": "BAJA",
-      "nota": "21% NS. Fuente primaria: informe ESPOP Oct-26 (Drive); campo 5–13/10; 1.000 casos"
+      "nota": "Informe primario ESPOP octubre, p. 45. Campo 5–13/10, 1.000 casos. 21% no sabe y 5% prefiere no responder. Comparabilidad intra-ESPOP alta entre septiembre y octubre: misma pregunta, universo y denominador, verificados en los informes de UdeSA."
      },
      {
       "etiqueta": "ESPOP (UdeSA) · espacio · PJ",
@@ -2080,10 +2080,10 @@
       "celdas": {
        "Oct-26": {
         "v": 24,
-        "fila": 322,
-        "base": "base_maestra_2026",
-        "file_id": "",
-        "campo": "",
+        "fila": 1428,
+        "base": "nivel2_indicadores",
+        "file_id": "1sqyEKazoQMuF5nDAeIDl1Crp0dO43qbY",
+        "campo": "2026-10-05→2026-10-13",
         "secundaria": "",
         "unidad": "%"
        }
@@ -2091,7 +2091,7 @@
       "n": 1,
       "delta": null,
       "evidencia": "BAJA",
-      "nota": ""
+      "nota": "Informe primario ESPOP octubre, p. 45. Campo 5–13/10, 1.000 casos. 21% no sabe y 5% prefiere no responder. Comparabilidad intra-ESPOP alta entre septiembre y octubre: misma pregunta, universo y denominador, verificados en los informes de UdeSA."
      },
      {
       "etiqueta": "RDT · primera vuelta · Milei",
@@ -5429,9 +5429,26 @@
      "file_id": "1sqyEKazoQMuF5nDAeIDl1Crp0dO43qbY",
      "campo": "2026-10-05→2026-10-13",
      "unidad": "%",
-     "nota": "línea propia de la consultora; ver serie de evolución para comparabilidad",
+     "nota": "Comparabilidad intra-ESPOP alta entre septiembre y octubre: misma pregunta, universo y denominador, verificados en los informes de UdeSA.",
      "secundaria": "",
      "categoria": "La Libertad Avanza"
+    },
+    {
+     "tipo": "serie",
+     "modulo": "Intención de voto",
+     "etiqueta": "CONS · ESPOP · pj",
+     "valor": 24,
+     "anterior": null,
+     "estado": "nuevo",
+     "consultora": "ESPOP (UdeSA)",
+     "fila": 1428,
+     "base": "nivel2_indicadores",
+     "file_id": "1sqyEKazoQMuF5nDAeIDl1Crp0dO43qbY",
+     "campo": "2026-10-05→2026-10-13",
+     "unidad": "%",
+     "nota": "Comparabilidad intra-ESPOP alta entre septiembre y octubre: misma pregunta, universo y denominador, verificados en los informes de UdeSA.",
+     "secundaria": "",
+     "categoria": "Peronismo / Unión por la Patria"
     },
     {
      "tipo": "serie",
@@ -5863,7 +5880,6 @@
      "Zuban Córdoba"
     ],
     "filas": [
-     "BA:322",
      "BA:323",
      "BA:324",
      "NI:1109",
@@ -5881,7 +5897,8 @@
      "NI:1244",
      "NI:1333",
      "NI:1334",
-     "NI:1427"
+     "NI:1427",
+     "NI:1428"
     ],
     "pendiente": [
      "Synopsis, ola con campo 12–17/10 (difundida 31/10): Peronismo 35 / LLA 33,6, localizada en encuestas-argentinas.com (registro https://x.com/_EncuestAR_/status/2116669248479047801, consultado 2026-11-11). Candidato pendiente: no hay informe en Drive ni enlace al original, y no se puede acreditar pregunta ni mes enunciado por Synopsis. No se carga y no reemplaza la ola 8–15/9 que hoy ocupa oct-26 (N2 fila 1208). Necesita: informe original de Synopsis de esa ola, para fijar el mes que enuncia"
@@ -6118,8 +6135,8 @@
    "data/bases/base_maestra_resultados_clave.tsv",
    "data/radar_mapping.json"
   ],
-  "valores_trazados": 230,
-  "nuevos": 95,
+  "valores_trazados": 231,
+  "nuevos": 96,
   "corregidos": 13,
   "retirados": 0,
   "puntuales": 0,
