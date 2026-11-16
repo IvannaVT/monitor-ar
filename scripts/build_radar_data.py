@@ -86,6 +86,7 @@ def construir():
     n2 = {r['fila']: r for r in tsv(BASES / 'nivel2_extracto_radar.tsv')}
     n1 = {r['fila']: r for r in tsv(BASES / 'base_maestra_extracto_oct_nov.tsv')}
     rc = {r['fila']: r for r in tsv(BASES / 'base_maestra_resultados_clave.tsv')}
+    complementarias = {r['clave']: r for r in tsv(BASES / 'radar_fuentes_complementarias.tsv')}
     D = copy.deepcopy(hist)
     traza = []
     # GAP CONV–SL sin intención de voto (SL no mide voto): se retiran 'voto LLA' y 'escenario 2027' (posiciones 9 y 10)
@@ -134,6 +135,15 @@ def construir():
         return rot
 
     def valor_de(a):
+        if 'fuente_complementaria' in a:
+            clave = a['fuente_complementaria']
+            r = complementarias[clave]
+            return num(r['resultado']), r['mes'], {
+                'base': 'radar_fuentes_complementarias', 'fila': '', 'clave_fuente': clave,
+                'id_informe': r['id_informe'], 'id_indicador': r['id_indicador'],
+                'consultora': r['consultora'], 'categoria': r['categoria'], 'unidad': r['unidad'],
+                'campo': r['campo'], 'file_id': '', 'url_fuente': r['url_fuente'],
+                'nota': a.get('nota', ''), 'secundaria': r['secundaria']}
         if 'fila' in a:
             f = str(a['fila'])
             if f not in n2:
@@ -270,6 +280,7 @@ def construir():
                 if mes in celdas:
                     raise BuildError(f'Evolución «{fdef["etiqueta"]}»: dos valores para {mes}')
                 celdas[mes] = {'v': v, 'fila': origen['fila'], 'base': origen['base'], 'file_id': origen['file_id'],
+                               'clave_fuente': origen.get('clave_fuente', ''), 'url_fuente': origen.get('url_fuente', ''),
                                'campo': origen.get('campo', ''), 'secundaria': origen.get('secundaria', ''), 'unidad': origen.get('unidad', '')}
                 meses.add(mes)
                 traza.append({'ruta': 'evolucion:' + fdef['etiqueta'], 'mes': mes, 'valor': v, 'anterior': None, 'estado': 'serie de evolución',
@@ -387,7 +398,8 @@ def construir():
     D['COBERTURA'] = COB
     D['META'] = {'corte': cfg['corte'], 'generado_por': 'scripts/build_radar_data.py',
                  'entradas': ['data/bases/radar_historico_publicado_b43fcb8.json', 'data/bases/nivel2_extracto_radar.tsv',
-                              'data/bases/base_maestra_extracto_oct_nov.tsv', 'data/bases/base_maestra_resultados_clave.tsv', 'data/radar_mapping.json'],
+                              'data/bases/base_maestra_extracto_oct_nov.tsv', 'data/bases/base_maestra_resultados_clave.tsv', 'data/bases/radar_fuentes_complementarias.tsv',
+                              'data/radar_mapping.json'],
                  'valores_trazados': len(traza),
                  'nuevos': sum(t['estado'] == 'nuevo' for t in traza), 'corregidos': sum(t['estado'] == 'corregido' for t in traza),
                  'retirados': sum(t['estado'] == 'retirado' for t in traza), 'puntuales': 0, 'en_series_de_evolucion': sum(t['estado'] == 'serie de evolución' for t in traza),
@@ -398,7 +410,7 @@ def construir():
 def serializar(D, traza):
     js = json.dumps(D, ensure_ascii=False, indent=1) + '\n'
     out = io.StringIO()
-    cols = ['modulo', 'ruta', 'mes', 'estado', 'valor', 'anterior', 'base', 'fila', 'id_informe', 'id_indicador', 'consultora', 'categoria', 'campo', 'file_id', 'nota', 'secundaria']
+    cols = ['modulo', 'ruta', 'mes', 'estado', 'valor', 'anterior', 'base', 'fila', 'id_informe', 'id_indicador', 'consultora', 'categoria', 'campo', 'file_id', 'nota', 'secundaria', 'clave_fuente', 'url_fuente']
     w = csv.DictWriter(out, fieldnames=cols, extrasaction='ignore', lineterminator='\n')
     w.writeheader()
     for t in traza:
