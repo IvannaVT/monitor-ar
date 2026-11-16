@@ -413,7 +413,7 @@
     32.5,
     35,
     37.8,
-    null
+    35
    ],
    "pj": [
     35.9,
@@ -425,7 +425,7 @@
     36.6,
     31.9,
     35.9,
-    null
+    35
    ]
   },
   "Isasi": {
@@ -630,10 +630,10 @@
   },
   {
    "name": "Proyección",
-   "p": "Oct-26",
-   "lla": 37.8,
-   "pj": 35.9,
-   "d": 2.8,
+   "p": "Nov-26",
+   "lla": 35,
+   "pj": 35,
+   "d": -2.8,
    "n": "~1500",
    "met": "Panel online"
   },
@@ -867,7 +867,7 @@
     null,
     null,
     41.9,
-    null
+    38.9
    ],
    "neg": [
     null,
@@ -876,7 +876,7 @@
     null,
     null,
     55.2,
-    null
+    56.1
    ]
   },
   "CELAG": {
@@ -1004,7 +1004,7 @@
     39.7,
     42,
     null,
-    null
+    35.6
    ],
    "desaprob": [
     null,
@@ -1013,7 +1013,7 @@
     null,
     null,
     52.4,
-    null
+    55.9
    ]
   },
   "Isasi": {
@@ -1814,6 +1814,51 @@
    "rotulo": "FUENTE SECUNDARIA · monitorargy.com · https://monitorargy.com/mcp (obtener_serie, id ipc_nivel_general) · consultado 2026-11-12 · fuente original: INDEC · acumulado calculado sobre el nivel general",
    "modulo": "IPC Nación",
    "fuente_original": "INDEC"
+  },
+  {
+   "ruta": "evolucion:Synopsis · balotaje · Javier Milei",
+   "mes": "Oct-26",
+   "valor": 41.9,
+   "fila": "",
+   "rotulo": "FUENTE SECUNDARIA · _EncuestAR_ · difusión 31/10/2026 · ficha original pendiente",
+   "modulo": "Intención de voto",
+   "fuente_original": "Synopsis"
+  },
+  {
+   "ruta": "evolucion:Synopsis · balotaje · Axel Kicillof",
+   "mes": "Oct-26",
+   "valor": 41.8,
+   "fila": "",
+   "rotulo": "FUENTE SECUNDARIA · _EncuestAR_ · difusión 31/10/2026 · ficha original pendiente",
+   "modulo": "Intención de voto",
+   "fuente_original": "Synopsis"
+  },
+  {
+   "ruta": "evolucion:PoliTech · Río Negro · voto provincial · La Libertad Avanza",
+   "mes": "Jul-26",
+   "valor": 25.1,
+   "fila": "",
+   "rotulo": "FUENTE SECUNDARIA · Bache3000 · informe de contexto de septiembre con campo de julio",
+   "modulo": "Territorio",
+   "fuente_original": "PoliTech"
+  },
+  {
+   "ruta": "evolucion:PoliTech · Río Negro · voto provincial · Peronismo",
+   "mes": "Jul-26",
+   "valor": 22.2,
+   "fila": "",
+   "rotulo": "FUENTE SECUNDARIA · Bache3000 · informe de contexto de septiembre con campo de julio",
+   "modulo": "Territorio",
+   "fuente_original": "PoliTech"
+  },
+  {
+   "ruta": "evolucion:PoliTech · Río Negro · voto provincial · Juntos Somos Río Negro",
+   "mes": "Jul-26",
+   "valor": 21.5,
+   "fila": "",
+   "rotulo": "FUENTE SECUNDARIA · Bache3000 · informe de contexto de septiembre con campo de julio",
+   "modulo": "Territorio",
+   "fuente_original": "PoliTech"
   }
  ],
  "ENCABEZADO": {
@@ -1950,14 +1995,27 @@
         "fila": 1211,
         "base": "nivel2_indicadores",
         "file_id": "1uIfhBnDL_bPLmziw4yTPefaYkySxN_A3",
+        "clave_fuente": "",
+        "url_fuente": "",
         "campo": "2026-10-01→2026-10-13",
+        "secundaria": "",
+        "unidad": "%"
+       },
+       "Nov-26": {
+        "v": 35,
+        "fila": 1481,
+        "base": "nivel2_indicadores",
+        "file_id": "1P_43U922vyw_gFYdje1io2SPO-AH_JT1",
+        "clave_fuente": "",
+        "url_fuente": "",
+        "campo": "2026-11-01→2026-11-09",
         "secundaria": "",
         "unidad": "%"
        }
       },
-      "n": 1,
-      "delta": null,
-      "evidencia": "BAJA",
+      "n": 2,
+      "delta": -2.8,
+      "evidencia": "MEDIA",
       "nota": "pregunta distinta del candidato nominal de la serie: no se encadena"
      },
      {
@@ -1969,14 +2027,27 @@
         "fila": 1427,
         "base": "nivel2_indicadores",
         "file_id": "1uIfhBnDL_bPLmziw4yTPefaYkySxN_A3",
+        "clave_fuente": "",
+        "url_fuente": "",
         "campo": "2026-10-01→2026-10-13",
+        "secundaria": "",
+        "unidad": "%"
+       },
+       "Nov-26": {
+        "v": 35,
+        "fila": 1482,
+        "base": "nivel2_indicadores",
+        "file_id": "1P_43U922vyw_gFYdje1io2SPO-AH_JT1",
+        "clave_fuente": "",
+        "url_fuente": "",
+        "campo": "2026-11-01→2026-11-09",
         "secundaria": "",
         "unidad": "%"
        }
       },
-      "n": 1,
-      "delta": null,
-      "evidencia": "BAJA",
+      "n": 2,
+      "delta": -0.9,
+      "evidencia": "MEDIA",
       "nota": "pregunta distinta del candidato nominal de la serie: no se encadena"
      },
      {
@@ -1988,14 +2059,27 @@
         "fila": 1142,
         "base": "nivel2_indicadores",
         "file_id": "1uIfhBnDL_bPLmziw4yTPefaYkySxN_A3",
+        "clave_fuente": "",
+        "url_fuente": "",
         "campo": "2026-10-01→2026-10-13",
+        "secundaria": "",
+        "unidad": "%"
+       },
+       "Nov-26": {
+        "v": 34.5,
+        "fila": 1487,
+        "base": "nivel2_indicadores",
+        "file_id": "1P_43U922vyw_gFYdje1io2SPO-AH_JT1",
+        "clave_fuente": "",
+        "url_fuente": "",
+        "campo": "2026-11-01→2026-11-09",
         "secundaria": "",
         "unidad": "%"
        }
       },
-      "n": 1,
-      "delta": null,
-      "evidencia": "BAJA",
+      "n": 2,
+      "delta": 2.9,
+      "evidencia": "MEDIA",
       "nota": ""
      },
      {
@@ -2007,14 +2091,27 @@
         "fila": 1143,
         "base": "nivel2_indicadores",
         "file_id": "1uIfhBnDL_bPLmziw4yTPefaYkySxN_A3",
+        "clave_fuente": "",
+        "url_fuente": "",
         "campo": "2026-10-01→2026-10-13",
+        "secundaria": "",
+        "unidad": "%"
+       },
+       "Nov-26": {
+        "v": 31.2,
+        "fila": 1488,
+        "base": "nivel2_indicadores",
+        "file_id": "1P_43U922vyw_gFYdje1io2SPO-AH_JT1",
+        "clave_fuente": "",
+        "url_fuente": "",
+        "campo": "2026-11-01→2026-11-09",
         "secundaria": "",
         "unidad": "%"
        }
       },
-      "n": 1,
-      "delta": null,
-      "evidencia": "BAJA",
+      "n": 2,
+      "delta": -5.8,
+      "evidencia": "MEDIA",
       "nota": ""
      },
      {
@@ -2026,6 +2123,8 @@
         "fila": 1110,
         "base": "nivel2_indicadores",
         "file_id": "17cFXTzTZ--jC7cpCObgWJ86n7mUumsIb",
+        "clave_fuente": "",
+        "url_fuente": "",
         "campo": "2026-10-10→2026-10-14",
         "secundaria": "",
         "unidad": "%"
@@ -2045,6 +2144,8 @@
         "fila": 1109,
         "base": "nivel2_indicadores",
         "file_id": "17cFXTzTZ--jC7cpCObgWJ86n7mUumsIb",
+        "clave_fuente": "",
+        "url_fuente": "",
         "campo": "2026-10-10→2026-10-14",
         "secundaria": "",
         "unidad": "%"
@@ -2064,6 +2165,8 @@
         "fila": 1207,
         "base": "nivel2_indicadores",
         "file_id": "1sqyEKazoQMuF5nDAeIDl1Crp0dO43qbY",
+        "clave_fuente": "",
+        "url_fuente": "",
         "campo": "2026-10-05→2026-10-13",
         "secundaria": "",
         "unidad": "%"
@@ -2083,6 +2186,8 @@
         "fila": 1428,
         "base": "nivel2_indicadores",
         "file_id": "1sqyEKazoQMuF5nDAeIDl1Crp0dO43qbY",
+        "clave_fuente": "",
+        "url_fuente": "",
         "campo": "2026-10-05→2026-10-13",
         "secundaria": "",
         "unidad": "%"
@@ -2102,6 +2207,8 @@
         "fila": 1244,
         "base": "nivel2_indicadores",
         "file_id": "1thu4zIYs1sLkULpQqXY2SIudpO99n8kG",
+        "clave_fuente": "",
+        "url_fuente": "",
         "campo": "2026-10-22→2026-10-28",
         "secundaria": "",
         "unidad": "%"
@@ -2121,6 +2228,8 @@
         "fila": 1333,
         "base": "nivel2_indicadores",
         "file_id": "1uznLYGdcQW-2F2alisYrLtkdxGrgNrRT",
+        "clave_fuente": "",
+        "url_fuente": "",
         "campo": "2026-10-27→2026-11-01",
         "secundaria": "",
         "unidad": "%"
@@ -2140,6 +2249,8 @@
         "fila": 1334,
         "base": "nivel2_indicadores",
         "file_id": "1uznLYGdcQW-2F2alisYrLtkdxGrgNrRT",
+        "clave_fuente": "",
+        "url_fuente": "",
         "campo": "2026-10-27→2026-11-01",
         "secundaria": "",
         "unidad": "%"
@@ -2159,6 +2270,8 @@
         "fila": 1199,
         "base": "nivel2_indicadores",
         "file_id": "16HiGngQwowwu7o6kj1Nc2iBoizH8kkTT",
+        "clave_fuente": "",
+        "url_fuente": "",
         "campo": "2026-09-05→2026-09-28",
         "secundaria": "",
         "unidad": "%"
@@ -2168,6 +2281,8 @@
         "fila": 1361,
         "base": "nivel2_indicadores",
         "file_id": "1rD7VKuwogWSGUEFj8D7yy_Qe8BUjez3S",
+        "clave_fuente": "",
+        "url_fuente": "",
         "campo": "2026-10-08→2026-10-26",
         "secundaria": "",
         "unidad": "%"
@@ -2187,6 +2302,8 @@
         "fila": 1198,
         "base": "nivel2_indicadores",
         "file_id": "16HiGngQwowwu7o6kj1Nc2iBoizH8kkTT",
+        "clave_fuente": "",
+        "url_fuente": "",
         "campo": "2026-09-05→2026-09-28",
         "secundaria": "",
         "unidad": "%"
@@ -2196,6 +2313,8 @@
         "fila": 1362,
         "base": "nivel2_indicadores",
         "file_id": "1rD7VKuwogWSGUEFj8D7yy_Qe8BUjez3S",
+        "clave_fuente": "",
+        "url_fuente": "",
         "campo": "2026-10-08→2026-10-26",
         "secundaria": "",
         "unidad": "%"
@@ -2215,6 +2334,8 @@
         "fila": 1363,
         "base": "nivel2_indicadores",
         "file_id": "1rD7VKuwogWSGUEFj8D7yy_Qe8BUjez3S",
+        "clave_fuente": "",
+        "url_fuente": "",
         "campo": "2026-10-08→2026-10-26",
         "secundaria": "",
         "unidad": "%"
@@ -2223,6 +2344,715 @@
       "n": 1,
       "delta": null,
       "evidencia": "BAJA",
+      "nota": ""
+     },
+     {
+      "etiqueta": "Proyección · voto por espacio · Frente de Izquierda",
+      "consultora": "Proyección",
+      "celdas": {
+       "Nov-26": {
+        "v": 5.3,
+        "fila": 1483,
+        "base": "nivel2_indicadores",
+        "file_id": "1P_43U922vyw_gFYdje1io2SPO-AH_JT1",
+        "clave_fuente": "",
+        "url_fuente": "",
+        "campo": "2026-11-01→2026-11-09",
+        "secundaria": "",
+        "unidad": "%"
+       }
+      },
+      "n": 1,
+      "delta": null,
+      "evidencia": "BAJA",
+      "nota": ""
+     },
+     {
+      "etiqueta": "Proyección · voto por espacio · PRO (Macrismo)",
+      "consultora": "Proyección",
+      "celdas": {
+       "Nov-26": {
+        "v": 5,
+        "fila": 1484,
+        "base": "nivel2_indicadores",
+        "file_id": "1P_43U922vyw_gFYdje1io2SPO-AH_JT1",
+        "clave_fuente": "",
+        "url_fuente": "",
+        "campo": "2026-11-01→2026-11-09",
+        "secundaria": "",
+        "unidad": "%"
+       }
+      },
+      "n": 1,
+      "delta": null,
+      "evidencia": "BAJA",
+      "nota": ""
+     },
+     {
+      "etiqueta": "Proyección · voto por espacio · Provincias Unidas (Gobernadores de centro)",
+      "consultora": "Proyección",
+      "celdas": {
+       "Nov-26": {
+        "v": 2.6,
+        "fila": 1485,
+        "base": "nivel2_indicadores",
+        "file_id": "1P_43U922vyw_gFYdje1io2SPO-AH_JT1",
+        "clave_fuente": "",
+        "url_fuente": "",
+        "campo": "2026-11-01→2026-11-09",
+        "secundaria": "",
+        "unidad": "%"
+       }
+      },
+      "n": 1,
+      "delta": null,
+      "evidencia": "BAJA",
+      "nota": ""
+     },
+     {
+      "etiqueta": "Proyección · voto por espacio · En blanco / impugnado",
+      "consultora": "Proyección",
+      "celdas": {
+       "Nov-26": {
+        "v": 17.1,
+        "fila": 1486,
+        "base": "nivel2_indicadores",
+        "file_id": "1P_43U922vyw_gFYdje1io2SPO-AH_JT1",
+        "clave_fuente": "",
+        "url_fuente": "",
+        "campo": "2026-11-01→2026-11-09",
+        "secundaria": "",
+        "unidad": "%"
+       }
+      },
+      "n": 1,
+      "delta": null,
+      "evidencia": "BAJA",
+      "nota": ""
+     },
+     {
+      "etiqueta": "Proyección · voto presidencial por candidato · Myriam Bregman",
+      "consultora": "Proyección",
+      "celdas": {
+       "Nov-26": {
+        "v": 7.9,
+        "fila": 1489,
+        "base": "nivel2_indicadores",
+        "file_id": "1P_43U922vyw_gFYdje1io2SPO-AH_JT1",
+        "clave_fuente": "",
+        "url_fuente": "",
+        "campo": "2026-11-01→2026-11-09",
+        "secundaria": "",
+        "unidad": "%"
+       }
+      },
+      "n": 1,
+      "delta": null,
+      "evidencia": "BAJA",
+      "nota": ""
+     },
+     {
+      "etiqueta": "Proyección · voto presidencial por candidato · Maximiliano Pullaro",
+      "consultora": "Proyección",
+      "celdas": {
+       "Nov-26": {
+        "v": 3.6,
+        "fila": 1490,
+        "base": "nivel2_indicadores",
+        "file_id": "1P_43U922vyw_gFYdje1io2SPO-AH_JT1",
+        "clave_fuente": "",
+        "url_fuente": "",
+        "campo": "2026-11-01→2026-11-09",
+        "secundaria": "",
+        "unidad": "%"
+       }
+      },
+      "n": 1,
+      "delta": null,
+      "evidencia": "BAJA",
+      "nota": ""
+     },
+     {
+      "etiqueta": "Proyección · voto presidencial por candidato · En blanco / impugnado",
+      "consultora": "Proyección",
+      "celdas": {
+       "Nov-26": {
+        "v": 11,
+        "fila": 1491,
+        "base": "nivel2_indicadores",
+        "file_id": "1P_43U922vyw_gFYdje1io2SPO-AH_JT1",
+        "clave_fuente": "",
+        "url_fuente": "",
+        "campo": "2026-11-01→2026-11-09",
+        "secundaria": "",
+        "unidad": "%"
+       }
+      },
+      "n": 1,
+      "delta": null,
+      "evidencia": "BAJA",
+      "nota": ""
+     },
+     {
+      "etiqueta": "Proyección · voto presidencial por candidato · No lo sé",
+      "consultora": "Proyección",
+      "celdas": {
+       "Nov-26": {
+        "v": 11.8,
+        "fila": 1492,
+        "base": "nivel2_indicadores",
+        "file_id": "1P_43U922vyw_gFYdje1io2SPO-AH_JT1",
+        "clave_fuente": "",
+        "url_fuente": "",
+        "campo": "2026-11-01→2026-11-09",
+        "secundaria": "",
+        "unidad": "%"
+       }
+      },
+      "n": 1,
+      "delta": null,
+      "evidencia": "BAJA",
+      "nota": ""
+     },
+     {
+      "etiqueta": "Proyección · cambio o continuidad · Que continúe el gobierno actual de Milei",
+      "consultora": "Proyección",
+      "celdas": {
+       "Nov-26": {
+        "v": 14.3,
+        "fila": 1499,
+        "base": "nivel2_indicadores",
+        "file_id": "1P_43U922vyw_gFYdje1io2SPO-AH_JT1",
+        "clave_fuente": "",
+        "url_fuente": "",
+        "campo": "2026-11-01→2026-11-09",
+        "secundaria": "",
+        "unidad": "%"
+       }
+      },
+      "n": 1,
+      "delta": null,
+      "evidencia": "BAJA",
+      "nota": ""
+     },
+     {
+      "etiqueta": "Proyección · cambio o continuidad · Que continúe Milei pero con otro equipo y cambio en sus políticas",
+      "consultora": "Proyección",
+      "celdas": {
+       "Nov-26": {
+        "v": 23.7,
+        "fila": 1500,
+        "base": "nivel2_indicadores",
+        "file_id": "1P_43U922vyw_gFYdje1io2SPO-AH_JT1",
+        "clave_fuente": "",
+        "url_fuente": "",
+        "campo": "2026-11-01→2026-11-09",
+        "secundaria": "",
+        "unidad": "%"
+       }
+      },
+      "n": 1,
+      "delta": null,
+      "evidencia": "BAJA",
+      "nota": ""
+     },
+     {
+      "etiqueta": "Proyección · cambio o continuidad · Que haya un nuevo gobierno de otro espacio político cercano al peronismo",
+      "consultora": "Proyección",
+      "celdas": {
+       "Nov-26": {
+        "v": 38.4,
+        "fila": 1501,
+        "base": "nivel2_indicadores",
+        "file_id": "1P_43U922vyw_gFYdje1io2SPO-AH_JT1",
+        "clave_fuente": "",
+        "url_fuente": "",
+        "campo": "2026-11-01→2026-11-09",
+        "secundaria": "",
+        "unidad": "%"
+       }
+      },
+      "n": 1,
+      "delta": null,
+      "evidencia": "BAJA",
+      "nota": ""
+     },
+     {
+      "etiqueta": "Proyección · cambio o continuidad · Que haya un nuevo gobierno de otro espacio político no peronista",
+      "consultora": "Proyección",
+      "celdas": {
+       "Nov-26": {
+        "v": 12.9,
+        "fila": 1502,
+        "base": "nivel2_indicadores",
+        "file_id": "1P_43U922vyw_gFYdje1io2SPO-AH_JT1",
+        "clave_fuente": "",
+        "url_fuente": "",
+        "campo": "2026-11-01→2026-11-09",
+        "secundaria": "",
+        "unidad": "%"
+       }
+      },
+      "n": 1,
+      "delta": null,
+      "evidencia": "BAJA",
+      "nota": ""
+     },
+     {
+      "etiqueta": "Proyección · cambio o continuidad · No lo sé",
+      "consultora": "Proyección",
+      "celdas": {
+       "Nov-26": {
+        "v": 10.7,
+        "fila": 1503,
+        "base": "nivel2_indicadores",
+        "file_id": "1P_43U922vyw_gFYdje1io2SPO-AH_JT1",
+        "clave_fuente": "",
+        "url_fuente": "",
+        "campo": "2026-11-01→2026-11-09",
+        "secundaria": "",
+        "unidad": "%"
+       }
+      },
+      "n": 1,
+      "delta": null,
+      "evidencia": "BAJA",
+      "nota": ""
+     },
+     {
+      "etiqueta": "Tendencias · voto potencial · Sergio Massa · Nunca lo votaría",
+      "consultora": "Tendencias",
+      "celdas": {
+       "Oct-26": {
+        "v": 51.1,
+        "fila": 1519,
+        "base": "nivel2_indicadores",
+        "file_id": "1BFwPyKZNnwAK6Tv3VBUFaSIGs9DFDXxo",
+        "clave_fuente": "",
+        "url_fuente": "",
+        "campo": "",
+        "secundaria": "",
+        "unidad": "%"
+       }
+      },
+      "n": 1,
+      "delta": null,
+      "evidencia": "BAJA",
+      "nota": "Ficha técnica no informada en el documento."
+     },
+     {
+      "etiqueta": "Tendencias · voto potencial · Sergio Massa · Seguramente lo vote",
+      "consultora": "Tendencias",
+      "celdas": {
+       "Oct-26": {
+        "v": 12.2,
+        "fila": 1520,
+        "base": "nivel2_indicadores",
+        "file_id": "1BFwPyKZNnwAK6Tv3VBUFaSIGs9DFDXxo",
+        "clave_fuente": "",
+        "url_fuente": "",
+        "campo": "",
+        "secundaria": "",
+        "unidad": "%"
+       }
+      },
+      "n": 1,
+      "delta": null,
+      "evidencia": "BAJA",
+      "nota": "Ficha técnica no informada en el documento."
+     },
+     {
+      "etiqueta": "Tendencias · voto potencial · Sergio Massa · Podría votarlo",
+      "consultora": "Tendencias",
+      "celdas": {
+       "Oct-26": {
+        "v": 27.2,
+        "fila": 1521,
+        "base": "nivel2_indicadores",
+        "file_id": "1BFwPyKZNnwAK6Tv3VBUFaSIGs9DFDXxo",
+        "clave_fuente": "",
+        "url_fuente": "",
+        "campo": "",
+        "secundaria": "",
+        "unidad": "%"
+       }
+      },
+      "n": 1,
+      "delta": null,
+      "evidencia": "BAJA",
+      "nota": "Ficha técnica no informada en el documento."
+     },
+     {
+      "etiqueta": "Tendencias · voto potencial · Sergio Massa · No lo sé",
+      "consultora": "Tendencias",
+      "celdas": {
+       "Oct-26": {
+        "v": 9.5,
+        "fila": 1522,
+        "base": "nivel2_indicadores",
+        "file_id": "1BFwPyKZNnwAK6Tv3VBUFaSIGs9DFDXxo",
+        "clave_fuente": "",
+        "url_fuente": "",
+        "campo": "",
+        "secundaria": "",
+        "unidad": "%"
+       }
+      },
+      "n": 1,
+      "delta": null,
+      "evidencia": "BAJA",
+      "nota": "Ficha técnica no informada en el documento."
+     },
+     {
+      "etiqueta": "Tendencias · voto potencial · Patricia Bullrich · Nunca lo votaría",
+      "consultora": "Tendencias",
+      "celdas": {
+       "Oct-26": {
+        "v": 53.5,
+        "fila": 1523,
+        "base": "nivel2_indicadores",
+        "file_id": "1BFwPyKZNnwAK6Tv3VBUFaSIGs9DFDXxo",
+        "clave_fuente": "",
+        "url_fuente": "",
+        "campo": "",
+        "secundaria": "",
+        "unidad": "%"
+       }
+      },
+      "n": 1,
+      "delta": null,
+      "evidencia": "BAJA",
+      "nota": "Ficha técnica no informada en el documento."
+     },
+     {
+      "etiqueta": "Tendencias · voto potencial · Patricia Bullrich · Seguramente lo vote",
+      "consultora": "Tendencias",
+      "celdas": {
+       "Oct-26": {
+        "v": 10.1,
+        "fila": 1524,
+        "base": "nivel2_indicadores",
+        "file_id": "1BFwPyKZNnwAK6Tv3VBUFaSIGs9DFDXxo",
+        "clave_fuente": "",
+        "url_fuente": "",
+        "campo": "",
+        "secundaria": "",
+        "unidad": "%"
+       }
+      },
+      "n": 1,
+      "delta": null,
+      "evidencia": "BAJA",
+      "nota": "Ficha técnica no informada en el documento."
+     },
+     {
+      "etiqueta": "Tendencias · voto potencial · Patricia Bullrich · Podría votarla",
+      "consultora": "Tendencias",
+      "celdas": {
+       "Oct-26": {
+        "v": 29.3,
+        "fila": 1525,
+        "base": "nivel2_indicadores",
+        "file_id": "1BFwPyKZNnwAK6Tv3VBUFaSIGs9DFDXxo",
+        "clave_fuente": "",
+        "url_fuente": "",
+        "campo": "",
+        "secundaria": "",
+        "unidad": "%"
+       }
+      },
+      "n": 1,
+      "delta": null,
+      "evidencia": "BAJA",
+      "nota": "Ficha técnica no informada en el documento."
+     },
+     {
+      "etiqueta": "Tendencias · voto potencial · Patricia Bullrich · No lo sé",
+      "consultora": "Tendencias",
+      "celdas": {
+       "Oct-26": {
+        "v": 7.1,
+        "fila": 1526,
+        "base": "nivel2_indicadores",
+        "file_id": "1BFwPyKZNnwAK6Tv3VBUFaSIGs9DFDXxo",
+        "clave_fuente": "",
+        "url_fuente": "",
+        "campo": "",
+        "secundaria": "",
+        "unidad": "%"
+       }
+      },
+      "n": 1,
+      "delta": null,
+      "evidencia": "BAJA",
+      "nota": "Ficha técnica no informada en el documento."
+     },
+     {
+      "etiqueta": "PoliTech · voto presidencial · Javier Milei",
+      "consultora": "PoliTech",
+      "celdas": {
+       "Nov-26": {
+        "v": 32,
+        "fila": "",
+        "base": "radar_fuentes_complementarias",
+        "file_id": "",
+        "clave_fuente": "VOTO_POLITECH_NOV_MILEI",
+        "url_fuente": "https://politech.com.ar/pulso/empate-tecnico-y-clima-adverso-el-estado-de-la-opinion-publica-en-argentina",
+        "campo": "2026-10-31→2026-11-04",
+        "secundaria": "",
+        "unidad": "%"
+       }
+      },
+      "n": 1,
+      "delta": null,
+      "evidencia": "BAJA",
+      "nota": "Publicación de PoliTech del 5/11. Campo y n=1.552 contrastados con la cobertura secundaria."
+     },
+     {
+      "etiqueta": "PoliTech · voto presidencial · Axel Kicillof",
+      "consultora": "PoliTech",
+      "celdas": {
+       "Nov-26": {
+        "v": 30.7,
+        "fila": "",
+        "base": "radar_fuentes_complementarias",
+        "file_id": "",
+        "clave_fuente": "VOTO_POLITECH_NOV_KICILLOF",
+        "url_fuente": "https://politech.com.ar/pulso/empate-tecnico-y-clima-adverso-el-estado-de-la-opinion-publica-en-argentina",
+        "campo": "2026-10-31→2026-11-04",
+        "secundaria": "",
+        "unidad": "%"
+       }
+      },
+      "n": 1,
+      "delta": null,
+      "evidencia": "BAJA",
+      "nota": "Publicación de PoliTech del 5/11. Campo y n=1.552 contrastados con la cobertura secundaria."
+     },
+     {
+      "etiqueta": "Synopsis · balotaje · Javier Milei",
+      "consultora": "Synopsis",
+      "celdas": {
+       "Oct-26": {
+        "v": 41.9,
+        "fila": "",
+        "base": "radar_fuentes_complementarias",
+        "file_id": "",
+        "clave_fuente": "BAL_SYNOPSIS_OCT_MILEI",
+        "url_fuente": "https://encuestas-argentinas.com/encuestas/",
+        "campo": "2026-10-12→2026-10-17",
+        "secundaria": "FUENTE SECUNDARIA · _EncuestAR_ · difusión 31/10/2026 · ficha original pendiente",
+        "unidad": "%"
+       }
+      },
+      "n": 1,
+      "delta": null,
+      "evidencia": "BAJA",
+      "nota": "Corte de campo de octubre informado por _EncuestAR_. Ficha original pendiente."
+     },
+     {
+      "etiqueta": "Synopsis · balotaje · Axel Kicillof",
+      "consultora": "Synopsis",
+      "celdas": {
+       "Oct-26": {
+        "v": 41.8,
+        "fila": "",
+        "base": "radar_fuentes_complementarias",
+        "file_id": "",
+        "clave_fuente": "BAL_SYNOPSIS_OCT_KICILLOF",
+        "url_fuente": "https://encuestas-argentinas.com/encuestas/",
+        "campo": "2026-10-12→2026-10-17",
+        "secundaria": "FUENTE SECUNDARIA · _EncuestAR_ · difusión 31/10/2026 · ficha original pendiente",
+        "unidad": "%"
+       }
+      },
+      "n": 1,
+      "delta": null,
+      "evidencia": "BAJA",
+      "nota": "Corte de campo de octubre informado por _EncuestAR_. Ficha original pendiente."
+     }
+    ]
+   },
+   {
+    "titulo": "Proyección · balotaje Milei–Kicillof",
+    "modulo": "Intención de voto",
+    "nota": "Serie nacional de segunda vuelta hipotética, separada del voto de primera vuelta.",
+    "meses": [
+     "Sep-26",
+     "Oct-26",
+     "Nov-26"
+    ],
+    "filas": [
+     {
+      "etiqueta": "Proyección · Javier Milei",
+      "consultora": "Proyección",
+      "celdas": {
+       "Sep-26": {
+        "v": 40.8,
+        "fila": "",
+        "base": "radar_fuentes_complementarias",
+        "file_id": "",
+        "clave_fuente": "BAL_PROYECCION_SEP_MILEI",
+        "url_fuente": "https://drive.google.com/file/d/1G2Om8KkIMnngn5tK3XZlJCesBhy2vCLE/view",
+        "campo": "2026-09-01→2026-09-10",
+        "secundaria": "",
+        "unidad": "%"
+       },
+       "Oct-26": {
+        "v": 41,
+        "fila": "",
+        "base": "radar_fuentes_complementarias",
+        "file_id": "",
+        "clave_fuente": "BAL_PROYECCION_OCT_MILEI",
+        "url_fuente": "https://drive.google.com/file/d/1uIfhBnDL_bPLmziw4yTPefaYkySxN_A3/view",
+        "campo": "2026-10-01→2026-10-13",
+        "secundaria": "",
+        "unidad": "%"
+       },
+       "Nov-26": {
+        "v": 40.7,
+        "fila": 1493,
+        "base": "nivel2_indicadores",
+        "file_id": "1P_43U922vyw_gFYdje1io2SPO-AH_JT1",
+        "clave_fuente": "",
+        "url_fuente": "",
+        "campo": "2026-11-01→2026-11-09",
+        "secundaria": "",
+        "unidad": "%"
+       }
+      },
+      "n": 3,
+      "delta": -0.3,
+      "evidencia": "ALTA",
+      "nota": ""
+     },
+     {
+      "etiqueta": "Proyección · Axel Kicillof",
+      "consultora": "Proyección",
+      "celdas": {
+       "Sep-26": {
+        "v": 40.2,
+        "fila": "",
+        "base": "radar_fuentes_complementarias",
+        "file_id": "",
+        "clave_fuente": "BAL_PROYECCION_SEP_KICILLOF",
+        "url_fuente": "https://drive.google.com/file/d/1G2Om8KkIMnngn5tK3XZlJCesBhy2vCLE/view",
+        "campo": "2026-09-01→2026-09-10",
+        "secundaria": "",
+        "unidad": "%"
+       },
+       "Oct-26": {
+        "v": 39.1,
+        "fila": "",
+        "base": "radar_fuentes_complementarias",
+        "file_id": "",
+        "clave_fuente": "BAL_PROYECCION_OCT_KICILLOF",
+        "url_fuente": "https://drive.google.com/file/d/1uIfhBnDL_bPLmziw4yTPefaYkySxN_A3/view",
+        "campo": "2026-10-01→2026-10-13",
+        "secundaria": "",
+        "unidad": "%"
+       },
+       "Nov-26": {
+        "v": 39.1,
+        "fila": 1494,
+        "base": "nivel2_indicadores",
+        "file_id": "1P_43U922vyw_gFYdje1io2SPO-AH_JT1",
+        "clave_fuente": "",
+        "url_fuente": "",
+        "campo": "2026-11-01→2026-11-09",
+        "secundaria": "",
+        "unidad": "%"
+       }
+      },
+      "n": 3,
+      "delta": 0.0,
+      "evidencia": "ALTA",
+      "nota": ""
+     },
+     {
+      "etiqueta": "Proyección · En blanco / impugnado",
+      "consultora": "Proyección",
+      "celdas": {
+       "Sep-26": {
+        "v": 13.4,
+        "fila": "",
+        "base": "radar_fuentes_complementarias",
+        "file_id": "",
+        "clave_fuente": "BAL_PROYECCION_SEP_BLANCO",
+        "url_fuente": "https://drive.google.com/file/d/1G2Om8KkIMnngn5tK3XZlJCesBhy2vCLE/view",
+        "campo": "2026-09-01→2026-09-10",
+        "secundaria": "",
+        "unidad": "%"
+       },
+       "Oct-26": {
+        "v": 13.4,
+        "fila": "",
+        "base": "radar_fuentes_complementarias",
+        "file_id": "",
+        "clave_fuente": "BAL_PROYECCION_OCT_BLANCO",
+        "url_fuente": "https://drive.google.com/file/d/1uIfhBnDL_bPLmziw4yTPefaYkySxN_A3/view",
+        "campo": "2026-10-01→2026-10-13",
+        "secundaria": "",
+        "unidad": "%"
+       },
+       "Nov-26": {
+        "v": 13.1,
+        "fila": 1495,
+        "base": "nivel2_indicadores",
+        "file_id": "1P_43U922vyw_gFYdje1io2SPO-AH_JT1",
+        "clave_fuente": "",
+        "url_fuente": "",
+        "campo": "2026-11-01→2026-11-09",
+        "secundaria": "",
+        "unidad": "%"
+       }
+      },
+      "n": 3,
+      "delta": -0.3,
+      "evidencia": "ALTA",
+      "nota": ""
+     },
+     {
+      "etiqueta": "Proyección · No lo sé",
+      "consultora": "Proyección",
+      "celdas": {
+       "Sep-26": {
+        "v": 5.6,
+        "fila": "",
+        "base": "radar_fuentes_complementarias",
+        "file_id": "",
+        "clave_fuente": "BAL_PROYECCION_SEP_NS",
+        "url_fuente": "https://drive.google.com/file/d/1G2Om8KkIMnngn5tK3XZlJCesBhy2vCLE/view",
+        "campo": "2026-09-01→2026-09-10",
+        "secundaria": "",
+        "unidad": "%"
+       },
+       "Oct-26": {
+        "v": 6.5,
+        "fila": "",
+        "base": "radar_fuentes_complementarias",
+        "file_id": "",
+        "clave_fuente": "BAL_PROYECCION_OCT_NS",
+        "url_fuente": "https://drive.google.com/file/d/1uIfhBnDL_bPLmziw4yTPefaYkySxN_A3/view",
+        "campo": "2026-10-01→2026-10-13",
+        "secundaria": "",
+        "unidad": "%"
+       },
+       "Nov-26": {
+        "v": 7.1,
+        "fila": 1496,
+        "base": "nivel2_indicadores",
+        "file_id": "1P_43U922vyw_gFYdje1io2SPO-AH_JT1",
+        "clave_fuente": "",
+        "url_fuente": "",
+        "campo": "2026-11-01→2026-11-09",
+        "secundaria": "",
+        "unidad": "%"
+       }
+      },
+      "n": 3,
+      "delta": 0.6,
+      "evidencia": "ALTA",
       "nota": ""
      }
     ]
@@ -2235,7 +3065,8 @@
     "nota": "",
     "meses": [
      "Sep-26",
-     "Oct-26"
+     "Oct-26",
+     "Nov-26"
     ],
     "filas": [
      {
@@ -2247,14 +3078,27 @@
         "fila": 1133,
         "base": "nivel2_indicadores",
         "file_id": "1uIfhBnDL_bPLmziw4yTPefaYkySxN_A3",
+        "clave_fuente": "",
+        "url_fuente": "",
         "campo": "2026-10-01→2026-10-13",
+        "secundaria": "",
+        "unidad": "%"
+       },
+       "Nov-26": {
+        "v": 51.9,
+        "fila": 1468,
+        "base": "nivel2_indicadores",
+        "file_id": "1P_43U922vyw_gFYdje1io2SPO-AH_JT1",
+        "clave_fuente": "",
+        "url_fuente": "",
+        "campo": "2026-11-01→2026-11-09",
         "secundaria": "",
         "unidad": "%"
        }
       },
-      "n": 1,
-      "delta": null,
-      "evidencia": "BAJA",
+      "n": 2,
+      "delta": 0.6,
+      "evidencia": "MEDIA",
       "nota": "respuesta múltiple (hasta 3)"
      },
      {
@@ -2266,14 +3110,27 @@
         "fila": 1134,
         "base": "nivel2_indicadores",
         "file_id": "1uIfhBnDL_bPLmziw4yTPefaYkySxN_A3",
+        "clave_fuente": "",
+        "url_fuente": "",
         "campo": "2026-10-01→2026-10-13",
+        "secundaria": "",
+        "unidad": "%"
+       },
+       "Nov-26": {
+        "v": 33.6,
+        "fila": 1469,
+        "base": "nivel2_indicadores",
+        "file_id": "1P_43U922vyw_gFYdje1io2SPO-AH_JT1",
+        "clave_fuente": "",
+        "url_fuente": "",
+        "campo": "2026-11-01→2026-11-09",
         "secundaria": "",
         "unidad": "%"
        }
       },
-      "n": 1,
-      "delta": null,
-      "evidencia": "BAJA",
+      "n": 2,
+      "delta": -6.9,
+      "evidencia": "MEDIA",
       "nota": ""
      },
      {
@@ -2285,14 +3142,27 @@
         "fila": 1135,
         "base": "nivel2_indicadores",
         "file_id": "1uIfhBnDL_bPLmziw4yTPefaYkySxN_A3",
+        "clave_fuente": "",
+        "url_fuente": "",
         "campo": "2026-10-01→2026-10-13",
+        "secundaria": "",
+        "unidad": "%"
+       },
+       "Nov-26": {
+        "v": 28.3,
+        "fila": 1470,
+        "base": "nivel2_indicadores",
+        "file_id": "1P_43U922vyw_gFYdje1io2SPO-AH_JT1",
+        "clave_fuente": "",
+        "url_fuente": "",
+        "campo": "2026-11-01→2026-11-09",
         "secundaria": "",
         "unidad": "%"
        }
       },
-      "n": 1,
-      "delta": null,
-      "evidencia": "BAJA",
+      "n": 2,
+      "delta": -0.9,
+      "evidencia": "MEDIA",
       "nota": ""
      },
      {
@@ -2304,14 +3174,27 @@
         "fila": 1136,
         "base": "nivel2_indicadores",
         "file_id": "1uIfhBnDL_bPLmziw4yTPefaYkySxN_A3",
+        "clave_fuente": "",
+        "url_fuente": "",
         "campo": "2026-10-01→2026-10-13",
+        "secundaria": "",
+        "unidad": "%"
+       },
+       "Nov-26": {
+        "v": 29.5,
+        "fila": 1471,
+        "base": "nivel2_indicadores",
+        "file_id": "1P_43U922vyw_gFYdje1io2SPO-AH_JT1",
+        "clave_fuente": "",
+        "url_fuente": "",
+        "campo": "2026-11-01→2026-11-09",
         "secundaria": "",
         "unidad": "%"
        }
       },
-      "n": 1,
-      "delta": null,
-      "evidencia": "BAJA",
+      "n": 2,
+      "delta": 2.2,
+      "evidencia": "MEDIA",
       "nota": ""
      },
      {
@@ -2323,14 +3206,27 @@
         "fila": 1137,
         "base": "nivel2_indicadores",
         "file_id": "1uIfhBnDL_bPLmziw4yTPefaYkySxN_A3",
+        "clave_fuente": "",
+        "url_fuente": "",
         "campo": "2026-10-01→2026-10-13",
+        "secundaria": "",
+        "unidad": "%"
+       },
+       "Nov-26": {
+        "v": 28.8,
+        "fila": 1472,
+        "base": "nivel2_indicadores",
+        "file_id": "1P_43U922vyw_gFYdje1io2SPO-AH_JT1",
+        "clave_fuente": "",
+        "url_fuente": "",
+        "campo": "2026-11-01→2026-11-09",
         "secundaria": "",
         "unidad": "%"
        }
       },
-      "n": 1,
-      "delta": null,
-      "evidencia": "BAJA",
+      "n": 2,
+      "delta": 5.3,
+      "evidencia": "MEDIA",
       "nota": ""
      },
      {
@@ -2342,6 +3238,8 @@
         "fila": 1145,
         "base": "nivel2_indicadores",
         "file_id": "1WysBN1BT8CNTY04roaS3YyxYGXIeIVxs",
+        "clave_fuente": "",
+        "url_fuente": "",
         "campo": "2026-09-30→2026-10-20",
         "secundaria": "",
         "unidad": "%"
@@ -2361,6 +3259,8 @@
         "fila": 1146,
         "base": "nivel2_indicadores",
         "file_id": "1WysBN1BT8CNTY04roaS3YyxYGXIeIVxs",
+        "clave_fuente": "",
+        "url_fuente": "",
         "campo": "2026-09-30→2026-10-20",
         "secundaria": "",
         "unidad": "%"
@@ -2380,6 +3280,8 @@
         "fila": 1166,
         "base": "nivel2_indicadores",
         "file_id": "15xCCxnLfLvu_VZihlCtlLG8Izil_23de",
+        "clave_fuente": "",
+        "url_fuente": "",
         "campo": "2026-10-06→2026-10-07",
         "secundaria": "",
         "unidad": "%"
@@ -2399,6 +3301,8 @@
         "fila": 1167,
         "base": "nivel2_indicadores",
         "file_id": "15xCCxnLfLvu_VZihlCtlLG8Izil_23de",
+        "clave_fuente": "",
+        "url_fuente": "",
         "campo": "2026-10-06→2026-10-07",
         "secundaria": "",
         "unidad": "%"
@@ -2418,6 +3322,8 @@
         "fila": 1168,
         "base": "nivel2_indicadores",
         "file_id": "15xCCxnLfLvu_VZihlCtlLG8Izil_23de",
+        "clave_fuente": "",
+        "url_fuente": "",
         "campo": "2026-10-06→2026-10-07",
         "secundaria": "",
         "unidad": "%"
@@ -2437,6 +3343,8 @@
         "fila": 1169,
         "base": "nivel2_indicadores",
         "file_id": "15xCCxnLfLvu_VZihlCtlLG8Izil_23de",
+        "clave_fuente": "",
+        "url_fuente": "",
         "campo": "2026-10-06→2026-10-07",
         "secundaria": "",
         "unidad": "%"
@@ -2446,6 +3354,216 @@
       "delta": null,
       "evidencia": "BAJA",
       "nota": ""
+     },
+     {
+      "etiqueta": "Zubán Córdoba · economía al servicio de la persona · Acuerdo",
+      "consultora": "Zubán Córdoba",
+      "celdas": {
+       "Nov-26": {
+        "v": 91.1,
+        "fila": 1438,
+        "base": "nivel2_indicadores",
+        "file_id": "10pJlmh6OE6Lf15_wHMtOOX0UBi3lGxFs",
+        "clave_fuente": "",
+        "url_fuente": "",
+        "campo": "2026-11-11→2026-11-13",
+        "secundaria": "",
+        "unidad": "%"
+       }
+      },
+      "n": 1,
+      "delta": null,
+      "evidencia": "BAJA",
+      "nota": ""
+     },
+     {
+      "etiqueta": "Zubán Córdoba · economía al servicio de la persona · Desacuerdo",
+      "consultora": "Zubán Córdoba",
+      "celdas": {
+       "Nov-26": {
+        "v": 5.9,
+        "fila": 1439,
+        "base": "nivel2_indicadores",
+        "file_id": "10pJlmh6OE6Lf15_wHMtOOX0UBi3lGxFs",
+        "clave_fuente": "",
+        "url_fuente": "",
+        "campo": "2026-11-11→2026-11-13",
+        "secundaria": "",
+        "unidad": "%"
+       }
+      },
+      "n": 1,
+      "delta": null,
+      "evidencia": "BAJA",
+      "nota": ""
+     },
+     {
+      "etiqueta": "Zubán Córdoba · economía al servicio de la persona · No sabe",
+      "consultora": "Zubán Córdoba",
+      "celdas": {
+       "Nov-26": {
+        "v": 3,
+        "fila": 1440,
+        "base": "nivel2_indicadores",
+        "file_id": "10pJlmh6OE6Lf15_wHMtOOX0UBi3lGxFs",
+        "clave_fuente": "",
+        "url_fuente": "",
+        "campo": "2026-11-11→2026-11-13",
+        "secundaria": "",
+        "unidad": "%"
+       }
+      },
+      "n": 1,
+      "delta": null,
+      "evidencia": "BAJA",
+      "nota": ""
+     },
+     {
+      "etiqueta": "Zubán Córdoba · democracia y palabra · Acuerdo",
+      "consultora": "Zubán Córdoba",
+      "celdas": {
+       "Nov-26": {
+        "v": 95.1,
+        "fila": 1441,
+        "base": "nivel2_indicadores",
+        "file_id": "10pJlmh6OE6Lf15_wHMtOOX0UBi3lGxFs",
+        "clave_fuente": "",
+        "url_fuente": "",
+        "campo": "2026-11-11→2026-11-13",
+        "secundaria": "",
+        "unidad": "%"
+       }
+      },
+      "n": 1,
+      "delta": null,
+      "evidencia": "BAJA",
+      "nota": ""
+     },
+     {
+      "etiqueta": "Zubán Córdoba · democracia y palabra · Desacuerdo",
+      "consultora": "Zubán Córdoba",
+      "celdas": {
+       "Nov-26": {
+        "v": 2.7,
+        "fila": 1442,
+        "base": "nivel2_indicadores",
+        "file_id": "10pJlmh6OE6Lf15_wHMtOOX0UBi3lGxFs",
+        "clave_fuente": "",
+        "url_fuente": "",
+        "campo": "2026-11-11→2026-11-13",
+        "secundaria": "",
+        "unidad": "%"
+       }
+      },
+      "n": 1,
+      "delta": null,
+      "evidencia": "BAJA",
+      "nota": ""
+     },
+     {
+      "etiqueta": "Zubán Córdoba · democracia y palabra · No sabe",
+      "consultora": "Zubán Córdoba",
+      "celdas": {
+       "Nov-26": {
+        "v": 2.2,
+        "fila": 1443,
+        "base": "nivel2_indicadores",
+        "file_id": "10pJlmh6OE6Lf15_wHMtOOX0UBi3lGxFs",
+        "clave_fuente": "",
+        "url_fuente": "",
+        "campo": "2026-11-11→2026-11-13",
+        "secundaria": "",
+        "unidad": "%"
+       }
+      },
+      "n": 1,
+      "delta": null,
+      "evidencia": "BAJA",
+      "nota": ""
+     },
+     {
+      "etiqueta": "Tendencias · represión frente al Congreso · Rechazo la represión",
+      "consultora": "Tendencias",
+      "celdas": {
+       "Oct-26": {
+        "v": 52,
+        "fila": 1512,
+        "base": "nivel2_indicadores",
+        "file_id": "1BFwPyKZNnwAK6Tv3VBUFaSIGs9DFDXxo",
+        "clave_fuente": "",
+        "url_fuente": "",
+        "campo": "",
+        "secundaria": "",
+        "unidad": "%"
+       }
+      },
+      "n": 1,
+      "delta": null,
+      "evidencia": "BAJA",
+      "nota": "Ficha técnica no informada en el documento."
+     },
+     {
+      "etiqueta": "Tendencias · represión frente al Congreso · La policía responde las agresiones",
+      "consultora": "Tendencias",
+      "celdas": {
+       "Oct-26": {
+        "v": 22.2,
+        "fila": 1513,
+        "base": "nivel2_indicadores",
+        "file_id": "1BFwPyKZNnwAK6Tv3VBUFaSIGs9DFDXxo",
+        "clave_fuente": "",
+        "url_fuente": "",
+        "campo": "",
+        "secundaria": "",
+        "unidad": "%"
+       }
+      },
+      "n": 1,
+      "delta": null,
+      "evidencia": "BAJA",
+      "nota": "Ficha técnica no informada en el documento."
+     },
+     {
+      "etiqueta": "Tendencias · represión frente al Congreso · Apruebo la represión",
+      "consultora": "Tendencias",
+      "celdas": {
+       "Oct-26": {
+        "v": 17.9,
+        "fila": 1514,
+        "base": "nivel2_indicadores",
+        "file_id": "1BFwPyKZNnwAK6Tv3VBUFaSIGs9DFDXxo",
+        "clave_fuente": "",
+        "url_fuente": "",
+        "campo": "",
+        "secundaria": "",
+        "unidad": "%"
+       }
+      },
+      "n": 1,
+      "delta": null,
+      "evidencia": "BAJA",
+      "nota": "Ficha técnica no informada en el documento."
+     },
+     {
+      "etiqueta": "Tendencias · represión frente al Congreso · No tengo opinión",
+      "consultora": "Tendencias",
+      "celdas": {
+       "Oct-26": {
+        "v": 7.9,
+        "fila": 1515,
+        "base": "nivel2_indicadores",
+        "file_id": "1BFwPyKZNnwAK6Tv3VBUFaSIGs9DFDXxo",
+        "clave_fuente": "",
+        "url_fuente": "",
+        "campo": "",
+        "secundaria": "",
+        "unidad": "%"
+       }
+      },
+      "n": 1,
+      "delta": null,
+      "evidencia": "BAJA",
+      "nota": "Ficha técnica no informada en el documento."
      }
     ]
    }
@@ -2473,6 +3591,8 @@
         "fila": 1161,
         "base": "nivel2_indicadores",
         "file_id": "15xCCxnLfLvu_VZihlCtlLG8Izil_23de",
+        "clave_fuente": "",
+        "url_fuente": "",
         "campo": "2026-10-06→2026-10-07",
         "secundaria": "",
         "unidad": "%"
@@ -2492,6 +3612,8 @@
         "fila": 1163,
         "base": "nivel2_indicadores",
         "file_id": "15xCCxnLfLvu_VZihlCtlLG8Izil_23de",
+        "clave_fuente": "",
+        "url_fuente": "",
         "campo": "2026-10-06→2026-10-07",
         "secundaria": "",
         "unidad": "%"
@@ -2511,6 +3633,8 @@
         "fila": 1248,
         "base": "nivel2_indicadores",
         "file_id": "1SYJnQQ_LTJGcLQV4hkx0PjLOwmDmP-aj",
+        "clave_fuente": "",
+        "url_fuente": "",
         "campo": "2026-10-10→2026-10-17",
         "secundaria": "",
         "unidad": "%"
@@ -2530,6 +3654,8 @@
         "fila": 1375,
         "base": "nivel2_indicadores",
         "file_id": "1uD_RKIA3E5i3Hm0WU6347wZ_A_rGrkEg",
+        "clave_fuente": "",
+        "url_fuente": "",
         "campo": "",
         "secundaria": "",
         "unidad": "puntos"
@@ -2539,6 +3665,8 @@
         "fila": 1370,
         "base": "nivel2_indicadores",
         "file_id": "1uD_RKIA3E5i3Hm0WU6347wZ_A_rGrkEg",
+        "clave_fuente": "",
+        "url_fuente": "",
         "campo": "",
         "secundaria": "",
         "unidad": "puntos"
@@ -2548,6 +3676,8 @@
         "fila": 835,
         "base": "nivel2_indicadores",
         "file_id": "14LBekUNj3iNKJNtw96CtB00yVqvHLD-J",
+        "clave_fuente": "",
+        "url_fuente": "",
         "campo": "2026-08-04→2026-08-13",
         "secundaria": "",
         "unidad": "puntos"
@@ -2557,6 +3687,8 @@
         "fila": 829,
         "base": "nivel2_indicadores",
         "file_id": "16kZvKZZye-pAV-1bfWGvpm9bFEo04o0P",
+        "clave_fuente": "",
+        "url_fuente": "",
         "campo": "2026-07-02→2026-07-16",
         "secundaria": "",
         "unidad": "puntos"
@@ -2566,6 +3698,8 @@
         "fila": 1349,
         "base": "nivel2_indicadores",
         "file_id": "1uD_RKIA3E5i3Hm0WU6347wZ_A_rGrkEg",
+        "clave_fuente": "",
+        "url_fuente": "",
         "campo": "2026-10-05→2026-10-16",
         "secundaria": "",
         "unidad": "puntos (escala 0-100)"
@@ -2585,6 +3719,8 @@
         "fila": 1189,
         "base": "nivel2_indicadores",
         "file_id": "16HiGngQwowwu7o6kj1Nc2iBoizH8kkTT",
+        "clave_fuente": "",
+        "url_fuente": "",
         "campo": "2026-09-05→2026-09-28",
         "secundaria": "",
         "unidad": "%"
@@ -2594,6 +3730,8 @@
         "fila": 1359,
         "base": "nivel2_indicadores",
         "file_id": "1rD7VKuwogWSGUEFj8D7yy_Qe8BUjez3S",
+        "clave_fuente": "",
+        "url_fuente": "",
         "campo": "2026-10-08→2026-10-26",
         "secundaria": "",
         "unidad": "%"
@@ -2613,6 +3751,8 @@
         "fila": 1190,
         "base": "nivel2_indicadores",
         "file_id": "16HiGngQwowwu7o6kj1Nc2iBoizH8kkTT",
+        "clave_fuente": "",
+        "url_fuente": "",
         "campo": "2026-09-05→2026-09-28",
         "secundaria": "",
         "unidad": "%"
@@ -2622,6 +3762,8 @@
         "fila": 1360,
         "base": "nivel2_indicadores",
         "file_id": "1rD7VKuwogWSGUEFj8D7yy_Qe8BUjez3S",
+        "clave_fuente": "",
+        "url_fuente": "",
         "campo": "2026-10-08→2026-10-26",
         "secundaria": "",
         "unidad": "%"
@@ -2631,6 +3773,447 @@
       "delta": 1,
       "evidencia": "MEDIA",
       "nota": "oct: campo 5–28/9 · nov: campo 8–26/10 (mes enunciado por QMonitor)"
+     },
+     {
+      "etiqueta": "Zentrix · economía personal · Muy buena",
+      "consultora": "Zentrix",
+      "celdas": {
+       "Oct-26": {
+        "v": 4.4,
+        "fila": 1444,
+        "base": "nivel2_indicadores",
+        "file_id": "1_iCXRwcAKGflWHFLpfMJks0dk7TvW9HD",
+        "clave_fuente": "",
+        "url_fuente": "",
+        "campo": "2026-10-19→2026-10-30",
+        "secundaria": "",
+        "unidad": "%"
+       }
+      },
+      "n": 1,
+      "delta": null,
+      "evidencia": "BAJA",
+      "nota": ""
+     },
+     {
+      "etiqueta": "Zentrix · economía personal · Buena",
+      "consultora": "Zentrix",
+      "celdas": {
+       "Oct-26": {
+        "v": 26.3,
+        "fila": 1445,
+        "base": "nivel2_indicadores",
+        "file_id": "1_iCXRwcAKGflWHFLpfMJks0dk7TvW9HD",
+        "clave_fuente": "",
+        "url_fuente": "",
+        "campo": "2026-10-19→2026-10-30",
+        "secundaria": "",
+        "unidad": "%"
+       }
+      },
+      "n": 1,
+      "delta": null,
+      "evidencia": "BAJA",
+      "nota": ""
+     },
+     {
+      "etiqueta": "Zentrix · economía personal · Regular",
+      "consultora": "Zentrix",
+      "celdas": {
+       "Oct-26": {
+        "v": 29.2,
+        "fila": 1446,
+        "base": "nivel2_indicadores",
+        "file_id": "1_iCXRwcAKGflWHFLpfMJks0dk7TvW9HD",
+        "clave_fuente": "",
+        "url_fuente": "",
+        "campo": "2026-10-19→2026-10-30",
+        "secundaria": "",
+        "unidad": "%"
+       }
+      },
+      "n": 1,
+      "delta": null,
+      "evidencia": "BAJA",
+      "nota": ""
+     },
+     {
+      "etiqueta": "Zentrix · economía personal · Mala",
+      "consultora": "Zentrix",
+      "celdas": {
+       "Oct-26": {
+        "v": 25.8,
+        "fila": 1447,
+        "base": "nivel2_indicadores",
+        "file_id": "1_iCXRwcAKGflWHFLpfMJks0dk7TvW9HD",
+        "clave_fuente": "",
+        "url_fuente": "",
+        "campo": "2026-10-19→2026-10-30",
+        "secundaria": "",
+        "unidad": "%"
+       }
+      },
+      "n": 1,
+      "delta": null,
+      "evidencia": "BAJA",
+      "nota": ""
+     },
+     {
+      "etiqueta": "Zentrix · economía personal · Muy mala",
+      "consultora": "Zentrix",
+      "celdas": {
+       "Oct-26": {
+        "v": 14.2,
+        "fila": 1448,
+        "base": "nivel2_indicadores",
+        "file_id": "1_iCXRwcAKGflWHFLpfMJks0dk7TvW9HD",
+        "clave_fuente": "",
+        "url_fuente": "",
+        "campo": "2026-10-19→2026-10-30",
+        "secundaria": "",
+        "unidad": "%"
+       }
+      },
+      "n": 1,
+      "delta": null,
+      "evidencia": "BAJA",
+      "nota": ""
+     },
+     {
+      "etiqueta": "Zentrix · economía del país · Muy buena",
+      "consultora": "Zentrix",
+      "celdas": {
+       "Oct-26": {
+        "v": 0.9,
+        "fila": 1449,
+        "base": "nivel2_indicadores",
+        "file_id": "1_iCXRwcAKGflWHFLpfMJks0dk7TvW9HD",
+        "clave_fuente": "",
+        "url_fuente": "",
+        "campo": "2026-10-19→2026-10-30",
+        "secundaria": "",
+        "unidad": "%"
+       }
+      },
+      "n": 1,
+      "delta": null,
+      "evidencia": "BAJA",
+      "nota": ""
+     },
+     {
+      "etiqueta": "Zentrix · economía del país · Buena",
+      "consultora": "Zentrix",
+      "celdas": {
+       "Oct-26": {
+        "v": 15.6,
+        "fila": 1450,
+        "base": "nivel2_indicadores",
+        "file_id": "1_iCXRwcAKGflWHFLpfMJks0dk7TvW9HD",
+        "clave_fuente": "",
+        "url_fuente": "",
+        "campo": "2026-10-19→2026-10-30",
+        "secundaria": "",
+        "unidad": "%"
+       }
+      },
+      "n": 1,
+      "delta": null,
+      "evidencia": "BAJA",
+      "nota": ""
+     },
+     {
+      "etiqueta": "Zentrix · economía del país · Regular",
+      "consultora": "Zentrix",
+      "celdas": {
+       "Oct-26": {
+        "v": 19.5,
+        "fila": 1451,
+        "base": "nivel2_indicadores",
+        "file_id": "1_iCXRwcAKGflWHFLpfMJks0dk7TvW9HD",
+        "clave_fuente": "",
+        "url_fuente": "",
+        "campo": "2026-10-19→2026-10-30",
+        "secundaria": "",
+        "unidad": "%"
+       }
+      },
+      "n": 1,
+      "delta": null,
+      "evidencia": "BAJA",
+      "nota": ""
+     },
+     {
+      "etiqueta": "Zentrix · economía del país · Mala",
+      "consultora": "Zentrix",
+      "celdas": {
+       "Oct-26": {
+        "v": 21.7,
+        "fila": 1452,
+        "base": "nivel2_indicadores",
+        "file_id": "1_iCXRwcAKGflWHFLpfMJks0dk7TvW9HD",
+        "clave_fuente": "",
+        "url_fuente": "",
+        "campo": "2026-10-19→2026-10-30",
+        "secundaria": "",
+        "unidad": "%"
+       }
+      },
+      "n": 1,
+      "delta": null,
+      "evidencia": "BAJA",
+      "nota": ""
+     },
+     {
+      "etiqueta": "Zentrix · economía del país · Muy mala",
+      "consultora": "Zentrix",
+      "celdas": {
+       "Oct-26": {
+        "v": 42.2,
+        "fila": 1453,
+        "base": "nivel2_indicadores",
+        "file_id": "1_iCXRwcAKGflWHFLpfMJks0dk7TvW9HD",
+        "clave_fuente": "",
+        "url_fuente": "",
+        "campo": "2026-10-19→2026-10-30",
+        "secundaria": "",
+        "unidad": "%"
+       }
+      },
+      "n": 1,
+      "delta": null,
+      "evidencia": "BAJA",
+      "nota": ""
+     },
+     {
+      "etiqueta": "Zentrix · credibilidad del INDEC · Sí",
+      "consultora": "Zentrix",
+      "celdas": {
+       "Oct-26": {
+        "v": 28,
+        "fila": 1454,
+        "base": "nivel2_indicadores",
+        "file_id": "1_iCXRwcAKGflWHFLpfMJks0dk7TvW9HD",
+        "clave_fuente": "",
+        "url_fuente": "",
+        "campo": "2026-10-19→2026-10-30",
+        "secundaria": "",
+        "unidad": "%"
+       }
+      },
+      "n": 1,
+      "delta": null,
+      "evidencia": "BAJA",
+      "nota": ""
+     },
+     {
+      "etiqueta": "Zentrix · credibilidad del INDEC · No",
+      "consultora": "Zentrix",
+      "celdas": {
+       "Oct-26": {
+        "v": 69.6,
+        "fila": 1455,
+        "base": "nivel2_indicadores",
+        "file_id": "1_iCXRwcAKGflWHFLpfMJks0dk7TvW9HD",
+        "clave_fuente": "",
+        "url_fuente": "",
+        "campo": "2026-10-19→2026-10-30",
+        "secundaria": "",
+        "unidad": "%"
+       }
+      },
+      "n": 1,
+      "delta": null,
+      "evidencia": "BAJA",
+      "nota": ""
+     },
+     {
+      "etiqueta": "Zentrix · credibilidad del INDEC · NS/NC",
+      "consultora": "Zentrix",
+      "celdas": {
+       "Oct-26": {
+        "v": 2.4,
+        "fila": 1456,
+        "base": "nivel2_indicadores",
+        "file_id": "1_iCXRwcAKGflWHFLpfMJks0dk7TvW9HD",
+        "clave_fuente": "",
+        "url_fuente": "",
+        "campo": "2026-10-19→2026-10-30",
+        "secundaria": "",
+        "unidad": "%"
+       }
+      },
+      "n": 1,
+      "delta": null,
+      "evidencia": "BAJA",
+      "nota": ""
+     },
+     {
+      "etiqueta": "Zentrix · salario frente a la inflación · Sí",
+      "consultora": "Zentrix",
+      "celdas": {
+       "Oct-26": {
+        "v": 14.8,
+        "fila": 1457,
+        "base": "nivel2_indicadores",
+        "file_id": "1_iCXRwcAKGflWHFLpfMJks0dk7TvW9HD",
+        "clave_fuente": "",
+        "url_fuente": "",
+        "campo": "2026-10-19→2026-10-30",
+        "secundaria": "",
+        "unidad": "%"
+       }
+      },
+      "n": 1,
+      "delta": null,
+      "evidencia": "BAJA",
+      "nota": ""
+     },
+     {
+      "etiqueta": "Zentrix · salario frente a la inflación · No",
+      "consultora": "Zentrix",
+      "celdas": {
+       "Oct-26": {
+        "v": 80.6,
+        "fila": 1458,
+        "base": "nivel2_indicadores",
+        "file_id": "1_iCXRwcAKGflWHFLpfMJks0dk7TvW9HD",
+        "clave_fuente": "",
+        "url_fuente": "",
+        "campo": "2026-10-19→2026-10-30",
+        "secundaria": "",
+        "unidad": "%"
+       }
+      },
+      "n": 1,
+      "delta": null,
+      "evidencia": "BAJA",
+      "nota": ""
+     },
+     {
+      "etiqueta": "Zentrix · salario frente a la inflación · NS/NC",
+      "consultora": "Zentrix",
+      "celdas": {
+       "Oct-26": {
+        "v": 4.6,
+        "fila": 1459,
+        "base": "nivel2_indicadores",
+        "file_id": "1_iCXRwcAKGflWHFLpfMJks0dk7TvW9HD",
+        "clave_fuente": "",
+        "url_fuente": "",
+        "campo": "2026-10-19→2026-10-30",
+        "secundaria": "",
+        "unidad": "%"
+       }
+      },
+      "n": 1,
+      "delta": null,
+      "evidencia": "BAJA",
+      "nota": ""
+     },
+     {
+      "etiqueta": "Proyección · economía familiar · Empeoró + Se mantuvo igual de mal",
+      "consultora": "Proyección",
+      "celdas": {
+       "Nov-26": {
+        "v": 76.4,
+        "fila": 1466,
+        "base": "nivel2_indicadores",
+        "file_id": "1P_43U922vyw_gFYdje1io2SPO-AH_JT1",
+        "clave_fuente": "",
+        "url_fuente": "",
+        "campo": "2026-11-01→2026-11-09",
+        "secundaria": "",
+        "unidad": "%"
+       }
+      },
+      "n": 1,
+      "delta": null,
+      "evidencia": "BAJA",
+      "nota": ""
+     },
+     {
+      "etiqueta": "Tendencias · economía familiar · No llega a fin de mes",
+      "consultora": "Tendencias",
+      "celdas": {
+       "Oct-26": {
+        "v": 40.1,
+        "fila": 1504,
+        "base": "nivel2_indicadores",
+        "file_id": "1BFwPyKZNnwAK6Tv3VBUFaSIGs9DFDXxo",
+        "clave_fuente": "",
+        "url_fuente": "",
+        "campo": "",
+        "secundaria": "",
+        "unidad": "%"
+       }
+      },
+      "n": 1,
+      "delta": null,
+      "evidencia": "BAJA",
+      "nota": "Ficha técnica no informada en el documento."
+     },
+     {
+      "etiqueta": "Tendencias · economía familiar · Para llegar a fin de mes tuvo que recortar gastos",
+      "consultora": "Tendencias",
+      "celdas": {
+       "Oct-26": {
+        "v": 21.1,
+        "fila": 1505,
+        "base": "nivel2_indicadores",
+        "file_id": "1BFwPyKZNnwAK6Tv3VBUFaSIGs9DFDXxo",
+        "clave_fuente": "",
+        "url_fuente": "",
+        "campo": "",
+        "secundaria": "",
+        "unidad": "%"
+       }
+      },
+      "n": 1,
+      "delta": null,
+      "evidencia": "BAJA",
+      "nota": "Ficha técnica no informada en el documento."
+     },
+     {
+      "etiqueta": "Tendencias · economía familiar · Llega a fin de mes pero ya no puede ahorrar",
+      "consultora": "Tendencias",
+      "celdas": {
+       "Oct-26": {
+        "v": 19.7,
+        "fila": 1506,
+        "base": "nivel2_indicadores",
+        "file_id": "1BFwPyKZNnwAK6Tv3VBUFaSIGs9DFDXxo",
+        "clave_fuente": "",
+        "url_fuente": "",
+        "campo": "",
+        "secundaria": "",
+        "unidad": "%"
+       }
+      },
+      "n": 1,
+      "delta": null,
+      "evidencia": "BAJA",
+      "nota": "Ficha técnica no informada en el documento."
+     },
+     {
+      "etiqueta": "Tendencias · economía familiar · Llega a fin de mes y puede ahorrar",
+      "consultora": "Tendencias",
+      "celdas": {
+       "Oct-26": {
+        "v": 19,
+        "fila": 1507,
+        "base": "nivel2_indicadores",
+        "file_id": "1BFwPyKZNnwAK6Tv3VBUFaSIGs9DFDXxo",
+        "clave_fuente": "",
+        "url_fuente": "",
+        "campo": "",
+        "secundaria": "",
+        "unidad": "%"
+       }
+      },
+      "n": 1,
+      "delta": null,
+      "evidencia": "BAJA",
+      "nota": "Ficha técnica no informada en el documento."
      }
     ]
    },
@@ -2643,7 +4226,8 @@
      "Jul-26",
      "Ago-26",
      "Sep-26",
-     "Oct-26"
+     "Oct-26",
+     "Nov-26"
     ],
     "filas": [
      {
@@ -2655,6 +4239,8 @@
         "fila": 1162,
         "base": "nivel2_indicadores",
         "file_id": "15xCCxnLfLvu_VZihlCtlLG8Izil_23de",
+        "clave_fuente": "",
+        "url_fuente": "",
         "campo": "2026-10-06→2026-10-07",
         "secundaria": "",
         "unidad": "%"
@@ -2674,6 +4260,8 @@
         "fila": 1225,
         "base": "nivel2_indicadores",
         "file_id": "1XV5dXF09qnGytqsnn__2hjec0ZUKXtxI",
+        "clave_fuente": "",
+        "url_fuente": "",
         "campo": "2026-10-05→2026-10-16",
         "secundaria": "",
         "unidad": "%"
@@ -2693,6 +4281,8 @@
         "fila": 1374,
         "base": "nivel2_indicadores",
         "file_id": "1uD_RKIA3E5i3Hm0WU6347wZ_A_rGrkEg",
+        "clave_fuente": "",
+        "url_fuente": "",
         "campo": "",
         "secundaria": "",
         "unidad": "puntos"
@@ -2702,6 +4292,8 @@
         "fila": 1369,
         "base": "nivel2_indicadores",
         "file_id": "1uD_RKIA3E5i3Hm0WU6347wZ_A_rGrkEg",
+        "clave_fuente": "",
+        "url_fuente": "",
         "campo": "",
         "secundaria": "",
         "unidad": "puntos"
@@ -2711,6 +4303,8 @@
         "fila": 834,
         "base": "nivel2_indicadores",
         "file_id": "14LBekUNj3iNKJNtw96CtB00yVqvHLD-J",
+        "clave_fuente": "",
+        "url_fuente": "",
         "campo": "2026-08-04→2026-08-13",
         "secundaria": "",
         "unidad": "puntos"
@@ -2720,6 +4314,8 @@
         "fila": 828,
         "base": "nivel2_indicadores",
         "file_id": "16kZvKZZye-pAV-1bfWGvpm9bFEo04o0P",
+        "clave_fuente": "",
+        "url_fuente": "",
         "campo": "2026-07-02→2026-07-16",
         "secundaria": "",
         "unidad": "puntos"
@@ -2729,6 +4325,8 @@
         "fila": 1350,
         "base": "nivel2_indicadores",
         "file_id": "1uD_RKIA3E5i3Hm0WU6347wZ_A_rGrkEg",
+        "clave_fuente": "",
+        "url_fuente": "",
         "campo": "2026-10-05→2026-10-16",
         "secundaria": "",
         "unidad": "puntos (escala 0-100)"
@@ -2738,6 +4336,111 @@
       "delta": -1.28,
       "evidencia": "ALTA",
       "nota": ""
+     },
+     {
+      "etiqueta": "Proyección · expectativa económica a 6 meses · Peor + Igual de mal",
+      "consultora": "Proyección",
+      "celdas": {
+       "Nov-26": {
+        "v": 64.9,
+        "fila": 1467,
+        "base": "nivel2_indicadores",
+        "file_id": "1P_43U922vyw_gFYdje1io2SPO-AH_JT1",
+        "clave_fuente": "",
+        "url_fuente": "",
+        "campo": "2026-11-01→2026-11-09",
+        "secundaria": "",
+        "unidad": "%"
+       }
+      },
+      "n": 1,
+      "delta": null,
+      "evidencia": "BAJA",
+      "nota": ""
+     },
+     {
+      "etiqueta": "Tendencias · expectativa económica a 12 meses · Creo que estará peor",
+      "consultora": "Tendencias",
+      "celdas": {
+       "Oct-26": {
+        "v": 42,
+        "fila": 1508,
+        "base": "nivel2_indicadores",
+        "file_id": "1BFwPyKZNnwAK6Tv3VBUFaSIGs9DFDXxo",
+        "clave_fuente": "",
+        "url_fuente": "",
+        "campo": "",
+        "secundaria": "",
+        "unidad": "%"
+       }
+      },
+      "n": 1,
+      "delta": null,
+      "evidencia": "BAJA",
+      "nota": "Ficha técnica no informada en el documento."
+     },
+     {
+      "etiqueta": "Tendencias · expectativa económica a 12 meses · Creo que estará mejor",
+      "consultora": "Tendencias",
+      "celdas": {
+       "Oct-26": {
+        "v": 27,
+        "fila": 1509,
+        "base": "nivel2_indicadores",
+        "file_id": "1BFwPyKZNnwAK6Tv3VBUFaSIGs9DFDXxo",
+        "clave_fuente": "",
+        "url_fuente": "",
+        "campo": "",
+        "secundaria": "",
+        "unidad": "%"
+       }
+      },
+      "n": 1,
+      "delta": null,
+      "evidencia": "BAJA",
+      "nota": "Ficha técnica no informada en el documento."
+     },
+     {
+      "etiqueta": "Tendencias · expectativa económica a 12 meses · Creo que estará igual",
+      "consultora": "Tendencias",
+      "celdas": {
+       "Oct-26": {
+        "v": 18,
+        "fila": 1510,
+        "base": "nivel2_indicadores",
+        "file_id": "1BFwPyKZNnwAK6Tv3VBUFaSIGs9DFDXxo",
+        "clave_fuente": "",
+        "url_fuente": "",
+        "campo": "",
+        "secundaria": "",
+        "unidad": "%"
+       }
+      },
+      "n": 1,
+      "delta": null,
+      "evidencia": "BAJA",
+      "nota": "Ficha técnica no informada en el documento."
+     },
+     {
+      "etiqueta": "Tendencias · expectativa económica a 12 meses · No sé",
+      "consultora": "Tendencias",
+      "celdas": {
+       "Oct-26": {
+        "v": 13,
+        "fila": 1511,
+        "base": "nivel2_indicadores",
+        "file_id": "1BFwPyKZNnwAK6Tv3VBUFaSIGs9DFDXxo",
+        "clave_fuente": "",
+        "url_fuente": "",
+        "campo": "",
+        "secundaria": "",
+        "unidad": "%"
+       }
+      },
+      "n": 1,
+      "delta": null,
+      "evidencia": "BAJA",
+      "nota": "Ficha técnica no informada en el documento."
      }
     ]
    },
@@ -2746,7 +4449,8 @@
     "modulo": "Clima / rumbo",
     "nota": "",
     "meses": [
-     "Oct-26"
+     "Oct-26",
+     "Nov-26"
     ],
     "filas": [
      {
@@ -2758,6 +4462,8 @@
         "fila": 1330,
         "base": "nivel2_indicadores",
         "file_id": "1uznLYGdcQW-2F2alisYrLtkdxGrgNrRT",
+        "clave_fuente": "",
+        "url_fuente": "",
         "campo": "2026-10-27→2026-11-01",
         "secundaria": "",
         "unidad": "%"
@@ -2777,6 +4483,8 @@
         "fila": 1331,
         "base": "nivel2_indicadores",
         "file_id": "1uznLYGdcQW-2F2alisYrLtkdxGrgNrRT",
+        "clave_fuente": "",
+        "url_fuente": "",
         "campo": "2026-10-27→2026-11-01",
         "secundaria": "",
         "unidad": "%"
@@ -2796,6 +4504,8 @@
         "fila": 1332,
         "base": "nivel2_indicadores",
         "file_id": "1uznLYGdcQW-2F2alisYrLtkdxGrgNrRT",
+        "clave_fuente": "",
+        "url_fuente": "",
         "campo": "2026-10-27→2026-11-01",
         "secundaria": "",
         "unidad": "%"
@@ -2805,6 +4515,166 @@
       "delta": null,
       "evidencia": "BAJA",
       "nota": ""
+     },
+     {
+      "etiqueta": "Proyección · gestión nacional · no sabe · No lo sé",
+      "consultora": "Proyección",
+      "celdas": {
+       "Nov-26": {
+        "v": 8.5,
+        "fila": 1462,
+        "base": "nivel2_indicadores",
+        "file_id": "1P_43U922vyw_gFYdje1io2SPO-AH_JT1",
+        "clave_fuente": "",
+        "url_fuente": "",
+        "campo": "2026-11-01→2026-11-09",
+        "secundaria": "",
+        "unidad": "%"
+       }
+      },
+      "n": 1,
+      "delta": null,
+      "evidencia": "BAJA",
+      "nota": ""
+     },
+     {
+      "etiqueta": "Proyección · rumbo del país · Equivocado + Muy equivocado",
+      "consultora": "Proyección",
+      "celdas": {
+       "Nov-26": {
+        "v": 58,
+        "fila": 1463,
+        "base": "nivel2_indicadores",
+        "file_id": "1P_43U922vyw_gFYdje1io2SPO-AH_JT1",
+        "clave_fuente": "",
+        "url_fuente": "",
+        "campo": "2026-11-01→2026-11-09",
+        "secundaria": "",
+        "unidad": "%"
+       }
+      },
+      "n": 1,
+      "delta": null,
+      "evidencia": "BAJA",
+      "nota": ""
+     },
+     {
+      "etiqueta": "Proyección · rumbo del país · Correcto + Muy correcto",
+      "consultora": "Proyección",
+      "celdas": {
+       "Nov-26": {
+        "v": 30.8,
+        "fila": 1464,
+        "base": "nivel2_indicadores",
+        "file_id": "1P_43U922vyw_gFYdje1io2SPO-AH_JT1",
+        "clave_fuente": "",
+        "url_fuente": "",
+        "campo": "2026-11-01→2026-11-09",
+        "secundaria": "",
+        "unidad": "%"
+       }
+      },
+      "n": 1,
+      "delta": null,
+      "evidencia": "BAJA",
+      "nota": ""
+     },
+     {
+      "etiqueta": "Proyección · rumbo del país · No lo sé",
+      "consultora": "Proyección",
+      "celdas": {
+       "Nov-26": {
+        "v": 11.1,
+        "fila": 1465,
+        "base": "nivel2_indicadores",
+        "file_id": "1P_43U922vyw_gFYdje1io2SPO-AH_JT1",
+        "clave_fuente": "",
+        "url_fuente": "",
+        "campo": "2026-11-01→2026-11-09",
+        "secundaria": "",
+        "unidad": "%"
+       }
+      },
+      "n": 1,
+      "delta": null,
+      "evidencia": "BAJA",
+      "nota": ""
+     },
+     {
+      "etiqueta": "Proyección · ICP · índice total",
+      "consultora": "Proyección",
+      "celdas": {
+       "Nov-26": {
+        "v": 1.9,
+        "fila": 1497,
+        "base": "nivel2_indicadores",
+        "file_id": "1P_43U922vyw_gFYdje1io2SPO-AH_JT1",
+        "clave_fuente": "",
+        "url_fuente": "",
+        "campo": "2026-11-01→2026-11-09",
+        "secundaria": "",
+        "unidad": "puntos (1-5)"
+       }
+      },
+      "n": 1,
+      "delta": null,
+      "evidencia": "BAJA",
+      "nota": ""
+     }
+    ]
+   },
+   {
+    "titulo": "IPE de Proyección · puntos (1–5)",
+    "modulo": "Economía percibida",
+    "nota": "",
+    "meses": [
+     "Sep-26",
+     "Oct-26",
+     "Nov-26"
+    ],
+    "filas": [
+     {
+      "etiqueta": "Proyección · IPE · índice total",
+      "consultora": "Proyección",
+      "celdas": {
+       "Sep-26": {
+        "v": 2.07,
+        "fila": "",
+        "base": "radar_fuentes_complementarias",
+        "file_id": "",
+        "clave_fuente": "IPE_PROYECCION_SEP",
+        "url_fuente": "https://drive.google.com/file/d/1G2Om8KkIMnngn5tK3XZlJCesBhy2vCLE/view",
+        "campo": "2026-09-01→2026-09-10",
+        "secundaria": "",
+        "unidad": "puntos (1-5)"
+       },
+       "Oct-26": {
+        "v": 2.06,
+        "fila": 1130,
+        "base": "nivel2_indicadores",
+        "file_id": "1uIfhBnDL_bPLmziw4yTPefaYkySxN_A3",
+        "clave_fuente": "",
+        "url_fuente": "",
+        "campo": "2026-10-01→2026-10-13",
+        "secundaria": "",
+        "unidad": "puntos (1-5)"
+       },
+       "Nov-26": {
+        "v": 1.9,
+        "fila": 1498,
+        "base": "nivel2_indicadores",
+        "file_id": "1P_43U922vyw_gFYdje1io2SPO-AH_JT1",
+        "clave_fuente": "",
+        "url_fuente": "",
+        "campo": "2026-11-01→2026-11-09",
+        "secundaria": "",
+        "unidad": "puntos (1-5)"
+       }
+      },
+      "n": 3,
+      "delta": -0.16,
+      "evidencia": "ALTA",
+      "nota": "Septiembre (2,07) y octubre (2,06) cotejados con los informes originales."
      }
     ]
    }
@@ -2828,6 +4698,8 @@
         "fila": 1336,
         "base": "nivel2_indicadores",
         "file_id": "1uznLYGdcQW-2F2alisYrLtkdxGrgNrRT",
+        "clave_fuente": "",
+        "url_fuente": "",
         "campo": "2026-10-27→2026-11-01",
         "secundaria": "",
         "unidad": "%"
@@ -2847,6 +4719,8 @@
         "fila": 1184,
         "base": "nivel2_indicadores",
         "file_id": "16HiGngQwowwu7o6kj1Nc2iBoizH8kkTT",
+        "clave_fuente": "",
+        "url_fuente": "",
         "campo": "2026-09-05→2026-09-28",
         "secundaria": "",
         "unidad": "%"
@@ -2856,6 +4730,8 @@
         "fila": 1355,
         "base": "nivel2_indicadores",
         "file_id": "1rD7VKuwogWSGUEFj8D7yy_Qe8BUjez3S",
+        "clave_fuente": "",
+        "url_fuente": "",
         "campo": "2026-10-08→2026-10-26",
         "secundaria": "",
         "unidad": "%"
@@ -2875,6 +4751,8 @@
         "fila": 1356,
         "base": "nivel2_indicadores",
         "file_id": "1rD7VKuwogWSGUEFj8D7yy_Qe8BUjez3S",
+        "clave_fuente": "",
+        "url_fuente": "",
         "campo": "2026-10-08→2026-10-26",
         "secundaria": "",
         "unidad": "%"
@@ -2894,6 +4772,8 @@
         "fila": 1185,
         "base": "nivel2_indicadores",
         "file_id": "16HiGngQwowwu7o6kj1Nc2iBoizH8kkTT",
+        "clave_fuente": "",
+        "url_fuente": "",
         "campo": "2026-09-05→2026-09-28",
         "secundaria": "",
         "unidad": "%"
@@ -2903,6 +4783,8 @@
         "fila": 1357,
         "base": "nivel2_indicadores",
         "file_id": "1rD7VKuwogWSGUEFj8D7yy_Qe8BUjez3S",
+        "clave_fuente": "",
+        "url_fuente": "",
         "campo": "2026-10-08→2026-10-26",
         "secundaria": "",
         "unidad": "%"
@@ -2922,6 +4804,8 @@
         "fila": 1186,
         "base": "nivel2_indicadores",
         "file_id": "16HiGngQwowwu7o6kj1Nc2iBoizH8kkTT",
+        "clave_fuente": "",
+        "url_fuente": "",
         "campo": "2026-09-05→2026-09-28",
         "secundaria": "",
         "unidad": "%"
@@ -2931,6 +4815,8 @@
         "fila": 1358,
         "base": "nivel2_indicadores",
         "file_id": "1rD7VKuwogWSGUEFj8D7yy_Qe8BUjez3S",
+        "clave_fuente": "",
+        "url_fuente": "",
         "campo": "2026-10-08→2026-10-26",
         "secundaria": "",
         "unidad": "%"
@@ -2940,6 +4826,279 @@
       "delta": 3,
       "evidencia": "MEDIA",
       "nota": "oct: campo 5–28/9 · nov: campo 8–26/10"
+     },
+     {
+      "etiqueta": "Zubán Córdoba · León XIV · Positiva",
+      "consultora": "Zubán Córdoba",
+      "celdas": {
+       "Nov-26": {
+        "v": 88.2,
+        "fila": 1434,
+        "base": "nivel2_indicadores",
+        "file_id": "10pJlmh6OE6Lf15_wHMtOOX0UBi3lGxFs",
+        "clave_fuente": "",
+        "url_fuente": "",
+        "campo": "2026-11-11→2026-11-13",
+        "secundaria": "",
+        "unidad": "%"
+       }
+      },
+      "n": 1,
+      "delta": null,
+      "evidencia": "BAJA",
+      "nota": "Pregunta original ilegible; sin comparación histórica."
+     },
+     {
+      "etiqueta": "Zubán Córdoba · León XIV · Negativa",
+      "consultora": "Zubán Córdoba",
+      "celdas": {
+       "Nov-26": {
+        "v": 3.8,
+        "fila": 1435,
+        "base": "nivel2_indicadores",
+        "file_id": "10pJlmh6OE6Lf15_wHMtOOX0UBi3lGxFs",
+        "clave_fuente": "",
+        "url_fuente": "",
+        "campo": "2026-11-11→2026-11-13",
+        "secundaria": "",
+        "unidad": "%"
+       }
+      },
+      "n": 1,
+      "delta": null,
+      "evidencia": "BAJA",
+      "nota": "Pregunta original ilegible; sin comparación histórica."
+     },
+     {
+      "etiqueta": "Zubán Córdoba · León XIV · No conoce",
+      "consultora": "Zubán Córdoba",
+      "celdas": {
+       "Nov-26": {
+        "v": 2.8,
+        "fila": 1436,
+        "base": "nivel2_indicadores",
+        "file_id": "10pJlmh6OE6Lf15_wHMtOOX0UBi3lGxFs",
+        "clave_fuente": "",
+        "url_fuente": "",
+        "campo": "2026-11-11→2026-11-13",
+        "secundaria": "",
+        "unidad": "%"
+       }
+      },
+      "n": 1,
+      "delta": null,
+      "evidencia": "BAJA",
+      "nota": "Pregunta original ilegible; sin comparación histórica."
+     },
+     {
+      "etiqueta": "Zubán Córdoba · León XIV · No sabe",
+      "consultora": "Zubán Córdoba",
+      "celdas": {
+       "Nov-26": {
+        "v": 5.2,
+        "fila": 1437,
+        "base": "nivel2_indicadores",
+        "file_id": "10pJlmh6OE6Lf15_wHMtOOX0UBi3lGxFs",
+        "clave_fuente": "",
+        "url_fuente": "",
+        "campo": "2026-11-11→2026-11-13",
+        "secundaria": "",
+        "unidad": "%"
+       }
+      },
+      "n": 1,
+      "delta": null,
+      "evidencia": "BAJA",
+      "nota": "Pregunta original ilegible; sin comparación histórica."
+     },
+     {
+      "etiqueta": "Proyección · Patricia Bullrich · Positiva (muy buena + buena)",
+      "consultora": "Proyección",
+      "celdas": {
+       "Nov-26": {
+        "v": 40.1,
+        "fila": 1475,
+        "base": "nivel2_indicadores",
+        "file_id": "1P_43U922vyw_gFYdje1io2SPO-AH_JT1",
+        "clave_fuente": "",
+        "url_fuente": "",
+        "campo": "2026-11-01→2026-11-09",
+        "secundaria": "",
+        "unidad": "%"
+       }
+      },
+      "n": 1,
+      "delta": null,
+      "evidencia": "BAJA",
+      "nota": ""
+     },
+     {
+      "etiqueta": "Proyección · Patricia Bullrich · Negativa (mala + muy mala)",
+      "consultora": "Proyección",
+      "celdas": {
+       "Nov-26": {
+        "v": 49.7,
+        "fila": 1476,
+        "base": "nivel2_indicadores",
+        "file_id": "1P_43U922vyw_gFYdje1io2SPO-AH_JT1",
+        "clave_fuente": "",
+        "url_fuente": "",
+        "campo": "2026-11-01→2026-11-09",
+        "secundaria": "",
+        "unidad": "%"
+       }
+      },
+      "n": 1,
+      "delta": null,
+      "evidencia": "BAJA",
+      "nota": ""
+     },
+     {
+      "etiqueta": "Proyección · Axel Kicillof · Positiva (muy buena + buena)",
+      "consultora": "Proyección",
+      "celdas": {
+       "Nov-26": {
+        "v": 34.4,
+        "fila": 1477,
+        "base": "nivel2_indicadores",
+        "file_id": "1P_43U922vyw_gFYdje1io2SPO-AH_JT1",
+        "clave_fuente": "",
+        "url_fuente": "",
+        "campo": "2026-11-01→2026-11-09",
+        "secundaria": "",
+        "unidad": "%"
+       }
+      },
+      "n": 1,
+      "delta": null,
+      "evidencia": "BAJA",
+      "nota": ""
+     },
+     {
+      "etiqueta": "Proyección · Axel Kicillof · Negativa (mala + muy mala)",
+      "consultora": "Proyección",
+      "celdas": {
+       "Nov-26": {
+        "v": 55,
+        "fila": 1478,
+        "base": "nivel2_indicadores",
+        "file_id": "1P_43U922vyw_gFYdje1io2SPO-AH_JT1",
+        "clave_fuente": "",
+        "url_fuente": "",
+        "campo": "2026-11-01→2026-11-09",
+        "secundaria": "",
+        "unidad": "%"
+       }
+      },
+      "n": 1,
+      "delta": null,
+      "evidencia": "BAJA",
+      "nota": ""
+     },
+     {
+      "etiqueta": "Proyección · Myriam Bregman · Positiva (muy buena + buena)",
+      "consultora": "Proyección",
+      "celdas": {
+       "Nov-26": {
+        "v": 31.7,
+        "fila": 1479,
+        "base": "nivel2_indicadores",
+        "file_id": "1P_43U922vyw_gFYdje1io2SPO-AH_JT1",
+        "clave_fuente": "",
+        "url_fuente": "",
+        "campo": "2026-11-01→2026-11-09",
+        "secundaria": "",
+        "unidad": "%"
+       }
+      },
+      "n": 1,
+      "delta": null,
+      "evidencia": "BAJA",
+      "nota": ""
+     },
+     {
+      "etiqueta": "Proyección · Myriam Bregman · Negativa (mala + muy mala)",
+      "consultora": "Proyección",
+      "celdas": {
+       "Nov-26": {
+        "v": 39.9,
+        "fila": 1480,
+        "base": "nivel2_indicadores",
+        "file_id": "1P_43U922vyw_gFYdje1io2SPO-AH_JT1",
+        "clave_fuente": "",
+        "url_fuente": "",
+        "campo": "2026-11-01→2026-11-09",
+        "secundaria": "",
+        "unidad": "%"
+       }
+      },
+      "n": 1,
+      "delta": null,
+      "evidencia": "BAJA",
+      "nota": ""
+     },
+     {
+      "etiqueta": "Tendencias · León XIV · Total positiva (positiva + regular positiva)",
+      "consultora": "Tendencias",
+      "celdas": {
+       "Oct-26": {
+        "v": 56.3,
+        "fila": 1516,
+        "base": "nivel2_indicadores",
+        "file_id": "1BFwPyKZNnwAK6Tv3VBUFaSIGs9DFDXxo",
+        "clave_fuente": "",
+        "url_fuente": "",
+        "campo": "",
+        "secundaria": "",
+        "unidad": "%"
+       }
+      },
+      "n": 1,
+      "delta": null,
+      "evidencia": "BAJA",
+      "nota": "Ficha técnica no informada en el documento."
+     },
+     {
+      "etiqueta": "Tendencias · León XIV · Total negativa (regular negativa + negativa)",
+      "consultora": "Tendencias",
+      "celdas": {
+       "Oct-26": {
+        "v": 15.2,
+        "fila": 1517,
+        "base": "nivel2_indicadores",
+        "file_id": "1BFwPyKZNnwAK6Tv3VBUFaSIGs9DFDXxo",
+        "clave_fuente": "",
+        "url_fuente": "",
+        "campo": "",
+        "secundaria": "",
+        "unidad": "%"
+       }
+      },
+      "n": 1,
+      "delta": null,
+      "evidencia": "BAJA",
+      "nota": "Ficha técnica no informada en el documento."
+     },
+     {
+      "etiqueta": "Tendencias · León XIV · No sabe / no conoce",
+      "consultora": "Tendencias",
+      "celdas": {
+       "Oct-26": {
+        "v": 28.5,
+        "fila": 1518,
+        "base": "nivel2_indicadores",
+        "file_id": "1BFwPyKZNnwAK6Tv3VBUFaSIGs9DFDXxo",
+        "clave_fuente": "",
+        "url_fuente": "",
+        "campo": "",
+        "secundaria": "",
+        "unidad": "%"
+       }
+      },
+      "n": 1,
+      "delta": null,
+      "evidencia": "BAJA",
+      "nota": "Ficha técnica no informada en el documento."
      }
     ]
    }
@@ -2963,6 +5122,8 @@
         "fila": 1292,
         "base": "nivel2_indicadores",
         "file_id": "1kd9sW5yHrlMiZLq3_bxYTCnCHZjaCFGL",
+        "clave_fuente": "",
+        "url_fuente": "",
         "campo": "2026-09-05→2026-11-04",
         "secundaria": "",
         "unidad": "publicaciones"
@@ -2982,6 +5143,8 @@
         "fila": 1293,
         "base": "nivel2_indicadores",
         "file_id": "1kd9sW5yHrlMiZLq3_bxYTCnCHZjaCFGL",
+        "clave_fuente": "",
+        "url_fuente": "",
         "campo": "2026-09-05→2026-11-04",
         "secundaria": "",
         "unidad": "%"
@@ -3001,6 +5164,8 @@
         "fila": 1294,
         "base": "nivel2_indicadores",
         "file_id": "1kd9sW5yHrlMiZLq3_bxYTCnCHZjaCFGL",
+        "clave_fuente": "",
+        "url_fuente": "",
         "campo": "2026-09-05→2026-11-04",
         "secundaria": "",
         "unidad": "%"
@@ -3020,6 +5185,8 @@
         "fila": 1296,
         "base": "nivel2_indicadores",
         "file_id": "1kd9sW5yHrlMiZLq3_bxYTCnCHZjaCFGL",
+        "clave_fuente": "",
+        "url_fuente": "",
         "campo": "2026-09-05→2026-11-04",
         "secundaria": "",
         "unidad": "%"
@@ -3039,6 +5206,8 @@
         "fila": 1297,
         "base": "nivel2_indicadores",
         "file_id": "1kd9sW5yHrlMiZLq3_bxYTCnCHZjaCFGL",
+        "clave_fuente": "",
+        "url_fuente": "",
         "campo": "2026-09-05→2026-11-04",
         "secundaria": "",
         "unidad": "%"
@@ -3058,6 +5227,8 @@
         "fila": 1299,
         "base": "nivel2_indicadores",
         "file_id": "1kd9sW5yHrlMiZLq3_bxYTCnCHZjaCFGL",
+        "clave_fuente": "",
+        "url_fuente": "",
         "campo": "2026-09-05→2026-11-04",
         "secundaria": "",
         "unidad": "%"
@@ -3077,6 +5248,8 @@
         "fila": 1080,
         "base": "nivel2_indicadores",
         "file_id": "1o_mlbWD7SUDJlJt2mIKK1BwXp2o4zKwk",
+        "clave_fuente": "",
+        "url_fuente": "",
         "campo": "2026-07-01→2026-10-05",
         "secundaria": "",
         "unidad": "menciones"
@@ -3096,6 +5269,8 @@
         "fila": 1081,
         "base": "nivel2_indicadores",
         "file_id": "1o_mlbWD7SUDJlJt2mIKK1BwXp2o4zKwk",
+        "clave_fuente": "",
+        "url_fuente": "",
         "campo": "2026-07-01→2026-10-05",
         "secundaria": "",
         "unidad": "%"
@@ -3113,8 +5288,9 @@
    {
     "titulo": "Territorio · mediciones subnacionales",
     "modulo": "Territorio",
-    "nota": "",
+    "nota": "PoliTech publicó un informe de contexto de Río Negro en septiembre basado en campo de julio.",
     "meses": [
+     "Jul-26",
      "Oct-26",
      "Nov-26"
     ],
@@ -3128,6 +5304,8 @@
         "fila": 1268,
         "base": "nivel2_indicadores",
         "file_id": "1haL5Bd0Xw1kXugLdekJcpcdbAvVPG2RA",
+        "clave_fuente": "",
+        "url_fuente": "",
         "campo": "2026-11-01→2026-11-03",
         "secundaria": "",
         "unidad": "pp"
@@ -3147,6 +5325,8 @@
         "fila": 1269,
         "base": "nivel2_indicadores",
         "file_id": "1haL5Bd0Xw1kXugLdekJcpcdbAvVPG2RA",
+        "clave_fuente": "",
+        "url_fuente": "",
         "campo": "2026-11-01→2026-11-03",
         "secundaria": "",
         "unidad": "pp"
@@ -3166,6 +5346,8 @@
         "fila": 1270,
         "base": "nivel2_indicadores",
         "file_id": "1haL5Bd0Xw1kXugLdekJcpcdbAvVPG2RA",
+        "clave_fuente": "",
+        "url_fuente": "",
         "campo": "2026-11-01→2026-11-03",
         "secundaria": "",
         "unidad": "pp"
@@ -3185,6 +5367,8 @@
         "fila": 1286,
         "base": "nivel2_indicadores",
         "file_id": "1haL5Bd0Xw1kXugLdekJcpcdbAvVPG2RA",
+        "clave_fuente": "",
+        "url_fuente": "",
         "campo": "2026-11-01→2026-11-03",
         "secundaria": "",
         "unidad": "pp"
@@ -3204,6 +5388,8 @@
         "fila": 1289,
         "base": "nivel2_indicadores",
         "file_id": "1haL5Bd0Xw1kXugLdekJcpcdbAvVPG2RA",
+        "clave_fuente": "",
+        "url_fuente": "",
         "campo": "2026-11-01→2026-11-03",
         "secundaria": "",
         "unidad": "pp"
@@ -3223,6 +5409,8 @@
         "fila": 1290,
         "base": "nivel2_indicadores",
         "file_id": "1haL5Bd0Xw1kXugLdekJcpcdbAvVPG2RA",
+        "clave_fuente": "",
+        "url_fuente": "",
         "campo": "2026-11-01→2026-11-03",
         "secundaria": "",
         "unidad": "pp"
@@ -3242,6 +5430,8 @@
         "fila": 1291,
         "base": "nivel2_indicadores",
         "file_id": "1haL5Bd0Xw1kXugLdekJcpcdbAvVPG2RA",
+        "clave_fuente": "",
+        "url_fuente": "",
         "campo": "2026-11-01→2026-11-03",
         "secundaria": "",
         "unidad": "pp"
@@ -3261,6 +5451,8 @@
         "fila": 1251,
         "base": "nivel2_indicadores",
         "file_id": "1VkNLWxNczcAL9T-48vA-0wvKIj3UMk5q",
+        "clave_fuente": "",
+        "url_fuente": "",
         "campo": "2026-10-22→2026-10-26",
         "secundaria": "",
         "unidad": "%"
@@ -3280,6 +5472,8 @@
         "fila": 1252,
         "base": "nivel2_indicadores",
         "file_id": "1VkNLWxNczcAL9T-48vA-0wvKIj3UMk5q",
+        "clave_fuente": "",
+        "url_fuente": "",
         "campo": "2026-10-22→2026-10-26",
         "secundaria": "",
         "unidad": "%"
@@ -3299,6 +5493,8 @@
         "fila": 1255,
         "base": "nivel2_indicadores",
         "file_id": "1h2p2v8TLWvHzM4yiw4qnfKbpbXlmxDyx",
+        "clave_fuente": "",
+        "url_fuente": "",
         "campo": "2026-10-10→2026-10-19",
         "secundaria": "",
         "unidad": "%"
@@ -3318,6 +5514,8 @@
         "fila": 1257,
         "base": "nivel2_indicadores",
         "file_id": "1h2p2v8TLWvHzM4yiw4qnfKbpbXlmxDyx",
+        "clave_fuente": "",
+        "url_fuente": "",
         "campo": "2026-10-10→2026-10-11",
         "secundaria": "",
         "unidad": "%"
@@ -3327,6 +5525,111 @@
       "delta": null,
       "evidencia": "BAJA",
       "nota": ""
+     },
+     {
+      "etiqueta": "Tendencias · gestión provincial agregada · Total negativa",
+      "consultora": "Tendencias",
+      "celdas": {
+       "Oct-26": {
+        "v": 50.5,
+        "fila": 1527,
+        "base": "nivel2_indicadores",
+        "file_id": "1BFwPyKZNnwAK6Tv3VBUFaSIGs9DFDXxo",
+        "clave_fuente": "",
+        "url_fuente": "",
+        "campo": "",
+        "secundaria": "",
+        "unidad": "%"
+       }
+      },
+      "n": 1,
+      "delta": null,
+      "evidencia": "BAJA",
+      "nota": "Ficha técnica no informada en el documento."
+     },
+     {
+      "etiqueta": "Tendencias · gestión provincial agregada · Total positiva",
+      "consultora": "Tendencias",
+      "celdas": {
+       "Oct-26": {
+        "v": 49.5,
+        "fila": 1528,
+        "base": "nivel2_indicadores",
+        "file_id": "1BFwPyKZNnwAK6Tv3VBUFaSIGs9DFDXxo",
+        "clave_fuente": "",
+        "url_fuente": "",
+        "campo": "",
+        "secundaria": "",
+        "unidad": "%"
+       }
+      },
+      "n": 1,
+      "delta": null,
+      "evidencia": "BAJA",
+      "nota": "Ficha técnica no informada en el documento."
+     },
+     {
+      "etiqueta": "PoliTech · Río Negro · voto provincial · La Libertad Avanza",
+      "consultora": "PoliTech",
+      "celdas": {
+       "Jul-26": {
+        "v": 25.1,
+        "fila": "",
+        "base": "radar_fuentes_complementarias",
+        "file_id": "",
+        "clave_fuente": "VOTO_POLITECH_RN_JUL_LLA",
+        "url_fuente": "https://baribache3000.com.ar/nota/6281/soria-pesatti-y-la-interna-libertaria-el-mapa-opositor-que-dibuja-politech-rumbo-a-2027",
+        "campo": "2026-07-10",
+        "secundaria": "FUENTE SECUNDARIA · Bache3000 · informe de contexto de septiembre con campo de julio",
+        "unidad": "%"
+       }
+      },
+      "n": 1,
+      "delta": null,
+      "evidencia": "BAJA",
+      "nota": "Encuesta provincial de julio (n=1.023), citada en el informe de contexto del 27/09."
+     },
+     {
+      "etiqueta": "PoliTech · Río Negro · voto provincial · Peronismo",
+      "consultora": "PoliTech",
+      "celdas": {
+       "Jul-26": {
+        "v": 22.2,
+        "fila": "",
+        "base": "radar_fuentes_complementarias",
+        "file_id": "",
+        "clave_fuente": "VOTO_POLITECH_RN_JUL_PJ",
+        "url_fuente": "https://baribache3000.com.ar/nota/6281/soria-pesatti-y-la-interna-libertaria-el-mapa-opositor-que-dibuja-politech-rumbo-a-2027",
+        "campo": "2026-07-10",
+        "secundaria": "FUENTE SECUNDARIA · Bache3000 · informe de contexto de septiembre con campo de julio",
+        "unidad": "%"
+       }
+      },
+      "n": 1,
+      "delta": null,
+      "evidencia": "BAJA",
+      "nota": "Encuesta provincial de julio (n=1.023), citada en el informe de contexto del 27/09."
+     },
+     {
+      "etiqueta": "PoliTech · Río Negro · voto provincial · Juntos Somos Río Negro",
+      "consultora": "PoliTech",
+      "celdas": {
+       "Jul-26": {
+        "v": 21.5,
+        "fila": "",
+        "base": "radar_fuentes_complementarias",
+        "file_id": "",
+        "clave_fuente": "VOTO_POLITECH_RN_JUL_JSRN",
+        "url_fuente": "https://baribache3000.com.ar/nota/6281/soria-pesatti-y-la-interna-libertaria-el-mapa-opositor-que-dibuja-politech-rumbo-a-2027",
+        "campo": "2026-07-10",
+        "secundaria": "FUENTE SECUNDARIA · Bache3000 · informe de contexto de septiembre con campo de julio",
+        "unidad": "%"
+       }
+      },
+      "n": 1,
+      "delta": null,
+      "evidencia": "BAJA",
+      "nota": "Encuesta provincial de julio (n=1.023), citada en el informe de contexto del 27/09."
      }
     ]
    }
@@ -3587,6 +5890,20 @@
    "valor": 26.3,
    "fila": 1386,
    "rotulo": "FUENTE SECUNDARIA · monitorargy.com · https://monitorargy.com/mcp (obtener_serie, id ipc_nivel_general) · consultado 2026-11-12 · fuente original: INDEC · acumulado calculado sobre el nivel general"
+  },
+  {
+   "indicador": "evolucion:Synopsis · balotaje · Javier Milei",
+   "mes": "Oct-26",
+   "valor": 41.9,
+   "fila": "",
+   "rotulo": "FUENTE SECUNDARIA · _EncuestAR_ · difusión 31/10/2026 · ficha original pendiente"
+  },
+  {
+   "indicador": "evolucion:PoliTech · Río Negro · voto provincial · La Libertad Avanza",
+   "mes": "Jul-26",
+   "valor": 25.1,
+   "fila": "",
+   "rotulo": "FUENTE SECUNDARIA · Bache3000 · informe de contexto de septiembre con campo de julio"
   },
   {
    "indicador": "IPC núcleo mensual",
@@ -5175,6 +7492,74 @@
      "nota": "valor leído del gráfico (p. 25)",
      "secundaria": "",
      "categoria": "Negativa"
+    },
+    {
+     "tipo": "serie",
+     "modulo": "Gestión nacional",
+     "etiqueta": "GESTION · Proyección · aprob",
+     "valor": 35.6,
+     "anterior": null,
+     "estado": "nuevo",
+     "consultora": "Proyección",
+     "fila": 1460,
+     "base": "nivel2_indicadores",
+     "file_id": "1P_43U922vyw_gFYdje1io2SPO-AH_JT1",
+     "campo": "2026-11-01→2026-11-09",
+     "unidad": "%",
+     "nota": "",
+     "secundaria": "",
+     "categoria": "Muy bueno + Bueno"
+    },
+    {
+     "tipo": "serie",
+     "modulo": "Gestión nacional",
+     "etiqueta": "GESTION · Proyección · desaprob",
+     "valor": 55.9,
+     "anterior": null,
+     "estado": "nuevo",
+     "consultora": "Proyección",
+     "fila": 1461,
+     "base": "nivel2_indicadores",
+     "file_id": "1P_43U922vyw_gFYdje1io2SPO-AH_JT1",
+     "campo": "2026-11-01→2026-11-09",
+     "unidad": "%",
+     "nota": "",
+     "secundaria": "",
+     "categoria": "Malo + Muy malo"
+    },
+    {
+     "tipo": "serie",
+     "modulo": "Imagen Milei",
+     "etiqueta": "IMG · Proyección · pos",
+     "valor": 38.9,
+     "anterior": null,
+     "estado": "nuevo",
+     "consultora": "Proyección",
+     "fila": 1473,
+     "base": "nivel2_indicadores",
+     "file_id": "1P_43U922vyw_gFYdje1io2SPO-AH_JT1",
+     "campo": "2026-11-01→2026-11-09",
+     "unidad": "%",
+     "nota": "",
+     "secundaria": "",
+     "categoria": "Positiva (muy buena + buena)"
+    },
+    {
+     "tipo": "serie",
+     "modulo": "Imagen Milei",
+     "etiqueta": "IMG · Proyección · neg",
+     "valor": 56.1,
+     "anterior": null,
+     "estado": "nuevo",
+     "consultora": "Proyección",
+     "fila": 1474,
+     "base": "nivel2_indicadores",
+     "file_id": "1P_43U922vyw_gFYdje1io2SPO-AH_JT1",
+     "campo": "2026-11-01→2026-11-09",
+     "unidad": "%",
+     "nota": "",
+     "secundaria": "",
+     "categoria": "Negativa (mala + muy mala)"
     }
    ],
    "Ago-26": [
@@ -5565,6 +7950,40 @@
      "categoria": "Peronismo"
     },
     {
+     "tipo": "serie",
+     "modulo": "Intención de voto",
+     "etiqueta": "CONS · Proyección · lla",
+     "valor": 35,
+     "anterior": null,
+     "estado": "nuevo",
+     "consultora": "Proyección",
+     "fila": 1481,
+     "base": "nivel2_indicadores",
+     "file_id": "1P_43U922vyw_gFYdje1io2SPO-AH_JT1",
+     "campo": "2026-11-01→2026-11-09",
+     "unidad": "%",
+     "nota": "",
+     "secundaria": "",
+     "categoria": "La Libertad Avanza"
+    },
+    {
+     "tipo": "serie",
+     "modulo": "Intención de voto",
+     "etiqueta": "CONS · Proyección · pj",
+     "valor": 35,
+     "anterior": null,
+     "estado": "nuevo",
+     "consultora": "Proyección",
+     "fila": 1482,
+     "base": "nivel2_indicadores",
+     "file_id": "1P_43U922vyw_gFYdje1io2SPO-AH_JT1",
+     "campo": "2026-11-01→2026-11-09",
+     "unidad": "%",
+     "nota": "",
+     "secundaria": "",
+     "categoria": "Fuerza Patria (Peronismo/Kirchnerismo)"
+    },
+    {
      "tipo": "pendiente",
      "modulo": "Intención de voto",
      "etiqueta": "QMonitor noviembre: balotaje y pisos/techos no relevados todavía.",
@@ -5762,13 +8181,16 @@
    },
    "Nov-26": {
     "estado": "con datos",
-    "n_fuentes": 1,
+    "n_fuentes": 2,
     "fuentes": [
+     "Proyección",
      "QMonitor"
     ],
     "filas": [
      "NI:1351",
-     "NI:1352"
+     "NI:1352",
+     "NI:1460",
+     "NI:1461"
     ],
     "pendiente": []
    },
@@ -5817,13 +8239,16 @@
    },
    "Nov-26": {
     "estado": "con datos",
-    "n_fuentes": 1,
+    "n_fuentes": 2,
     "fuentes": [
+     "Proyección",
      "QMonitor"
     ],
     "filas": [
      "NI:1353",
-     "NI:1354"
+     "NI:1354",
+     "NI:1473",
+     "NI:1474"
     ],
     "pendiente": []
    },
@@ -5836,30 +8261,46 @@
    "seccion": "Imagen otros dirigentes",
    "Oct-26": {
     "estado": "con datos",
-    "n_fuentes": 2,
+    "n_fuentes": 3,
     "fuentes": [
      "DC Consultores",
-     "QMonitor"
+     "QMonitor",
+     "Tendencias"
     ],
     "filas": [
      "NI:1184",
      "NI:1185",
      "NI:1186",
-     "NI:1336"
+     "NI:1336",
+     "NI:1516",
+     "NI:1517",
+     "NI:1518"
     ],
     "pendiente": []
    },
    "Nov-26": {
     "estado": "con datos",
-    "n_fuentes": 1,
+    "n_fuentes": 3,
     "fuentes": [
-     "QMonitor"
+     "Proyección",
+     "QMonitor",
+     "Zubán Córdoba"
     ],
     "filas": [
      "NI:1355",
      "NI:1356",
      "NI:1357",
-     "NI:1358"
+     "NI:1358",
+     "NI:1434",
+     "NI:1435",
+     "NI:1436",
+     "NI:1437",
+     "NI:1475",
+     "NI:1476",
+     "NI:1477",
+     "NI:1478",
+     "NI:1479",
+     "NI:1480"
     ],
     "pendiente": []
    },
@@ -5871,7 +8312,7 @@
    "seccion": "Intención de voto",
    "Oct-26": {
     "estado": "parcial",
-    "n_fuentes": 9,
+    "n_fuentes": 10,
     "fuentes": [
      "Analogías",
      "DC Consultores",
@@ -5881,6 +8322,7 @@
      "QMonitor",
      "Reale Dalla Torre",
      "Synopsis",
+     "Tendencias",
      "Zuban Córdoba"
     ],
     "filas": [
@@ -5902,7 +8344,15 @@
      "NI:1333",
      "NI:1334",
      "NI:1427",
-     "NI:1428"
+     "NI:1428",
+     "NI:1519",
+     "NI:1520",
+     "NI:1521",
+     "NI:1522",
+     "NI:1523",
+     "NI:1524",
+     "NI:1525",
+     "NI:1526"
     ],
     "pendiente": [
      "Synopsis, ola con campo 12–17/10 (difundida 31/10): Peronismo 35 / LLA 33,6, localizada en encuestas-argentinas.com (registro https://x.com/_EncuestAR_/status/2116669248479047801, consultado 2026-11-11). Candidato pendiente: no hay informe en Drive ni enlace al original, y no se puede acreditar pregunta ni mes enunciado por Synopsis. No se carga y no reemplaza la ola 8–15/9 que hoy ocupa oct-26 (N2 fila 1208). Necesita: informe original de Synopsis de esa ola, para fijar el mes que enuncia"
@@ -5910,14 +8360,37 @@
    },
    "Nov-26": {
     "estado": "parcial",
-    "n_fuentes": 1,
+    "n_fuentes": 3,
     "fuentes": [
+     "PoliTech",
+     "Proyección",
      "QMonitor"
     ],
     "filas": [
      "NI:1361",
      "NI:1362",
-     "NI:1363"
+     "NI:1363",
+     "NI:1481",
+     "NI:1482",
+     "NI:1483",
+     "NI:1484",
+     "NI:1485",
+     "NI:1486",
+     "NI:1487",
+     "NI:1488",
+     "NI:1489",
+     "NI:1490",
+     "NI:1491",
+     "NI:1492",
+     "NI:1493",
+     "NI:1494",
+     "NI:1495",
+     "NI:1496",
+     "NI:1499",
+     "NI:1500",
+     "NI:1501",
+     "NI:1502",
+     "NI:1503"
     ],
     "pendiente": [
      "QMonitor noviembre: balotaje y pisos/techos no relevados todavía. Necesita: lectura de las pp. 47–55 del PDF"
@@ -5925,36 +8398,64 @@
    },
    "bases": [
     "base_maestra_2026",
-    "nivel2_indicadores"
+    "nivel2_indicadores",
+    "radar_fuentes_complementarias"
    ]
   },
   {
    "seccion": "Economía percibida",
    "Oct-26": {
     "estado": "con datos",
-    "n_fuentes": 3,
+    "n_fuentes": 6,
     "fuentes": [
+     "Proyección",
      "Pulso Research",
      "QMonitor",
-     "UTDT - CIF"
+     "Tendencias",
+     "UTDT - CIF",
+     "Zentrix"
     ],
     "filas": [
+     "NI:1130",
      "NI:1189",
      "NI:1190",
      "NI:1248",
-     "NI:1349"
+     "NI:1349",
+     "NI:1444",
+     "NI:1445",
+     "NI:1446",
+     "NI:1447",
+     "NI:1448",
+     "NI:1449",
+     "NI:1450",
+     "NI:1451",
+     "NI:1452",
+     "NI:1453",
+     "NI:1454",
+     "NI:1455",
+     "NI:1456",
+     "NI:1457",
+     "NI:1458",
+     "NI:1459",
+     "NI:1504",
+     "NI:1505",
+     "NI:1506",
+     "NI:1507"
     ],
     "pendiente": []
    },
    "Nov-26": {
     "estado": "con datos",
-    "n_fuentes": 1,
+    "n_fuentes": 2,
     "fuentes": [
+     "Proyección",
      "QMonitor"
     ],
     "filas": [
      "NI:1359",
-     "NI:1360"
+     "NI:1360",
+     "NI:1466",
+     "NI:1498"
     ],
     "pendiente": []
    },
@@ -5966,22 +8467,31 @@
    "seccion": "Expectativas",
    "Oct-26": {
     "estado": "con datos",
-    "n_fuentes": 2,
+    "n_fuentes": 3,
     "fuentes": [
      "CIF - UTDT / Poliarquía",
+     "Tendencias",
      "UTDT - CIF"
     ],
     "filas": [
      "NI:1225",
-     "NI:1350"
+     "NI:1350",
+     "NI:1508",
+     "NI:1509",
+     "NI:1510",
+     "NI:1511"
     ],
     "pendiente": []
    },
    "Nov-26": {
-    "estado": "sin dato",
-    "n_fuentes": 0,
-    "fuentes": [],
-    "filas": [],
+    "estado": "con datos",
+    "n_fuentes": 1,
+    "fuentes": [
+     "Proyección"
+    ],
+    "filas": [
+     "NI:1467"
+    ],
     "pendiente": []
    },
    "bases": [
@@ -6004,10 +8514,18 @@
     "pendiente": []
    },
    "Nov-26": {
-    "estado": "sin dato",
-    "n_fuentes": 0,
-    "fuentes": [],
-    "filas": [],
+    "estado": "con datos",
+    "n_fuentes": 1,
+    "fuentes": [
+     "Proyección"
+    ],
+    "filas": [
+     "NI:1462",
+     "NI:1463",
+     "NI:1464",
+     "NI:1465",
+     "NI:1497"
+    ],
     "pendiente": []
    },
    "bases": [
@@ -6018,10 +8536,11 @@
    "seccion": "Agenda pública",
    "Oct-26": {
     "estado": "con datos",
-    "n_fuentes": 2,
+    "n_fuentes": 3,
     "fuentes": [
      "CELAG",
-     "Proyección"
+     "Proyección",
+     "Tendencias"
     ],
     "filas": [
      "NI:1133",
@@ -6030,15 +8549,34 @@
      "NI:1136",
      "NI:1137",
      "NI:1145",
-     "NI:1146"
+     "NI:1146",
+     "NI:1512",
+     "NI:1513",
+     "NI:1514",
+     "NI:1515"
     ],
     "pendiente": []
    },
    "Nov-26": {
-    "estado": "pendiente",
-    "n_fuentes": 0,
-    "fuentes": [],
-    "filas": [],
+    "estado": "parcial",
+    "n_fuentes": 2,
+    "fuentes": [
+     "Proyección",
+     "Zubán Córdoba"
+    ],
+    "filas": [
+     "NI:1438",
+     "NI:1439",
+     "NI:1440",
+     "NI:1441",
+     "NI:1442",
+     "NI:1443",
+     "NI:1468",
+     "NI:1469",
+     "NI:1470",
+     "NI:1471",
+     "NI:1472"
+    ],
     "pendiente": [
      "Sin mediciones nacionales con fila en nivel 2."
     ]
@@ -6087,16 +8625,19 @@
    "seccion": "Territorio",
    "Oct-26": {
     "estado": "con datos",
-    "n_fuentes": 2,
+    "n_fuentes": 3,
     "fuentes": [
      "DC Consultores",
-     "INNOVA Opinión Pública"
+     "INNOVA Opinión Pública",
+     "Tendencias"
     ],
     "filas": [
      "NI:1251",
      "NI:1252",
      "NI:1255",
-     "NI:1257"
+     "NI:1257",
+     "NI:1527",
+     "NI:1528"
     ],
     "pendiente": []
    },
@@ -6126,9 +8667,9 @@
  ],
  "META": {
   "corte": {
-   "fecha": "2026-11-12",
+   "fecha": "2026-11-16",
    "mes_parcial": "Nov-26",
-   "etiqueta": "Noviembre 2026 · corte al 12/11/2026",
+   "etiqueta": "Noviembre 2026 · corte al 16/11/2026",
    "base_publicada": "b43fcb8 (index.html publicado en ivannavt.github.io/monitor-ar)"
   },
   "generado_por": "scripts/build_radar_data.py",
@@ -6137,15 +8678,18 @@
    "data/bases/nivel2_extracto_radar.tsv",
    "data/bases/base_maestra_extracto_oct_nov.tsv",
    "data/bases/base_maestra_resultados_clave.tsv",
+   "data/bases/radar_fuentes_complementarias.tsv",
    "data/radar_mapping.json"
   ],
-  "valores_trazados": 231,
-  "nuevos": 96,
+  "valores_trazados": 345,
+  "nuevos": 102,
   "corregidos": 13,
   "retirados": 0,
   "puntuales": 0,
-  "en_series_de_evolucion": 76,
+  "en_series_de_evolucion": 184,
   "fuente_secundaria": [
+   "FUENTE SECUNDARIA · Bache3000 · informe de contexto de septiembre con campo de julio",
+   "FUENTE SECUNDARIA · _EncuestAR_ · difusión 31/10/2026 · ficha original pendiente",
    "FUENTE SECUNDARIA · monitorargy.com · https://monitorargy.com/mcp (obtener_serie, id ipc_interanual) · consultado 2026-11-12 · fuente original: INDEC",
    "FUENTE SECUNDARIA · monitorargy.com · https://monitorargy.com/mcp (obtener_serie, id ipc_nivel_general) · consultado 2026-11-12 · fuente original: INDEC · acumulado calculado sobre el nivel general",
    "FUENTE SECUNDARIA · monitorargy.com · https://monitorargy.com/serie/ipc_mensual · consultado 2026-11-11 · fuente original: INDEC"

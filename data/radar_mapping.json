@@ -1,9 +1,9 @@
 {
   "_descripcion": "Especificación de qué fila de las bases alimenta cada celda del Radar. No contiene valores: build_radar_data.py los lee de data/bases/*.tsv (extractos de base_maestra_2026 y nivel2_indicadores). Las filas son números de fila de Google Sheets.",
   "corte": {
-    "fecha": "2026-11-12",
+    "fecha": "2026-11-16",
     "mes_parcial": "Nov-26",
-    "etiqueta": "Noviembre 2026 · corte al 12/11/2026",
+    "etiqueta": "Noviembre 2026 · corte al 16/11/2026",
     "base_publicada": "b43fcb8 (index.html publicado en ivannavt.github.io/monitor-ar)"
   },
   "extender_ejes": {
@@ -957,6 +957,42 @@
       "eje": "MIPCACUM",
       "fila": 1386,
       "rotulo": "FUENTE SECUNDARIA · monitorargy.com · https://monitorargy.com/mcp (obtener_serie, id ipc_nivel_general) · consultado 2026-11-12 · fuente original: INDEC · acumulado calculado sobre el nivel general"
+    },
+    {
+      "modulo": "Gestión nacional",
+      "ruta": "GESTION.Proyección.aprob",
+      "eje": "MG",
+      "fila": 1460
+    },
+    {
+      "modulo": "Gestión nacional",
+      "ruta": "GESTION.Proyección.desaprob",
+      "eje": "MG",
+      "fila": 1461
+    },
+    {
+      "modulo": "Imagen Milei",
+      "ruta": "IMG.Proyección.pos",
+      "eje": "MI",
+      "fila": 1473
+    },
+    {
+      "modulo": "Imagen Milei",
+      "ruta": "IMG.Proyección.neg",
+      "eje": "MI",
+      "fila": 1474
+    },
+    {
+      "modulo": "Intención de voto",
+      "ruta": "CONS.Proyección.lla",
+      "eje": "MV",
+      "fila": 1481
+    },
+    {
+      "modulo": "Intención de voto",
+      "ruta": "CONS.Proyección.pj",
+      "eje": "MV",
+      "fila": 1482
     }
   ],
   "retiros": [],
@@ -1070,6 +1106,9 @@
           "celdas": [
             {
               "fila": 1211
+            },
+            {
+              "fila": 1481
             }
           ],
           "nota": "pregunta distinta del candidato nominal de la serie: no se encadena"
@@ -1080,6 +1119,9 @@
           "celdas": [
             {
               "fila": 1427
+            },
+            {
+              "fila": 1482
             }
           ],
           "nota": "pregunta distinta del candidato nominal de la serie: no se encadena"
@@ -1090,6 +1132,9 @@
           "celdas": [
             {
               "fila": 1142
+            },
+            {
+              "fila": 1487
             }
           ],
           "nota": ""
@@ -1100,6 +1145,9 @@
           "celdas": [
             {
               "fila": 1143
+            },
+            {
+              "fila": 1488
             }
           ],
           "nota": ""
@@ -1211,6 +1259,258 @@
             }
           ],
           "nota": ""
+        },
+        {
+          "etiqueta": "Proyección · voto por espacio · Frente de Izquierda",
+          "consultora": "Proyección",
+          "celdas": [
+            {
+              "fila": 1483
+            }
+          ],
+          "nota": ""
+        },
+        {
+          "etiqueta": "Proyección · voto por espacio · PRO (Macrismo)",
+          "consultora": "Proyección",
+          "celdas": [
+            {
+              "fila": 1484
+            }
+          ],
+          "nota": ""
+        },
+        {
+          "etiqueta": "Proyección · voto por espacio · Provincias Unidas (Gobernadores de centro)",
+          "consultora": "Proyección",
+          "celdas": [
+            {
+              "fila": 1485
+            }
+          ],
+          "nota": ""
+        },
+        {
+          "etiqueta": "Proyección · voto por espacio · En blanco / impugnado",
+          "consultora": "Proyección",
+          "celdas": [
+            {
+              "fila": 1486
+            }
+          ],
+          "nota": ""
+        },
+        {
+          "etiqueta": "Proyección · voto presidencial por candidato · Myriam Bregman",
+          "consultora": "Proyección",
+          "celdas": [
+            {
+              "fila": 1489
+            }
+          ],
+          "nota": ""
+        },
+        {
+          "etiqueta": "Proyección · voto presidencial por candidato · Maximiliano Pullaro",
+          "consultora": "Proyección",
+          "celdas": [
+            {
+              "fila": 1490
+            }
+          ],
+          "nota": ""
+        },
+        {
+          "etiqueta": "Proyección · voto presidencial por candidato · En blanco / impugnado",
+          "consultora": "Proyección",
+          "celdas": [
+            {
+              "fila": 1491
+            }
+          ],
+          "nota": ""
+        },
+        {
+          "etiqueta": "Proyección · voto presidencial por candidato · No lo sé",
+          "consultora": "Proyección",
+          "celdas": [
+            {
+              "fila": 1492
+            }
+          ],
+          "nota": ""
+        },
+        {
+          "etiqueta": "Proyección · cambio o continuidad · Que continúe el gobierno actual de Milei",
+          "consultora": "Proyección",
+          "celdas": [
+            {
+              "fila": 1499
+            }
+          ],
+          "nota": ""
+        },
+        {
+          "etiqueta": "Proyección · cambio o continuidad · Que continúe Milei pero con otro equipo y cambio en sus políticas",
+          "consultora": "Proyección",
+          "celdas": [
+            {
+              "fila": 1500
+            }
+          ],
+          "nota": ""
+        },
+        {
+          "etiqueta": "Proyección · cambio o continuidad · Que haya un nuevo gobierno de otro espacio político cercano al peronismo",
+          "consultora": "Proyección",
+          "celdas": [
+            {
+              "fila": 1501
+            }
+          ],
+          "nota": ""
+        },
+        {
+          "etiqueta": "Proyección · cambio o continuidad · Que haya un nuevo gobierno de otro espacio político no peronista",
+          "consultora": "Proyección",
+          "celdas": [
+            {
+              "fila": 1502
+            }
+          ],
+          "nota": ""
+        },
+        {
+          "etiqueta": "Proyección · cambio o continuidad · No lo sé",
+          "consultora": "Proyección",
+          "celdas": [
+            {
+              "fila": 1503
+            }
+          ],
+          "nota": ""
+        },
+        {
+          "etiqueta": "Tendencias · voto potencial · Sergio Massa · Nunca lo votaría",
+          "consultora": "Tendencias",
+          "celdas": [
+            {
+              "fila": 1519
+            }
+          ],
+          "nota": "Ficha técnica no informada en el documento."
+        },
+        {
+          "etiqueta": "Tendencias · voto potencial · Sergio Massa · Seguramente lo vote",
+          "consultora": "Tendencias",
+          "celdas": [
+            {
+              "fila": 1520
+            }
+          ],
+          "nota": "Ficha técnica no informada en el documento."
+        },
+        {
+          "etiqueta": "Tendencias · voto potencial · Sergio Massa · Podría votarlo",
+          "consultora": "Tendencias",
+          "celdas": [
+            {
+              "fila": 1521
+            }
+          ],
+          "nota": "Ficha técnica no informada en el documento."
+        },
+        {
+          "etiqueta": "Tendencias · voto potencial · Sergio Massa · No lo sé",
+          "consultora": "Tendencias",
+          "celdas": [
+            {
+              "fila": 1522
+            }
+          ],
+          "nota": "Ficha técnica no informada en el documento."
+        },
+        {
+          "etiqueta": "Tendencias · voto potencial · Patricia Bullrich · Nunca lo votaría",
+          "consultora": "Tendencias",
+          "celdas": [
+            {
+              "fila": 1523
+            }
+          ],
+          "nota": "Ficha técnica no informada en el documento."
+        },
+        {
+          "etiqueta": "Tendencias · voto potencial · Patricia Bullrich · Seguramente lo vote",
+          "consultora": "Tendencias",
+          "celdas": [
+            {
+              "fila": 1524
+            }
+          ],
+          "nota": "Ficha técnica no informada en el documento."
+        },
+        {
+          "etiqueta": "Tendencias · voto potencial · Patricia Bullrich · Podría votarla",
+          "consultora": "Tendencias",
+          "celdas": [
+            {
+              "fila": 1525
+            }
+          ],
+          "nota": "Ficha técnica no informada en el documento."
+        },
+        {
+          "etiqueta": "Tendencias · voto potencial · Patricia Bullrich · No lo sé",
+          "consultora": "Tendencias",
+          "celdas": [
+            {
+              "fila": 1526
+            }
+          ],
+          "nota": "Ficha técnica no informada en el documento."
+        },
+        {
+          "etiqueta": "PoliTech · voto presidencial · Javier Milei",
+          "consultora": "PoliTech",
+          "celdas": [
+            {
+              "fuente_complementaria": "VOTO_POLITECH_NOV_MILEI"
+            }
+          ],
+          "nota": "Publicación de PoliTech del 5/11. Campo y n=1.552 contrastados con la cobertura secundaria."
+        },
+        {
+          "etiqueta": "PoliTech · voto presidencial · Axel Kicillof",
+          "consultora": "PoliTech",
+          "celdas": [
+            {
+              "fuente_complementaria": "VOTO_POLITECH_NOV_KICILLOF"
+            }
+          ],
+          "nota": "Publicación de PoliTech del 5/11. Campo y n=1.552 contrastados con la cobertura secundaria."
+        },
+        {
+          "etiqueta": "Synopsis · balotaje · Javier Milei",
+          "consultora": "Synopsis",
+          "evidencia": "BAJA",
+          "celdas": [
+            {
+              "fuente_complementaria": "BAL_SYNOPSIS_OCT_MILEI"
+            }
+          ],
+          "nota": "Corte de campo de octubre informado por _EncuestAR_. Ficha original pendiente."
+        },
+        {
+          "etiqueta": "Synopsis · balotaje · Axel Kicillof",
+          "consultora": "Synopsis",
+          "evidencia": "BAJA",
+          "celdas": [
+            {
+              "fuente_complementaria": "BAL_SYNOPSIS_OCT_KICILLOF"
+            }
+          ],
+          "nota": "Corte de campo de octubre informado por _EncuestAR_. Ficha original pendiente."
         }
       ]
     },
@@ -1225,6 +1525,9 @@
           "celdas": [
             {
               "fila": 1133
+            },
+            {
+              "fila": 1468
             }
           ],
           "nota": "respuesta múltiple (hasta 3)"
@@ -1235,6 +1538,9 @@
           "celdas": [
             {
               "fila": 1134
+            },
+            {
+              "fila": 1469
             }
           ],
           "nota": ""
@@ -1245,6 +1551,9 @@
           "celdas": [
             {
               "fila": 1135
+            },
+            {
+              "fila": 1470
             }
           ],
           "nota": ""
@@ -1255,6 +1564,9 @@
           "celdas": [
             {
               "fila": 1136
+            },
+            {
+              "fila": 1471
             }
           ],
           "nota": ""
@@ -1265,6 +1577,9 @@
           "celdas": [
             {
               "fila": 1137
+            },
+            {
+              "fila": 1472
             }
           ],
           "nota": ""
@@ -1328,6 +1643,106 @@
             }
           ],
           "nota": ""
+        },
+        {
+          "etiqueta": "Zubán Córdoba · economía al servicio de la persona · Acuerdo",
+          "consultora": "Zubán Córdoba",
+          "celdas": [
+            {
+              "fila": 1438
+            }
+          ],
+          "nota": ""
+        },
+        {
+          "etiqueta": "Zubán Córdoba · economía al servicio de la persona · Desacuerdo",
+          "consultora": "Zubán Córdoba",
+          "celdas": [
+            {
+              "fila": 1439
+            }
+          ],
+          "nota": ""
+        },
+        {
+          "etiqueta": "Zubán Córdoba · economía al servicio de la persona · No sabe",
+          "consultora": "Zubán Córdoba",
+          "celdas": [
+            {
+              "fila": 1440
+            }
+          ],
+          "nota": ""
+        },
+        {
+          "etiqueta": "Zubán Córdoba · democracia y palabra · Acuerdo",
+          "consultora": "Zubán Córdoba",
+          "celdas": [
+            {
+              "fila": 1441
+            }
+          ],
+          "nota": ""
+        },
+        {
+          "etiqueta": "Zubán Córdoba · democracia y palabra · Desacuerdo",
+          "consultora": "Zubán Córdoba",
+          "celdas": [
+            {
+              "fila": 1442
+            }
+          ],
+          "nota": ""
+        },
+        {
+          "etiqueta": "Zubán Córdoba · democracia y palabra · No sabe",
+          "consultora": "Zubán Córdoba",
+          "celdas": [
+            {
+              "fila": 1443
+            }
+          ],
+          "nota": ""
+        },
+        {
+          "etiqueta": "Tendencias · represión frente al Congreso · Rechazo la represión",
+          "consultora": "Tendencias",
+          "celdas": [
+            {
+              "fila": 1512
+            }
+          ],
+          "nota": "Ficha técnica no informada en el documento."
+        },
+        {
+          "etiqueta": "Tendencias · represión frente al Congreso · La policía responde las agresiones",
+          "consultora": "Tendencias",
+          "celdas": [
+            {
+              "fila": 1513
+            }
+          ],
+          "nota": "Ficha técnica no informada en el documento."
+        },
+        {
+          "etiqueta": "Tendencias · represión frente al Congreso · Apruebo la represión",
+          "consultora": "Tendencias",
+          "celdas": [
+            {
+              "fila": 1514
+            }
+          ],
+          "nota": "Ficha técnica no informada en el documento."
+        },
+        {
+          "etiqueta": "Tendencias · represión frente al Congreso · No tengo opinión",
+          "consultora": "Tendencias",
+          "celdas": [
+            {
+              "fila": 1515
+            }
+          ],
+          "nota": "Ficha técnica no informada en el documento."
         }
       ]
     },
@@ -1414,6 +1829,216 @@
             }
           ],
           "nota": "oct: campo 5–28/9 · nov: campo 8–26/10 (mes enunciado por QMonitor)"
+        },
+        {
+          "etiqueta": "Zentrix · economía personal · Muy buena",
+          "consultora": "Zentrix",
+          "celdas": [
+            {
+              "fila": 1444
+            }
+          ],
+          "nota": ""
+        },
+        {
+          "etiqueta": "Zentrix · economía personal · Buena",
+          "consultora": "Zentrix",
+          "celdas": [
+            {
+              "fila": 1445
+            }
+          ],
+          "nota": ""
+        },
+        {
+          "etiqueta": "Zentrix · economía personal · Regular",
+          "consultora": "Zentrix",
+          "celdas": [
+            {
+              "fila": 1446
+            }
+          ],
+          "nota": ""
+        },
+        {
+          "etiqueta": "Zentrix · economía personal · Mala",
+          "consultora": "Zentrix",
+          "celdas": [
+            {
+              "fila": 1447
+            }
+          ],
+          "nota": ""
+        },
+        {
+          "etiqueta": "Zentrix · economía personal · Muy mala",
+          "consultora": "Zentrix",
+          "celdas": [
+            {
+              "fila": 1448
+            }
+          ],
+          "nota": ""
+        },
+        {
+          "etiqueta": "Zentrix · economía del país · Muy buena",
+          "consultora": "Zentrix",
+          "celdas": [
+            {
+              "fila": 1449
+            }
+          ],
+          "nota": ""
+        },
+        {
+          "etiqueta": "Zentrix · economía del país · Buena",
+          "consultora": "Zentrix",
+          "celdas": [
+            {
+              "fila": 1450
+            }
+          ],
+          "nota": ""
+        },
+        {
+          "etiqueta": "Zentrix · economía del país · Regular",
+          "consultora": "Zentrix",
+          "celdas": [
+            {
+              "fila": 1451
+            }
+          ],
+          "nota": ""
+        },
+        {
+          "etiqueta": "Zentrix · economía del país · Mala",
+          "consultora": "Zentrix",
+          "celdas": [
+            {
+              "fila": 1452
+            }
+          ],
+          "nota": ""
+        },
+        {
+          "etiqueta": "Zentrix · economía del país · Muy mala",
+          "consultora": "Zentrix",
+          "celdas": [
+            {
+              "fila": 1453
+            }
+          ],
+          "nota": ""
+        },
+        {
+          "etiqueta": "Zentrix · credibilidad del INDEC · Sí",
+          "consultora": "Zentrix",
+          "celdas": [
+            {
+              "fila": 1454
+            }
+          ],
+          "nota": ""
+        },
+        {
+          "etiqueta": "Zentrix · credibilidad del INDEC · No",
+          "consultora": "Zentrix",
+          "celdas": [
+            {
+              "fila": 1455
+            }
+          ],
+          "nota": ""
+        },
+        {
+          "etiqueta": "Zentrix · credibilidad del INDEC · NS/NC",
+          "consultora": "Zentrix",
+          "celdas": [
+            {
+              "fila": 1456
+            }
+          ],
+          "nota": ""
+        },
+        {
+          "etiqueta": "Zentrix · salario frente a la inflación · Sí",
+          "consultora": "Zentrix",
+          "celdas": [
+            {
+              "fila": 1457
+            }
+          ],
+          "nota": ""
+        },
+        {
+          "etiqueta": "Zentrix · salario frente a la inflación · No",
+          "consultora": "Zentrix",
+          "celdas": [
+            {
+              "fila": 1458
+            }
+          ],
+          "nota": ""
+        },
+        {
+          "etiqueta": "Zentrix · salario frente a la inflación · NS/NC",
+          "consultora": "Zentrix",
+          "celdas": [
+            {
+              "fila": 1459
+            }
+          ],
+          "nota": ""
+        },
+        {
+          "etiqueta": "Proyección · economía familiar · Empeoró + Se mantuvo igual de mal",
+          "consultora": "Proyección",
+          "celdas": [
+            {
+              "fila": 1466
+            }
+          ],
+          "nota": ""
+        },
+        {
+          "etiqueta": "Tendencias · economía familiar · No llega a fin de mes",
+          "consultora": "Tendencias",
+          "celdas": [
+            {
+              "fila": 1504
+            }
+          ],
+          "nota": "Ficha técnica no informada en el documento."
+        },
+        {
+          "etiqueta": "Tendencias · economía familiar · Para llegar a fin de mes tuvo que recortar gastos",
+          "consultora": "Tendencias",
+          "celdas": [
+            {
+              "fila": 1505
+            }
+          ],
+          "nota": "Ficha técnica no informada en el documento."
+        },
+        {
+          "etiqueta": "Tendencias · economía familiar · Llega a fin de mes pero ya no puede ahorrar",
+          "consultora": "Tendencias",
+          "celdas": [
+            {
+              "fila": 1506
+            }
+          ],
+          "nota": "Ficha técnica no informada en el documento."
+        },
+        {
+          "etiqueta": "Tendencias · economía familiar · Llega a fin de mes y puede ahorrar",
+          "consultora": "Tendencias",
+          "celdas": [
+            {
+              "fila": 1507
+            }
+          ],
+          "nota": "Ficha técnica no informada en el documento."
         }
       ]
     },
@@ -1464,6 +2089,56 @@
             }
           ],
           "nota": ""
+        },
+        {
+          "etiqueta": "Proyección · expectativa económica a 6 meses · Peor + Igual de mal",
+          "consultora": "Proyección",
+          "celdas": [
+            {
+              "fila": 1467
+            }
+          ],
+          "nota": ""
+        },
+        {
+          "etiqueta": "Tendencias · expectativa económica a 12 meses · Creo que estará peor",
+          "consultora": "Tendencias",
+          "celdas": [
+            {
+              "fila": 1508
+            }
+          ],
+          "nota": "Ficha técnica no informada en el documento."
+        },
+        {
+          "etiqueta": "Tendencias · expectativa económica a 12 meses · Creo que estará mejor",
+          "consultora": "Tendencias",
+          "celdas": [
+            {
+              "fila": 1509
+            }
+          ],
+          "nota": "Ficha técnica no informada en el documento."
+        },
+        {
+          "etiqueta": "Tendencias · expectativa económica a 12 meses · Creo que estará igual",
+          "consultora": "Tendencias",
+          "celdas": [
+            {
+              "fila": 1510
+            }
+          ],
+          "nota": "Ficha técnica no informada en el documento."
+        },
+        {
+          "etiqueta": "Tendencias · expectativa económica a 12 meses · No sé",
+          "consultora": "Tendencias",
+          "celdas": [
+            {
+              "fila": 1511
+            }
+          ],
+          "nota": "Ficha técnica no informada en el documento."
         }
       ]
     },
@@ -1498,6 +2173,56 @@
           "celdas": [
             {
               "fila": 1332
+            }
+          ],
+          "nota": ""
+        },
+        {
+          "etiqueta": "Proyección · gestión nacional · no sabe · No lo sé",
+          "consultora": "Proyección",
+          "celdas": [
+            {
+              "fila": 1462
+            }
+          ],
+          "nota": ""
+        },
+        {
+          "etiqueta": "Proyección · rumbo del país · Equivocado + Muy equivocado",
+          "consultora": "Proyección",
+          "celdas": [
+            {
+              "fila": 1463
+            }
+          ],
+          "nota": ""
+        },
+        {
+          "etiqueta": "Proyección · rumbo del país · Correcto + Muy correcto",
+          "consultora": "Proyección",
+          "celdas": [
+            {
+              "fila": 1464
+            }
+          ],
+          "nota": ""
+        },
+        {
+          "etiqueta": "Proyección · rumbo del país · No lo sé",
+          "consultora": "Proyección",
+          "celdas": [
+            {
+              "fila": 1465
+            }
+          ],
+          "nota": ""
+        },
+        {
+          "etiqueta": "Proyección · ICP · índice total",
+          "consultora": "Proyección",
+          "celdas": [
+            {
+              "fila": 1497
             }
           ],
           "nota": ""
@@ -1567,6 +2292,136 @@
             }
           ],
           "nota": "oct: campo 5–28/9 · nov: campo 8–26/10"
+        },
+        {
+          "etiqueta": "Zubán Córdoba · León XIV · Positiva",
+          "consultora": "Zubán Córdoba",
+          "celdas": [
+            {
+              "fila": 1434
+            }
+          ],
+          "nota": "Pregunta original ilegible; sin comparación histórica."
+        },
+        {
+          "etiqueta": "Zubán Córdoba · León XIV · Negativa",
+          "consultora": "Zubán Córdoba",
+          "celdas": [
+            {
+              "fila": 1435
+            }
+          ],
+          "nota": "Pregunta original ilegible; sin comparación histórica."
+        },
+        {
+          "etiqueta": "Zubán Córdoba · León XIV · No conoce",
+          "consultora": "Zubán Córdoba",
+          "celdas": [
+            {
+              "fila": 1436
+            }
+          ],
+          "nota": "Pregunta original ilegible; sin comparación histórica."
+        },
+        {
+          "etiqueta": "Zubán Córdoba · León XIV · No sabe",
+          "consultora": "Zubán Córdoba",
+          "celdas": [
+            {
+              "fila": 1437
+            }
+          ],
+          "nota": "Pregunta original ilegible; sin comparación histórica."
+        },
+        {
+          "etiqueta": "Proyección · Patricia Bullrich · Positiva (muy buena + buena)",
+          "consultora": "Proyección",
+          "celdas": [
+            {
+              "fila": 1475
+            }
+          ],
+          "nota": ""
+        },
+        {
+          "etiqueta": "Proyección · Patricia Bullrich · Negativa (mala + muy mala)",
+          "consultora": "Proyección",
+          "celdas": [
+            {
+              "fila": 1476
+            }
+          ],
+          "nota": ""
+        },
+        {
+          "etiqueta": "Proyección · Axel Kicillof · Positiva (muy buena + buena)",
+          "consultora": "Proyección",
+          "celdas": [
+            {
+              "fila": 1477
+            }
+          ],
+          "nota": ""
+        },
+        {
+          "etiqueta": "Proyección · Axel Kicillof · Negativa (mala + muy mala)",
+          "consultora": "Proyección",
+          "celdas": [
+            {
+              "fila": 1478
+            }
+          ],
+          "nota": ""
+        },
+        {
+          "etiqueta": "Proyección · Myriam Bregman · Positiva (muy buena + buena)",
+          "consultora": "Proyección",
+          "celdas": [
+            {
+              "fila": 1479
+            }
+          ],
+          "nota": ""
+        },
+        {
+          "etiqueta": "Proyección · Myriam Bregman · Negativa (mala + muy mala)",
+          "consultora": "Proyección",
+          "celdas": [
+            {
+              "fila": 1480
+            }
+          ],
+          "nota": ""
+        },
+        {
+          "etiqueta": "Tendencias · León XIV · Total positiva (positiva + regular positiva)",
+          "consultora": "Tendencias",
+          "celdas": [
+            {
+              "fila": 1516
+            }
+          ],
+          "nota": "Ficha técnica no informada en el documento."
+        },
+        {
+          "etiqueta": "Tendencias · León XIV · Total negativa (regular negativa + negativa)",
+          "consultora": "Tendencias",
+          "celdas": [
+            {
+              "fila": 1517
+            }
+          ],
+          "nota": "Ficha técnica no informada en el documento."
+        },
+        {
+          "etiqueta": "Tendencias · León XIV · No sabe / no conoce",
+          "consultora": "Tendencias",
+          "celdas": [
+            {
+              "fila": 1518
+            }
+          ],
+          "nota": "Ficha técnica no informada en el documento."
         }
       ]
     },
@@ -1771,6 +2626,151 @@
             }
           ],
           "nota": ""
+        },
+        {
+          "etiqueta": "Tendencias · gestión provincial agregada · Total negativa",
+          "consultora": "Tendencias",
+          "celdas": [
+            {
+              "fila": 1527
+            }
+          ],
+          "nota": "Ficha técnica no informada en el documento."
+        },
+        {
+          "etiqueta": "Tendencias · gestión provincial agregada · Total positiva",
+          "consultora": "Tendencias",
+          "celdas": [
+            {
+              "fila": 1528
+            }
+          ],
+          "nota": "Ficha técnica no informada en el documento."
+        },
+        {
+          "etiqueta": "PoliTech · Río Negro · voto provincial · La Libertad Avanza",
+          "consultora": "PoliTech",
+          "evidencia": "BAJA",
+          "celdas": [
+            {
+              "fuente_complementaria": "VOTO_POLITECH_RN_JUL_LLA"
+            }
+          ],
+          "nota": "Encuesta provincial de julio (n=1.023), citada en el informe de contexto del 27/09."
+        },
+        {
+          "etiqueta": "PoliTech · Río Negro · voto provincial · Peronismo",
+          "consultora": "PoliTech",
+          "evidencia": "BAJA",
+          "celdas": [
+            {
+              "fuente_complementaria": "VOTO_POLITECH_RN_JUL_PJ"
+            }
+          ],
+          "nota": "Encuesta provincial de julio (n=1.023), citada en el informe de contexto del 27/09."
+        },
+        {
+          "etiqueta": "PoliTech · Río Negro · voto provincial · Juntos Somos Río Negro",
+          "consultora": "PoliTech",
+          "evidencia": "BAJA",
+          "celdas": [
+            {
+              "fuente_complementaria": "VOTO_POLITECH_RN_JUL_JSRN"
+            }
+          ],
+          "nota": "Encuesta provincial de julio (n=1.023), citada en el informe de contexto del 27/09."
+        }
+      ],
+      "nota": "PoliTech publicó un informe de contexto de Río Negro en septiembre basado en campo de julio."
+    },
+    {
+      "tab": "indicadores",
+      "modulo": "Economía percibida",
+      "titulo": "IPE de Proyección · puntos (1–5)",
+      "filas": [
+        {
+          "etiqueta": "Proyección · IPE · índice total",
+          "consultora": "Proyección",
+          "celdas": [
+            {
+              "fuente_complementaria": "IPE_PROYECCION_SEP"
+            },
+            {
+              "fila": 1130
+            },
+            {
+              "fila": 1498
+            }
+          ],
+          "nota": "Septiembre (2,07) y octubre (2,06) cotejados con los informes originales."
+        }
+      ]
+    },
+    {
+      "tab": "voto",
+      "modulo": "Intención de voto",
+      "titulo": "Proyección · balotaje Milei–Kicillof",
+      "nota": "Serie nacional de segunda vuelta hipotética, separada del voto de primera vuelta.",
+      "filas": [
+        {
+          "etiqueta": "Proyección · Javier Milei",
+          "consultora": "Proyección",
+          "celdas": [
+            {
+              "fuente_complementaria": "BAL_PROYECCION_SEP_MILEI"
+            },
+            {
+              "fuente_complementaria": "BAL_PROYECCION_OCT_MILEI"
+            },
+            {
+              "fila": 1493
+            }
+          ]
+        },
+        {
+          "etiqueta": "Proyección · Axel Kicillof",
+          "consultora": "Proyección",
+          "celdas": [
+            {
+              "fuente_complementaria": "BAL_PROYECCION_SEP_KICILLOF"
+            },
+            {
+              "fuente_complementaria": "BAL_PROYECCION_OCT_KICILLOF"
+            },
+            {
+              "fila": 1494
+            }
+          ]
+        },
+        {
+          "etiqueta": "Proyección · En blanco / impugnado",
+          "consultora": "Proyección",
+          "celdas": [
+            {
+              "fuente_complementaria": "BAL_PROYECCION_SEP_BLANCO"
+            },
+            {
+              "fuente_complementaria": "BAL_PROYECCION_OCT_BLANCO"
+            },
+            {
+              "fila": 1495
+            }
+          ]
+        },
+        {
+          "etiqueta": "Proyección · No lo sé",
+          "consultora": "Proyección",
+          "celdas": [
+            {
+              "fuente_complementaria": "BAL_PROYECCION_SEP_NS"
+            },
+            {
+              "fuente_complementaria": "BAL_PROYECCION_OCT_NS"
+            },
+            {
+              "fila": 1496
+            }
+          ]
         }
       ]
     }
