@@ -1,4 +1,5 @@
 import csv, json, subprocess, sys, unittest
+from datetime import date
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -39,7 +40,11 @@ class RadarDataTests(unittest.TestCase):
     def test_noviembre_parcial_presente(self):
         for eje in ('MESI', 'MI', 'MG', 'MV'):
             self.assertEqual(self.D[eje][-1], 'Nov-26')
-        self.assertIn('corte al 12/11', self.D['META']['corte']['etiqueta'])
+        corte = self.D['META']['corte']
+        fecha = date.fromisoformat(corte['fecha'])
+        self.assertIn(f'corte al {fecha:%d/%m/%Y}', corte['etiqueta'])
+        html = (ROOT / 'index.html').read_text(encoding='utf-8')
+        self.assertIn(f'corte al {fecha:%d/%m}</small>', html)
 
     def test_html_no_trae_valores_embebidos(self):
         html = (ROOT / 'index.html').read_text(encoding='utf-8')
