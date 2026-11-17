@@ -761,7 +761,7 @@
     57.2,
     55.7,
     null,
-    56,
+    56.8,
     null
    ],
    "pos": [
@@ -770,7 +770,7 @@
     null,
     null,
     null,
-    36,
+    34.9,
     null
    ]
   },
@@ -1796,6 +1796,24 @@
    "rotulo": "FUENTE SECUNDARIA · EncuestAR · https://encuestas-argentinas.com/encuestas/ · fuente original: Zuban Córdoba",
    "modulo": "Imagen Milei",
    "fuente_original": "Zuban Córdoba"
+  },
+  {
+   "ruta": "GESTION.M&F.desaprob",
+   "mes": "Oct-26",
+   "valor": 58.1,
+   "fila": 1205,
+   "rotulo": "FUENTE SECUNDARIA · encuestas-argentinas.com · https://encuestas-argentinas.com/encuestas/ (registro sin URL propia; hilo X: https://x.com/_EncuestAR_/status/2109835471689777618) · consultado 2026-11-17 · fuente original: Management & Fit",
+   "modulo": "Gestión nacional",
+   "fuente_original": "Management & Fit"
+  },
+  {
+   "ruta": "GESTION.M&F.aprob",
+   "mes": "Oct-26",
+   "valor": 36.6,
+   "fila": 1576,
+   "rotulo": "FUENTE SECUNDARIA · encuestas-argentinas.com · https://encuestas-argentinas.com/encuestas/ (registro sin URL propia; hilo X: https://x.com/_EncuestAR_/status/2109835471689777618) · consultado 2026-11-17 · fuente original: Management & Fit",
+   "modulo": "Gestión nacional",
+   "fuente_original": "Management & Fit"
   },
   {
    "ruta": "IPC_IA",
@@ -2879,6 +2897,90 @@
       "delta": null,
       "evidencia": "BAJA",
       "nota": "Corte de campo de octubre informado por _EncuestAR_. Ficha original pendiente."
+     },
+     {
+      "etiqueta": "Equipo Mide · oficialismo vs. oposición · Oposición",
+      "consultora": "Equipo Mide",
+      "celdas": {
+       "Oct-26": {
+        "v": 42,
+        "fila": 1569,
+        "base": "nivel2_indicadores",
+        "file_id": "148N9Me0EYMRSh6J3cBM7pwOM4bYPzTjO",
+        "clave_fuente": "",
+        "url_fuente": "",
+        "campo": "2026-09-18→2026-09-25",
+        "secundaria": "",
+        "unidad": "%"
+       }
+      },
+      "n": 1,
+      "delta": null,
+      "evidencia": "BAJA",
+      "nota": "Pregunta genérica («Si hoy hubiera elecciones presidenciales, usted:») sin candidatos nombrados: distinta de voto por espacio, no se encadena. Cifras tomadas de la lámina «El voto 2027» (imagen aportada por la usuaria); verificar contra el capítulo electoral del PDF."
+     },
+     {
+      "etiqueta": "Equipo Mide · oficialismo vs. oposición · Oficialismo",
+      "consultora": "Equipo Mide",
+      "celdas": {
+       "Oct-26": {
+        "v": 34,
+        "fila": 1570,
+        "base": "nivel2_indicadores",
+        "file_id": "148N9Me0EYMRSh6J3cBM7pwOM4bYPzTjO",
+        "clave_fuente": "",
+        "url_fuente": "",
+        "campo": "2026-09-18→2026-09-25",
+        "secundaria": "",
+        "unidad": "%"
+       }
+      },
+      "n": 1,
+      "delta": null,
+      "evidencia": "BAJA",
+      "nota": "Pregunta genérica («Si hoy hubiera elecciones presidenciales, usted:») sin candidatos nombrados: distinta de voto por espacio, no se encadena. Cifras tomadas de la lámina «El voto 2027» (imagen aportada por la usuaria); verificar contra el capítulo electoral del PDF."
+     },
+     {
+      "etiqueta": "Equipo Mide · oficialismo vs. oposición · No votaría",
+      "consultora": "Equipo Mide",
+      "celdas": {
+       "Oct-26": {
+        "v": 12,
+        "fila": 1571,
+        "base": "nivel2_indicadores",
+        "file_id": "148N9Me0EYMRSh6J3cBM7pwOM4bYPzTjO",
+        "clave_fuente": "",
+        "url_fuente": "",
+        "campo": "2026-09-18→2026-09-25",
+        "secundaria": "",
+        "unidad": "%"
+       }
+      },
+      "n": 1,
+      "delta": null,
+      "evidencia": "BAJA",
+      "nota": "Pregunta genérica («Si hoy hubiera elecciones presidenciales, usted:») sin candidatos nombrados: distinta de voto por espacio, no se encadena. Cifras tomadas de la lámina «El voto 2027» (imagen aportada por la usuaria); verificar contra el capítulo electoral del PDF."
+     },
+     {
+      "etiqueta": "Equipo Mide · oficialismo vs. oposición · Ns/Nc",
+      "consultora": "Equipo Mide",
+      "celdas": {
+       "Oct-26": {
+        "v": 12,
+        "fila": 1572,
+        "base": "nivel2_indicadores",
+        "file_id": "148N9Me0EYMRSh6J3cBM7pwOM4bYPzTjO",
+        "clave_fuente": "",
+        "url_fuente": "",
+        "campo": "2026-09-18→2026-09-25",
+        "secundaria": "",
+        "unidad": "%"
+       }
+      },
+      "n": 1,
+      "delta": null,
+      "evidencia": "BAJA",
+      "nota": "Pregunta genérica («Si hoy hubiera elecciones presidenciales, usted:») sin candidatos nombrados: distinta de voto por espacio, no se encadena. Cifras tomadas de la lámina «El voto 2027» (imagen aportada por la usuaria); verificar contra el capítulo electoral del PDF."
      }
     ]
    },
@@ -5894,6 +5996,20 @@
    "rotulo": "FUENTE SECUNDARIA · EncuestAR · https://encuestas-argentinas.com/encuestas/ · fuente original: Zuban Córdoba"
   },
   {
+   "indicador": "GESTION.M&F.desaprob",
+   "mes": "Oct-26",
+   "valor": 58.1,
+   "fila": 1205,
+   "rotulo": "FUENTE SECUNDARIA · encuestas-argentinas.com · https://encuestas-argentinas.com/encuestas/ (registro sin URL propia; hilo X: https://x.com/_EncuestAR_/status/2109835471689777618) · consultado 2026-11-17 · fuente original: Management & Fit"
+  },
+  {
+   "indicador": "GESTION.M&F.aprob",
+   "mes": "Oct-26",
+   "valor": 36.6,
+   "fila": 1576,
+   "rotulo": "FUENTE SECUNDARIA · encuestas-argentinas.com · https://encuestas-argentinas.com/encuestas/ (registro sin URL propia; hilo X: https://x.com/_EncuestAR_/status/2109835471689777618) · consultado 2026-11-17 · fuente original: Management & Fit"
+  },
+  {
    "indicador": "IPC Nación interanual",
    "mes": "Oct-26",
    "valor": 33.1,
@@ -7004,16 +7120,16 @@
      "tipo": "serie",
      "modulo": "Imagen Milei",
      "etiqueta": "IMG · Giacobbe · neg",
-     "valor": 56,
+     "valor": 56.8,
      "anterior": null,
      "estado": "nuevo",
      "consultora": "Giacobbe",
      "fila": 1206,
      "base": "nivel2_indicadores",
-     "file_id": "",
-     "campo": "2026-09-30→2026-10-05",
+     "file_id": "1AY_KfEN_Vj6Iku_p46l6dAT_WCk6Po9o",
+     "campo": "2026-10-28→2026-11-02",
      "unidad": "%",
-     "nota": "",
+     "nota": "Informe primario Giacobbe octubre (PDF Drive 1AY_KfEN, p. 2). Corrige 56 → 56,8.",
      "secundaria": "",
      "categoria": "Negativa"
     },
@@ -7021,18 +7137,18 @@
      "tipo": "serie",
      "modulo": "Imagen Milei",
      "etiqueta": "IMG · Giacobbe · pos",
-     "valor": 36,
+     "valor": 34.9,
      "anterior": null,
      "estado": "nuevo",
      "consultora": "Giacobbe",
-     "fila": 321,
-     "base": "base_maestra_2026",
-     "file_id": "",
-     "campo": "",
+     "fila": 1573,
+     "base": "nivel2_indicadores",
+     "file_id": "1AY_KfEN_Vj6Iku_p46l6dAT_WCk6Po9o",
+     "campo": "2026-10-28→2026-11-02",
      "unidad": "%",
-     "nota": "valor citado en resultados_clave de N1; sin fila N2",
+     "nota": "Informe primario Giacobbe octubre (PDF Drive 1AY_KfEN, p. 2), campo 28/10–2/11/2026, 2.500 casos. Reemplaza la carga inicial de EncuestAR (36).",
      "secundaria": "",
-     "categoria": "Pos 36%"
+     "categoria": "Positiva"
     },
     {
      "tipo": "serie",
@@ -7282,11 +7398,11 @@
      "consultora": "Management & Fit",
      "fila": 1205,
      "base": "nivel2_indicadores",
-     "file_id": "",
+     "file_id": "No aplica (fuente secundaria)",
      "campo": "2026-09-14→2026-09-28",
      "unidad": "%",
      "nota": "mes 10 según la base: se aplica la fecha indicada por el informe/publicación de la consultora (criterio confirmado 11/11); campo en septiembre",
-     "secundaria": "",
+     "secundaria": "FUENTE SECUNDARIA · encuestas-argentinas.com · https://encuestas-argentinas.com/encuestas/ (registro sin URL propia; hilo X: https://x.com/_EncuestAR_/status/2109835471689777618) · consultado 2026-11-17 · fuente original: Management & Fit",
      "categoria": "Negativa / Desaprueba"
     },
     {
@@ -7297,14 +7413,14 @@
      "anterior": null,
      "estado": "nuevo",
      "consultora": "Management & Fit",
-     "fila": 320,
-     "base": "base_maestra_2026",
-     "file_id": "",
-     "campo": "",
+     "fila": 1576,
+     "base": "nivel2_indicadores",
+     "file_id": "No aplica (fuente secundaria)",
+     "campo": "2026-09-14→2026-09-28",
      "unidad": "%",
-     "nota": "sin fila N2; valor citado en resultados_clave de N1 (mes 10 según la base)",
-     "secundaria": "",
-     "categoria": "Pos 36,6%"
+     "nota": "mes 10 según la base (criterio confirmado 11/11); campo en septiembre. Fuente secundaria; universo no acreditado.",
+     "secundaria": "FUENTE SECUNDARIA · encuestas-argentinas.com · https://encuestas-argentinas.com/encuestas/ (registro sin URL propia; hilo X: https://x.com/_EncuestAR_/status/2109835471689777618) · consultado 2026-11-17 · fuente original: Management & Fit",
+     "categoria": "Positiva / Aprueba"
     },
     {
      "tipo": "serie",
@@ -8075,7 +8191,7 @@
      "consultora": "Equipo Mide",
      "fila": 324,
      "base": "base_maestra_2026",
-     "file_id": "",
+     "file_id": "148N9Me0EYMRSh6J3cBM7pwOM4bYPzTjO",
      "campo": "",
      "unidad": "%",
      "nota": "sin fila N2; valor citado en resultados_clave de N1 (mes 10 según la base)",
@@ -8537,7 +8653,6 @@
      "Zuban Córdoba"
     ],
     "filas": [
-     "BA:320",
      "NI:1094",
      "NI:1095",
      "NI:1112",
@@ -8552,7 +8667,8 @@
      "NI:1229",
      "NI:1239",
      "NI:1243",
-     "NI:1246"
+     "NI:1246",
+     "NI:1576"
     ],
     "pendiente": [
      "Proyección octubre: solo la valoración negativa (52,4%) está en N2. Necesita: cargar la positiva del ICP de octubre"
@@ -8574,7 +8690,6 @@
     "pendiente": []
    },
    "bases": [
-    "base_maestra_2026",
     "nivel2_indicadores"
    ]
   },
@@ -8595,7 +8710,6 @@
      "Zuban Córdoba"
     ],
     "filas": [
-     "BA:321",
      "NI:1092",
      "NI:1093",
      "NI:1114",
@@ -8612,7 +8726,8 @@
      "NI:1337",
      "NI:1364",
      "NI:1550",
-     "NI:1557"
+     "NI:1557",
+     "NI:1573"
     ],
     "pendiente": [
      "CB Global Data octubre (ranking LATAM): valor en gráfico, no extraíble. Necesita: relevar a mano (N2 fila 1177)"
@@ -8634,7 +8749,6 @@
     "pendiente": []
    },
    "bases": [
-    "base_maestra_2026",
     "nivel2_indicadores"
    ]
   },
@@ -8733,7 +8847,11 @@
      "NI:1523",
      "NI:1524",
      "NI:1525",
-     "NI:1526"
+     "NI:1526",
+     "NI:1569",
+     "NI:1570",
+     "NI:1571",
+     "NI:1572"
     ],
     "pendiente": [
      "Synopsis, ola con campo 12–17/10 (difundida 31/10): Peronismo 35 / LLA 33,6, localizada en encuestas-argentinas.com (registro https://x.com/_EncuestAR_/status/2116669248479047801, consultado 2026-11-11). Candidato pendiente: no hay informe en Drive ni enlace al original, y no se puede acreditar pregunta ni mes enunciado por Synopsis. No se carga y no reemplaza la ola 8–15/9 que hoy ocupa oct-26 (N2 fila 1208). Necesita: informe original de Synopsis de esa ola, para fijar el mes que enuncia"
@@ -9062,16 +9180,17 @@
    "data/bases/radar_fuentes_complementarias.tsv",
    "data/radar_mapping.json"
   ],
-  "valores_trazados": 366,
+  "valores_trazados": 370,
   "nuevos": 121,
   "corregidos": 15,
   "retirados": 0,
   "puntuales": 0,
-  "en_series_de_evolucion": 184,
+  "en_series_de_evolucion": 188,
   "fuente_secundaria": [
    "FUENTE SECUNDARIA · Bache3000 · informe de contexto de septiembre con campo de julio",
    "FUENTE SECUNDARIA · EncuestAR · https://encuestas-argentinas.com/encuestas/ · fuente original: Zuban Córdoba",
    "FUENTE SECUNDARIA · _EncuestAR_ · difusión 31/10/2026 · ficha original pendiente",
+   "FUENTE SECUNDARIA · encuestas-argentinas.com · https://encuestas-argentinas.com/encuestas/ (registro sin URL propia; hilo X: https://x.com/_EncuestAR_/status/2109835471689777618) · consultado 2026-11-17 · fuente original: Management & Fit",
    "FUENTE SECUNDARIA · monitorargy.com · https://monitorargy.com/mcp (obtener_serie, id ipc_interanual) · consultado 2026-11-12 · fuente original: INDEC",
    "FUENTE SECUNDARIA · monitorargy.com · https://monitorargy.com/mcp (obtener_serie, id ipc_nivel_general) · consultado 2026-11-12 · fuente original: INDEC · acumulado calculado sobre el nivel general",
    "FUENTE SECUNDARIA · monitorargy.com · https://monitorargy.com/serie/ipc_mensual · consultado 2026-11-11 · fuente original: INDEC"

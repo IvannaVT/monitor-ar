@@ -489,16 +489,15 @@
       "modulo": "Imagen Milei",
       "ruta": "IMG.Giacobbe.neg",
       "eje": "MI",
-      "fila": 1206
+      "fila": 1206,
+      "nota": "Informe primario Giacobbe octubre (PDF Drive 1AY_KfEN, p. 2). Corrige 56 → 56,8."
     },
     {
       "modulo": "Imagen Milei",
       "ruta": "IMG.Giacobbe.pos",
       "eje": "MI",
-      "fila_n1": 321,
-      "mes": "Oct-26",
-      "texto": "Pos 36%",
-      "valor_texto": "36"
+      "fila": 1573,
+      "nota": "Informe primario Giacobbe octubre (PDF Drive 1AY_KfEN, p. 2), campo 28/10–2/11/2026, 2.500 casos. Reemplaza la carga inicial de EncuestAR (36)."
     },
     {
       "modulo": "Imagen Milei",
@@ -602,17 +601,16 @@
       "ruta": "GESTION.M&F.desaprob",
       "eje": "MG",
       "fila": 1205,
-      "nota": "mes 10 según la base: se aplica la fecha indicada por el informe/publicación de la consultora (criterio confirmado 11/11); campo en septiembre"
+      "nota": "mes 10 según la base: se aplica la fecha indicada por el informe/publicación de la consultora (criterio confirmado 11/11); campo en septiembre",
+      "rotulo": "FUENTE SECUNDARIA · encuestas-argentinas.com · https://encuestas-argentinas.com/encuestas/ (registro sin URL propia; hilo X: https://x.com/_EncuestAR_/status/2109835471689777618) · consultado 2026-11-17 · fuente original: Management & Fit"
     },
     {
       "modulo": "Gestión nacional",
       "ruta": "GESTION.M&F.aprob",
       "eje": "MG",
-      "fila_n1": 320,
-      "mes": "Oct-26",
-      "texto": "Pos 36,6%",
-      "valor_texto": "36,6",
-      "nota": "sin fila N2; valor citado en resultados_clave de N1 (mes 10 según la base)"
+      "nota": "mes 10 según la base (criterio confirmado 11/11); campo en septiembre. Fuente secundaria; universo no acreditado.",
+      "fila": 1576,
+      "rotulo": "FUENTE SECUNDARIA · encuestas-argentinas.com · https://encuestas-argentinas.com/encuestas/ (registro sin URL propia; hilo X: https://x.com/_EncuestAR_/status/2109835471689777618) · consultado 2026-11-17 · fuente original: Management & Fit"
     },
     {
       "modulo": "Gestión nacional",
@@ -1650,6 +1648,50 @@
             }
           ],
           "nota": "Corte de campo de octubre informado por _EncuestAR_. Ficha original pendiente."
+        },
+        {
+          "etiqueta": "Equipo Mide · oficialismo vs. oposición · Oposición",
+          "consultora": "Equipo Mide",
+          "celdas": [
+            {
+              "fila": 1569
+            }
+          ],
+          "nota": "Pregunta genérica («Si hoy hubiera elecciones presidenciales, usted:») sin candidatos nombrados: distinta de voto por espacio, no se encadena. Cifras tomadas de la lámina «El voto 2027» (imagen aportada por la usuaria); verificar contra el capítulo electoral del PDF.",
+          "evidencia": "BAJA"
+        },
+        {
+          "etiqueta": "Equipo Mide · oficialismo vs. oposición · Oficialismo",
+          "consultora": "Equipo Mide",
+          "celdas": [
+            {
+              "fila": 1570
+            }
+          ],
+          "nota": "Pregunta genérica («Si hoy hubiera elecciones presidenciales, usted:») sin candidatos nombrados: distinta de voto por espacio, no se encadena. Cifras tomadas de la lámina «El voto 2027» (imagen aportada por la usuaria); verificar contra el capítulo electoral del PDF.",
+          "evidencia": "BAJA"
+        },
+        {
+          "etiqueta": "Equipo Mide · oficialismo vs. oposición · No votaría",
+          "consultora": "Equipo Mide",
+          "celdas": [
+            {
+              "fila": 1571
+            }
+          ],
+          "nota": "Pregunta genérica («Si hoy hubiera elecciones presidenciales, usted:») sin candidatos nombrados: distinta de voto por espacio, no se encadena. Cifras tomadas de la lámina «El voto 2027» (imagen aportada por la usuaria); verificar contra el capítulo electoral del PDF.",
+          "evidencia": "BAJA"
+        },
+        {
+          "etiqueta": "Equipo Mide · oficialismo vs. oposición · Ns/Nc",
+          "consultora": "Equipo Mide",
+          "celdas": [
+            {
+              "fila": 1572
+            }
+          ],
+          "nota": "Pregunta genérica («Si hoy hubiera elecciones presidenciales, usted:») sin candidatos nombrados: distinta de voto por espacio, no se encadena. Cifras tomadas de la lámina «El voto 2027» (imagen aportada por la usuaria); verificar contra el capítulo electoral del PDF.",
+          "evidencia": "BAJA"
         }
       ]
     },
