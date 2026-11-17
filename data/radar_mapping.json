@@ -425,6 +425,76 @@
     },
     {
       "modulo": "Imagen Milei",
+      "ruta": "IMG.Zentrix.pos",
+      "eje": "MI",
+      "fila": 1559
+    },
+    {
+      "modulo": "Imagen Milei",
+      "ruta": "IMG.Zentrix.pos",
+      "eje": "MI",
+      "fila": 1560
+    },
+    {
+      "modulo": "Imagen Milei",
+      "ruta": "IMG.Zentrix.pos",
+      "eje": "MI",
+      "fila": 1561
+    },
+    {
+      "modulo": "Imagen Milei",
+      "ruta": "IMG.Zentrix.pos",
+      "eje": "MI",
+      "fila": 1562
+    },
+    {
+      "modulo": "Imagen Milei",
+      "ruta": "IMG.Zentrix.pos",
+      "eje": "MI",
+      "fila": 1563
+    },
+    {
+      "modulo": "Imagen Milei",
+      "ruta": "IMG.D'Alessio.pos",
+      "eje": "MI",
+      "fila": 1564
+    },
+    {
+      "modulo": "Imagen Milei",
+      "ruta": "IMG.D'Alessio.pos",
+      "eje": "MI",
+      "fila": 1565
+    },
+    {
+      "modulo": "Imagen Milei",
+      "ruta": "IMG.Giacobbe.pos",
+      "eje": "MI",
+      "fila": 1566
+    },
+    {
+      "modulo": "Imagen Milei",
+      "ruta": "IMG.Proyección.pos",
+      "eje": "MI",
+      "fila": 1567,
+      "rotulo": "FUENTE SECUNDARIA · Agencia NOVA · https://www.agencianova.com/nota.asp?id=172809&id_tiponota=4&n=2026_9_19 · fuente original: Proyección Consultores",
+      "nota": "Misma ola que la imagen negativa de la fila 1555."
+    },
+    {
+      "modulo": "Imagen Milei",
+      "ruta": "IMG.Zuban.pos",
+      "eje": "MI",
+      "fila": 1568,
+      "rotulo": "FUENTE SECUNDARIA · EncuestAR · https://encuestas-argentinas.com/encuestas/ · fuente original: Zuban Córdoba",
+      "nota": "Misma ola que la imagen negativa de la fila 1558."
+    },
+    {
+      "modulo": "Imagen Milei",
+      "ruta": "IMG.Giacobbe.pos",
+      "eje": "MI",
+      "fila": 382
+    },
+    {
+      "modulo": "Imagen Milei",
       "ruta": "IMG.Zuban.neg",
       "eje": "MI",
       "fila": 1558,
