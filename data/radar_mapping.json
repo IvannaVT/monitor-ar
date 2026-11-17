@@ -1,9 +1,9 @@
 {
   "_descripcion": "Especificación de qué fila de las bases alimenta cada celda del Radar. No contiene valores: build_radar_data.py los lee de data/bases/*.tsv (extractos de base_maestra_2026 y nivel2_indicadores). Las filas son números de fila de Google Sheets.",
   "corte": {
-    "fecha": "2026-11-16",
+    "fecha": "2026-11-17",
     "mes_parcial": "Nov-26",
-    "etiqueta": "Noviembre 2026 · corte al 16/11/2026",
+    "etiqueta": "Noviembre 2026 · corte al 17/11/2026",
     "base_publicada": "b43fcb8 (index.html publicado en ivannavt.github.io/monitor-ar)"
   },
   "extender_ejes": {
