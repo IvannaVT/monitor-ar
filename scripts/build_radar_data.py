@@ -26,7 +26,9 @@ TAB_DE_MODULO = {
     'Economía percibida': 'indicadores', 'Expectativas': 'indicadores', 'Clima / rumbo': 'indicadores',
     'Gestión nacional': 'imagen', 'Imagen Milei': 'imagen', 'Imagen otros dirigentes': 'imagen',
     'Intención de voto': 'voto', 'Agenda pública': 'agenda', 'Conversación digital': 'sl', 'Territorio': 'semaforo',
+    'GAP CONV–SL': 'gap', 'Semáforo': 'semaforo', 'Indicadores': 'indicadores',
 }
+EJE_DE_GRUPO = {'IMG': 'MI', 'GESTION': 'MG', 'CONS': 'MV'}
 SL_TIPO = {'315': 'Evento puntual', '342': 'Evento puntual', '317': 'Audiencias (PDM)', '355': 'Audiencias (PDM)',
            '345': 'Monitoreo sectorial', '360': 'Escucha de búsquedas', '362': 'Pendiente de relevar', '364': 'Pendiente de relevar'}
 
@@ -89,8 +91,8 @@ def construir():
     complementarias = {r['clave']: r for r in tsv(BASES / 'radar_fuentes_complementarias.tsv')}
     D = copy.deepcopy(hist)
     traza = []
-    # GAP CONV–SL sin intención de voto (SL no mide voto): se retiran 'voto LLA' y 'escenario 2027' (posiciones 9 y 10)
-    D['GAP_STATUS'] = D['GAP_STATUS'][:cfg.get('gap_n_indicadores', len(D['GAP_STATUS']))]
+    # GAP CONV–SL: se reconstruye entero desde cfg['gap_indicadores'] más abajo (paso 6b).
+    D.pop('GAP_STATUS', None)
 
     # 1. ejes nuevos (noviembre, corte parcial)
     for eje, spec in cfg['extender_ejes'].items():
@@ -256,6 +258,79 @@ def construir():
     D['SL_CONSULT_VALS'] = [vals[l] for l in etiquetas] + [otros]
     D['SL_CONSULT_LABELS'] = etiquetas + ['Otros']
 
+    # 6b. GAP CONV–SL y semáforo, resueltos desde las bases (Parte XIII.34-35: una brecha
+    # numérica entre capas nunca se calcula; se muestran las lecturas por separado).
+    def lectura_fila(f):
+        f = str(f)
+        if f not in n2:
+            raise BuildError(f'Fila N2 {f} no está en el extracto')
+        r = n2[f]
+        if r['estado_fila'] != 'ok':
+            raise BuildError(f'Fila N2 {f} marcada {r["estado_fila"]}: no puede alimentar el Radar')
+        anio = 2025 if '_2025_' in r['id_informe'] else 2026
+        return {'valor': num(r['resultado']), 'unidad': r['unidad'], 'mes': etiqueta_mes(r['mes'], anio),
+                'consultora': r['consultora'], 'categoria': r['categoria_respuesta'],
+                'id_indicador': r['id_indicador'], 'fila': int(f), 'base': 'nivel2_indicadores',
+                'file_id': r['archivo_fuente_file_id'],
+                'campo': f"{r['fecha_campo_inicio']}→{r['fecha_campo_fin']}".strip('→')}
+
+    def lectura_serie(grupo, campo):
+        """Último mes con dato de un grupo de consultoras, sin promediar: devuelve el rango."""
+        eje = EJE_DE_GRUPO[grupo]
+        for i in range(len(D[eje]) - 1, -1, -1):
+            vals = {n: s[campo][i] for n, s in D[grupo].items() if s.get(campo) and s[campo][i] is not None}
+            if vals:
+                return {'mes': D[eje][i], 'por_consultora': vals, 'n': len(vals),
+                        'min': min(vals.values()), 'max': max(vals.values()), 'unidad': '%'}
+        return None
+
+    def lectura_simple(serie, eje, unidad='', fuente=''):
+        for i in range(len(D[serie]) - 1, -1, -1):
+            if D[serie][i] is not None:
+                return {'valor': D[serie][i], 'mes': D[eje][i], 'unidad': unidad, 'fuente': fuente}
+        return None
+
+    def resolver_lectura(spec):
+        if not spec:
+            return None
+        if 'fila' in spec:
+            return {'tipo': 'fila', **lectura_fila(spec['fila'])}
+        if 'serie' in spec and 'campo' in spec:
+            r = lectura_serie(spec['serie'], spec['campo'])
+            return {'tipo': 'rango', **r} if r else None
+        r = lectura_simple(spec['serie'], spec.get('eje', 'MESI'), spec.get('unidad', ''), spec.get('fuente', ''))
+        return {'tipo': 'simple', **r} if r else None
+
+    GAP = []
+    for g in cfg['gap_indicadores']:
+        conv, sl = resolver_lectura(g.get('conv')), resolver_lectura(g.get('sl'))
+        if g['estado'] in ('nd_sl', 'ncomp') and not conv:
+            raise BuildError(f"GAP «{g['label']}»: sin lectura CONV")
+        if g['estado'] in ('nd_conv', 'ncomp') and not sl:
+            raise BuildError(f"GAP «{g['label']}»: sin lectura SL")
+        GAP.append({'grupo': g['grupo'], 'label': g['label'], 'estado': g['estado'],
+                    'motivo': g['motivo'], 'conv': conv, 'sl': sl})
+        for capa, lec in (('CONV', conv), ('SL', sl)):
+            if not lec or lec['tipo'] != 'fila':
+                continue
+            traza.append({'ruta': f"GAP.{g['label']} · {capa}", 'mes': lec['mes'], 'valor': lec['valor'],
+                          'anterior': None, 'estado': 'nuevo', 'modulo': 'GAP CONV–SL', 'base': lec['base'],
+                          'fila': lec['fila'], 'id_informe': '', 'id_indicador': lec['id_indicador'],
+                          'consultora': lec['consultora'], 'categoria': lec['categoria'], 'unidad': lec['unidad'],
+                          'campo': lec['campo'], 'file_id': lec['file_id'], 'nota': g['motivo'], 'secundaria': ''})
+    D['GAP'] = GAP
+    D['GAP_STATUS'] = [g['estado'] for g in GAP]
+
+    ar = cfg['agenda_ranking']
+    D['AGENDA_RANKING'] = {'titulo': ar['titulo'], 'nota': ar['nota'],
+                           'items': [{**lectura_fila(f), 'tipo': 'fila'} for f in ar['filas']]}
+
+    SEM = []
+    for r in cfg['semaforo']:
+        SEM.append({**{k: r[k] for k in ('bloque', 'indicador', 'estado', 'tendencia', 'evidencia', 'nota')},
+                    'ultima': resolver_lectura(r['ultima'])})
+    D['SEMAFORO'] = SEM
+
     # 7. novedades por pestaña y mes (puntuales + valores de serie nuevos/corregidos/retirados)
     UPD = {}
     def agregar(tab, mes, item):
@@ -328,6 +403,7 @@ def construir():
     D['KPI'] = {
         'ICC': {'valor': icc, 'mes': icc_m, 'oct_pendiente': D['ICC'][D['MESI'].index('Oct-26')] is None},
         'ICG': {'valor': icg, 'mes': icg_m, 'anterior': D['ICG'][i_icg - 1],
+                'var_oficial': (cfg['icg_variacion_oficial'] if cfg['icg_variacion_oficial']['mes'] == icg_m else None),
                 'max12': max(v for v in D['ICG'][-13:] if v is not None), 'min12': min(v for v in D['ICG'][-13:] if v is not None)},
         'GESTION_OCT': {'n': len(gest_oct), 'min': min(gest_oct.values()), 'max': max(gest_oct.values()), 'rango': rango,
                         'semaforo': ('🔴' if rango and rango > 15 else '🟡' if rango and rango > 10 else '🟢'), 'por_consultora': gest_oct},

@@ -369,7 +369,7 @@ footer a{color:var(--accent)}
   <div class="chart-wrap">
     <div class="chart-head">
       <div><h3>LLA</h3><p><span data-rango="CONS.lla"></span> · por consultora · clic en leyenda para filtrar</p></div>
-      <span class="signal conv">▲ 4/5</span>
+      <span class="signal mix" data-nconsult="CONS.lla"></span>
     </div>
     <div class="chart-box tall"><canvas id="chartLLA"></canvas></div>
     <div class="legend" id="legendLLA"></div>
@@ -377,8 +377,8 @@ footer a{color:var(--accent)}
   </div>
   <div class="chart-wrap">
     <div class="chart-head">
-      <div><h3>PJ / Unión por la Patria</h3><p><span data-rango="CONS.lla"></span> · por consultora · clic en leyenda para filtrar</p></div>
-      <span class="signal mix">~ 3/5</span>
+      <div><h3>PJ / Unión por la Patria</h3><p><span data-rango="CONS.pj"></span> · por consultora · clic en leyenda para filtrar</p></div>
+      <span class="signal mix" data-nconsult="CONS.pj"></span>
     </div>
     <div class="chart-box tall"><canvas id="chartPJ"></canvas></div>
     <div class="legend" id="legendPJ"></div>
@@ -398,7 +398,7 @@ footer a{color:var(--accent)}
   <div class="chart-wrap mos-full">
     <div class="mes-titulo">
       <span>OCTUBRE 2026</span>
-      <span class="mes-badge">MES ACTIVO</span>
+      <span class="mes-badge">ÚLTIMO MES COMPLETO</span>
     </div>
     <div class="kpi-grid" style="grid-template-columns:repeat(auto-fit,minmax(160px,1fr));margin-bottom:12px">
       <div class="kpi" style="border-top:3px solid var(--c1)">
@@ -432,11 +432,11 @@ footer a{color:var(--accent)}
     <button class="btn-ver-anteriores" data-toggle="voto-oct-ant" onclick="toggleMesAnterior('voto-oct-ant')">▾ Ver meses anteriores (feb–sep)</button>
     <div id="voto-oct-ant" class="mes-contenido-anterior">
       <div class="mes-titulo"><span>SEPTIEMBRE 2026</span></div>
-      <div class="hallazgo-txt" style="font-size:11px;color:var(--fg-dim);padding:6px 0 10px">Synopsis sep-26: LLA 33,6% / PJ 32,7% (brecha LLA +0,9 p.p.). Zuban sep-26: LLA 30,1% / PJ 34,0%. Proyección sep-26 y OPSA sep-26 con datos en gráficos. Ver gráficos LLA/PJ para series completas.</div>
+      <div class="hallazgo-txt" style="font-size:11px;color:var(--fg-dim);padding:6px 0 10px">Synopsis sep-26: LLA 35,5% / PJ 35,7% (N2). La lectura 33,6% / 32,7% de Synopsis corresponde a su informe de octubre, con campo del 8 al 15 de septiembre: en la base va en oct-26, según el mes que enuncia la consultora. Zuban sep-26: LLA 30,1% / PJ 34,0%. Proyección sep-26: LLA 35,0% / PJ 31,9%. Ver gráficos LLA/PJ para las series completas.</div>
       <div class="mes-titulo"><span>MAY–AGO 2026</span></div>
-      <div class="hallazgo-txt" style="font-size:11px;color:var(--fg-dim);padding:6px 0 10px">Series disponibles en gráficos: Zuban (may, ago, sep, oct), Synopsis (jul–sep), PRAXIS, Proyección, CB Global. Ver leyenda interactiva en gráficos para filtrar por consultora.</div>
+      <div class="hallazgo-txt" style="font-size:11px;color:var(--fg-dim);padding:6px 0 10px">Series disponibles en gráficos, con fila en Nivel 2: Zuban (may, ago, sep, oct), Synopsis (may, jul, sep, oct), Proyección (feb, abr–nov), Isasi (abr–ago) y Equipo Mide (may, jul, oct). Ver leyenda interactiva para filtrar por consultora.</div>
     </div>
-    <p class="source" style="margin-top:10px">Escenario I: LLA vs. PJ · Zuban Córdoba · oct-26 · comparabilidad ALTA intra-serie</p>
+    <p class="source" style="margin-top:10px">Escenario I: LLA vs. PJ · Zuban Córdoba · oct-26 · comparabilidad ALTA intra-serie · noviembre (corte parcial al 17/11): Proyección LLA 35,0% / PJ 35,0% y QMonitor LLA 32% / PJ 25%</p>
   </div>
 
   
@@ -454,22 +454,22 @@ footer a{color:var(--accent)}
       <div class="chart-wrap" style="margin-bottom:0;padding:14px 16px">
         <div style="font-size:11px;font-weight:600;letter-spacing:.5px;text-transform:uppercase;color:var(--fg-dim);margin-bottom:6px">Sentimiento neto · Milei</div>
         <div style="font-size:26px;font-weight:700;font-variant-numeric:tabular-nums;line-height:1">−33<span style="font-size:14px;font-weight:400"> ISN</span></div>
-        <div style="font-size:11px;color:var(--fg-dim);margin-top:4px">Reputación Digital · 1–7 sep 2026 · menciones de personas</div>
-        <div style="margin-top:8px"><span class="gap-delta-badge dn" style="font-size:10px">septiembre parcial</span></div>
+        <div style="font-size:11px;color:var(--fg-dim);margin-top:4px">Reputación Digital · 1–7 sep 2026 · menciones de personas · último ISN disponible</div>
+        <div style="margin-top:8px"><span class="gap-delta-badge dn" style="font-size:10px">sin ISN mensual para oct ni nov</span></div>
       </div>
 
       <div class="chart-wrap" style="margin-bottom:0;padding:14px 16px">
-        <div style="font-size:11px;font-weight:600;letter-spacing:.5px;text-transform:uppercase;color:var(--fg-dim);margin-bottom:6px">Menciones LLA · volumen</div>
-        <div style="font-size:26px;font-weight:700;font-variant-numeric:tabular-nums;line-height:1">↗<span style="font-size:14px;font-weight:400"> tendencia</span></div>
-        <div style="font-size:11px;color:var(--fg-dim);margin-top:4px">Reputación Digital · may–sep 26 · pico sep</div>
-        <div style="margin-top:8px"><span class="gap-delta-badge up" style="font-size:10px">visibilidad creciente</span></div>
+        <div style="font-size:11px;font-weight:600;letter-spacing:.5px;text-transform:uppercase;color:var(--fg-dim);margin-bottom:6px">Volumen de conversación · Milei</div>
+        <div style="font-size:26px;font-weight:700;font-variant-numeric:tabular-nums;line-height:1">326.638</div>
+        <div style="font-size:11px;color:var(--fg-dim);margin-top:4px">Publicaciones sobre Milei · Reputación Digital · nov-26 · N2 fila 1292</div>
+        <div style="margin-top:8px"><span class="gap-delta-badge dn" style="font-size:10px">medición única · sin serie</span></div>
       </div>
 
       <div class="chart-wrap" style="margin-bottom:0;padding:14px 16px">
         <div style="font-size:11px;font-weight:600;letter-spacing:.5px;text-transform:uppercase;color:var(--fg-dim);margin-bottom:6px">Escenario 2027 · SL</div>
-        <div style="font-size:26px;font-weight:700;font-variant-numeric:tabular-nums;line-height:1">52<span style="font-size:14px;font-weight:400">%</span></div>
-        <div style="font-size:11px;color:var(--fg-dim);margin-top:4px">Monitor Digital · conversación sobre LLA · sin dato CONV equivalente</div>
-        <div style="margin-top:8px"><span class="gap-delta-badge zn" style="font-size:10px">sin dato CONV</span></div>
+        <div style="font-size:26px;font-weight:700;font-variant-numeric:tabular-nums;line-height:1">—<span style="font-size:14px;font-weight:400"> s/d</span></div>
+        <div style="font-size:11px;color:var(--fg-dim);margin-top:4px">El 52% atribuido a Monitor Digital no tiene fila en la base: retirado el 17/11</div>
+        <div style="margin-top:8px"><span class="gap-delta-badge dn" style="font-size:10px">sin respaldo · pendiente</span></div>
       </div>
 
       <div class="chart-wrap" style="margin-bottom:0;padding:14px 16px">
@@ -502,7 +502,7 @@ footer a{color:var(--accent)}
   </div>
   <div class="chart-wrap">
     <div class="chart-head">
-      <div><h3>Imagen positiva · Milei</h3><p><span data-rango="IMG.neg"></span> · por consultora · clic en leyenda para filtrar</p></div>
+      <div><h3>Imagen positiva · Milei</h3><p><span data-rango="IMG.pos"></span> · por consultora · clic en leyenda para filtrar</p></div>
     </div>
     <div class="chart-box"><canvas id="chartPos"></canvas></div>
     <div class="legend" id="legendPos"></div>
@@ -541,7 +541,7 @@ footer a{color:var(--accent)}
   </div>
   <div class="chart-wrap" style="margin-bottom:16px">
     <div class="chart-head">
-      <div><h3>Aprobación de gestión nacional · tendencia</h3><p>Proyección (may–sep) · Isasi-Burdman (jun–ago) · Synopsis (may)</p></div>
+      <div><h3>Aprobación de gestión nacional · tendencia</h3><p>Proyección (may–sep, nov) · Isasi-Burdman (jun–ago) · Synopsis (may)</p></div>
       <span class="signal conv">▲ mejora</span>
     </div>
     <div class="chart-box"><canvas id="chartGestionFull"></canvas></div>
@@ -555,7 +555,7 @@ footer a{color:var(--accent)}
   <div class="chart-wrap" style="margin-top:20px">
     <div class="mes-titulo">
       <span>OCTUBRE 2026</span>
-      <span class="mes-badge">MES ACTIVO</span>
+      <span class="mes-badge">ÚLTIMO MES COMPLETO</span>
     </div>
     <div class="kpi-grid" style="margin-bottom:12px">
       <div class="kpi">
@@ -591,9 +591,9 @@ footer a{color:var(--accent)}
     <button class="btn-ver-anteriores" data-toggle="img-oct-ant" onclick="toggleMesAnterior('img-oct-ant')">▾ Ver meses anteriores (may–sep)</button>
     <div id="img-oct-ant" class="mes-contenido-anterior">
       <div class="mes-titulo"><span>SEPTIEMBRE 2026</span></div>
-      <div class="hallazgo">Zuban Córdoba (sep-26, informe especial): imagen positiva 36,0% / negativa 61,8% — primer registro de esta consultora. Vozna: aprobación 32,6% / desaprobación 61,9%. Proyección: aprobación 42,0% (+2,3 pp vs ago). Explanans: valoración negativa 58,2% — máximo histórico de la serie (10 mediciones desde mar-24). Evidencia ALTA para Explanans, primer registro para Zuban y Vozna.</div>
+      <div class="hallazgo">Zuban Córdoba (sep-26, informe especial): imagen positiva 36,0% / negativa 61,8% — primer registro de esta consultora. Vozna (sin fila en la base, pendiente de cargar): aprobación 32,6% / desaprobación 61,9%. Proyección: aprobación 42,0% (+2,3 pp vs ago). Explanans: valoración negativa 58,2% — máximo histórico de la serie (10 mediciones desde mar-24). Evidencia ALTA para Explanans, primer registro para Zuban y Vozna.</div>
       <div class="mes-titulo"><span>AGOSTO 2026</span></div>
-      <div class="hallazgo">Isasi-Burdman: 38% positiva / 46% negativa. Aprobación: 42% — baja 3 pp vs jul. Vozna: 36,3% aprobación / 57,6% desaprobación (primera medición). D'Alessio: imagen positiva 34,0% (−2 pp vs may). Proyección: 39,7% aprobación.</div>
+      <div class="hallazgo">Isasi-Burdman: 38% positiva / 46% negativa. Aprobación: 42% — baja 3 pp vs jul. Vozna (sin fila en la base, pendiente de cargar): 36,3% aprobación / 57,6% desaprobación. D'Alessio: imagen positiva 34,0% (−2 pp vs may). Proyección: 39,7% aprobación.</div>
       <div class="mes-titulo"><span>MAY–JUL 2026</span></div>
       <div class="hallazgo">Giacobbe (may): 34,2% positiva / 55,0% negativa. Proyección (may): 34,0% aprobación — inicio de la serie más larga del período. Isasi-Burdman (jun): 45% aprobación / 48% desaprobación. D'Alessio (may): 36,0% positiva. Zentrix detectó caída sostenida en imagen positiva: 35,6% (may) → 33,7% (jun) → 30,9% (jul) — señal de deterioro, evidencia MEDIA.</div>
     </div>
@@ -895,12 +895,12 @@ footer a{color:var(--accent)}
 <!-- ── TAB 6: GAP CONV–SL ────────────────────── -->
 <section class="panel" id="tab-gap">
   <p class="sec">GAP CONV–SL · cruce encuestas × conversación digital</p>
-  <div class="notice">SL estructural cargado (32 informes) · métricas de volumen y sentimiento exactas pendientes · hallazgos cualitativos disponibles en tab Conv. digital</div>
+  <div class="notice">Las lecturas CONV y SL se muestran por separado. La capa SL no es comparable ni promediable con una encuesta (Parte XIII): en este tablero no se calcula ninguna brecha numérica entre capas ni se promedian ambas lecturas.</div>
 
   <div style="display:grid;grid-template-columns:1fr minmax(0,190px);gap:14px;margin-bottom:20px;align-items:start" class="gap-legend-grid">
     <div class="info-box" style="margin-bottom:0;font-size:11px;line-height:1.55">
-      <strong>Zona de acuerdo</strong> — tarjetas a plena opacidad son indicadores donde CONV y SL convergen. El valor es el promedio de ambas lecturas. Rayas = divergentes · muy atenuado = sin dato en una capa.<br>
-      <span style="color:var(--pos);font-weight:600">★ mayor convergencia</span> · <span style="color:var(--neg);font-weight:600">▲ mayor divergencia</span> · <span style="color:var(--warn);font-weight:600">⚑ hallazgo para explorar</span>
+      <strong>Cómo leer estas tarjetas</strong> — cada indicador muestra su lectura CONV (encuesta) y su lectura SL (conversación digital) con la fila de Nivel 2 que la respalda. Cuando una de las dos capas no tiene un par equivalente en la base, la tarjeta lo dice y <strong>no corresponde calcular una brecha</strong>.<br>
+      <span style="color:var(--fg-dim);font-weight:600">sin par SL</span> · <span style="color:var(--fg-dim);font-weight:600">sin par CONV</span> · <span style="color:var(--warn);font-weight:600">no comparable</span> — ambas capas miden, pero con universo y métrica distintos.
     </div>
     <div class="chart-wrap" style="margin-bottom:0">
       <div class="chart-head"><div><h3>Distribución</h3></div></div>
@@ -909,119 +909,9 @@ footer a{color:var(--accent)}
     </div>
   </div>
 
-  <!-- GRUPO: Principales problemas -->
-  <div class="gap-zone-group">
-    <div class="gap-zone-title">Principales problemas</div>
-    <div class="gap-zone-cards">
+  <div id="gapCards"></div>
 
-      <div class="gap-card zc best-conv">
-        <span class="gap-card-badge" style="color:var(--pos)">★</span>
-        <div class="gap-card-label">Agenda: inflación</div>
-        <div class="gap-card-avg">59,5%</div>
-        <div class="gap-card-sources">
-          <span style="color:var(--c1)">CONV 61</span><span style="color:var(--fg-dim)">·</span><span style="color:var(--c4)">SL 58</span>
-        </div>
-        <div class="gap-card-ev"><span class="gap-delta-badge dc">Δ3 conv.</span></div>
-      </div>
-
-      <div class="gap-card zc">
-        <div class="gap-card-label">Agenda: inseguridad</div>
-        <div class="gap-card-avg">45,5%</div>
-        <div class="gap-card-sources">
-          <span style="color:var(--c1)">CONV 47</span><span style="color:var(--fg-dim)">·</span><span style="color:var(--c4)">SL 44</span>
-        </div>
-        <div class="gap-card-ev"><span class="gap-delta-badge dc">Δ3 conv.</span></div>
-      </div>
-
-      <div class="gap-card zd worst-div explore">
-        <span class="gap-card-badge" style="color:var(--warn)">⚑</span>
-        <div class="gap-card-label">Agenda: desempleo</div>
-        <div class="gap-card-avg sm">23,5%</div>
-        <div class="gap-card-sources">
-          <span style="color:var(--c1)">CONV 29</span><span style="color:var(--fg-dim)">·</span><span style="color:var(--c4)">SL 18</span>
-        </div>
-        <div class="gap-card-ev"><span class="gap-delta-badge dd">Δ11 div.</span> <span class="gap-delta-badge" style="background:transparent;color:var(--neg);padding-left:0">▲</span></div>
-      </div>
-
-      <div class="gap-card zn">
-        <div class="gap-card-label">Agenda: pobreza/educación</div>
-        <div class="gap-card-avg sm">—</div>
-        <div class="gap-card-sources">
-          <span style="color:var(--c1)">CONV 24</span><span style="color:var(--fg-dim)">·</span><span style="color:var(--fg-dim)">SL s/d</span>
-        </div>
-        <div class="gap-card-ev"><span class="gap-delta-badge dn">sin dato SL</span></div>
-      </div>
-
-    </div>
-  </div>
-
-  <!-- GRUPO: Imagen · Gestión -->
-  <div class="gap-zone-group">
-    <div class="gap-zone-title">Imagen · Gestión</div>
-    <div class="gap-zone-cards">
-
-      <div class="gap-card zc">
-        <div class="gap-card-label">Imagen negativa Milei</div>
-        <div class="gap-card-avg">51,0%</div>
-        <div class="gap-card-sources">
-          <span style="color:var(--c1)">CONV 53</span><span style="color:var(--fg-dim)">·</span><span style="color:var(--c4)">SL 49</span>
-        </div>
-        <div class="gap-card-ev"><span class="gap-delta-badge dc">Δ4 conv.</span></div>
-      </div>
-
-      <div class="gap-card zc">
-        <div class="gap-card-label">Imagen positiva Milei</div>
-        <div class="gap-card-avg">40,0%</div>
-        <div class="gap-card-sources">
-          <span style="color:var(--c1)">CONV 38</span><span style="color:var(--fg-dim)">·</span><span style="color:var(--c4)">SL 42</span>
-        </div>
-        <div class="gap-card-ev"><span class="gap-delta-badge dc">Δ4 conv.</span></div>
-      </div>
-
-      <div class="gap-card zc explore">
-        <span class="gap-card-badge" style="color:var(--warn)">⚑</span>
-        <div class="gap-card-label">Aprobación de gestión</div>
-        <div class="gap-card-avg">40,5%</div>
-        <div class="gap-card-sources">
-          <span style="color:var(--c1)">CONV 43</span><span style="color:var(--fg-dim)">·</span><span style="color:var(--c4)">SL 38</span>
-        </div>
-        <div class="gap-card-ev"><span class="gap-delta-badge dw">Δ5 límite</span></div>
-      </div>
-
-      <div class="gap-card zn">
-        <div class="gap-card-label">Imagen Kirchner</div>
-        <div class="gap-card-avg sm">—</div>
-        <div class="gap-card-sources">
-          <span style="color:var(--fg-dim)">CONV s/d</span><span style="color:var(--fg-dim)">·</span><span style="color:var(--c4)">SL alto neg.</span>
-        </div>
-        <div class="gap-card-ev"><span class="gap-delta-badge dn">sin dato CONV</span></div>
-      </div>
-
-    </div>
-  </div>
-
-  <!-- HALLAZGOS PARA EXPLORAR -->
-  <p class="sec" style="margin-top:4px">Hallazgos para explorar</p>
-
-  <div class="explore-box">
-    <div class="explore-box-head">
-      <span style="font-size:14px">⚑</span>
-      <span class="explore-title">Agenda: desempleo — mayor brecha CONV–SL (Δ11 p.p.)</span>
-      <span class="explore-tag">requiere análisis</span>
-    </div>
-    <div class="explore-body">CONV registra 29% de menciones espontáneas del desempleo como problema principal. SL muestra solo 18% de volumen en conversación digital. La brecha no indica error: CONV mide preocupación declarada cuando se pregunta; SL captura lo que las personas activan espontáneamente en redes. El desempleo aparece como preocupación latente — alta en encuesta, baja en conversación pública. Requiere análisis de qué eventos o contextos activan el tema en redes frente a lo que sostiene su presencia encuestada.</div>
-  </div>
-
-  <div class="explore-box" style="border-left-color:color-mix(in srgb,var(--warn) 50%,transparent)">
-    <div class="explore-box-head">
-      <span style="font-size:14px">⚑</span>
-      <span class="explore-title">Aprobación de gestión — Δ5 p.p. en el límite conv/div</span>
-      <span class="explore-tag" style="background:color-mix(in srgb,var(--fg-dim) 12%,transparent);color:var(--fg-dim)">atención</span>
-    </div>
-    <div class="explore-body">CONV muestra aprobación estable (43%); SL detecta 38%, posiblemente influido por picos de crítica en eventos puntuales (decretos, tarifas). La divergencia puede ser temporal: el promedio mensual SL suaviza picos que la encuesta no captura si su trabajo de campo ocurrió en otro momento del mes. No clasificar como divergente definitivo — monitorear en el próximo corte.</div>
-  </div>
-
-  <p class="source" style="margin-top:12px">★ mayor convergencia = Agenda: inflación e inseguridad (Δ3) · ▲ mayor divergencia = Agenda: desempleo (Δ11) · ⚑ hallazgo para explorar = indicadores con explicación analítica pendiente · Datos estimados may–sep 2026 · comparabilidad MEDIA–ALTA salvo donde se indica · no promediar capas</p>
+  <p class="source" style="margin-top:12px">Cada lectura remite a su fila de Nivel 2 y a su informe de origen. CONV y SL no se promedian ni se restan entre sí. Las clasificaciones de convergencia y divergencia se retiraron: exigen acreditar comparabilidad entre capas, que en ningún indicador del corte está acreditada.</p>
   <div class="evolc-box" data-evolc="gap"></div>
   <details class="det-fin" data-fin="gap"><summary>Detalle por fuente y trazabilidad · <span class="det-fin-n" data-finn="gap"></span></summary>
     <div class="upd-box" data-upd="gap"></div>
@@ -1031,11 +921,11 @@ footer a{color:var(--accent)}
 
 <!-- ── TAB 7: SEMÁFORO ───────────────────────── -->
 <section class="panel" id="tab-semaforo">
-  <p class="sec">Semáforo ejecutivo · may–oct 2026</p>
+  <p class="sec">Semáforo ejecutivo · may–nov 2026 · corte al 17/11</p>
   <div class="info-box" style="margin-bottom:18px;font-size:11px;line-height:1.6">
-    Estado de cada indicador según la evidencia acumulada may–oct 2026.
+    Estado de cada indicador según la evidencia acumulada may–nov 2026. <strong>Última medición</strong> y <strong>tendencia</strong> son dos lecturas distintas y llevan su propio período: la primera es el corte más reciente con fila en la base, la segunda es el recorrido que sostiene el color. Noviembre es un corte parcial al 17/11.
     <strong>Evidencia</strong>: ALTA = 3+ fuentes comparables con dirección consistente · MEDIA = 2 fuentes o comparabilidad parcial · BAJA = dato único o comparabilidad limitada.
-    El semáforo refleja la <em>tendencia histórica</em>, no solo el último dato.
+    El color no se asigna a partir de una medición única: con una sola lectura el estado es ⚪. Las consultoras no se promedian: cuando hay varias, se muestra el rango.
   </div>
 
   <!-- Leyenda de colores -->
@@ -1046,158 +936,7 @@ footer a{color:var(--accent)}
     <span style="font-size:11px;color:var(--fg-dim)">⚪ Evidencia insuficiente</span>
   </div>
 
-  <!-- BLOQUE NACIONAL -->
-  <details class="det-tab" open><summary><b>Nacional</b></summary>
-  <div class="table-wrap" style="margin-bottom:20px">
-  <table>
-    <thead><tr><th>Indicador</th><th>Estado</th><th>Último dato</th><th>Referencia</th><th>Evidencia</th><th>Nota</th></tr></thead>
-    <tbody>
-      <tr>
-        <td><strong>Gestión nacional · aprobación</strong></td>
-        <td>🔴</td>
-        <td class="num">34,1% apr.</td>
-        <td class="num" style="color:var(--fg-dim)">Zuban Córdoba oct-26</td>
-        <td><span class="signal nd">BAJA</span></td>
-        <td>Zuban oct-26: 34,1% apr. / 65,2% desapr. · dato único, señal de deterioro respecto a sep estimado; confirmar con más consultoras</td>
-      </tr>
-      <tr>
-        <td><strong>Imagen Milei · positiva</strong></td>
-        <td>🟡</td>
-        <td class="num">~40–44%</td>
-        <td class="num" style="color:var(--fg-dim)">Multi-fuente ago-26</td>
-        <td><span class="signal conv">ALTA</span></td>
-        <td>Rango de las fuentes relevadas en agosto de 2026</td>
-      </tr>
-      <tr>
-        <td><strong>Imagen Milei · negativa</strong></td>
-        <td>🟡</td>
-        <td class="num">~55–58%</td>
-        <td class="num" style="color:var(--fg-dim)">Synopsis / Isasi ago-26</td>
-        <td><span class="signal conv">ALTA</span></td>
-        <td>Rango de Synopsis e Isasi en agosto de 2026</td>
-      </tr>
-      <tr>
-        <td><strong>ICG · confianza gobierno</strong></td>
-        <td>🟡</td>
-        <td class="num">1,95 / 5</td>
-        <td class="num" style="color:var(--fg-dim)">Di Tella oct-26</td>
-        <td><span class="signal conv">ALTA</span></td>
-        <td>Octubre: +0,9% m/m; −7,0% i.a.; −20,7% desde fin de 2025. Oscilaciones compatibles con el error muestral, sin tendencia clara.</td>
-      </tr>
-      <tr>
-        <td><strong>ICC · confianza consumidor</strong></td>
-        <td>🟡</td>
-        <td class="num">41,52</td>
-        <td class="num" style="color:var(--fg-dim)">UTDT CIF oct-26</td>
-        <td><span class="signal conv">ALTA</span></td>
-        <td>Leve recuperación oct (+0,8% m/m); CABA sube +6,8% m/m desde mínimo sep; nivel nacional aún bajo</td>
-      </tr>
-      <tr>
-        <td><strong>Rumbo del país · correcto</strong></td>
-        <td>🟢</td>
-        <td class="num">+5,3 p.p.</td>
-        <td class="num" style="color:var(--fg-dim)">Proyección may→sep</td>
-        <td><span class="signal mix">MEDIA</span></td>
-        <td>Mejora sostenida en el período; señal pendiente de confirmación multi-fuente</td>
-      </tr>
-      <tr>
-        <td><strong>Expectativas económicas</strong></td>
-        <td>🔴</td>
-        <td class="num">−4 p.p.</td>
-        <td class="num" style="color:var(--fg-dim)">D'Alessio may→sep</td>
-        <td><span class="signal mix">MEDIA</span></td>
-        <td>Disonancia: rumbo mejora pero expectativas empeoran · alerta activa</td>
-      </tr>
-      <tr>
-        <td><strong>ISN Milei · sentimiento neto</strong></td>
-        <td>🔴</td>
-        <td class="num">−33</td>
-        <td class="num" style="color:var(--fg-dim)">Reputación Digital · 1–7 sep 2026</td>
-        <td><span class="signal mix">MEDIA</span></td>
-        <td>Sentimiento neto de menciones de personas sobre Milei · corte parcial de septiembre · indicador de escucha social</td>
-      </tr>
-    </tbody>
-  </table>
-  </div>
-  </details>
-
-  <!-- BLOQUE ELECTORAL -->
-  <details class="det-tab"><summary><b>Electoral</b></summary>
-  <div class="table-wrap" style="margin-bottom:20px">
-  <table>
-    <thead><tr><th>Indicador</th><th>Estado</th><th>Último dato</th><th>Referencia</th><th>Evidencia</th><th>Nota</th></tr></thead>
-    <tbody>
-      <tr>
-        <td><strong>Intención voto LLA</strong></td>
-        <td>🟡</td>
-        <td class="num">30–40%</td>
-        <td class="num" style="color:var(--fg-dim)">Multi-fuente sep-26</td>
-        <td><span class="signal mix">MEDIA</span></td>
-        <td>Rango amplio entre consultoras; dispersión metodológica alta</td>
-      </tr>
-      <tr>
-        <td><strong>Intención voto PJ</strong></td>
-        <td>🟡</td>
-        <td class="num">27–35%</td>
-        <td class="num" style="color:var(--fg-dim)">Multi-fuente sep-26</td>
-        <td><span class="signal mix">MEDIA</span></td>
-        <td>Rango similar a LLA; diferencia inter-consultora supera diferencia entre espacios</td>
-      </tr>
-      <tr>
-        <td><strong>Balotaje Milei–Kicillof</strong></td>
-        <td>🟡</td>
-        <td class="num">~42 / ~41</td>
-        <td class="num" style="color:var(--fg-dim)">3 consultoras ago–sep 26</td>
-        <td><span class="signal conv">ALTA</span></td>
-        <td><strong>CONSENSO FUERTE</strong>: Proyección, Explanans y OPSA coinciden en empate técnico</td>
-      </tr>
-      <tr>
-        <td><strong>Retención voto Milei 2023</strong></td>
-        <td>🟡</td>
-        <td class="num">50,6%</td>
-        <td class="num" style="color:var(--fg-dim)">PRAXIS sep-26</td>
-        <td><span class="signal nd">BAJA</span></td>
-        <td>Ideológico retiene 74%; Antipolítica solo 29% · dato único, señal pendiente</td>
-      </tr>
-    </tbody>
-  </table>
-  </div>
-  </details>
-
-  <!-- BLOQUE TERRITORIAL -->
-  <details class="det-tab"><summary><b>Territorial</b></summary>
-  <div class="table-wrap" style="margin-bottom:20px">
-  <table>
-    <thead><tr><th>Indicador</th><th>Estado</th><th>Último dato</th><th>Referencia</th><th>Evidencia</th><th>Nota</th></tr></thead>
-    <tbody>
-      <tr>
-        <td><strong>Gestión Kicillof PBA</strong></td>
-        <td>🟡</td>
-        <td class="num">Estable</td>
-        <td class="num" style="color:var(--fg-dim)">CB Global Data</td>
-        <td><span class="signal mix">MEDIA</span></td>
-        <td>Domina PBA en escenario vs. Milei: +8,9 p.p.</td>
-      </tr>
-      <tr>
-        <td><strong>Milei en Córdoba</strong></td>
-        <td>🟢</td>
-        <td class="num">49%</td>
-        <td class="num" style="color:var(--fg-dim)">Zeta / Sicchar / CB</td>
-        <td><span class="signal conv">ALTA</span></td>
-        <td><strong>CONSENSO FUERTE</strong>: 3 consultoras independientes, resultado idéntico</td>
-      </tr>
-      <tr>
-        <td><strong>ICC CABA</strong></td>
-        <td>🟡</td>
-        <td class="num">39,68</td>
-        <td class="num" style="color:var(--fg-dim)">UTDT CIF oct-26</td>
-        <td><span class="signal mix">MEDIA</span></td>
-        <td>Rebote oct +6,8% m/m desde mínimo sep (37,2); sigue por debajo del promedio nacional (41,52); señal, no tendencia</td>
-      </tr>
-    </tbody>
-  </table>
-  </div>
-  </details>
+  <div id="semaforoTablas"></div>
 
   <!-- CONTEXTO TERRITORIAL · GOBIERNOS LOCALES (TEM) -->
   <div class="chart-wrap" style="margin-bottom:20px">
@@ -1234,10 +973,10 @@ footer a{color:var(--accent)}
   <p class="sec">Alertas activas</p>
   <div class="hallazgo">
     <div class="hallazgo-head">
-      <span class="hallazgo-dir h-neg">DIVERGENCIA</span>
-      <span class="hallazgo-src">Rumbo vs. Expectativas</span>
+      <span class="hallazgo-dir h-mix">PENDIENTE</span>
+      <span class="hallazgo-src">Rumbo y expectativas</span>
     </div>
-    <div class="hallazgo-txt">Rumbo correcto mejora +5,3 p.p. (Proyección may→sep) mientras expectativas económicas empeoran −4 p.p. (D'Alessio). Indicadores apuntan en sentidos opuestos con evidencia MEDIA en ambos. No resolver por promedio — registrar como señal de disonancia.</div>
+    <div class="hallazgo-txt">Retirado el 17/11: el «+5,3 p.p. de rumbo correcto (Proyección may→sep)» y el «−4 p.p. de expectativas (D'Alessio)» no tienen fila en la base y no pudieron verificarse. Lo que sí hay: Proyección nov-26 mide 30,8% rumbo correcto y 58,0% equivocado (N2 1464 y 1463), sin serie previa comparable; y el subíndice de Expectativas del ICC (UTDT) va de 47,14 en julio a 47,87 en octubre (N2 1350). Son dos fuentes distintas: no se cruzan ni se interpreta divergencia entre ellas. No resolver por promedio — registrar como señal de disonancia.</div>
   </div>
   <div class="hallazgo">
     <div class="hallazgo-head">
@@ -1248,13 +987,13 @@ footer a{color:var(--accent)}
   </div>
   <div class="hallazgo">
     <div class="hallazgo-head">
-      <span class="hallazgo-dir h-mix">ALERTA SL</span>
-      <span class="hallazgo-src">Agenda desempleo · GAP Δ11</span>
+      <span class="hallazgo-dir h-mix">PENDIENTE</span>
+      <span class="hallazgo-src">Agenda desempleo · sin par SL</span>
     </div>
-    <div class="hallazgo-txt">CONV registra desempleo en 29% de menciones como problema; SL solo 18%. Brecha de 11 p.p. sin explicación metodológica confirmada. Ver tab GAP CONV–SL para detalle. No resolver por promedio.</div>
+    <div class="hallazgo-txt">Retirado el 17/11: la brecha de 11 p.p. comparaba un 29% CONV y un 18% SL que no tienen fila en ninguna base. El dato verificable de desempleo como problema principal es Proyección: 23,5% en oct-26 (N2 1137) y 28,8% en nov-26 (N2 1472). No hay indicador SL de agenda en la base, de modo que no corresponde calcular una brecha.</div>
   </div>
 
-  <p class="source" style="margin-top:16px">Semáforo v12.1 (texto may–oct; novedades oct–nov arriba, generadas desde las bases) · fuente: 07_comparacion_intermensual.md · evidencia derivada de 281+ documentos Nivel 1 / 1.267+ filas Nivel 2 · may–oct 2026 · IPCBA oct-26 cargado 06-nov-2026</p>
+  <p class="source" style="margin-top:16px">Semáforo generado desde data/radar_data.json: cada fila toma su última medición de la base y declara aparte el período de la tendencia. Reemplaza la versión anterior, cuyo texto era estático y databa de may–oct. Las filas de Kicillof en PBA, Milei en Córdoba y retención del voto 2023 (PRAXIS) se retiraron el 17/11 por falta de fila en Nivel 1 y Nivel 2; quedan listadas como pendientes en el detalle de trazabilidad.</p>
   <div class="evolc-box" data-evolc="semaforo"></div>
   <details class="det-fin" data-fin="semaforo"><summary>Detalle por fuente y trazabilidad · <span class="det-fin-n" data-finn="semaforo"></span></summary>
     <div class="upd-box" data-upd="semaforo"></div>
@@ -1267,7 +1006,7 @@ footer a{color:var(--accent)}
   <p class="sec">Agenda pública · principales problemas</p>
 
   <div class="info-box" style="margin-bottom:16px;font-size:11px;line-height:1.6">
-    <strong>Hallazgo más robusto del período</strong>: <strong>ingresos / empleo / salarios</strong> desplaza a inflación como preocupación principal (6 fuentes may–sep). Octubre lo confirma: Proyección ubica <em>bajos ingresos</em> #1 (51,3 %) e inflación #3 (29,2 %); CELAG, <em>economía del día a día</em> #1 (45,4 %). Evidencia ALTA. Nov-26: Proyección vuelve a ubicar los bajos ingresos en primer lugar (51,9 %).
+    <strong>Hallazgo con respaldo en la base</strong>: <strong>los bajos ingresos</strong> encabezan el ranking por encima de la inflación en las dos mediciones de Proyección cargadas (oct-26 y nov-26). La referencia anterior a «6 fuentes may–sep» se retiró el 17/11: esas fuentes no tienen fila en Nivel 2. Proyección ubica <em>bajos ingresos</em> #1 (51,3 %) e inflación #3 (29,2 %); CELAG, <em>economía del día a día</em> #1 (45,4 %). Evidencia ALTA. Nov-26: Proyección vuelve a ubicar los bajos ingresos en primer lugar (51,9 %).
   </div>
 
   <!-- KPIs ranking actual -->
@@ -1314,14 +1053,15 @@ footer a{color:var(--accent)}
     </div>
     <div class="chart-box"><canvas id="chartInflProb"></canvas></div>
     <div class="legend" id="legendInflProb"></div>
-    <p class="source">Isasi-Burdman, Equipo Mide, OPSA · may–sep 2026 · D'Alessio (sep, N2 1169) y Proyección (oct, N2 1135): respuesta múltiple, primera medición en la serie · no promediar: escalas y metodologías distintas</p>
+    <p class="source">D'Alessio (sep, N2 1169) y Proyección (oct, N2 1135) · respuesta múltiple, primera medición en la serie · las series de Isasi-Burdman, Equipo Mide y OPSA se retiraron el 17/11: estaban escritas en el código, sin fila en ninguna base · no promediar: escalas y metodologías distintas</p>
   </div>
   <div class="chart-wrap">
     <div class="chart-head">
-      <div><h3>Agenda pública · ranking comparativo sep-26 (oct-26 por consultora, abajo)</h3><p>% de menciones como problema principal · respuesta espontánea o guiada según consultora</p></div>
+      <div><h3>Agenda pública · ranking de problemas</h3><p>% que lo menciona como problema principal · una sola consultora: no se promedian fuentes</p></div>
     </div>
     <div class="chart-box" style="height:260px"><canvas id="chartAgenda"></canvas></div>
-    <p class="source">Realle Dalla Torre, Isasi-Burdman, Equipo Mide, D'Alessio, Explanans, OPSA · sep-26 · respuesta múltiple en varios casos: porcentajes no suman 100</p>
+    <p class="source" id="agendaRankTit"></p>
+    <p class="source">Reemplaza el ranking anterior, que promediaba varias consultoras de sep-26 (52 / 44 / 38 / 24 / 19 / 16) sin fila en ninguna base. Promediar consultoras no está permitido y esos valores se retiraron el 17/11.</p>
   </div>
   <details class="det-tab"><summary><b>Detalle por consultora · oct-26</b> · 2 fuentes · N2 1133–1137, 1145–1147</summary>
   <div class="table-wrap">
@@ -1503,8 +1243,8 @@ function toggleDataset(chartId,idx){
 }
 
 /* ── DATA — generado por scripts/build_radar_data.py en data/radar_data.json; no editar valores aquí ─ */
-let MESI,MIPC,IPC,ICC,ICG,MINFL,IPC_FULL,IPCBA_FULL,MBRECHA,BRECHA,TIPCBA_MES,TIPCBA_IA,TIPCBA_BIENES,TIPCBA_SERV,TIPCBA_ESTAC,TIPCBA_REG,TIPCBA_VAR,TIPCBA_ACUM,MIPCACUM,IPC_ACUM,IPCBA_ACUM_FULL,BRECHA_ACUM,MIIA,IPC_IA,IPC_IA_9,IPCBA_ACUM_9,IPCBA_IA_9,ICC_CABA_13,ICC_INT_13,ICC_GBA_14,MV,CONS,lastRows,MI,IMG,MG,GESTION,CROSS_MES,CROSS,ISN_RD_MES,ISN_RD_VALS,ISN_EJE_LABELS,ISN_EJE_VALS,MILEI_SEP_LABELS,MILEI_SEP_VALS,OPOS_LABELS,OPOS_VALS,MSL_MES,SL_POR_MES,SL_CONSULT_LABELS,SL_CONSULT_VALS,SL_INFORMES,GAP_STATUS,KPI,UPD,COBERTURA,META,SECUNDARIA,EVOL,ENCABEZADO,SL_TRAMOS,AGENDA_INFL,SL_ESTUDIOS,NOTA_SECUNDARIA;
-function applyData(D){MESI=D.MESI;MIPC=D.MIPC;IPC=D.IPC;ICC=D.ICC;ICG=D.ICG;MINFL=D.MINFL;IPC_FULL=D.IPC_FULL;IPCBA_FULL=D.IPCBA_FULL;MBRECHA=D.MBRECHA;BRECHA=D.BRECHA;TIPCBA_MES=D.TIPCBA_MES;TIPCBA_IA=D.TIPCBA_IA;TIPCBA_BIENES=D.TIPCBA_BIENES;TIPCBA_SERV=D.TIPCBA_SERV;TIPCBA_ESTAC=D.TIPCBA_ESTAC;TIPCBA_REG=D.TIPCBA_REG;TIPCBA_VAR=D.TIPCBA_VAR;TIPCBA_ACUM=D.TIPCBA_ACUM;MIPCACUM=D.MIPCACUM;IPC_ACUM=D.IPC_ACUM;IPCBA_ACUM_FULL=D.IPCBA_ACUM_FULL;BRECHA_ACUM=D.BRECHA_ACUM;MIIA=D.MIIA;IPC_IA=D.IPC_IA;IPC_IA_9=D.IPC_IA_9;IPCBA_ACUM_9=D.IPCBA_ACUM_9;IPCBA_IA_9=D.IPCBA_IA_9;ICC_CABA_13=D.ICC_CABA_13;ICC_INT_13=D.ICC_INT_13;ICC_GBA_14=D.ICC_GBA_14;MV=D.MV;CONS=D.CONS;lastRows=D.lastRows;MI=D.MI;IMG=D.IMG;MG=D.MG;GESTION=D.GESTION;CROSS_MES=D.CROSS_MES;CROSS=D.CROSS;ISN_RD_MES=D.ISN_RD_MES;ISN_RD_VALS=D.ISN_RD_VALS;ISN_EJE_LABELS=D.ISN_EJE_LABELS;ISN_EJE_VALS=D.ISN_EJE_VALS;MILEI_SEP_LABELS=D.MILEI_SEP_LABELS;MILEI_SEP_VALS=D.MILEI_SEP_VALS;OPOS_LABELS=D.OPOS_LABELS;OPOS_VALS=D.OPOS_VALS;MSL_MES=D.MSL_MES;SL_POR_MES=D.SL_POR_MES;SL_CONSULT_LABELS=D.SL_CONSULT_LABELS;SL_CONSULT_VALS=D.SL_CONSULT_VALS;SL_INFORMES=D.SL_INFORMES;GAP_STATUS=D.GAP_STATUS;KPI=D.KPI;UPD=D.UPD;COBERTURA=D.COBERTURA;META=D.META;SECUNDARIA=D.SECUNDARIA||[];EVOL=D.EVOL||{};ENCABEZADO=D.ENCABEZADO;SL_TRAMOS=D.SL_TRAMOS||[];AGENDA_INFL=D.AGENDA_INFL;SL_ESTUDIOS=D.SL_ESTUDIOS||[];NOTA_SECUNDARIA=D.NOTA_SECUNDARIA||[];}
+let MESI,MIPC,IPC,ICC,ICG,MINFL,IPC_FULL,IPCBA_FULL,MBRECHA,BRECHA,TIPCBA_MES,TIPCBA_IA,TIPCBA_BIENES,TIPCBA_SERV,TIPCBA_ESTAC,TIPCBA_REG,TIPCBA_VAR,TIPCBA_ACUM,MIPCACUM,IPC_ACUM,IPCBA_ACUM_FULL,BRECHA_ACUM,MIIA,IPC_IA,IPC_IA_9,IPCBA_ACUM_9,IPCBA_IA_9,ICC_CABA_13,ICC_INT_13,ICC_GBA_14,MV,CONS,lastRows,MI,IMG,MG,GESTION,CROSS_MES,CROSS,ISN_RD_MES,ISN_RD_VALS,ISN_EJE_LABELS,ISN_EJE_VALS,MILEI_SEP_LABELS,MILEI_SEP_VALS,OPOS_LABELS,OPOS_VALS,MSL_MES,SL_POR_MES,SL_CONSULT_LABELS,SL_CONSULT_VALS,SL_INFORMES,GAP_STATUS,KPI,UPD,COBERTURA,META,SECUNDARIA,EVOL,ENCABEZADO,SL_TRAMOS,AGENDA_INFL,SL_ESTUDIOS,NOTA_SECUNDARIA,GAP,SEMAFORO,AGENDA_RANKING;
+function applyData(D){MESI=D.MESI;MIPC=D.MIPC;IPC=D.IPC;ICC=D.ICC;ICG=D.ICG;MINFL=D.MINFL;IPC_FULL=D.IPC_FULL;IPCBA_FULL=D.IPCBA_FULL;MBRECHA=D.MBRECHA;BRECHA=D.BRECHA;TIPCBA_MES=D.TIPCBA_MES;TIPCBA_IA=D.TIPCBA_IA;TIPCBA_BIENES=D.TIPCBA_BIENES;TIPCBA_SERV=D.TIPCBA_SERV;TIPCBA_ESTAC=D.TIPCBA_ESTAC;TIPCBA_REG=D.TIPCBA_REG;TIPCBA_VAR=D.TIPCBA_VAR;TIPCBA_ACUM=D.TIPCBA_ACUM;MIPCACUM=D.MIPCACUM;IPC_ACUM=D.IPC_ACUM;IPCBA_ACUM_FULL=D.IPCBA_ACUM_FULL;BRECHA_ACUM=D.BRECHA_ACUM;MIIA=D.MIIA;IPC_IA=D.IPC_IA;IPC_IA_9=D.IPC_IA_9;IPCBA_ACUM_9=D.IPCBA_ACUM_9;IPCBA_IA_9=D.IPCBA_IA_9;ICC_CABA_13=D.ICC_CABA_13;ICC_INT_13=D.ICC_INT_13;ICC_GBA_14=D.ICC_GBA_14;MV=D.MV;CONS=D.CONS;lastRows=D.lastRows;MI=D.MI;IMG=D.IMG;MG=D.MG;GESTION=D.GESTION;CROSS_MES=D.CROSS_MES;CROSS=D.CROSS;ISN_RD_MES=D.ISN_RD_MES;ISN_RD_VALS=D.ISN_RD_VALS;ISN_EJE_LABELS=D.ISN_EJE_LABELS;ISN_EJE_VALS=D.ISN_EJE_VALS;MILEI_SEP_LABELS=D.MILEI_SEP_LABELS;MILEI_SEP_VALS=D.MILEI_SEP_VALS;OPOS_LABELS=D.OPOS_LABELS;OPOS_VALS=D.OPOS_VALS;MSL_MES=D.MSL_MES;SL_POR_MES=D.SL_POR_MES;SL_CONSULT_LABELS=D.SL_CONSULT_LABELS;SL_CONSULT_VALS=D.SL_CONSULT_VALS;SL_INFORMES=D.SL_INFORMES;GAP_STATUS=D.GAP_STATUS;KPI=D.KPI;UPD=D.UPD;COBERTURA=D.COBERTURA;META=D.META;SECUNDARIA=D.SECUNDARIA||[];EVOL=D.EVOL||{};ENCABEZADO=D.ENCABEZADO;SL_TRAMOS=D.SL_TRAMOS||[];AGENDA_INFL=D.AGENDA_INFL;SL_ESTUDIOS=D.SL_ESTUDIOS||[];NOTA_SECUNDARIA=D.NOTA_SECUNDARIA||[];GAP=D.GAP||[];SEMAFORO=D.SEMAFORO||[];AGENDA_RANKING=D.AGENDA_RANKING||{items:[]};}
 
 /* ── CHART HELPERS ──────────────────────────── */
 function baseOpts(){
@@ -1802,39 +1542,38 @@ function initTab(tab){
   }
 
   if(tab==='gap'){
+    renderGAP();
     const counts=[
-      GAP_STATUS.filter(s=>s==='conv').length,
-      GAP_STATUS.filter(s=>s==='div').length,
-      GAP_STATUS.filter(s=>s==='nd').length
+      GAP_STATUS.filter(x=>x==='nd_sl').length,
+      GAP_STATUS.filter(x=>x==='ncomp').length,
+      GAP_STATUS.filter(x=>x==='nd_conv').length
     ];
+    const labs=[`Sin par SL (${counts[0]})`,`No comparable (${counts[1]})`,`Sin par CONV (${counts[2]})`];
+    const cols=['var(--fg-dim)','var(--warn)','var(--c4)'];
     const ctx2=document.getElementById('chartGAPDist');
     if(ctx2&&!chartRegistry['chartGAPDist']){
       chartRegistry['chartGAPDist']=new Chart(ctx2,{
         type:'doughnut',
-        data:{
-          labels:[`Convergente (${counts[0]})`,`Divergente (${counts[1]})`,`Sin dato (${counts[2]})`],
-          datasets:[{data:counts,backgroundColor:[cv('var(--pos)'),cv('var(--neg)'),cv('var(--fg-dim)')],borderWidth:0,hoverOffset:4}]
-        },
-        options:{
-          responsive:true,maintainAspectRatio:false,cutout:'68%',
-          plugins:{legend:{display:false},tooltip:{callbacks:{label:(c)=>`${c.label}`}}}
-        }
+        data:{labels:labs,datasets:[{data:counts,backgroundColor:cols.map(cv),borderWidth:0,hoverOffset:4}]},
+        options:{responsive:true,maintainAspectRatio:false,cutout:'68%',
+          plugins:{legend:{display:false},tooltip:{callbacks:{label:(c)=>`${c.label}`}}}}
       });
     }
-    buildLegend('legendGAPDist','chartGAPDist',
-      [`Convergente (${counts[0]})`,`Divergente (${counts[1]})`,`Sin dato (${counts[2]})`],
-      ['var(--pos)','var(--neg)','var(--fg-dim)']);
+    buildLegend('legendGAPDist','chartGAPDist',labs,cols);
   }
 
   if(tab==='semaforo'){
-    // No charts needed — pure HTML table
+    renderSemaforo();
   }
 
   if(tab==='agenda'){
     // Agenda pública · ranking comparativo (horizontal bar)
-    const AGENDA_LABELS=['Ingresos / empleo / salarios','Inseguridad','Inflación','Pobreza / desigualdad','Corrupción','Educación'];
-    const AGENDA_DATA=[52,44,38,24,19,16]; // promedio orientativo multi-fuente sep-26
-    mkBar('chartAgenda',AGENDA_LABELS,[{label:'% menciones (orientativo)',data:AGENDA_DATA,color:'var(--c4)'}],{
+    // ranking de una sola consultora, desde las bases: no se promedian fuentes
+    const AGENDA_LABELS=AGENDA_RANKING.items.map(i=>i.categoria);
+    const AGENDA_DATA=AGENDA_RANKING.items.map(i=>i.valor);
+    const elAgT=document.getElementById('agendaRankTit');
+    if(elAgT)elAgT.textContent=`${AGENDA_RANKING.titulo} · ${AGENDA_RANKING.nota} · N2 filas ${AGENDA_RANKING.items.map(i=>i.fila).join(', ')}`;
+    mkBar('chartAgenda',AGENDA_LABELS,[{label:'%',data:AGENDA_DATA,color:'var(--c4)'}],{
       indexAxis:'y',
       plugins:{legend:{display:false}},
       scales:{
@@ -1845,9 +1584,6 @@ function initTab(tab){
     // Inflación como problema · serie may–sep
     const AIX=(AGENDA_INFL&&AGENDA_INFL.series)||[];const pad=a=>a.concat(Array(AGENDA_INFL.meses.length-a.length).fill(null));
     mkLine('chartInflProb',AGENDA_INFL.meses,[
-      {label:'Isasi-Burdman',data:pad([55,52,49,47,44]),color:'var(--c1)'},
-      {label:'Equipo Mide',  data:pad([61,null,55,null,49]),color:'var(--c3)'},
-      {label:'OPSA',         data:pad([null,null,null,50,38]),color:'var(--c5)'},
       ...AIX.map(x=>({label:x.label,data:x.data,color:x.color}))
     ],{
       plugins:{legend:{display:false}},
@@ -1859,7 +1595,7 @@ function initTab(tab){
     // legend manual
     const lc=document.getElementById('legendInflProb');
     if(lc&&!lc.children.length){
-      [['Isasi-Burdman','var(--c1)'],['Equipo Mide','var(--c3)'],['OPSA','var(--c5)'],...AIX.map(x=>[x.label,x.color])].forEach(([l,c],i)=>{
+      [...AIX.map(x=>[x.label,x.color])].forEach(([l,c],i)=>{
         lc.innerHTML+=`<span class="legend-item" onclick="toggleDataset('chartInflProb',${i})"><span class="legend-dot" style="background:${c}"></span>${l}</span>`;
       });
     }
@@ -1921,15 +1657,76 @@ function renderKPIs(){
     <div class="kpi-subs"><div class="kpi-sub-row"><span class="kpi-sub-lbl">CABA</span><span class="kpi-sub-val">${fmt(ICC_CABA_13[iO])}</span></div>
     <div class="kpi-sub-row"><span class="kpi-sub-lbl">Interior</span><span class="kpi-sub-val">${fmt(ICC_INT_13[iO])}</span></div>
     <div class="kpi-sub-row"><span class="kpi-sub-lbl">GBA</span><span class="kpi-sub-val">${fmt(ICC_GBA_14[iO])}</span></div></div>`;
-  if(eg){const d=g.anterior?((g.valor/g.anterior-1)*100):null;
+  if(eg){const vo=g.var_oficial,d=vo?vo.valor:null;
     eg.innerHTML=`<div class="kpi-label">ICG · ${esc(g.mes.toLowerCase())}</div><div class="kpi-num">${fmt(g.valor)}</div>
-    <div class="kpi-meta"><span class="kpi-delta ${d>0?'up':'down'}">${d==null?'':(d>0?'+':'')+d.toFixed(1).replace('.',',')+'%'}</span><span class="kpi-sub">vs ${fmt(g.anterior)} sep-26 · UTDT Escuela de Gobierno</span></div>
+    <div class="kpi-meta"><span class="kpi-delta ${d>0?'up':'down'}">${d==null?'':(d>0?'+':'')+d.toFixed(1).replace('.',',')+'%'}</span><span class="kpi-sub">m/m oficial · vs ${fmt(g.anterior)} sep-26 · UTDT Escuela de Gobierno</span></div>
     <div class="kpi-subs"><div class="kpi-sub-row"><span class="kpi-sub-lbl">Escala</span><span class="kpi-sub-val">0–5</span></div>
     <div class="kpi-sub-row"><span class="kpi-sub-lbl">Máx 12m</span><span class="kpi-sub-val">${fmt(g.max12)}</span></div>
     <div class="kpi-sub-row"><span class="kpi-sub-lbl">Mín 12m</span><span class="kpi-sub-val">${fmt(g.min12)}</span></div></div>`;}
   const src=document.getElementById('srcICCICG');
   if(src)src.innerHTML=`ICC ${esc(k.mes)}: ${fmt(k.valor)} (N2 filas 1345–1348, PDF CIF oct-26) · campo 5–16 oct · n=1.000 · CATI · ICG ${esc(g.mes)}: ${fmt(g.valor)} (N2 fila 1086; una sola vez) · ICG may–sep desde N2 filas 1030–1034 · UTDT / Poliarquía`;
   document.querySelectorAll('[data-bind="ICC_OCT_TL"]').forEach(e=>e.textContent=k.oct_pendiente?'s/d':fmt(ICC[MESI.indexOf('Oct-26')]));
+}
+/* ── GAP CONV–SL y SEMÁFORO: se dibujan desde radar_data.json ───── */
+const GAP_BADGE={nd_sl:['sin par SL','dn'],nd_conv:['sin par CONV','dn'],ncomp:['no comparable','dw']};
+function refFila(l){
+  if(!l||l.tipo!=='fila')return '';
+  return `<span class="upd-ref">N2 fila ${l.fila}${l.campo?' · campo '+esc(l.campo):''}${driveLink(l.file_id)}</span>`;
+}
+function textoLectura(l){
+  if(!l)return 's/d';
+  if(l.tipo==='rango'){
+    const p=Object.entries(l.por_consultora).sort((a,b)=>b[1]-a[1]);
+    return `${esc(l.mes)} · ${p.length} consultora${p.length===1?'':'s'} · ${p.map(([n,v])=>`${esc(n)} ${fmt(v)}%`).join(' · ')}`;
+  }
+  if(l.tipo==='simple')return `${fmt(l.valor)}${esc(l.unidad||'')} · ${esc(l.mes)}${l.fuente?' · '+esc(l.fuente):''}`;
+  return `${fmt(l.valor)}${l.unidad==='%'?'%':' '+esc(l.unidad||'')} · ${esc(l.consultora)} · ${esc(l.mes)}`;
+}
+function valorDestacado(l){
+  if(!l)return '—';
+  if(l.tipo==='rango'){const v=Object.values(l.por_consultora);
+    return v.length===1?fmt(v[0])+'%':`${fmt(Math.min(...v))}–${fmt(Math.max(...v))}%`;}
+  return fmt(l.valor)+(l.unidad==='%'?'%':'');
+}
+function renderGAP(){
+  const cont=document.getElementById('gapCards');if(!cont)return;
+  const grupos=[...new Set(GAP.map(g=>g.grupo))];
+  cont.innerHTML=grupos.map(gr=>{
+    const cards=GAP.filter(g=>g.grupo===gr).map(g=>{
+      const [txt,cls]=GAP_BADGE[g.estado]||['—','dn'];
+      const zona=g.estado==='ncomp'?'zc explore':'zc';
+      const pri=g.conv||g.sl;
+      return `<div class="gap-card ${zona}">
+        <div class="gap-card-label">${esc(g.label)}</div>
+        <div class="gap-card-avg${g.conv&&g.conv.tipo==='rango'?' sm':''}">${valorDestacado(pri)}</div>
+        <div class="gap-card-sources" style="display:block;line-height:1.5">
+          <div><span style="color:var(--c1)">CONV</span> ${g.conv?esc(textoLectura(g.conv)):'<span style="color:var(--fg-dim)">sin par en la base</span>'} ${refFila(g.conv)}</div>
+          <div><span style="color:var(--c4)">SL</span> ${g.sl?esc(textoLectura(g.sl)):'<span style="color:var(--fg-dim)">sin par en la base</span>'} ${refFila(g.sl)}</div>
+        </div>
+        <div class="gap-card-ev"><span class="gap-delta-badge ${cls}">${txt}</span></div>
+        <div class="gap-card-sources" style="display:block;margin-top:6px;color:var(--fg-dim)">${esc(g.motivo)}</div>
+      </div>`;}).join('');
+    return `<div class="gap-zone-group"><div class="gap-zone-title">${esc(gr)}</div><div class="gap-zone-cards">${cards}</div></div>`;
+  }).join('');
+}
+function renderSemaforo(){
+  const cont=document.getElementById('semaforoTablas');if(!cont)return;
+  const bloques=[...new Set(SEMAFORO.map(r=>r.bloque))];
+  cont.innerHTML=bloques.map((b,i)=>{
+    const filas=SEMAFORO.filter(r=>r.bloque===b).map(r=>{
+      const ev=r.evidencia==='ALTA'?'conv':r.evidencia==='MEDIA'?'mix':'nd';
+      return `<tr>
+        <td><strong>${esc(r.indicador)}</strong></td>
+        <td>${r.estado}</td>
+        <td class="num">${valorDestacado(r.ultima)}<div style="font-size:10px;color:var(--fg-dim);font-weight:400">${esc(textoLectura(r.ultima))}</div>${refFila(r.ultima)}</td>
+        <td style="color:var(--fg-dim)">${esc(r.tendencia)}</td>
+        <td><span class="signal ${ev}">${esc(r.evidencia)}</span></td>
+        <td>${esc(r.nota)}</td></tr>`;}).join('');
+    return `<details class="det-tab"${i===0?' open':''}><summary><b>${esc(b)}</b></summary>
+      <div class="table-wrap" style="margin-bottom:20px"><table>
+      <thead><tr><th>Indicador</th><th>Estado</th><th>Última medición</th><th>Tendencia · período</th><th>Evidencia</th><th>Nota</th></tr></thead>
+      <tbody>${filas}</tbody></table></div></details>`;
+  }).join('');
 }
 function itemHTML(it){
   if(it.tipo==='pendiente')return `<li class="upd-it pend"><span class="upd-tag">pendiente</span><span class="upd-mod">${esc(it.modulo)}</span> ${esc(it.etiqueta)}${it.necesita&&it.necesita!=='—'?` <span class="upd-need">Necesita: ${esc(it.necesita)}</span>`:''}</li>`;
@@ -1979,11 +1776,14 @@ function renderRangos(){
   document.querySelectorAll('[data-rango]').forEach(el=>{const [g,c]=el.dataset.rango.split('.');const ax=ejes[g];let lo=null,hi=null;
     Object.values(grp[g]||{}).forEach(s=>(s[c]||[]).forEach((v,i)=>{if(v!=null){lo=lo==null?i:Math.min(lo,i);hi=hi==null?i:Math.max(hi,i);}}));
     if(lo!=null)el.textContent=ax[lo]+' → '+ax[hi]+(ax[hi]==='Nov-26'?' (nov: corte al 17/11)':'');});
+  document.querySelectorAll('[data-nconsult]').forEach(el=>{const [g,c]=el.dataset.nconsult.split('.'),grp={IMG,CONS,GESTION}[g],ax=ejes[g];
+    for(let i=ax.length-1;i>=0;i--){const q=Object.values(grp||{}).filter(x=>(x[c]||[])[i]!=null).length;
+      if(q){el.textContent=`${q} consultora${q===1?'':'s'} · ${ax[i]}`;break;}}});
   document.querySelectorAll('[data-consultoras]').forEach(el=>{const g=el.dataset.consultoras,grp={IMG,CONS,GESTION};el.textContent=Object.keys(grp[g]||{}).length+' consultoras';});
 }
 function renderTablaVar(){
   const box=document.getElementById('tablaVar');if(!box)return;
-  const EXTRA={'Vozna':{pos:{0:36.3,2:32.1,4:31.3},neg:{4:63.5},aprob:{2:36.3,4:32.6}}};
+  const EXTRA={}; // Vozna (pos/neg/aprob) retirado el 17/11: no tiene fila en Nivel 1 ni Nivel 2 — ver pendientes
   const defs=[['Imagen positiva · Milei',IMG,'pos',MI,1],['Imagen negativa · Milei',IMG,'neg',MI,-1],['Aprobación de gestión nacional',GESTION,'aprob',MG,1],['Desaprobación de gestión nacional',GESTION,'desaprob',MG,-1]];
   const f1=v=>v==null?'—':fmt(v);
   box.innerHTML=defs.map(([tit,G,k,M,sg],di)=>{
@@ -2081,7 +1881,11 @@ function renderEvolCharts(tab){
 function renderEvol(){
   document.querySelectorAll('.evol-box').forEach(box=>{
     const gs=(EVOL[box.dataset.evol]||[]);
-    const nn=document.querySelector(`[data-finn="${box.dataset.evol}"]`);if(nn)nn.textContent=gs.reduce((a,g)=>a+g.filas.length,0)+' series';
+    const tabn=box.dataset.evol,fu=new Set();
+    Object.values(UPD[tabn]||{}).forEach(arr=>arr.forEach(i=>{if(i.fila)fu.add((i.base||'')+':'+i.fila);}));
+    const nSer=gs.reduce((a,g)=>a+g.filas.length,0);
+    const nn=document.querySelector(`[data-finn="${tabn}"]`);
+    if(nn)nn.textContent=nSer?`${nSer} series · ${fu.size} filas de la base`:`${fu.size} filas de la base`;
     box.innerHTML=gs.map(g=>{
       const head=g.meses.map(m=>`<th class="num">${esc(m)}</th>`).join('');
       const rows=g.filas.map(f=>{

@@ -1213,6 +1213,48 @@
       "mes": "Oct-26",
       "texto": "Synopsis, ola con campo 12–17/10 (difundida 31/10): Peronismo 35 / LLA 33,6, localizada en encuestas-argentinas.com (registro https://x.com/_EncuestAR_/status/2116669248479047801, consultado 2026-11-11). Candidato pendiente: no hay informe en Drive ni enlace al original, y no se puede acreditar pregunta ni mes enunciado por Synopsis. No se carga y no reemplaza la ola 8–15/9 que hoy ocupa oct-26 (N2 fila 1208).",
       "necesita": "informe original de Synopsis de esa ola, para fijar el mes que enuncia"
+    },
+    {
+      "modulo": "Semáforo",
+      "mes": "Nov-26",
+      "texto": "Gestión de Kicillof en PBA: la fila citaba «CB Global Data» y «+8,9 p.p. en escenario vs. Milei». Las filas de CB Global Data en la base son diferenciales de imagen de intendentes del GBA (nov-26), no gestión provincial. Fila retirada del semáforo.",
+      "necesita": "informe de CB Global Data con gestión de Kicillof en PBA, o la fuente original de ese +8,9 p.p."
+    },
+    {
+      "modulo": "Semáforo",
+      "mes": "Nov-26",
+      "texto": "«Milei en Córdoba 49% · Zeta / Sicchar / CB» con evidencia ALTA y consenso fuerte: ninguna de las tres consultoras tiene fila en Nivel 2 ni informe en Nivel 1. Fila retirada del semáforo.",
+      "necesita": "informes de Zeta, Sicchar y CB con la medición de Córdoba"
+    },
+    {
+      "modulo": "Semáforo",
+      "mes": "Nov-26",
+      "texto": "«Retención del voto Milei 2023: 50,6% · PRAXIS sep-26»: sin fila en Nivel 2 ni informe en Nivel 1. Fila retirada del semáforo.",
+      "necesita": "informe de PRAXIS de septiembre de 2026"
+    },
+    {
+      "modulo": "Indicadores",
+      "mes": "Nov-26",
+      "texto": "IPIM 3,2% (sep-26) figuraba en el encabezado de últimos publicados sin fila en ninguna base. Retirado del encabezado: no es un indicador del sistema (Parte XIV) y una fuente secundaria no abre series nuevas.",
+      "necesita": "informe del INDEC con el IPIM, si se decide incorporar la serie"
+    },
+    {
+      "modulo": "Imagen Milei",
+      "mes": "Nov-26",
+      "texto": "Vozna: imagen positiva (may 36,3 · jul 32,1 · sep 31,3), negativa (sep 63,5) y aprobación (jul 36,3 · sep 32,6) seguían escritas dentro del código de index.html, fuera de las bases. Retiradas de los gráficos.",
+      "necesita": "informes de Vozna de mayo, julio y septiembre de 2026 para cargarlos en Nivel 1 y Nivel 2"
+    },
+    {
+      "modulo": "Intención de voto",
+      "mes": "Nov-26",
+      "texto": "Equipo Mide «oficialismo vs. oposición» 42/34/12/12 (N2 1569–1572): la lámina aportada el 17/11 corresponde a voto por espacio (LLA 33 · kirchnerismo 17 · peronismo no kirchnerista 16), que respalda la fila 1210, no esta serie. Sigue sin cotejar.",
+      "necesita": "la lámina o la página del capítulo electoral del PDF 148N9Me0 con la pregunta de oficialismo vs. oposición"
+    },
+    {
+      "modulo": "Gestión nacional",
+      "mes": "Nov-26",
+      "texto": "Management & Fit sep-26: el registro de encuestar no informa el universo. La pregunta textual y la técnica quedaron acreditadas el 17/11 («Más allá de tu voto a presidente, ¿aprobás o desaprobás la gestión de Javier Milei en el gobierno nacional?»; presencial + online + CATI).",
+      "necesita": "informe original de Management & Fit con el universo"
     }
   ],
   "secciones_cobertura": [
@@ -3042,18 +3084,6 @@
       "fuente": "UTDT",
       "fecha": "oct",
       "clase_valor": "neu"
-    },
-    {
-      "icono": "🏭",
-      "nombre": "IPIM",
-      "valor": 3.2,
-      "unidad": "%",
-      "periodo": "sep-26",
-      "fuente": "INDEC",
-      "fecha": "oct",
-      "clase_valor": "warn",
-      "secundaria": "",
-      "nota": "valor del Radar publicado; sin fila en la base (coincide con monitorargy ipim_mensual 3,16)"
     }
   ],
   "sl_tramos": [
@@ -3282,5 +3312,267 @@
       "rotulo": "FUENTE SECUNDARIA · monitorargy.com · https://monitorargy.com/mcp (obtener_serie, id ipc_regulados_mensual) · consultado 2026-11-12 · fuente original: INDEC"
     }
   ],
-  "gap_n_indicadores": 8
+  "gap_indicadores": [
+    {
+      "grupo": "Principales problemas",
+      "label": "Problema principal: bajos ingresos",
+      "conv": {
+        "fila": 1468
+      },
+      "sl": null,
+      "estado": "nd_sl",
+      "motivo": "La capa SL no releva problema principal con una pregunta equivalente: mide volumen de conversación, no jerarquía declarada de problemas. No corresponde calcular una brecha."
+    },
+    {
+      "grupo": "Principales problemas",
+      "label": "Problema principal: inseguridad",
+      "conv": {
+        "fila": 1469
+      },
+      "sl": null,
+      "estado": "nd_sl",
+      "motivo": "Sin indicador SL de agenda en la base. No corresponde calcular una brecha."
+    },
+    {
+      "grupo": "Principales problemas",
+      "label": "Problema principal: inflación",
+      "conv": {
+        "fila": 1470
+      },
+      "sl": null,
+      "estado": "nd_sl",
+      "motivo": "Sin indicador SL de agenda en la base. No corresponde calcular una brecha."
+    },
+    {
+      "grupo": "Principales problemas",
+      "label": "Problema principal: desempleo",
+      "conv": {
+        "fila": 1472
+      },
+      "sl": null,
+      "estado": "nd_sl",
+      "motivo": "Sin indicador SL de agenda en la base. No corresponde calcular una brecha."
+    },
+    {
+      "grupo": "Imagen · Gestión",
+      "label": "Imagen negativa de Milei",
+      "conv": {
+        "serie": "IMG",
+        "campo": "neg"
+      },
+      "sl": {
+        "fila": 1296
+      },
+      "estado": "ncomp",
+      "motivo": "NO COMPARABLE: CONV mide imagen declarada de personas encuestadas; SL mide el tono de publicaciones de cuentas reales. Universo, métrica y período distintos. Se muestran por separado; no corresponde calcular una brecha."
+    },
+    {
+      "grupo": "Imagen · Gestión",
+      "label": "Imagen positiva de Milei",
+      "conv": {
+        "serie": "IMG",
+        "campo": "pos"
+      },
+      "sl": {
+        "fila": 1297
+      },
+      "estado": "ncomp",
+      "motivo": "NO COMPARABLE: CONV mide imagen declarada; SL mide tono de publicaciones. Se muestran por separado; no corresponde calcular una brecha."
+    },
+    {
+      "grupo": "Imagen · Gestión",
+      "label": "Aprobación de gestión nacional",
+      "conv": {
+        "serie": "GESTION",
+        "campo": "aprob"
+      },
+      "sl": null,
+      "estado": "nd_sl",
+      "motivo": "La capa SL no releva aprobación de gestión. No corresponde calcular una brecha."
+    },
+    {
+      "grupo": "Imagen · Gestión",
+      "label": "Volumen de conversación sobre Milei",
+      "conv": null,
+      "sl": {
+        "fila": 1292
+      },
+      "estado": "nd_conv",
+      "motivo": "El volumen de publicaciones no tiene par en encuesta: ninguna pregunta CONV mide la misma magnitud. No corresponde calcular una brecha."
+    }
+  ],
+  "semaforo": [
+    {
+      "bloque": "Nacional",
+      "indicador": "Gestión nacional · aprobación",
+      "estado": "🟡",
+      "ultima": {
+        "serie": "GESTION",
+        "campo": "aprob"
+      },
+      "tendencia": "may–nov 2026 · sin dirección consistente entre consultoras",
+      "evidencia": "ALTA",
+      "nota": "Octubre reúne 9 consultoras (rango 28,9–38,7%); no se promedian. Intra-consultora: Proyección sep 42% → nov 35,6%; QMonitor oct 35% → nov 36%. Noviembre es corte parcial."
+    },
+    {
+      "bloque": "Nacional",
+      "indicador": "Imagen Milei · positiva",
+      "estado": "🟡",
+      "ultima": {
+        "serie": "IMG",
+        "campo": "pos"
+      },
+      "tendencia": "may–nov 2026 · oct-26 con 9 consultoras, rango 31,0–43,8%",
+      "evidencia": "ALTA",
+      "nota": "La dispersión entre consultoras supera la variación mensual de cada serie. Imagen personal ≠ aprobación de gestión."
+    },
+    {
+      "bloque": "Nacional",
+      "indicador": "Imagen Milei · negativa",
+      "estado": "🟡",
+      "ultima": {
+        "serie": "IMG",
+        "campo": "neg"
+      },
+      "tendencia": "may–nov 2026 · oct-26 con 9 consultoras, rango 53,0–64,6%",
+      "evidencia": "ALTA",
+      "nota": "Giacobbe oct-26 corregida a 56,8% con el PDF primario (campo 28/10–2/11). Sin dirección común entre consultoras."
+    },
+    {
+      "bloque": "Nacional",
+      "indicador": "ICG · confianza en el gobierno",
+      "estado": "🟡",
+      "ultima": {
+        "serie": "ICG",
+        "eje": "MESI",
+        "unidad": " / 5",
+        "fuente": "UTDT Escuela de Gobierno"
+      },
+      "tendencia": "may–oct 2026 · oscila entre 1,94 y 2,07 puntos",
+      "evidencia": "ALTA",
+      "nota": "Variación oficial informada por UTDT: +0,9% m/m. Noviembre todavía sin publicar al 17/11. Oscilaciones compatibles con el error muestral: no constituyen tendencia."
+    },
+    {
+      "bloque": "Nacional",
+      "indicador": "ICC · confianza del consumidor",
+      "estado": "🟡",
+      "ultima": {
+        "serie": "ICC",
+        "eje": "MESI",
+        "fuente": "UTDT CIF"
+      },
+      "tendencia": "may–oct 2026 · 40,14 → 41,52 puntos",
+      "evidencia": "ALTA",
+      "nota": "Mide expectativas económicas: no se mezcla con imagen, gestión ni voto. Noviembre todavía sin publicar al 17/11."
+    },
+    {
+      "bloque": "Nacional",
+      "indicador": "Rumbo del país · correcto",
+      "estado": "⚪",
+      "ultima": {
+        "fila": 1464
+      },
+      "tendencia": "sin serie previa comparable en la base",
+      "evidencia": "BAJA",
+      "nota": "Medición única de Proyección (nov-26): 30,8% correcto y 58,0% equivocado. DC Consultores oct-26 usa otra escala de tres opciones y no se encadena. Evidencia insuficiente para establecer variación."
+    },
+    {
+      "bloque": "Nacional",
+      "indicador": "Expectativas económicas",
+      "estado": "🟡",
+      "ultima": {
+        "fila": 1350
+      },
+      "tendencia": "jul–oct 2026 · 47,14 → 47,35 → 49,15 → 47,87 puntos",
+      "evidencia": "MEDIA",
+      "nota": "Subíndice Expectativas futuras del ICC (UTDT CIF). Serie intra-fuente; oct revierte la suba de septiembre. Un movimiento mensual no es tendencia."
+    },
+    {
+      "bloque": "Nacional",
+      "indicador": "Conversación digital · tono sobre Milei",
+      "estado": "🟡",
+      "ultima": {
+        "fila": 1296
+      },
+      "tendencia": "tramos 5/9–24/10 · 63% → 60% → 68% → 74% negativo entre cuentas reales",
+      "evidencia": "MEDIA",
+      "nota": "Capa SL: NO COMPARABLE con encuestas de opinión. Antecedente ISN de Reputación Digital: −43 (ago-26) y −33 (1–7 sep-26), métrica distinta de estos tramos. Sin medición mensual de ISN para octubre."
+    },
+    {
+      "bloque": "Electoral",
+      "indicador": "Intención de voto · LLA",
+      "estado": "🟡",
+      "ultima": {
+        "serie": "CONS",
+        "campo": "lla"
+      },
+      "tendencia": "feb–nov 2026 · oct-26 con 8 consultoras, rango 26,0–42,6%",
+      "evidencia": "ALTA",
+      "nota": "No se promedian consultoras ni se mezclan escenarios. La dispersión entre consultoras supera la diferencia entre espacios."
+    },
+    {
+      "bloque": "Electoral",
+      "indicador": "Intención de voto · PJ",
+      "estado": "🟡",
+      "ultima": {
+        "serie": "CONS",
+        "campo": "pj"
+      },
+      "tendencia": "feb–nov 2026 · oct-26 con 8 consultoras, rango 17,1–36,6%",
+      "evidencia": "ALTA",
+      "nota": "DC Consultores separa peronismo y kirchnerismo, por eso su valor no es comparable con los agregados de otras consultoras."
+    },
+    {
+      "bloque": "Electoral",
+      "indicador": "Balotaje Milei–Kicillof",
+      "estado": "🟡",
+      "ultima": {
+        "fila": 1493
+      },
+      "tendencia": "Proyección sep 40,8–40,2 · oct 41,0–39,1 · nov 40,7–39,1",
+      "evidencia": "MEDIA",
+      "nota": "Serie intra-Proyección; diferencia dentro del margen. Synopsis oct (41,9–41,8) es fuente secundaria, evidencia máxima MEDIA. Se retiran las referencias a Explanans y OPSA: sin fila ni informe en la base."
+    },
+    {
+      "bloque": "Territorial",
+      "indicador": "ICC CABA",
+      "estado": "🟡",
+      "ultima": {
+        "serie": "ICC_CABA_13",
+        "eje": "MESI",
+        "fuente": "UTDT CIF"
+      },
+      "tendencia": "ago–oct 2026 · 39,87 → 37,16 → 39,68 puntos",
+      "evidencia": "MEDIA",
+      "nota": "Rebote de octubre desde el mínimo de septiembre; sigue por debajo del nivel nacional (41,52). Señal, no tendencia."
+    },
+    {
+      "bloque": "Territorial",
+      "indicador": "Intendentes GBA · diferencial de imagen",
+      "estado": "⚪",
+      "ultima": {
+        "fila": 1268
+      },
+      "tendencia": "medición única (nov-26)",
+      "evidencia": "BAJA",
+      "nota": "Ranking CB de Intendentes GBA, nov-26: máximo Nardini +24,8 p.p. y mínimo Menéndez −22,6 p.p. Dato único: no se infiere dirección. No se agregan municipios."
+    }
+  ],
+  "icg_variacion_oficial": {
+    "mes": "Oct-26",
+    "valor": 0.9,
+    "fuente": "UTDT, Escuela de Gobierno · informe mensual del ICG de octubre de 2026 (1,95 puntos)",
+    "nota": "Variación oficial informada por UTDT. El cociente entre los índices redondeados de la serie (1,95 / 1,94) da +0,5%: no es equivalente y no se publica como tal."
+  },
+  "agenda_ranking": {
+    "titulo": "Problema principal · Proyección · nov-26 (corte parcial)",
+    "nota": "Una sola consultora: los porcentajes no se promedian entre fuentes. Respuesta múltiple, no suman 100.",
+    "filas": [
+      1468,
+      1469,
+      1471,
+      1472,
+      1470
+    ]
+  }
 }
