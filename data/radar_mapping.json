@@ -993,6 +993,137 @@
       "ruta": "CONS.Proyección.pj",
       "eje": "MV",
       "fila": 1482
+    },
+    {
+      "modulo": "Imagen Milei",
+      "ruta": "IMG.Zentrix.neg",
+      "eje": "MI",
+      "fila": 1545
+    },
+    {
+      "modulo": "Imagen Milei",
+      "ruta": "IMG.Zentrix.neg",
+      "eje": "MI",
+      "fila": 1546
+    },
+    {
+      "modulo": "Imagen Milei",
+      "ruta": "IMG.Zentrix.neg",
+      "eje": "MI",
+      "fila": 1547
+    },
+    {
+      "modulo": "Imagen Milei",
+      "ruta": "IMG.Zentrix.neg",
+      "eje": "MI",
+      "fila": 1548
+    },
+    {
+      "modulo": "Imagen Milei",
+      "ruta": "IMG.Zentrix.neg",
+      "eje": "MI",
+      "fila": 1549
+    },
+    {
+      "modulo": "Imagen Milei",
+      "ruta": "IMG.Zentrix.neg",
+      "eje": "MI",
+      "fila": 1550
+    },
+    {
+      "modulo": "Imagen Milei",
+      "ruta": "IMG.D'Alessio.neg",
+      "eje": "MI",
+      "fila": 1551,
+      "nota": "Valor de la serie histórica en la lámina Imagen de Javier Milei de Los 1000 días de Milei (agosto 2026)."
+    },
+    {
+      "modulo": "Imagen Milei",
+      "ruta": "IMG.D'Alessio.neg",
+      "eje": "MI",
+      "fila": 1552,
+      "nota": "Valor de la serie histórica en la lámina Imagen de Javier Milei de Los 1000 días de Milei (agosto 2026)."
+    },
+    {
+      "modulo": "Imagen Milei",
+      "ruta": "IMG.D'Alessio.neg",
+      "eje": "MI",
+      "fila": 1553,
+      "nota": "Valor de la serie histórica en la lámina Imagen de Javier Milei de Los 1000 días de Milei (agosto 2026)."
+    },
+    {
+      "modulo": "Imagen Milei",
+      "ruta": "IMG.D'Alessio.neg",
+      "eje": "MI",
+      "fila": 1554,
+      "nota": "La portada indica septiembre 2026, con campo del 6 al 7 de octubre. Se asigna por mes del informe, igual que la imagen positiva (fila 1170)."
+    },
+    {
+      "modulo": "Imagen Milei",
+      "ruta": "IMG.Proyección.neg",
+      "eje": "MI",
+      "fila": 1555,
+      "nota": "Total negativo publicado en la lámina ¿Qué opinión tiene de...?"
+    },
+    {
+      "modulo": "Imagen Milei",
+      "ruta": "IMG.Giacobbe.neg",
+      "eje": "MI",
+      "fila": 1556,
+      "nota": "Informe Público Julio 2026. Imagen Javier Milei: 33,9% positiva, 57,2% negativa."
+    },
+    {
+      "modulo": "Imagen Milei",
+      "ruta": "IMG.Pulso Research.neg",
+      "eje": "MI",
+      "fila": 1557,
+      "nota": "Lámina Imagen dirigentes políticos en Brújula Social de octubre: 32,4% positiva y 64,6% negativa."
+    },
+    {
+      "modulo": "Imagen Milei",
+      "ruta": "IMG.Giacobbe.pos",
+      "eje": "MI",
+      "fila": 142,
+      "nota": "El campo del relevamiento (29 may. al 3 jun.) atraviesa mayo y junio en partes iguales; se asigna a mayo por el rótulo del informe (\"Informe Mayo 2026\"), siguiendo la regla de fecha de campo pero señalando la ambigüedad. El informe incluye serie histórica desde sep-2020 (no se vuelca completa por desalineación de OCR en el gráfico)."
+    },
+    {
+      "modulo": "Imagen Milei",
+      "ruta": "IMG.Giacobbe.neg",
+      "eje": "MI",
+      "fila": 143
+    },
+    {
+      "modulo": "Imagen Milei",
+      "ruta": "IMG.Giacobbe.pos",
+      "eje": "MI",
+      "fila": 280,
+      "nota": "Campo a caballo entre junio y julio (30/6-6/7); se asigna a junio siguiendo el rotulo propio del informe ('INFORME JUNIO 2026'), igual criterio que en la pasada de mayo."
+    },
+    {
+      "modulo": "Imagen Milei",
+      "ruta": "IMG.Giacobbe.neg",
+      "eje": "MI",
+      "fila": 281,
+      "nota": "Campo a caballo entre junio y julio (30/6-6/7); se asigna a junio siguiendo el rotulo propio del informe ('INFORME JUNIO 2026'), igual criterio que en la pasada de mayo."
+    },
+    {
+      "modulo": "Imagen Milei",
+      "ruta": "IMG.Giacobbe.neg",
+      "eje": "MI",
+      "fila": 383,
+      "nota": "Variación contra julio, informe nacional de Giacobbe incorporado a Nivel 2: 55,7 − 57,2 = −1,5 p.p."
+    },
+    {
+      "modulo": "Imagen Milei",
+      "ruta": "IMG.Isasi.neg",
+      "eje": "MI",
+      "fila": 297
+    },
+    {
+      "modulo": "Imagen Milei",
+      "ruta": "IMG.D'Alessio.neg",
+      "eje": "MI",
+      "fila": 418
     }
   ],
   "retiros": [],
