@@ -3568,7 +3568,12 @@
         "pos",
         "neg"
       ],
-      "verificacion": "Misma pregunta de imagen personal de Milei, universo nacional. Difieren las escalas: algunas consultoras agregan buena + muy buena y Giacobbe separa «regular» y «no lo conozco». No se compara con aprobación de gestión."
+      "verificacion": "Imagen personal de un dirigente, universo nacional. Difieren las escalas: algunas consultoras agregan buena + muy buena y Giacobbe separa «regular» y «no lo conozco». Las series de Milei y las de otros dirigentes no se comparan entre sí. No se compara con aprobación de gestión.",
+      "evolucion_extra": [
+        {
+          "modulo": "Imagen otros dirigentes"
+        }
+      ]
     },
     {
       "nombre": "Aprobación de gestión",
@@ -3577,7 +3582,15 @@
         "aprob",
         "desaprob"
       ],
-      "verificacion": "Pregunta de aprobación de la gestión nacional. Universo y técnica difieren; Management & Fit entra por fuente secundaria con evidencia máxima MEDIA. No se compara con imagen personal."
+      "verificacion": "Pregunta de aprobación de la gestión nacional. Universo y técnica difieren; Management & Fit entra por fuente secundaria con evidencia máxima MEDIA. Incluye la categoría «no sabe» de Proyección, que estaba clasificada en rumbo del país. No se compara con imagen personal.",
+      "evolucion_extra": [
+        {
+          "modulo": "Clima / rumbo",
+          "incluye": [
+            "gestión nacional"
+          ]
+        }
+      ]
     },
     {
       "nombre": "Voto por espacio",
@@ -3586,7 +3599,18 @@
         "lla",
         "pj"
       ],
-      "verificacion": "LLA es categoría única en todas las fuentes. El agregado peronista no lo es: se separa por composición y los rangos no cruzan composiciones."
+      "verificacion": "Voto a un espacio político, no a un candidato. LLA es categoría única en todas las fuentes; el agregado peronista no lo es, así que se separa por composición y los rangos no cruzan composiciones.",
+      "evolucion_extra": [
+        {
+          "modulo": "Intención de voto",
+          "incluye": [
+            "espacio"
+          ],
+          "excluye": [
+            "balotaje"
+          ]
+        }
+      ]
     },
     {
       "nombre": "Economía percibida",
@@ -3601,28 +3625,40 @@
     {
       "nombre": "Rumbo del país",
       "evolucion_modulo": "Clima / rumbo",
-      "verificacion": "Proyección usa dos opciones y DC Consultores tres: no se encadenan."
+      "verificacion": "Pregunta sobre el rumbo o el camino del país. Proyección usa dos opciones y DC Consultores tres: no se encadenan. Se excluyen la categoría «no sabe» de gestión nacional, reubicada en aprobación de gestión, y el ICP, que es un índice compuesto.",
+      "excluye": [
+        "gestión nacional",
+        "ICP"
+      ]
     },
     {
       "nombre": "Principales problemas",
       "evolucion_modulo": "Agenda pública",
-      "verificacion": "Distinguir respuesta espontánea de guiada y única de múltiple. Los porcentajes de respuesta múltiple no suman 100 y no se comparan con los de respuesta única."
+      "verificacion": "Pregunta por el problema principal del país. Distinguir respuesta espontánea de guiada y única de múltiple; los porcentajes de respuesta múltiple no suman 100. Se excluyen las preguntas de acuerdo/desacuerdo sobre economía y democracia y la de represión frente al Congreso: son opiniones sobre un enunciado, no jerarquía de problemas.",
+      "excluye": [
+        "economía al servicio",
+        "democracia y palabra",
+        "represión"
+      ]
     },
     {
       "nombre": "Voto por candidato",
       "evolucion_modulo": "Intención de voto",
-      "verificacion": "Solo comparable entre escenarios con la misma oferta de candidatos. Las series de «voto potencial» de Tendencias (nunca lo votaría / seguramente lo vote) son otra pregunta y no entran en este eje.",
-      "filtros": [
+      "verificacion": "Voto a un candidato nombrado en primera vuelta. Solo comparable entre escenarios con la misma oferta. Las series de «voto potencial» de Tendencias son otra pregunta y quedan fuera de los ejes.",
+      "incluye": [
         "candidato",
         "voto presidencial",
         "primera vuelta"
+      ],
+      "excluye": [
+        "balotaje"
       ]
     },
     {
       "nombre": "Balotaje",
       "evolucion_modulo": "Intención de voto",
-      "verificacion": "Escenario de dos candidatos. No se compara con voto por espacio ni con voto por candidato en primera vuelta. Los cortes de Proyección (sep y oct) están en fuentes complementarias y el de noviembre en N2 1493–1496: no figuran en este eje hasta cargarlos como serie.",
-      "filtros": [
+      "verificacion": "Escenario hipotético de segunda vuelta entre dos candidatos. No se compara con voto por espacio ni con voto por candidato en primera vuelta. La serie de Proyección unifica sus cortes de septiembre y octubre (fuentes complementarias) con el de noviembre (N2 1493–1496), sin duplicar registros.",
+      "incluye": [
         "balotaje"
       ]
     },
@@ -3630,7 +3666,7 @@
       "nombre": "Oficialismo vs. oposición",
       "evolucion_modulo": "Intención de voto",
       "verificacion": "Oficialismo = LLA; oposición = todo lo que no es LLA según las categorías de la pregunta. No votaría, en blanco e indecisos se mantienen separados y no se suman a oposición. Eje vacío en este corte: ninguna consultora tiene cargadas todas las categorías necesarias y completarlas por diferencia no está permitido.",
-      "filtros": [
+      "incluye": [
         "oficialismo"
       ]
     }

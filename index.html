@@ -943,6 +943,7 @@ footer a{color:var(--accent)}
     Cada eje agrupa preguntas que miden lo mismo. Compartir tema no alcanza: antes de comparar se verifican formulación, categorías, universo, territorio y período, y eso se declara en cada eje. Las consultoras se muestran por separado; los rangos solo se arman dentro de un mismo eje y una misma composición de la pregunta, identificando qué fuentes incluyen. Donde la dispersión persiste, se informa: no se convierte en estabilidad ni se resuelve promediando.
   </div>
   <div id="ejesTabla"></div>
+  <div id="preguntasEspecificas"></div>
 
   <!-- CONTEXTO TERRITORIAL · GOBIERNOS LOCALES (TEM) -->
   <div class="chart-wrap" style="margin-bottom:20px">
@@ -1249,8 +1250,8 @@ function toggleDataset(chartId,idx){
 }
 
 /* ── DATA — generado por scripts/build_radar_data.py en data/radar_data.json; no editar valores aquí ─ */
-let MESI,MIPC,IPC,ICC,ICG,MINFL,IPC_FULL,IPCBA_FULL,MBRECHA,BRECHA,TIPCBA_MES,TIPCBA_IA,TIPCBA_BIENES,TIPCBA_SERV,TIPCBA_ESTAC,TIPCBA_REG,TIPCBA_VAR,TIPCBA_ACUM,MIPCACUM,IPC_ACUM,IPCBA_ACUM_FULL,BRECHA_ACUM,MIIA,IPC_IA,IPC_IA_9,IPCBA_ACUM_9,IPCBA_IA_9,ICC_CABA_13,ICC_INT_13,ICC_GBA_14,MV,CONS,lastRows,MI,IMG,MG,GESTION,CROSS_MES,CROSS,ISN_RD_MES,ISN_RD_VALS,ISN_EJE_LABELS,ISN_EJE_VALS,MILEI_SEP_LABELS,MILEI_SEP_VALS,OPOS_LABELS,OPOS_VALS,MSL_MES,SL_POR_MES,SL_CONSULT_LABELS,SL_CONSULT_VALS,SL_INFORMES,GAP_STATUS,KPI,UPD,COBERTURA,META,SECUNDARIA,EVOL,ENCABEZADO,SL_TRAMOS,AGENDA_INFL,SL_ESTUDIOS,NOTA_SECUNDARIA,GAP,SEMAFORO,AGENDA_RANKING,EJES;
-function applyData(D){MESI=D.MESI;MIPC=D.MIPC;IPC=D.IPC;ICC=D.ICC;ICG=D.ICG;MINFL=D.MINFL;IPC_FULL=D.IPC_FULL;IPCBA_FULL=D.IPCBA_FULL;MBRECHA=D.MBRECHA;BRECHA=D.BRECHA;TIPCBA_MES=D.TIPCBA_MES;TIPCBA_IA=D.TIPCBA_IA;TIPCBA_BIENES=D.TIPCBA_BIENES;TIPCBA_SERV=D.TIPCBA_SERV;TIPCBA_ESTAC=D.TIPCBA_ESTAC;TIPCBA_REG=D.TIPCBA_REG;TIPCBA_VAR=D.TIPCBA_VAR;TIPCBA_ACUM=D.TIPCBA_ACUM;MIPCACUM=D.MIPCACUM;IPC_ACUM=D.IPC_ACUM;IPCBA_ACUM_FULL=D.IPCBA_ACUM_FULL;BRECHA_ACUM=D.BRECHA_ACUM;MIIA=D.MIIA;IPC_IA=D.IPC_IA;IPC_IA_9=D.IPC_IA_9;IPCBA_ACUM_9=D.IPCBA_ACUM_9;IPCBA_IA_9=D.IPCBA_IA_9;ICC_CABA_13=D.ICC_CABA_13;ICC_INT_13=D.ICC_INT_13;ICC_GBA_14=D.ICC_GBA_14;MV=D.MV;CONS=D.CONS;lastRows=D.lastRows;MI=D.MI;IMG=D.IMG;MG=D.MG;GESTION=D.GESTION;CROSS_MES=D.CROSS_MES;CROSS=D.CROSS;ISN_RD_MES=D.ISN_RD_MES;ISN_RD_VALS=D.ISN_RD_VALS;ISN_EJE_LABELS=D.ISN_EJE_LABELS;ISN_EJE_VALS=D.ISN_EJE_VALS;MILEI_SEP_LABELS=D.MILEI_SEP_LABELS;MILEI_SEP_VALS=D.MILEI_SEP_VALS;OPOS_LABELS=D.OPOS_LABELS;OPOS_VALS=D.OPOS_VALS;MSL_MES=D.MSL_MES;SL_POR_MES=D.SL_POR_MES;SL_CONSULT_LABELS=D.SL_CONSULT_LABELS;SL_CONSULT_VALS=D.SL_CONSULT_VALS;SL_INFORMES=D.SL_INFORMES;GAP_STATUS=D.GAP_STATUS;KPI=D.KPI;UPD=D.UPD;COBERTURA=D.COBERTURA;META=D.META;SECUNDARIA=D.SECUNDARIA||[];EVOL=D.EVOL||{};ENCABEZADO=D.ENCABEZADO;SL_TRAMOS=D.SL_TRAMOS||[];AGENDA_INFL=D.AGENDA_INFL;SL_ESTUDIOS=D.SL_ESTUDIOS||[];NOTA_SECUNDARIA=D.NOTA_SECUNDARIA||[];GAP=D.GAP||[];SEMAFORO=D.SEMAFORO||[];AGENDA_RANKING=D.AGENDA_RANKING||{items:[]};EJES=D.EJES||[];}
+let MESI,MIPC,IPC,ICC,ICG,MINFL,IPC_FULL,IPCBA_FULL,MBRECHA,BRECHA,TIPCBA_MES,TIPCBA_IA,TIPCBA_BIENES,TIPCBA_SERV,TIPCBA_ESTAC,TIPCBA_REG,TIPCBA_VAR,TIPCBA_ACUM,MIPCACUM,IPC_ACUM,IPCBA_ACUM_FULL,BRECHA_ACUM,MIIA,IPC_IA,IPC_IA_9,IPCBA_ACUM_9,IPCBA_IA_9,ICC_CABA_13,ICC_INT_13,ICC_GBA_14,MV,CONS,lastRows,MI,IMG,MG,GESTION,CROSS_MES,CROSS,ISN_RD_MES,ISN_RD_VALS,ISN_EJE_LABELS,ISN_EJE_VALS,MILEI_SEP_LABELS,MILEI_SEP_VALS,OPOS_LABELS,OPOS_VALS,MSL_MES,SL_POR_MES,SL_CONSULT_LABELS,SL_CONSULT_VALS,SL_INFORMES,GAP_STATUS,KPI,UPD,COBERTURA,META,SECUNDARIA,EVOL,ENCABEZADO,SL_TRAMOS,AGENDA_INFL,SL_ESTUDIOS,NOTA_SECUNDARIA,GAP,SEMAFORO,AGENDA_RANKING,EJES,PREGUNTAS_ESPECIFICAS;
+function applyData(D){MESI=D.MESI;MIPC=D.MIPC;IPC=D.IPC;ICC=D.ICC;ICG=D.ICG;MINFL=D.MINFL;IPC_FULL=D.IPC_FULL;IPCBA_FULL=D.IPCBA_FULL;MBRECHA=D.MBRECHA;BRECHA=D.BRECHA;TIPCBA_MES=D.TIPCBA_MES;TIPCBA_IA=D.TIPCBA_IA;TIPCBA_BIENES=D.TIPCBA_BIENES;TIPCBA_SERV=D.TIPCBA_SERV;TIPCBA_ESTAC=D.TIPCBA_ESTAC;TIPCBA_REG=D.TIPCBA_REG;TIPCBA_VAR=D.TIPCBA_VAR;TIPCBA_ACUM=D.TIPCBA_ACUM;MIPCACUM=D.MIPCACUM;IPC_ACUM=D.IPC_ACUM;IPCBA_ACUM_FULL=D.IPCBA_ACUM_FULL;BRECHA_ACUM=D.BRECHA_ACUM;MIIA=D.MIIA;IPC_IA=D.IPC_IA;IPC_IA_9=D.IPC_IA_9;IPCBA_ACUM_9=D.IPCBA_ACUM_9;IPCBA_IA_9=D.IPCBA_IA_9;ICC_CABA_13=D.ICC_CABA_13;ICC_INT_13=D.ICC_INT_13;ICC_GBA_14=D.ICC_GBA_14;MV=D.MV;CONS=D.CONS;lastRows=D.lastRows;MI=D.MI;IMG=D.IMG;MG=D.MG;GESTION=D.GESTION;CROSS_MES=D.CROSS_MES;CROSS=D.CROSS;ISN_RD_MES=D.ISN_RD_MES;ISN_RD_VALS=D.ISN_RD_VALS;ISN_EJE_LABELS=D.ISN_EJE_LABELS;ISN_EJE_VALS=D.ISN_EJE_VALS;MILEI_SEP_LABELS=D.MILEI_SEP_LABELS;MILEI_SEP_VALS=D.MILEI_SEP_VALS;OPOS_LABELS=D.OPOS_LABELS;OPOS_VALS=D.OPOS_VALS;MSL_MES=D.MSL_MES;SL_POR_MES=D.SL_POR_MES;SL_CONSULT_LABELS=D.SL_CONSULT_LABELS;SL_CONSULT_VALS=D.SL_CONSULT_VALS;SL_INFORMES=D.SL_INFORMES;GAP_STATUS=D.GAP_STATUS;KPI=D.KPI;UPD=D.UPD;COBERTURA=D.COBERTURA;META=D.META;SECUNDARIA=D.SECUNDARIA||[];EVOL=D.EVOL||{};ENCABEZADO=D.ENCABEZADO;SL_TRAMOS=D.SL_TRAMOS||[];AGENDA_INFL=D.AGENDA_INFL;SL_ESTUDIOS=D.SL_ESTUDIOS||[];NOTA_SECUNDARIA=D.NOTA_SECUNDARIA||[];GAP=D.GAP||[];SEMAFORO=D.SEMAFORO||[];AGENDA_RANKING=D.AGENDA_RANKING||{items:[]};EJES=D.EJES||[];PREGUNTAS_ESPECIFICAS=D.PREGUNTAS_ESPECIFICAS||[];}
 
 /* ── CHART HELPERS ──────────────────────────── */
 function baseOpts(){
@@ -1569,7 +1570,7 @@ function initTab(tab){
   }
 
   if(tab==='semaforo'){
-    renderSemaforo();renderEjes();
+    renderSemaforo();renderEjes();renderEspecificas();
   }
 
   if(tab==='agenda'){
@@ -1751,6 +1752,20 @@ function renderEjes(){
         <td style="font-size:10px">${celda}</td>
         <td style="font-size:10px;color:var(--fg-dim)">${esc(e.verificacion)}</td></tr>`;}).join('')}
     </tbody></table></div>`;
+}
+function renderEspecificas(){
+  const cont=document.getElementById('preguntasEspecificas');if(!cont)return;
+  if(!PREGUNTAS_ESPECIFICAS.length){cont.innerHTML='';return;}
+  cont.innerHTML=`<details class="det-tab" style="margin-top:14px"><summary><b>Preguntas específicas fuera de los diez ejes</b> · ${PREGUNTAS_ESPECIFICAS.reduce((a,x)=>a+x.filas.length,0)} series</summary>
+    <div class="info-box" style="margin:10px 0;font-size:11px;line-height:1.55">Preguntas propias de una consultora que no equivalen a ninguno de los ejes y que no se fuerzan dentro de ellos: se conservan con su formulación y se leen por separado.</div>
+    <div class="table-wrap"><table>
+    <thead><tr><th>Bloque</th><th>Serie</th><th>Consultora</th><th>Filas</th></tr></thead>
+    <tbody>${PREGUNTAS_ESPECIFICAS.map(x=>x.filas.map((f,i)=>
+      `<tr>${i===0?`<td rowspan="${x.filas.length}"><strong>${esc(x.modulo)}</strong></td>`:''}
+       <td style="font-size:10px">${esc(f.etiqueta)}</td>
+       <td style="font-size:10px;color:var(--fg-dim)">${esc(f.consultora||'—')}</td>
+       <td style="font-size:10px;color:var(--fg-dim)">${f.filas.length?'N2 '+f.filas.join(', '):'—'}</td></tr>`).join('')).join('')}
+    </tbody></table></div></details>`;
 }
 function renderSemaforo(){
   const cont=document.getElementById('semaforoTablas');if(!cont)return;

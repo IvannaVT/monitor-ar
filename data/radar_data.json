@@ -1827,8 +1827,16 @@
       "rango_valido": true,
       "direccion": "sin dirección común entre consultoras",
       "direcciones": {
-       "Proyección": "estable",
-       "QMonitor": "sube"
+       "Proyección": {
+        "estado": "estable",
+        "detalle": "Oct-26 → Nov-26",
+        "delta": 0.9
+       },
+       "QMonitor": {
+        "estado": "sube",
+        "detalle": "Oct-26 → Nov-26",
+        "delta": 4
+       }
       },
       "consultoras": {
        "QMonitor": {
@@ -1897,8 +1905,16 @@
       "rango_valido": true,
       "direccion": "sin dirección común entre consultoras",
       "direcciones": {
-       "Proyección": "baja",
-       "QMonitor": "sube"
+       "Proyección": {
+        "estado": "baja",
+        "detalle": "Oct-26 → Nov-26",
+        "delta": -3.0
+       },
+       "QMonitor": {
+        "estado": "sube",
+        "detalle": "Oct-26 → Nov-26",
+        "delta": 1
+       }
       },
       "consultoras": {
        "Proyección": {
@@ -1967,8 +1983,16 @@
       "rango_valido": true,
       "direccion": "sin dirección común entre consultoras",
       "direcciones": {
-       "Proyección": "baja",
-       "QMonitor": "sube"
+       "Proyección": {
+        "estado": "baja",
+        "detalle": "Sep-26 → Nov-26",
+        "delta": -6.4
+       },
+       "QMonitor": {
+        "estado": "sube",
+        "detalle": "Oct-26 → Nov-26",
+        "delta": 1
+       }
       },
       "consultoras": {
        "QMonitor": {
@@ -2127,8 +2151,16 @@
       "rango_valido": true,
       "direccion": "sin dirección común entre consultoras",
       "direcciones": {
-       "Proyección": "baja",
-       "QMonitor": "sube"
+       "Proyección": {
+        "estado": "baja",
+        "detalle": "Sep-26 → Nov-26",
+        "delta": -6.4
+       },
+       "QMonitor": {
+        "estado": "sube",
+        "detalle": "Oct-26 → Nov-26",
+        "delta": 1
+       }
       },
       "consultoras": {
        "QMonitor": {
@@ -2167,7 +2199,7 @@
    "tendencia": "may–nov 2026",
    "cobertura": "9 consultoras en oct-26 (mes completo) · 2 en nov-26 (corte parcial al 17/11)",
    "comparabilidad": "MEDIA — misma pregunta de aprobación, pero universo, técnica y escala difieren entre consultoras",
-   "direccion": "sin dirección común entre consultoras",
+   "direccion": "sin dirección común entre consultoras: Proyección baja (Sep-26 → Nov-26) · QMonitor sube (Oct-26 → Nov-26)",
    "nota": "Rango de oct-26: 28,9–38,7%; no se promedian. Intra-consultora: Proyección 42% en sep → 35,6% en nov; QMonitor 35% → 36%. La cantidad de consultoras acredita cobertura, no dirección."
   },
   {
@@ -2188,8 +2220,16 @@
       "rango_valido": true,
       "direccion": "sin dirección común entre consultoras",
       "direcciones": {
-       "Proyección": "baja",
-       "QMonitor": "sube"
+       "Proyección": {
+        "estado": "baja",
+        "detalle": "Oct-26 → Nov-26",
+        "delta": -3.0
+       },
+       "QMonitor": {
+        "estado": "sube",
+        "detalle": "Oct-26 → Nov-26",
+        "delta": 1
+       }
       },
       "consultoras": {
        "Proyección": {
@@ -2228,7 +2268,7 @@
    "tendencia": "may–nov 2026",
    "cobertura": "9 consultoras en oct-26 · 2 en nov-26 (corte parcial)",
    "comparabilidad": "MEDIA — misma pregunta de imagen personal; las escalas difieren (algunas consultoras suman buena + muy buena)",
-   "direccion": "sin dirección común entre consultoras",
+   "direccion": "sin dirección común entre consultoras: Proyección baja (Oct-26 → Nov-26) · QMonitor sube (Oct-26 → Nov-26)",
    "nota": "Rango de oct-26: 31–43,8%. La dispersión entre consultoras supera la variación mensual de cada serie. Imagen personal ≠ aprobación de gestión."
   },
   {
@@ -2249,8 +2289,16 @@
       "rango_valido": true,
       "direccion": "sin dirección común entre consultoras",
       "direcciones": {
-       "Proyección": "estable",
-       "QMonitor": "sube"
+       "Proyección": {
+        "estado": "estable",
+        "detalle": "Oct-26 → Nov-26",
+        "delta": 0.9
+       },
+       "QMonitor": {
+        "estado": "sube",
+        "detalle": "Oct-26 → Nov-26",
+        "delta": 4
+       }
       },
       "consultoras": {
        "QMonitor": {
@@ -2289,7 +2337,7 @@
    "tendencia": "may–nov 2026",
    "cobertura": "9 consultoras en oct-26 · 2 en nov-26 (corte parcial)",
    "comparabilidad": "MEDIA — misma pregunta; Zentrix agrega mala + muy mala y Giacobbe separa «regular» y «no lo conozco»",
-   "direccion": "sin dirección común entre consultoras",
+   "direccion": "sin dirección común entre consultoras: Proyección estable (Oct-26 → Nov-26) · QMonitor sube (Oct-26 → Nov-26)",
    "nota": "Rango de oct-26: 53–64,6%. Giacobbe oct-26 corregida a 56,8% con el PDF primario (campo 28/10–2/11)."
   },
   {
@@ -2413,8 +2461,16 @@
       "rango_valido": true,
       "direccion": "sin dirección común entre consultoras",
       "direcciones": {
-       "Proyección": "baja",
-       "QMonitor": "sube"
+       "Proyección": {
+        "estado": "baja",
+        "detalle": "Oct-26 → Nov-26",
+        "delta": -2.8
+       },
+       "QMonitor": {
+        "estado": "sube",
+        "detalle": "Oct-26 → Nov-26",
+        "delta": 6
+       }
       },
       "consultoras": {
        "Proyección": {
@@ -2453,7 +2509,7 @@
    "tendencia": "feb–nov 2026",
    "cobertura": "8 consultoras en oct-26 · 2 en nov-26 (corte parcial)",
    "comparabilidad": "MEDIA — todas preguntan por espacio y LLA es una categoría única; DC Consultores usa muestreo no probabilístico",
-   "direccion": "sin dirección común entre consultoras",
+   "direccion": "sin dirección común entre consultoras: Proyección baja (Oct-26 → Nov-26) · QMonitor sube (Oct-26 → Nov-26)",
    "nota": "Rango de oct-26: 26–42,6%. La dispersión entre consultoras supera la diferencia entre espacios: es dispersión metodológica, no estabilidad."
   },
   {
@@ -2472,9 +2528,13 @@
       "min": 35,
       "max": 35,
       "rango_valido": false,
-      "direccion": "dirección común: estable",
+      "direccion": "estable",
       "direcciones": {
-       "Proyección": "estable"
+       "Proyección": {
+        "estado": "estable",
+        "detalle": "Oct-26 → Nov-26",
+        "delta": -0.9
+       }
       },
       "consultoras": {
        "Proyección": {
@@ -2497,9 +2557,12 @@
       "min": 25,
       "max": 25,
       "rango_valido": false,
-      "direccion": "dirección común: baja",
+      "direccion": "sin dos mediciones comparables: no se establece dirección",
       "direcciones": {
-       "QMonitor": "baja"
+       "QMonitor": {
+        "estado": "sin medición anterior comparable",
+        "detalle": "la composición de la pregunta cambió entre Oct-26 y Nov-26"
+       }
       },
       "consultoras": {
        "QMonitor": {
@@ -2526,7 +2589,7 @@
    "tendencia": "feb–nov 2026",
    "cobertura": "8 consultoras en oct-26 · 2 en nov-26 (corte parcial)",
    "comparabilidad": "BAJA entre composiciones — unas consultoras agregan peronismo y kirchnerismo y otras los separan",
-   "direccion": "sin dirección común entre consultoras",
+   "direccion": "estable (Proyección, Oct-26 → Nov-26) · sin par comparable: QMonitor",
    "nota": "El rango no cruza composiciones. En oct-26, las 7 consultoras que agregan peronismo y kirchnerismo van de 24–36,6%; DC Consultores, que mide peronismo sin kirchnerismo, queda en 17,1% (una sola fuente) y forma su propio grupo. Los dos valores no se comparan entre sí ni se promedian."
   },
   {
@@ -2596,7 +2659,7 @@
  "EJES": [
   {
    "nombre": "Imagen personal",
-   "verificacion": "Misma pregunta de imagen personal de Milei, universo nacional. Difieren las escalas: algunas consultoras agregan buena + muy buena y Giacobbe separa «regular» y «no lo conozco». No se compara con aprobación de gestión.",
+   "verificacion": "Imagen personal de un dirigente, universo nacional. Difieren las escalas: algunas consultoras agregan buena + muy buena y Giacobbe separa «regular» y «no lo conozco». Las series de Milei y las de otros dirigentes no se comparan entre sí. No se compara con aprobación de gestión.",
    "grupos": [
     {
      "campo": "pos",
@@ -2608,8 +2671,16 @@
      "rango_valido": true,
      "direccion": "sin dirección común entre consultoras",
      "direcciones": {
-      "Proyección": "baja",
-      "QMonitor": "sube"
+      "Proyección": {
+       "estado": "baja",
+       "detalle": "Oct-26 → Nov-26",
+       "delta": -3.0
+      },
+      "QMonitor": {
+       "estado": "sube",
+       "detalle": "Oct-26 → Nov-26",
+       "delta": 1
+      }
      },
      "consultoras": {
       "Proyección": {
@@ -2648,8 +2719,16 @@
      "rango_valido": true,
      "direccion": "sin dirección común entre consultoras",
      "direcciones": {
-      "Proyección": "estable",
-      "QMonitor": "sube"
+      "Proyección": {
+       "estado": "estable",
+       "detalle": "Oct-26 → Nov-26",
+       "delta": 0.9
+      },
+      "QMonitor": {
+       "estado": "sube",
+       "detalle": "Oct-26 → Nov-26",
+       "delta": 4
+      }
      },
      "consultoras": {
       "QMonitor": {
@@ -2677,16 +2756,346 @@
        }
       }
      }
+    },
+    {
+     "campo": "DC Consultores · Bullrich positiva",
+     "mes": "",
+     "composicion": "serie propia",
+     "n": 1,
+     "rango_valido": false,
+     "direccion": "serie intra-consultora",
+     "consultoras": {},
+     "min": null,
+     "max": null,
+     "titulo": "Imagen de otros dirigentes · series por consultora",
+     "evidencia": "",
+     "nota": "solo positiva",
+     "filas": [
+      1336
+     ],
+     "fuentes_complementarias": []
+    },
+    {
+     "campo": "QMonitor · CFK positiva",
+     "mes": "",
+     "composicion": "serie propia",
+     "n": 1,
+     "rango_valido": false,
+     "direccion": "serie intra-consultora",
+     "consultoras": {},
+     "min": null,
+     "max": null,
+     "titulo": "Imagen de otros dirigentes · series por consultora",
+     "evidencia": "",
+     "nota": "oct: campo 5–28/9 · nov: campo 8–26/10",
+     "filas": [
+      1184,
+      1355
+     ],
+     "fuentes_complementarias": []
+    },
+    {
+     "campo": "QMonitor · CFK negativa",
+     "mes": "",
+     "composicion": "serie propia",
+     "n": 1,
+     "rango_valido": false,
+     "direccion": "serie intra-consultora",
+     "consultoras": {},
+     "min": null,
+     "max": null,
+     "titulo": "Imagen de otros dirigentes · series por consultora",
+     "evidencia": "",
+     "nota": "",
+     "filas": [
+      1356
+     ],
+     "fuentes_complementarias": []
+    },
+    {
+     "campo": "QMonitor · Bullrich positiva",
+     "mes": "",
+     "composicion": "serie propia",
+     "n": 1,
+     "rango_valido": false,
+     "direccion": "serie intra-consultora",
+     "consultoras": {},
+     "min": null,
+     "max": null,
+     "titulo": "Imagen de otros dirigentes · series por consultora",
+     "evidencia": "",
+     "nota": "oct: campo 5–28/9 · nov: campo 8–26/10",
+     "filas": [
+      1185,
+      1357
+     ],
+     "fuentes_complementarias": []
+    },
+    {
+     "campo": "QMonitor · Kicillof positiva",
+     "mes": "",
+     "composicion": "serie propia",
+     "n": 1,
+     "rango_valido": false,
+     "direccion": "serie intra-consultora",
+     "consultoras": {},
+     "min": null,
+     "max": null,
+     "titulo": "Imagen de otros dirigentes · series por consultora",
+     "evidencia": "",
+     "nota": "oct: campo 5–28/9 · nov: campo 8–26/10",
+     "filas": [
+      1186,
+      1358
+     ],
+     "fuentes_complementarias": []
+    },
+    {
+     "campo": "Zubán Córdoba · León XIV · Positiva",
+     "mes": "",
+     "composicion": "serie propia",
+     "n": 1,
+     "rango_valido": false,
+     "direccion": "serie intra-consultora",
+     "consultoras": {},
+     "min": null,
+     "max": null,
+     "titulo": "Imagen de otros dirigentes · series por consultora",
+     "evidencia": "",
+     "nota": "Pregunta original ilegible; sin comparación histórica.",
+     "filas": [
+      1434
+     ],
+     "fuentes_complementarias": []
+    },
+    {
+     "campo": "Zubán Córdoba · León XIV · Negativa",
+     "mes": "",
+     "composicion": "serie propia",
+     "n": 1,
+     "rango_valido": false,
+     "direccion": "serie intra-consultora",
+     "consultoras": {},
+     "min": null,
+     "max": null,
+     "titulo": "Imagen de otros dirigentes · series por consultora",
+     "evidencia": "",
+     "nota": "Pregunta original ilegible; sin comparación histórica.",
+     "filas": [
+      1435
+     ],
+     "fuentes_complementarias": []
+    },
+    {
+     "campo": "Zubán Córdoba · León XIV · No conoce",
+     "mes": "",
+     "composicion": "serie propia",
+     "n": 1,
+     "rango_valido": false,
+     "direccion": "serie intra-consultora",
+     "consultoras": {},
+     "min": null,
+     "max": null,
+     "titulo": "Imagen de otros dirigentes · series por consultora",
+     "evidencia": "",
+     "nota": "Pregunta original ilegible; sin comparación histórica.",
+     "filas": [
+      1436
+     ],
+     "fuentes_complementarias": []
+    },
+    {
+     "campo": "Zubán Córdoba · León XIV · No sabe",
+     "mes": "",
+     "composicion": "serie propia",
+     "n": 1,
+     "rango_valido": false,
+     "direccion": "serie intra-consultora",
+     "consultoras": {},
+     "min": null,
+     "max": null,
+     "titulo": "Imagen de otros dirigentes · series por consultora",
+     "evidencia": "",
+     "nota": "Pregunta original ilegible; sin comparación histórica.",
+     "filas": [
+      1437
+     ],
+     "fuentes_complementarias": []
+    },
+    {
+     "campo": "Proyección · Patricia Bullrich · Positiva (muy buena + buena)",
+     "mes": "",
+     "composicion": "serie propia",
+     "n": 1,
+     "rango_valido": false,
+     "direccion": "serie intra-consultora",
+     "consultoras": {},
+     "min": null,
+     "max": null,
+     "titulo": "Imagen de otros dirigentes · series por consultora",
+     "evidencia": "",
+     "nota": "",
+     "filas": [
+      1475
+     ],
+     "fuentes_complementarias": []
+    },
+    {
+     "campo": "Proyección · Patricia Bullrich · Negativa (mala + muy mala)",
+     "mes": "",
+     "composicion": "serie propia",
+     "n": 1,
+     "rango_valido": false,
+     "direccion": "serie intra-consultora",
+     "consultoras": {},
+     "min": null,
+     "max": null,
+     "titulo": "Imagen de otros dirigentes · series por consultora",
+     "evidencia": "",
+     "nota": "",
+     "filas": [
+      1476
+     ],
+     "fuentes_complementarias": []
+    },
+    {
+     "campo": "Proyección · Axel Kicillof · Positiva (muy buena + buena)",
+     "mes": "",
+     "composicion": "serie propia",
+     "n": 1,
+     "rango_valido": false,
+     "direccion": "serie intra-consultora",
+     "consultoras": {},
+     "min": null,
+     "max": null,
+     "titulo": "Imagen de otros dirigentes · series por consultora",
+     "evidencia": "",
+     "nota": "",
+     "filas": [
+      1477
+     ],
+     "fuentes_complementarias": []
+    },
+    {
+     "campo": "Proyección · Axel Kicillof · Negativa (mala + muy mala)",
+     "mes": "",
+     "composicion": "serie propia",
+     "n": 1,
+     "rango_valido": false,
+     "direccion": "serie intra-consultora",
+     "consultoras": {},
+     "min": null,
+     "max": null,
+     "titulo": "Imagen de otros dirigentes · series por consultora",
+     "evidencia": "",
+     "nota": "",
+     "filas": [
+      1478
+     ],
+     "fuentes_complementarias": []
+    },
+    {
+     "campo": "Proyección · Myriam Bregman · Positiva (muy buena + buena)",
+     "mes": "",
+     "composicion": "serie propia",
+     "n": 1,
+     "rango_valido": false,
+     "direccion": "serie intra-consultora",
+     "consultoras": {},
+     "min": null,
+     "max": null,
+     "titulo": "Imagen de otros dirigentes · series por consultora",
+     "evidencia": "",
+     "nota": "",
+     "filas": [
+      1479
+     ],
+     "fuentes_complementarias": []
+    },
+    {
+     "campo": "Proyección · Myriam Bregman · Negativa (mala + muy mala)",
+     "mes": "",
+     "composicion": "serie propia",
+     "n": 1,
+     "rango_valido": false,
+     "direccion": "serie intra-consultora",
+     "consultoras": {},
+     "min": null,
+     "max": null,
+     "titulo": "Imagen de otros dirigentes · series por consultora",
+     "evidencia": "",
+     "nota": "",
+     "filas": [
+      1480
+     ],
+     "fuentes_complementarias": []
+    },
+    {
+     "campo": "Tendencias · León XIV · Total positiva (positiva + regular positiva)",
+     "mes": "",
+     "composicion": "serie propia",
+     "n": 1,
+     "rango_valido": false,
+     "direccion": "serie intra-consultora",
+     "consultoras": {},
+     "min": null,
+     "max": null,
+     "titulo": "Imagen de otros dirigentes · series por consultora",
+     "evidencia": "",
+     "nota": "Ficha técnica no informada en el documento.",
+     "filas": [
+      1516
+     ],
+     "fuentes_complementarias": []
+    },
+    {
+     "campo": "Tendencias · León XIV · Total negativa (regular negativa + negativa)",
+     "mes": "",
+     "composicion": "serie propia",
+     "n": 1,
+     "rango_valido": false,
+     "direccion": "serie intra-consultora",
+     "consultoras": {},
+     "min": null,
+     "max": null,
+     "titulo": "Imagen de otros dirigentes · series por consultora",
+     "evidencia": "",
+     "nota": "Ficha técnica no informada en el documento.",
+     "filas": [
+      1517
+     ],
+     "fuentes_complementarias": []
+    },
+    {
+     "campo": "Tendencias · León XIV · No sabe / no conoce",
+     "mes": "",
+     "composicion": "serie propia",
+     "n": 1,
+     "rango_valido": false,
+     "direccion": "serie intra-consultora",
+     "consultoras": {},
+     "min": null,
+     "max": null,
+     "titulo": "Imagen de otros dirigentes · series por consultora",
+     "evidencia": "",
+     "nota": "Ficha técnica no informada en el documento.",
+     "filas": [
+      1518
+     ],
+     "fuentes_complementarias": []
     }
    ],
    "fuentes": [
+    "DC Consultores",
     "Proyección",
-    "QMonitor"
+    "QMonitor",
+    "Tendencias",
+    "Zubán Córdoba"
    ]
   },
   {
    "nombre": "Aprobación de gestión",
-   "verificacion": "Pregunta de aprobación de la gestión nacional. Universo y técnica difieren; Management & Fit entra por fuente secundaria con evidencia máxima MEDIA. No se compara con imagen personal.",
+   "verificacion": "Pregunta de aprobación de la gestión nacional. Universo y técnica difieren; Management & Fit entra por fuente secundaria con evidencia máxima MEDIA. Incluye la categoría «no sabe» de Proyección, que estaba clasificada en rumbo del país. No se compara con imagen personal.",
    "grupos": [
     {
      "campo": "aprob",
@@ -2698,8 +3107,16 @@
      "rango_valido": true,
      "direccion": "sin dirección común entre consultoras",
      "direcciones": {
-      "Proyección": "baja",
-      "QMonitor": "sube"
+      "Proyección": {
+       "estado": "baja",
+       "detalle": "Sep-26 → Nov-26",
+       "delta": -6.4
+      },
+      "QMonitor": {
+       "estado": "sube",
+       "detalle": "Oct-26 → Nov-26",
+       "delta": 1
+      }
      },
      "consultoras": {
       "QMonitor": {
@@ -2736,10 +3153,18 @@
      "min": 55.9,
      "max": 62,
      "rango_valido": true,
-     "direccion": "dirección común: sube",
+     "direccion": "dirección común entre consultoras: sube",
      "direcciones": {
-      "Proyección": "sube",
-      "QMonitor": "sube"
+      "Proyección": {
+       "estado": "sube",
+       "detalle": "Oct-26 → Nov-26",
+       "delta": 3.5
+      },
+      "QMonitor": {
+       "estado": "sube",
+       "detalle": "Oct-26 → Nov-26",
+       "delta": 1
+      }
      },
      "consultoras": {
       "QMonitor": {
@@ -2767,6 +3192,24 @@
        }
       }
      }
+    },
+    {
+     "campo": "Proyección · gestión nacional · no sabe · No lo sé",
+     "mes": "",
+     "composicion": "serie propia",
+     "n": 1,
+     "rango_valido": false,
+     "direccion": "serie intra-consultora",
+     "consultoras": {},
+     "min": null,
+     "max": null,
+     "titulo": "Clima / rumbo del país",
+     "evidencia": "",
+     "nota": "",
+     "filas": [
+      1462
+     ],
+     "fuentes_complementarias": []
     }
    ],
    "fuentes": [
@@ -2776,7 +3219,7 @@
   },
   {
    "nombre": "Voto por espacio",
-   "verificacion": "LLA es categoría única en todas las fuentes. El agregado peronista no lo es: se separa por composición y los rangos no cruzan composiciones.",
+   "verificacion": "Voto a un espacio político, no a un candidato. LLA es categoría única en todas las fuentes; el agregado peronista no lo es, así que se separa por composición y los rangos no cruzan composiciones.",
    "grupos": [
     {
      "campo": "lla",
@@ -2788,8 +3231,16 @@
      "rango_valido": true,
      "direccion": "sin dirección común entre consultoras",
      "direcciones": {
-      "Proyección": "baja",
-      "QMonitor": "sube"
+      "Proyección": {
+       "estado": "baja",
+       "detalle": "Oct-26 → Nov-26",
+       "delta": -2.8
+      },
+      "QMonitor": {
+       "estado": "sube",
+       "detalle": "Oct-26 → Nov-26",
+       "delta": 6
+      }
      },
      "consultoras": {
       "Proyección": {
@@ -2826,9 +3277,13 @@
      "min": 35,
      "max": 35,
      "rango_valido": false,
-     "direccion": "dirección común: estable",
+     "direccion": "estable",
      "direcciones": {
-      "Proyección": "estable"
+      "Proyección": {
+       "estado": "estable",
+       "detalle": "Oct-26 → Nov-26",
+       "delta": -0.9
+      }
      },
      "consultoras": {
       "Proyección": {
@@ -2853,9 +3308,12 @@
      "min": 25,
      "max": 25,
      "rango_valido": false,
-     "direccion": "dirección común: baja",
+     "direccion": "sin dos mediciones comparables: no se establece dirección",
      "direcciones": {
-      "QMonitor": "baja"
+      "QMonitor": {
+       "estado": "sin medición anterior comparable",
+       "detalle": "la composición de la pregunta cambió entre Oct-26 y Nov-26"
+      }
      },
      "consultoras": {
       "QMonitor": {
@@ -2871,9 +3329,285 @@
        }
       }
      }
+    },
+    {
+     "campo": "Proyección · voto por espacio · LLA",
+     "mes": "",
+     "composicion": "serie propia",
+     "n": 1,
+     "rango_valido": false,
+     "direccion": "serie intra-consultora",
+     "consultoras": {},
+     "min": null,
+     "max": null,
+     "titulo": "Intención de voto · series por consultora (no se promedian entre consultoras)",
+     "evidencia": "",
+     "nota": "pregunta distinta del candidato nominal de la serie: no se encadena",
+     "filas": [
+      1211,
+      1481
+     ],
+     "fuentes_complementarias": []
+    },
+    {
+     "campo": "Proyección · voto por espacio · PJ",
+     "mes": "",
+     "composicion": "serie propia",
+     "n": 1,
+     "rango_valido": false,
+     "direccion": "serie intra-consultora",
+     "consultoras": {},
+     "min": null,
+     "max": null,
+     "titulo": "Intención de voto · series por consultora (no se promedian entre consultoras)",
+     "evidencia": "",
+     "nota": "pregunta distinta del candidato nominal de la serie: no se encadena",
+     "filas": [
+      1427,
+      1482
+     ],
+     "fuentes_complementarias": []
+    },
+    {
+     "campo": "ESPOP (UdeSA) · espacio · LLA",
+     "mes": "",
+     "composicion": "serie propia",
+     "n": 1,
+     "rango_valido": false,
+     "direccion": "serie intra-consultora",
+     "consultoras": {},
+     "min": null,
+     "max": null,
+     "titulo": "Intención de voto · series por consultora (no se promedian entre consultoras)",
+     "evidencia": "",
+     "nota": "Informe primario ESPOP octubre, p. 45. Campo 5–13/10, 1.000 casos. 21% no sabe y 5% prefiere no responder. Comparabilidad intra-ESPOP alta entre septiembre y octubre: misma pregunta, universo y denominador, verificados en los informes de UdeSA.",
+     "filas": [
+      1207
+     ],
+     "fuentes_complementarias": []
+    },
+    {
+     "campo": "ESPOP (UdeSA) · espacio · PJ",
+     "mes": "",
+     "composicion": "serie propia",
+     "n": 1,
+     "rango_valido": false,
+     "direccion": "serie intra-consultora",
+     "consultoras": {},
+     "min": null,
+     "max": null,
+     "titulo": "Intención de voto · series por consultora (no se promedian entre consultoras)",
+     "evidencia": "",
+     "nota": "Informe primario ESPOP octubre, p. 45. Campo 5–13/10, 1.000 casos. 21% no sabe y 5% prefiere no responder. Comparabilidad intra-ESPOP alta entre septiembre y octubre: misma pregunta, universo y denominador, verificados en los informes de UdeSA.",
+     "filas": [
+      1428
+     ],
+     "fuentes_complementarias": []
+    },
+    {
+     "campo": "DC Consultores · espacio · LLA",
+     "mes": "",
+     "composicion": "serie propia",
+     "n": 1,
+     "rango_valido": false,
+     "direccion": "serie intra-consultora",
+     "consultoras": {},
+     "min": null,
+     "max": null,
+     "titulo": "Intención de voto · series por consultora (no se promedian entre consultoras)",
+     "evidencia": "",
+     "nota": "NO COMPARABLE: separa Peronismo y Kirchnerismo; muestreo no probabilístico",
+     "filas": [
+      1333
+     ],
+     "fuentes_complementarias": []
+    },
+    {
+     "campo": "DC Consultores · espacio · Peronismo",
+     "mes": "",
+     "composicion": "serie propia",
+     "n": 1,
+     "rango_valido": false,
+     "direccion": "serie intra-consultora",
+     "consultoras": {},
+     "min": null,
+     "max": null,
+     "titulo": "Intención de voto · series por consultora (no se promedian entre consultoras)",
+     "evidencia": "",
+     "nota": "",
+     "filas": [
+      1334
+     ],
+     "fuentes_complementarias": []
+    },
+    {
+     "campo": "QMonitor · espacio · LLA",
+     "mes": "",
+     "composicion": "serie propia",
+     "n": 1,
+     "rango_valido": false,
+     "direccion": "serie intra-consultora",
+     "consultoras": {},
+     "min": null,
+     "max": null,
+     "titulo": "Intención de voto · series por consultora (no se promedian entre consultoras)",
+     "evidencia": "BAJA",
+     "nota": "oct: el informe agrupa Peronismo; nov: separa Peronismo y Kirchnerismo (14%) — comparabilidad BAJA entre ambos cortes",
+     "filas": [
+      1199,
+      1361
+     ],
+     "fuentes_complementarias": []
+    },
+    {
+     "campo": "QMonitor · espacio · Peronismo",
+     "mes": "",
+     "composicion": "serie propia",
+     "n": 1,
+     "rango_valido": false,
+     "direccion": "serie intra-consultora",
+     "consultoras": {},
+     "min": null,
+     "max": null,
+     "titulo": "Intención de voto · series por consultora (no se promedian entre consultoras)",
+     "evidencia": "BAJA",
+     "nota": "oct: el informe agrupa Peronismo; nov: separa Peronismo y Kirchnerismo (14%) — comparabilidad BAJA entre ambos cortes",
+     "filas": [
+      1198,
+      1362
+     ],
+     "fuentes_complementarias": []
+    },
+    {
+     "campo": "QMonitor · espacio · Kirchnerismo",
+     "mes": "",
+     "composicion": "serie propia",
+     "n": 1,
+     "rango_valido": false,
+     "direccion": "serie intra-consultora",
+     "consultoras": {},
+     "min": null,
+     "max": null,
+     "titulo": "Intención de voto · series por consultora (no se promedian entre consultoras)",
+     "evidencia": "",
+     "nota": "",
+     "filas": [
+      1363
+     ],
+     "fuentes_complementarias": []
+    },
+    {
+     "campo": "Proyección · voto por espacio · Frente de Izquierda",
+     "mes": "",
+     "composicion": "serie propia",
+     "n": 1,
+     "rango_valido": false,
+     "direccion": "serie intra-consultora",
+     "consultoras": {},
+     "min": null,
+     "max": null,
+     "titulo": "Intención de voto · series por consultora (no se promedian entre consultoras)",
+     "evidencia": "",
+     "nota": "",
+     "filas": [
+      1483
+     ],
+     "fuentes_complementarias": []
+    },
+    {
+     "campo": "Proyección · voto por espacio · PRO (Macrismo)",
+     "mes": "",
+     "composicion": "serie propia",
+     "n": 1,
+     "rango_valido": false,
+     "direccion": "serie intra-consultora",
+     "consultoras": {},
+     "min": null,
+     "max": null,
+     "titulo": "Intención de voto · series por consultora (no se promedian entre consultoras)",
+     "evidencia": "",
+     "nota": "",
+     "filas": [
+      1484
+     ],
+     "fuentes_complementarias": []
+    },
+    {
+     "campo": "Proyección · voto por espacio · Provincias Unidas (Gobernadores de centro)",
+     "mes": "",
+     "composicion": "serie propia",
+     "n": 1,
+     "rango_valido": false,
+     "direccion": "serie intra-consultora",
+     "consultoras": {},
+     "min": null,
+     "max": null,
+     "titulo": "Intención de voto · series por consultora (no se promedian entre consultoras)",
+     "evidencia": "",
+     "nota": "",
+     "filas": [
+      1485
+     ],
+     "fuentes_complementarias": []
+    },
+    {
+     "campo": "Proyección · voto por espacio · En blanco / impugnado",
+     "mes": "",
+     "composicion": "serie propia",
+     "n": 1,
+     "rango_valido": false,
+     "direccion": "serie intra-consultora",
+     "consultoras": {},
+     "min": null,
+     "max": null,
+     "titulo": "Intención de voto · series por consultora (no se promedian entre consultoras)",
+     "evidencia": "",
+     "nota": "",
+     "filas": [
+      1486
+     ],
+     "fuentes_complementarias": []
+    },
+    {
+     "campo": "Proyección · cambio o continuidad · Que haya un nuevo gobierno de otro espacio político cercano al peronismo",
+     "mes": "",
+     "composicion": "serie propia",
+     "n": 1,
+     "rango_valido": false,
+     "direccion": "serie intra-consultora",
+     "consultoras": {},
+     "min": null,
+     "max": null,
+     "titulo": "Intención de voto · series por consultora (no se promedian entre consultoras)",
+     "evidencia": "",
+     "nota": "",
+     "filas": [
+      1501
+     ],
+     "fuentes_complementarias": []
+    },
+    {
+     "campo": "Proyección · cambio o continuidad · Que haya un nuevo gobierno de otro espacio político no peronista",
+     "mes": "",
+     "composicion": "serie propia",
+     "n": 1,
+     "rango_valido": false,
+     "direccion": "serie intra-consultora",
+     "consultoras": {},
+     "min": null,
+     "max": null,
+     "titulo": "Intención de voto · series por consultora (no se promedian entre consultoras)",
+     "evidencia": "",
+     "nota": "",
+     "filas": [
+      1502
+     ],
+     "fuentes_complementarias": []
     }
    ],
    "fuentes": [
+    "DC Consultores",
+    "ESPOP (UdeSA)",
     "Proyección",
     "QMonitor"
    ]
@@ -2892,11 +3626,13 @@
      "consultoras": {},
      "min": null,
      "max": null,
+     "titulo": "Economía percibida · series por consultora",
      "evidencia": "",
      "nota": "",
      "filas": [
       1161
-     ]
+     ],
+     "fuentes_complementarias": []
     },
     {
      "campo": "D'Alessio · economía personal peor que hace un año",
@@ -2908,11 +3644,13 @@
      "consultoras": {},
      "min": null,
      "max": null,
+     "titulo": "Economía percibida · series por consultora",
      "evidencia": "",
      "nota": "",
      "filas": [
       1163
-     ]
+     ],
+     "fuentes_complementarias": []
     },
     {
      "campo": "Pulso Research · la economía está en recesión",
@@ -2924,11 +3662,13 @@
      "consultoras": {},
      "min": null,
      "max": null,
+     "titulo": "Economía percibida · series por consultora",
      "evidencia": "",
      "nota": "",
      "filas": [
       1248
-     ]
+     ],
+     "fuentes_complementarias": []
     },
     {
      "campo": "CIF/UTDT · ICC subíndice Condiciones presentes",
@@ -2940,6 +3680,7 @@
      "consultoras": {},
      "min": null,
      "max": null,
+     "titulo": "Economía percibida · series por consultora",
      "evidencia": "",
      "nota": "",
      "filas": [
@@ -2948,7 +3689,8 @@
       835,
       829,
       1349
-     ]
+     ],
+     "fuentes_complementarias": []
     },
     {
      "campo": "QMonitor · economía del país: positiva",
@@ -2960,12 +3702,14 @@
      "consultoras": {},
      "min": null,
      "max": null,
+     "titulo": "Economía percibida · series por consultora",
      "evidencia": "",
      "nota": "oct: campo 5–28/9 · nov: campo 8–26/10 (mes enunciado por QMonitor)",
      "filas": [
       1189,
       1359
-     ]
+     ],
+     "fuentes_complementarias": []
     },
     {
      "campo": "QMonitor · economía del país: negativa",
@@ -2977,12 +3721,14 @@
      "consultoras": {},
      "min": null,
      "max": null,
+     "titulo": "Economía percibida · series por consultora",
      "evidencia": "",
      "nota": "oct: campo 5–28/9 · nov: campo 8–26/10 (mes enunciado por QMonitor)",
      "filas": [
       1190,
       1360
-     ]
+     ],
+     "fuentes_complementarias": []
     },
     {
      "campo": "Zentrix · economía personal · Muy buena",
@@ -2994,11 +3740,13 @@
      "consultoras": {},
      "min": null,
      "max": null,
+     "titulo": "Economía percibida · series por consultora",
      "evidencia": "",
      "nota": "",
      "filas": [
       1444
-     ]
+     ],
+     "fuentes_complementarias": []
     },
     {
      "campo": "Zentrix · economía personal · Buena",
@@ -3010,11 +3758,13 @@
      "consultoras": {},
      "min": null,
      "max": null,
+     "titulo": "Economía percibida · series por consultora",
      "evidencia": "",
      "nota": "",
      "filas": [
       1445
-     ]
+     ],
+     "fuentes_complementarias": []
     },
     {
      "campo": "Zentrix · economía personal · Regular",
@@ -3026,11 +3776,13 @@
      "consultoras": {},
      "min": null,
      "max": null,
+     "titulo": "Economía percibida · series por consultora",
      "evidencia": "",
      "nota": "",
      "filas": [
       1446
-     ]
+     ],
+     "fuentes_complementarias": []
     },
     {
      "campo": "Zentrix · economía personal · Mala",
@@ -3042,11 +3794,13 @@
      "consultoras": {},
      "min": null,
      "max": null,
+     "titulo": "Economía percibida · series por consultora",
      "evidencia": "",
      "nota": "",
      "filas": [
       1447
-     ]
+     ],
+     "fuentes_complementarias": []
     },
     {
      "campo": "Zentrix · economía personal · Muy mala",
@@ -3058,11 +3812,13 @@
      "consultoras": {},
      "min": null,
      "max": null,
+     "titulo": "Economía percibida · series por consultora",
      "evidencia": "",
      "nota": "",
      "filas": [
       1448
-     ]
+     ],
+     "fuentes_complementarias": []
     },
     {
      "campo": "Zentrix · economía del país · Muy buena",
@@ -3074,11 +3830,13 @@
      "consultoras": {},
      "min": null,
      "max": null,
+     "titulo": "Economía percibida · series por consultora",
      "evidencia": "",
      "nota": "",
      "filas": [
       1449
-     ]
+     ],
+     "fuentes_complementarias": []
     },
     {
      "campo": "Zentrix · economía del país · Buena",
@@ -3090,11 +3848,13 @@
      "consultoras": {},
      "min": null,
      "max": null,
+     "titulo": "Economía percibida · series por consultora",
      "evidencia": "",
      "nota": "",
      "filas": [
       1450
-     ]
+     ],
+     "fuentes_complementarias": []
     },
     {
      "campo": "Zentrix · economía del país · Regular",
@@ -3106,11 +3866,13 @@
      "consultoras": {},
      "min": null,
      "max": null,
+     "titulo": "Economía percibida · series por consultora",
      "evidencia": "",
      "nota": "",
      "filas": [
       1451
-     ]
+     ],
+     "fuentes_complementarias": []
     },
     {
      "campo": "Zentrix · economía del país · Mala",
@@ -3122,11 +3884,13 @@
      "consultoras": {},
      "min": null,
      "max": null,
+     "titulo": "Economía percibida · series por consultora",
      "evidencia": "",
      "nota": "",
      "filas": [
       1452
-     ]
+     ],
+     "fuentes_complementarias": []
     },
     {
      "campo": "Zentrix · economía del país · Muy mala",
@@ -3138,11 +3902,13 @@
      "consultoras": {},
      "min": null,
      "max": null,
+     "titulo": "Economía percibida · series por consultora",
      "evidencia": "",
      "nota": "",
      "filas": [
       1453
-     ]
+     ],
+     "fuentes_complementarias": []
     },
     {
      "campo": "Zentrix · credibilidad del INDEC · Sí",
@@ -3154,11 +3920,13 @@
      "consultoras": {},
      "min": null,
      "max": null,
+     "titulo": "Economía percibida · series por consultora",
      "evidencia": "",
      "nota": "",
      "filas": [
       1454
-     ]
+     ],
+     "fuentes_complementarias": []
     },
     {
      "campo": "Zentrix · credibilidad del INDEC · No",
@@ -3170,11 +3938,13 @@
      "consultoras": {},
      "min": null,
      "max": null,
+     "titulo": "Economía percibida · series por consultora",
      "evidencia": "",
      "nota": "",
      "filas": [
       1455
-     ]
+     ],
+     "fuentes_complementarias": []
     },
     {
      "campo": "Zentrix · credibilidad del INDEC · NS/NC",
@@ -3186,11 +3956,13 @@
      "consultoras": {},
      "min": null,
      "max": null,
+     "titulo": "Economía percibida · series por consultora",
      "evidencia": "",
      "nota": "",
      "filas": [
       1456
-     ]
+     ],
+     "fuentes_complementarias": []
     },
     {
      "campo": "Zentrix · salario frente a la inflación · Sí",
@@ -3202,11 +3974,13 @@
      "consultoras": {},
      "min": null,
      "max": null,
+     "titulo": "Economía percibida · series por consultora",
      "evidencia": "",
      "nota": "",
      "filas": [
       1457
-     ]
+     ],
+     "fuentes_complementarias": []
     },
     {
      "campo": "Zentrix · salario frente a la inflación · No",
@@ -3218,11 +3992,13 @@
      "consultoras": {},
      "min": null,
      "max": null,
+     "titulo": "Economía percibida · series por consultora",
      "evidencia": "",
      "nota": "",
      "filas": [
       1458
-     ]
+     ],
+     "fuentes_complementarias": []
     },
     {
      "campo": "Zentrix · salario frente a la inflación · NS/NC",
@@ -3234,11 +4010,13 @@
      "consultoras": {},
      "min": null,
      "max": null,
+     "titulo": "Economía percibida · series por consultora",
      "evidencia": "",
      "nota": "",
      "filas": [
       1459
-     ]
+     ],
+     "fuentes_complementarias": []
     },
     {
      "campo": "Proyección · economía familiar · Empeoró + Se mantuvo igual de mal",
@@ -3250,11 +4028,13 @@
      "consultoras": {},
      "min": null,
      "max": null,
+     "titulo": "Economía percibida · series por consultora",
      "evidencia": "",
      "nota": "",
      "filas": [
       1466
-     ]
+     ],
+     "fuentes_complementarias": []
     },
     {
      "campo": "Tendencias · economía familiar · No llega a fin de mes",
@@ -3266,11 +4046,13 @@
      "consultoras": {},
      "min": null,
      "max": null,
+     "titulo": "Economía percibida · series por consultora",
      "evidencia": "",
      "nota": "Ficha técnica no informada en el documento.",
      "filas": [
       1504
-     ]
+     ],
+     "fuentes_complementarias": []
     },
     {
      "campo": "Tendencias · economía familiar · Para llegar a fin de mes tuvo que recortar gastos",
@@ -3282,11 +4064,13 @@
      "consultoras": {},
      "min": null,
      "max": null,
+     "titulo": "Economía percibida · series por consultora",
      "evidencia": "",
      "nota": "Ficha técnica no informada en el documento.",
      "filas": [
       1505
-     ]
+     ],
+     "fuentes_complementarias": []
     },
     {
      "campo": "Tendencias · economía familiar · Llega a fin de mes pero ya no puede ahorrar",
@@ -3298,11 +4082,13 @@
      "consultoras": {},
      "min": null,
      "max": null,
+     "titulo": "Economía percibida · series por consultora",
      "evidencia": "",
      "nota": "Ficha técnica no informada en el documento.",
      "filas": [
       1506
-     ]
+     ],
+     "fuentes_complementarias": []
     },
     {
      "campo": "Tendencias · economía familiar · Llega a fin de mes y puede ahorrar",
@@ -3314,11 +4100,13 @@
      "consultoras": {},
      "min": null,
      "max": null,
+     "titulo": "Economía percibida · series por consultora",
      "evidencia": "",
      "nota": "Ficha técnica no informada en el documento.",
      "filas": [
       1507
-     ]
+     ],
+     "fuentes_complementarias": []
     },
     {
      "campo": "Proyección · IPE · índice total",
@@ -3330,11 +4118,15 @@
      "consultoras": {},
      "min": null,
      "max": null,
+     "titulo": "IPE de Proyección · puntos (1–5)",
      "evidencia": "",
      "nota": "Septiembre (2,07) y octubre (2,06) cotejados con los informes originales.",
      "filas": [
       1130,
       1498
+     ],
+     "fuentes_complementarias": [
+      "IPE_PROYECCION_SEP"
      ]
     }
    ],
@@ -3362,11 +4154,13 @@
      "consultoras": {},
      "min": null,
      "max": null,
+     "titulo": "Expectativas · series por consultora",
      "evidencia": "",
      "nota": "",
      "filas": [
       1162
-     ]
+     ],
+     "fuentes_complementarias": []
     },
     {
      "campo": "CIF/UTDT · inflación esperada 12 meses (promedio)",
@@ -3378,11 +4172,13 @@
      "consultoras": {},
      "min": null,
      "max": null,
+     "titulo": "Expectativas · series por consultora",
      "evidencia": "",
      "nota": "CONV; no se compara con el IPC medido",
      "filas": [
       1225
-     ]
+     ],
+     "fuentes_complementarias": []
     },
     {
      "campo": "CIF/UTDT · ICC subíndice Expectativas futuras",
@@ -3394,6 +4190,7 @@
      "consultoras": {},
      "min": null,
      "max": null,
+     "titulo": "Expectativas · series por consultora",
      "evidencia": "",
      "nota": "",
      "filas": [
@@ -3402,7 +4199,8 @@
       834,
       828,
       1350
-     ]
+     ],
+     "fuentes_complementarias": []
     },
     {
      "campo": "Proyección · expectativa económica a 6 meses · Peor + Igual de mal",
@@ -3414,11 +4212,13 @@
      "consultoras": {},
      "min": null,
      "max": null,
+     "titulo": "Expectativas · series por consultora",
      "evidencia": "",
      "nota": "",
      "filas": [
       1467
-     ]
+     ],
+     "fuentes_complementarias": []
     },
     {
      "campo": "Tendencias · expectativa económica a 12 meses · Creo que estará peor",
@@ -3430,11 +4230,13 @@
      "consultoras": {},
      "min": null,
      "max": null,
+     "titulo": "Expectativas · series por consultora",
      "evidencia": "",
      "nota": "Ficha técnica no informada en el documento.",
      "filas": [
       1508
-     ]
+     ],
+     "fuentes_complementarias": []
     },
     {
      "campo": "Tendencias · expectativa económica a 12 meses · Creo que estará mejor",
@@ -3446,11 +4248,13 @@
      "consultoras": {},
      "min": null,
      "max": null,
+     "titulo": "Expectativas · series por consultora",
      "evidencia": "",
      "nota": "Ficha técnica no informada en el documento.",
      "filas": [
       1509
-     ]
+     ],
+     "fuentes_complementarias": []
     },
     {
      "campo": "Tendencias · expectativa económica a 12 meses · Creo que estará igual",
@@ -3462,11 +4266,13 @@
      "consultoras": {},
      "min": null,
      "max": null,
+     "titulo": "Expectativas · series por consultora",
      "evidencia": "",
      "nota": "Ficha técnica no informada en el documento.",
      "filas": [
       1510
-     ]
+     ],
+     "fuentes_complementarias": []
     },
     {
      "campo": "Tendencias · expectativa económica a 12 meses · No sé",
@@ -3478,11 +4284,13 @@
      "consultoras": {},
      "min": null,
      "max": null,
+     "titulo": "Expectativas · series por consultora",
      "evidencia": "",
      "nota": "Ficha técnica no informada en el documento.",
      "filas": [
       1511
-     ]
+     ],
+     "fuentes_complementarias": []
     }
    ],
    "fuentes": [
@@ -3494,7 +4302,7 @@
   },
   {
    "nombre": "Rumbo del país",
-   "verificacion": "Proyección usa dos opciones y DC Consultores tres: no se encadenan.",
+   "verificacion": "Pregunta sobre el rumbo o el camino del país. Proyección usa dos opciones y DC Consultores tres: no se encadenan. Se excluyen la categoría «no sabe» de gestión nacional, reubicada en aprobación de gestión, y el ICP, que es un índice compuesto.",
    "grupos": [
     {
      "campo": "DC Consultores · el país va por el camino correcto",
@@ -3506,11 +4314,13 @@
      "consultoras": {},
      "min": null,
      "max": null,
+     "titulo": "Clima / rumbo del país",
      "evidencia": "",
      "nota": "",
      "filas": [
       1330
-     ]
+     ],
+     "fuentes_complementarias": []
     },
     {
      "campo": "DC Consultores · por el camino que se puede",
@@ -3522,11 +4332,13 @@
      "consultoras": {},
      "min": null,
      "max": null,
+     "titulo": "Clima / rumbo del país",
      "evidencia": "",
      "nota": "",
      "filas": [
       1331
-     ]
+     ],
+     "fuentes_complementarias": []
     },
     {
      "campo": "DC Consultores · por el camino incorrecto",
@@ -3538,27 +4350,13 @@
      "consultoras": {},
      "min": null,
      "max": null,
+     "titulo": "Clima / rumbo del país",
      "evidencia": "",
      "nota": "",
      "filas": [
       1332
-     ]
-    },
-    {
-     "campo": "Proyección · gestión nacional · no sabe · No lo sé",
-     "mes": "",
-     "composicion": "serie propia",
-     "n": 1,
-     "rango_valido": false,
-     "direccion": "serie intra-consultora",
-     "consultoras": {},
-     "min": null,
-     "max": null,
-     "evidencia": "",
-     "nota": "",
-     "filas": [
-      1462
-     ]
+     ],
+     "fuentes_complementarias": []
     },
     {
      "campo": "Proyección · rumbo del país · Equivocado + Muy equivocado",
@@ -3570,11 +4368,13 @@
      "consultoras": {},
      "min": null,
      "max": null,
+     "titulo": "Clima / rumbo del país",
      "evidencia": "",
      "nota": "",
      "filas": [
       1463
-     ]
+     ],
+     "fuentes_complementarias": []
     },
     {
      "campo": "Proyección · rumbo del país · Correcto + Muy correcto",
@@ -3586,11 +4386,13 @@
      "consultoras": {},
      "min": null,
      "max": null,
+     "titulo": "Clima / rumbo del país",
      "evidencia": "",
      "nota": "",
      "filas": [
       1464
-     ]
+     ],
+     "fuentes_complementarias": []
     },
     {
      "campo": "Proyección · rumbo del país · No lo sé",
@@ -3602,27 +4404,13 @@
      "consultoras": {},
      "min": null,
      "max": null,
+     "titulo": "Clima / rumbo del país",
      "evidencia": "",
      "nota": "",
      "filas": [
       1465
-     ]
-    },
-    {
-     "campo": "Proyección · ICP · índice total",
-     "mes": "",
-     "composicion": "serie propia",
-     "n": 1,
-     "rango_valido": false,
-     "direccion": "serie intra-consultora",
-     "consultoras": {},
-     "min": null,
-     "max": null,
-     "evidencia": "",
-     "nota": "",
-     "filas": [
-      1497
-     ]
+     ],
+     "fuentes_complementarias": []
     }
    ],
    "fuentes": [
@@ -3632,7 +4420,7 @@
   },
   {
    "nombre": "Principales problemas",
-   "verificacion": "Distinguir respuesta espontánea de guiada y única de múltiple. Los porcentajes de respuesta múltiple no suman 100 y no se comparan con los de respuesta única.",
+   "verificacion": "Pregunta por el problema principal del país. Distinguir respuesta espontánea de guiada y única de múltiple; los porcentajes de respuesta múltiple no suman 100. Se excluyen las preguntas de acuerdo/desacuerdo sobre economía y democracia y la de represión frente al Congreso: son opiniones sobre un enunciado, no jerarquía de problemas.",
    "grupos": [
     {
      "campo": "Proyección · bajos ingresos",
@@ -3644,12 +4432,14 @@
      "consultoras": {},
      "min": null,
      "max": null,
+     "titulo": "Agenda pública · problema principal por consultora",
      "evidencia": "",
      "nota": "respuesta múltiple (hasta 3)",
      "filas": [
       1133,
       1468
-     ]
+     ],
+     "fuentes_complementarias": []
     },
     {
      "campo": "Proyección · inseguridad",
@@ -3661,12 +4451,14 @@
      "consultoras": {},
      "min": null,
      "max": null,
+     "titulo": "Agenda pública · problema principal por consultora",
      "evidencia": "",
      "nota": "",
      "filas": [
       1134,
       1469
-     ]
+     ],
+     "fuentes_complementarias": []
     },
     {
      "campo": "Proyección · inflación",
@@ -3678,12 +4470,14 @@
      "consultoras": {},
      "min": null,
      "max": null,
+     "titulo": "Agenda pública · problema principal por consultora",
      "evidencia": "",
      "nota": "",
      "filas": [
       1135,
       1470
-     ]
+     ],
+     "fuentes_complementarias": []
     },
     {
      "campo": "Proyección · corrupción",
@@ -3695,12 +4489,14 @@
      "consultoras": {},
      "min": null,
      "max": null,
+     "titulo": "Agenda pública · problema principal por consultora",
      "evidencia": "",
      "nota": "",
      "filas": [
       1136,
       1471
-     ]
+     ],
+     "fuentes_complementarias": []
     },
     {
      "campo": "Proyección · desempleo",
@@ -3712,12 +4508,14 @@
      "consultoras": {},
      "min": null,
      "max": null,
+     "titulo": "Agenda pública · problema principal por consultora",
      "evidencia": "",
      "nota": "",
      "filas": [
       1137,
       1472
-     ]
+     ],
+     "fuentes_complementarias": []
     },
     {
      "campo": "CELAG · economía del día a día",
@@ -3729,11 +4527,13 @@
      "consultoras": {},
      "min": null,
      "max": null,
+     "titulo": "Agenda pública · problema principal por consultora",
      "evidencia": "",
      "nota": "respuesta única guiada",
      "filas": [
       1145
-     ]
+     ],
+     "fuentes_complementarias": []
     },
     {
      "campo": "CELAG · inseguridad",
@@ -3745,11 +4545,13 @@
      "consultoras": {},
      "min": null,
      "max": null,
+     "titulo": "Agenda pública · problema principal por consultora",
      "evidencia": "",
      "nota": "",
      "filas": [
       1146
-     ]
+     ],
+     "fuentes_complementarias": []
     },
     {
      "campo": "D'Alessio · costo de servicios públicos",
@@ -3761,11 +4563,13 @@
      "consultoras": {},
      "min": null,
      "max": null,
+     "titulo": "Agenda pública · problema principal por consultora",
      "evidencia": "",
      "nota": "respuesta múltiple; rotulado septiembre, campo 6–7 oct",
      "filas": [
       1166
-     ]
+     ],
+     "fuentes_complementarias": []
     },
     {
      "campo": "D'Alessio · incertidumbre económica",
@@ -3777,11 +4581,13 @@
      "consultoras": {},
      "min": null,
      "max": null,
+     "titulo": "Agenda pública · problema principal por consultora",
      "evidencia": "",
      "nota": "",
      "filas": [
       1167
-     ]
+     ],
+     "fuentes_complementarias": []
     },
     {
      "campo": "D'Alessio · inseguridad",
@@ -3793,11 +4599,13 @@
      "consultoras": {},
      "min": null,
      "max": null,
+     "titulo": "Agenda pública · problema principal por consultora",
      "evidencia": "",
      "nota": "",
      "filas": [
       1168
-     ]
+     ],
+     "fuentes_complementarias": []
     },
     {
      "campo": "D'Alessio · inflación",
@@ -3809,184 +4617,24 @@
      "consultoras": {},
      "min": null,
      "max": null,
+     "titulo": "Agenda pública · problema principal por consultora",
      "evidencia": "",
      "nota": "",
      "filas": [
       1169
-     ]
-    },
-    {
-     "campo": "Zubán Córdoba · economía al servicio de la persona · Acuerdo",
-     "mes": "",
-     "composicion": "serie propia",
-     "n": 1,
-     "rango_valido": false,
-     "direccion": "serie intra-consultora",
-     "consultoras": {},
-     "min": null,
-     "max": null,
-     "evidencia": "",
-     "nota": "",
-     "filas": [
-      1438
-     ]
-    },
-    {
-     "campo": "Zubán Córdoba · economía al servicio de la persona · Desacuerdo",
-     "mes": "",
-     "composicion": "serie propia",
-     "n": 1,
-     "rango_valido": false,
-     "direccion": "serie intra-consultora",
-     "consultoras": {},
-     "min": null,
-     "max": null,
-     "evidencia": "",
-     "nota": "",
-     "filas": [
-      1439
-     ]
-    },
-    {
-     "campo": "Zubán Córdoba · economía al servicio de la persona · No sabe",
-     "mes": "",
-     "composicion": "serie propia",
-     "n": 1,
-     "rango_valido": false,
-     "direccion": "serie intra-consultora",
-     "consultoras": {},
-     "min": null,
-     "max": null,
-     "evidencia": "",
-     "nota": "",
-     "filas": [
-      1440
-     ]
-    },
-    {
-     "campo": "Zubán Córdoba · democracia y palabra · Acuerdo",
-     "mes": "",
-     "composicion": "serie propia",
-     "n": 1,
-     "rango_valido": false,
-     "direccion": "serie intra-consultora",
-     "consultoras": {},
-     "min": null,
-     "max": null,
-     "evidencia": "",
-     "nota": "",
-     "filas": [
-      1441
-     ]
-    },
-    {
-     "campo": "Zubán Córdoba · democracia y palabra · Desacuerdo",
-     "mes": "",
-     "composicion": "serie propia",
-     "n": 1,
-     "rango_valido": false,
-     "direccion": "serie intra-consultora",
-     "consultoras": {},
-     "min": null,
-     "max": null,
-     "evidencia": "",
-     "nota": "",
-     "filas": [
-      1442
-     ]
-    },
-    {
-     "campo": "Zubán Córdoba · democracia y palabra · No sabe",
-     "mes": "",
-     "composicion": "serie propia",
-     "n": 1,
-     "rango_valido": false,
-     "direccion": "serie intra-consultora",
-     "consultoras": {},
-     "min": null,
-     "max": null,
-     "evidencia": "",
-     "nota": "",
-     "filas": [
-      1443
-     ]
-    },
-    {
-     "campo": "Tendencias · represión frente al Congreso · Rechazo la represión",
-     "mes": "",
-     "composicion": "serie propia",
-     "n": 1,
-     "rango_valido": false,
-     "direccion": "serie intra-consultora",
-     "consultoras": {},
-     "min": null,
-     "max": null,
-     "evidencia": "",
-     "nota": "Ficha técnica no informada en el documento.",
-     "filas": [
-      1512
-     ]
-    },
-    {
-     "campo": "Tendencias · represión frente al Congreso · La policía responde las agresiones",
-     "mes": "",
-     "composicion": "serie propia",
-     "n": 1,
-     "rango_valido": false,
-     "direccion": "serie intra-consultora",
-     "consultoras": {},
-     "min": null,
-     "max": null,
-     "evidencia": "",
-     "nota": "Ficha técnica no informada en el documento.",
-     "filas": [
-      1513
-     ]
-    },
-    {
-     "campo": "Tendencias · represión frente al Congreso · Apruebo la represión",
-     "mes": "",
-     "composicion": "serie propia",
-     "n": 1,
-     "rango_valido": false,
-     "direccion": "serie intra-consultora",
-     "consultoras": {},
-     "min": null,
-     "max": null,
-     "evidencia": "",
-     "nota": "Ficha técnica no informada en el documento.",
-     "filas": [
-      1514
-     ]
-    },
-    {
-     "campo": "Tendencias · represión frente al Congreso · No tengo opinión",
-     "mes": "",
-     "composicion": "serie propia",
-     "n": 1,
-     "rango_valido": false,
-     "direccion": "serie intra-consultora",
-     "consultoras": {},
-     "min": null,
-     "max": null,
-     "evidencia": "",
-     "nota": "Ficha técnica no informada en el documento.",
-     "filas": [
-      1515
-     ]
+     ],
+     "fuentes_complementarias": []
     }
    ],
    "fuentes": [
     "CELAG",
     "D'Alessio",
-    "Proyección",
-    "Tendencias",
-    "Zubán Córdoba"
+    "Proyección"
    ]
   },
   {
    "nombre": "Voto por candidato",
-   "verificacion": "Solo comparable entre escenarios con la misma oferta de candidatos. Las series de «voto potencial» de Tendencias (nunca lo votaría / seguramente lo vote) son otra pregunta y no entran en este eje.",
+   "verificacion": "Voto a un candidato nombrado en primera vuelta. Solo comparable entre escenarios con la misma oferta. Las series de «voto potencial» de Tendencias son otra pregunta y quedan fuera de los ejes.",
    "grupos": [
     {
      "campo": "Proyección · candidato · Milei",
@@ -3998,12 +4646,14 @@
      "consultoras": {},
      "min": null,
      "max": null,
+     "titulo": "Intención de voto · series por consultora (no se promedian entre consultoras)",
      "evidencia": "",
      "nota": "",
      "filas": [
       1142,
       1487
-     ]
+     ],
+     "fuentes_complementarias": []
     },
     {
      "campo": "Proyección · candidato · Kicillof",
@@ -4015,12 +4665,14 @@
      "consultoras": {},
      "min": null,
      "max": null,
+     "titulo": "Intención de voto · series por consultora (no se promedian entre consultoras)",
      "evidencia": "",
      "nota": "",
      "filas": [
       1143,
       1488
-     ]
+     ],
+     "fuentes_complementarias": []
     },
     {
      "campo": "RDT · primera vuelta · Milei",
@@ -4032,11 +4684,13 @@
      "consultoras": {},
      "min": null,
      "max": null,
+     "titulo": "Intención de voto · series por consultora (no se promedian entre consultoras)",
      "evidencia": "",
      "nota": "",
      "filas": [
       1244
-     ]
+     ],
+     "fuentes_complementarias": []
     },
     {
      "campo": "Proyección · voto presidencial por candidato · Myriam Bregman",
@@ -4048,11 +4702,13 @@
      "consultoras": {},
      "min": null,
      "max": null,
+     "titulo": "Intención de voto · series por consultora (no se promedian entre consultoras)",
      "evidencia": "",
      "nota": "",
      "filas": [
       1489
-     ]
+     ],
+     "fuentes_complementarias": []
     },
     {
      "campo": "Proyección · voto presidencial por candidato · Maximiliano Pullaro",
@@ -4064,11 +4720,13 @@
      "consultoras": {},
      "min": null,
      "max": null,
+     "titulo": "Intención de voto · series por consultora (no se promedian entre consultoras)",
      "evidencia": "",
      "nota": "",
      "filas": [
       1490
-     ]
+     ],
+     "fuentes_complementarias": []
     },
     {
      "campo": "Proyección · voto presidencial por candidato · En blanco / impugnado",
@@ -4080,11 +4738,13 @@
      "consultoras": {},
      "min": null,
      "max": null,
+     "titulo": "Intención de voto · series por consultora (no se promedian entre consultoras)",
      "evidencia": "",
      "nota": "",
      "filas": [
       1491
-     ]
+     ],
+     "fuentes_complementarias": []
     },
     {
      "campo": "Proyección · voto presidencial por candidato · No lo sé",
@@ -4096,11 +4756,13 @@
      "consultoras": {},
      "min": null,
      "max": null,
+     "titulo": "Intención de voto · series por consultora (no se promedian entre consultoras)",
      "evidencia": "",
      "nota": "",
      "filas": [
       1492
-     ]
+     ],
+     "fuentes_complementarias": []
     },
     {
      "campo": "PoliTech · voto presidencial · Javier Milei",
@@ -4112,9 +4774,13 @@
      "consultoras": {},
      "min": null,
      "max": null,
+     "titulo": "Intención de voto · series por consultora (no se promedian entre consultoras)",
      "evidencia": "",
      "nota": "Publicación de PoliTech del 5/11. Campo y n=1.552 contrastados con la cobertura secundaria.",
-     "filas": []
+     "filas": [],
+     "fuentes_complementarias": [
+      "VOTO_POLITECH_NOV_MILEI"
+     ]
     },
     {
      "campo": "PoliTech · voto presidencial · Axel Kicillof",
@@ -4126,9 +4792,13 @@
      "consultoras": {},
      "min": null,
      "max": null,
+     "titulo": "Intención de voto · series por consultora (no se promedian entre consultoras)",
      "evidencia": "",
      "nota": "Publicación de PoliTech del 5/11. Campo y n=1.552 contrastados con la cobertura secundaria.",
-     "filas": []
+     "filas": [],
+     "fuentes_complementarias": [
+      "VOTO_POLITECH_NOV_KICILLOF"
+     ]
     }
    ],
    "fuentes": [
@@ -4139,7 +4809,7 @@
   },
   {
    "nombre": "Balotaje",
-   "verificacion": "Escenario de dos candidatos. No se compara con voto por espacio ni con voto por candidato en primera vuelta. Los cortes de Proyección (sep y oct) están en fuentes complementarias y el de noviembre en N2 1493–1496: no figuran en este eje hasta cargarlos como serie.",
+   "verificacion": "Escenario hipotético de segunda vuelta entre dos candidatos. No se compara con voto por espacio ni con voto por candidato en primera vuelta. La serie de Proyección unifica sus cortes de septiembre y octubre (fuentes complementarias) con el de noviembre (N2 1493–1496), sin duplicar registros.",
    "grupos": [
     {
      "campo": "Synopsis · balotaje · Javier Milei",
@@ -4151,9 +4821,13 @@
      "consultoras": {},
      "min": null,
      "max": null,
+     "titulo": "Intención de voto · series por consultora (no se promedian entre consultoras)",
      "evidencia": "BAJA",
      "nota": "Corte de campo de octubre informado por _EncuestAR_. Ficha original pendiente.",
-     "filas": []
+     "filas": [],
+     "fuentes_complementarias": [
+      "BAL_SYNOPSIS_OCT_MILEI"
+     ]
     },
     {
      "campo": "Synopsis · balotaje · Axel Kicillof",
@@ -4165,12 +4839,101 @@
      "consultoras": {},
      "min": null,
      "max": null,
+     "titulo": "Intención de voto · series por consultora (no se promedian entre consultoras)",
      "evidencia": "BAJA",
      "nota": "Corte de campo de octubre informado por _EncuestAR_. Ficha original pendiente.",
-     "filas": []
+     "filas": [],
+     "fuentes_complementarias": [
+      "BAL_SYNOPSIS_OCT_KICILLOF"
+     ]
+    },
+    {
+     "campo": "Proyección · Javier Milei",
+     "mes": "",
+     "composicion": "serie propia",
+     "n": 1,
+     "rango_valido": false,
+     "direccion": "serie intra-consultora",
+     "consultoras": {},
+     "min": null,
+     "max": null,
+     "titulo": "Proyección · balotaje Milei–Kicillof",
+     "evidencia": "",
+     "nota": "",
+     "filas": [
+      1493
+     ],
+     "fuentes_complementarias": [
+      "BAL_PROYECCION_SEP_MILEI",
+      "BAL_PROYECCION_OCT_MILEI"
+     ]
+    },
+    {
+     "campo": "Proyección · Axel Kicillof",
+     "mes": "",
+     "composicion": "serie propia",
+     "n": 1,
+     "rango_valido": false,
+     "direccion": "serie intra-consultora",
+     "consultoras": {},
+     "min": null,
+     "max": null,
+     "titulo": "Proyección · balotaje Milei–Kicillof",
+     "evidencia": "",
+     "nota": "",
+     "filas": [
+      1494
+     ],
+     "fuentes_complementarias": [
+      "BAL_PROYECCION_SEP_KICILLOF",
+      "BAL_PROYECCION_OCT_KICILLOF"
+     ]
+    },
+    {
+     "campo": "Proyección · En blanco / impugnado",
+     "mes": "",
+     "composicion": "serie propia",
+     "n": 1,
+     "rango_valido": false,
+     "direccion": "serie intra-consultora",
+     "consultoras": {},
+     "min": null,
+     "max": null,
+     "titulo": "Proyección · balotaje Milei–Kicillof",
+     "evidencia": "",
+     "nota": "",
+     "filas": [
+      1495
+     ],
+     "fuentes_complementarias": [
+      "BAL_PROYECCION_SEP_BLANCO",
+      "BAL_PROYECCION_OCT_BLANCO"
+     ]
+    },
+    {
+     "campo": "Proyección · No lo sé",
+     "mes": "",
+     "composicion": "serie propia",
+     "n": 1,
+     "rango_valido": false,
+     "direccion": "serie intra-consultora",
+     "consultoras": {},
+     "min": null,
+     "max": null,
+     "titulo": "Proyección · balotaje Milei–Kicillof",
+     "evidencia": "",
+     "nota": "",
+     "filas": [
+      1496
+     ],
+     "fuentes_complementarias": [
+      "BAL_PROYECCION_SEP_NS",
+      "BAL_PROYECCION_OCT_NS"
+     ]
     }
    ],
    "fuentes": [
+    "Proyección",
     "Synopsis"
    ]
   },
@@ -4179,6 +4942,378 @@
    "verificacion": "Oficialismo = LLA; oposición = todo lo que no es LLA según las categorías de la pregunta. No votaría, en blanco e indecisos se mantienen separados y no se suman a oposición. Eje vacío en este corte: ninguna consultora tiene cargadas todas las categorías necesarias y completarlas por diferencia no está permitido.",
    "grupos": [],
    "fuentes": []
+  }
+ ],
+ "PREGUNTAS_ESPECIFICAS": [
+  {
+   "modulo": "Agenda pública",
+   "tab": "agenda",
+   "titulo": "Agenda pública · problema principal por consultora",
+   "nota": "",
+   "filas": [
+    {
+     "etiqueta": "Zubán Córdoba · economía al servicio de la persona · Acuerdo",
+     "consultora": "Zubán Córdoba",
+     "filas": [
+      1438
+     ]
+    },
+    {
+     "etiqueta": "Zubán Córdoba · economía al servicio de la persona · Desacuerdo",
+     "consultora": "Zubán Córdoba",
+     "filas": [
+      1439
+     ]
+    },
+    {
+     "etiqueta": "Zubán Córdoba · economía al servicio de la persona · No sabe",
+     "consultora": "Zubán Córdoba",
+     "filas": [
+      1440
+     ]
+    },
+    {
+     "etiqueta": "Zubán Córdoba · democracia y palabra · Acuerdo",
+     "consultora": "Zubán Córdoba",
+     "filas": [
+      1441
+     ]
+    },
+    {
+     "etiqueta": "Zubán Córdoba · democracia y palabra · Desacuerdo",
+     "consultora": "Zubán Córdoba",
+     "filas": [
+      1442
+     ]
+    },
+    {
+     "etiqueta": "Zubán Córdoba · democracia y palabra · No sabe",
+     "consultora": "Zubán Córdoba",
+     "filas": [
+      1443
+     ]
+    },
+    {
+     "etiqueta": "Tendencias · represión frente al Congreso · Rechazo la represión",
+     "consultora": "Tendencias",
+     "filas": [
+      1512
+     ]
+    },
+    {
+     "etiqueta": "Tendencias · represión frente al Congreso · La policía responde las agresiones",
+     "consultora": "Tendencias",
+     "filas": [
+      1513
+     ]
+    },
+    {
+     "etiqueta": "Tendencias · represión frente al Congreso · Apruebo la represión",
+     "consultora": "Tendencias",
+     "filas": [
+      1514
+     ]
+    },
+    {
+     "etiqueta": "Tendencias · represión frente al Congreso · No tengo opinión",
+     "consultora": "Tendencias",
+     "filas": [
+      1515
+     ]
+    }
+   ]
+  },
+  {
+   "modulo": "Clima / rumbo",
+   "tab": "indicadores",
+   "titulo": "Clima / rumbo del país",
+   "nota": "",
+   "filas": [
+    {
+     "etiqueta": "Proyección · ICP · índice total",
+     "consultora": "Proyección",
+     "filas": [
+      1497
+     ]
+    }
+   ]
+  },
+  {
+   "modulo": "Conversación digital",
+   "tab": "sl",
+   "titulo": "Conversación digital (SL) · no comparable con encuestas",
+   "nota": "",
+   "filas": [
+    {
+     "etiqueta": "Reputación Digital · publicaciones sobre Milei (5/9–4/11)",
+     "consultora": "Reputación Digital",
+     "filas": [
+      1292
+     ]
+    },
+    {
+     "etiqueta": "Reputación Digital · tono negativo (total)",
+     "consultora": "Reputación Digital",
+     "filas": [
+      1293
+     ]
+    },
+    {
+     "etiqueta": "Reputación Digital · tono positivo (total)",
+     "consultora": "Reputación Digital",
+     "filas": [
+      1294
+     ]
+    },
+    {
+     "etiqueta": "Reputación Digital · tono negativo (cuentas reales)",
+     "consultora": "Reputación Digital",
+     "filas": [
+      1296
+     ]
+    },
+    {
+     "etiqueta": "Reputación Digital · tono positivo (cuentas reales)",
+     "consultora": "Reputación Digital",
+     "filas": [
+      1297
+     ]
+    },
+    {
+     "etiqueta": "Reputación Digital · participación de Milei en la conversación política",
+     "consultora": "Reputación Digital",
+     "filas": [
+      1299
+     ]
+    },
+    {
+     "etiqueta": "Reputación Digital · menciones sobre Bullrich (1/7–5/10)",
+     "consultora": "Reputación Digital",
+     "filas": [
+      1080
+     ]
+    },
+    {
+     "etiqueta": "Reputación Digital · menciones que ubican a Bullrich como vice de Milei",
+     "consultora": "Reputación Digital",
+     "filas": [
+      1081
+     ]
+    }
+   ]
+  },
+  {
+   "modulo": "Intención de voto",
+   "tab": "voto",
+   "titulo": "Intención de voto · series por consultora (no se promedian entre consultoras)",
+   "nota": "",
+   "filas": [
+    {
+     "etiqueta": "Analogías · escenario I · Milei/LLA",
+     "consultora": "Analogías",
+     "filas": [
+      1110
+     ]
+    },
+    {
+     "etiqueta": "Analogías · escenario I · Peronismo Unido",
+     "consultora": "Analogías",
+     "filas": [
+      1109
+     ]
+    },
+    {
+     "etiqueta": "Proyección · cambio o continuidad · Que continúe el gobierno actual de Milei",
+     "consultora": "Proyección",
+     "filas": [
+      1499
+     ]
+    },
+    {
+     "etiqueta": "Proyección · cambio o continuidad · Que continúe Milei pero con otro equipo y cambio en sus políticas",
+     "consultora": "Proyección",
+     "filas": [
+      1500
+     ]
+    },
+    {
+     "etiqueta": "Proyección · cambio o continuidad · No lo sé",
+     "consultora": "Proyección",
+     "filas": [
+      1503
+     ]
+    },
+    {
+     "etiqueta": "Tendencias · voto potencial · Sergio Massa · Nunca lo votaría",
+     "consultora": "Tendencias",
+     "filas": [
+      1519
+     ]
+    },
+    {
+     "etiqueta": "Tendencias · voto potencial · Sergio Massa · Seguramente lo vote",
+     "consultora": "Tendencias",
+     "filas": [
+      1520
+     ]
+    },
+    {
+     "etiqueta": "Tendencias · voto potencial · Sergio Massa · Podría votarlo",
+     "consultora": "Tendencias",
+     "filas": [
+      1521
+     ]
+    },
+    {
+     "etiqueta": "Tendencias · voto potencial · Sergio Massa · No lo sé",
+     "consultora": "Tendencias",
+     "filas": [
+      1522
+     ]
+    },
+    {
+     "etiqueta": "Tendencias · voto potencial · Patricia Bullrich · Nunca lo votaría",
+     "consultora": "Tendencias",
+     "filas": [
+      1523
+     ]
+    },
+    {
+     "etiqueta": "Tendencias · voto potencial · Patricia Bullrich · Seguramente lo vote",
+     "consultora": "Tendencias",
+     "filas": [
+      1524
+     ]
+    },
+    {
+     "etiqueta": "Tendencias · voto potencial · Patricia Bullrich · Podría votarla",
+     "consultora": "Tendencias",
+     "filas": [
+      1525
+     ]
+    },
+    {
+     "etiqueta": "Tendencias · voto potencial · Patricia Bullrich · No lo sé",
+     "consultora": "Tendencias",
+     "filas": [
+      1526
+     ]
+    }
+   ]
+  },
+  {
+   "modulo": "Territorio",
+   "tab": "semaforo",
+   "titulo": "Territorio · mediciones subnacionales",
+   "nota": "PoliTech publicó un informe de contexto de Río Negro en septiembre basado en campo de julio.",
+   "filas": [
+    {
+     "etiqueta": "CB GBA · Nardini (Malvinas Arg.) · diferencial",
+     "consultora": "CB GBA",
+     "filas": [
+      1268
+     ]
+    },
+    {
+     "etiqueta": "CB GBA · Sujarchuk (Escobar) · diferencial",
+     "consultora": "CB GBA",
+     "filas": [
+      1269
+     ]
+    },
+    {
+     "etiqueta": "CB GBA · Otermín (Lomas) · diferencial",
+     "consultora": "CB GBA",
+     "filas": [
+      1270
+     ]
+    },
+    {
+     "etiqueta": "CB GBA · R. Lanús (San Isidro) · diferencial",
+     "consultora": "CB GBA",
+     "filas": [
+      1286
+     ]
+    },
+    {
+     "etiqueta": "CB GBA · Ghi (Morón) · diferencial",
+     "consultora": "CB GBA",
+     "filas": [
+      1289
+     ]
+    },
+    {
+     "etiqueta": "CB GBA · J. Álvarez (Lanús) · diferencial",
+     "consultora": "CB GBA",
+     "filas": [
+      1290
+     ]
+    },
+    {
+     "etiqueta": "CB GBA · Menéndez (Merlo) · diferencial",
+     "consultora": "CB GBA",
+     "filas": [
+      1291
+     ]
+    },
+    {
+     "etiqueta": "DC · CABA · voto por espacio · LLA",
+     "consultora": "DC",
+     "filas": [
+      1251
+     ]
+    },
+    {
+     "etiqueta": "DC · CABA · Jefatura de Gobierno · Jorge Macri",
+     "consultora": "DC",
+     "filas": [
+      1252
+     ]
+    },
+    {
+     "etiqueta": "INNOVA · Rosario · gestión Milei positiva",
+     "consultora": "INNOVA",
+     "filas": [
+      1255
+     ]
+    },
+    {
+     "etiqueta": "INNOVA · Santa Fe ciudad · gestión Milei positiva",
+     "consultora": "INNOVA",
+     "filas": [
+      1257
+     ]
+    },
+    {
+     "etiqueta": "Tendencias · gestión provincial agregada · Total negativa",
+     "consultora": "Tendencias",
+     "filas": [
+      1527
+     ]
+    },
+    {
+     "etiqueta": "Tendencias · gestión provincial agregada · Total positiva",
+     "consultora": "Tendencias",
+     "filas": [
+      1528
+     ]
+    },
+    {
+     "etiqueta": "PoliTech · Río Negro · voto provincial · La Libertad Avanza",
+     "consultora": "PoliTech",
+     "filas": []
+    },
+    {
+     "etiqueta": "PoliTech · Río Negro · voto provincial · Peronismo",
+     "consultora": "PoliTech",
+     "filas": []
+    },
+    {
+     "etiqueta": "PoliTech · Río Negro · voto provincial · Juntos Somos Río Negro",
+     "consultora": "PoliTech",
+     "filas": []
+    }
+   ]
   }
  ],
  "KPI": {

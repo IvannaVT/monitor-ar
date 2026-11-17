@@ -273,21 +273,36 @@ def construir():
                 'campo': t.get('campo', ''), 'categoria': t.get('categoria', ''),
                 'composicion': t.get('composicion', 'estandar'), 'secundaria': t.get('secundaria', '')}
 
+    def comp_de(grupo, campo, nombre, mes):
+        return ((refs_de(grupo, campo, nombre, mes) or {}).get('composicion') or 'estandar')
+
     def direccion_serie(grupo, campo, nombres):
-        """Dirección del último movimiento de cada consultora; 'sin dirección común' si difieren."""
+        """Dirección del último movimiento de cada consultora, exigiendo que las dos
+        mediciones compartan la composición de la pregunta. Un cambio de composición
+        (p. ej. peronismo agregado → peronismo sin kirchnerismo) no es un movimiento."""
         eje, dirs = EJE_DE_GRUPO[grupo], {}
         for n in nombres:
-            pts = [v for v in D[grupo][n].get(campo) or [] if v is not None]
-            if len(pts) < 2:
-                dirs[n] = 'serie de un solo punto'
-            else:
-                d = pts[-1] - pts[-2]
-                dirs[n] = 'estable' if abs(d) < 1 else ('sube' if d > 0 else 'baja')
-        moviles = {v for v in dirs.values() if v != 'serie de un solo punto'}
-        if not moviles:
-            estado = 'evidencia insuficiente para establecer dirección'
-        elif len(moviles) == 1:
-            estado = f'dirección común: {moviles.pop()}'
+            ser = D[grupo][n].get(campo) or []
+            idx = [i for i, v in enumerate(ser) if v is not None]
+            if len(idx) < 2:
+                dirs[n] = {'estado': 'sin medición anterior', 'detalle': 'serie de un solo punto'}
+                continue
+            ult = idx[-1]
+            comp_u = comp_de(grupo, campo, n, D[eje][ult])
+            prev = next((i for i in reversed(idx[:-1]) if comp_de(grupo, campo, n, D[eje][i]) == comp_u), None)
+            if prev is None:
+                dirs[n] = {'estado': 'sin medición anterior comparable',
+                           'detalle': f'la composición de la pregunta cambió entre {D[eje][idx[-2]]} y {D[eje][ult]}'}
+                continue
+            d = round(ser[ult] - ser[prev], 1)
+            dirs[n] = {'estado': 'estable' if abs(d) < 1 else ('sube' if d > 0 else 'baja'),
+                       'detalle': f'{D[eje][prev]} → {D[eje][ult]}', 'delta': d}
+        comparables = {v['estado'] for v in dirs.values() if v['estado'] in ('sube', 'baja', 'estable')}
+        if not comparables:
+            estado = 'sin dos mediciones comparables: no se establece dirección'
+        elif len(comparables) == 1:
+            d = comparables.pop()
+            estado = d if len(nombres) == 1 else f'dirección común entre consultoras: {d}'
         else:
             estado = 'sin dirección común entre consultoras'
         return estado, dirs
@@ -431,8 +446,20 @@ def construir():
         donde = f"semáforo · {r['indicador']}"
         if lec and lec['tipo'] == 'rango':
             cob = f"{lec['n']} consultora{'' if lec['n'] == 1 else 's'} en {lec['mes']}"
-            dirs = {g['direccion'] for g in lec['grupos']}
-            direccion = dirs.pop() if len(dirs) == 1 else 'sin dirección común entre consultoras'
+            todas = {n: v for g in lec['grupos'] for n, v in g['direcciones'].items()}
+            movs = {n: v for n, v in todas.items() if v['estado'] in ('sube', 'baja', 'estable')}
+            sin_par = [n for n, v in todas.items() if n not in movs]
+            if not movs:
+                direccion = 'sin dos mediciones comparables: no se establece dirección'
+            elif len({v['estado'] for v in movs.values()}) == 1:
+                d = list(movs.values())[0]['estado']
+                direccion = (f"{d} ({list(movs)[0]}, {list(movs.values())[0]['detalle']})" if len(movs) == 1
+                             else f'dirección común entre consultoras: {d}')
+            else:
+                direccion = 'sin dirección común entre consultoras: ' + ' · '.join(
+                    f"{n} {v['estado']} ({v['detalle']})" for n, v in movs.items())
+            if sin_par:
+                direccion += ' · sin par comparable: ' + ', '.join(sin_par)
         else:
             cob = r.get('cobertura', 'medición única')
             direccion = r.get('direccion', 'evidencia insuficiente para establecer dirección')
@@ -445,7 +472,33 @@ def construir():
                     'nota': resolver_plantilla(r['nota'], donde)})
     D['SEMAFORO'] = SEM
 
-    # ejes comparables: cada consultora por separado; los rangos solo dentro de un mismo eje y composición
+    # ejes comparables: cada consultora por separado; los rangos solo dentro de un mismo
+    # eje y una misma composición. Lo que no encaja en ningún eje no se fuerza: se lista aparte.
+    reclamadas = set()
+
+    def filas_evol(spec):
+        out = []
+        for g in cfg['evolucion']:
+            if g['modulo'] != spec['modulo']:
+                continue
+            for f in g['filas']:
+                texto = f"{g.get('titulo', '')} {f['etiqueta']}".lower()
+                inc = spec.get('incluye')
+                if inc and not any(x.lower() in texto for x in inc):
+                    continue
+                if any(x.lower() in texto for x in spec.get('excluye', [])):
+                    continue
+                out.append((g, f))
+        return out
+
+    def item_evol(g, f):
+        return {'campo': f['etiqueta'], 'mes': '', 'composicion': 'serie propia', 'n': 1,
+                'rango_valido': False, 'direccion': 'serie intra-consultora', 'consultoras': {},
+                'min': None, 'max': None, 'titulo': g.get('titulo', ''),
+                'evidencia': f.get('evidencia', ''), 'nota': f.get('nota', ''),
+                'filas': [c.get('fila') for c in f['celdas'] if c.get('fila')],
+                'fuentes_complementarias': [c['fuente_complementaria'] for c in f['celdas'] if c.get('fuente_complementaria')]}
+
     EJES = []
     for e in cfg['ejes']:
         item = {'nombre': e['nombre'], 'verificacion': e['verificacion'], 'grupos': [], 'fuentes': []}
@@ -457,26 +510,30 @@ def construir():
                 for g in lec['grupos']:
                     item['grupos'].append({'campo': campo, 'mes': lec['mes'], **g})
                     item['fuentes'] += list(g['consultoras'])
-        else:
-            for g in cfg['evolucion']:
-                if g['modulo'] != e['evolucion_modulo']:
-                    continue
-                for f in g['filas']:
-                    pats = e.get('filtros') or ([e['filtro']] if e.get('filtro') else [])
-                    if pats and not any(x.lower() in f['etiqueta'].lower() for x in pats):
-                        continue
-                    if e.get('excluye') and e['excluye'].lower() in f['etiqueta'].lower():
-                        continue
-                    item['fuentes'].append(f['consultora'])
-                    item['grupos'].append({'campo': f['etiqueta'], 'mes': '', 'composicion': 'serie propia',
-                                           'n': 1, 'rango_valido': False,
-                                           'direccion': 'serie intra-consultora',
-                                           'consultoras': {}, 'min': None, 'max': None,
-                                           'evidencia': f.get('evidencia', ''), 'nota': f.get('nota', ''),
-                                           'filas': [c.get('fila') for c in f['celdas'] if c.get('fila')]})
+        specs = ([{'modulo': e['evolucion_modulo'], 'incluye': e.get('incluye') or e.get('filtros'),
+                   'excluye': e.get('excluye', [])}] if e.get('evolucion_modulo') else [])
+        specs += e.get('evolucion_extra', [])
+        for spec in specs:
+            for g, f in filas_evol(spec):
+                reclamadas.add((g['modulo'], g.get('titulo', ''), f['etiqueta']))
+                item['fuentes'].append(f['consultora'])
+                item['grupos'].append(item_evol(g, f))
         item['fuentes'] = sorted(set(item['fuentes']))
         EJES.append(item)
     D['EJES'] = EJES
+
+    # preguntas propias de una consultora que no corresponden a ninguno de los ejes
+    ESP = {}
+    for g in cfg['evolucion']:
+        for f in g['filas']:
+            if (g['modulo'], g.get('titulo', ''), f['etiqueta']) in reclamadas:
+                continue
+            k = f"{g['modulo']} · {g.get('titulo', '').split(' · ')[0]}"
+            ESP.setdefault(k, {'modulo': g['modulo'], 'tab': g['tab'], 'titulo': g.get('titulo', ''),
+                               'nota': g.get('nota', ''), 'filas': []})
+            ESP[k]['filas'].append({'etiqueta': f['etiqueta'], 'consultora': f['consultora'],
+                                    'filas': [c.get('fila') for c in f['celdas'] if c.get('fila')]})
+    D['PREGUNTAS_ESPECIFICAS'] = sorted(ESP.values(), key=lambda x: (x['modulo'], x['titulo']))
 
     # 7. novedades por pestaña y mes (puntuales + valores de serie nuevos/corregidos/retirados)
     UPD = {}
