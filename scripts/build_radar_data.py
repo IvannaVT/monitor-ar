@@ -15,7 +15,8 @@ Uso: python3 scripts/build_radar_data.py [--check]
 --check no escribe: falla si radar_data.json no coincide con lo que se generaría.
 """
 from __future__ import annotations
-import copy, csv, io, json, sys, unicodedata
+import copy
+import re, csv, io, json, sys, unicodedata
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -26,7 +27,9 @@ TAB_DE_MODULO = {
     'Economía percibida': 'indicadores', 'Expectativas': 'indicadores', 'Clima / rumbo': 'indicadores',
     'Gestión nacional': 'imagen', 'Imagen Milei': 'imagen', 'Imagen otros dirigentes': 'imagen',
     'Intención de voto': 'voto', 'Agenda pública': 'agenda', 'Conversación digital': 'sl', 'Territorio': 'semaforo',
+    'GAP CONV–SL': 'gap', 'Semáforo': 'semaforo', 'Indicadores': 'indicadores',
 }
+EJE_DE_GRUPO = {'IMG': 'MI', 'GESTION': 'MG', 'CONS': 'MV'}
 SL_TIPO = {'315': 'Evento puntual', '342': 'Evento puntual', '317': 'Audiencias (PDM)', '355': 'Audiencias (PDM)',
            '345': 'Monitoreo sectorial', '360': 'Escucha de búsquedas', '362': 'Pendiente de relevar', '364': 'Pendiente de relevar'}
 
@@ -89,8 +92,8 @@ def construir():
     complementarias = {r['clave']: r for r in tsv(BASES / 'radar_fuentes_complementarias.tsv')}
     D = copy.deepcopy(hist)
     traza = []
-    # GAP CONV–SL sin intención de voto (SL no mide voto): se retiran 'voto LLA' y 'escenario 2027' (posiciones 9 y 10)
-    D['GAP_STATUS'] = D['GAP_STATUS'][:cfg.get('gap_n_indicadores', len(D['GAP_STATUS']))]
+    # GAP CONV–SL: se reconstruye entero desde cfg['gap_indicadores'] más abajo (paso 6b).
+    D.pop('GAP_STATUS', None)
 
     # 1. ejes nuevos (noviembre, corte parcial)
     for eje, spec in cfg['extender_ejes'].items():
@@ -174,7 +177,7 @@ def construir():
     # 3. asignaciones desde las bases
     for a in cfg['asignaciones']:
         v, mes, origen = valor_de(a)
-        poner(a['ruta'], a['eje'], mes, v, {'modulo': a['modulo'], **origen})
+        poner(a['ruta'], a['eje'], mes, v, {'modulo': a['modulo'], 'composicion': a.get('composicion', 'estandar'), **origen})
 
     # 4. retiros (valores publicados sin fuente o reubicados)
     for r in cfg['retiros']:
@@ -256,6 +259,282 @@ def construir():
     D['SL_CONSULT_VALS'] = [vals[l] for l in etiquetas] + [otros]
     D['SL_CONSULT_LABELS'] = etiquetas + ['Otros']
 
+    # índice (ruta, mes) -> fila de la base, para citar cada consultora de un rango
+    ref_index = {}
+    for t in traza:
+        if t.get('fila'):
+            ref_index[(t['ruta'], t['mes'])] = t
+
+    def refs_de(grupo, campo, nombre, mes):
+        t = ref_index.get((f'{grupo}.{nombre}.{campo}', mes))
+        if not t:
+            return None
+        return {'fila': t['fila'], 'base': t.get('base', ''), 'file_id': t.get('file_id', ''),
+                'campo': t.get('campo', ''), 'categoria': t.get('categoria', ''),
+                'composicion': t.get('composicion', 'estandar'), 'secundaria': t.get('secundaria', '')}
+
+    def comp_de(grupo, campo, nombre, mes):
+        return ((refs_de(grupo, campo, nombre, mes) or {}).get('composicion') or 'estandar')
+
+    def direccion_serie(grupo, campo, nombres):
+        """Dirección del último movimiento de cada consultora, exigiendo que las dos
+        mediciones compartan la composición de la pregunta. Un cambio de composición
+        (p. ej. peronismo agregado → peronismo sin kirchnerismo) no es un movimiento."""
+        eje, dirs = EJE_DE_GRUPO[grupo], {}
+        for n in nombres:
+            ser = D[grupo][n].get(campo) or []
+            idx = [i for i, v in enumerate(ser) if v is not None]
+            if len(idx) < 2:
+                dirs[n] = {'estado': 'sin medición anterior', 'detalle': 'serie de un solo punto'}
+                continue
+            ult = idx[-1]
+            comp_u = comp_de(grupo, campo, n, D[eje][ult])
+            prev = next((i for i in reversed(idx[:-1]) if comp_de(grupo, campo, n, D[eje][i]) == comp_u), None)
+            if prev is None:
+                dirs[n] = {'estado': 'sin medición anterior comparable',
+                           'detalle': f'la composición de la pregunta cambió entre {D[eje][idx[-2]]} y {D[eje][ult]}'}
+                continue
+            d = round(ser[ult] - ser[prev], 1)
+            dirs[n] = {'estado': 'estable' if abs(d) < 1 else ('sube' if d > 0 else 'baja'),
+                       'detalle': f'{D[eje][prev]} → {D[eje][ult]}', 'delta': d}
+        comparables = {v['estado'] for v in dirs.values() if v['estado'] in ('sube', 'baja', 'estable')}
+        if not comparables:
+            estado = 'sin dos mediciones comparables: no se establece dirección'
+        elif len(comparables) == 1:
+            d = comparables.pop()
+            estado = d if len(nombres) == 1 else f'dirección común entre consultoras: {d}'
+        else:
+            estado = 'sin dirección común entre consultoras'
+        return estado, dirs
+
+    # 6b. GAP CONV–SL y semáforo, resueltos desde las bases (Parte XIII.34-35: una brecha
+    # numérica entre capas nunca se calcula; se muestran las lecturas por separado).
+    def lectura_fila(f):
+        f = str(f)
+        if f not in n2:
+            raise BuildError(f'Fila N2 {f} no está en el extracto')
+        r = n2[f]
+        if r['estado_fila'] != 'ok':
+            raise BuildError(f'Fila N2 {f} marcada {r["estado_fila"]}: no puede alimentar el Radar')
+        anio = 2025 if '_2025_' in r['id_informe'] else 2026
+        return {'valor': num(r['resultado']), 'unidad': r['unidad'], 'mes': etiqueta_mes(r['mes'], anio),
+                'consultora': r['consultora'], 'categoria': r['categoria_respuesta'],
+                'id_indicador': r['id_indicador'], 'fila': int(f), 'base': 'nivel2_indicadores',
+                'file_id': r['archivo_fuente_file_id'],
+                'campo': f"{r['fecha_campo_inicio']}→{r['fecha_campo_fin']}".strip('→')}
+
+    def lectura_serie(grupo, campo):
+        """Último mes con dato, agrupado por composición de la pregunta. Nunca se promedia
+        ni se arma un rango entre composiciones distintas (p. ej. PJ agregado vs. sin kirchnerismo)."""
+        eje = EJE_DE_GRUPO[grupo]
+        for i in range(len(D[eje]) - 1, -1, -1):
+            vals = {n: ser[campo][i] for n, ser in D[grupo].items() if ser.get(campo) and ser[campo][i] is not None}
+            if not vals:
+                continue
+            mes = D[eje][i]
+            subs = {}
+            for n, v in vals.items():
+                r = refs_de(grupo, campo, n, mes)
+                comp = (r or {}).get('composicion') or 'estandar'
+                subs.setdefault(comp, {})[n] = {'valor': v, 'ref': r}
+            grupos = []
+            for comp, items in sorted(subs.items()):
+                vv = [x['valor'] for x in items.values()]
+                est, dirs = direccion_serie(grupo, campo, list(items))
+                grupos.append({'composicion': comp, 'n': len(items),
+                               'min': min(vv), 'max': max(vv),
+                               'rango_valido': len(items) > 1,
+                               'direccion': est, 'direcciones': dirs,
+                               'consultoras': {n: x for n, x in sorted(items.items(), key=lambda kv: -kv[1]['valor'])}})
+            return {'mes': mes, 'unidad': '%', 'n': len(vals), 'grupos': grupos,
+                    'por_consultora': vals,
+                    'una_composicion': len(grupos) == 1}
+        return None
+
+    def lectura_simple(serie, eje, unidad='', fuente=''):
+        for i in range(len(D[serie]) - 1, -1, -1):
+            if D[serie][i] is not None:
+                return {'valor': D[serie][i], 'mes': D[eje][i], 'unidad': unidad, 'fuente': fuente}
+        return None
+
+    def resolver_lectura(spec):
+        if not spec:
+            return None
+        if 'fila' in spec:
+            return {'tipo': 'fila', **lectura_fila(spec['fila'])}
+        if 'serie' in spec and 'campo' in spec:
+            r = lectura_serie(spec['serie'], spec['campo'])
+            return {'tipo': 'rango', **r} if r else None
+        r = lectura_simple(spec['serie'], spec.get('eje', 'MESI'), spec.get('unidad', ''), spec.get('fuente', ''))
+        return {'tipo': 'simple', **r} if r else None
+
+    def _fnum(v):
+        return ('%g' % round(v, 2)).replace('.', ',')
+
+    def resolver_plantilla(txt, donde):
+        def sub(m):
+            tipo, arg = m.group(1), m.group(2).split('|')
+            try:
+                if tipo in ('rango', 'rangoc', 'n', 'nc', 'dir'):
+                    grupo, campo = arg[0].split('.')
+                    mes = arg[1]
+                    i = D[EJE_DE_GRUPO[grupo]].index(mes)
+                    vals = {n: ser[campo][i] for n, ser in D[grupo].items() if ser.get(campo) and ser[campo][i] is not None}
+                    if tipo in ('rangoc', 'nc'):
+                        comp = arg[2]
+                        vals = {n: v for n, v in vals.items()
+                                if ((refs_de(grupo, campo, n, mes) or {}).get('composicion') or 'estandar') == comp}
+                        if not vals:
+                            raise KeyError(f'sin datos con composición {comp}')
+                        if tipo == 'nc':
+                            return str(len(vals))
+                        return (f'{_fnum(min(vals.values()))}–{_fnum(max(vals.values()))}%' if len(vals) > 1
+                                else f'{_fnum(list(vals.values())[0])}% (una sola fuente)')
+                    if not vals:
+                        raise KeyError('sin datos')
+                    if tipo == 'n':
+                        return str(len(vals))
+                    if tipo == 'dir':
+                        return direccion_serie(grupo, campo, list(vals))[0]
+                    return f'{_fnum(min(vals.values()))}–{_fnum(max(vals.values()))}%'
+                if tipo == 'val':
+                    grupo, nombre, campo = arg[0].split('.')
+                    i = D[EJE_DE_GRUPO[grupo]].index(arg[1])
+                    v = D[grupo][nombre][campo][i]
+                    if v is None:
+                        raise KeyError('sin dato')
+                    return _fnum(v) + '%'
+                if tipo == 'serieval':
+                    i = D[arg[1]].index(arg[2])
+                    v = D[arg[0]][i]
+                    if v is None:
+                        raise KeyError('sin dato')
+                    return _fnum(v)
+            except Exception as e:
+                raise BuildError(f'Plantilla «{m.group(0)}» en {donde}: no se puede resolver contra las bases ({e}). '
+                                 f'La nota quedó desactualizada respecto de los datos.')
+            raise BuildError(f'Plantilla «{m.group(0)}» en {donde}: tipo desconocido')
+        return re.sub(r'\{(\w+):([^}]+)\}', sub, txt)
+
+    GAP = []
+    for g in cfg['gap_indicadores']:
+        conv, sl = resolver_lectura(g.get('conv')), resolver_lectura(g.get('sl'))
+        if g['estado'] in ('nd_sl', 'ncomp') and not conv:
+            raise BuildError(f"GAP «{g['label']}»: sin lectura CONV")
+        if g['estado'] in ('nd_conv', 'ncomp') and not sl:
+            raise BuildError(f"GAP «{g['label']}»: sin lectura SL")
+        GAP.append({'grupo': g['grupo'], 'label': g['label'], 'estado': g['estado'],
+                    'motivo': g['motivo'], 'conv': conv, 'sl': sl})
+        for capa, lec in (('CONV', conv), ('SL', sl)):
+            if not lec or lec['tipo'] != 'fila':
+                continue
+            traza.append({'ruta': f"GAP.{g['label']} · {capa}", 'mes': lec['mes'], 'valor': lec['valor'],
+                          'anterior': None, 'estado': 'nuevo', 'modulo': 'GAP CONV–SL', 'base': lec['base'],
+                          'fila': lec['fila'], 'id_informe': '', 'id_indicador': lec['id_indicador'],
+                          'consultora': lec['consultora'], 'categoria': lec['categoria'], 'unidad': lec['unidad'],
+                          'campo': lec['campo'], 'file_id': lec['file_id'], 'nota': g['motivo'], 'secundaria': ''})
+    D['GAP'] = GAP
+    D['GAP_STATUS'] = [g['estado'] for g in GAP]
+
+    ar = cfg['agenda_ranking']
+    D['AGENDA_RANKING'] = {'titulo': ar['titulo'], 'nota': ar['nota'],
+                           'items': [{**lectura_fila(f), 'tipo': 'fila'} for f in ar['filas']]}
+
+    SEM = []
+    for r in cfg['semaforo']:
+        lec = resolver_lectura(r['ultima'])
+        donde = f"semáforo · {r['indicador']}"
+        if lec and lec['tipo'] == 'rango':
+            cob = f"{lec['n']} consultora{'' if lec['n'] == 1 else 's'} en {lec['mes']}"
+            todas = {n: v for g in lec['grupos'] for n, v in g['direcciones'].items()}
+            movs = {n: v for n, v in todas.items() if v['estado'] in ('sube', 'baja', 'estable')}
+            sin_par = [n for n, v in todas.items() if n not in movs]
+            if not movs:
+                direccion = 'sin dos mediciones comparables: no se establece dirección'
+            elif len({v['estado'] for v in movs.values()}) == 1:
+                d = list(movs.values())[0]['estado']
+                direccion = (f"{d} ({list(movs)[0]}, {list(movs.values())[0]['detalle']})" if len(movs) == 1
+                             else f'dirección común entre consultoras: {d}')
+            else:
+                direccion = 'sin dirección común entre consultoras: ' + ' · '.join(
+                    f"{n} {v['estado']} ({v['detalle']})" for n, v in movs.items())
+            if sin_par:
+                direccion += ' · sin par comparable: ' + ', '.join(sin_par)
+        else:
+            cob = r.get('cobertura', 'medición única')
+            direccion = r.get('direccion', 'evidencia insuficiente para establecer dirección')
+        SEM.append({'bloque': r['bloque'], 'indicador': r['indicador'], 'estado': r['estado'],
+                    'ultima': lec,
+                    'tendencia': resolver_plantilla(r['tendencia'], donde),
+                    'cobertura': resolver_plantilla(r.get('cobertura') or cob, donde),
+                    'comparabilidad': r['comparabilidad'],
+                    'direccion': resolver_plantilla(r.get('direccion') or direccion, donde),
+                    'nota': resolver_plantilla(r['nota'], donde)})
+    D['SEMAFORO'] = SEM
+
+    # ejes comparables: cada consultora por separado; los rangos solo dentro de un mismo
+    # eje y una misma composición. Lo que no encaja en ningún eje no se fuerza: se lista aparte.
+    reclamadas = set()
+
+    def filas_evol(spec):
+        out = []
+        for g in cfg['evolucion']:
+            if g['modulo'] != spec['modulo']:
+                continue
+            for f in g['filas']:
+                texto = f"{g.get('titulo', '')} {f['etiqueta']}".lower()
+                inc = spec.get('incluye')
+                if inc and not any(x.lower() in texto for x in inc):
+                    continue
+                if any(x.lower() in texto for x in spec.get('excluye', [])):
+                    continue
+                out.append((g, f))
+        return out
+
+    def item_evol(g, f):
+        return {'campo': f['etiqueta'], 'mes': '', 'composicion': 'serie propia', 'n': 1,
+                'rango_valido': False, 'direccion': 'serie intra-consultora', 'consultoras': {},
+                'min': None, 'max': None, 'titulo': g.get('titulo', ''),
+                'evidencia': f.get('evidencia', ''), 'nota': f.get('nota', ''),
+                'filas': [c.get('fila') for c in f['celdas'] if c.get('fila')],
+                'fuentes_complementarias': [c['fuente_complementaria'] for c in f['celdas'] if c.get('fuente_complementaria')]}
+
+    EJES = []
+    for e in cfg['ejes']:
+        item = {'nombre': e['nombre'], 'verificacion': e['verificacion'], 'grupos': [], 'fuentes': []}
+        if 'grupo' in e:
+            for campo in e['campos']:
+                lec = lectura_serie(e['grupo'], campo)
+                if not lec:
+                    continue
+                for g in lec['grupos']:
+                    item['grupos'].append({'campo': campo, 'mes': lec['mes'], **g})
+                    item['fuentes'] += list(g['consultoras'])
+        specs = ([{'modulo': e['evolucion_modulo'], 'incluye': e.get('incluye') or e.get('filtros'),
+                   'excluye': e.get('excluye', [])}] if e.get('evolucion_modulo') else [])
+        specs += e.get('evolucion_extra', [])
+        for spec in specs:
+            for g, f in filas_evol(spec):
+                reclamadas.add((g['modulo'], g.get('titulo', ''), f['etiqueta']))
+                item['fuentes'].append(f['consultora'])
+                item['grupos'].append(item_evol(g, f))
+        item['fuentes'] = sorted(set(item['fuentes']))
+        EJES.append(item)
+    D['EJES'] = EJES
+
+    # preguntas propias de una consultora que no corresponden a ninguno de los ejes
+    ESP = {}
+    for g in cfg['evolucion']:
+        for f in g['filas']:
+            if (g['modulo'], g.get('titulo', ''), f['etiqueta']) in reclamadas:
+                continue
+            k = f"{g['modulo']} · {g.get('titulo', '').split(' · ')[0]}"
+            ESP.setdefault(k, {'modulo': g['modulo'], 'tab': g['tab'], 'titulo': g.get('titulo', ''),
+                               'nota': g.get('nota', ''), 'filas': []})
+            ESP[k]['filas'].append({'etiqueta': f['etiqueta'], 'consultora': f['consultora'],
+                                    'filas': [c.get('fila') for c in f['celdas'] if c.get('fila')]})
+    D['PREGUNTAS_ESPECIFICAS'] = sorted(ESP.values(), key=lambda x: (x['modulo'], x['titulo']))
+
     # 7. novedades por pestaña y mes (puntuales + valores de serie nuevos/corregidos/retirados)
     UPD = {}
     def agregar(tab, mes, item):
@@ -328,6 +607,7 @@ def construir():
     D['KPI'] = {
         'ICC': {'valor': icc, 'mes': icc_m, 'oct_pendiente': D['ICC'][D['MESI'].index('Oct-26')] is None},
         'ICG': {'valor': icg, 'mes': icg_m, 'anterior': D['ICG'][i_icg - 1],
+                'var_oficial': (cfg['icg_variacion_oficial'] if cfg['icg_variacion_oficial']['mes'] == icg_m else None),
                 'max12': max(v for v in D['ICG'][-13:] if v is not None), 'min12': min(v for v in D['ICG'][-13:] if v is not None)},
         'GESTION_OCT': {'n': len(gest_oct), 'min': min(gest_oct.values()), 'max': max(gest_oct.values()), 'rango': rango,
                         'semaforo': ('🔴' if rango and rango > 15 else '🟡' if rango and rango > 10 else '🟢'), 'por_consultora': gest_oct},
