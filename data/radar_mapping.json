@@ -774,7 +774,8 @@
       "ruta": "CONS.QMonitor.pj",
       "eje": "MV",
       "fila": 1362,
-      "nota": "línea propia de la consultora; ver serie de evolución para comparabilidad"
+      "nota": "línea propia de la consultora; ver serie de evolución para comparabilidad",
+      "composicion": "peronismo sin kirchnerismo"
     },
     {
       "modulo": "Intención de voto",
@@ -830,7 +831,8 @@
       "ruta": "CONS.DC Consultores.pj",
       "eje": "MV",
       "fila": 1334,
-      "nota": "línea propia de la consultora; ver serie de evolución para comparabilidad"
+      "nota": "línea propia de la consultora; ver serie de evolución para comparabilidad",
+      "composicion": "peronismo sin kirchnerismo"
     },
     {
       "modulo": "ICC",
@@ -1245,16 +1247,22 @@
       "necesita": "informes de Vozna de mayo, julio y septiembre de 2026 para cargarlos en Nivel 1 y Nivel 2"
     },
     {
-      "modulo": "Intención de voto",
-      "mes": "Nov-26",
-      "texto": "Equipo Mide «oficialismo vs. oposición» 42/34/12/12 (N2 1569–1572): la lámina aportada el 17/11 corresponde a voto por espacio (LLA 33 · kirchnerismo 17 · peronismo no kirchnerista 16), que respalda la fila 1210, no esta serie. Sigue sin cotejar.",
-      "necesita": "la lámina o la página del capítulo electoral del PDF 148N9Me0 con la pregunta de oficialismo vs. oposición"
-    },
-    {
       "modulo": "Gestión nacional",
       "mes": "Nov-26",
       "texto": "Management & Fit sep-26: el registro de encuestar no informa el universo. La pregunta textual y la técnica quedaron acreditadas el 17/11 («Más allá de tu voto a presidente, ¿aprobás o desaprobás la gestión de Javier Milei en el gobierno nacional?»; presencial + online + CATI).",
       "necesita": "informe original de Management & Fit con el universo"
+    },
+    {
+      "modulo": "Intención de voto",
+      "mes": "Nov-26",
+      "texto": "Equipo Mide «oficialismo vs. oposición» 42/34/12/12 (N2 1569–1572): excluido de gráficos, rangos, contadores y conclusiones. Aplicada la definición acordada (oficialismo = LLA; oposición = todo lo que no es LLA; no votaría, blanco e indecisos aparte), la lámina de voto por espacio del 18–25/09 da 33 / 48 / 6 / 13 y no 34 / 42 / 12 / 12. El conflicto queda registrado en N2 sin sobrescribir.",
+      "necesita": "la lámina del capítulo electoral del PDF 148N9Me0 con la pregunta de oficialismo vs. oposición y su base de cálculo"
+    },
+    {
+      "modulo": "Intención de voto",
+      "mes": "Nov-26",
+      "texto": "Eje «oficialismo vs. oposición» no computable: solo Proyección (nov-26) tiene en la base todas las categorías de voto por espacio. Para el resto falta cargar las categorías distintas de LLA y PJ, y completarlas por diferencia no está permitido.",
+      "necesita": "las categorías completas de voto por espacio de cada consultora"
     }
   ],
   "secciones_cobertura": [
@@ -1690,50 +1698,6 @@
             }
           ],
           "nota": "Corte de campo de octubre informado por _EncuestAR_. Ficha original pendiente."
-        },
-        {
-          "etiqueta": "Equipo Mide · oficialismo vs. oposición · Oposición",
-          "consultora": "Equipo Mide",
-          "celdas": [
-            {
-              "fila": 1569
-            }
-          ],
-          "nota": "Pregunta genérica («Si hoy hubiera elecciones presidenciales, usted:») sin candidatos nombrados: distinta de voto por espacio, no se encadena. Cifras tomadas de la lámina «El voto 2027» (imagen aportada por la usuaria); verificar contra el capítulo electoral del PDF.",
-          "evidencia": "BAJA"
-        },
-        {
-          "etiqueta": "Equipo Mide · oficialismo vs. oposición · Oficialismo",
-          "consultora": "Equipo Mide",
-          "celdas": [
-            {
-              "fila": 1570
-            }
-          ],
-          "nota": "Pregunta genérica («Si hoy hubiera elecciones presidenciales, usted:») sin candidatos nombrados: distinta de voto por espacio, no se encadena. Cifras tomadas de la lámina «El voto 2027» (imagen aportada por la usuaria); verificar contra el capítulo electoral del PDF.",
-          "evidencia": "BAJA"
-        },
-        {
-          "etiqueta": "Equipo Mide · oficialismo vs. oposición · No votaría",
-          "consultora": "Equipo Mide",
-          "celdas": [
-            {
-              "fila": 1571
-            }
-          ],
-          "nota": "Pregunta genérica («Si hoy hubiera elecciones presidenciales, usted:») sin candidatos nombrados: distinta de voto por espacio, no se encadena. Cifras tomadas de la lámina «El voto 2027» (imagen aportada por la usuaria); verificar contra el capítulo electoral del PDF.",
-          "evidencia": "BAJA"
-        },
-        {
-          "etiqueta": "Equipo Mide · oficialismo vs. oposición · Ns/Nc",
-          "consultora": "Equipo Mide",
-          "celdas": [
-            {
-              "fila": 1572
-            }
-          ],
-          "nota": "Pregunta genérica («Si hoy hubiera elecciones presidenciales, usted:») sin candidatos nombrados: distinta de voto por espacio, no se encadena. Cifras tomadas de la lámina «El voto 2027» (imagen aportada por la usuaria); verificar contra el capítulo electoral del PDF.",
-          "evidencia": "BAJA"
         }
       ]
     },
@@ -3410,9 +3374,10 @@
         "serie": "GESTION",
         "campo": "aprob"
       },
-      "tendencia": "may–nov 2026 · sin dirección consistente entre consultoras",
-      "evidencia": "ALTA",
-      "nota": "Octubre reúne 9 consultoras (rango 28,9–38,7%); no se promedian. Intra-consultora: Proyección sep 42% → nov 35,6%; QMonitor oct 35% → nov 36%. Noviembre es corte parcial."
+      "tendencia": "may–nov 2026",
+      "cobertura": "{n:GESTION.aprob|Oct-26} consultoras en oct-26 (mes completo) · 2 en nov-26 (corte parcial al 17/11)",
+      "comparabilidad": "MEDIA — misma pregunta de aprobación, pero universo, técnica y escala difieren entre consultoras",
+      "nota": "Rango de oct-26: {rango:GESTION.aprob|Oct-26}; no se promedian. Intra-consultora: Proyección {val:GESTION.Proyección.aprob|Sep-26} en sep → {val:GESTION.Proyección.aprob|Nov-26} en nov; QMonitor {val:GESTION.QMonitor.aprob|Oct-26} → {val:GESTION.QMonitor.aprob|Nov-26}. La cantidad de consultoras acredita cobertura, no dirección."
     },
     {
       "bloque": "Nacional",
@@ -3422,9 +3387,10 @@
         "serie": "IMG",
         "campo": "pos"
       },
-      "tendencia": "may–nov 2026 · oct-26 con 9 consultoras, rango 31,0–43,8%",
-      "evidencia": "ALTA",
-      "nota": "La dispersión entre consultoras supera la variación mensual de cada serie. Imagen personal ≠ aprobación de gestión."
+      "tendencia": "may–nov 2026",
+      "cobertura": "{n:IMG.pos|Oct-26} consultoras en oct-26 · 2 en nov-26 (corte parcial)",
+      "comparabilidad": "MEDIA — misma pregunta de imagen personal; las escalas difieren (algunas consultoras suman buena + muy buena)",
+      "nota": "Rango de oct-26: {rango:IMG.pos|Oct-26}. La dispersión entre consultoras supera la variación mensual de cada serie. Imagen personal ≠ aprobación de gestión."
     },
     {
       "bloque": "Nacional",
@@ -3434,9 +3400,10 @@
         "serie": "IMG",
         "campo": "neg"
       },
-      "tendencia": "may–nov 2026 · oct-26 con 9 consultoras, rango 53,0–64,6%",
-      "evidencia": "ALTA",
-      "nota": "Giacobbe oct-26 corregida a 56,8% con el PDF primario (campo 28/10–2/11). Sin dirección común entre consultoras."
+      "tendencia": "may–nov 2026",
+      "cobertura": "{n:IMG.neg|Oct-26} consultoras en oct-26 · 2 en nov-26 (corte parcial)",
+      "comparabilidad": "MEDIA — misma pregunta; Zentrix agrega mala + muy mala y Giacobbe separa «regular» y «no lo conozco»",
+      "nota": "Rango de oct-26: {rango:IMG.neg|Oct-26}. Giacobbe oct-26 corregida a {val:IMG.Giacobbe.neg|Oct-26} con el PDF primario (campo 28/10–2/11)."
     },
     {
       "bloque": "Nacional",
@@ -3448,9 +3415,11 @@
         "unidad": " / 5",
         "fuente": "UTDT Escuela de Gobierno"
       },
-      "tendencia": "may–oct 2026 · oscila entre 1,94 y 2,07 puntos",
-      "evidencia": "ALTA",
-      "nota": "Variación oficial informada por UTDT: +0,9% m/m. Noviembre todavía sin publicar al 17/11. Oscilaciones compatibles con el error muestral: no constituyen tendencia."
+      "tendencia": "may–oct 2026",
+      "cobertura": "fuente única (UTDT) · serie mensual continua",
+      "comparabilidad": "ALTA — misma serie, misma metodología (Poliarquía)",
+      "direccion": "sube en octubre (+0,9% m/m oficial); el recorrido may–oct no tiene dirección sostenida",
+      "nota": "Variación oficial informada por UTDT: +0,9% m/m sobre {serieval:ICG|MESI|Oct-26} puntos. Noviembre todavía sin publicar al 17/11. Las oscilaciones son compatibles con el error muestral: no constituyen tendencia."
     },
     {
       "bloque": "Nacional",
@@ -3461,9 +3430,11 @@
         "eje": "MESI",
         "fuente": "UTDT CIF"
       },
-      "tendencia": "may–oct 2026 · 40,14 → 41,52 puntos",
-      "evidencia": "ALTA",
-      "nota": "Mide expectativas económicas: no se mezcla con imagen, gestión ni voto. Noviembre todavía sin publicar al 17/11."
+      "tendencia": "may–oct 2026",
+      "cobertura": "fuente única (UTDT CIF) · serie mensual continua",
+      "comparabilidad": "ALTA — misma serie",
+      "direccion": "sube en octubre; sin dirección sostenida en el período",
+      "nota": "Octubre marca {serieval:ICC|MESI|Oct-26} puntos frente a {serieval:ICC|MESI|Sep-26} en septiembre. Mide expectativas económicas: no se mezcla con imagen, gestión ni voto. Noviembre todavía sin publicar al 17/11."
     },
     {
       "bloque": "Nacional",
@@ -3472,9 +3443,11 @@
       "ultima": {
         "fila": 1464
       },
-      "tendencia": "sin serie previa comparable en la base",
-      "evidencia": "BAJA",
-      "nota": "Medición única de Proyección (nov-26): 30,8% correcto y 58,0% equivocado. DC Consultores oct-26 usa otra escala de tres opciones y no se encadena. Evidencia insuficiente para establecer variación."
+      "tendencia": "medición única (nov-26)",
+      "cobertura": "1 consultora · 1 medición",
+      "comparabilidad": "BAJA — sin serie previa con la misma formulación",
+      "direccion": "evidencia insuficiente para establecer variación",
+      "nota": "Proyección nov-26: 30,8% correcto y 58,0% equivocado (N2 1464 y 1463). DC Consultores oct-26 usa una escala de tres opciones y no se encadena con esta."
     },
     {
       "bloque": "Nacional",
@@ -3483,9 +3456,11 @@
       "ultima": {
         "fila": 1350
       },
-      "tendencia": "jul–oct 2026 · 47,14 → 47,35 → 49,15 → 47,87 puntos",
-      "evidencia": "MEDIA",
-      "nota": "Subíndice Expectativas futuras del ICC (UTDT CIF). Serie intra-fuente; oct revierte la suba de septiembre. Un movimiento mensual no es tendencia."
+      "tendencia": "jul–oct 2026",
+      "cobertura": "fuente única (UTDT CIF) · 4 cortes",
+      "comparabilidad": "ALTA intra-serie",
+      "direccion": "sin dirección sostenida: sube en septiembre y revierte en octubre",
+      "nota": "Subíndice Expectativas futuras del ICC: 47,14 → 47,35 → 49,15 → 47,87 puntos. Un movimiento mensual no es tendencia."
     },
     {
       "bloque": "Nacional",
@@ -3494,9 +3469,11 @@
       "ultima": {
         "fila": 1296
       },
-      "tendencia": "tramos 5/9–24/10 · 63% → 60% → 68% → 74% negativo entre cuentas reales",
-      "evidencia": "MEDIA",
-      "nota": "Capa SL: NO COMPARABLE con encuestas de opinión. Antecedente ISN de Reputación Digital: −43 (ago-26) y −33 (1–7 sep-26), métrica distinta de estos tramos. Sin medición mensual de ISN para octubre."
+      "tendencia": "tramos 5/9–24/10 2026",
+      "cobertura": "1 proveedor (Reputación Digital) · 4 tramos",
+      "comparabilidad": "NO COMPARABLE con encuestas de opinión (capa SL)",
+      "direccion": "el tono negativo sube entre tramos: 63% → 60% → 68% → 74%",
+      "nota": "Antecedente ISN de Reputación Digital: −43 (ago-26) y −33 (1–7 sep-26), métrica distinta de estos tramos. Sin medición mensual de ISN para octubre ni noviembre."
     },
     {
       "bloque": "Electoral",
@@ -3506,9 +3483,10 @@
         "serie": "CONS",
         "campo": "lla"
       },
-      "tendencia": "feb–nov 2026 · oct-26 con 8 consultoras, rango 26,0–42,6%",
-      "evidencia": "ALTA",
-      "nota": "No se promedian consultoras ni se mezclan escenarios. La dispersión entre consultoras supera la diferencia entre espacios."
+      "tendencia": "feb–nov 2026",
+      "cobertura": "{n:CONS.lla|Oct-26} consultoras en oct-26 · 2 en nov-26 (corte parcial)",
+      "comparabilidad": "MEDIA — todas preguntan por espacio y LLA es una categoría única; DC Consultores usa muestreo no probabilístico",
+      "nota": "Rango de oct-26: {rango:CONS.lla|Oct-26}. La dispersión entre consultoras supera la diferencia entre espacios: es dispersión metodológica, no estabilidad."
     },
     {
       "bloque": "Electoral",
@@ -3518,9 +3496,10 @@
         "serie": "CONS",
         "campo": "pj"
       },
-      "tendencia": "feb–nov 2026 · oct-26 con 8 consultoras, rango 17,1–36,6%",
-      "evidencia": "ALTA",
-      "nota": "DC Consultores separa peronismo y kirchnerismo, por eso su valor no es comparable con los agregados de otras consultoras."
+      "tendencia": "feb–nov 2026",
+      "cobertura": "{n:CONS.pj|Oct-26} consultoras en oct-26 · 2 en nov-26 (corte parcial)",
+      "comparabilidad": "BAJA entre composiciones — unas consultoras agregan peronismo y kirchnerismo y otras los separan",
+      "nota": "El rango no cruza composiciones. En oct-26, las {nc:CONS.pj|Oct-26|estandar} consultoras que agregan peronismo y kirchnerismo van de {rangoc:CONS.pj|Oct-26|estandar}; DC Consultores, que mide peronismo sin kirchnerismo, queda en {rangoc:CONS.pj|Oct-26|peronismo sin kirchnerismo} y forma su propio grupo. Los dos valores no se comparan entre sí ni se promedian."
     },
     {
       "bloque": "Electoral",
@@ -3529,9 +3508,11 @@
       "ultima": {
         "fila": 1493
       },
-      "tendencia": "Proyección sep 40,8–40,2 · oct 41,0–39,1 · nov 40,7–39,1",
-      "evidencia": "MEDIA",
-      "nota": "Serie intra-Proyección; diferencia dentro del margen. Synopsis oct (41,9–41,8) es fuente secundaria, evidencia máxima MEDIA. Se retiran las referencias a Explanans y OPSA: sin fila ni informe en la base."
+      "tendencia": "sep–nov 2026",
+      "cobertura": "1 consultora con serie (Proyección) · 3 cortes",
+      "comparabilidad": "MEDIA — serie intra-Proyección; Synopsis oct es fuente secundaria",
+      "direccion": "estable: la diferencia entre ambos queda dentro del margen en los tres cortes",
+      "nota": "Proyección sep 40,8–40,2 · oct 41,0–39,1 · nov 40,7–39,1. Synopsis oct (41,9–41,8) es fuente secundaria, evidencia máxima MEDIA, y no se encadena. Se retiraron las referencias a Explanans y OPSA: sin fila ni informe en la base."
     },
     {
       "bloque": "Territorial",
@@ -3542,9 +3523,11 @@
         "eje": "MESI",
         "fuente": "UTDT CIF"
       },
-      "tendencia": "ago–oct 2026 · 39,87 → 37,16 → 39,68 puntos",
-      "evidencia": "MEDIA",
-      "nota": "Rebote de octubre desde el mínimo de septiembre; sigue por debajo del nivel nacional (41,52). Señal, no tendencia."
+      "tendencia": "ago–oct 2026",
+      "cobertura": "fuente única (UTDT CIF) · 3 cortes",
+      "comparabilidad": "ALTA intra-serie; MEDIA contra el nivel nacional (otra canasta territorial)",
+      "direccion": "rebota en octubre tras el mínimo de septiembre",
+      "nota": "39,87 → 37,16 → {serieval:ICC_CABA_13|MESI|Oct-26} puntos. Sigue por debajo del nivel nacional ({serieval:ICC|MESI|Oct-26}). Señal, no tendencia."
     },
     {
       "bloque": "Territorial",
@@ -3554,8 +3537,10 @@
         "fila": 1268
       },
       "tendencia": "medición única (nov-26)",
-      "evidencia": "BAJA",
-      "nota": "Ranking CB de Intendentes GBA, nov-26: máximo Nardini +24,8 p.p. y mínimo Menéndez −22,6 p.p. Dato único: no se infiere dirección. No se agregan municipios."
+      "cobertura": "1 consultora · 1 medición",
+      "comparabilidad": "BAJA — sin corte anterior comparable",
+      "direccion": "evidencia insuficiente para establecer dirección",
+      "nota": "Ranking CB de Intendentes GBA, nov-26: máximo Nardini +24,8 p.p. y mínimo Menéndez −22,6 p.p. No se agregan municipios ni se promedian entre sí."
     }
   ],
   "icg_variacion_oficial": {
@@ -3574,5 +3559,80 @@
       1472,
       1470
     ]
-  }
+  },
+  "ejes": [
+    {
+      "nombre": "Imagen personal",
+      "grupo": "IMG",
+      "campos": [
+        "pos",
+        "neg"
+      ],
+      "verificacion": "Misma pregunta de imagen personal de Milei, universo nacional. Difieren las escalas: algunas consultoras agregan buena + muy buena y Giacobbe separa «regular» y «no lo conozco». No se compara con aprobación de gestión."
+    },
+    {
+      "nombre": "Aprobación de gestión",
+      "grupo": "GESTION",
+      "campos": [
+        "aprob",
+        "desaprob"
+      ],
+      "verificacion": "Pregunta de aprobación de la gestión nacional. Universo y técnica difieren; Management & Fit entra por fuente secundaria con evidencia máxima MEDIA. No se compara con imagen personal."
+    },
+    {
+      "nombre": "Voto por espacio",
+      "grupo": "CONS",
+      "campos": [
+        "lla",
+        "pj"
+      ],
+      "verificacion": "LLA es categoría única en todas las fuentes. El agregado peronista no lo es: se separa por composición y los rangos no cruzan composiciones."
+    },
+    {
+      "nombre": "Economía percibida",
+      "evolucion_modulo": "Economía percibida",
+      "verificacion": "Series intra-consultora. Las preguntas sobre economía del país y economía personal no se mezclan entre sí."
+    },
+    {
+      "nombre": "Expectativas",
+      "evolucion_modulo": "Expectativas",
+      "verificacion": "Horizonte temporal y escala deben coincidir antes de comparar. El subíndice del ICC y las preguntas de expectativas de consultoras no son la misma medición."
+    },
+    {
+      "nombre": "Rumbo del país",
+      "evolucion_modulo": "Clima / rumbo",
+      "verificacion": "Proyección usa dos opciones y DC Consultores tres: no se encadenan."
+    },
+    {
+      "nombre": "Principales problemas",
+      "evolucion_modulo": "Agenda pública",
+      "verificacion": "Distinguir respuesta espontánea de guiada y única de múltiple. Los porcentajes de respuesta múltiple no suman 100 y no se comparan con los de respuesta única."
+    },
+    {
+      "nombre": "Voto por candidato",
+      "evolucion_modulo": "Intención de voto",
+      "verificacion": "Solo comparable entre escenarios con la misma oferta de candidatos. Las series de «voto potencial» de Tendencias (nunca lo votaría / seguramente lo vote) son otra pregunta y no entran en este eje.",
+      "filtros": [
+        "candidato",
+        "voto presidencial",
+        "primera vuelta"
+      ]
+    },
+    {
+      "nombre": "Balotaje",
+      "evolucion_modulo": "Intención de voto",
+      "verificacion": "Escenario de dos candidatos. No se compara con voto por espacio ni con voto por candidato en primera vuelta. Los cortes de Proyección (sep y oct) están en fuentes complementarias y el de noviembre en N2 1493–1496: no figuran en este eje hasta cargarlos como serie.",
+      "filtros": [
+        "balotaje"
+      ]
+    },
+    {
+      "nombre": "Oficialismo vs. oposición",
+      "evolucion_modulo": "Intención de voto",
+      "verificacion": "Oficialismo = LLA; oposición = todo lo que no es LLA según las categorías de la pregunta. No votaría, en blanco e indecisos se mantienen separados y no se suman a oposición. Eje vacío en este corte: ninguna consultora tiene cargadas todas las categorías necesarias y completarlas por diferencia no está permitido.",
+      "filtros": [
+        "oficialismo"
+      ]
+    }
+  ]
 }

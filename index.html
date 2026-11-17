@@ -924,8 +924,8 @@ footer a{color:var(--accent)}
   <p class="sec">Semáforo ejecutivo · may–nov 2026 · corte al 17/11</p>
   <div class="info-box" style="margin-bottom:18px;font-size:11px;line-height:1.6">
     Estado de cada indicador según la evidencia acumulada may–nov 2026. <strong>Última medición</strong> y <strong>tendencia</strong> son dos lecturas distintas y llevan su propio período: la primera es el corte más reciente con fila en la base, la segunda es el recorrido que sostiene el color. Noviembre es un corte parcial al 17/11.
-    <strong>Evidencia</strong>: ALTA = 3+ fuentes comparables con dirección consistente · MEDIA = 2 fuentes o comparabilidad parcial · BAJA = dato único o comparabilidad limitada.
-    El color no se asigna a partir de una medición única: con una sola lectura el estado es ⚪. Las consultoras no se promedian: cuando hay varias, se muestra el rango.
+<strong>Cobertura, comparabilidad y dirección son tres cosas distintas</strong> y van en columnas separadas: cuántas fuentes miden, si son comparables entre sí, y si se mueven en el mismo sentido. Que nueve consultoras midan un indicador acredita cobertura, no una tendencia. Cuando las series se mueven en sentidos distintos se declara <strong>sin dirección común</strong>, que no es lo mismo que estabilidad.
+    El color no se asigna a partir de una medición única: con una sola lectura el estado es ⚪. Las consultoras no se promedian, y los rangos no cruzan composiciones distintas de la misma pregunta.
   </div>
 
   <!-- Leyenda de colores -->
@@ -937,6 +937,12 @@ footer a{color:var(--accent)}
   </div>
 
   <div id="semaforoTablas"></div>
+
+  <p class="sec" style="margin-top:22px">Ejes comparables · dispersión entre consultoras</p>
+  <div class="info-box" style="margin-bottom:14px;font-size:11px;line-height:1.6">
+    Cada eje agrupa preguntas que miden lo mismo. Compartir tema no alcanza: antes de comparar se verifican formulación, categorías, universo, territorio y período, y eso se declara en cada eje. Las consultoras se muestran por separado; los rangos solo se arman dentro de un mismo eje y una misma composición de la pregunta, identificando qué fuentes incluyen. Donde la dispersión persiste, se informa: no se convierte en estabilidad ni se resuelve promediando.
+  </div>
+  <div id="ejesTabla"></div>
 
   <!-- CONTEXTO TERRITORIAL · GOBIERNOS LOCALES (TEM) -->
   <div class="chart-wrap" style="margin-bottom:20px">
@@ -1243,8 +1249,8 @@ function toggleDataset(chartId,idx){
 }
 
 /* ── DATA — generado por scripts/build_radar_data.py en data/radar_data.json; no editar valores aquí ─ */
-let MESI,MIPC,IPC,ICC,ICG,MINFL,IPC_FULL,IPCBA_FULL,MBRECHA,BRECHA,TIPCBA_MES,TIPCBA_IA,TIPCBA_BIENES,TIPCBA_SERV,TIPCBA_ESTAC,TIPCBA_REG,TIPCBA_VAR,TIPCBA_ACUM,MIPCACUM,IPC_ACUM,IPCBA_ACUM_FULL,BRECHA_ACUM,MIIA,IPC_IA,IPC_IA_9,IPCBA_ACUM_9,IPCBA_IA_9,ICC_CABA_13,ICC_INT_13,ICC_GBA_14,MV,CONS,lastRows,MI,IMG,MG,GESTION,CROSS_MES,CROSS,ISN_RD_MES,ISN_RD_VALS,ISN_EJE_LABELS,ISN_EJE_VALS,MILEI_SEP_LABELS,MILEI_SEP_VALS,OPOS_LABELS,OPOS_VALS,MSL_MES,SL_POR_MES,SL_CONSULT_LABELS,SL_CONSULT_VALS,SL_INFORMES,GAP_STATUS,KPI,UPD,COBERTURA,META,SECUNDARIA,EVOL,ENCABEZADO,SL_TRAMOS,AGENDA_INFL,SL_ESTUDIOS,NOTA_SECUNDARIA,GAP,SEMAFORO,AGENDA_RANKING;
-function applyData(D){MESI=D.MESI;MIPC=D.MIPC;IPC=D.IPC;ICC=D.ICC;ICG=D.ICG;MINFL=D.MINFL;IPC_FULL=D.IPC_FULL;IPCBA_FULL=D.IPCBA_FULL;MBRECHA=D.MBRECHA;BRECHA=D.BRECHA;TIPCBA_MES=D.TIPCBA_MES;TIPCBA_IA=D.TIPCBA_IA;TIPCBA_BIENES=D.TIPCBA_BIENES;TIPCBA_SERV=D.TIPCBA_SERV;TIPCBA_ESTAC=D.TIPCBA_ESTAC;TIPCBA_REG=D.TIPCBA_REG;TIPCBA_VAR=D.TIPCBA_VAR;TIPCBA_ACUM=D.TIPCBA_ACUM;MIPCACUM=D.MIPCACUM;IPC_ACUM=D.IPC_ACUM;IPCBA_ACUM_FULL=D.IPCBA_ACUM_FULL;BRECHA_ACUM=D.BRECHA_ACUM;MIIA=D.MIIA;IPC_IA=D.IPC_IA;IPC_IA_9=D.IPC_IA_9;IPCBA_ACUM_9=D.IPCBA_ACUM_9;IPCBA_IA_9=D.IPCBA_IA_9;ICC_CABA_13=D.ICC_CABA_13;ICC_INT_13=D.ICC_INT_13;ICC_GBA_14=D.ICC_GBA_14;MV=D.MV;CONS=D.CONS;lastRows=D.lastRows;MI=D.MI;IMG=D.IMG;MG=D.MG;GESTION=D.GESTION;CROSS_MES=D.CROSS_MES;CROSS=D.CROSS;ISN_RD_MES=D.ISN_RD_MES;ISN_RD_VALS=D.ISN_RD_VALS;ISN_EJE_LABELS=D.ISN_EJE_LABELS;ISN_EJE_VALS=D.ISN_EJE_VALS;MILEI_SEP_LABELS=D.MILEI_SEP_LABELS;MILEI_SEP_VALS=D.MILEI_SEP_VALS;OPOS_LABELS=D.OPOS_LABELS;OPOS_VALS=D.OPOS_VALS;MSL_MES=D.MSL_MES;SL_POR_MES=D.SL_POR_MES;SL_CONSULT_LABELS=D.SL_CONSULT_LABELS;SL_CONSULT_VALS=D.SL_CONSULT_VALS;SL_INFORMES=D.SL_INFORMES;GAP_STATUS=D.GAP_STATUS;KPI=D.KPI;UPD=D.UPD;COBERTURA=D.COBERTURA;META=D.META;SECUNDARIA=D.SECUNDARIA||[];EVOL=D.EVOL||{};ENCABEZADO=D.ENCABEZADO;SL_TRAMOS=D.SL_TRAMOS||[];AGENDA_INFL=D.AGENDA_INFL;SL_ESTUDIOS=D.SL_ESTUDIOS||[];NOTA_SECUNDARIA=D.NOTA_SECUNDARIA||[];GAP=D.GAP||[];SEMAFORO=D.SEMAFORO||[];AGENDA_RANKING=D.AGENDA_RANKING||{items:[]};}
+let MESI,MIPC,IPC,ICC,ICG,MINFL,IPC_FULL,IPCBA_FULL,MBRECHA,BRECHA,TIPCBA_MES,TIPCBA_IA,TIPCBA_BIENES,TIPCBA_SERV,TIPCBA_ESTAC,TIPCBA_REG,TIPCBA_VAR,TIPCBA_ACUM,MIPCACUM,IPC_ACUM,IPCBA_ACUM_FULL,BRECHA_ACUM,MIIA,IPC_IA,IPC_IA_9,IPCBA_ACUM_9,IPCBA_IA_9,ICC_CABA_13,ICC_INT_13,ICC_GBA_14,MV,CONS,lastRows,MI,IMG,MG,GESTION,CROSS_MES,CROSS,ISN_RD_MES,ISN_RD_VALS,ISN_EJE_LABELS,ISN_EJE_VALS,MILEI_SEP_LABELS,MILEI_SEP_VALS,OPOS_LABELS,OPOS_VALS,MSL_MES,SL_POR_MES,SL_CONSULT_LABELS,SL_CONSULT_VALS,SL_INFORMES,GAP_STATUS,KPI,UPD,COBERTURA,META,SECUNDARIA,EVOL,ENCABEZADO,SL_TRAMOS,AGENDA_INFL,SL_ESTUDIOS,NOTA_SECUNDARIA,GAP,SEMAFORO,AGENDA_RANKING,EJES;
+function applyData(D){MESI=D.MESI;MIPC=D.MIPC;IPC=D.IPC;ICC=D.ICC;ICG=D.ICG;MINFL=D.MINFL;IPC_FULL=D.IPC_FULL;IPCBA_FULL=D.IPCBA_FULL;MBRECHA=D.MBRECHA;BRECHA=D.BRECHA;TIPCBA_MES=D.TIPCBA_MES;TIPCBA_IA=D.TIPCBA_IA;TIPCBA_BIENES=D.TIPCBA_BIENES;TIPCBA_SERV=D.TIPCBA_SERV;TIPCBA_ESTAC=D.TIPCBA_ESTAC;TIPCBA_REG=D.TIPCBA_REG;TIPCBA_VAR=D.TIPCBA_VAR;TIPCBA_ACUM=D.TIPCBA_ACUM;MIPCACUM=D.MIPCACUM;IPC_ACUM=D.IPC_ACUM;IPCBA_ACUM_FULL=D.IPCBA_ACUM_FULL;BRECHA_ACUM=D.BRECHA_ACUM;MIIA=D.MIIA;IPC_IA=D.IPC_IA;IPC_IA_9=D.IPC_IA_9;IPCBA_ACUM_9=D.IPCBA_ACUM_9;IPCBA_IA_9=D.IPCBA_IA_9;ICC_CABA_13=D.ICC_CABA_13;ICC_INT_13=D.ICC_INT_13;ICC_GBA_14=D.ICC_GBA_14;MV=D.MV;CONS=D.CONS;lastRows=D.lastRows;MI=D.MI;IMG=D.IMG;MG=D.MG;GESTION=D.GESTION;CROSS_MES=D.CROSS_MES;CROSS=D.CROSS;ISN_RD_MES=D.ISN_RD_MES;ISN_RD_VALS=D.ISN_RD_VALS;ISN_EJE_LABELS=D.ISN_EJE_LABELS;ISN_EJE_VALS=D.ISN_EJE_VALS;MILEI_SEP_LABELS=D.MILEI_SEP_LABELS;MILEI_SEP_VALS=D.MILEI_SEP_VALS;OPOS_LABELS=D.OPOS_LABELS;OPOS_VALS=D.OPOS_VALS;MSL_MES=D.MSL_MES;SL_POR_MES=D.SL_POR_MES;SL_CONSULT_LABELS=D.SL_CONSULT_LABELS;SL_CONSULT_VALS=D.SL_CONSULT_VALS;SL_INFORMES=D.SL_INFORMES;GAP_STATUS=D.GAP_STATUS;KPI=D.KPI;UPD=D.UPD;COBERTURA=D.COBERTURA;META=D.META;SECUNDARIA=D.SECUNDARIA||[];EVOL=D.EVOL||{};ENCABEZADO=D.ENCABEZADO;SL_TRAMOS=D.SL_TRAMOS||[];AGENDA_INFL=D.AGENDA_INFL;SL_ESTUDIOS=D.SL_ESTUDIOS||[];NOTA_SECUNDARIA=D.NOTA_SECUNDARIA||[];GAP=D.GAP||[];SEMAFORO=D.SEMAFORO||[];AGENDA_RANKING=D.AGENDA_RANKING||{items:[]};EJES=D.EJES||[];}
 
 /* ── CHART HELPERS ──────────────────────────── */
 function baseOpts(){
@@ -1563,7 +1569,7 @@ function initTab(tab){
   }
 
   if(tab==='semaforo'){
-    renderSemaforo();
+    renderSemaforo();renderEjes();
   }
 
   if(tab==='agenda'){
@@ -1673,19 +1679,37 @@ function refFila(l){
   if(!l||l.tipo!=='fila')return '';
   return `<span class="upd-ref">N2 fila ${l.fila}${l.campo?' · campo '+esc(l.campo):''}${driveLink(l.file_id)}</span>`;
 }
-function textoLectura(l){
+function citaRef(r){
+  if(!r||!r.fila)return '';
+  return `<span class="upd-ref">N2 fila ${r.fila}${r.campo?' · campo '+esc(r.campo):''}${driveLink(r.file_id)}</span>`;
+}
+function htmlLectura(l){
   if(!l)return 's/d';
   if(l.tipo==='rango'){
-    const p=Object.entries(l.por_consultora).sort((a,b)=>b[1]-a[1]);
-    return `${esc(l.mes)} · ${p.length} consultora${p.length===1?'':'s'} · ${p.map(([n,v])=>`${esc(n)} ${fmt(v)}%`).join(' · ')}`;
+    return l.grupos.map(g=>{
+      const items=Object.entries(g.consultoras).map(([nm,x])=>
+        `<div style="padding-left:8px">· ${esc(nm)} <strong>${fmt(x.valor)}%</strong> ${citaRef(x.ref)}</div>`).join('');
+      const cab=`${esc(l.mes)} · ${g.n} fuente${g.n===1?'':'s'}${l.grupos.length>1?` · composición: ${esc(g.composicion)}`:''}`
+        +(g.rango_valido?` · rango ${fmt(g.min)}–${fmt(g.max)}%`:' · una sola fuente: no se arma rango');
+      return `<div style="margin-bottom:3px">${cab}${items}</div>`;
+    }).join('');
   }
   if(l.tipo==='simple')return `${fmt(l.valor)}${esc(l.unidad||'')} · ${esc(l.mes)}${l.fuente?' · '+esc(l.fuente):''}`;
-  return `${fmt(l.valor)}${l.unidad==='%'?'%':' '+esc(l.unidad||'')} · ${esc(l.consultora)} · ${esc(l.mes)}`;
+  return `${fmt(l.valor)}${l.unidad==='%'?'%':' '+esc(l.unidad||'')} · ${esc(l.consultora)} · ${esc(l.mes)} ${citaRef(l)}`;
+}
+function textoLectura(l){
+  if(!l)return 's/d';
+  if(l.tipo==='rango')return `${l.mes} · ${l.n} fuentes`;
+  if(l.tipo==='simple')return `${fmt(l.valor)}${l.unidad||''} · ${l.mes}${l.fuente?' · '+l.fuente:''}`;
+  return `${fmt(l.valor)}${l.unidad==='%'?'%':''} · ${l.consultora} · ${l.mes}`;
 }
 function valorDestacado(l){
   if(!l)return '—';
-  if(l.tipo==='rango'){const v=Object.values(l.por_consultora);
-    return v.length===1?fmt(v[0])+'%':`${fmt(Math.min(...v))}–${fmt(Math.max(...v))}%`;}
+  if(l.tipo==='rango'){
+    if(l.grupos.length>1)return 'varias composiciones';
+    const g=l.grupos[0];
+    return g.rango_valido?`${fmt(g.min)}–${fmt(g.max)}%`:fmt(g.min)+'%';
+  }
   return fmt(l.valor)+(l.unidad==='%'?'%':'');
 }
 function renderGAP(){
@@ -1700,8 +1724,8 @@ function renderGAP(){
         <div class="gap-card-label">${esc(g.label)}</div>
         <div class="gap-card-avg${g.conv&&g.conv.tipo==='rango'?' sm':''}">${valorDestacado(pri)}</div>
         <div class="gap-card-sources" style="display:block;line-height:1.5">
-          <div><span style="color:var(--c1)">CONV</span> ${g.conv?esc(textoLectura(g.conv)):'<span style="color:var(--fg-dim)">sin par en la base</span>'} ${refFila(g.conv)}</div>
-          <div><span style="color:var(--c4)">SL</span> ${g.sl?esc(textoLectura(g.sl)):'<span style="color:var(--fg-dim)">sin par en la base</span>'} ${refFila(g.sl)}</div>
+          <div><span style="color:var(--c1)">CONV</span> ${g.conv?htmlLectura(g.conv):'<span style="color:var(--fg-dim)">sin par en la base</span>'}</div>
+          <div style="margin-top:4px"><span style="color:var(--c4)">SL</span> ${g.sl?htmlLectura(g.sl):'<span style="color:var(--fg-dim)">sin par en la base</span>'}</div>
         </div>
         <div class="gap-card-ev"><span class="gap-delta-badge ${cls}">${txt}</span></div>
         <div class="gap-card-sources" style="display:block;margin-top:6px;color:var(--fg-dim)">${esc(g.motivo)}</div>
@@ -1709,22 +1733,47 @@ function renderGAP(){
     return `<div class="gap-zone-group"><div class="gap-zone-title">${esc(gr)}</div><div class="gap-zone-cards">${cards}</div></div>`;
   }).join('');
 }
+function renderEjes(){
+  const cont=document.getElementById('ejesTabla');if(!cont)return;
+  cont.innerHTML=`<div class="table-wrap"><table>
+    <thead><tr><th>Eje</th><th>Fuentes</th><th>Rango comparable</th><th>Verificación previa</th></tr></thead>
+    <tbody>${EJES.map(e=>{
+      const conVal=e.grupos.filter(g=>g.min!=null);
+      const celda=!e.grupos.length?'<span style="color:var(--warn)">eje vacío en este corte</span>'
+        :conVal.length?conVal.map(g=>{
+          const comp=g.composicion&&g.composicion!=='estandar'?' · '+esc(g.composicion):'';
+          const val=g.rango_valido?`<strong>${fmt(g.min)}–${fmt(g.max)}%</strong> <span style="color:var(--fg-dim)">(${g.n} fuentes · ${esc(g.mes)})</span>`
+            :`${fmt(g.min)}% <span style="color:var(--warn)">una sola fuente: no se arma rango</span>`;
+          return `<div>${esc(g.campo)}${comp}: ${val}<div style="padding-left:8px;color:var(--fg-dim)">${Object.keys(g.consultoras).join(' · ')}</div></div>`;}).join('')
+        :'<span style="color:var(--fg-dim)">series intra-consultora: no se arma rango entre fuentes</span>';
+      return `<tr><td><strong>${esc(e.nombre)}</strong></td>
+        <td style="font-size:10px;color:var(--fg-dim)">${e.fuentes.length?esc(e.fuentes.join(' · ')):'—'}</td>
+        <td style="font-size:10px">${celda}</td>
+        <td style="font-size:10px;color:var(--fg-dim)">${esc(e.verificacion)}</td></tr>`;}).join('')}
+    </tbody></table></div>`;
+}
 function renderSemaforo(){
   const cont=document.getElementById('semaforoTablas');if(!cont)return;
   const bloques=[...new Set(SEMAFORO.map(r=>r.bloque))];
   cont.innerHTML=bloques.map((b,i)=>{
     const filas=SEMAFORO.filter(r=>r.bloque===b).map(r=>{
-      const ev=r.evidencia==='ALTA'?'conv':r.evidencia==='MEDIA'?'mix':'nd';
+      const cp=(r.comparabilidad||'').split('—')[0].trim();
+      const ev=cp==='ALTA'?'conv':cp==='MEDIA'?'mix':'nd';
+      const sinDir=/sin dirección|insuficiente/i.test(r.direccion||'');
       return `<tr>
         <td><strong>${esc(r.indicador)}</strong></td>
         <td>${r.estado}</td>
-        <td class="num">${valorDestacado(r.ultima)}<div style="font-size:10px;color:var(--fg-dim);font-weight:400">${esc(textoLectura(r.ultima))}</div>${refFila(r.ultima)}</td>
+        <td class="num">${valorDestacado(r.ultima)}<div style="font-size:10px;color:var(--fg-dim);font-weight:400;text-align:left">${htmlLectura(r.ultima)}</div></td>
         <td style="color:var(--fg-dim)">${esc(r.tendencia)}</td>
-        <td><span class="signal ${ev}">${esc(r.evidencia)}</span></td>
+        <td style="font-size:10px;line-height:1.5">
+          <div><span style="color:var(--fg-dim)">cobertura</span> ${esc(r.cobertura)}</div>
+          <div style="margin-top:3px"><span style="color:var(--fg-dim)">comparabilidad</span> <span class="signal ${ev}">${esc(cp)}</span> ${esc((r.comparabilidad||'').split('—').slice(1).join('—').trim())}</div>
+          <div style="margin-top:3px"><span style="color:var(--fg-dim)">dirección</span> <strong style="color:${sinDir?'var(--warn)':'inherit'}">${esc(r.direccion)}</strong></div>
+        </td>
         <td>${esc(r.nota)}</td></tr>`;}).join('');
     return `<details class="det-tab"${i===0?' open':''}><summary><b>${esc(b)}</b></summary>
       <div class="table-wrap" style="margin-bottom:20px"><table>
-      <thead><tr><th>Indicador</th><th>Estado</th><th>Última medición</th><th>Tendencia · período</th><th>Evidencia</th><th>Nota</th></tr></thead>
+      <thead><tr><th>Indicador</th><th>Estado</th><th>Última medición</th><th>Tendencia · período</th><th>Cobertura · comparabilidad · dirección</th><th>Nota</th></tr></thead>
       <tbody>${filas}</tbody></table></div></details>`;
   }).join('');
 }
