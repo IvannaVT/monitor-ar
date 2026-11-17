@@ -821,7 +821,7 @@
    "neg": [
     null,
     null,
-    null,
+    61.3,
     null,
     61.8,
     64.1,
@@ -1787,6 +1787,15 @@
    "rotulo": "FUENTE SECUNDARIA · monitorargy.com · https://monitorargy.com/serie/ipc_mensual · consultado 2026-11-11 · fuente original: INDEC",
    "modulo": "IPC Nación",
    "fuente_original": "INDEC"
+  },
+  {
+   "ruta": "IMG.Zuban.neg",
+   "mes": "Jul-26",
+   "valor": 61.3,
+   "fila": 1558,
+   "rotulo": "FUENTE SECUNDARIA · EncuestAR · https://encuestas-argentinas.com/encuestas/ · fuente original: Zuban Córdoba",
+   "modulo": "Imagen Milei",
+   "fuente_original": "Zuban Córdoba"
   },
   {
    "ruta": "IPC_IA",
@@ -5878,6 +5887,13 @@
    "rotulo": "FUENTE SECUNDARIA · monitorargy.com · https://monitorargy.com/serie/ipc_mensual · consultado 2026-11-11 · fuente original: INDEC"
   },
   {
+   "indicador": "IMG.Zuban.neg",
+   "mes": "Jul-26",
+   "valor": 61.3,
+   "fila": 1558,
+   "rotulo": "FUENTE SECUNDARIA · EncuestAR · https://encuestas-argentinas.com/encuestas/ · fuente original: Zuban Córdoba"
+  },
+  {
    "indicador": "IPC Nación interanual",
    "mes": "Oct-26",
    "valor": 33.1,
@@ -7405,6 +7421,76 @@
      "necesita": "relevar a mano (N2 fila 1177)"
     }
    ],
+   "Jul-26": [
+    {
+     "tipo": "serie",
+     "modulo": "Imagen Milei",
+     "etiqueta": "IMG · Zuban · neg",
+     "valor": 61.3,
+     "anterior": null,
+     "estado": "nuevo",
+     "consultora": "Zuban Córdoba",
+     "fila": 1558,
+     "base": "nivel2_indicadores",
+     "file_id": "No aplica (fuente secundaria)",
+     "campo": "2026-07-22→2026-07-26",
+     "unidad": "%",
+     "nota": "Campo del 22 al 26 de julio de 2026. Dato corroborado por Milénico (3 de agosto de 2026).",
+     "secundaria": "FUENTE SECUNDARIA · EncuestAR · https://encuestas-argentinas.com/encuestas/ · fuente original: Zuban Córdoba",
+     "categoria": "Negativa"
+    },
+    {
+     "tipo": "serie",
+     "modulo": "Imagen Milei",
+     "etiqueta": "IMG · Zentrix · neg",
+     "valor": 58.5,
+     "anterior": null,
+     "estado": "nuevo",
+     "consultora": "Zentrix",
+     "fila": 1547,
+     "base": "nivel2_indicadores",
+     "file_id": "1KH2QATvGsehaEKBh3fDuLXtb5S93qEWx",
+     "campo": "",
+     "unidad": "%",
+     "nota": "",
+     "secundaria": "",
+     "categoria": "Negativa (mala + muy mala)"
+    },
+    {
+     "tipo": "serie",
+     "modulo": "Imagen Milei",
+     "etiqueta": "IMG · D'Alessio · neg",
+     "valor": 61,
+     "anterior": null,
+     "estado": "nuevo",
+     "consultora": "D'Alessio",
+     "fila": 1553,
+     "base": "nivel2_indicadores",
+     "file_id": "1mTV-KdwP9o_UnL0r7o19dmBIqi2efLpu",
+     "campo": "",
+     "unidad": "%",
+     "nota": "Valor de la serie histórica en la lámina Imagen de Javier Milei de Los 1000 días de Milei (agosto 2026).",
+     "secundaria": "",
+     "categoria": "Negativa"
+    },
+    {
+     "tipo": "serie",
+     "modulo": "Imagen Milei",
+     "etiqueta": "IMG · Giacobbe · neg",
+     "valor": 57.2,
+     "anterior": null,
+     "estado": "nuevo",
+     "consultora": "Giacobbe",
+     "fila": 1556,
+     "base": "nivel2_indicadores",
+     "file_id": "1XM6_vHGl894uTRp7PLBqJJyX-LmRnATJ",
+     "campo": "2026-07-24→2026-07-31",
+     "unidad": "%",
+     "nota": "Informe Público Julio 2026. Imagen Javier Milei: 33,9% positiva, 57,2% negativa.",
+     "secundaria": "",
+     "categoria": "Negativa"
+    }
+   ],
    "Sep-26": [
     {
      "tipo": "serie",
@@ -7800,59 +7886,6 @@
      "campo": "2026-06-19→2026-06-25",
      "unidad": "%",
      "nota": "",
-     "secundaria": "",
-     "categoria": "Negativa"
-    }
-   ],
-   "Jul-26": [
-    {
-     "tipo": "serie",
-     "modulo": "Imagen Milei",
-     "etiqueta": "IMG · Zentrix · neg",
-     "valor": 58.5,
-     "anterior": null,
-     "estado": "nuevo",
-     "consultora": "Zentrix",
-     "fila": 1547,
-     "base": "nivel2_indicadores",
-     "file_id": "1KH2QATvGsehaEKBh3fDuLXtb5S93qEWx",
-     "campo": "",
-     "unidad": "%",
-     "nota": "",
-     "secundaria": "",
-     "categoria": "Negativa (mala + muy mala)"
-    },
-    {
-     "tipo": "serie",
-     "modulo": "Imagen Milei",
-     "etiqueta": "IMG · D'Alessio · neg",
-     "valor": 61,
-     "anterior": null,
-     "estado": "nuevo",
-     "consultora": "D'Alessio",
-     "fila": 1553,
-     "base": "nivel2_indicadores",
-     "file_id": "1mTV-KdwP9o_UnL0r7o19dmBIqi2efLpu",
-     "campo": "",
-     "unidad": "%",
-     "nota": "Valor de la serie histórica en la lámina Imagen de Javier Milei de Los 1000 días de Milei (agosto 2026).",
-     "secundaria": "",
-     "categoria": "Negativa"
-    },
-    {
-     "tipo": "serie",
-     "modulo": "Imagen Milei",
-     "etiqueta": "IMG · Giacobbe · neg",
-     "valor": 57.2,
-     "anterior": null,
-     "estado": "nuevo",
-     "consultora": "Giacobbe",
-     "fila": 1556,
-     "base": "nivel2_indicadores",
-     "file_id": "1XM6_vHGl894uTRp7PLBqJJyX-LmRnATJ",
-     "campo": "2026-07-24→2026-07-31",
-     "unidad": "%",
-     "nota": "Informe Público Julio 2026. Imagen Javier Milei: 33,9% positiva, 57,2% negativa.",
      "secundaria": "",
      "categoria": "Negativa"
     }
@@ -9029,14 +9062,15 @@
    "data/bases/radar_fuentes_complementarias.tsv",
    "data/radar_mapping.json"
   ],
-  "valores_trazados": 365,
-  "nuevos": 120,
+  "valores_trazados": 366,
+  "nuevos": 121,
   "corregidos": 15,
   "retirados": 0,
   "puntuales": 0,
   "en_series_de_evolucion": 184,
   "fuente_secundaria": [
    "FUENTE SECUNDARIA · Bache3000 · informe de contexto de septiembre con campo de julio",
+   "FUENTE SECUNDARIA · EncuestAR · https://encuestas-argentinas.com/encuestas/ · fuente original: Zuban Córdoba",
    "FUENTE SECUNDARIA · _EncuestAR_ · difusión 31/10/2026 · ficha original pendiente",
    "FUENTE SECUNDARIA · monitorargy.com · https://monitorargy.com/mcp (obtener_serie, id ipc_interanual) · consultado 2026-11-12 · fuente original: INDEC",
    "FUENTE SECUNDARIA · monitorargy.com · https://monitorargy.com/mcp (obtener_serie, id ipc_nivel_general) · consultado 2026-11-12 · fuente original: INDEC · acumulado calculado sobre el nivel general",

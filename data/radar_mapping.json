@@ -427,6 +427,14 @@
       "modulo": "Imagen Milei",
       "ruta": "IMG.Zuban.neg",
       "eje": "MI",
+      "fila": 1558,
+      "rotulo": "FUENTE SECUNDARIA · EncuestAR · https://encuestas-argentinas.com/encuestas/ · fuente original: Zuban Córdoba",
+      "nota": "Campo del 22 al 26 de julio de 2026. Dato corroborado por Milénico (3 de agosto de 2026)."
+    },
+    {
+      "modulo": "Imagen Milei",
+      "ruta": "IMG.Zuban.neg",
+      "eje": "MI",
       "fila": 1115
     },
     {
