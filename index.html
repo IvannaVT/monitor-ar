@@ -1549,7 +1549,7 @@ function initTab(tab){
   }
 
   if(tab==='semaforo'){
-    renderSemaforo();renderEjes();renderEspecificas();renderDestacados();
+    renderSemaforo();renderEjes();renderEspecificas();
   }
 
   if(tab==='agenda'){
@@ -1988,7 +1988,7 @@ document.querySelectorAll('.mes-btn').forEach(b=>b.addEventListener('click',()=>
 }));
 fetch('./data/radar_data.json',{cache:'no-store'})
   .then(r=>{if(!r.ok)throw new Error('HTTP '+r.status);return r.json();})
-  .then(D=>{applyData(D);renderStaticTables();renderKPIs();renderEncabezado();renderRangos();renderTablaVar();renderSLEstudios();renderEvol();renderUpd();renderSec();renderNotaSec();renderCobertura();initTab('indicadores');applyHash();})
+  .then(D=>{applyData(D);renderStaticTables();renderKPIs();renderEncabezado();renderRangos();renderTablaVar();renderSLEstudios();renderEvol();renderUpd();renderSec();renderNotaSec();renderCobertura();renderDestacados();initTab('indicadores');applyHash();})
   .catch(err=>{console.error('Error cargando radar_data.json:',err);
     document.querySelector('.main-content').insertAdjacentHTML('afterbegin',`<p class="notice" style="color:var(--neg)">No se pudieron cargar los datos (data/radar_data.json): ${esc(err.message)}. Abrir el sitio desde un servidor (no como archivo local).</p>`);});
 
