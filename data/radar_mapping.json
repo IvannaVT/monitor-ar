@@ -428,7 +428,7 @@
       "ruta": "IMG.Zuban.neg",
       "eje": "MI",
       "fila": 1558,
-      "rotulo": "FUENTE SECUNDARIA · EncuestAR · https://encuestas-argentinas.com/encuestas/ · fuente original: Zuban Córdoba",
+      "rotulo": "FUENTE SECUNDARIA · encuestas-argentinas.com · https://encuestas-argentinas.com/encuestas/ (ficha del 04/08/2026, registro sin URL propia en el listado) · consultado 2026-11-18 · fuente original: Zuban Córdoba",
       "nota": "Campo del 22 al 26 de julio de 2026. Dato corroborado por Milénico (3 de agosto de 2026)."
     },
     {
@@ -949,22 +949,19 @@
       "modulo": "IPC Nación",
       "ruta": "IPC_IA",
       "eje": "MIIA",
-      "fila": 1385,
-      "rotulo": "FUENTE SECUNDARIA · monitorargy.com · https://monitorargy.com/mcp (obtener_serie, id ipc_interanual) · consultado 2026-11-12 · fuente original: INDEC"
+      "fila": 1385
     },
     {
       "modulo": "IPC Nación",
       "ruta": "IPC_IA_9",
       "eje": "MIPCACUM",
-      "fila": 1385,
-      "rotulo": "FUENTE SECUNDARIA · monitorargy.com · https://monitorargy.com/mcp (obtener_serie, id ipc_interanual) · consultado 2026-11-12 · fuente original: INDEC"
+      "fila": 1385
     },
     {
       "modulo": "IPC Nación",
       "ruta": "IPC_ACUM",
       "eje": "MIPCACUM",
-      "fila": 1386,
-      "rotulo": "FUENTE SECUNDARIA · monitorargy.com · https://monitorargy.com/mcp (obtener_serie, id ipc_nivel_general) · consultado 2026-11-12 · fuente original: INDEC · acumulado calculado sobre el nivel general"
+      "fila": 1386
     },
     {
       "modulo": "Gestión nacional",
@@ -1263,6 +1260,30 @@
       "mes": "Nov-26",
       "texto": "Eje «oficialismo vs. oposición» no computable: solo Proyección (nov-26) tiene en la base todas las categorías de voto por espacio. Para el resto falta cargar las categorías distintas de LLA y PJ, y completarlas por diferencia no está permitido.",
       "necesita": "las categorías completas de voto por espacio de cada consultora"
+    },
+    {
+      "modulo": "Semáforo",
+      "mes": "Nov-26",
+      "texto": "PoliTech Río Negro (voto provincial jul-26: LLA 25,1 · peronismo 22,2 · JSRN 21,5) retirado del Radar el 18/11. Venía de baribache3000.com.ar, que no es ninguno de los dos sitios autorizados por la Parte XVI.3, y además abría una serie provincial nueva, que la Parte XVI.2 no permite.",
+      "necesita": "el informe original de PoliTech sobre Río Negro, para cargarlo como fuente primaria"
+    },
+    {
+      "modulo": "Intención de voto",
+      "mes": "Nov-26",
+      "texto": "Balotaje de Synopsis oct-26 (Milei 41,9 · Kicillof 41,8) retirado de los gráficos el 18/11: el rótulo declaraba «ficha original pendiente» y, sin identidad acreditada, la Parte XVI.5 lo mantiene como candidato pendiente fuera de gráficos y cálculos. Coherente con la decisión del 11/11 de no cargar la intención de voto de esa misma ola. El registro se conserva en las fuentes complementarias.",
+      "necesita": "la ficha técnica de esa ola de Synopsis (campo 12–17/10) o el enlace al informe original"
+    },
+    {
+      "modulo": "Indicadores",
+      "mes": "Nov-26",
+      "texto": "IPC de septiembre (1,9%, N2 1365) sigue como fuente secundaria de monitorargy: no se coteja aquí contra el informe del INDEC de septiembre, que no se verificó en esta corrida.",
+      "necesita": "el informe de prensa del INDEC de septiembre de 2026 para ascenderlo a primaria"
+    },
+    {
+      "modulo": "Indicadores",
+      "mes": "Nov-26",
+      "texto": "IPC núcleo (1,5%) y regulados (2,9%) de oct-26 ascienden a fuente primaria el 18/11, verificados contra el informe de prensa del INDEC del 12/11/2026. Salen de la nota de fuentes secundarias junto con el interanual (33,1%) y el acumulado (26,3%).",
+      "necesita": "subir el PDF del informe del INDEC de octubre a Drive para cerrar la ficha"
     }
   ],
   "secciones_cobertura": [
@@ -1676,28 +1697,6 @@
             }
           ],
           "nota": "Publicación de PoliTech del 5/11. Campo y n=1.552 contrastados con la cobertura secundaria."
-        },
-        {
-          "etiqueta": "Synopsis · balotaje · Javier Milei",
-          "consultora": "Synopsis",
-          "evidencia": "BAJA",
-          "celdas": [
-            {
-              "fuente_complementaria": "BAL_SYNOPSIS_OCT_MILEI"
-            }
-          ],
-          "nota": "Corte de campo de octubre informado por _EncuestAR_. Ficha original pendiente."
-        },
-        {
-          "etiqueta": "Synopsis · balotaje · Axel Kicillof",
-          "consultora": "Synopsis",
-          "evidencia": "BAJA",
-          "celdas": [
-            {
-              "fuente_complementaria": "BAL_SYNOPSIS_OCT_KICILLOF"
-            }
-          ],
-          "nota": "Corte de campo de octubre informado por _EncuestAR_. Ficha original pendiente."
         }
       ]
     },
@@ -2833,39 +2832,6 @@
             }
           ],
           "nota": "Ficha técnica no informada en el documento."
-        },
-        {
-          "etiqueta": "PoliTech · Río Negro · voto provincial · La Libertad Avanza",
-          "consultora": "PoliTech",
-          "evidencia": "BAJA",
-          "celdas": [
-            {
-              "fuente_complementaria": "VOTO_POLITECH_RN_JUL_LLA"
-            }
-          ],
-          "nota": "Encuesta provincial de julio (n=1.023), citada en el informe de contexto del 27/09."
-        },
-        {
-          "etiqueta": "PoliTech · Río Negro · voto provincial · Peronismo",
-          "consultora": "PoliTech",
-          "evidencia": "BAJA",
-          "celdas": [
-            {
-              "fuente_complementaria": "VOTO_POLITECH_RN_JUL_PJ"
-            }
-          ],
-          "nota": "Encuesta provincial de julio (n=1.023), citada en el informe de contexto del 27/09."
-        },
-        {
-          "etiqueta": "PoliTech · Río Negro · voto provincial · Juntos Somos Río Negro",
-          "consultora": "PoliTech",
-          "evidencia": "BAJA",
-          "celdas": [
-            {
-              "fuente_complementaria": "VOTO_POLITECH_RN_JUL_JSRN"
-            }
-          ],
-          "nota": "Encuesta provincial de julio (n=1.023), citada en el informe de contexto del 27/09."
         }
       ],
       "nota": "PoliTech publicó un informe de contexto de Río Negro en septiembre basado en campo de julio."
@@ -3264,18 +3230,7 @@
       "file_id": "1o_mlbWD7SUDJlJt2mIKK1BwXp2o4zKwk"
     }
   ],
-  "nota_secundaria_extra": [
-    {
-      "fila": 1387,
-      "etiqueta": "IPC núcleo mensual",
-      "rotulo": "FUENTE SECUNDARIA · monitorargy.com · https://monitorargy.com/mcp (obtener_serie, id ipc_nucleo_mensual) · consultado 2026-11-12 · fuente original: INDEC"
-    },
-    {
-      "fila": 1388,
-      "etiqueta": "IPC regulados mensual",
-      "rotulo": "FUENTE SECUNDARIA · monitorargy.com · https://monitorargy.com/mcp (obtener_serie, id ipc_regulados_mensual) · consultado 2026-11-12 · fuente original: INDEC"
-    }
-  ],
+  "nota_secundaria_extra": [],
   "gap_indicadores": [
     {
       "grupo": "Principales problemas",
