@@ -3044,7 +3044,8 @@
           "nota": "Ficha técnica no informada en el documento."
         }
       ],
-      "nota": "PoliTech publicó un informe de contexto de Río Negro en septiembre basado en campo de julio."
+      "nota": "PoliTech publicó un informe de contexto de Río Negro en septiembre basado en campo de julio.",
+      "glosa": "diferencial = imagen positiva menos imagen negativa, en puntos porcentuales: por encima de cero el intendente tiene más imagen positiva que negativa"
     },
     {
       "tab": "indicadores",
@@ -3297,38 +3298,6 @@
       "etiqueta": "15–24 oct"
     }
   ],
-  "agenda_inflacion": {
-    "meses": [
-      "May-26",
-      "Jun-26",
-      "Jul-26",
-      "Ago-26",
-      "Sep-26",
-      "Oct-26"
-    ],
-    "series": [
-      {
-        "label": "D'Alessio IROL-Berensztein",
-        "color": "var(--c2)",
-        "celdas": [
-          {
-            "fila": 1169
-          }
-        ],
-        "nota": "respuesta múltiple; mes enunciado sep (campo 6–7 oct)"
-      },
-      {
-        "label": "Proyección",
-        "color": "var(--c4)",
-        "celdas": [
-          {
-            "fila": 1135
-          }
-        ],
-        "nota": "respuesta múltiple (hasta 3)"
-      }
-    ]
-  },
   "sl_registro": {
     "_nota": "Vínculo de los informes SL del Radar publicado (ene–sep) con su file_id en base_maestra_2026 (capa SL). Coincidencia automática por mes, consultora y título (≥1,0); excepciones explícitas abajo. file_id verificados contra la columna I de la hoja el 2026-11-11. Forzados por búsqueda de título en Drive (file_id presentes en la columna I de base_maestra): Zuban, Eunomia Mora, Compol UBA, Bullrich·Lali.",
     "forzar": {

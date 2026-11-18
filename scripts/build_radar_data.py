@@ -647,7 +647,7 @@ def construir():
             filas.append({'etiqueta': fdef['etiqueta'], 'consultora': fdef['consultora'], 'celdas': celdas, 'n': len(orden),
                           'delta': delta, 'evidencia': fdef.get('evidencia', 'ALTA' if len(orden) > 2 else 'MEDIA' if len(orden) == 2 else 'BAJA'),
                           'nota': fdef.get('nota', '')})
-        EVOL.setdefault(g['tab'], []).append({'titulo': g['titulo'], 'modulo': g['modulo'], 'nota': g.get('nota', ''),
+        EVOL.setdefault(g['tab'], []).append({'titulo': g['titulo'], 'modulo': g['modulo'], 'nota': g.get('nota', ''), 'glosa': g.get('glosa', ''),
                                              'meses': sorted(meses, key=orden_mes), 'filas': filas})
     for p in cfg['pendientes']:
         agregar(TAB_DE_MODULO[p['modulo']], p['mes'], {'tipo': 'pendiente', 'modulo': p['modulo'], 'etiqueta': p['texto'], 'necesita': p['necesita']})
@@ -729,15 +729,6 @@ def construir():
                           'file_id': r['archivo_fuente_file_id'], 'nota': mt['lbl']})
         D['SL_ESTUDIOS'].append({**c, 'metricas': mets})
     # Agenda: inflación como problema, puntos nuevos por consultora
-    ai = cfg['agenda_inflacion']
-    D['AGENDA_INFL'] = {'meses': ai['meses'], 'series': []}
-    for sdef in ai['series']:
-        data = [None] * len(ai['meses'])
-        for c in sdef['celdas']:
-            v, mes, origen = valor_de(c)
-            data[ai['meses'].index(mes)] = v
-            traza.append({'ruta': 'AGENDA_INFL.' + sdef['label'], 'mes': mes, 'valor': v, 'anterior': None, 'estado': 'nuevo', 'modulo': 'Agenda pública', **origen})
-        D['AGENDA_INFL']['series'].append({'label': sdef['label'], 'color': sdef['color'], 'data': data, 'nota': sdef['nota']})
     # nota metodológica general: un renglón por dato de fuente secundaria (sin repetir ruta)
     ETQ = {'IPC': 'IPC Nación mensual', 'IPC_FULL': 'IPC Nación mensual', 'IPC_IA': 'IPC Nación interanual', 'IPC_IA_9': 'IPC Nación interanual',
            'IPC_ACUM': 'IPC Nación acumulado'}

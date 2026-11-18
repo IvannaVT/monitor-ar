@@ -5707,6 +5707,7 @@
     "titulo": "Intención de voto · series por consultora (no se promedian entre consultoras)",
     "modulo": "Intención de voto",
     "nota": "",
+    "glosa": "",
     "meses": [
      "Oct-26",
      "Nov-26"
@@ -6561,6 +6562,7 @@
     "titulo": "Proyección · balotaje Milei–Kicillof",
     "modulo": "Intención de voto",
     "nota": "Serie nacional de segunda vuelta hipotética, separada del voto de primera vuelta.",
+    "glosa": "",
     "meses": [
      "Sep-26",
      "Oct-26",
@@ -6745,6 +6747,7 @@
     "titulo": "QMonitor · balotaje Milei–Kicillof",
     "modulo": "Intención de voto",
     "nota": "Serie propia de QMonitor, en panel separado de la de Proyección: los niveles no se comparan entre consultoras. Cinco cortes leídos de la lámina evolutiva de la página 47 del informe de noviembre. La consultora no mide balotaje todos los meses. Los meses son los que enuncia QMonitor: su lámina rotula por mes de campo y su portada enuncia el mes siguiente, equivalencia verificada contra las filas ya cargadas.",
+    "glosa": "",
     "meses": [
      "Jun-26",
      "Ago-26",
@@ -6891,6 +6894,7 @@
     "titulo": "Agenda pública · problema principal por consultora",
     "modulo": "Agenda pública",
     "nota": "",
+    "glosa": "",
     "meses": [
      "Sep-26",
      "Oct-26",
@@ -7401,6 +7405,7 @@
     "titulo": "Economía percibida · series por consultora",
     "modulo": "Economía percibida",
     "nota": "",
+    "glosa": "",
     "meses": [
      "Oct-25",
      "Jul-26",
@@ -8049,6 +8054,7 @@
     "titulo": "Expectativas · series por consultora",
     "modulo": "Expectativas",
     "nota": "",
+    "glosa": "",
     "meses": [
      "Oct-25",
      "Jul-26",
@@ -8276,6 +8282,7 @@
     "titulo": "Clima / rumbo del país",
     "modulo": "Clima / rumbo",
     "nota": "",
+    "glosa": "",
     "meses": [
      "Oct-26",
      "Nov-26"
@@ -8455,6 +8462,7 @@
     "titulo": "IPE de Proyección · puntos (1–5)",
     "modulo": "Economía percibida",
     "nota": "",
+    "glosa": "",
     "meses": [
      "Sep-26",
      "Oct-26",
@@ -8512,6 +8520,7 @@
     "titulo": "Imagen de otros dirigentes · series por consultora",
     "modulo": "Imagen otros dirigentes",
     "nota": "",
+    "glosa": "",
     "meses": [
      "Oct-26",
      "Nov-26"
@@ -8936,6 +8945,7 @@
     "titulo": "Conversación digital (SL) · no comparable con encuestas",
     "modulo": "Conversación digital",
     "nota": "",
+    "glosa": "",
     "meses": [
      "Oct-26",
      "Nov-26"
@@ -9117,6 +9127,7 @@
     "titulo": "Territorio · mediciones subnacionales",
     "modulo": "Territorio",
     "nota": "PoliTech publicó un informe de contexto de Río Negro en septiembre basado en campo de julio.",
+    "glosa": "diferencial = imagen positiva menos imagen negativa, en puntos porcentuales: por encima de cero el intendente tiene más imagen positiva que negativa",
     "meses": [
      "Oct-26",
      "Nov-26"
@@ -9595,44 +9606,6 @@
    "file_id": "1o_mlbWD7SUDJlJt2mIKK1BwXp2o4zKwk"
   }
  ],
- "AGENDA_INFL": {
-  "meses": [
-   "May-26",
-   "Jun-26",
-   "Jul-26",
-   "Ago-26",
-   "Sep-26",
-   "Oct-26"
-  ],
-  "series": [
-   {
-    "label": "D'Alessio IROL-Berensztein",
-    "color": "var(--c2)",
-    "data": [
-     null,
-     null,
-     null,
-     null,
-     48,
-     null
-    ],
-    "nota": "respuesta múltiple; mes enunciado sep (campo 6–7 oct)"
-   },
-   {
-    "label": "Proyección",
-    "color": "var(--c4)",
-    "data": [
-     null,
-     null,
-     null,
-     null,
-     null,
-     29.2
-    ],
-    "nota": "respuesta múltiple (hasta 3)"
-   }
-  ]
- },
  "NOTA_SECUNDARIA": [
   {
    "indicador": "IPC Nación mensual",
@@ -13763,8 +13736,8 @@
    "data/bases/radar_fuentes_complementarias.tsv",
    "data/radar_mapping.json"
   ],
-  "valores_trazados": 422,
-  "nuevos": 172,
+  "valores_trazados": 420,
+  "nuevos": 170,
   "corregidos": 15,
   "retirados": 0,
   "puntuales": 0,

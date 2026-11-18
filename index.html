@@ -124,6 +124,15 @@ tr:hover td{background:color-mix(in srgb,var(--accent) 5%,transparent)}
 .h-mix{background:color-mix(in srgb,var(--warn) 14%,transparent);color:var(--warn)}
 .h-pos{background:color-mix(in srgb,var(--pos) 14%,transparent);color:var(--pos)}
 .hallazgo-txt{font-size:12px;color:var(--fg);line-height:1.5}
+.hallazgo-traza{font-size:11px;color:var(--fg-dim);line-height:1.45;margin-top:6px;padding-left:12px;border-left:2px solid var(--border)}
+.gap-lect{font-size:11px;line-height:1.45;margin-bottom:4px;display:flex;gap:6px;align-items:baseline;flex-wrap:wrap}
+.gap-capa{font-size:9px;font-weight:700;letter-spacing:.5px;flex-shrink:0}
+.c-conv{color:var(--c1)}.c-sl{color:var(--c4)}
+.gap-par{white-space:nowrap;margin-right:8px}
+.gap-motivo{font-size:11px;color:var(--fg-dim);line-height:1.45;margin-top:8px}
+.gap-traza{margin-top:8px}
+.gap-traza>summary{font-size:10px;color:var(--fg-dim);cursor:pointer;min-height:24px;display:flex;align-items:center}
+.gap-traza .upd-ref{font-size:10px}
 #slEstudios>.hallazgo,#slEstudios>.hallazgo *{min-width:0;overflow-wrap:break-word}
 #slEstudios>.hallazgo [style*="uppercase"]{letter-spacing:0!important}
 #slEstudios>.hallazgo [style*="grid-template-columns"]{grid-template-columns:repeat(2,minmax(0,1fr))!important}
@@ -968,24 +977,27 @@ footer a{color:var(--accent)}
   <p class="sec">Alertas activas</p>
   <div class="hallazgo">
     <div class="hallazgo-head">
-      <span class="hallazgo-dir h-mix">PENDIENTE</span>
+      <span class="hallazgo-dir h-mix">SIN RESPALDO</span>
       <span class="hallazgo-src">Rumbo y expectativas</span>
     </div>
-    <div class="hallazgo-txt">Retirado el 17/11: el «+5,3 p.p. de rumbo correcto (Proyección may→sep)» y el «−4 p.p. de expectativas (D'Alessio)» no tienen fila en la base y no pudieron verificarse. Lo que sí hay: Proyección nov-26 mide 30,8% rumbo correcto y 58,0% equivocado (N2 1464 y 1463), sin serie previa comparable; y el subíndice de Expectativas del ICC (UTDT) va de 47,14 en julio a 47,87 en octubre (N2 1350). Son dos fuentes distintas: no se cruzan ni se interpreta divergencia entre ellas. No resolver por promedio — registrar como señal de disonancia.</div>
+    <div class="hallazgo-txt">Proyección mide en nov-26 un <strong>30,8% que ve el rumbo correcto</strong> y un <strong>58,0% equivocado</strong>. Por su lado, el subíndice de Expectativas del ICC va de <strong>47,14 en julio a 47,87 en octubre</strong>. Son dos fuentes distintas: se leen por separado, no se cruzan ni se promedian.</div>
+    <div class="hallazgo-traza">↳ Retirado el 17/11: el «+5,3 p.p. de rumbo correcto (Proyección may→sep)» y el «−4 p.p. de expectativas (D'Alessio)» no tenían fila en la base. N2 1463, 1464 y 1350.</div>
   </div>
   <div class="hallazgo">
     <div class="hallazgo-head">
-      <span class="hallazgo-dir h-mix">SEÑAL EMERGENTE</span>
-      <span class="hallazgo-src">Villarruel imagen · Zuban</span>
+      <span class="hallazgo-dir h-mix">SIN RESPALDO</span>
+      <span class="hallazgo-src">Imagen Milei · Zuban</span>
     </div>
-    <div class="hallazgo-txt">Retirado el 18/11: el «−13,5 p.p. de imagen diferencial abr→sep (Zuban)» no es trazable. La serie de imagen de Zuban en la base empieza en julio (jul 33,4 / sep 36 / oct 34,9 positiva), de modo que no hay medición de abril contra la cual calcular esa variación. Lo verificable de Zuban es el tramo sep→oct: positiva −1,1 p.p. y negativa +2,3 p.p., un par de cortes que da variación, no tendencia.</div>
+    <div class="hallazgo-txt">De Zuban lo verificable es el tramo <strong>sep→oct</strong>: la imagen positiva de Milei baja <strong>1,1 p.p.</strong> y la negativa sube <strong>2,3 p.p.</strong> Son dos cortes: dan variación, no tendencia.</div>
+    <div class="hallazgo-traza">↳ Retirado el 18/11: el «−13,5 p.p. de imagen diferencial abr→sep» no es trazable, porque la serie de Zuban en la base empieza en julio (positiva: jul 33,4 · sep 36 · oct 34,9). No hay medición de abril contra la cual calcular esa variación.</div>
   </div>
   <div class="hallazgo">
     <div class="hallazgo-head">
-      <span class="hallazgo-dir h-mix">PENDIENTE</span>
-      <span class="hallazgo-src">Agenda desempleo · sin par SL</span>
+      <span class="hallazgo-dir h-mix">SIN PAR SL</span>
+      <span class="hallazgo-src">Agenda desempleo</span>
     </div>
-    <div class="hallazgo-txt">Retirado el 17/11: la brecha de 11 p.p. comparaba un 29% CONV y un 18% SL que no tienen fila en ninguna base. El dato verificable de desempleo como problema principal es Proyección: 23,5% en oct-26 (N2 1137) y 28,8% en nov-26 (N2 1472). No hay indicador SL de agenda en la base, de modo que no corresponde calcular una brecha.</div>
+    <div class="hallazgo-txt">El desempleo como problema principal lo mide Proyección: <strong>23,5% en oct-26</strong> y <strong>28,8% en nov-26</strong>. No hay indicador SL de agenda en la base, de modo que no corresponde calcular ninguna brecha CONV–SL.</div>
+    <div class="hallazgo-traza">↳ Retirado el 17/11: la brecha de 11 p.p. comparaba un 29% CONV y un 18% SL que no tienen fila en ninguna base. N2 1137 y 1472.</div>
   </div>
 
   <p class="source" style="margin-top:16px">Semáforo generado desde data/radar_data.json: cada fila toma su última medición de la base y declara aparte el período de la tendencia. Reemplaza la versión anterior, cuyo texto era estático y databa de may–oct. Las filas de Kicillof en PBA, Milei en Córdoba y retención del voto 2023 (PRAXIS) se retiraron el 17/11 por falta de fila en Nivel 1 y Nivel 2; quedan listadas como pendientes en el detalle de trazabilidad.</p>
@@ -1042,14 +1054,6 @@ footer a{color:var(--accent)}
   
 
   <div class="mosaic">
-  <div class="chart-wrap">
-    <div class="chart-head">
-      <div><h3>Inflación como problema principal · evolución may–oct 2026</h3><p>Serie intra-consultora · comparabilidad MEDIA entre fuentes</p></div>
-    </div>
-    <div class="chart-box"><canvas id="chartInflProb"></canvas></div>
-    <div class="legend" id="legendInflProb"></div>
-    <p class="source">D'Alessio (sep, N2 1169) y Proyección (oct, N2 1135) · respuesta múltiple, primera medición en la serie · las series de Isasi-Burdman, Equipo Mide y OPSA se retiraron el 17/11: estaban escritas en el código, sin fila en ninguna base · no promediar: escalas y metodologías distintas</p>
-  </div>
   <div class="chart-wrap">
     <div class="chart-head">
       <div><h3>Agenda pública · ranking de problemas</h3><p>% que lo menciona como problema principal · una sola consultora: no se promedian fuentes</p></div>
@@ -1238,8 +1242,8 @@ function toggleDataset(chartId,idx){
 }
 
 /* ── DATA — generado por scripts/build_radar_data.py en data/radar_data.json; no editar valores aquí ─ */
-let MESI,MIPC,IPC,ICC,ICG,MINFL,IPC_FULL,IPCBA_FULL,MBRECHA,BRECHA,TIPCBA_MES,TIPCBA_IA,TIPCBA_BIENES,TIPCBA_SERV,TIPCBA_ESTAC,TIPCBA_REG,TIPCBA_VAR,TIPCBA_ACUM,MIPCACUM,IPC_ACUM,IPCBA_ACUM_FULL,BRECHA_ACUM,MIIA,IPC_IA,IPC_IA_9,IPCBA_ACUM_9,IPCBA_IA_9,ICC_CABA_13,ICC_INT_13,ICC_GBA_14,MV,CONS,lastRows,MI,IMG,MG,GESTION,CROSS_MES,CROSS,ISN_RD_MES,ISN_RD_VALS,ISN_EJE_LABELS,ISN_EJE_VALS,MILEI_SEP_LABELS,MILEI_SEP_VALS,OPOS_LABELS,OPOS_VALS,MSL_MES,SL_POR_MES,SL_CONSULT_LABELS,SL_CONSULT_VALS,SL_INFORMES,GAP_STATUS,KPI,UPD,COBERTURA,META,SECUNDARIA,EVOL,ENCABEZADO,SL_TRAMOS,AGENDA_INFL,SL_ESTUDIOS,NOTA_SECUNDARIA,GAP,SEMAFORO,AGENDA_RANKING,EJES,PREGUNTAS_ESPECIFICAS,DESTACADOS,CIFRAS,OFIOPO;
-function applyData(D){MESI=D.MESI;MIPC=D.MIPC;IPC=D.IPC;ICC=D.ICC;ICG=D.ICG;MINFL=D.MINFL;IPC_FULL=D.IPC_FULL;IPCBA_FULL=D.IPCBA_FULL;MBRECHA=D.MBRECHA;BRECHA=D.BRECHA;TIPCBA_MES=D.TIPCBA_MES;TIPCBA_IA=D.TIPCBA_IA;TIPCBA_BIENES=D.TIPCBA_BIENES;TIPCBA_SERV=D.TIPCBA_SERV;TIPCBA_ESTAC=D.TIPCBA_ESTAC;TIPCBA_REG=D.TIPCBA_REG;TIPCBA_VAR=D.TIPCBA_VAR;TIPCBA_ACUM=D.TIPCBA_ACUM;MIPCACUM=D.MIPCACUM;IPC_ACUM=D.IPC_ACUM;IPCBA_ACUM_FULL=D.IPCBA_ACUM_FULL;BRECHA_ACUM=D.BRECHA_ACUM;MIIA=D.MIIA;IPC_IA=D.IPC_IA;IPC_IA_9=D.IPC_IA_9;IPCBA_ACUM_9=D.IPCBA_ACUM_9;IPCBA_IA_9=D.IPCBA_IA_9;ICC_CABA_13=D.ICC_CABA_13;ICC_INT_13=D.ICC_INT_13;ICC_GBA_14=D.ICC_GBA_14;MV=D.MV;CONS=D.CONS;lastRows=D.lastRows;MI=D.MI;IMG=D.IMG;MG=D.MG;GESTION=D.GESTION;CROSS_MES=D.CROSS_MES;CROSS=D.CROSS;ISN_RD_MES=D.ISN_RD_MES;ISN_RD_VALS=D.ISN_RD_VALS;ISN_EJE_LABELS=D.ISN_EJE_LABELS;ISN_EJE_VALS=D.ISN_EJE_VALS;MILEI_SEP_LABELS=D.MILEI_SEP_LABELS;MILEI_SEP_VALS=D.MILEI_SEP_VALS;OPOS_LABELS=D.OPOS_LABELS;OPOS_VALS=D.OPOS_VALS;MSL_MES=D.MSL_MES;SL_POR_MES=D.SL_POR_MES;SL_CONSULT_LABELS=D.SL_CONSULT_LABELS;SL_CONSULT_VALS=D.SL_CONSULT_VALS;SL_INFORMES=D.SL_INFORMES;GAP_STATUS=D.GAP_STATUS;KPI=D.KPI;UPD=D.UPD;COBERTURA=D.COBERTURA;META=D.META;SECUNDARIA=D.SECUNDARIA||[];EVOL=D.EVOL||{};ENCABEZADO=D.ENCABEZADO;SL_TRAMOS=D.SL_TRAMOS||[];AGENDA_INFL=D.AGENDA_INFL;SL_ESTUDIOS=D.SL_ESTUDIOS||[];NOTA_SECUNDARIA=D.NOTA_SECUNDARIA||[];GAP=D.GAP||[];SEMAFORO=D.SEMAFORO||[];AGENDA_RANKING=D.AGENDA_RANKING||{items:[]};EJES=D.EJES||[];PREGUNTAS_ESPECIFICAS=D.PREGUNTAS_ESPECIFICAS||[];DESTACADOS=D.DESTACADOS||[];CIFRAS=D.CIFRAS||{};OFIOPO=D.OFIOPO||null;}
+let MESI,MIPC,IPC,ICC,ICG,MINFL,IPC_FULL,IPCBA_FULL,MBRECHA,BRECHA,TIPCBA_MES,TIPCBA_IA,TIPCBA_BIENES,TIPCBA_SERV,TIPCBA_ESTAC,TIPCBA_REG,TIPCBA_VAR,TIPCBA_ACUM,MIPCACUM,IPC_ACUM,IPCBA_ACUM_FULL,BRECHA_ACUM,MIIA,IPC_IA,IPC_IA_9,IPCBA_ACUM_9,IPCBA_IA_9,ICC_CABA_13,ICC_INT_13,ICC_GBA_14,MV,CONS,lastRows,MI,IMG,MG,GESTION,CROSS_MES,CROSS,ISN_RD_MES,ISN_RD_VALS,ISN_EJE_LABELS,ISN_EJE_VALS,MILEI_SEP_LABELS,MILEI_SEP_VALS,OPOS_LABELS,OPOS_VALS,MSL_MES,SL_POR_MES,SL_CONSULT_LABELS,SL_CONSULT_VALS,SL_INFORMES,GAP_STATUS,KPI,UPD,COBERTURA,META,SECUNDARIA,EVOL,ENCABEZADO,SL_TRAMOS,SL_ESTUDIOS,NOTA_SECUNDARIA,GAP,SEMAFORO,AGENDA_RANKING,EJES,PREGUNTAS_ESPECIFICAS,DESTACADOS,CIFRAS,OFIOPO;
+function applyData(D){MESI=D.MESI;MIPC=D.MIPC;IPC=D.IPC;ICC=D.ICC;ICG=D.ICG;MINFL=D.MINFL;IPC_FULL=D.IPC_FULL;IPCBA_FULL=D.IPCBA_FULL;MBRECHA=D.MBRECHA;BRECHA=D.BRECHA;TIPCBA_MES=D.TIPCBA_MES;TIPCBA_IA=D.TIPCBA_IA;TIPCBA_BIENES=D.TIPCBA_BIENES;TIPCBA_SERV=D.TIPCBA_SERV;TIPCBA_ESTAC=D.TIPCBA_ESTAC;TIPCBA_REG=D.TIPCBA_REG;TIPCBA_VAR=D.TIPCBA_VAR;TIPCBA_ACUM=D.TIPCBA_ACUM;MIPCACUM=D.MIPCACUM;IPC_ACUM=D.IPC_ACUM;IPCBA_ACUM_FULL=D.IPCBA_ACUM_FULL;BRECHA_ACUM=D.BRECHA_ACUM;MIIA=D.MIIA;IPC_IA=D.IPC_IA;IPC_IA_9=D.IPC_IA_9;IPCBA_ACUM_9=D.IPCBA_ACUM_9;IPCBA_IA_9=D.IPCBA_IA_9;ICC_CABA_13=D.ICC_CABA_13;ICC_INT_13=D.ICC_INT_13;ICC_GBA_14=D.ICC_GBA_14;MV=D.MV;CONS=D.CONS;lastRows=D.lastRows;MI=D.MI;IMG=D.IMG;MG=D.MG;GESTION=D.GESTION;CROSS_MES=D.CROSS_MES;CROSS=D.CROSS;ISN_RD_MES=D.ISN_RD_MES;ISN_RD_VALS=D.ISN_RD_VALS;ISN_EJE_LABELS=D.ISN_EJE_LABELS;ISN_EJE_VALS=D.ISN_EJE_VALS;MILEI_SEP_LABELS=D.MILEI_SEP_LABELS;MILEI_SEP_VALS=D.MILEI_SEP_VALS;OPOS_LABELS=D.OPOS_LABELS;OPOS_VALS=D.OPOS_VALS;MSL_MES=D.MSL_MES;SL_POR_MES=D.SL_POR_MES;SL_CONSULT_LABELS=D.SL_CONSULT_LABELS;SL_CONSULT_VALS=D.SL_CONSULT_VALS;SL_INFORMES=D.SL_INFORMES;GAP_STATUS=D.GAP_STATUS;KPI=D.KPI;UPD=D.UPD;COBERTURA=D.COBERTURA;META=D.META;SECUNDARIA=D.SECUNDARIA||[];EVOL=D.EVOL||{};ENCABEZADO=D.ENCABEZADO;SL_TRAMOS=D.SL_TRAMOS||[];SL_ESTUDIOS=D.SL_ESTUDIOS||[];NOTA_SECUNDARIA=D.NOTA_SECUNDARIA||[];GAP=D.GAP||[];SEMAFORO=D.SEMAFORO||[];AGENDA_RANKING=D.AGENDA_RANKING||{items:[]};EJES=D.EJES||[];PREGUNTAS_ESPECIFICAS=D.PREGUNTAS_ESPECIFICAS||[];DESTACADOS=D.DESTACADOS||[];CIFRAS=D.CIFRAS||{};OFIOPO=D.OFIOPO||null;}
 
 /* ── CHART HELPERS ──────────────────────────── */
 function baseOpts(){
@@ -1583,24 +1587,6 @@ function initTab(tab){
         y:{ticks:{font:{family:"'IBM Plex Mono',monospace",size:10},color:tok('--fg-dim')},grid:{display:false}}
       }
     });
-    // Inflación como problema · serie may–sep
-    const AIX=(AGENDA_INFL&&AGENDA_INFL.series)||[];const pad=a=>a.concat(Array(AGENDA_INFL.meses.length-a.length).fill(null));
-    mkLine('chartInflProb',AGENDA_INFL.meses,[
-      ...AIX.map(x=>({label:x.label,data:x.data,color:x.color}))
-    ],{
-      plugins:{legend:{display:false}},
-      scales:{
-        x:{ticks:{font:{family:"'IBM Plex Mono',monospace",size:10},color:tok('--fg-dim')},grid:{color:tok('--border')}},
-        y:{min:20,max:70,ticks:{font:{family:"'IBM Plex Mono',monospace",size:10},color:tok('--fg-dim')},grid:{color:tok('--border')}}
-      }
-    });
-    // legend manual
-    const lc=document.getElementById('legendInflProb');
-    if(lc&&!lc.children.length){
-      [...AIX.map(x=>[x.label,x.color])].forEach(([l,c],i)=>{
-        lc.innerHTML+=`<span class="legend-item" onclick="toggleDataset('chartInflProb',${i})"><span class="legend-dot" style="background:${c}"></span>${l}</span>`;
-      });
-    }
   }
 
   if(tab==='sl'){
@@ -1679,19 +1665,25 @@ function citaRef(r){
   if(!r||!r.fila)return '';
   return `<span class="upd-ref">N2 fila ${r.fila}${r.campo?' · campo '+esc(r.campo):''}${driveLink(r.file_id)}</span>`;
 }
-function htmlLectura(l){
+function htmlLectura(l,modo){
   if(!l)return 's/d';
+  var traza = modo==='traza';
   if(l.tipo==='rango'){
-    return l.grupos.map(g=>{
-      const items=Object.entries(g.consultoras).map(([nm,x])=>
-        `<div style="padding-left:8px">· ${esc(nm)} <strong>${fmt(x.valor)}%</strong> ${citaRef(x.ref)}</div>`).join('');
-      const cab=`${esc(l.mes)} · ${g.n} fuente${g.n===1?'':'s'}${l.grupos.length>1?` · composición: ${esc(g.composicion)}`:''}`
-        +(g.rango_valido?` · rango ${fmt(g.min)}–${fmt(g.max)}%`:' · una sola fuente: no se arma rango');
-      return `<div style="margin-bottom:3px">${cab}${items}</div>`;
+    return l.grupos.map(function(g){
+      var items=Object.entries(g.consultoras).map(function(e){
+        var nm=e[0],x=e[1];
+        return traza ? '<div style="padding-left:8px">· '+esc(nm)+' '+citaRef(x.ref)+'</div>'
+                     : '<span class="gap-par">'+esc(nm)+' <strong>'+fmt(x.valor)+'%</strong></span>';
+      }).join(traza?'':' ');
+      var comp = l.grupos.length>1 ? ' · composición: '+esc(g.composicion) : '';
+      if(traza) return '<div style="margin-bottom:3px">'+esc(l.mes)+comp+items+'</div>';
+      var cab = esc(l.mes)+' · '+g.n+' fuente'+(g.n===1?'':'s')+comp+(g.rango_valido?'':' · una sola fuente: no se arma rango');
+      return '<div>'+items+'</div><div style="color:var(--fg-dim);font-size:10px">'+cab+'</div>';
     }).join('');
   }
-  if(l.tipo==='simple')return `${fmt(l.valor)}${esc(l.unidad||'')} · ${esc(l.mes)}${l.fuente?' · '+esc(l.fuente):''}`;
-  return `${fmt(l.valor)}${l.unidad==='%'?'%':' '+esc(l.unidad||'')} · ${esc(l.consultora)} · ${esc(l.mes)} ${citaRef(l)}`;
+  if(l.tipo==='simple') return traza ? '' : fmt(l.valor)+esc(l.unidad||'')+' · '+esc(l.mes)+(l.fuente?' · '+esc(l.fuente):'');
+  return traza ? citaRef(l)
+    : '<strong>'+fmt(l.valor)+(l.unidad==='%'?'%':' '+esc(l.unidad||''))+'</strong> · '+esc(l.consultora)+' · '+esc(l.mes);
 }
 function textoLectura(l){
   if(!l)return 's/d';
@@ -1716,16 +1708,20 @@ function renderGAP(){
       const [txt,cls]=GAP_BADGE[g.estado]||['—','dn'];
       const zona=g.estado==='ncomp'?'zc explore':'zc';
       const pri=g.conv||g.sl;
-      return `<div class="gap-card ${zona}">
-        <div class="gap-card-label">${esc(g.label)}</div>
-        <div class="gap-card-avg${g.conv&&g.conv.tipo==='rango'?' sm':''}">${valorDestacado(pri)}</div>
-        <div class="gap-card-sources" style="display:block;line-height:1.5">
-          <div><span style="color:var(--c1)">CONV</span> ${g.conv?htmlLectura(g.conv):'<span style="color:var(--fg-dim)">sin par en la base</span>'}</div>
-          <div style="margin-top:4px"><span style="color:var(--c4)">SL</span> ${g.sl?htmlLectura(g.sl):'<span style="color:var(--fg-dim)">sin par en la base</span>'}</div>
-        </div>
-        <div class="gap-card-ev"><span class="gap-delta-badge ${cls}">${txt}</span></div>
-        <div class="gap-card-sources" style="display:block;margin-top:6px;color:var(--fg-dim)">${esc(g.motivo)}</div>
-      </div>`;}).join('');
+      var hayTraza = (g.conv&&g.conv.tipo!=='simple')||(g.sl&&g.sl.tipo!=='simple');
+      var tz = hayTraza ? '<details class="gap-traza"><summary>trazabilidad</summary>'
+        + (g.conv ? '<div><span class="gap-capa c-conv">CONV</span> '+htmlLectura(g.conv,'traza')+'</div>' : '')
+        + (g.sl ? '<div><span class="gap-capa c-sl">SL</span> '+htmlLectura(g.sl,'traza')+'</div>' : '')
+        + '</details>' : '';
+      var sinPar = '<span style="color:var(--fg-dim)">sin par en la base</span>';
+      return '<div class="gap-card '+zona+'">'
+        + '<div class="gap-card-label">'+esc(g.label)+'</div>'
+        + '<div class="gap-card-avg'+(g.conv&&g.conv.tipo==='rango'?' sm':'')+'">'+valorDestacado(pri)+'</div>'
+        + '<div class="gap-card-ev" style="margin:2px 0 8px"><span class="gap-delta-badge '+cls+'">'+txt+'</span></div>'
+        + '<div class="gap-lect"><span class="gap-capa c-conv">CONV</span> '+(g.conv?htmlLectura(g.conv):sinPar)+'</div>'
+        + '<div class="gap-lect"><span class="gap-capa c-sl">SL</span> '+(g.sl?htmlLectura(g.sl):sinPar)+'</div>'
+        + '<div class="gap-motivo">'+esc(g.motivo)+'</div>'
+        + tz + '</div>';}).join('');
     return `<div class="gap-zone-group"><div class="gap-zone-title">${esc(gr)}</div><div class="gap-zone-cards">${cards}</div></div>`;
   }).join('');
 }
@@ -1955,21 +1951,36 @@ function renderEvolCharts(tab){
       const mes=[...g.meses].reverse().find(m=>g.filas.filter(f=>f.celdas[m]).length>=3);if(!mes)return;
       const fs0=g.filas.filter(f=>f.celdas[mes]);const cnt={};fs0.forEach(f=>{const u=f.celdas[mes].unidad||'';cnt[u]=(cnt[u]||0)+1});
       const uni=Object.keys(cnt).sort((a,b)=>cnt[b]-cnt[a])[0];const fs=fs0.filter(f=>(f.celdas[mes].unidad||'')===uni);if(fs.length<3)return;
+      // las etiquetas repiten fuente y variable en cada barra; eso va al subtítulo
+      const parts=fs.map(f=>f.etiqueta.split(' · '));
+      let pre=0,suf=0;
+      while(parts.every(x=>x[pre]===parts[0][pre])&&pre<parts[0].length-1)pre++;
+      while(parts.every(x=>x[x.length-1-suf]===parts[0][parts[0].length-1-suf])&&pre+suf<parts[0].length-1)suf++;
+      const comun=parts[0].slice(0,pre).concat(parts[0].slice(parts[0].length-suf)).join(' · ');
+      const etiq=parts.map(x=>x.slice(pre,x.length-suf).join(' · '));
       const id=`evolc_${tab}_${gi}`;
-      box.insertAdjacentHTML('beforeend',`<div class="chart-wrap"><div class="chart-head"><div><h3>${esc(g.titulo.split(' · ')[0])} · ${esc(mes.toLowerCase())}</h3><p>medición única por serie (sin corte anterior comparable) · ${esc(uni||'valor')} · no se promedian ni se comparan entre consultoras</p></div></div>
+      box.insertAdjacentHTML('beforeend',`<div class="chart-wrap"><div class="chart-head"><div><h3>${esc(comun||g.titulo.split(' · ')[0])} · ${esc(mes.toLowerCase())}</h3><p>${g.glosa?esc(g.glosa)+' · ':''}medición única por serie (sin corte anterior comparable) · ${esc(uni||'valor')} · no se promedian ni se comparan entre consultoras</p></div></div>
         <div class="chart-box" style="height:${Math.max(180,fs.length*30+40)}px"><canvas id="${id}"></canvas></div></div>`);
       chartRegistry[id]=new Chart(document.getElementById(id),{type:'bar',
-        data:{labels:fs.map(f=>f.etiqueta),datasets:[{label:mes,data:fs.map(f=>f.celdas[mes].v),backgroundColor:fs.map((_,i)=>cv(pal[i%pal.length])+'99'),borderColor:fs.map((_,i)=>cv(pal[i%pal.length])),borderWidth:1,borderRadius:3}]},
+        data:{labels:etiq,datasets:[{label:mes,data:fs.map(f=>f.celdas[mes].v),backgroundColor:fs.map((_,i)=>cv(pal[i%pal.length])+'99'),borderColor:fs.map((_,i)=>cv(pal[i%pal.length])),borderWidth:1,borderRadius:3}]},
         options:{indexAxis:'y',responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>fmt(c.parsed.x)+(uni==='%'?'%':' '+uni)}}},
           scales:{x:{ticks:{font:{size:10},color:tok('--fg-dim')},grid:{color:tok('--border')}},y:{ticks:{font:{size:10},color:tok('--fg')},grid:{display:false}}}}});
       return;}
+    // el eje arranca y termina donde hay dato dibujado: las filas de una sola medición
+    // no se grafican, y sin este recorte dejaban columnas vacías a los costados
+    let i0=0,i1=g.meses.length-1;
+    const hay=m=>ser.some(f=>f.celdas[m]&&f.celdas[m].v!=null);
+    while(i0<i1&&!hay(g.meses[i0]))i0++;
+    while(i1>i0&&!hay(g.meses[i1]))i1--;
+    const meses=g.meses.slice(i0,i1+1);
+    const sueltas=g.filas.filter(f=>f.n===1&&g.meses.some(m=>f.celdas[m]));
     const id=`evolc_${tab}_${gi}`;
-    box.insertAdjacentHTML('beforeend',`<div class="chart-wrap"><div class="chart-head"><div><h3>${esc(g.titulo.split(' · ')[0])} · evolución</h3><p>${esc(g.meses[0])} → ${esc(g.meses[g.meses.length-1])} · una línea por consultora e indicador · no se promedian · clic en leyenda para filtrar</p></div></div>
+    box.insertAdjacentHTML('beforeend',`<div class="chart-wrap"><div class="chart-head"><div><h3>${esc(g.titulo.split(' · ')[0])} · evolución</h3><p>${esc(meses[0])} → ${esc(meses[meses.length-1])} · una línea por consultora e indicador · no se promedian · clic en leyenda para filtrar</p></div></div>
       <div class="chart-box"><canvas id="${id}"></canvas></div><div class="legend" id="${id}_lg"></div>
-      <p class="source">${esc(ser.map(f=>f.etiqueta+(f.nota?' ('+f.nota+')':'')).join(' · '))}</p></div>`);
+      <p class="source">${esc(ser.map(f=>f.etiqueta+(f.nota?' ('+f.nota+')':'')).join(' · '))}${sueltas.length?' — con una sola medición, fuera del gráfico: '+esc(sueltas.slice(0,4).map(f=>f.etiqueta+' ('+Object.keys(f.celdas).join(', ').toLowerCase()+')').join(' · '))+(sueltas.length>4?' y '+(sueltas.length-4)+' más':''):''}</p></div>`);
     const cols=ser.map((_,i)=>pal[i%pal.length]);
     chartRegistry[id]=new Chart(document.getElementById(id),{type:'line',
-      data:{labels:g.meses,datasets:ser.map((f,i)=>({label:f.etiqueta,data:g.meses.map(m=>f.celdas[m]?f.celdas[m].v:null),
+      data:{labels:meses,datasets:ser.map((f,i)=>({label:f.etiqueta,data:meses.map(m=>f.celdas[m]?f.celdas[m].v:null),
         borderColor:cv(cols[i]),backgroundColor:cv(cols[i]),borderWidth:2,pointRadius:4,spanGaps:true,tension:0.25,
         borderDash:f.evidencia==='BAJA'?[5,4]:[]}))},
       options:{responsive:true,maintainAspectRatio:false,interaction:{mode:'index',intersect:false},
