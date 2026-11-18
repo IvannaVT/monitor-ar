@@ -924,11 +924,11 @@
   "Zentrix": {
    "color": "var(--c9)",
    "pos": [
-    null,
-    null,
-    null,
-    null,
-    null,
+    35.6,
+    33.8,
+    30.9,
+    32.7,
+    34.9,
     35.9,
     null
    ],
@@ -10812,6 +10812,23 @@
     {
      "tipo": "serie",
      "modulo": "Imagen Milei",
+     "etiqueta": "IMG · Zentrix · pos",
+     "valor": 30.9,
+     "anterior": null,
+     "estado": "nuevo",
+     "consultora": "Zentrix",
+     "fila": 1585,
+     "base": "nivel2_indicadores",
+     "file_id": "1KH2QATvGsehaEKBh3fDuLXtb5S93qEWx",
+     "campo": "",
+     "unidad": "%",
+     "nota": "Lectura visual de la lámina «Análisis de imagen · Javier Milei · Evolución», página 21 del PDF de Zentrix de octubre (Drive 1KH2QATv), el 18/11. La extracción de texto no trae esa serie; la lámina está rotulada mes a mes (ago-25 a oct-26) con el valor impreso sobre cada punto, así que es lectura directa y no reconstrucción. Control: los seis valores de negativa de la misma lámina coinciden uno a uno con los ya cargados. Registro en base maestra fila 331.",
+     "secundaria": "",
+     "categoria": "Positiva"
+    },
+    {
+     "tipo": "serie",
+     "modulo": "Imagen Milei",
      "etiqueta": "IMG · D'Alessio · neg",
      "valor": 61,
      "anterior": null,
@@ -10873,7 +10890,7 @@
      "file_id": "1mTV-KdwP9o_UnL0r7o19dmBIqi2efLpu",
      "campo": "",
      "unidad": "%",
-     "nota": "EXCEPCIÓN AUTORIZADA 2026-11-18: valor construido desde la lámina «IMAGEN DE JAVIER MILEI · % Tendencia desde septiembre 2024» del informe de agosto (PDF Drive 1mTV-Kdw), que publica la serie sin rótulos de mes. El desplazamiento queda fijado porque la serie de negativa de la misma lámina coincide punto por punto con los cuatro valores ya cargados (may 61, jun 60, jul 61, ago 62), y con ese mismo desplazamiento la positiva ancla en may 36 y ago 34. Comparabilidad tope MEDIA: el valor no está impreso como cifra. La excepción está anotada en base maestra fila 175. De ahí julio = 35.",
+     "nota": "Lectura visual de la lámina «IMAGEN DE JAVIER MILEI · % Tendencia desde septiembre 2024», página 30 del PDF de D'Alessio de agosto (Drive 1mTV-Kdw), el 18/11. La extracción de texto entrega la serie sin rótulos de mes, pero la lámina sí está rotulada (sep-24 a ago-26) con el valor impreso sobre cada punto: el valor queda leído del informe y se retira la excepción registrada antes. Registro en base maestra fila 175.",
      "secundaria": "",
      "categoria": "Positiva"
     }
@@ -10946,6 +10963,23 @@
      "nota": "",
      "secundaria": "",
      "categoria": "Negativa (mala + muy mala)"
+    },
+    {
+     "tipo": "serie",
+     "modulo": "Imagen Milei",
+     "etiqueta": "IMG · Zentrix · pos",
+     "valor": 34.9,
+     "anterior": null,
+     "estado": "nuevo",
+     "consultora": "Zentrix",
+     "fila": 1587,
+     "base": "nivel2_indicadores",
+     "file_id": "1KH2QATvGsehaEKBh3fDuLXtb5S93qEWx",
+     "campo": "",
+     "unidad": "%",
+     "nota": "Lectura visual de la lámina «Análisis de imagen · Javier Milei · Evolución», página 21 del PDF de Zentrix de octubre (Drive 1KH2QATv), el 18/11. La extracción de texto no trae esa serie; la lámina está rotulada mes a mes (ago-25 a oct-26) con el valor impreso sobre cada punto, así que es lectura directa y no reconstrucción. Control: los seis valores de negativa de la misma lámina coinciden uno a uno con los ya cargados. Registro en base maestra fila 331.",
+     "secundaria": "",
+     "categoria": "Positiva"
     },
     {
      "tipo": "serie",
@@ -11151,8 +11185,8 @@
     {
      "tipo": "pendiente",
      "modulo": "Imagen Milei",
-     "etiqueta": "Imagen positiva de Milei: quedan 6 huecos donde la negativa sí está cargada. Zentrix may–sep (5, PDF 1KH2QAT: la evolución es una lámina gráfica que la extracción de texto no trae) y Zuban jul (1, fuente secundaria N2 1558). D'Alessio junio y julio se cerraron el 18/11 con la excepción autorizada para construir desde la lámina de serie, anotada en base maestra fila 175. Para Zentrix hay informe primario en Drive, así que la Parte XVI.1 no habilita fuente secundaria.",
-     "necesita": "lectura visual de la lámina de evolución de imagen del informe de Zentrix"
+     "etiqueta": "Imagen positiva de Milei: queda 1 hueco donde la negativa sí está cargada, Zuban julio (N2 1558), que es el único de fuente secundaria. Los otros diez se cerraron el 18/11 leyendo los informes primarios de Drive: Giacobbe jul y ago, Proyección sep, D'Alessio jun y jul, y Zentrix may–sep.",
+     "necesita": "informe primario de Zuban Córdoba de julio de 2026"
     }
    ],
    "May-26": [
@@ -11172,6 +11206,23 @@
      "nota": "",
      "secundaria": "",
      "categoria": "Negativa (mala + muy mala)"
+    },
+    {
+     "tipo": "serie",
+     "modulo": "Imagen Milei",
+     "etiqueta": "IMG · Zentrix · pos",
+     "valor": 35.6,
+     "anterior": null,
+     "estado": "nuevo",
+     "consultora": "Zentrix",
+     "fila": 1583,
+     "base": "nivel2_indicadores",
+     "file_id": "1KH2QATvGsehaEKBh3fDuLXtb5S93qEWx",
+     "campo": "",
+     "unidad": "%",
+     "nota": "Lectura visual de la lámina «Análisis de imagen · Javier Milei · Evolución», página 21 del PDF de Zentrix de octubre (Drive 1KH2QATv), el 18/11. La extracción de texto no trae esa serie; la lámina está rotulada mes a mes (ago-25 a oct-26) con el valor impreso sobre cada punto, así que es lectura directa y no reconstrucción. Control: los seis valores de negativa de la misma lámina coinciden uno a uno con los ya cargados. Registro en base maestra fila 331.",
+     "secundaria": "",
+     "categoria": "Positiva"
     },
     {
      "tipo": "serie",
@@ -11242,6 +11293,23 @@
      "nota": "",
      "secundaria": "",
      "categoria": "Negativa (mala + muy mala)"
+    },
+    {
+     "tipo": "serie",
+     "modulo": "Imagen Milei",
+     "etiqueta": "IMG · Zentrix · pos",
+     "valor": 33.8,
+     "anterior": null,
+     "estado": "nuevo",
+     "consultora": "Zentrix",
+     "fila": 1584,
+     "base": "nivel2_indicadores",
+     "file_id": "1KH2QATvGsehaEKBh3fDuLXtb5S93qEWx",
+     "campo": "",
+     "unidad": "%",
+     "nota": "Lectura visual de la lámina «Análisis de imagen · Javier Milei · Evolución», página 21 del PDF de Zentrix de octubre (Drive 1KH2QATv), el 18/11. La extracción de texto no trae esa serie; la lámina está rotulada mes a mes (ago-25 a oct-26) con el valor impreso sobre cada punto, así que es lectura directa y no reconstrucción. Control: los seis valores de negativa de la misma lámina coinciden uno a uno con los ya cargados. Registro en base maestra fila 331.",
+     "secundaria": "",
+     "categoria": "Positiva"
     },
     {
      "tipo": "serie",
@@ -11324,7 +11392,7 @@
      "file_id": "1mTV-KdwP9o_UnL0r7o19dmBIqi2efLpu",
      "campo": "",
      "unidad": "%",
-     "nota": "EXCEPCIÓN AUTORIZADA 2026-11-18: valor construido desde la lámina «IMAGEN DE JAVIER MILEI · % Tendencia desde septiembre 2024» del informe de agosto (PDF Drive 1mTV-Kdw), que publica la serie sin rótulos de mes. El desplazamiento queda fijado porque la serie de negativa de la misma lámina coincide punto por punto con los cuatro valores ya cargados (may 61, jun 60, jul 61, ago 62), y con ese mismo desplazamiento la positiva ancla en may 36 y ago 34. Comparabilidad tope MEDIA: el valor no está impreso como cifra. La excepción está anotada en base maestra fila 175. De ahí junio = 36.",
+     "nota": "Lectura visual de la lámina «IMAGEN DE JAVIER MILEI · % Tendencia desde septiembre 2024», página 30 del PDF de D'Alessio de agosto (Drive 1mTV-Kdw), el 18/11. La extracción de texto entrega la serie sin rótulos de mes, pero la lámina sí está rotulada (sep-24 a ago-26) con el valor impreso sobre cada punto: el valor queda leído del informe y se retira la excepción registrada antes. Registro en base maestra fila 175.",
      "secundaria": "",
      "categoria": "Positiva"
     }
@@ -11346,6 +11414,23 @@
      "nota": "",
      "secundaria": "",
      "categoria": "Negativa (mala + muy mala)"
+    },
+    {
+     "tipo": "serie",
+     "modulo": "Imagen Milei",
+     "etiqueta": "IMG · Zentrix · pos",
+     "valor": 32.7,
+     "anterior": null,
+     "estado": "nuevo",
+     "consultora": "Zentrix",
+     "fila": 1586,
+     "base": "nivel2_indicadores",
+     "file_id": "1KH2QATvGsehaEKBh3fDuLXtb5S93qEWx",
+     "campo": "",
+     "unidad": "%",
+     "nota": "Lectura visual de la lámina «Análisis de imagen · Javier Milei · Evolución», página 21 del PDF de Zentrix de octubre (Drive 1KH2QATv), el 18/11. La extracción de texto no trae esa serie; la lámina está rotulada mes a mes (ago-25 a oct-26) con el valor impreso sobre cada punto, así que es lectura directa y no reconstrucción. Control: los seis valores de negativa de la misma lámina coinciden uno a uno con los ya cargados. Registro en base maestra fila 331.",
+     "secundaria": "",
+     "categoria": "Positiva"
     },
     {
      "tipo": "serie",
@@ -12255,7 +12340,7 @@
     ],
     "pendiente": [
      "Vozna: imagen positiva (may 36,3 · jul 32,1 · sep 31,3), negativa (sep 63,5) y aprobación (jul 36,3 · sep 32,6) seguían escritas dentro del código de index.html, fuera de las bases. Retiradas de los gráficos. Necesita: informes de Vozna de mayo, julio y septiembre de 2026 para cargarlos en Nivel 1 y Nivel 2",
-     "Imagen positiva de Milei: quedan 6 huecos donde la negativa sí está cargada. Zentrix may–sep (5, PDF 1KH2QAT: la evolución es una lámina gráfica que la extracción de texto no trae) y Zuban jul (1, fuente secundaria N2 1558). D'Alessio junio y julio se cerraron el 18/11 con la excepción autorizada para construir desde la lámina de serie, anotada en base maestra fila 175. Para Zentrix hay informe primario en Drive, así que la Parte XVI.1 no habilita fuente secundaria. Necesita: lectura visual de la lámina de evolución de imagen del informe de Zentrix"
+     "Imagen positiva de Milei: queda 1 hueco donde la negativa sí está cargada, Zuban julio (N2 1558), que es el único de fuente secundaria. Los otros diez se cerraron el 18/11 leyendo los informes primarios de Drive: Giacobbe jul y ago, Proyección sep, D'Alessio jun y jul, y Zentrix may–sep. Necesita: informe primario de Zuban Córdoba de julio de 2026"
     ]
    },
    "bases": [
@@ -12689,8 +12774,8 @@
    "data/bases/radar_fuentes_complementarias.tsv",
    "data/radar_mapping.json"
   ],
-  "valores_trazados": 373,
-  "nuevos": 133,
+  "valores_trazados": 378,
+  "nuevos": 138,
   "corregidos": 15,
   "retirados": 0,
   "puntuales": 0,
