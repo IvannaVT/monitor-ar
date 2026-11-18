@@ -3136,6 +3136,59 @@
           ]
         }
       ]
+    },
+    {
+      "tab": "voto",
+      "modulo": "Intención de voto",
+      "titulo": "QMonitor · balotaje Milei–Kicillof",
+      "nota": "Serie propia de QMonitor, en panel separado de la de Proyección: los niveles no se comparan entre consultoras. Cinco cortes leídos de la lámina evolutiva de la página 47 del informe de noviembre. La consultora no mide balotaje todos los meses. Los meses son los que enuncia QMonitor: su lámina rotula por mes de campo y su portada enuncia el mes siguiente, equivalencia verificada contra las filas ya cargadas.",
+      "filas": [
+        {
+          "etiqueta": "QMonitor · Javier Milei",
+          "consultora": "QMonitor",
+          "celdas": [
+            {
+              "fila": 1613
+            },
+            {
+              "fila": 1615
+            },
+            {
+              "fila": 1617
+            },
+            {
+              "fila": 1619
+            },
+            {
+              "fila": 1621
+            }
+          ],
+          "evidencia": "ALTA intra-serie"
+        },
+        {
+          "etiqueta": "QMonitor · Axel Kicillof",
+          "consultora": "QMonitor",
+          "celdas": [
+            {
+              "fila": 1614
+            },
+            {
+              "fila": 1616
+            },
+            {
+              "fila": 1618
+            },
+            {
+              "fila": 1620
+            },
+            {
+              "fila": 1622
+            }
+          ],
+          "evidencia": "ALTA intra-serie",
+          "nota": "Kicillof supera a Milei desde el corte de ago-26 y abre la mayor distancia en nov-26: 45 contra 40."
+        }
+      ]
     }
   ],
   "calendario": [
