@@ -221,6 +221,8 @@ footer a{color:var(--accent)}
   .notice{font-size:10px}
   .source{font-size:10px}
   table{font-size:11px;min-width:300px}
+  #semaforoTablas td,#ejesTabla td,#preguntasEspecificas td,#notaSecBody td{max-width:200px;overflow-wrap:anywhere}
+  .upd-it,.upd-ref,.upd-nota,.upd-val{overflow-wrap:anywhere;word-break:break-word}
   th,td{padding:6px 8px}
   .tab-btn{font-size:12px;padding:9px 10px}
   .site-nav-link{font-size:12px;padding:0 8px}
@@ -1967,8 +1969,8 @@ function secDe(ruta,mes){return (SECUNDARIA||[]).find(x=>x.ruta===ruta&&x.mes===
 function renderNotaSec(){
   const el=document.getElementById('notaSecBody');if(!el)return;const NS=(window.__NS=(typeof NOTA_SECUNDARIA!=='undefined'?NOTA_SECUNDARIA:[]));
   el.innerHTML=`<p>Cuando falta un dato en una serie ya existente y no hay informe primario en Drive, se completa con una fuente secundaria autorizada (Parte XVI): monitorargy.com para indicadores económicos y encuestas-argentinas.com para encuestas. La fuente secundaria es solo la vía de localización: se cita el organismo o la consultora original y el dato lleva evidencia máxima MEDIA. Cuando el informe primario llega a Drive, lo reemplaza. Los gráficos no marcan estos valores; el detalle está acá y en la trazabilidad de cada sección.</p>
-  <table><thead><tr><th>Indicador</th><th>Mes</th><th class="num">Valor</th><th>Rótulo de origen</th><th>Base</th></tr></thead><tbody>${NS.map(x=>{const url=(x.rotulo.match(/https?:\/\/[^\s)]+/)||[''])[0];
-    return `<tr><td>${esc(x.indicador)}</td><td>${esc(x.mes)}</td><td class="num">${fmt(x.valor)}</td><td>${esc(x.rotulo)}${url?` · <a href="${esc(url)}" target="_blank" rel="noopener">ver</a>`:''}</td><td>N2 fila ${esc(x.fila)}</td></tr>`}).join('')}</tbody></table>`;
+  <div class="table-wrap"><table><thead><tr><th>Indicador</th><th>Mes</th><th class="num">Valor</th><th>Rótulo de origen</th><th>Base</th></tr></thead><tbody>${NS.map(x=>{const url=(x.rotulo.match(/https?:\/\/[^\s)]+/)||[''])[0];
+    return `<tr><td>${esc(x.indicador)}</td><td>${esc(x.mes)}</td><td class="num">${fmt(x.valor)}</td><td>${esc(x.rotulo)}${url?` · <a href="${esc(url)}" target="_blank" rel="noopener">ver</a>`:''}</td><td>N2 fila ${esc(x.fila)}</td></tr>`}).join('')}</tbody></table></div>`;
 }
 function renderSec(){
   document.querySelectorAll('[data-sec]').forEach(el=>{
