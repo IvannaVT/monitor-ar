@@ -177,10 +177,10 @@ fila	id_informe	mes	fecha_campo_inicio	fecha_campo_fin	consultora	id_indicador	c
 1382	REPUTACION_DIGITAL_2026_11_SL	11	2026-09-25	2026-10-14	Reputación Digital	SL_MILEI_SENTIMIENTO_NEG_REALES_TRAMO_NAC	Negativo (cuentas reales)	68	%	1kd9sW5yHrlMiZLq3_bxYTCnCHZjaCFGL	ok
 1383	REPUTACION_DIGITAL_2026_11_SL	11	2026-10-15	2026-10-24	Reputación Digital	SL_MILEI_SENTIMIENTO_NEG_REALES_TRAMO_NAC	Negativo (cuentas reales)	74	%	1kd9sW5yHrlMiZLq3_bxYTCnCHZjaCFGL	ok
 1384	IPC_INDEC_2026_10	10	2026-10-01	2026-10-31	INDEC	IPC_INDEC_VAR_MENSUAL	valor mensual	2.2	%	No aplica (informe en línea; no descargado a Drive)	ok
-1385	IPC_INDEC_2026_10	10	2026-10-01	2026-10-31	INDEC	IPC_INDEC_VAR_INTERANUAL	valor interanual	33.1	%	No aplica (fuente secundaria)	ok
-1386	IPC_INDEC_2026_10	10	2026-10-01	2026-10-31	INDEC	IPC_INDEC_VAR_ACUMULADA	acumulado ene–oct	26.3	%	No aplica (fuente secundaria)	ok
-1387	IPC_INDEC_2026_10	10	2026-10-01	2026-10-31	INDEC	IPC_INDEC_NUCLEO_MENSUAL	valor mensual	1.5	%	No aplica (fuente secundaria)	ok
-1388	IPC_INDEC_2026_10	10	2026-10-01	2026-10-31	INDEC	IPC_INDEC_REGULADOS_MENSUAL	valor mensual	2.9	%	No aplica (fuente secundaria)	ok
+1385	IPC_INDEC_2026_10	10	2026-10-01	2026-10-31	INDEC	IPC_INDEC_VAR_INTERANUAL	valor interanual	33.1	%	No aplica (informe en línea del INDEC)	ok
+1386	IPC_INDEC_2026_10	10	2026-10-01	2026-10-31	INDEC	IPC_INDEC_VAR_ACUMULADA	acumulado ene–oct	26.3	%	No aplica (informe en línea del INDEC)	ok
+1387	IPC_INDEC_2026_10	10	2026-10-01	2026-10-31	INDEC	IPC_INDEC_NUCLEO_MENSUAL	valor mensual	1.5	%	No aplica (informe en línea del INDEC)	ok
+1388	IPC_INDEC_2026_10	10	2026-10-01	2026-10-31	INDEC	IPC_INDEC_REGULADOS_MENSUAL	valor mensual	2.9	%	No aplica (informe en línea del INDEC)	ok
 1389	SUSTANTIVA_2026_11_SL_LEONXIV	11	2026-11-08	No informado en el documento	Sustantiva	SL_TEMA_LEONXIV_MENCIONES_NAC	Menciones estimadas	195000	menciones	1qv2yEfHbaOobwWLvoI03F7QratGK_6C4	ok
 1390	SUSTANTIVA_2026_11_SL_LEONXIV	11	2026-11-08	No informado en el documento	Sustantiva	SL_TEMA_LEONXIV_REPRODUCCIONES_NAC	Reproducciones (como mínimo)	156000000	reproducciones	1qv2yEfHbaOobwWLvoI03F7QratGK_6C4	ok
 1391	SUSTANTIVA_2026_11_SL_LEONXIV	11	2026-11-08	No informado en el documento	Sustantiva	SL_LEONXIV_POSTEOS_POLITICOS_REPROCHE_GOB_NAC	Reprochan al Gobierno	64	%	1qv2yEfHbaOobwWLvoI03F7QratGK_6C4	ok
