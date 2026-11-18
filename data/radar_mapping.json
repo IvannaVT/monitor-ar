@@ -1150,6 +1150,20 @@
       "ruta": "IMG.D'Alessio.neg",
       "eje": "MI",
       "fila": 418
+    },
+    {
+      "modulo": "Imagen Milei",
+      "ruta": "IMG.D'Alessio.pos",
+      "eje": "MI",
+      "fila": 1581,
+      "nota": "EXCEPCIÓN AUTORIZADA 2026-11-18: valor construido desde la lámina «IMAGEN DE JAVIER MILEI · % Tendencia desde septiembre 2024» del informe de agosto (PDF Drive 1mTV-Kdw), que publica la serie sin rótulos de mes. El desplazamiento queda fijado porque la serie de negativa de la misma lámina coincide punto por punto con los cuatro valores ya cargados (may 61, jun 60, jul 61, ago 62), y con ese mismo desplazamiento la positiva ancla en may 36 y ago 34. Comparabilidad tope MEDIA: el valor no está impreso como cifra. La excepción está anotada en base maestra fila 175. De ahí junio = 36."
+    },
+    {
+      "modulo": "Imagen Milei",
+      "ruta": "IMG.D'Alessio.pos",
+      "eje": "MI",
+      "fila": 1582,
+      "nota": "EXCEPCIÓN AUTORIZADA 2026-11-18: valor construido desde la lámina «IMAGEN DE JAVIER MILEI · % Tendencia desde septiembre 2024» del informe de agosto (PDF Drive 1mTV-Kdw), que publica la serie sin rótulos de mes. El desplazamiento queda fijado porque la serie de negativa de la misma lámina coincide punto por punto con los cuatro valores ya cargados (may 61, jun 60, jul 61, ago 62), y con ese mismo desplazamiento la positiva ancla en may 36 y ago 34. Comparabilidad tope MEDIA: el valor no está impreso como cifra. La excepción está anotada en base maestra fila 175. De ahí julio = 35."
     }
   ],
   "retiros": [],
@@ -1309,8 +1323,8 @@
     {
       "modulo": "Imagen Milei",
       "mes": "Nov-26",
-      "texto": "Imagen positiva de Milei: quedan 8 huecos donde la negativa sí está cargada. Zentrix may–sep (5, PDF 1KH2QAT: la evolución está en una lámina gráfica y el texto del PDF no la trae), D'Alessio jun y jul (2, PDF 1mTV-Kdw: la serie «Tendencia desde septiembre 2024» aparece sin rótulos de mes; por alineación con los anclajes de mayo (36) y agosto (34) daría 36 y 35, pero reconstruir cifras desde un gráfico sin etiquetas no está permitido) y Zuban jul (1, fuente secundaria N2 1558). Los siete primeros tienen informe primario en Drive, así que la Parte XVI.1 no habilita fuente secundaria para ellos.",
-      "necesita": "lectura visual de la lámina de evolución de imagen en los PDF de Zentrix y D'Alessio"
+      "texto": "Imagen positiva de Milei: quedan 6 huecos donde la negativa sí está cargada. Zentrix may–sep (5, PDF 1KH2QAT: la evolución es una lámina gráfica que la extracción de texto no trae) y Zuban jul (1, fuente secundaria N2 1558). D'Alessio junio y julio se cerraron el 18/11 con la excepción autorizada para construir desde la lámina de serie, anotada en base maestra fila 175. Para Zentrix hay informe primario en Drive, así que la Parte XVI.1 no habilita fuente secundaria.",
+      "necesita": "lectura visual de la lámina de evolución de imagen del informe de Zentrix"
     }
   ],
   "secciones_cobertura": [
