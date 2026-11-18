@@ -767,8 +767,8 @@
    "pos": [
     34.2,
     37.5,
-    null,
-    null,
+    33.9,
+    36.1,
     null,
     34.9,
     null
@@ -10842,6 +10842,23 @@
      "nota": "Informe Público Julio 2026. Imagen Javier Milei: 33,9% positiva, 57,2% negativa.",
      "secundaria": "",
      "categoria": "Negativa"
+    },
+    {
+     "tipo": "serie",
+     "modulo": "Imagen Milei",
+     "etiqueta": "IMG · Giacobbe · pos",
+     "valor": 33.9,
+     "anterior": null,
+     "estado": "nuevo",
+     "consultora": "Giacobbe",
+     "fila": 1578,
+     "base": "nivel2_indicadores",
+     "file_id": "1XM6_vHGl894uTRp7PLBqJJyX-LmRnATJ",
+     "campo": "2026-07-24→2026-07-31",
+     "unidad": "%",
+     "nota": "Completa el hueco de julio. Informe Público de Giacobbe de julio (PDF Drive 1XM6_vHG, p. 2), campo 24–31/07/2026: positiva 33,9 / regular 8,3 / negativa 57,2.",
+     "secundaria": "",
+     "categoria": "Positiva"
     }
    ],
    "Sep-26": [
@@ -11096,6 +11113,12 @@
      "modulo": "Gestión nacional",
      "etiqueta": "Management & Fit sep-26: el registro de encuestar no informa el universo. La pregunta textual y la técnica quedaron acreditadas el 17/11 («Más allá de tu voto a presidente, ¿aprobás o desaprobás la gestión de Javier Milei en el gobierno nacional?»; presencial + online + CATI).",
      "necesita": "informe original de Management & Fit con el universo"
+    },
+    {
+     "tipo": "pendiente",
+     "modulo": "Imagen Milei",
+     "etiqueta": "Imagen positiva de Milei: quedan 9 huecos donde la negativa sí está cargada. Zentrix may–sep (5, PDF 1KH2QAT: la evolución está en un gráfico, no en el texto), D'Alessio jun y jul (PDF 1mTV-Kdw), Proyección sep (PDF 1G2Om8Kk) y Zuban jul (fuente secundaria 1558). Los cuatro primeros tienen informe primario en Drive, así que la Parte XVI.1 no habilita fuente secundaria para ellos: hay que leer el gráfico del PDF.",
+     "necesita": "lectura visual de la lámina de evolución de imagen de cada informe"
     }
    ],
    "May-26": [
@@ -11289,6 +11312,23 @@
      "nota": "Variación contra julio, informe nacional de Giacobbe incorporado a Nivel 2: 55,7 − 57,2 = −1,5 p.p.",
      "secundaria": "",
      "categoria": "Negativa"
+    },
+    {
+     "tipo": "serie",
+     "modulo": "Imagen Milei",
+     "etiqueta": "IMG · Giacobbe · pos",
+     "valor": 36.1,
+     "anterior": null,
+     "estado": "nuevo",
+     "consultora": "Giacobbe",
+     "fila": 1579,
+     "base": "nivel2_indicadores",
+     "file_id": "1pND83yigPanXGxWJGG01XIbYsYPKg2eU",
+     "campo": "2026-08-24→2026-08-30",
+     "unidad": "%",
+     "nota": "Completa el hueco de agosto. Informe Público de Giacobbe de agosto (PDF Drive 1pND83yi, p. 2), campo 24–30/08/2026: positiva 36,1 / regular 6,1 / negativa 55,7.",
+     "secundaria": "",
+     "categoria": "Positiva"
     },
     {
      "tipo": "serie",
@@ -12163,7 +12203,8 @@
      "NI:1474"
     ],
     "pendiente": [
-     "Vozna: imagen positiva (may 36,3 · jul 32,1 · sep 31,3), negativa (sep 63,5) y aprobación (jul 36,3 · sep 32,6) seguían escritas dentro del código de index.html, fuera de las bases. Retiradas de los gráficos. Necesita: informes de Vozna de mayo, julio y septiembre de 2026 para cargarlos en Nivel 1 y Nivel 2"
+     "Vozna: imagen positiva (may 36,3 · jul 32,1 · sep 31,3), negativa (sep 63,5) y aprobación (jul 36,3 · sep 32,6) seguían escritas dentro del código de index.html, fuera de las bases. Retiradas de los gráficos. Necesita: informes de Vozna de mayo, julio y septiembre de 2026 para cargarlos en Nivel 1 y Nivel 2",
+     "Imagen positiva de Milei: quedan 9 huecos donde la negativa sí está cargada. Zentrix may–sep (5, PDF 1KH2QAT: la evolución está en un gráfico, no en el texto), D'Alessio jun y jul (PDF 1mTV-Kdw), Proyección sep (PDF 1G2Om8Kk) y Zuban jul (fuente secundaria 1558). Los cuatro primeros tienen informe primario en Drive, así que la Parte XVI.1 no habilita fuente secundaria para ellos: hay que leer el gráfico del PDF. Necesita: lectura visual de la lámina de evolución de imagen de cada informe"
     ]
    },
    "bases": [
@@ -12597,8 +12638,8 @@
    "data/bases/radar_fuentes_complementarias.tsv",
    "data/radar_mapping.json"
   ],
-  "valores_trazados": 368,
-  "nuevos": 128,
+  "valores_trazados": 370,
+  "nuevos": 130,
   "corregidos": 15,
   "retirados": 0,
   "puntuales": 0,

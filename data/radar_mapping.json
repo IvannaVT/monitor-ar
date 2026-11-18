@@ -1120,6 +1120,20 @@
     },
     {
       "modulo": "Imagen Milei",
+      "ruta": "IMG.Giacobbe.pos",
+      "eje": "MI",
+      "fila": 1578,
+      "nota": "Completa el hueco de julio. Informe Público de Giacobbe de julio (PDF Drive 1XM6_vHG, p. 2), campo 24–31/07/2026: positiva 33,9 / regular 8,3 / negativa 57,2."
+    },
+    {
+      "modulo": "Imagen Milei",
+      "ruta": "IMG.Giacobbe.pos",
+      "eje": "MI",
+      "fila": 1579,
+      "nota": "Completa el hueco de agosto. Informe Público de Giacobbe de agosto (PDF Drive 1pND83yi, p. 2), campo 24–30/08/2026: positiva 36,1 / regular 6,1 / negativa 55,7."
+    },
+    {
+      "modulo": "Imagen Milei",
       "ruta": "IMG.Isasi.neg",
       "eje": "MI",
       "fila": 297
@@ -1284,6 +1298,12 @@
       "mes": "Nov-26",
       "texto": "IPC núcleo (1,5%) y regulados (2,9%) de oct-26 ascienden a fuente primaria el 18/11, verificados contra el informe de prensa del INDEC del 12/11/2026. Salen de la nota de fuentes secundarias junto con el interanual (33,1%) y el acumulado (26,3%).",
       "necesita": "subir el PDF del informe del INDEC de octubre a Drive para cerrar la ficha"
+    },
+    {
+      "modulo": "Imagen Milei",
+      "mes": "Nov-26",
+      "texto": "Imagen positiva de Milei: quedan 9 huecos donde la negativa sí está cargada. Zentrix may–sep (5, PDF 1KH2QAT: la evolución está en un gráfico, no en el texto), D'Alessio jun y jul (PDF 1mTV-Kdw), Proyección sep (PDF 1G2Om8Kk) y Zuban jul (fuente secundaria 1558). Los cuatro primeros tienen informe primario en Drive, así que la Parte XVI.1 no habilita fuente secundaria para ellos: hay que leer el gráfico del PDF.",
+      "necesita": "lectura visual de la lámina de evolución de imagen de cada informe"
     }
   ],
   "secciones_cobertura": [

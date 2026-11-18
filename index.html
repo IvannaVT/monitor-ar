@@ -224,7 +224,10 @@ footer a{color:var(--accent)}
   #semaforoTablas td,#ejesTabla td,#preguntasEspecificas td,#notaSecBody td{max-width:200px;overflow-wrap:anywhere}
   .upd-it,.upd-ref,.upd-nota,.upd-val{overflow-wrap:anywhere;word-break:break-word}
   th,td{padding:6px 8px}
-  .tab-btn{font-size:12px;padding:9px 10px}
+  .tab-btn{font-size:12px;padding:9px 12px;min-height:44px}
+  .theme-btn{min-height:44px;min-width:44px;padding:0 12px}
+  .header-inner{height:auto;min-height:52px}
+  summary,.btn-ver-anteriores{min-height:44px;display:flex;align-items:center;gap:6px}
   .site-nav-link{font-size:12px;padding:0 8px}
   .nav-pre{display:none}
   .logo{line-height:1.15}
@@ -494,21 +497,25 @@ footer a{color:var(--accent)}
 <!-- ── TAB 3: IMAGEN + GESTIÓN ──────────────── -->
 <section class="panel" id="tab-imagen">
   <p class="sec">Imagen presidencial · Gestión nacional · Milei</p>
-  <div class="chart-wrap">
-    <div class="chart-head">
-      <div><h3>Imagen negativa · Milei</h3><p><span data-rango="IMG.neg"></span> · por consultora · clic en leyenda para filtrar</p></div>
-      <span class="signal mix">~ mixta</span>
+  <div class="mosaic">
+    <div class="chart-wrap">
+      <div class="chart-head">
+        <div><h3>Imagen negativa · Milei</h3><p><span data-rango="IMG.neg"></span> · por consultora · clic en leyenda para filtrar</p></div>
+        <span class="signal mix">~ mixta</span>
+      </div>
+      <div class="chart-box"><canvas id="chartNeg"></canvas></div>
+      <div class="legend" id="legendNeg"></div>
     </div>
-    <div class="chart-box"><canvas id="chartNeg"></canvas></div>
-    <div class="legend" id="legendNeg"></div>
-  </div>
-  <div class="chart-wrap">
-    <div class="chart-head">
-      <div><h3>Imagen positiva · Milei</h3><p><span data-rango="IMG.pos"></span> · por consultora · clic en leyenda para filtrar</p></div>
+    <div class="chart-wrap">
+      <div class="chart-head">
+        <div><h3>Imagen positiva · Milei</h3><p><span data-rango="IMG.pos"></span> · por consultora · clic en leyenda para filtrar</p></div>
+        <span class="signal mix">~ mixta</span>
+      </div>
+      <div class="chart-box"><canvas id="chartPos"></canvas></div>
+      <div class="legend" id="legendPos"></div>
     </div>
-    <div class="chart-box"><canvas id="chartPos"></canvas></div>
-    <div class="legend" id="legendPos"></div>
   </div>
+  <p class="source" style="margin:-6px 0 16px">Las dos caras de la misma pregunta, al mismo nivel y en la misma escala de lectura: positiva y negativa de Milei cubren las mismas consultoras en el período. No se promedian entre sí ni con aprobación de gestión.</p>
   <div class="chart-wrap">
     <div class="chart-head">
       <div><h3>Aprobación gestión nacional · por consultora</h3><p><span data-rango="GESTION.aprob"></span> · <span data-consultoras="GESTION"></span> · clic en leyenda para filtrar</p></div>
