@@ -1145,20 +1145,20 @@
   "QMonitor": {
    "color": "var(--c8)",
    "aprob": [
-    null,
-    null,
-    null,
-    null,
-    null,
+    34,
+    34,
+    31,
+    34,
+    35,
     35,
     36
    ],
    "desaprob": [
-    null,
-    null,
-    null,
-    null,
-    null,
+    59,
+    59,
+    64,
+    61,
+    59,
     61,
     62
    ]
@@ -2698,6 +2698,148 @@
    ]
   }
  ],
+ "OFIOPO": {
+  "mes": "Nov-26",
+  "rotulo": "construido por suma de categorías publicadas",
+  "nota": "Indicador derivado, no una pregunta que las consultoras hagan. Oficialismo = LLA. Oposición = la suma de los demás espacios que la consultora publica. El voto en blanco y los indecisos quedan fuera del cálculo y se muestran aparte: no son oposición. Nada se completa por diferencia: las dos consultoras publican todas las categorías de su pregunta. No se promedian entre sí y los niveles no se comparan, porque los esquemas de categorías diferen: Proyección agrega peronismo y kirchnerismo en Fuerza Patria y QMonitor los separa; Proyección registra 17,1% de voto en blanco y QMonitor 2%. Comparabilidad MEDIA: sirve la dirección, no el nivel.",
+  "filas": [
+   {
+    "consultora": "Proyección",
+    "mes": "Nov-26",
+    "oficialismo": 35,
+    "oposicion": 47.9,
+    "aparte": 17.1,
+    "total": 100.0,
+    "comp_oficialismo": [
+     {
+      "fila": 1481,
+      "categoria": "La Libertad Avanza",
+      "valor": 35,
+      "base": "nivel2_indicadores",
+      "file_id": "1P_43U922vyw_gFYdje1io2SPO-AH_JT1"
+     }
+    ],
+    "comp_oposicion": [
+     {
+      "fila": 1482,
+      "categoria": "Fuerza Patria (Peronismo/Kirchnerismo)",
+      "valor": 35,
+      "base": "nivel2_indicadores",
+      "file_id": "1P_43U922vyw_gFYdje1io2SPO-AH_JT1"
+     },
+     {
+      "fila": 1483,
+      "categoria": "Frente de Izquierda",
+      "valor": 5.3,
+      "base": "nivel2_indicadores",
+      "file_id": "1P_43U922vyw_gFYdje1io2SPO-AH_JT1"
+     },
+     {
+      "fila": 1484,
+      "categoria": "PRO (Macrismo)",
+      "valor": 5,
+      "base": "nivel2_indicadores",
+      "file_id": "1P_43U922vyw_gFYdje1io2SPO-AH_JT1"
+     },
+     {
+      "fila": 1485,
+      "categoria": "Provincias Unidas (Gobernadores de centro)",
+      "valor": 2.6,
+      "base": "nivel2_indicadores",
+      "file_id": "1P_43U922vyw_gFYdje1io2SPO-AH_JT1"
+     }
+    ],
+    "comp_aparte": [
+     {
+      "fila": 1486,
+      "categoria": "En blanco / impugnado",
+      "valor": 17.1,
+      "base": "nivel2_indicadores",
+      "file_id": "1P_43U922vyw_gFYdje1io2SPO-AH_JT1"
+     }
+    ],
+    "nota": "Campo 1–9 nov. Las seis categorías suman 100 exacto."
+   },
+   {
+    "consultora": "QMonitor",
+    "mes": "Nov-26",
+    "oficialismo": 32,
+    "oposicion": 61,
+    "aparte": 9,
+    "total": 102,
+    "comp_oficialismo": [
+     {
+      "fila": 1361,
+      "categoria": "LLA",
+      "valor": 32,
+      "base": "nivel2_indicadores",
+      "file_id": "1rD7VKuwogWSGUEFj8D7yy_Qe8BUjez3S"
+     }
+    ],
+    "comp_oposicion": [
+     {
+      "fila": 1362,
+      "categoria": "Peronismo",
+      "valor": 25,
+      "base": "nivel2_indicadores",
+      "file_id": "1rD7VKuwogWSGUEFj8D7yy_Qe8BUjez3S"
+     },
+     {
+      "fila": 1363,
+      "categoria": "Kirchnerismo",
+      "valor": 14,
+      "base": "nivel2_indicadores",
+      "file_id": "1rD7VKuwogWSGUEFj8D7yy_Qe8BUjez3S"
+     },
+     {
+      "fila": 1597,
+      "categoria": "PRO",
+      "valor": 5,
+      "base": "nivel2_indicadores",
+      "file_id": "1rD7VKuwogWSGUEFj8D7yy_Qe8BUjez3S"
+     },
+     {
+      "fila": 1598,
+      "categoria": "Izquierda",
+      "valor": 8,
+      "base": "nivel2_indicadores",
+      "file_id": "1rD7VKuwogWSGUEFj8D7yy_Qe8BUjez3S"
+     },
+     {
+      "fila": 1599,
+      "categoria": "UCR",
+      "valor": 5,
+      "base": "nivel2_indicadores",
+      "file_id": "1rD7VKuwogWSGUEFj8D7yy_Qe8BUjez3S"
+     },
+     {
+      "fila": 1600,
+      "categoria": "Otro",
+      "valor": 4,
+      "base": "nivel2_indicadores",
+      "file_id": "1rD7VKuwogWSGUEFj8D7yy_Qe8BUjez3S"
+     }
+    ],
+    "comp_aparte": [
+     {
+      "fila": 1601,
+      "categoria": "En blanco",
+      "valor": 2,
+      "base": "nivel2_indicadores",
+      "file_id": "1rD7VKuwogWSGUEFj8D7yy_Qe8BUjez3S"
+     },
+     {
+      "fila": 1602,
+      "categoria": "No sabe",
+      "valor": 7,
+      "base": "nivel2_indicadores",
+      "file_id": "1rD7VKuwogWSGUEFj8D7yy_Qe8BUjez3S"
+     }
+    ],
+    "nota": "Campo 8–26 oct, informe de noviembre. Las nueve categorías suman 102 por redondeo a enteros de la propia consultora."
+   }
+  ]
+ },
  "CIFRAS": {
   "voto_zuban_lla_oct": "31,5%",
   "voto_zuban_pj_oct": "36,6%",
@@ -4956,7 +5098,7 @@
   },
   {
    "nombre": "Oficialismo vs. oposición",
-   "verificacion": "Oficialismo = LLA; oposición = todo lo que no es LLA según las categorías de la pregunta. No votaría, en blanco e indecisos se mantienen separados y no se suman a oposición. Eje vacío en este corte: ninguna consultora tiene cargadas todas las categorías necesarias y completarlas por diferencia no está permitido.",
+   "verificacion": "Indicador derivado: oficialismo = LLA; oposición = suma de los demás espacios publicados. En blanco e indecisos quedan fuera del cálculo. Habilitado el 18/11 con dos consultoras, Proyección y QMonitor, que son las únicas que publican todas las categorías de su pregunta. Para QMonitor hizo falta cargar seis categorías que faltaban (PRO, Izquierda, UCR, Otro, en blanco y no sabe): sin ellas el residuo era de 29 p.p. y no se podía construir la oposición sin completar por diferencia, que no está permitido. Los niveles no se comparan entre consultoras: los esquemas de categorías difieren.",
    "grupos": [],
    "fuentes": []
   }
@@ -10915,6 +11057,40 @@
     },
     {
      "tipo": "serie",
+     "modulo": "Gestión nacional",
+     "etiqueta": "GESTION · QMonitor · aprob",
+     "valor": 31,
+     "anterior": null,
+     "estado": "nuevo",
+     "consultora": "QMonitor",
+     "fila": 1607,
+     "base": "nivel2_indicadores",
+     "file_id": "1rD7VKuwogWSGUEFj8D7yy_Qe8BUjez3S",
+     "campo": "",
+     "unidad": "%",
+     "nota": "Lectura visual de la lámina «Aprobación de la gestión de Javier Milei», página 13 del informe de noviembre de QMonitor (copia comprimida aportada por la usuaria el 18/11). La lámina rotula por mes de campo y la portada enuncia el mes siguiente; la equivalencia está verificada contra las dos filas ya cargadas, no inferida.",
+     "secundaria": "",
+     "categoria": "Aprueba"
+    },
+    {
+     "tipo": "serie",
+     "modulo": "Gestión nacional",
+     "etiqueta": "GESTION · QMonitor · desaprob",
+     "valor": 64,
+     "anterior": null,
+     "estado": "nuevo",
+     "consultora": "QMonitor",
+     "fila": 1608,
+     "base": "nivel2_indicadores",
+     "file_id": "1rD7VKuwogWSGUEFj8D7yy_Qe8BUjez3S",
+     "campo": "",
+     "unidad": "%",
+     "nota": "Lectura visual de la lámina «Aprobación de la gestión de Javier Milei», página 13 del informe de noviembre de QMonitor (copia comprimida aportada por la usuaria el 18/11). La lámina rotula por mes de campo y la portada enuncia el mes siguiente; la equivalencia está verificada contra las dos filas ya cargadas, no inferida.",
+     "secundaria": "",
+     "categoria": "Desaprueba"
+    },
+    {
+     "tipo": "serie",
      "modulo": "Imagen Milei",
      "etiqueta": "IMG · Zentrix · neg",
      "valor": 58.5,
@@ -11104,6 +11280,40 @@
     },
     {
      "tipo": "serie",
+     "modulo": "Gestión nacional",
+     "etiqueta": "GESTION · QMonitor · aprob",
+     "valor": 35,
+     "anterior": null,
+     "estado": "nuevo",
+     "consultora": "QMonitor",
+     "fila": 1611,
+     "base": "nivel2_indicadores",
+     "file_id": "1rD7VKuwogWSGUEFj8D7yy_Qe8BUjez3S",
+     "campo": "",
+     "unidad": "%",
+     "nota": "Lectura visual de la lámina «Aprobación de la gestión de Javier Milei», página 13 del informe de noviembre de QMonitor (copia comprimida aportada por la usuaria el 18/11). La lámina rotula por mes de campo y la portada enuncia el mes siguiente; la equivalencia está verificada contra las dos filas ya cargadas, no inferida.",
+     "secundaria": "",
+     "categoria": "Aprueba"
+    },
+    {
+     "tipo": "serie",
+     "modulo": "Gestión nacional",
+     "etiqueta": "GESTION · QMonitor · desaprob",
+     "valor": 59,
+     "anterior": null,
+     "estado": "nuevo",
+     "consultora": "QMonitor",
+     "fila": 1612,
+     "base": "nivel2_indicadores",
+     "file_id": "1rD7VKuwogWSGUEFj8D7yy_Qe8BUjez3S",
+     "campo": "",
+     "unidad": "%",
+     "nota": "Lectura visual de la lámina «Aprobación de la gestión de Javier Milei», página 13 del informe de noviembre de QMonitor (copia comprimida aportada por la usuaria el 18/11). La lámina rotula por mes de campo y la portada enuncia el mes siguiente; la equivalencia está verificada contra las dos filas ya cargadas, no inferida.",
+     "secundaria": "",
+     "categoria": "Desaprueba"
+    },
+    {
+     "tipo": "serie",
      "modulo": "Imagen Milei",
      "etiqueta": "IMG · Zentrix · neg",
      "valor": 58.5,
@@ -11225,6 +11435,40 @@
     },
     {
      "tipo": "serie",
+     "modulo": "Gestión nacional",
+     "etiqueta": "GESTION · QMonitor · aprob",
+     "valor": 34,
+     "anterior": null,
+     "estado": "nuevo",
+     "consultora": "QMonitor",
+     "fila": 1603,
+     "base": "nivel2_indicadores",
+     "file_id": "1rD7VKuwogWSGUEFj8D7yy_Qe8BUjez3S",
+     "campo": "",
+     "unidad": "%",
+     "nota": "Lectura visual de la lámina «Aprobación de la gestión de Javier Milei», página 13 del informe de noviembre de QMonitor (copia comprimida aportada por la usuaria el 18/11). La lámina rotula por mes de campo y la portada enuncia el mes siguiente; la equivalencia está verificada contra las dos filas ya cargadas, no inferida.",
+     "secundaria": "",
+     "categoria": "Aprueba"
+    },
+    {
+     "tipo": "serie",
+     "modulo": "Gestión nacional",
+     "etiqueta": "GESTION · QMonitor · desaprob",
+     "valor": 59,
+     "anterior": null,
+     "estado": "nuevo",
+     "consultora": "QMonitor",
+     "fila": 1604,
+     "base": "nivel2_indicadores",
+     "file_id": "1rD7VKuwogWSGUEFj8D7yy_Qe8BUjez3S",
+     "campo": "",
+     "unidad": "%",
+     "nota": "Lectura visual de la lámina «Aprobación de la gestión de Javier Milei», página 13 del informe de noviembre de QMonitor (copia comprimida aportada por la usuaria el 18/11). La lámina rotula por mes de campo y la portada enuncia el mes siguiente; la equivalencia está verificada contra las dos filas ya cargadas, no inferida.",
+     "secundaria": "",
+     "categoria": "Desaprueba"
+    },
+    {
+     "tipo": "serie",
      "modulo": "Imagen Milei",
      "etiqueta": "IMG · Zentrix · neg",
      "valor": 59.7,
@@ -11341,6 +11585,40 @@
      "campo": "",
      "unidad": "%",
      "nota": "Lectura visual de la lámina «¿Aprobás o desaprobás la gestión del presidente Javier Milei?», página 8 del informe de octubre de Zuban (Drive 1pKNoWnA), el 18/11. La lámina está rotulada mes a mes (oct-25 a oct-26) con el valor impreso sobre cada punto; la extracción de texto no la trae. Control: el corte de octubre coincide con el ya cargado. La lámina no mide junio. Registro en base maestra fila 330.",
+     "secundaria": "",
+     "categoria": "Desaprueba"
+    },
+    {
+     "tipo": "serie",
+     "modulo": "Gestión nacional",
+     "etiqueta": "GESTION · QMonitor · aprob",
+     "valor": 34,
+     "anterior": null,
+     "estado": "nuevo",
+     "consultora": "QMonitor",
+     "fila": 1609,
+     "base": "nivel2_indicadores",
+     "file_id": "1rD7VKuwogWSGUEFj8D7yy_Qe8BUjez3S",
+     "campo": "",
+     "unidad": "%",
+     "nota": "Lectura visual de la lámina «Aprobación de la gestión de Javier Milei», página 13 del informe de noviembre de QMonitor (copia comprimida aportada por la usuaria el 18/11). La lámina rotula por mes de campo y la portada enuncia el mes siguiente; la equivalencia está verificada contra las dos filas ya cargadas, no inferida.",
+     "secundaria": "",
+     "categoria": "Aprueba"
+    },
+    {
+     "tipo": "serie",
+     "modulo": "Gestión nacional",
+     "etiqueta": "GESTION · QMonitor · desaprob",
+     "valor": 61,
+     "anterior": null,
+     "estado": "nuevo",
+     "consultora": "QMonitor",
+     "fila": 1610,
+     "base": "nivel2_indicadores",
+     "file_id": "1rD7VKuwogWSGUEFj8D7yy_Qe8BUjez3S",
+     "campo": "",
+     "unidad": "%",
+     "nota": "Lectura visual de la lámina «Aprobación de la gestión de Javier Milei», página 13 del informe de noviembre de QMonitor (copia comprimida aportada por la usuaria el 18/11). La lámina rotula por mes de campo y la portada enuncia el mes siguiente; la equivalencia está verificada contra las dos filas ya cargadas, no inferida.",
      "secundaria": "",
      "categoria": "Desaprueba"
     },
@@ -11655,6 +11933,40 @@
     }
    ],
    "Jun-26": [
+    {
+     "tipo": "serie",
+     "modulo": "Gestión nacional",
+     "etiqueta": "GESTION · QMonitor · aprob",
+     "valor": 34,
+     "anterior": null,
+     "estado": "nuevo",
+     "consultora": "QMonitor",
+     "fila": 1605,
+     "base": "nivel2_indicadores",
+     "file_id": "1rD7VKuwogWSGUEFj8D7yy_Qe8BUjez3S",
+     "campo": "",
+     "unidad": "%",
+     "nota": "Lectura visual de la lámina «Aprobación de la gestión de Javier Milei», página 13 del informe de noviembre de QMonitor (copia comprimida aportada por la usuaria el 18/11). La lámina rotula por mes de campo y la portada enuncia el mes siguiente; la equivalencia está verificada contra las dos filas ya cargadas, no inferida.",
+     "secundaria": "",
+     "categoria": "Aprueba"
+    },
+    {
+     "tipo": "serie",
+     "modulo": "Gestión nacional",
+     "etiqueta": "GESTION · QMonitor · desaprob",
+     "valor": 59,
+     "anterior": null,
+     "estado": "nuevo",
+     "consultora": "QMonitor",
+     "fila": 1606,
+     "base": "nivel2_indicadores",
+     "file_id": "1rD7VKuwogWSGUEFj8D7yy_Qe8BUjez3S",
+     "campo": "",
+     "unidad": "%",
+     "nota": "Lectura visual de la lámina «Aprobación de la gestión de Javier Milei», página 13 del informe de noviembre de QMonitor (copia comprimida aportada por la usuaria el 18/11). La lámina rotula por mes de campo y la portada enuncia el mes siguiente; la equivalencia está verificada contra las dos filas ya cargadas, no inferida.",
+     "secundaria": "",
+     "categoria": "Desaprueba"
+    },
     {
      "tipo": "serie",
      "modulo": "Imagen Milei",
@@ -12125,6 +12437,261 @@
      "nota": "",
      "secundaria": "",
      "categoria": "Fuerza Patria (Peronismo/Kirchnerismo)"
+    },
+    {
+     "tipo": "serie",
+     "modulo": "Intención de voto",
+     "etiqueta": "OFIOPO · Proyección · oficialismo",
+     "valor": 35,
+     "anterior": null,
+     "estado": "nuevo",
+     "consultora": "",
+     "fila": 1481,
+     "base": "nivel2_indicadores",
+     "file_id": "1P_43U922vyw_gFYdje1io2SPO-AH_JT1",
+     "campo": "",
+     "unidad": "",
+     "nota": "",
+     "secundaria": "",
+     "categoria": "La Libertad Avanza"
+    },
+    {
+     "tipo": "serie",
+     "modulo": "Intención de voto",
+     "etiqueta": "OFIOPO · Proyección · oposición",
+     "valor": 35,
+     "anterior": null,
+     "estado": "nuevo",
+     "consultora": "",
+     "fila": 1482,
+     "base": "nivel2_indicadores",
+     "file_id": "1P_43U922vyw_gFYdje1io2SPO-AH_JT1",
+     "campo": "",
+     "unidad": "",
+     "nota": "",
+     "secundaria": "",
+     "categoria": "Fuerza Patria (Peronismo/Kirchnerismo)"
+    },
+    {
+     "tipo": "serie",
+     "modulo": "Intención de voto",
+     "etiqueta": "OFIOPO · Proyección · oposición",
+     "valor": 5.3,
+     "anterior": null,
+     "estado": "nuevo",
+     "consultora": "",
+     "fila": 1483,
+     "base": "nivel2_indicadores",
+     "file_id": "1P_43U922vyw_gFYdje1io2SPO-AH_JT1",
+     "campo": "",
+     "unidad": "",
+     "nota": "",
+     "secundaria": "",
+     "categoria": "Frente de Izquierda"
+    },
+    {
+     "tipo": "serie",
+     "modulo": "Intención de voto",
+     "etiqueta": "OFIOPO · Proyección · oposición",
+     "valor": 5,
+     "anterior": null,
+     "estado": "nuevo",
+     "consultora": "",
+     "fila": 1484,
+     "base": "nivel2_indicadores",
+     "file_id": "1P_43U922vyw_gFYdje1io2SPO-AH_JT1",
+     "campo": "",
+     "unidad": "",
+     "nota": "",
+     "secundaria": "",
+     "categoria": "PRO (Macrismo)"
+    },
+    {
+     "tipo": "serie",
+     "modulo": "Intención de voto",
+     "etiqueta": "OFIOPO · Proyección · oposición",
+     "valor": 2.6,
+     "anterior": null,
+     "estado": "nuevo",
+     "consultora": "",
+     "fila": 1485,
+     "base": "nivel2_indicadores",
+     "file_id": "1P_43U922vyw_gFYdje1io2SPO-AH_JT1",
+     "campo": "",
+     "unidad": "",
+     "nota": "",
+     "secundaria": "",
+     "categoria": "Provincias Unidas (Gobernadores de centro)"
+    },
+    {
+     "tipo": "serie",
+     "modulo": "Intención de voto",
+     "etiqueta": "OFIOPO · Proyección · fuera del cálculo",
+     "valor": 17.1,
+     "anterior": null,
+     "estado": "nuevo",
+     "consultora": "",
+     "fila": 1486,
+     "base": "nivel2_indicadores",
+     "file_id": "1P_43U922vyw_gFYdje1io2SPO-AH_JT1",
+     "campo": "",
+     "unidad": "",
+     "nota": "",
+     "secundaria": "",
+     "categoria": "En blanco / impugnado"
+    },
+    {
+     "tipo": "serie",
+     "modulo": "Intención de voto",
+     "etiqueta": "OFIOPO · QMonitor · oficialismo",
+     "valor": 32,
+     "anterior": null,
+     "estado": "nuevo",
+     "consultora": "",
+     "fila": 1361,
+     "base": "nivel2_indicadores",
+     "file_id": "1rD7VKuwogWSGUEFj8D7yy_Qe8BUjez3S",
+     "campo": "",
+     "unidad": "",
+     "nota": "",
+     "secundaria": "",
+     "categoria": "LLA"
+    },
+    {
+     "tipo": "serie",
+     "modulo": "Intención de voto",
+     "etiqueta": "OFIOPO · QMonitor · oposición",
+     "valor": 25,
+     "anterior": null,
+     "estado": "nuevo",
+     "consultora": "",
+     "fila": 1362,
+     "base": "nivel2_indicadores",
+     "file_id": "1rD7VKuwogWSGUEFj8D7yy_Qe8BUjez3S",
+     "campo": "",
+     "unidad": "",
+     "nota": "",
+     "secundaria": "",
+     "categoria": "Peronismo"
+    },
+    {
+     "tipo": "serie",
+     "modulo": "Intención de voto",
+     "etiqueta": "OFIOPO · QMonitor · oposición",
+     "valor": 14,
+     "anterior": null,
+     "estado": "nuevo",
+     "consultora": "",
+     "fila": 1363,
+     "base": "nivel2_indicadores",
+     "file_id": "1rD7VKuwogWSGUEFj8D7yy_Qe8BUjez3S",
+     "campo": "",
+     "unidad": "",
+     "nota": "",
+     "secundaria": "",
+     "categoria": "Kirchnerismo"
+    },
+    {
+     "tipo": "serie",
+     "modulo": "Intención de voto",
+     "etiqueta": "OFIOPO · QMonitor · oposición",
+     "valor": 5,
+     "anterior": null,
+     "estado": "nuevo",
+     "consultora": "",
+     "fila": 1597,
+     "base": "nivel2_indicadores",
+     "file_id": "1rD7VKuwogWSGUEFj8D7yy_Qe8BUjez3S",
+     "campo": "",
+     "unidad": "",
+     "nota": "",
+     "secundaria": "",
+     "categoria": "PRO"
+    },
+    {
+     "tipo": "serie",
+     "modulo": "Intención de voto",
+     "etiqueta": "OFIOPO · QMonitor · oposición",
+     "valor": 8,
+     "anterior": null,
+     "estado": "nuevo",
+     "consultora": "",
+     "fila": 1598,
+     "base": "nivel2_indicadores",
+     "file_id": "1rD7VKuwogWSGUEFj8D7yy_Qe8BUjez3S",
+     "campo": "",
+     "unidad": "",
+     "nota": "",
+     "secundaria": "",
+     "categoria": "Izquierda"
+    },
+    {
+     "tipo": "serie",
+     "modulo": "Intención de voto",
+     "etiqueta": "OFIOPO · QMonitor · oposición",
+     "valor": 5,
+     "anterior": null,
+     "estado": "nuevo",
+     "consultora": "",
+     "fila": 1599,
+     "base": "nivel2_indicadores",
+     "file_id": "1rD7VKuwogWSGUEFj8D7yy_Qe8BUjez3S",
+     "campo": "",
+     "unidad": "",
+     "nota": "",
+     "secundaria": "",
+     "categoria": "UCR"
+    },
+    {
+     "tipo": "serie",
+     "modulo": "Intención de voto",
+     "etiqueta": "OFIOPO · QMonitor · oposición",
+     "valor": 4,
+     "anterior": null,
+     "estado": "nuevo",
+     "consultora": "",
+     "fila": 1600,
+     "base": "nivel2_indicadores",
+     "file_id": "1rD7VKuwogWSGUEFj8D7yy_Qe8BUjez3S",
+     "campo": "",
+     "unidad": "",
+     "nota": "",
+     "secundaria": "",
+     "categoria": "Otro"
+    },
+    {
+     "tipo": "serie",
+     "modulo": "Intención de voto",
+     "etiqueta": "OFIOPO · QMonitor · fuera del cálculo",
+     "valor": 2,
+     "anterior": null,
+     "estado": "nuevo",
+     "consultora": "",
+     "fila": 1601,
+     "base": "nivel2_indicadores",
+     "file_id": "1rD7VKuwogWSGUEFj8D7yy_Qe8BUjez3S",
+     "campo": "",
+     "unidad": "",
+     "nota": "",
+     "secundaria": "",
+     "categoria": "En blanco"
+    },
+    {
+     "tipo": "serie",
+     "modulo": "Intención de voto",
+     "etiqueta": "OFIOPO · QMonitor · fuera del cálculo",
+     "valor": 7,
+     "anterior": null,
+     "estado": "nuevo",
+     "consultora": "",
+     "fila": 1602,
+     "base": "nivel2_indicadores",
+     "file_id": "1rD7VKuwogWSGUEFj8D7yy_Qe8BUjez3S",
+     "campo": "",
+     "unidad": "",
+     "nota": "",
+     "secundaria": "",
+     "categoria": "No sabe"
     },
     {
      "tipo": "pendiente",
@@ -12703,7 +13270,13 @@
      "NI:1500",
      "NI:1501",
      "NI:1502",
-     "NI:1503"
+     "NI:1503",
+     "NI:1597",
+     "NI:1598",
+     "NI:1599",
+     "NI:1600",
+     "NI:1601",
+     "NI:1602"
     ],
     "pendiente": [
      "QMonitor noviembre: balotaje y pisos/techos no relevados todavía. Necesita: lectura de las pp. 47–55 del PDF",
@@ -12997,8 +13570,8 @@
    "data/bases/radar_fuentes_complementarias.tsv",
    "data/radar_mapping.json"
   ],
-  "valores_trazados": 387,
-  "nuevos": 147,
+  "valores_trazados": 412,
+  "nuevos": 172,
   "corregidos": 15,
   "retirados": 0,
   "puntuales": 0,
