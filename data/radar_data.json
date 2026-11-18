@@ -865,7 +865,7 @@
     null,
     null,
     null,
-    null,
+    39.3,
     41.9,
     38.9
    ],
@@ -10963,6 +10963,23 @@
      "nota": "Total negativo publicado en la lámina ¿Qué opinión tiene de...?",
      "secundaria": "",
      "categoria": "Negativa (mala + muy mala)"
+    },
+    {
+     "tipo": "serie",
+     "modulo": "Imagen Milei",
+     "etiqueta": "IMG · Proyección · pos",
+     "valor": 39.3,
+     "anterior": null,
+     "estado": "nuevo",
+     "consultora": "Proyección",
+     "fila": 1580,
+     "base": "nivel2_indicadores",
+     "file_id": "1G2Om8KkIMnngn5tK3XZlJCesBhy2vCLE",
+     "campo": "2026-09-01→2026-09-10",
+     "unidad": "%",
+     "nota": "Completa el hueco de septiembre. Estudio Nacional de Proyección de septiembre (PDF Drive 1G2Om8Kk, sección Imagen y conocimiento), campo 1–10/09/2026: Milei 39,3 positiva y 57,1 negativa.",
+     "secundaria": "",
+     "categoria": "Positiva (muy buena + buena)"
     }
    ],
    "Nov-26": [
@@ -11117,8 +11134,8 @@
     {
      "tipo": "pendiente",
      "modulo": "Imagen Milei",
-     "etiqueta": "Imagen positiva de Milei: quedan 9 huecos donde la negativa sí está cargada. Zentrix may–sep (5, PDF 1KH2QAT: la evolución está en un gráfico, no en el texto), D'Alessio jun y jul (PDF 1mTV-Kdw), Proyección sep (PDF 1G2Om8Kk) y Zuban jul (fuente secundaria 1558). Los cuatro primeros tienen informe primario en Drive, así que la Parte XVI.1 no habilita fuente secundaria para ellos: hay que leer el gráfico del PDF.",
-     "necesita": "lectura visual de la lámina de evolución de imagen de cada informe"
+     "etiqueta": "Imagen positiva de Milei: quedan 8 huecos donde la negativa sí está cargada. Zentrix may–sep (5, PDF 1KH2QAT: la evolución está en una lámina gráfica y el texto del PDF no la trae), D'Alessio jun y jul (2, PDF 1mTV-Kdw: la serie «Tendencia desde septiembre 2024» aparece sin rótulos de mes; por alineación con los anclajes de mayo (36) y agosto (34) daría 36 y 35, pero reconstruir cifras desde un gráfico sin etiquetas no está permitido) y Zuban jul (1, fuente secundaria N2 1558). Los siete primeros tienen informe primario en Drive, así que la Parte XVI.1 no habilita fuente secundaria para ellos.",
+     "necesita": "lectura visual de la lámina de evolución de imagen en los PDF de Zentrix y D'Alessio"
     }
    ],
    "May-26": [
@@ -12204,7 +12221,7 @@
     ],
     "pendiente": [
      "Vozna: imagen positiva (may 36,3 · jul 32,1 · sep 31,3), negativa (sep 63,5) y aprobación (jul 36,3 · sep 32,6) seguían escritas dentro del código de index.html, fuera de las bases. Retiradas de los gráficos. Necesita: informes de Vozna de mayo, julio y septiembre de 2026 para cargarlos en Nivel 1 y Nivel 2",
-     "Imagen positiva de Milei: quedan 9 huecos donde la negativa sí está cargada. Zentrix may–sep (5, PDF 1KH2QAT: la evolución está en un gráfico, no en el texto), D'Alessio jun y jul (PDF 1mTV-Kdw), Proyección sep (PDF 1G2Om8Kk) y Zuban jul (fuente secundaria 1558). Los cuatro primeros tienen informe primario en Drive, así que la Parte XVI.1 no habilita fuente secundaria para ellos: hay que leer el gráfico del PDF. Necesita: lectura visual de la lámina de evolución de imagen de cada informe"
+     "Imagen positiva de Milei: quedan 8 huecos donde la negativa sí está cargada. Zentrix may–sep (5, PDF 1KH2QAT: la evolución está en una lámina gráfica y el texto del PDF no la trae), D'Alessio jun y jul (2, PDF 1mTV-Kdw: la serie «Tendencia desde septiembre 2024» aparece sin rótulos de mes; por alineación con los anclajes de mayo (36) y agosto (34) daría 36 y 35, pero reconstruir cifras desde un gráfico sin etiquetas no está permitido) y Zuban jul (1, fuente secundaria N2 1558). Los siete primeros tienen informe primario en Drive, así que la Parte XVI.1 no habilita fuente secundaria para ellos. Necesita: lectura visual de la lámina de evolución de imagen en los PDF de Zentrix y D'Alessio"
     ]
    },
    "bases": [
@@ -12638,8 +12655,8 @@
    "data/bases/radar_fuentes_complementarias.tsv",
    "data/radar_mapping.json"
   ],
-  "valores_trazados": 370,
-  "nuevos": 130,
+  "valores_trazados": 371,
+  "nuevos": 131,
   "corregidos": 15,
   "retirados": 0,
   "puntuales": 0,

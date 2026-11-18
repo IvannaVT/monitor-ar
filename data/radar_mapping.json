@@ -1072,6 +1072,13 @@
     },
     {
       "modulo": "Imagen Milei",
+      "ruta": "IMG.Proyección.pos",
+      "eje": "MI",
+      "fila": 1580,
+      "nota": "Completa el hueco de septiembre. Estudio Nacional de Proyección de septiembre (PDF Drive 1G2Om8Kk, sección Imagen y conocimiento), campo 1–10/09/2026: Milei 39,3 positiva y 57,1 negativa."
+    },
+    {
+      "modulo": "Imagen Milei",
       "ruta": "IMG.Giacobbe.neg",
       "eje": "MI",
       "fila": 1556,
@@ -1302,8 +1309,8 @@
     {
       "modulo": "Imagen Milei",
       "mes": "Nov-26",
-      "texto": "Imagen positiva de Milei: quedan 9 huecos donde la negativa sí está cargada. Zentrix may–sep (5, PDF 1KH2QAT: la evolución está en un gráfico, no en el texto), D'Alessio jun y jul (PDF 1mTV-Kdw), Proyección sep (PDF 1G2Om8Kk) y Zuban jul (fuente secundaria 1558). Los cuatro primeros tienen informe primario en Drive, así que la Parte XVI.1 no habilita fuente secundaria para ellos: hay que leer el gráfico del PDF.",
-      "necesita": "lectura visual de la lámina de evolución de imagen de cada informe"
+      "texto": "Imagen positiva de Milei: quedan 8 huecos donde la negativa sí está cargada. Zentrix may–sep (5, PDF 1KH2QAT: la evolución está en una lámina gráfica y el texto del PDF no la trae), D'Alessio jun y jul (2, PDF 1mTV-Kdw: la serie «Tendencia desde septiembre 2024» aparece sin rótulos de mes; por alineación con los anclajes de mayo (36) y agosto (34) daría 36 y 35, pero reconstruir cifras desde un gráfico sin etiquetas no está permitido) y Zuban jul (1, fuente secundaria N2 1558). Los siete primeros tienen informe primario en Drive, así que la Parte XVI.1 no habilita fuente secundaria para ellos.",
+      "necesita": "lectura visual de la lámina de evolución de imagen en los PDF de Zentrix y D'Alessio"
     }
   ],
   "secciones_cobertura": [
