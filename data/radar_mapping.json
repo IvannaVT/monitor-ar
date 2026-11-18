@@ -799,6 +799,76 @@
       "nota": "valor leído del gráfico (p. 13)"
     },
     {
+      "modulo": "Gestión nacional",
+      "ruta": "GESTION.QMonitor.aprob",
+      "eje": "MG",
+      "fila": 1603,
+      "nota": "Lectura visual de la lámina «Aprobación de la gestión de Javier Milei», página 13 del informe de noviembre de QMonitor (copia comprimida aportada por la usuaria el 18/11). La lámina rotula por mes de campo y la portada enuncia el mes siguiente; la equivalencia está verificada contra las dos filas ya cargadas, no inferida."
+    },
+    {
+      "modulo": "Gestión nacional",
+      "ruta": "GESTION.QMonitor.desaprob",
+      "eje": "MG",
+      "fila": 1604,
+      "nota": "Lectura visual de la lámina «Aprobación de la gestión de Javier Milei», página 13 del informe de noviembre de QMonitor (copia comprimida aportada por la usuaria el 18/11). La lámina rotula por mes de campo y la portada enuncia el mes siguiente; la equivalencia está verificada contra las dos filas ya cargadas, no inferida."
+    },
+    {
+      "modulo": "Gestión nacional",
+      "ruta": "GESTION.QMonitor.aprob",
+      "eje": "MG",
+      "fila": 1605,
+      "nota": "Lectura visual de la lámina «Aprobación de la gestión de Javier Milei», página 13 del informe de noviembre de QMonitor (copia comprimida aportada por la usuaria el 18/11). La lámina rotula por mes de campo y la portada enuncia el mes siguiente; la equivalencia está verificada contra las dos filas ya cargadas, no inferida."
+    },
+    {
+      "modulo": "Gestión nacional",
+      "ruta": "GESTION.QMonitor.desaprob",
+      "eje": "MG",
+      "fila": 1606,
+      "nota": "Lectura visual de la lámina «Aprobación de la gestión de Javier Milei», página 13 del informe de noviembre de QMonitor (copia comprimida aportada por la usuaria el 18/11). La lámina rotula por mes de campo y la portada enuncia el mes siguiente; la equivalencia está verificada contra las dos filas ya cargadas, no inferida."
+    },
+    {
+      "modulo": "Gestión nacional",
+      "ruta": "GESTION.QMonitor.aprob",
+      "eje": "MG",
+      "fila": 1607,
+      "nota": "Lectura visual de la lámina «Aprobación de la gestión de Javier Milei», página 13 del informe de noviembre de QMonitor (copia comprimida aportada por la usuaria el 18/11). La lámina rotula por mes de campo y la portada enuncia el mes siguiente; la equivalencia está verificada contra las dos filas ya cargadas, no inferida."
+    },
+    {
+      "modulo": "Gestión nacional",
+      "ruta": "GESTION.QMonitor.desaprob",
+      "eje": "MG",
+      "fila": 1608,
+      "nota": "Lectura visual de la lámina «Aprobación de la gestión de Javier Milei», página 13 del informe de noviembre de QMonitor (copia comprimida aportada por la usuaria el 18/11). La lámina rotula por mes de campo y la portada enuncia el mes siguiente; la equivalencia está verificada contra las dos filas ya cargadas, no inferida."
+    },
+    {
+      "modulo": "Gestión nacional",
+      "ruta": "GESTION.QMonitor.aprob",
+      "eje": "MG",
+      "fila": 1609,
+      "nota": "Lectura visual de la lámina «Aprobación de la gestión de Javier Milei», página 13 del informe de noviembre de QMonitor (copia comprimida aportada por la usuaria el 18/11). La lámina rotula por mes de campo y la portada enuncia el mes siguiente; la equivalencia está verificada contra las dos filas ya cargadas, no inferida."
+    },
+    {
+      "modulo": "Gestión nacional",
+      "ruta": "GESTION.QMonitor.desaprob",
+      "eje": "MG",
+      "fila": 1610,
+      "nota": "Lectura visual de la lámina «Aprobación de la gestión de Javier Milei», página 13 del informe de noviembre de QMonitor (copia comprimida aportada por la usuaria el 18/11). La lámina rotula por mes de campo y la portada enuncia el mes siguiente; la equivalencia está verificada contra las dos filas ya cargadas, no inferida."
+    },
+    {
+      "modulo": "Gestión nacional",
+      "ruta": "GESTION.QMonitor.aprob",
+      "eje": "MG",
+      "fila": 1611,
+      "nota": "Lectura visual de la lámina «Aprobación de la gestión de Javier Milei», página 13 del informe de noviembre de QMonitor (copia comprimida aportada por la usuaria el 18/11). La lámina rotula por mes de campo y la portada enuncia el mes siguiente; la equivalencia está verificada contra las dos filas ya cargadas, no inferida."
+    },
+    {
+      "modulo": "Gestión nacional",
+      "ruta": "GESTION.QMonitor.desaprob",
+      "eje": "MG",
+      "fila": 1612,
+      "nota": "Lectura visual de la lámina «Aprobación de la gestión de Javier Milei», página 13 del informe de noviembre de QMonitor (copia comprimida aportada por la usuaria el 18/11). La lámina rotula por mes de campo y la portada enuncia el mes siguiente; la equivalencia está verificada contra las dos filas ya cargadas, no inferida."
+    },
+    {
       "modulo": "Imagen Milei",
       "ruta": "IMG.QMonitor.pos",
       "eje": "MI",
@@ -3760,7 +3830,7 @@
     {
       "nombre": "Oficialismo vs. oposición",
       "evolucion_modulo": "Intención de voto",
-      "verificacion": "Oficialismo = LLA; oposición = todo lo que no es LLA según las categorías de la pregunta. No votaría, en blanco e indecisos se mantienen separados y no se suman a oposición. Eje vacío en este corte: ninguna consultora tiene cargadas todas las categorías necesarias y completarlas por diferencia no está permitido.",
+      "verificacion": "Indicador derivado: oficialismo = LLA; oposición = suma de los demás espacios publicados. En blanco e indecisos quedan fuera del cálculo. Habilitado el 18/11 con dos consultoras, Proyección y QMonitor, que son las únicas que publican todas las categorías de su pregunta. Para QMonitor hizo falta cargar seis categorías que faltaban (PRO, Izquierda, UCR, Otro, en blanco y no sabe): sin ellas el residuo era de 29 p.p. y no se podía construir la oposición sin completar por diferencia, que no está permitido. Los niveles no se comparan entre consultoras: los esquemas de categorías difieren.",
       "incluye": [
         "oficialismo"
       ]
@@ -3819,5 +3889,47 @@
     "voto_zuban_difer_sep": "{difer:CONS.Zuban.pj.lla|Sep-26}",
     "voto_zuban_lla_ago": "{val:CONS.Zuban.lla|Ago-26}",
     "voto_zuban_pj_ago": "{val:CONS.Zuban.pj|Ago-26}"
+  },
+  "oficialismo_oposicion": {
+    "mes": "Nov-26",
+    "rotulo": "construido por suma de categorías publicadas",
+    "nota": "Indicador derivado, no una pregunta que las consultoras hagan. Oficialismo = LLA. Oposición = la suma de los demás espacios que la consultora publica. El voto en blanco y los indecisos quedan fuera del cálculo y se muestran aparte: no son oposición. Nada se completa por diferencia: las dos consultoras publican todas las categorías de su pregunta. No se promedian entre sí y los niveles no se comparan, porque los esquemas de categorías diferen: Proyección agrega peronismo y kirchnerismo en Fuerza Patria y QMonitor los separa; Proyección registra 17,1% de voto en blanco y QMonitor 2%. Comparabilidad MEDIA: sirve la dirección, no el nivel.",
+    "consultoras": [
+      {
+        "nombre": "Proyección",
+        "oficialismo": [
+          1481
+        ],
+        "oposicion": [
+          1482,
+          1483,
+          1484,
+          1485
+        ],
+        "aparte": [
+          1486
+        ],
+        "nota": "Campo 1–9 nov. Las seis categorías suman 100 exacto."
+      },
+      {
+        "nombre": "QMonitor",
+        "oficialismo": [
+          1361
+        ],
+        "oposicion": [
+          1362,
+          1363,
+          1597,
+          1598,
+          1599,
+          1600
+        ],
+        "aparte": [
+          1601,
+          1602
+        ],
+        "nota": "Campo 8–26 oct, informe de noviembre. Las nueve categorías suman 102 por redondeo a enteros de la propia consultora."
+      }
+    ]
   }
 }

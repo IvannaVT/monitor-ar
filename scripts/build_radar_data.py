@@ -511,6 +511,40 @@ def construir():
                           for h in b.get('hallazgos', [])]})
     D['DESTACADOS'] = DEST
 
+    # Oficialismo vs. oposicion: indicador derivado, no una pregunta.
+    # Se suma lo que la consultora publica; nada se completa por diferencia.
+    # El voto en blanco y los indecisos quedan fuera del calculo, aparte.
+    cfg_oo = cfg.get('oficialismo_oposicion')
+    if cfg_oo:
+        filas_oo = []
+        for c in cfg_oo['consultoras']:
+            def comp(ids):
+                out = []
+                for f in ids:
+                    l = lectura_fila(f)
+                    out.append({'fila': f, 'categoria': l['categoria'], 'valor': l['valor'],
+                                'base': l['base'], 'file_id': l.get('file_id', '')})
+                return out
+            ofi, opo, apa = comp(c['oficialismo']), comp(c['oposicion']), comp(c['aparte'])
+            s_ofi = round(sum(x['valor'] for x in ofi), 1)
+            s_opo = round(sum(x['valor'] for x in opo), 1)
+            s_apa = round(sum(x['valor'] for x in apa), 1)
+            filas_oo.append({'consultora': c['nombre'], 'mes': c.get('mes', cfg_oo['mes']),
+                             'oficialismo': s_ofi, 'oposicion': s_opo, 'aparte': s_apa,
+                             'total': round(s_ofi + s_opo + s_apa, 1),
+                             'comp_oficialismo': ofi, 'comp_oposicion': opo, 'comp_aparte': apa,
+                             'nota': c.get('nota', '')})
+            for grupo, comps in (('oficialismo', ofi), ('oposición', opo), ('fuera del cálculo', apa)):
+                for x in comps:
+                    traza.append({'ruta': f"OFIOPO.{c['nombre']}.{grupo}", 'mes': c.get('mes', cfg_oo['mes']),
+                                  'valor': x['valor'], 'anterior': None, 'estado': 'nuevo',
+                                  'modulo': 'Intención de voto', 'base': x['base'], 'fila': x['fila'],
+                                  'id_informe': '', 'id_indicador': '', 'categoria': x['categoria'],
+                                  'file_id': x['file_id'], 'composicion': 'estandar', 'secundaria': ''})
+        D['OFIOPO'] = {'mes': cfg_oo['mes'], 'rotulo': cfg_oo['rotulo'],
+                       'nota': resolver_plantilla(cfg_oo['nota'], 'oficialismo_oposicion'),
+                       'filas': filas_oo}
+
     # cifras sueltas del HTML atadas a la base: cada clave es un data-cifra del index.
     # Es el mecanismo general contra el texto escrito a mano, para los bloques cuyo
     # maquetado no conviene reconstruir entero.
