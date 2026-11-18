@@ -53,6 +53,50 @@ class RadarDataTests(unittest.TestCase):
         self.assertNotIn('const GESTION=', html)
 
 
+class NormalizacionIndicadoresTests(unittest.TestCase):
+    """El control que impide fusionar series distintas tiene que seguir fallando.
+
+    Un diccionario de normalización mal escrito une dos indicadores que no son la
+    misma pregunta y apila dos series en una línea, sin avisar. Pasó con ICC_CIF y
+    sus subíndices regionales _CABA, _GBA e _INTERIOR. El control que lo detecta
+    vale sólo si no se puede debilitar sin que algo falle: este test debilita la
+    regla a propósito y exige que el control corte.
+    """
+
+    def test_check_pasa_con_las_reglas_vigentes(self):
+        r = subprocess.run([sys.executable, 'scripts/check_indicadores.py'],
+                           cwd=ROOT, capture_output=True, text=True)
+        self.assertEqual(r.returncode, 0, r.stdout + r.stderr)
+
+    def test_fusionar_series_distintas_corta_la_corrida(self):
+        import shutil, tempfile
+        dicc = ROOT / 'data/diccionario_indicadores.json'
+        norm = ROOT / 'scripts/normalizar_indicador.py'
+        with tempfile.TemporaryDirectory() as tmp:
+            shutil.copy(dicc, Path(tmp) / 'd'); shutil.copy(norm, Path(tmp) / 'n')
+            try:
+                d = json.loads(dicc.read_text(encoding='utf-8'))
+                d['excepciones'] = [x for x in d['excepciones'] if not x.startswith('ICC_CIF_')]
+                dicc.write_text(json.dumps(d, ensure_ascii=False, indent=2) + '\n',
+                                encoding='utf-8')
+                t = norm.read_text(encoding='utf-8')
+                t = t.replace("cons = set(dicc['consultoras'])",
+                              "cons = set(dicc['consultoras']) | set(dicc['territorios'])")
+                t = t.replace("        if consultoras_fila is not None and not confirma(",
+                              "        if partes[-1] in set(dicc['territorios']):\n"
+                              "            pass\n"
+                              "        elif consultoras_fila is not None and not confirma(")
+                norm.write_text(t, encoding='utf-8')
+                r = subprocess.run([sys.executable, 'scripts/check_indicadores.py'],
+                                   cwd=ROOT, capture_output=True, text=True)
+                self.assertEqual(r.returncode, 1,
+                                 'el control dejó pasar una fusión de series distintas')
+                self.assertIn('ICC_CIF', r.stderr)
+                self.assertIn('llevan datos distintos', r.stderr)
+            finally:
+                shutil.copy(Path(tmp) / 'd', dicc); shutil.copy(Path(tmp) / 'n', norm)
+
+
 if __name__ == '__main__':
     unittest.main()
 
