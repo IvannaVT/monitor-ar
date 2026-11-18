@@ -371,6 +371,9 @@ def construir():
     def _fnum(v):
         return ('%g' % round(v, 2)).replace('.', ',')
 
+    def _sgn(v):
+        return ('+' if v >= 0 else '−') + _fnum(abs(v))
+
     def resolver_plantilla(txt, donde):
         def sub(m):
             tipo, arg = m.group(1), m.group(2).split('|')
@@ -397,6 +400,26 @@ def construir():
                     if tipo == 'dir':
                         return direccion_serie(grupo, campo, list(vals))[0]
                     return f'{_fnum(min(vals.values()))}–{_fnum(max(vals.values()))}%'
+                if tipo == 'difer':
+                    grupo, nombre, ca, cb = arg[0].split('.')
+                    i = D[EJE_DE_GRUPO[grupo]].index(arg[1])
+                    va, vb = D[grupo][nombre][ca][i], D[grupo][nombre][cb][i]
+                    if va is None or vb is None:
+                        raise KeyError('sin dato en alguna de las dos categorías')
+                    return _sgn(va - vb) + ' pp'
+                if tipo == 'delta':
+                    grupo, nombre, campo = arg[0].split('.')
+                    eje = D[EJE_DE_GRUPO[grupo]]
+                    i = eje.index(arg[1])
+                    ser = D[grupo][nombre][campo]
+                    if ser[i] is None:
+                        raise KeyError('sin dato')
+                    comp_u = comp_de(grupo, campo, nombre, eje[i])
+                    j = next((k for k in range(i - 1, -1, -1)
+                              if ser[k] is not None and comp_de(grupo, campo, nombre, eje[k]) == comp_u), None)
+                    if j is None:
+                        raise KeyError('sin medición anterior comparable')
+                    return f'{_sgn(ser[i] - ser[j])} pp vs {eje[j]}'
                 if tipo == 'val':
                     grupo, nombre, campo = arg[0].split('.')
                     i = D[EJE_DE_GRUPO[grupo]].index(arg[1])
@@ -471,6 +494,22 @@ def construir():
                     'direccion': resolver_plantilla(r.get('direccion') or direccion, donde),
                     'nota': resolver_plantilla(r['nota'], donde)})
     D['SEMAFORO'] = SEM
+
+    # destacados del mes: las tarjetas y los párrafos de cierre del bloque de imagen.
+    # Los valores y las variaciones se resuelven contra las bases, no se escriben a mano:
+    # si una serie cambia, el texto cambia con ella o la corrida falla.
+    DEST = []
+    for b in cfg.get('destacados', []):
+        donde = f"destacados «{b['titulo']}»"
+        DEST.append({
+            'titulo': b['titulo'], 'subtitulo': b['subtitulo'],
+            'kpis': [{'valor': resolver_plantilla(k['valor'], donde), 'color': k['color'],
+                      'label': k['label'], 'sub': resolver_plantilla(k['sub'], donde)}
+                     for k in b['kpis']],
+            'hallazgos': [{'titulo': resolver_plantilla(h['titulo'], donde),
+                           'texto': resolver_plantilla(h['texto'], donde)}
+                          for h in b.get('hallazgos', [])]})
+    D['DESTACADOS'] = DEST
 
     # ejes comparables: cada consultora por separado; los rangos solo dentro de un mismo
     # eje y una misma composición. Lo que no encaja en ningún eje no se fuerza: se lista aparte.

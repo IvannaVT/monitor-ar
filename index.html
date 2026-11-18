@@ -235,8 +235,11 @@ footer a{color:var(--accent)}
 }
 @media(max-width:340px){
   .site-nav-link{font-size:11px;padding:0 5px}
-  .logo{font-size:15px}
+  .logo{font-size:15px;min-width:0;flex:1 1 auto}
+  .logo small{display:block;line-height:1.2}
   .theme-btn{padding:0 8px}
+  .header-inner{gap:6px;padding:4px 0}
+  .header-tools{flex-shrink:0}
 }
 </style>
 
@@ -562,40 +565,7 @@ footer a{color:var(--accent)}
 
   <!-- HALLAZGOS OCTUBRE 2026 -->
   <div class="chart-wrap" style="margin-top:20px">
-    <div class="mes-titulo">
-      <span>OCTUBRE 2026</span>
-      <span class="mes-badge">ÚLTIMO MES COMPLETO</span>
-    </div>
-    <div class="kpi-grid" style="margin-bottom:12px">
-      <div class="kpi">
-        <div class="kpi-val" style="color:var(--neg)">64,1%</div>
-        <div class="kpi-label">Imagen negativa Milei · Zuban Córdoba</div>
-        <div class="kpi-sub">↑ +2,3 pp vs sep · 1ª medición mensual regular</div>
-      </div>
-      <div class="kpi">
-        <div class="kpi-val" style="color:var(--pos)">34,9%</div>
-        <div class="kpi-label">Imagen positiva Milei · Zuban Córdoba</div>
-        <div class="kpi-sub">↓ −1,1 pp vs sep · diferencial: −29,2 pp</div>
-      </div>
-      <div class="kpi">
-        <div class="kpi-val" style="color:var(--neg)">65,2%</div>
-        <div class="kpi-label">Desaprobación gestión · Zuban Córdoba</div>
-        <div class="kpi-sub">Primera medición de gestión en la serie</div>
-      </div>
-      <div class="kpi">
-        <div class="kpi-val" style="color:var(--warn)">34,1%</div>
-        <div class="kpi-label">Aprobación gestión · Zuban Córdoba</div>
-        <div class="kpi-sub">Diferencial gestión: −31,1 pp · ⚪ sin serie previa</div>
-      </div>
-    </div>
-    <div class="hallazgo">
-      <strong>Imagen Milei (Zuban Córdoba, oct-26, n≈1.800, Mixto)</strong><br>
-      34,9% positiva / 64,1% negativa — diferencial −29,2 pp. Respecto de septiembre: positiva baja 1,1 pp y negativa sube 2,3 pp. Primer par sep–oct para esta consultora: da una variación, no una tendencia (evidencia BAJA). Consistente en dirección con la señal de deterioro ya registrada por Zentrix (may–jul) y Equipo Mide (may–ago), aunque no comparable directamente por diferencias de universo y método.
-    </div>
-    <div class="hallazgo" style="margin-top:8px">
-      <strong>Gestión Milei (Zuban Córdoba, oct-26)</strong><br>
-      34,1% aprueba / 65,2% desaprueba — primera medición de gestión de esta consultora en el período relevado. Sin serie previa en la base; no comparable con otros registros de aprobación por diferencias de formulación. Punto de referencia para seguimiento desde noviembre.
-    </div>
+    <div id="destacadosImagen"></div>
 
     <button class="btn-ver-anteriores" data-toggle="img-oct-ant" onclick="toggleMesAnterior('img-oct-ant')">▾ Ver meses anteriores (may–sep)</button>
     <div id="img-oct-ant" class="mes-contenido-anterior">
@@ -1259,8 +1229,8 @@ function toggleDataset(chartId,idx){
 }
 
 /* ── DATA — generado por scripts/build_radar_data.py en data/radar_data.json; no editar valores aquí ─ */
-let MESI,MIPC,IPC,ICC,ICG,MINFL,IPC_FULL,IPCBA_FULL,MBRECHA,BRECHA,TIPCBA_MES,TIPCBA_IA,TIPCBA_BIENES,TIPCBA_SERV,TIPCBA_ESTAC,TIPCBA_REG,TIPCBA_VAR,TIPCBA_ACUM,MIPCACUM,IPC_ACUM,IPCBA_ACUM_FULL,BRECHA_ACUM,MIIA,IPC_IA,IPC_IA_9,IPCBA_ACUM_9,IPCBA_IA_9,ICC_CABA_13,ICC_INT_13,ICC_GBA_14,MV,CONS,lastRows,MI,IMG,MG,GESTION,CROSS_MES,CROSS,ISN_RD_MES,ISN_RD_VALS,ISN_EJE_LABELS,ISN_EJE_VALS,MILEI_SEP_LABELS,MILEI_SEP_VALS,OPOS_LABELS,OPOS_VALS,MSL_MES,SL_POR_MES,SL_CONSULT_LABELS,SL_CONSULT_VALS,SL_INFORMES,GAP_STATUS,KPI,UPD,COBERTURA,META,SECUNDARIA,EVOL,ENCABEZADO,SL_TRAMOS,AGENDA_INFL,SL_ESTUDIOS,NOTA_SECUNDARIA,GAP,SEMAFORO,AGENDA_RANKING,EJES,PREGUNTAS_ESPECIFICAS;
-function applyData(D){MESI=D.MESI;MIPC=D.MIPC;IPC=D.IPC;ICC=D.ICC;ICG=D.ICG;MINFL=D.MINFL;IPC_FULL=D.IPC_FULL;IPCBA_FULL=D.IPCBA_FULL;MBRECHA=D.MBRECHA;BRECHA=D.BRECHA;TIPCBA_MES=D.TIPCBA_MES;TIPCBA_IA=D.TIPCBA_IA;TIPCBA_BIENES=D.TIPCBA_BIENES;TIPCBA_SERV=D.TIPCBA_SERV;TIPCBA_ESTAC=D.TIPCBA_ESTAC;TIPCBA_REG=D.TIPCBA_REG;TIPCBA_VAR=D.TIPCBA_VAR;TIPCBA_ACUM=D.TIPCBA_ACUM;MIPCACUM=D.MIPCACUM;IPC_ACUM=D.IPC_ACUM;IPCBA_ACUM_FULL=D.IPCBA_ACUM_FULL;BRECHA_ACUM=D.BRECHA_ACUM;MIIA=D.MIIA;IPC_IA=D.IPC_IA;IPC_IA_9=D.IPC_IA_9;IPCBA_ACUM_9=D.IPCBA_ACUM_9;IPCBA_IA_9=D.IPCBA_IA_9;ICC_CABA_13=D.ICC_CABA_13;ICC_INT_13=D.ICC_INT_13;ICC_GBA_14=D.ICC_GBA_14;MV=D.MV;CONS=D.CONS;lastRows=D.lastRows;MI=D.MI;IMG=D.IMG;MG=D.MG;GESTION=D.GESTION;CROSS_MES=D.CROSS_MES;CROSS=D.CROSS;ISN_RD_MES=D.ISN_RD_MES;ISN_RD_VALS=D.ISN_RD_VALS;ISN_EJE_LABELS=D.ISN_EJE_LABELS;ISN_EJE_VALS=D.ISN_EJE_VALS;MILEI_SEP_LABELS=D.MILEI_SEP_LABELS;MILEI_SEP_VALS=D.MILEI_SEP_VALS;OPOS_LABELS=D.OPOS_LABELS;OPOS_VALS=D.OPOS_VALS;MSL_MES=D.MSL_MES;SL_POR_MES=D.SL_POR_MES;SL_CONSULT_LABELS=D.SL_CONSULT_LABELS;SL_CONSULT_VALS=D.SL_CONSULT_VALS;SL_INFORMES=D.SL_INFORMES;GAP_STATUS=D.GAP_STATUS;KPI=D.KPI;UPD=D.UPD;COBERTURA=D.COBERTURA;META=D.META;SECUNDARIA=D.SECUNDARIA||[];EVOL=D.EVOL||{};ENCABEZADO=D.ENCABEZADO;SL_TRAMOS=D.SL_TRAMOS||[];AGENDA_INFL=D.AGENDA_INFL;SL_ESTUDIOS=D.SL_ESTUDIOS||[];NOTA_SECUNDARIA=D.NOTA_SECUNDARIA||[];GAP=D.GAP||[];SEMAFORO=D.SEMAFORO||[];AGENDA_RANKING=D.AGENDA_RANKING||{items:[]};EJES=D.EJES||[];PREGUNTAS_ESPECIFICAS=D.PREGUNTAS_ESPECIFICAS||[];}
+let MESI,MIPC,IPC,ICC,ICG,MINFL,IPC_FULL,IPCBA_FULL,MBRECHA,BRECHA,TIPCBA_MES,TIPCBA_IA,TIPCBA_BIENES,TIPCBA_SERV,TIPCBA_ESTAC,TIPCBA_REG,TIPCBA_VAR,TIPCBA_ACUM,MIPCACUM,IPC_ACUM,IPCBA_ACUM_FULL,BRECHA_ACUM,MIIA,IPC_IA,IPC_IA_9,IPCBA_ACUM_9,IPCBA_IA_9,ICC_CABA_13,ICC_INT_13,ICC_GBA_14,MV,CONS,lastRows,MI,IMG,MG,GESTION,CROSS_MES,CROSS,ISN_RD_MES,ISN_RD_VALS,ISN_EJE_LABELS,ISN_EJE_VALS,MILEI_SEP_LABELS,MILEI_SEP_VALS,OPOS_LABELS,OPOS_VALS,MSL_MES,SL_POR_MES,SL_CONSULT_LABELS,SL_CONSULT_VALS,SL_INFORMES,GAP_STATUS,KPI,UPD,COBERTURA,META,SECUNDARIA,EVOL,ENCABEZADO,SL_TRAMOS,AGENDA_INFL,SL_ESTUDIOS,NOTA_SECUNDARIA,GAP,SEMAFORO,AGENDA_RANKING,EJES,PREGUNTAS_ESPECIFICAS,DESTACADOS;
+function applyData(D){MESI=D.MESI;MIPC=D.MIPC;IPC=D.IPC;ICC=D.ICC;ICG=D.ICG;MINFL=D.MINFL;IPC_FULL=D.IPC_FULL;IPCBA_FULL=D.IPCBA_FULL;MBRECHA=D.MBRECHA;BRECHA=D.BRECHA;TIPCBA_MES=D.TIPCBA_MES;TIPCBA_IA=D.TIPCBA_IA;TIPCBA_BIENES=D.TIPCBA_BIENES;TIPCBA_SERV=D.TIPCBA_SERV;TIPCBA_ESTAC=D.TIPCBA_ESTAC;TIPCBA_REG=D.TIPCBA_REG;TIPCBA_VAR=D.TIPCBA_VAR;TIPCBA_ACUM=D.TIPCBA_ACUM;MIPCACUM=D.MIPCACUM;IPC_ACUM=D.IPC_ACUM;IPCBA_ACUM_FULL=D.IPCBA_ACUM_FULL;BRECHA_ACUM=D.BRECHA_ACUM;MIIA=D.MIIA;IPC_IA=D.IPC_IA;IPC_IA_9=D.IPC_IA_9;IPCBA_ACUM_9=D.IPCBA_ACUM_9;IPCBA_IA_9=D.IPCBA_IA_9;ICC_CABA_13=D.ICC_CABA_13;ICC_INT_13=D.ICC_INT_13;ICC_GBA_14=D.ICC_GBA_14;MV=D.MV;CONS=D.CONS;lastRows=D.lastRows;MI=D.MI;IMG=D.IMG;MG=D.MG;GESTION=D.GESTION;CROSS_MES=D.CROSS_MES;CROSS=D.CROSS;ISN_RD_MES=D.ISN_RD_MES;ISN_RD_VALS=D.ISN_RD_VALS;ISN_EJE_LABELS=D.ISN_EJE_LABELS;ISN_EJE_VALS=D.ISN_EJE_VALS;MILEI_SEP_LABELS=D.MILEI_SEP_LABELS;MILEI_SEP_VALS=D.MILEI_SEP_VALS;OPOS_LABELS=D.OPOS_LABELS;OPOS_VALS=D.OPOS_VALS;MSL_MES=D.MSL_MES;SL_POR_MES=D.SL_POR_MES;SL_CONSULT_LABELS=D.SL_CONSULT_LABELS;SL_CONSULT_VALS=D.SL_CONSULT_VALS;SL_INFORMES=D.SL_INFORMES;GAP_STATUS=D.GAP_STATUS;KPI=D.KPI;UPD=D.UPD;COBERTURA=D.COBERTURA;META=D.META;SECUNDARIA=D.SECUNDARIA||[];EVOL=D.EVOL||{};ENCABEZADO=D.ENCABEZADO;SL_TRAMOS=D.SL_TRAMOS||[];AGENDA_INFL=D.AGENDA_INFL;SL_ESTUDIOS=D.SL_ESTUDIOS||[];NOTA_SECUNDARIA=D.NOTA_SECUNDARIA||[];GAP=D.GAP||[];SEMAFORO=D.SEMAFORO||[];AGENDA_RANKING=D.AGENDA_RANKING||{items:[]};EJES=D.EJES||[];PREGUNTAS_ESPECIFICAS=D.PREGUNTAS_ESPECIFICAS||[];DESTACADOS=D.DESTACADOS||[];}
 
 /* ── CHART HELPERS ──────────────────────────── */
 function baseOpts(){
@@ -1579,7 +1549,7 @@ function initTab(tab){
   }
 
   if(tab==='semaforo'){
-    renderSemaforo();renderEjes();renderEspecificas();
+    renderSemaforo();renderEjes();renderEspecificas();renderDestacados();
   }
 
   if(tab==='agenda'){
@@ -1775,6 +1745,17 @@ function renderEspecificas(){
        <td style="font-size:10px;color:var(--fg-dim)">${esc(f.consultora||'—')}</td>
        <td style="font-size:10px;color:var(--fg-dim)">${f.filas.length?'N2 '+f.filas.join(', '):'—'}</td></tr>`).join('')).join('')}
     </tbody></table></div></details>`;
+}
+function renderDestacados(){
+  var c=document.getElementById('destacadosImagen'); if(!c) return;
+  c.innerHTML=(DESTACADOS||[]).map(function(b){
+    return '<div class="mes-titulo"><span>'+b.titulo+'</span><span class="mes-badge">'+b.subtitulo+'</span></div>'+
+      '<div class="kpi-grid" style="margin-bottom:12px">'+b.kpis.map(function(k){
+        return '<div class="kpi"><div class="kpi-val" style="color:var(--'+k.color+')">'+k.valor+'</div>'+
+               '<div class="kpi-label">'+k.label+'</div><div class="kpi-sub">'+k.sub+'</div></div>';}).join('')+'</div>'+
+      b.hallazgos.map(function(h,i){
+        return '<div class="hallazgo"'+(i?' style="margin-top:8px"':'')+'><strong>'+h.titulo+'</strong><br>'+h.texto+'</div>';}).join('');
+  }).join('');
 }
 function renderSemaforo(){
   const cont=document.getElementById('semaforoTablas');if(!cont)return;
