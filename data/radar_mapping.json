@@ -439,6 +439,14 @@
     },
     {
       "modulo": "Imagen Milei",
+      "ruta": "IMG.Zuban.pos",
+      "eje": "MI",
+      "fila": 1588,
+      "rotulo": "FUENTE SECUNDARIA · encuestas-argentinas.com · https://encuestas-argentinas.com/encuestas/ (ficha del 04/08/2026, registro sin URL propia; hilo X: https://x.com/_EncuestAR_/status/2084520359408148892) · consultado 2026-11-18 · fuente original: Zuban Córdoba",
+      "nota": "Último hueco de imagen positiva. Drive agotado primero: Zuban no publica evolutivo de imagen personal en sus informes de Drive, solo de gestión. Identidad acreditada porque la negativa del mismo registro (61,3) coincide con la ya cargada en N2 1558."
+    },
+    {
+      "modulo": "Imagen Milei",
       "ruta": "IMG.Analogías.pos",
       "eje": "MI",
       "fila": 1092
@@ -542,6 +550,62 @@
       "ruta": "GESTION.Zuban.desaprob",
       "eje": "MG",
       "fila": 1113
+    },
+    {
+      "modulo": "Gestión nacional",
+      "ruta": "GESTION.Zuban.aprob",
+      "eje": "MG",
+      "fila": 1589,
+      "nota": "Lectura visual de la lámina «¿Aprobás o desaprobás la gestión del presidente Javier Milei?», página 8 del informe de octubre de Zuban (Drive 1pKNoWnA), el 18/11. La lámina está rotulada mes a mes (oct-25 a oct-26) con el valor impreso sobre cada punto; la extracción de texto no la trae. Control: el corte de octubre coincide con el ya cargado. La lámina no mide junio. Registro en base maestra fila 330."
+    },
+    {
+      "modulo": "Gestión nacional",
+      "ruta": "GESTION.Zuban.desaprob",
+      "eje": "MG",
+      "fila": 1590,
+      "nota": "Lectura visual de la lámina «¿Aprobás o desaprobás la gestión del presidente Javier Milei?», página 8 del informe de octubre de Zuban (Drive 1pKNoWnA), el 18/11. La lámina está rotulada mes a mes (oct-25 a oct-26) con el valor impreso sobre cada punto; la extracción de texto no la trae. Control: el corte de octubre coincide con el ya cargado. La lámina no mide junio. Registro en base maestra fila 330."
+    },
+    {
+      "modulo": "Gestión nacional",
+      "ruta": "GESTION.Zuban.aprob",
+      "eje": "MG",
+      "fila": 1591,
+      "nota": "Lectura visual de la lámina «¿Aprobás o desaprobás la gestión del presidente Javier Milei?», página 8 del informe de octubre de Zuban (Drive 1pKNoWnA), el 18/11. La lámina está rotulada mes a mes (oct-25 a oct-26) con el valor impreso sobre cada punto; la extracción de texto no la trae. Control: el corte de octubre coincide con el ya cargado. La lámina no mide junio. Registro en base maestra fila 330."
+    },
+    {
+      "modulo": "Gestión nacional",
+      "ruta": "GESTION.Zuban.desaprob",
+      "eje": "MG",
+      "fila": 1592,
+      "nota": "Lectura visual de la lámina «¿Aprobás o desaprobás la gestión del presidente Javier Milei?», página 8 del informe de octubre de Zuban (Drive 1pKNoWnA), el 18/11. La lámina está rotulada mes a mes (oct-25 a oct-26) con el valor impreso sobre cada punto; la extracción de texto no la trae. Control: el corte de octubre coincide con el ya cargado. La lámina no mide junio. Registro en base maestra fila 330."
+    },
+    {
+      "modulo": "Gestión nacional",
+      "ruta": "GESTION.Zuban.aprob",
+      "eje": "MG",
+      "fila": 1593,
+      "nota": "Lectura visual de la lámina «¿Aprobás o desaprobás la gestión del presidente Javier Milei?», página 8 del informe de octubre de Zuban (Drive 1pKNoWnA), el 18/11. La lámina está rotulada mes a mes (oct-25 a oct-26) con el valor impreso sobre cada punto; la extracción de texto no la trae. Control: el corte de octubre coincide con el ya cargado. La lámina no mide junio. Registro en base maestra fila 330."
+    },
+    {
+      "modulo": "Gestión nacional",
+      "ruta": "GESTION.Zuban.desaprob",
+      "eje": "MG",
+      "fila": 1594,
+      "nota": "Lectura visual de la lámina «¿Aprobás o desaprobás la gestión del presidente Javier Milei?», página 8 del informe de octubre de Zuban (Drive 1pKNoWnA), el 18/11. La lámina está rotulada mes a mes (oct-25 a oct-26) con el valor impreso sobre cada punto; la extracción de texto no la trae. Control: el corte de octubre coincide con el ya cargado. La lámina no mide junio. Registro en base maestra fila 330."
+    },
+    {
+      "modulo": "Gestión nacional",
+      "ruta": "GESTION.Zuban.aprob",
+      "eje": "MG",
+      "fila": 1595,
+      "nota": "Lectura visual de la lámina «¿Aprobás o desaprobás la gestión del presidente Javier Milei?», página 8 del informe de octubre de Zuban (Drive 1pKNoWnA), el 18/11. La lámina está rotulada mes a mes (oct-25 a oct-26) con el valor impreso sobre cada punto; la extracción de texto no la trae. Control: el corte de octubre coincide con el ya cargado. La lámina no mide junio. Registro en base maestra fila 330."
+    },
+    {
+      "modulo": "Gestión nacional",
+      "ruta": "GESTION.Zuban.desaprob",
+      "eje": "MG",
+      "fila": 1596,
+      "nota": "Lectura visual de la lámina «¿Aprobás o desaprobás la gestión del presidente Javier Milei?», página 8 del informe de octubre de Zuban (Drive 1pKNoWnA), el 18/11. La lámina está rotulada mes a mes (oct-25 a oct-26) con el valor impreso sobre cada punto; la extracción de texto no la trae. Control: el corte de octubre coincide con el ya cargado. La lámina no mide junio. Registro en base maestra fila 330."
     },
     {
       "modulo": "Gestión nacional",
@@ -1358,8 +1422,8 @@
     {
       "modulo": "Imagen Milei",
       "mes": "Nov-26",
-      "texto": "Imagen positiva de Milei: queda 1 hueco donde la negativa sí está cargada, Zuban julio (N2 1558), que es el único de fuente secundaria. Los otros diez se cerraron el 18/11 leyendo los informes primarios de Drive: Giacobbe jul y ago, Proyección sep, D'Alessio jun y jul, y Zentrix may–sep.",
-      "necesita": "informe primario de Zuban Córdoba de julio de 2026"
+      "texto": "Imagen positiva de Milei: sin huecos. Los 11 meses que tenían negativa sin su contracara se cerraron el 18/11: Giacobbe jul y ago, Proyección sep, D'Alessio jun y jul, Zentrix may–sep desde informes primarios de Drive, y Zuban jul por fuente secundaria, único caso sin informe primario.",
+      "necesita": "—"
     }
   ],
   "secciones_cobertura": [
