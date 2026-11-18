@@ -2656,6 +2656,48 @@
    "nota": "Ranking CB de Intendentes GBA, nov-26: máximo Nardini +24,8 p.p. y mínimo Menéndez −22,6 p.p. No se agregan municipios ni se promedian entre sí."
   }
  ],
+ "DESTACADOS": [
+  {
+   "titulo": "OCTUBRE 2026",
+   "subtitulo": "ÚLTIMO MES COMPLETO",
+   "kpis": [
+    {
+     "valor": "64,1%",
+     "color": "neg",
+     "label": "Imagen negativa Milei · Zuban Córdoba",
+     "sub": "+2,3 pp vs Sep-26"
+    },
+    {
+     "valor": "34,9%",
+     "color": "pos",
+     "label": "Imagen positiva Milei · Zuban Córdoba",
+     "sub": "−1,1 pp vs Sep-26 · diferencial −29,2 pp"
+    },
+    {
+     "valor": "65,2%",
+     "color": "neg",
+     "label": "Desaprobación gestión · Zuban Córdoba",
+     "sub": "+1,6 pp vs Sep-26"
+    },
+    {
+     "valor": "34,1%",
+     "color": "warn",
+     "label": "Aprobación gestión · Zuban Córdoba",
+     "sub": "−1,2 pp vs Sep-26 · diferencial −31,1 pp"
+    }
+   ],
+   "hallazgos": [
+    {
+     "titulo": "Imagen Milei (Zuban Córdoba, oct-26, n≈1.800, Mixto)",
+     "texto": "34,9% positiva / 64,1% negativa — diferencial −29,2 pp. Respecto del corte anterior: positiva −1,1 pp vs Sep-26 y negativa +2,3 pp vs Sep-26. La serie de imagen de esta consultora tiene tres cortes (jul, sep, oct) y julio es de fuente secundaria: da variaciones, no una tendencia (evidencia BAJA). Consistente en dirección con la señal de deterioro ya registrada por Zentrix (may–jul) y Equipo Mide (may–ago), aunque no comparable directamente por diferencias de universo y método."
+    },
+    {
+     "titulo": "Gestión Milei (Zuban Córdoba, oct-26)",
+     "texto": "34,1% aprueba / 65,2% desaprueba (−1,2 pp vs Sep-26 en aprobación). La serie de gestión se extendió el 18/11 con la lámina evolutiva del propio informe de octubre: may, jul, ago y sep (sin junio, que la consultora no mide). En esos cinco cortes la aprobación oscila entre 33,4% y 36,8% sin dirección sostenida, de modo que octubre es movimiento dentro del rango, no quiebre. Gestión e imagen son preguntas distintas y no se comparan entre sí; tampoco con la aprobación de otras consultoras, por diferencias de formulación."
+    }
+   ]
+  }
+ ],
  "EJES": [
   {
    "nombre": "Imagen personal",

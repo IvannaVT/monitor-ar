@@ -3765,5 +3765,47 @@
         "oficialismo"
       ]
     }
+  ],
+  "destacados": [
+    {
+      "titulo": "OCTUBRE 2026",
+      "subtitulo": "ÚLTIMO MES COMPLETO",
+      "kpis": [
+        {
+          "valor": "{val:IMG.Zuban.neg|Oct-26}",
+          "color": "neg",
+          "label": "Imagen negativa Milei · Zuban Córdoba",
+          "sub": "{delta:IMG.Zuban.neg|Oct-26}"
+        },
+        {
+          "valor": "{val:IMG.Zuban.pos|Oct-26}",
+          "color": "pos",
+          "label": "Imagen positiva Milei · Zuban Córdoba",
+          "sub": "{delta:IMG.Zuban.pos|Oct-26} · diferencial {difer:IMG.Zuban.pos.neg|Oct-26}"
+        },
+        {
+          "valor": "{val:GESTION.Zuban.desaprob|Oct-26}",
+          "color": "neg",
+          "label": "Desaprobación gestión · Zuban Córdoba",
+          "sub": "{delta:GESTION.Zuban.desaprob|Oct-26}"
+        },
+        {
+          "valor": "{val:GESTION.Zuban.aprob|Oct-26}",
+          "color": "warn",
+          "label": "Aprobación gestión · Zuban Córdoba",
+          "sub": "{delta:GESTION.Zuban.aprob|Oct-26} · diferencial {difer:GESTION.Zuban.aprob.desaprob|Oct-26}"
+        }
+      ],
+      "hallazgos": [
+        {
+          "titulo": "Imagen Milei (Zuban Córdoba, oct-26, n≈1.800, Mixto)",
+          "texto": "{val:IMG.Zuban.pos|Oct-26} positiva / {val:IMG.Zuban.neg|Oct-26} negativa — diferencial {difer:IMG.Zuban.pos.neg|Oct-26}. Respecto del corte anterior: positiva {delta:IMG.Zuban.pos|Oct-26} y negativa {delta:IMG.Zuban.neg|Oct-26}. La serie de imagen de esta consultora tiene tres cortes (jul, sep, oct) y julio es de fuente secundaria: da variaciones, no una tendencia (evidencia BAJA). Consistente en dirección con la señal de deterioro ya registrada por Zentrix (may–jul) y Equipo Mide (may–ago), aunque no comparable directamente por diferencias de universo y método."
+        },
+        {
+          "titulo": "Gestión Milei (Zuban Córdoba, oct-26)",
+          "texto": "{val:GESTION.Zuban.aprob|Oct-26} aprueba / {val:GESTION.Zuban.desaprob|Oct-26} desaprueba ({delta:GESTION.Zuban.aprob|Oct-26} en aprobación). La serie de gestión se extendió el 18/11 con la lámina evolutiva del propio informe de octubre: may, jul, ago y sep (sin junio, que la consultora no mide). En esos cinco cortes la aprobación oscila entre 33,4% y 36,8% sin dirección sostenida, de modo que octubre es movimiento dentro del rango, no quiebre. Gestión e imagen son preguntas distintas y no se comparan entre sí; tampoco con la aprobación de otras consultoras, por diferencias de formulación."
+        }
+      ]
+    }
   ]
 }
