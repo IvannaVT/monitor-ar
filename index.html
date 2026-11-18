@@ -525,15 +525,27 @@ footer a{color:var(--accent)}
     </div>
   </div>
   <p class="source" style="margin:-6px 0 16px">Las dos caras de la misma pregunta, al mismo nivel y en la misma escala de lectura: positiva y negativa de Milei cubren las mismas consultoras en el período. No se promedian entre sí ni con aprobación de gestión.</p>
-  <div class="chart-wrap">
-    <div class="chart-head">
-      <div><h3>Aprobación gestión nacional · por consultora</h3><p><span data-rango="GESTION.aprob"></span> · <span data-consultoras="GESTION"></span> · clic en leyenda para filtrar</p></div>
-      <span class="signal conv">▲ conv.</span>
+  <div class="mosaic">
+    <div class="chart-wrap">
+      <div class="chart-head">
+        <div><h3>Aprobación gestión nacional · por consultora</h3><p><span data-rango="GESTION.aprob"></span> · <span data-consultoras="GESTION"></span> · clic en leyenda para filtrar</p></div>
+        <span class="signal conv">▲ conv.</span>
+      </div>
+      <div class="chart-box"><canvas id="chartGestion"></canvas></div>
+      <div class="legend" id="legendGestion"></div>
+      <p class="source">Gestión ≠ imagen personal · preguntas distintas · no comparar entre sí</p>
     </div>
-    <div class="chart-box"><canvas id="chartGestion"></canvas></div>
-    <div class="legend" id="legendGestion"></div>
-    <p class="source">Gestión ≠ imagen personal · preguntas distintas · no comparar entre sí</p>
+    <div class="chart-wrap">
+      <div class="chart-head">
+        <div><h3>Aprobación de gestión nacional · tendencia</h3><p id="subGestionFull"></p></div>
+        <span class="signal conv">▲ mejora</span>
+      </div>
+      <div class="chart-box"><canvas id="chartGestionFull"></canvas></div>
+      <div class="legend" id="legendGestionFull"></div>
+      <p class="source">Proyección: campo 1–10 de cada mes · Isasi-Burdman: campo en torno al 20 de cada mes · preguntas distintas entre consultoras</p>
+    </div>
   </div>
+  <p class="source" style="margin:-6px 0 16px">Dos lecturas de la misma variable, al mismo nivel: a la izquierda el corte por consultora, a la derecha la evolución de las series con más de un registro. Gestión ≠ imagen personal · preguntas distintas · no comparar niveles entre consultoras.</p>
   <!-- ── CRUCE IMAGEN–GESTIÓN ─────────────────── -->
   <div style="margin:24px 0 8px"><p class="sec">Cruce imagen · gestión · divergencia</p></div>
   <div class="info-box" style="margin-bottom:12px">
@@ -556,15 +568,6 @@ footer a{color:var(--accent)}
       <div class="chart-box med"><canvas id="chartCrossNeg"></canvas></div>
       <div class="legend" id="legendCrossNeg"></div>
     </div>
-  </div>
-  <div class="chart-wrap" style="margin-bottom:16px">
-    <div class="chart-head">
-      <div><h3>Aprobación de gestión nacional · tendencia</h3><p>Proyección (may–sep, nov) · Isasi-Burdman (jun–ago) · Synopsis (may)</p></div>
-      <span class="signal conv">▲ mejora</span>
-    </div>
-    <div class="chart-box"><canvas id="chartGestionFull"></canvas></div>
-    <div class="legend" id="legendGestionFull"></div>
-    <p class="source">Proyección: campo 1–10 de cada mes · Isasi-Burdman: campo en torno al 20 de cada mes · preguntas distintas entre consultoras</p>
   </div>
   <div id="tablaVar" style="margin-bottom:16px"></div>
   <p class="source" style="margin-top:-8px;margin-bottom:16px">Tabla por variable desplegable · filas = consultoras · Δ = última medición vs. la anterior de la misma consultora · gestión ≠ imagen personal · preguntas distintas: no comparar niveles entre consultoras · * valor del Radar publicado sin fila en la base (pendiente de cargar)</p>
@@ -1522,12 +1525,19 @@ function initTab(tab){
       [CROSS.imgNeg.label,CROSS.gestDesaprob.label],
       [CROSS.imgNeg.color,CROSS.gestDesaprob.color]);
     // Full gestión trend
-    mkLine('chartGestionFull',MG,[
+    var defsGF=[
       {label:'Proyección · aprobación',data:GESTION.Proyección.aprob,color:'var(--c2)'},
       {label:'Isasi-Burdman · aprobación',data:GESTION.Isasi.aprob,color:'var(--c4)'},
       {label:'Isasi-Burdman · imagen positiva',data:IMG.Isasi.pos,color:'var(--warn)'},
       {label:'Zuban Córdoba · aprobación',data:GESTION.Zuban.aprob,color:'var(--c3)'}
-    ]);
+    ];
+    mkLine('chartGestionFull',MG,defsGF);
+    var subGF=document.getElementById('subGestionFull');
+    if(subGF) subGF.textContent=defsGF.map(function(d){
+      var ms=MG.filter(function(m,i){return d.data&&d.data[i]!=null;});
+      var corto=function(m){return m.toLowerCase().replace('-26','');};
+      return d.label+' ('+(ms.length?(ms.length>1?corto(ms[0])+'–'+corto(ms[ms.length-1]):corto(ms[0])):'sin dato')+')';
+    }).join(' · ');
     buildLegend('legendGestionFull','chartGestionFull',
       ['Proyección · aprobación','Isasi-Burdman · aprobación','Isasi-Burdman · imagen positiva','Zuban Córdoba · aprobación'],
       ['var(--c2)','var(--c4)','var(--warn)','var(--c3)']);
