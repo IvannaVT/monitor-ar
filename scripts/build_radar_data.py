@@ -511,6 +511,11 @@ def construir():
                           for h in b.get('hallazgos', [])]})
     D['DESTACADOS'] = DEST
 
+    # cifras sueltas del HTML atadas a la base: cada clave es un data-cifra del index.
+    # Es el mecanismo general contra el texto escrito a mano, para los bloques cuyo
+    # maquetado no conviene reconstruir entero.
+    D['CIFRAS'] = {k: resolver_plantilla(v, f'cifra «{k}»') for k, v in cfg.get('cifras', {}).items()}
+
     # ejes comparables: cada consultora por separado; los rangos solo dentro de un mismo
     # eje y una misma composición. Lo que no encaja en ningún eje no se fuerza: se lista aparte.
     reclamadas = set()

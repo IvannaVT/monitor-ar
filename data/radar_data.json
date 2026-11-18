@@ -2698,6 +2698,18 @@
    ]
   }
  ],
+ "CIFRAS": {
+  "voto_zuban_lla_oct": "31,5%",
+  "voto_zuban_pj_oct": "36,6%",
+  "voto_zuban_lla_delta": "+1,4 pp vs Sep-26",
+  "voto_zuban_pj_delta": "+2,6 pp vs Sep-26",
+  "voto_zuban_difer_oct": "+5,1 pp",
+  "voto_zuban_lla_sep": "30,1%",
+  "voto_zuban_pj_sep": "34%",
+  "voto_zuban_difer_sep": "+3,9 pp",
+  "voto_zuban_lla_ago": "28%",
+  "voto_zuban_pj_ago": "31,3%"
+ },
  "EJES": [
   {
    "nombre": "Imagen personal",

@@ -411,17 +411,17 @@ footer a{color:var(--accent)}
     <div class="kpi-grid" style="grid-template-columns:repeat(auto-fit,minmax(160px,1fr));margin-bottom:12px">
       <div class="kpi" style="border-top:3px solid var(--c1)">
         <div class="kpi-label">LLA · Zuban (I)</div>
-        <div class="kpi-num">31,5%</div>
-        <div class="kpi-meta"><span class="kpi-delta up">+1,4</span><span class="kpi-sub">vs sep-26</span></div>
+        <div class="kpi-num"><span data-cifra="voto_zuban_lla_oct">31,5%</span></div>
+        <div class="kpi-meta"><span class="kpi-sub"><span data-cifra="voto_zuban_lla_delta">+1,4 pp vs Sep-26</span></span></div>
       </div>
       <div class="kpi" style="border-top:3px solid var(--c2)">
         <div class="kpi-label">PJ · Zuban (I)</div>
-        <div class="kpi-num">36,6%</div>
-        <div class="kpi-meta"><span class="kpi-delta up">+2,6</span><span class="kpi-sub">vs sep-26</span></div>
+        <div class="kpi-num"><span data-cifra="voto_zuban_pj_oct">36,6%</span></div>
+        <div class="kpi-meta"><span class="kpi-sub"><span data-cifra="voto_zuban_pj_delta">+2,6 pp vs Sep-26</span></span></div>
       </div>
       <div class="kpi" style="border-top:3px solid var(--neg)">
         <div class="kpi-label">Diferencial PJ–LLA</div>
-        <div class="kpi-num">+5,1 p.p.</div>
+        <div class="kpi-num"><span data-cifra="voto_zuban_difer_oct">+5,1 pp</span></div>
         <div class="kpi-meta"><span class="kpi-sub">PJ por encima · oct-26</span></div>
       </div>
       <div class="kpi">
@@ -435,7 +435,7 @@ footer a{color:var(--accent)}
         <span class="hallazgo-dir h-mix">SEÑAL — DATO ÚNICO</span>
         <span class="hallazgo-src">Zuban Córdoba · Escenario I · oct-26</span>
       </div>
-      <div class="hallazgo-txt">LLA 31,5% / PJ 36,6% en el Escenario I de Zuban (oct-26, n≈1.800, Mixto). PJ supera a LLA por 5,1 p.p. — diferencial mayor que en mediciones anteriores de la misma consultora (sep: LLA 30,1% / PJ 34,0%, brecha PJ +3,9 p.p.; variación mensual LLA +1,4 p.p.; ago: LLA 28,0% / PJ 31,3%). Ambos espacios muestran crecimiento. Evidencia BAJA: dato único de una sola consultora. No clasificar como tendencia hasta confirmar con otras fuentes.</div>
+      <div class="hallazgo-txt">LLA <span data-cifra="voto_zuban_lla_oct">31,5%</span> / PJ <span data-cifra="voto_zuban_pj_oct">36,6%</span> en el Escenario I de Zuban (oct-26, n≈1.800, Mixto). PJ supera a LLA por <span data-cifra="voto_zuban_difer_oct">+5,1 pp</span> — diferencial mayor que en mediciones anteriores de la misma consultora (sep: LLA <span data-cifra="voto_zuban_lla_sep">30,1%</span> / PJ <span data-cifra="voto_zuban_pj_sep">34%</span>, brecha PJ <span data-cifra="voto_zuban_difer_sep">+3,9 pp</span>; variación mensual LLA <span data-cifra="voto_zuban_lla_delta">+1,4 pp vs Sep-26</span>; ago: LLA <span data-cifra="voto_zuban_lla_ago">28%</span> / PJ <span data-cifra="voto_zuban_pj_ago">31,3%</span>). Ambos espacios muestran crecimiento. Evidencia BAJA: dato único de una sola consultora. No clasificar como tendencia hasta confirmar con otras fuentes.</div>
     </div>
     <button class="btn-ver-anteriores" data-toggle="voto-oct-ant" onclick="toggleMesAnterior('voto-oct-ant')">▾ Ver meses anteriores (feb–sep)</button>
     <div id="voto-oct-ant" class="mes-contenido-anterior">
@@ -1229,8 +1229,8 @@ function toggleDataset(chartId,idx){
 }
 
 /* ── DATA — generado por scripts/build_radar_data.py en data/radar_data.json; no editar valores aquí ─ */
-let MESI,MIPC,IPC,ICC,ICG,MINFL,IPC_FULL,IPCBA_FULL,MBRECHA,BRECHA,TIPCBA_MES,TIPCBA_IA,TIPCBA_BIENES,TIPCBA_SERV,TIPCBA_ESTAC,TIPCBA_REG,TIPCBA_VAR,TIPCBA_ACUM,MIPCACUM,IPC_ACUM,IPCBA_ACUM_FULL,BRECHA_ACUM,MIIA,IPC_IA,IPC_IA_9,IPCBA_ACUM_9,IPCBA_IA_9,ICC_CABA_13,ICC_INT_13,ICC_GBA_14,MV,CONS,lastRows,MI,IMG,MG,GESTION,CROSS_MES,CROSS,ISN_RD_MES,ISN_RD_VALS,ISN_EJE_LABELS,ISN_EJE_VALS,MILEI_SEP_LABELS,MILEI_SEP_VALS,OPOS_LABELS,OPOS_VALS,MSL_MES,SL_POR_MES,SL_CONSULT_LABELS,SL_CONSULT_VALS,SL_INFORMES,GAP_STATUS,KPI,UPD,COBERTURA,META,SECUNDARIA,EVOL,ENCABEZADO,SL_TRAMOS,AGENDA_INFL,SL_ESTUDIOS,NOTA_SECUNDARIA,GAP,SEMAFORO,AGENDA_RANKING,EJES,PREGUNTAS_ESPECIFICAS,DESTACADOS;
-function applyData(D){MESI=D.MESI;MIPC=D.MIPC;IPC=D.IPC;ICC=D.ICC;ICG=D.ICG;MINFL=D.MINFL;IPC_FULL=D.IPC_FULL;IPCBA_FULL=D.IPCBA_FULL;MBRECHA=D.MBRECHA;BRECHA=D.BRECHA;TIPCBA_MES=D.TIPCBA_MES;TIPCBA_IA=D.TIPCBA_IA;TIPCBA_BIENES=D.TIPCBA_BIENES;TIPCBA_SERV=D.TIPCBA_SERV;TIPCBA_ESTAC=D.TIPCBA_ESTAC;TIPCBA_REG=D.TIPCBA_REG;TIPCBA_VAR=D.TIPCBA_VAR;TIPCBA_ACUM=D.TIPCBA_ACUM;MIPCACUM=D.MIPCACUM;IPC_ACUM=D.IPC_ACUM;IPCBA_ACUM_FULL=D.IPCBA_ACUM_FULL;BRECHA_ACUM=D.BRECHA_ACUM;MIIA=D.MIIA;IPC_IA=D.IPC_IA;IPC_IA_9=D.IPC_IA_9;IPCBA_ACUM_9=D.IPCBA_ACUM_9;IPCBA_IA_9=D.IPCBA_IA_9;ICC_CABA_13=D.ICC_CABA_13;ICC_INT_13=D.ICC_INT_13;ICC_GBA_14=D.ICC_GBA_14;MV=D.MV;CONS=D.CONS;lastRows=D.lastRows;MI=D.MI;IMG=D.IMG;MG=D.MG;GESTION=D.GESTION;CROSS_MES=D.CROSS_MES;CROSS=D.CROSS;ISN_RD_MES=D.ISN_RD_MES;ISN_RD_VALS=D.ISN_RD_VALS;ISN_EJE_LABELS=D.ISN_EJE_LABELS;ISN_EJE_VALS=D.ISN_EJE_VALS;MILEI_SEP_LABELS=D.MILEI_SEP_LABELS;MILEI_SEP_VALS=D.MILEI_SEP_VALS;OPOS_LABELS=D.OPOS_LABELS;OPOS_VALS=D.OPOS_VALS;MSL_MES=D.MSL_MES;SL_POR_MES=D.SL_POR_MES;SL_CONSULT_LABELS=D.SL_CONSULT_LABELS;SL_CONSULT_VALS=D.SL_CONSULT_VALS;SL_INFORMES=D.SL_INFORMES;GAP_STATUS=D.GAP_STATUS;KPI=D.KPI;UPD=D.UPD;COBERTURA=D.COBERTURA;META=D.META;SECUNDARIA=D.SECUNDARIA||[];EVOL=D.EVOL||{};ENCABEZADO=D.ENCABEZADO;SL_TRAMOS=D.SL_TRAMOS||[];AGENDA_INFL=D.AGENDA_INFL;SL_ESTUDIOS=D.SL_ESTUDIOS||[];NOTA_SECUNDARIA=D.NOTA_SECUNDARIA||[];GAP=D.GAP||[];SEMAFORO=D.SEMAFORO||[];AGENDA_RANKING=D.AGENDA_RANKING||{items:[]};EJES=D.EJES||[];PREGUNTAS_ESPECIFICAS=D.PREGUNTAS_ESPECIFICAS||[];DESTACADOS=D.DESTACADOS||[];}
+let MESI,MIPC,IPC,ICC,ICG,MINFL,IPC_FULL,IPCBA_FULL,MBRECHA,BRECHA,TIPCBA_MES,TIPCBA_IA,TIPCBA_BIENES,TIPCBA_SERV,TIPCBA_ESTAC,TIPCBA_REG,TIPCBA_VAR,TIPCBA_ACUM,MIPCACUM,IPC_ACUM,IPCBA_ACUM_FULL,BRECHA_ACUM,MIIA,IPC_IA,IPC_IA_9,IPCBA_ACUM_9,IPCBA_IA_9,ICC_CABA_13,ICC_INT_13,ICC_GBA_14,MV,CONS,lastRows,MI,IMG,MG,GESTION,CROSS_MES,CROSS,ISN_RD_MES,ISN_RD_VALS,ISN_EJE_LABELS,ISN_EJE_VALS,MILEI_SEP_LABELS,MILEI_SEP_VALS,OPOS_LABELS,OPOS_VALS,MSL_MES,SL_POR_MES,SL_CONSULT_LABELS,SL_CONSULT_VALS,SL_INFORMES,GAP_STATUS,KPI,UPD,COBERTURA,META,SECUNDARIA,EVOL,ENCABEZADO,SL_TRAMOS,AGENDA_INFL,SL_ESTUDIOS,NOTA_SECUNDARIA,GAP,SEMAFORO,AGENDA_RANKING,EJES,PREGUNTAS_ESPECIFICAS,DESTACADOS,CIFRAS;
+function applyData(D){MESI=D.MESI;MIPC=D.MIPC;IPC=D.IPC;ICC=D.ICC;ICG=D.ICG;MINFL=D.MINFL;IPC_FULL=D.IPC_FULL;IPCBA_FULL=D.IPCBA_FULL;MBRECHA=D.MBRECHA;BRECHA=D.BRECHA;TIPCBA_MES=D.TIPCBA_MES;TIPCBA_IA=D.TIPCBA_IA;TIPCBA_BIENES=D.TIPCBA_BIENES;TIPCBA_SERV=D.TIPCBA_SERV;TIPCBA_ESTAC=D.TIPCBA_ESTAC;TIPCBA_REG=D.TIPCBA_REG;TIPCBA_VAR=D.TIPCBA_VAR;TIPCBA_ACUM=D.TIPCBA_ACUM;MIPCACUM=D.MIPCACUM;IPC_ACUM=D.IPC_ACUM;IPCBA_ACUM_FULL=D.IPCBA_ACUM_FULL;BRECHA_ACUM=D.BRECHA_ACUM;MIIA=D.MIIA;IPC_IA=D.IPC_IA;IPC_IA_9=D.IPC_IA_9;IPCBA_ACUM_9=D.IPCBA_ACUM_9;IPCBA_IA_9=D.IPCBA_IA_9;ICC_CABA_13=D.ICC_CABA_13;ICC_INT_13=D.ICC_INT_13;ICC_GBA_14=D.ICC_GBA_14;MV=D.MV;CONS=D.CONS;lastRows=D.lastRows;MI=D.MI;IMG=D.IMG;MG=D.MG;GESTION=D.GESTION;CROSS_MES=D.CROSS_MES;CROSS=D.CROSS;ISN_RD_MES=D.ISN_RD_MES;ISN_RD_VALS=D.ISN_RD_VALS;ISN_EJE_LABELS=D.ISN_EJE_LABELS;ISN_EJE_VALS=D.ISN_EJE_VALS;MILEI_SEP_LABELS=D.MILEI_SEP_LABELS;MILEI_SEP_VALS=D.MILEI_SEP_VALS;OPOS_LABELS=D.OPOS_LABELS;OPOS_VALS=D.OPOS_VALS;MSL_MES=D.MSL_MES;SL_POR_MES=D.SL_POR_MES;SL_CONSULT_LABELS=D.SL_CONSULT_LABELS;SL_CONSULT_VALS=D.SL_CONSULT_VALS;SL_INFORMES=D.SL_INFORMES;GAP_STATUS=D.GAP_STATUS;KPI=D.KPI;UPD=D.UPD;COBERTURA=D.COBERTURA;META=D.META;SECUNDARIA=D.SECUNDARIA||[];EVOL=D.EVOL||{};ENCABEZADO=D.ENCABEZADO;SL_TRAMOS=D.SL_TRAMOS||[];AGENDA_INFL=D.AGENDA_INFL;SL_ESTUDIOS=D.SL_ESTUDIOS||[];NOTA_SECUNDARIA=D.NOTA_SECUNDARIA||[];GAP=D.GAP||[];SEMAFORO=D.SEMAFORO||[];AGENDA_RANKING=D.AGENDA_RANKING||{items:[]};EJES=D.EJES||[];PREGUNTAS_ESPECIFICAS=D.PREGUNTAS_ESPECIFICAS||[];DESTACADOS=D.DESTACADOS||[];CIFRAS=D.CIFRAS||{};}
 
 /* ── CHART HELPERS ──────────────────────────── */
 function baseOpts(){
@@ -1746,6 +1746,12 @@ function renderEspecificas(){
        <td style="font-size:10px;color:var(--fg-dim)">${f.filas.length?'N2 '+f.filas.join(', '):'—'}</td></tr>`).join('')).join('')}
     </tbody></table></div></details>`;
 }
+function renderCifras(){
+  document.querySelectorAll("[data-cifra]").forEach(function(e){
+    var v=CIFRAS[e.getAttribute("data-cifra")];
+    if(v!=null) e.textContent=v;
+  });
+}
 function renderDestacados(){
   var c=document.getElementById('destacadosImagen'); if(!c) return;
   c.innerHTML=(DESTACADOS||[]).map(function(b){
@@ -1988,7 +1994,7 @@ document.querySelectorAll('.mes-btn').forEach(b=>b.addEventListener('click',()=>
 }));
 fetch('./data/radar_data.json',{cache:'no-store'})
   .then(r=>{if(!r.ok)throw new Error('HTTP '+r.status);return r.json();})
-  .then(D=>{applyData(D);renderStaticTables();renderKPIs();renderEncabezado();renderRangos();renderTablaVar();renderSLEstudios();renderEvol();renderUpd();renderSec();renderNotaSec();renderCobertura();renderDestacados();initTab('indicadores');applyHash();})
+  .then(D=>{applyData(D);renderStaticTables();renderKPIs();renderEncabezado();renderRangos();renderTablaVar();renderSLEstudios();renderEvol();renderUpd();renderSec();renderNotaSec();renderCobertura();renderDestacados();renderCifras();initTab('indicadores');applyHash();})
   .catch(err=>{console.error('Error cargando radar_data.json:',err);
     document.querySelector('.main-content').insertAdjacentHTML('afterbegin',`<p class="notice" style="color:var(--neg)">No se pudieron cargar los datos (data/radar_data.json): ${esc(err.message)}. Abrir el sitio desde un servidor (no como archivo local).</p>`);});
 

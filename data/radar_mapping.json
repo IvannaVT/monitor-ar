@@ -3807,5 +3807,17 @@
         }
       ]
     }
-  ]
+  ],
+  "cifras": {
+    "voto_zuban_lla_oct": "{val:CONS.Zuban.lla|Oct-26}",
+    "voto_zuban_pj_oct": "{val:CONS.Zuban.pj|Oct-26}",
+    "voto_zuban_lla_delta": "{delta:CONS.Zuban.lla|Oct-26}",
+    "voto_zuban_pj_delta": "{delta:CONS.Zuban.pj|Oct-26}",
+    "voto_zuban_difer_oct": "{difer:CONS.Zuban.pj.lla|Oct-26}",
+    "voto_zuban_lla_sep": "{val:CONS.Zuban.lla|Sep-26}",
+    "voto_zuban_pj_sep": "{val:CONS.Zuban.pj|Sep-26}",
+    "voto_zuban_difer_sep": "{difer:CONS.Zuban.pj.lla|Sep-26}",
+    "voto_zuban_lla_ago": "{val:CONS.Zuban.lla|Ago-26}",
+    "voto_zuban_pj_ago": "{val:CONS.Zuban.pj|Ago-26}"
+  }
 }

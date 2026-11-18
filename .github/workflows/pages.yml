@@ -18,6 +18,7 @@ jobs:
         run: |
           python3 monitor_leg_build.py --check
           python3 scripts/build_radar_data.py --check
+          python3 scripts/check_cifras.py
           python3 -m unittest discover -s tests -p 'test_radar_data.py'
       - name: Preparar sitio público
         if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'

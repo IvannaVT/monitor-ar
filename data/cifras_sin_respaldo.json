@@ -1,0 +1,47 @@
+{
+  "_nota": "Cifras del HTML sin respaldo en data/radar_data.json. Cada una necesita un motivo. El control scripts/check_cifras.py falla si aparece una que no esté acá. Sacar de esta lista toda cifra que pase a tener fila en Nivel 2 o a resolverse por plantilla.",
+  "permitidas": [
+    {
+      "valor": "36,3",
+      "seccion": "imagen · agosto",
+      "motivo": "Aprobación de Vozna: el informe la publica pero no tiene fila en Nivel 2. El texto lo dice de forma explícita. Pendiente de cargar.",
+      "pendiente": "cargar fila N2 de VOZNA aprobación jul-26"
+    },
+    {
+      "valor": "68,8",
+      "seccion": "sl · mayo",
+      "motivo": "Reputación Digital, «Fatiga de imagen antes que cambio de voto» (mayo 2026). Los únicos id_indicador de ese informe en Nivel 2 son RD_ISN_*: el desglose de sentimiento no se volcó.",
+      "pendiente": "cargar filas N2 de sentimiento RD mayo, o retirar el bloque"
+    },
+    {
+      "valor": "20,8",
+      "seccion": "sl · mayo",
+      "motivo": "Ídem 68,8: mismo bloque de Reputación Digital mayo 2026.",
+      "pendiente": "cargar filas N2 de sentimiento RD mayo, o retirar el bloque"
+    },
+    {
+      "valor": "10,4",
+      "seccion": "sl · mayo",
+      "motivo": "Ídem 68,8: mismo bloque de Reputación Digital mayo 2026.",
+      "pendiente": "cargar filas N2 de sentimiento RD mayo, o retirar el bloque"
+    },
+    {
+      "valor": "73,2",
+      "seccion": "sl · mayo",
+      "motivo": "Emoción dominante del mismo informe de Reputación Digital mayo 2026, sin fila en Nivel 2.",
+      "pendiente": "cargar filas N2 de emoción RD mayo, o retirar el bloque"
+    },
+    {
+      "valor": "26,4",
+      "seccion": "sl · mayo",
+      "motivo": "Ídem 73,2: mismo bloque de Reputación Digital mayo 2026.",
+      "pendiente": "cargar filas N2 de emoción RD mayo, o retirar el bloque"
+    },
+    {
+      "valor": "13,5",
+      "seccion": "semáforo",
+      "motivo": "No es un dato del tablero: es la cita de la cifra retirada el 18/11, dentro de la nota que explica por qué se retiró. Debe seguir visible para dejar rastro.",
+      "pendiente": "ninguno"
+    }
+  ]
+}
