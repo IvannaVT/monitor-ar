@@ -5090,10 +5090,55 @@
       "BAL_PROYECCION_SEP_NS",
       "BAL_PROYECCION_OCT_NS"
      ]
+    },
+    {
+     "campo": "QMonitor · Javier Milei",
+     "mes": "",
+     "composicion": "serie propia",
+     "n": 1,
+     "rango_valido": false,
+     "direccion": "serie intra-consultora",
+     "consultoras": {},
+     "min": null,
+     "max": null,
+     "titulo": "QMonitor · balotaje Milei–Kicillof",
+     "evidencia": "ALTA intra-serie",
+     "nota": "",
+     "filas": [
+      1613,
+      1615,
+      1617,
+      1619,
+      1621
+     ],
+     "fuentes_complementarias": []
+    },
+    {
+     "campo": "QMonitor · Axel Kicillof",
+     "mes": "",
+     "composicion": "serie propia",
+     "n": 1,
+     "rango_valido": false,
+     "direccion": "serie intra-consultora",
+     "consultoras": {},
+     "min": null,
+     "max": null,
+     "titulo": "QMonitor · balotaje Milei–Kicillof",
+     "evidencia": "ALTA intra-serie",
+     "nota": "Kicillof supera a Milei desde el corte de ago-26 y abre la mayor distancia en nov-26: 45 contra 40.",
+     "filas": [
+      1614,
+      1616,
+      1618,
+      1620,
+      1622
+     ],
+     "fuentes_complementarias": []
     }
    ],
    "fuentes": [
-    "Proyección"
+    "Proyección",
+    "QMonitor"
    ]
   },
   {
@@ -6693,6 +6738,150 @@
       "delta": 0.6,
       "evidencia": "ALTA",
       "nota": ""
+     }
+    ]
+   },
+   {
+    "titulo": "QMonitor · balotaje Milei–Kicillof",
+    "modulo": "Intención de voto",
+    "nota": "Serie propia de QMonitor, en panel separado de la de Proyección: los niveles no se comparan entre consultoras. Cinco cortes leídos de la lámina evolutiva de la página 47 del informe de noviembre. La consultora no mide balotaje todos los meses. Los meses son los que enuncia QMonitor: su lámina rotula por mes de campo y su portada enuncia el mes siguiente, equivalencia verificada contra las filas ya cargadas.",
+    "meses": [
+     "Jun-26",
+     "Ago-26",
+     "Sep-26",
+     "Oct-26",
+     "Nov-26"
+    ],
+    "filas": [
+     {
+      "etiqueta": "QMonitor · Javier Milei",
+      "consultora": "QMonitor",
+      "celdas": {
+       "Jun-26": {
+        "v": 37,
+        "fila": 1613,
+        "base": "nivel2_indicadores",
+        "file_id": "1rD7VKuwogWSGUEFj8D7yy_Qe8BUjez3S",
+        "clave_fuente": "",
+        "url_fuente": "",
+        "campo": "",
+        "secundaria": "",
+        "unidad": "%"
+       },
+       "Ago-26": {
+        "v": 41,
+        "fila": 1615,
+        "base": "nivel2_indicadores",
+        "file_id": "1rD7VKuwogWSGUEFj8D7yy_Qe8BUjez3S",
+        "clave_fuente": "",
+        "url_fuente": "",
+        "campo": "",
+        "secundaria": "",
+        "unidad": "%"
+       },
+       "Sep-26": {
+        "v": 40,
+        "fila": 1617,
+        "base": "nivel2_indicadores",
+        "file_id": "1rD7VKuwogWSGUEFj8D7yy_Qe8BUjez3S",
+        "clave_fuente": "",
+        "url_fuente": "",
+        "campo": "",
+        "secundaria": "",
+        "unidad": "%"
+       },
+       "Oct-26": {
+        "v": 42,
+        "fila": 1619,
+        "base": "nivel2_indicadores",
+        "file_id": "1rD7VKuwogWSGUEFj8D7yy_Qe8BUjez3S",
+        "clave_fuente": "",
+        "url_fuente": "",
+        "campo": "",
+        "secundaria": "",
+        "unidad": "%"
+       },
+       "Nov-26": {
+        "v": 40,
+        "fila": 1621,
+        "base": "nivel2_indicadores",
+        "file_id": "1rD7VKuwogWSGUEFj8D7yy_Qe8BUjez3S",
+        "clave_fuente": "",
+        "url_fuente": "",
+        "campo": "2026-10-08→2026-10-26",
+        "secundaria": "",
+        "unidad": "%"
+       }
+      },
+      "n": 5,
+      "delta": -2,
+      "evidencia": "ALTA intra-serie",
+      "nota": ""
+     },
+     {
+      "etiqueta": "QMonitor · Axel Kicillof",
+      "consultora": "QMonitor",
+      "celdas": {
+       "Jun-26": {
+        "v": 35,
+        "fila": 1614,
+        "base": "nivel2_indicadores",
+        "file_id": "1rD7VKuwogWSGUEFj8D7yy_Qe8BUjez3S",
+        "clave_fuente": "",
+        "url_fuente": "",
+        "campo": "",
+        "secundaria": "",
+        "unidad": "%"
+       },
+       "Ago-26": {
+        "v": 42,
+        "fila": 1616,
+        "base": "nivel2_indicadores",
+        "file_id": "1rD7VKuwogWSGUEFj8D7yy_Qe8BUjez3S",
+        "clave_fuente": "",
+        "url_fuente": "",
+        "campo": "",
+        "secundaria": "",
+        "unidad": "%"
+       },
+       "Sep-26": {
+        "v": 42,
+        "fila": 1618,
+        "base": "nivel2_indicadores",
+        "file_id": "1rD7VKuwogWSGUEFj8D7yy_Qe8BUjez3S",
+        "clave_fuente": "",
+        "url_fuente": "",
+        "campo": "",
+        "secundaria": "",
+        "unidad": "%"
+       },
+       "Oct-26": {
+        "v": 41,
+        "fila": 1620,
+        "base": "nivel2_indicadores",
+        "file_id": "1rD7VKuwogWSGUEFj8D7yy_Qe8BUjez3S",
+        "clave_fuente": "",
+        "url_fuente": "",
+        "campo": "",
+        "secundaria": "",
+        "unidad": "%"
+       },
+       "Nov-26": {
+        "v": 45,
+        "fila": 1622,
+        "base": "nivel2_indicadores",
+        "file_id": "1rD7VKuwogWSGUEFj8D7yy_Qe8BUjez3S",
+        "clave_fuente": "",
+        "url_fuente": "",
+        "campo": "2026-10-08→2026-10-26",
+        "secundaria": "",
+        "unidad": "%"
+       }
+      },
+      "n": 5,
+      "delta": 4,
+      "evidencia": "ALTA intra-serie",
+      "nota": "Kicillof supera a Milei desde el corte de ago-26 y abre la mayor distancia en nov-26: 45 contra 40."
      }
     ]
    }
@@ -13232,7 +13421,9 @@
      "NI:1523",
      "NI:1524",
      "NI:1525",
-     "NI:1526"
+     "NI:1526",
+     "NI:1619",
+     "NI:1620"
     ],
     "pendiente": [
      "Synopsis, ola con campo 12–17/10 (difundida 31/10): Peronismo 35 / LLA 33,6, localizada en encuestas-argentinas.com (registro https://x.com/_EncuestAR_/status/2116669248479047801, consultado 2026-11-11). Candidato pendiente: no hay informe en Drive ni enlace al original, y no se puede acreditar pregunta ni mes enunciado por Synopsis. No se carga y no reemplaza la ola 8–15/9 que hoy ocupa oct-26 (N2 fila 1208). Necesita: informe original de Synopsis de esa ola, para fijar el mes que enuncia"
@@ -13276,7 +13467,9 @@
      "NI:1599",
      "NI:1600",
      "NI:1601",
-     "NI:1602"
+     "NI:1602",
+     "NI:1621",
+     "NI:1622"
     ],
     "pendiente": [
      "QMonitor noviembre: balotaje y pisos/techos no relevados todavía. Necesita: lectura de las pp. 47–55 del PDF",
@@ -13570,12 +13763,12 @@
    "data/bases/radar_fuentes_complementarias.tsv",
    "data/radar_mapping.json"
   ],
-  "valores_trazados": 412,
+  "valores_trazados": 422,
   "nuevos": 172,
   "corregidos": 15,
   "retirados": 0,
   "puntuales": 0,
-  "en_series_de_evolucion": 179,
+  "en_series_de_evolucion": 189,
   "fuente_secundaria": [
    "FUENTE SECUNDARIA · encuestas-argentinas.com · https://encuestas-argentinas.com/encuestas/ (ficha del 04/08/2026, registro sin URL propia en el listado) · consultado 2026-11-18 · fuente original: Zuban Córdoba",
    "FUENTE SECUNDARIA · encuestas-argentinas.com · https://encuestas-argentinas.com/encuestas/ (ficha del 04/08/2026, registro sin URL propia; hilo X: https://x.com/_EncuestAR_/status/2084520359408148892) · consultado 2026-11-18 · fuente original: Zuban Córdoba",
