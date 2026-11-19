@@ -581,6 +581,72 @@ footer a{color:var(--accent)}
   <div id="tablaVar" style="margin-bottom:16px"></div>
   <p class="source" style="margin-top:-8px;margin-bottom:16px">Tabla por variable desplegable · filas = consultoras · Δ = última medición vs. la anterior de la misma consultora · gestión ≠ imagen personal · preguntas distintas: no comparar niveles entre consultoras · * valor del Radar publicado sin fila en la base (pendiente de cargar)</p>
 
+  <!-- ── CO-MOVIMIENTO IMAGEN–GESTIÓN (pares comparables, generado desde PARES) ── -->
+  <div id="parModulo" style="margin:28px 0 8px"><p class="sec">Imagen de Milei y valoración de la gestión nacional · pares comparables</p></div>
+  <div class="info-box" style="margin-bottom:12px">
+    <strong>Qué responde:</strong> cuando cambia la imagen de Milei, ¿se mueve en el mismo sentido, en el opuesto o de forma mixta la valoración de la gestión nacional? Solo se emparejan mediciones de <strong>la misma consultora, misma ola</strong> (mismo mes enunciado y mismas fechas de campo) y mismo universo. Dos comparaciones independientes: imagen positiva ↔ aprobación, imagen negativa ↔ desaprobación publicada. <strong>Brecha = gestión − imagen</strong> (p.p.). Sin promedios entre consultoras; la lectura es sobre porcentajes agregados por encuesta.
+  </div>
+  <div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-bottom:12px">
+    <label style="font-size:12px;color:var(--fg-dim)">Consultora <select id="parSel" style="margin-left:6px;background:var(--bg-card,transparent);color:var(--fg);border:1px solid var(--border);border-radius:6px;padding:4px 8px;font-size:12px"></select></label>
+    <span id="parSelNota" class="source" style="margin:0"></span>
+  </div>
+  <p class="sec" style="margin:14px 0 6px;font-size:12px">Valoración favorable</p>
+  <div class="mosaic">
+    <div class="chart-wrap">
+      <div class="chart-head"><div><h3>Imagen positiva · Milei</h3><p>una línea por consultora · eje común</p></div></div>
+      <div class="chart-box med"><canvas id="chartParFavI"></canvas></div>
+    </div>
+    <div class="chart-wrap">
+      <div class="chart-head"><div><h3>Aprobación · gestión nacional</h3><p>una línea por consultora · eje común</p></div></div>
+      <div class="chart-box med"><canvas id="chartParFavG"></canvas></div>
+    </div>
+  </div>
+  <div class="legend" id="legendParFav"></div>
+  <div class="table-wrap" id="parTabFav" style="margin:8px 0 0"></div>
+  <div class="source" id="parLecFav" style="margin:8px 0 14px"></div>
+  <p class="sec" style="margin:14px 0 6px;font-size:12px">Valoración desfavorable</p>
+  <div class="mosaic">
+    <div class="chart-wrap">
+      <div class="chart-head"><div><h3>Imagen negativa · Milei</h3><p>una línea por consultora · eje común</p></div></div>
+      <div class="chart-box med"><canvas id="chartParDesI"></canvas></div>
+    </div>
+    <div class="chart-wrap">
+      <div class="chart-head"><div><h3>Desaprobación · gestión nacional</h3><p>una línea por consultora · eje común</p></div></div>
+      <div class="chart-box med"><canvas id="chartParDesG"></canvas></div>
+    </div>
+  </div>
+  <div class="legend" id="legendParDes"></div>
+  <div class="table-wrap" id="parTabDes" style="margin:8px 0 0"></div>
+  <div class="source" id="parLecDes" style="margin:8px 0 14px"></div>
+  <p class="source" style="margin:-6px 0 12px">Los huecos del gráfico son olas sin medición comparable (la tabla indica qué falta). Un hueco no se completa por diferencia ni por interpolación.</p>
+  <div class="mosaic">
+    <div class="chart-wrap">
+      <div class="chart-head">
+        <div><h3>Cambios entre olas · favorable</h3><p>cada punto = un cambio entre dos olas consecutivas de una consultora</p></div>
+      </div>
+      <div class="chart-box tall"><canvas id="chartParScFav"></canvas></div>
+      <div class="legend" id="legendParScFav"></div>
+    </div>
+    <div class="chart-wrap">
+      <div class="chart-head">
+        <div><h3>Cambios entre olas · desfavorable</h3><p>x = Δ imagen negativa · y = Δ desaprobación (p.p.)</p></div>
+      </div>
+      <div class="chart-box tall"><canvas id="chartParScDes"></canvas></div>
+      <div class="legend" id="legendParScDes"></div>
+    </div>
+  </div>
+  <p class="source" id="parPie" style="margin:-6px 0 12px"></p>
+  <div id="parCobDes" class="info-box" style="margin-bottom:12px"></div>
+  <details class="det-fin" id="parAuditoria"><summary>Auditoría de pares incluidos y excluidos · <span id="parAudN"></span></summary>
+    <div style="display:flex;gap:10px;flex-wrap:wrap;margin:8px 0;font-size:12px;color:var(--fg-dim)">
+      <label>Comparación <select id="parAudPan" style="background:transparent;color:var(--fg);border:1px solid var(--border);border-radius:6px;padding:3px 6px"><option value="">Ambas</option><option value="fav">Favorable</option><option value="des">Desfavorable</option></select></label>
+      <label>Estado <select id="parAudEst" style="background:transparent;color:var(--fg);border:1px solid var(--border);border-radius:6px;padding:3px 6px"><option value="">Todos</option><option value="incluido">Incluido</option><option value="incompleto">Incompleto</option><option value="excluido">Excluido</option></select></label>
+    </div>
+    <div class="table-wrap" id="parAudTabla"></div>
+    <div id="parAudCambios" class="source"></div>
+    <div id="parReglas" class="source"></div>
+  </details>
+
   <!-- HALLAZGOS OCTUBRE 2026 -->
   <div class="chart-wrap" style="margin-top:20px">
     <div id="destacadosImagen"></div>
@@ -1242,8 +1308,8 @@ function toggleDataset(chartId,idx){
 }
 
 /* ── DATA — generado por scripts/build_radar_data.py en data/radar_data.json; no editar valores aquí ─ */
-let MESI,MIPC,IPC,ICC,ICG,MINFL,IPC_FULL,IPCBA_FULL,MBRECHA,BRECHA,TIPCBA_MES,TIPCBA_IA,TIPCBA_BIENES,TIPCBA_SERV,TIPCBA_ESTAC,TIPCBA_REG,TIPCBA_VAR,TIPCBA_ACUM,MIPCACUM,IPC_ACUM,IPCBA_ACUM_FULL,BRECHA_ACUM,MIIA,IPC_IA,IPC_IA_9,IPCBA_ACUM_9,IPCBA_IA_9,ICC_CABA_13,ICC_INT_13,ICC_GBA_14,MV,CONS,lastRows,MI,IMG,MG,GESTION,CROSS_MES,CROSS,ISN_RD_MES,ISN_RD_VALS,ISN_EJE_LABELS,ISN_EJE_VALS,MILEI_SEP_LABELS,MILEI_SEP_VALS,OPOS_LABELS,OPOS_VALS,MSL_MES,SL_POR_MES,SL_CONSULT_LABELS,SL_CONSULT_VALS,SL_INFORMES,GAP_STATUS,KPI,UPD,COBERTURA,META,SECUNDARIA,EVOL,ENCABEZADO,SL_TRAMOS,SL_ESTUDIOS,NOTA_SECUNDARIA,GAP,SEMAFORO,AGENDA_RANKING,EJES,PREGUNTAS_ESPECIFICAS,DESTACADOS,CIFRAS,OFIOPO;
-function applyData(D){MESI=D.MESI;MIPC=D.MIPC;IPC=D.IPC;ICC=D.ICC;ICG=D.ICG;MINFL=D.MINFL;IPC_FULL=D.IPC_FULL;IPCBA_FULL=D.IPCBA_FULL;MBRECHA=D.MBRECHA;BRECHA=D.BRECHA;TIPCBA_MES=D.TIPCBA_MES;TIPCBA_IA=D.TIPCBA_IA;TIPCBA_BIENES=D.TIPCBA_BIENES;TIPCBA_SERV=D.TIPCBA_SERV;TIPCBA_ESTAC=D.TIPCBA_ESTAC;TIPCBA_REG=D.TIPCBA_REG;TIPCBA_VAR=D.TIPCBA_VAR;TIPCBA_ACUM=D.TIPCBA_ACUM;MIPCACUM=D.MIPCACUM;IPC_ACUM=D.IPC_ACUM;IPCBA_ACUM_FULL=D.IPCBA_ACUM_FULL;BRECHA_ACUM=D.BRECHA_ACUM;MIIA=D.MIIA;IPC_IA=D.IPC_IA;IPC_IA_9=D.IPC_IA_9;IPCBA_ACUM_9=D.IPCBA_ACUM_9;IPCBA_IA_9=D.IPCBA_IA_9;ICC_CABA_13=D.ICC_CABA_13;ICC_INT_13=D.ICC_INT_13;ICC_GBA_14=D.ICC_GBA_14;MV=D.MV;CONS=D.CONS;lastRows=D.lastRows;MI=D.MI;IMG=D.IMG;MG=D.MG;GESTION=D.GESTION;CROSS_MES=D.CROSS_MES;CROSS=D.CROSS;ISN_RD_MES=D.ISN_RD_MES;ISN_RD_VALS=D.ISN_RD_VALS;ISN_EJE_LABELS=D.ISN_EJE_LABELS;ISN_EJE_VALS=D.ISN_EJE_VALS;MILEI_SEP_LABELS=D.MILEI_SEP_LABELS;MILEI_SEP_VALS=D.MILEI_SEP_VALS;OPOS_LABELS=D.OPOS_LABELS;OPOS_VALS=D.OPOS_VALS;MSL_MES=D.MSL_MES;SL_POR_MES=D.SL_POR_MES;SL_CONSULT_LABELS=D.SL_CONSULT_LABELS;SL_CONSULT_VALS=D.SL_CONSULT_VALS;SL_INFORMES=D.SL_INFORMES;GAP_STATUS=D.GAP_STATUS;KPI=D.KPI;UPD=D.UPD;COBERTURA=D.COBERTURA;META=D.META;SECUNDARIA=D.SECUNDARIA||[];EVOL=D.EVOL||{};ENCABEZADO=D.ENCABEZADO;SL_TRAMOS=D.SL_TRAMOS||[];SL_ESTUDIOS=D.SL_ESTUDIOS||[];NOTA_SECUNDARIA=D.NOTA_SECUNDARIA||[];GAP=D.GAP||[];SEMAFORO=D.SEMAFORO||[];AGENDA_RANKING=D.AGENDA_RANKING||{items:[]};EJES=D.EJES||[];PREGUNTAS_ESPECIFICAS=D.PREGUNTAS_ESPECIFICAS||[];DESTACADOS=D.DESTACADOS||[];CIFRAS=D.CIFRAS||{};OFIOPO=D.OFIOPO||null;}
+let PARES,MESI,MIPC,IPC,ICC,ICG,MINFL,IPC_FULL,IPCBA_FULL,MBRECHA,BRECHA,TIPCBA_MES,TIPCBA_IA,TIPCBA_BIENES,TIPCBA_SERV,TIPCBA_ESTAC,TIPCBA_REG,TIPCBA_VAR,TIPCBA_ACUM,MIPCACUM,IPC_ACUM,IPCBA_ACUM_FULL,BRECHA_ACUM,MIIA,IPC_IA,IPC_IA_9,IPCBA_ACUM_9,IPCBA_IA_9,ICC_CABA_13,ICC_INT_13,ICC_GBA_14,MV,CONS,lastRows,MI,IMG,MG,GESTION,CROSS_MES,CROSS,ISN_RD_MES,ISN_RD_VALS,ISN_EJE_LABELS,ISN_EJE_VALS,MILEI_SEP_LABELS,MILEI_SEP_VALS,OPOS_LABELS,OPOS_VALS,MSL_MES,SL_POR_MES,SL_CONSULT_LABELS,SL_CONSULT_VALS,SL_INFORMES,GAP_STATUS,KPI,UPD,COBERTURA,META,SECUNDARIA,EVOL,ENCABEZADO,SL_TRAMOS,SL_ESTUDIOS,NOTA_SECUNDARIA,GAP,SEMAFORO,AGENDA_RANKING,EJES,PREGUNTAS_ESPECIFICAS,DESTACADOS,CIFRAS,OFIOPO;
+function applyData(D){PARES=D.PARES||null;MESI=D.MESI;MIPC=D.MIPC;IPC=D.IPC;ICC=D.ICC;ICG=D.ICG;MINFL=D.MINFL;IPC_FULL=D.IPC_FULL;IPCBA_FULL=D.IPCBA_FULL;MBRECHA=D.MBRECHA;BRECHA=D.BRECHA;TIPCBA_MES=D.TIPCBA_MES;TIPCBA_IA=D.TIPCBA_IA;TIPCBA_BIENES=D.TIPCBA_BIENES;TIPCBA_SERV=D.TIPCBA_SERV;TIPCBA_ESTAC=D.TIPCBA_ESTAC;TIPCBA_REG=D.TIPCBA_REG;TIPCBA_VAR=D.TIPCBA_VAR;TIPCBA_ACUM=D.TIPCBA_ACUM;MIPCACUM=D.MIPCACUM;IPC_ACUM=D.IPC_ACUM;IPCBA_ACUM_FULL=D.IPCBA_ACUM_FULL;BRECHA_ACUM=D.BRECHA_ACUM;MIIA=D.MIIA;IPC_IA=D.IPC_IA;IPC_IA_9=D.IPC_IA_9;IPCBA_ACUM_9=D.IPCBA_ACUM_9;IPCBA_IA_9=D.IPCBA_IA_9;ICC_CABA_13=D.ICC_CABA_13;ICC_INT_13=D.ICC_INT_13;ICC_GBA_14=D.ICC_GBA_14;MV=D.MV;CONS=D.CONS;lastRows=D.lastRows;MI=D.MI;IMG=D.IMG;MG=D.MG;GESTION=D.GESTION;CROSS_MES=D.CROSS_MES;CROSS=D.CROSS;ISN_RD_MES=D.ISN_RD_MES;ISN_RD_VALS=D.ISN_RD_VALS;ISN_EJE_LABELS=D.ISN_EJE_LABELS;ISN_EJE_VALS=D.ISN_EJE_VALS;MILEI_SEP_LABELS=D.MILEI_SEP_LABELS;MILEI_SEP_VALS=D.MILEI_SEP_VALS;OPOS_LABELS=D.OPOS_LABELS;OPOS_VALS=D.OPOS_VALS;MSL_MES=D.MSL_MES;SL_POR_MES=D.SL_POR_MES;SL_CONSULT_LABELS=D.SL_CONSULT_LABELS;SL_CONSULT_VALS=D.SL_CONSULT_VALS;SL_INFORMES=D.SL_INFORMES;GAP_STATUS=D.GAP_STATUS;KPI=D.KPI;UPD=D.UPD;COBERTURA=D.COBERTURA;META=D.META;SECUNDARIA=D.SECUNDARIA||[];EVOL=D.EVOL||{};ENCABEZADO=D.ENCABEZADO;SL_TRAMOS=D.SL_TRAMOS||[];SL_ESTUDIOS=D.SL_ESTUDIOS||[];NOTA_SECUNDARIA=D.NOTA_SECUNDARIA||[];GAP=D.GAP||[];SEMAFORO=D.SEMAFORO||[];AGENDA_RANKING=D.AGENDA_RANKING||{items:[]};EJES=D.EJES||[];PREGUNTAS_ESPECIFICAS=D.PREGUNTAS_ESPECIFICAS||[];DESTACADOS=D.DESTACADOS||[];CIFRAS=D.CIFRAS||{};OFIOPO=D.OFIOPO||null;}
 
 /* ── CHART HELPERS ──────────────────────────── */
 function baseOpts(){
@@ -1290,6 +1356,87 @@ function mkGroupBar(id,labels,datasets){
     }))},
     options:{...baseOpts()}
   });
+}
+
+/* ── PARES imagen × gestión: todo se dibuja desde PARES (data/radar_data.json) ─ */
+const PAR_COL=['#5B9CF6','#A78BFA','#22C07A','#F5A623','#F06070','#2BB8C4','#C97BD1','#8AAFC8','#D4A24C','#7FBF5A','#E07A9A','#6C8EBF','#B58B5A','#9AA5B1'];
+const PAR_PT=['circle','triangle','rect','rectRot','star','crossRot'];
+const parN=v=>v==null?'—':Number(v).toFixed(1).replace('.',',');
+const parS=v=>v==null?'—':(v>0?'+':v<0?'−':'')+Math.abs(v).toFixed(1).replace('.',',');
+const parCol=c=>PAR_COL[PARES.consultoras.indexOf(c)%PAR_COL.length];
+const parPt=c=>PAR_PT[PARES.consultoras.indexOf(c)%PAR_PT.length];
+function parChart(id,type,data,options,plugins){const ctx=document.getElementById(id);if(!ctx)return;if(chartRegistry[id])try{chartRegistry[id].destroy();}catch(e){}chartRegistry[id]=new Chart(ctx,{type,data,options,plugins:plugins||[]});}
+function parRango(){const v=PARES.pares.flatMap(p=>[p.imagen,p.gestion]);return[Math.floor((Math.min(...v)-2)/5)*5,Math.ceil((Math.max(...v)+2)/5)*5];}
+const PAR_TODAS='__todas';
+function parTog(K,i){const ids=['chartPar'+K+'I','chartPar'+K+'G'];let h=null;ids.forEach(id=>{const ch=chartRegistry[id];if(!ch)return;const m=ch.getDatasetMeta(i);if(h===null)h=!m.hidden;m.hidden=h;ch.update();});const it=document.querySelectorAll('#legendPar'+K+' .legend-item')[i];if(it)it.classList.toggle('muted',!!h);}
+function parPaneles(cons){
+  const [lo,hi]=parRango();
+  const lista=cons===PAR_TODAS?PARES.consultoras:[cons];
+  [['fav','Fav','Imagen positiva','Aprobación'],['des','Des','Imagen negativa','Desaprobación']].forEach(([panel,K,ni,ng])=>{
+    const cs=lista.filter(c=>PARES.pares.some(p=>p.cons===c&&p.panel===panel));
+    const mk=(k,estilo)=>cs.map(c=>{const ps=PARES.pares.filter(p=>p.cons===c&&p.panel===panel);const col=cv(parCol(c));
+      return{label:c,data:MI.map(m=>{const p=ps.find(x=>x.mes===m);return p?p[k]:null;}),borderColor:col,backgroundColor:col,borderWidth:2,pointRadius:4,pointStyle:estilo,tension:0,spanGaps:false};});
+    [['I','imagen','circle',ni],['G','gestion','rectRot',ng]].forEach(([S,k,est,nom])=>{
+      const o=baseOpts();o.scales.y.min=lo;o.scales.y.max=hi;o.scales.y.ticks.callback=v=>v+'%';
+      o.plugins.tooltip={mode:'nearest',intersect:true,callbacks:{label:ctx=>ctx.dataset.label+' · '+nom+': '+parN(ctx.parsed.y)+' %'}};
+      parChart('chartPar'+K+S,'line',{labels:MI,datasets:mk(k,est)},o);});
+    document.getElementById('legendPar'+K).innerHTML=cs.length?cs.map((c,i)=>`<div class="legend-item" onclick="parTog('${K}',${i})"><div class="legend-dot" style="background:${cv(parCol(c))}"></div>${esc(c)}</div>`).join(''):'<span class="source">Sin ola comparable para esta consultora en este panel.</span>';
+    const el=document.getElementById('parTab'+K);
+    if(cons===PAR_TODAS){el.innerHTML='<p class="source" style="margin:0">Todas las consultoras con al menos un par comparable, sin promediar. Elegí una consultora para ver el detalle por ola, la brecha y los huecos.</p>';}
+    else{const au=PARES.auditoria.filter(a=>a.cons===cons&&a.panel===panel).sort((a,b)=>MI.indexOf(a.mes)-MI.indexOf(b.mes)||(a.campo_ini||'').localeCompare(b.campo_ini||''));
+      el.innerHTML=au.length?`<table><thead><tr><th>Mes</th><th>Campo</th><th>${ni} %</th><th>${ng} %</th><th>Brecha pp</th><th>Estado</th></tr></thead><tbody>`+au.map(a=>`<tr><td class="num">${esc(a.mes)}</td><td class="num">${esc(a.campo_ini?a.campo_ini.slice(5)+'→'+a.campo_fin.slice(5):'sin fecha de campo')}</td><td class="num">${parN(a.img_valor)}</td><td class="num">${parN(a.ges_valor)}</td><td class="num">${a.gap!=null?parS(a.gap):'—'}</td><td>${a.estado==='incluido'?'<span class="signal conv">par</span>':`<span class="badge-pend">${esc(a.estado)}</span> <span style="color:var(--fg-dim);font-size:11px">${esc(a.motivo)}</span>`}</td></tr>`).join('')+'</tbody></table>':'<p class="source">Esta consultora no tiene mediciones de imagen ni de gestión nacional con estos indicadores en la base.</p>';}
+    document.getElementById('parLec'+K).innerHTML=PARES.resumen[panel].lectura.map(t=>`<p style="margin:0 0 4px">${esc(t)}</p>`).join('');
+  });
+}
+function parScatter(){
+  const todos=PARES.cambios;const R=Math.max(3,Math.ceil(Math.max(...todos.flatMap(c=>[Math.abs(c.d_img),Math.abs(c.d_ges)])))+1);
+  const quad={id:'parQuad',afterDraw(ch){const a=ch.chartArea,c=ch.ctx;c.save();c.font="10px 'IBM Plex Mono',monospace";c.fillStyle=tok('--fg-dim');c.globalAlpha=.7;
+    c.textAlign='right';c.fillText('ambas suben',a.right-6,a.top+12);c.textAlign='left';c.fillText('ambas bajan',a.left+6,a.bottom-6);
+    c.fillText('opuestas',a.left+6,a.top+12);c.textAlign='right';c.fillText('opuestas',a.right-6,a.bottom-6);c.restore();}};
+  [['fav','Fav','Δ imagen positiva (p.p.)','Δ aprobación (p.p.)'],['des','Des','Δ imagen negativa (p.p.)','Δ desaprobación (p.p.)']].forEach(([panel,K,tx,ty])=>{
+    const cs=todos.filter(c=>c.panel===panel);const nom=[...new Set(cs.map(c=>c.cons))];
+    const o=baseOpts();
+    const eje=t=>({min:-R,max:R,title:{display:true,text:t,color:tok('--fg-dim'),font:{size:10}},ticks:{font:{family:"'IBM Plex Mono',monospace",size:10},color:tok('--fg-dim')},grid:{color:ctx=>ctx.tick.value===0?tok('--fg-dim'):tok('--border'),lineWidth:ctx=>ctx.tick.value===0?2:1}});
+    o.scales={x:eje(tx),y:eje(ty)};
+    o.plugins.tooltip={callbacks:{title:()=>'',label:ctx=>{const c=ctx.raw.c;return[c.cons+' · '+c.desde+' → '+c.hasta+' ('+(c.dias!=null?c.dias+' días entre inicios de campo':c.meses+' mes(es)')+')','Campo origen '+c.ci0+'→'+c.cf0+' · destino '+c.ci1+'→'+c.cf1,'Imagen '+parN(c.img0)+' → '+parN(c.img1)+' ('+parS(c.d_img)+' pp)','Gestión '+parN(c.ges0)+' → '+parN(c.ges1)+' ('+parS(c.d_ges)+' pp)','Fuente: N2 filas '+c.fila_img0+'/'+c.fila_ges0+' → '+c.fila_img1+'/'+c.fila_ges1];}}};
+    parChart('chartParSc'+K,'scatter',{datasets:nom.map(n=>({label:n,data:cs.filter(c=>c.cons===n).map(c=>({x:c.d_img,y:c.d_ges,c})),backgroundColor:cv(parCol(n)),borderColor:cv(parCol(n)),pointStyle:parPt(n),pointRadius:7,pointHoverRadius:9}))},o,[quad]);
+    buildLegend('legendParSc'+K,'chartParSc'+K,nom,nom.map(parCol));
+  });
+}
+function parPie(){
+  const r=PARES.resumen,f=x=>`${x.consultoras} consultoras · ${x.olas_pareadas} olas pareadas · ${x.cambios} cambios`;
+  document.getElementById('parPie').textContent='Favorable: '+f(r.fav)+'. Desfavorable: '+f(r.des)+'. Puntos sobre un eje: al menos una medida estable a la precisión publicada. Se excluyen los cambios que saltean una ola intermedia sin par comparable.';
+  const d=r.des,fa=d.dato_faltante_desaprobacion;
+  document.getElementById('parCobDes').innerHTML=`<strong>Cobertura desfavorable:</strong> ${d.olas_pareadas} olas pudieron emparejarse (${d.consultoras} consultoras). Hay ${d.falta_gestion} olas con imagen negativa publicada y sin desaprobación en la base; el dato faltante es la <strong>desaprobación de gestión</strong> de: ${esc(fa.join(', '))}. ${d.excluidas} ola(s) excluida(s) por redacción de universo distinta.`;
+}
+function parAudit(){
+  const pan=document.getElementById('parAudPan'),est=document.getElementById('parAudEst'),tb=document.getElementById('parAudTabla');
+  const draw=()=>{
+    const rows=PARES.auditoria.filter(a=>(!pan.value||a.panel===pan.value)&&(!est.value||a.estado===est.value)).slice().sort((a,b)=>a.cons.localeCompare(b.cons)||MI.indexOf(a.mes)-MI.indexOf(b.mes)||a.panel.localeCompare(b.panel));
+    const lk=(u,t)=>u?`<a href="${esc(u)}" target="_blank" rel="noopener">${t}</a>`:t;
+    tb.innerHTML='<table><thead><tr><th>Consultora</th><th>Mes</th><th>Comp.</th><th>Estado</th><th>Imagen %</th><th>Gestión %</th><th>Brecha</th><th>Campo</th><th>Motivo / fuente</th></tr></thead><tbody>'+rows.map(a=>{
+      const det=`<details><summary style="cursor:pointer;font-size:11px">preguntas y universo</summary><div style="font-size:11px;color:var(--fg-dim)">${a.img_pregunta?'Imagen: '+esc(a.img_pregunta)+' · '+esc(a.img_cat)+' · universo: '+esc(a.img_universo)+'<br>':''}${a.ges_pregunta?'Gestión: '+esc(a.ges_pregunta)+' · '+esc(a.ges_cat)+' · universo: '+esc(a.ges_universo):''}</div></details>`;
+      const src=[a.img_fila?lk(a.img_link,'imagen N2·'+a.img_fila):'',a.ges_fila?lk(a.ges_link,'gestión N2·'+a.ges_fila):''].filter(Boolean).join(' · ');
+      return`<tr><td>${esc(a.cons)}</td><td class="num">${esc(a.mes)}</td><td>${a.panel==='fav'?'fav.':'desfav.'}</td><td>${a.estado==='incluido'?'<span class="signal conv">incluido</span>':a.estado==='excluido'?'<span class="signal div">excluido</span>':'<span class="badge-pend">incompleto</span>'}</td><td class="num">${parN(a.img_valor)}</td><td class="num">${parN(a.ges_valor)}</td><td class="num">${a.gap!=null?parS(a.gap):'—'}</td><td class="num">${esc(a.campo_ini?a.campo_ini+' → '+a.campo_fin:'sin fecha')}</td><td style="font-size:11px">${a.motivo?esc(a.motivo)+'<br>':''}${src}${a.img_pregunta||a.ges_pregunta?'<br>'+det:''}</td></tr>`;}).join('')+'</tbody></table>';
+  };
+  pan.onchange=draw;est.onchange=draw;draw();
+  document.getElementById('parAudN').textContent=PARES.auditoria.length+' filas · '+PARES.auditoria.filter(a=>a.estado==='incluido').length+' incluidas';
+  document.getElementById('parAudCambios').innerHTML='<b>Cambios excluidos:</b> '+(PARES.cambios_excluidos.length?PARES.cambios_excluidos.map(c=>esc(c.cons+' ('+(c.panel==='fav'?'fav.':'desfav.')+') '+c.desde+'→'+c.hasta+': '+c.motivo)).join(' · '):'ninguno')+(PARES.replicas.length?'<br><b>Series embebidas replicadas:</b> '+PARES.replicas.map(r=>esc(r.cons+' (campo '+r.de+', N2 '+r.filas.join(', ')+')')).join(' · ')+' — mismas cifras que la ola con fecha de campo, no se cuentan dos veces.':'');
+  document.getElementById('parReglas').innerHTML='<b>Reglas:</b> '+PARES.reglas.map(esc).join(' · ')+' Fuente: '+esc(PARES.fuente)+' (extracto de nivel2_indicadores con pregunta, universo y link).';
+}
+function renderPares(){
+  if(typeof PARES==='undefined'||!PARES||!document.getElementById('parSel'))return;
+  const sel=document.getElementById('parSel');
+  if(!sel.options.length){
+    const cnt=c=>PARES.pares.filter(p=>p.cons===c).length;
+    const t0=document.createElement('option');t0.value=PAR_TODAS;t0.textContent='Todas las consultoras (sin promediar)';sel.appendChild(t0);
+    PARES.consultoras.forEach(c=>{const o=document.createElement('option');o.value=c;o.textContent=c+' · '+PARES.pares.filter(p=>p.cons===c&&p.panel==='fav').length+' fav · '+PARES.pares.filter(p=>p.cons===c&&p.panel==='des').length+' desfav';sel.appendChild(o);});
+    sel.value=PAR_TODAS;
+    sel.onchange=()=>parPaneles(sel.value);
+    document.getElementById('parSelNota').textContent='Solo consultoras con al menos un par comparable ('+PARES.consultoras.length+').';
+    parAudit();
+  }
+  parPaneles(sel.value);parScatter();parPie();
 }
 
 /* ── LEGEND with TOGGLE ─────────────────────── */
@@ -1545,6 +1692,7 @@ function initTab(tab){
     buildLegend('legendGestionFull','chartGestionFull',
       ['Proyección · aprobación','Isasi-Burdman · aprobación','Isasi-Burdman · imagen positiva','Zuban Córdoba · aprobación'],
       ['var(--c2)','var(--c4)','var(--warn)','var(--c3)']);
+    renderPares();
   }
 
   if(tab==='gap'){
