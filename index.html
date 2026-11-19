@@ -1411,13 +1411,14 @@ function parPie(){
 }
 function parAudit(){
   const pan=document.getElementById('parAudPan'),est=document.getElementById('parAudEst'),tb=document.getElementById('parAudTabla');
+  if(!document.getElementById('parAudCss')){const st=document.createElement('style');st.id='parAudCss';st.textContent='.par-aud-row td:not(:last-child){white-space:nowrap}';document.head.appendChild(st);}
   const draw=()=>{
     const rows=PARES.auditoria.filter(a=>(!pan.value||a.panel===pan.value)&&(!est.value||a.estado===est.value)).slice().sort((a,b)=>a.cons.localeCompare(b.cons)||MI.indexOf(a.mes)-MI.indexOf(b.mes)||a.panel.localeCompare(b.panel));
     const lk=(u,t)=>u?`<a href="${esc(u)}" target="_blank" rel="noopener">${t}</a>`:t;
-    tb.innerHTML='<table><thead><tr><th>Consultora</th><th>Mes</th><th>Comp.</th><th>Estado</th><th>Imagen %</th><th>Gestión %</th><th>Brecha</th><th>Campo</th><th>Motivo / fuente</th></tr></thead><tbody>'+rows.map(a=>{
+    tb.innerHTML='<table style="min-width:820px"><thead><tr><th>Consultora</th><th>Mes</th><th>Comp.</th><th>Estado</th><th>Imagen %</th><th>Gestión %</th><th>Brecha</th><th>Campo</th><th>Motivo / fuente</th></tr></thead><tbody>'+rows.map(a=>{
       const det=`<details><summary style="cursor:pointer;font-size:11px">preguntas y universo</summary><div style="font-size:11px;color:var(--fg-dim)">${a.img_pregunta?'Imagen: '+esc(a.img_pregunta)+' · '+esc(a.img_cat)+' · universo: '+esc(a.img_universo)+'<br>':''}${a.ges_pregunta?'Gestión: '+esc(a.ges_pregunta)+' · '+esc(a.ges_cat)+' · universo: '+esc(a.ges_universo):''}</div></details>`;
       const src=[a.img_fila?lk(a.img_link,'imagen N2·'+a.img_fila):'',a.ges_fila?lk(a.ges_link,'gestión N2·'+a.ges_fila):''].filter(Boolean).join(' · ');
-      return`<tr><td>${esc(a.cons)}</td><td class="num">${esc(a.mes)}</td><td>${a.panel==='fav'?'fav.':'desfav.'}</td><td>${a.estado==='incluido'?'<span class="signal conv">incluido</span>':a.estado==='excluido'?'<span class="signal div">excluido</span>':'<span class="badge-pend">incompleto</span>'}</td><td class="num">${parN(a.img_valor)}</td><td class="num">${parN(a.ges_valor)}</td><td class="num">${a.gap!=null?parS(a.gap):'—'}</td><td class="num">${esc(a.campo_ini?a.campo_ini+' → '+a.campo_fin:'sin fecha')}</td><td style="font-size:11px">${a.motivo?esc(a.motivo)+'<br>':''}${src}${a.img_pregunta||a.ges_pregunta?'<br>'+det:''}</td></tr>`;}).join('')+'</tbody></table>';
+      return`<tr class="par-aud-row"><td>${esc(a.cons)}</td><td class="num">${esc(a.mes)}</td><td>${a.panel==='fav'?'fav.':'desfav.'}</td><td>${a.estado==='incluido'?'<span class="signal conv">incluido</span>':a.estado==='excluido'?'<span class="signal div">excluido</span>':'<span class="badge-pend">incompleto</span>'}</td><td class="num">${parN(a.img_valor)}</td><td class="num">${parN(a.ges_valor)}</td><td class="num">${a.gap!=null?parS(a.gap):'—'}</td><td class="num">${esc(a.campo_ini?a.campo_ini+' → '+a.campo_fin:'sin fecha')}</td><td style="font-size:11px;min-width:260px">${a.motivo?esc(a.motivo)+'<br>':''}${src}${a.img_pregunta||a.ges_pregunta?'<br>'+det:''}</td></tr>`;}).join('')+'</tbody></table>';
   };
   pan.onchange=draw;est.onchange=draw;draw();
   document.getElementById('parAudN').textContent=PARES.auditoria.length+' filas · '+PARES.auditoria.filter(a=>a.estado==='incluido').length+' incluidas';
