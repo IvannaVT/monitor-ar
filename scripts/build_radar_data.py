@@ -19,6 +19,9 @@ import copy
 import re, csv, io, json, sys, unicodedata
 from pathlib import Path
 
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+import pares_imagen_gestion as pares
+
 ROOT = Path(__file__).resolve().parent.parent
 BASES = ROOT / 'data' / 'bases'
 MESES = {1: 'Ene', 2: 'Feb', 3: 'Mar', 4: 'Abr', 5: 'May', 6: 'Jun', 7: 'Jul', 8: 'Ago', 9: 'Sep', 10: 'Oct', 11: 'Nov', 12: 'Dic'}
@@ -753,6 +756,7 @@ def construir():
                  'nuevos': sum(t['estado'] == 'nuevo' for t in traza), 'corregidos': sum(t['estado'] == 'corregido' for t in traza),
                  'retirados': sum(t['estado'] == 'retirado' for t in traza), 'puntuales': 0, 'en_series_de_evolucion': sum(t['estado'] == 'serie de evolución' for t in traza),
                  'fuente_secundaria': sorted({t['secundaria'] for t in traza if t.get('secundaria')})}
+    D['PARES'] = pares.bloque(pares.cargar(BASES / 'nivel2_extracto_pares.tsv'), D['MI'])
     return D, traza
 
 
