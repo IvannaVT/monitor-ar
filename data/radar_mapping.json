@@ -1,9 +1,9 @@
 {
   "_descripcion": "Especificación de qué fila de las bases alimenta cada celda del Radar. No contiene valores: build_radar_data.py los lee de data/bases/*.tsv (extractos de base_maestra_2026 y nivel2_indicadores). Las filas son números de fila de Google Sheets.",
   "corte": {
-    "fecha": "2026-11-17",
+    "fecha": "2026-11-19",
     "mes_parcial": "Nov-26",
-    "etiqueta": "Noviembre 2026 · corte al 17/11/2026",
+    "etiqueta": "Noviembre 2026 · corte al 19/11/2026",
     "base_publicada": "b43fcb8 (index.html publicado en ivannavt.github.io/monitor-ar)"
   },
   "extender_ejes": {
@@ -1402,8 +1402,8 @@
     {
       "modulo": "Territorio",
       "mes": "Nov-26",
-      "texto": "Solo CB Global Data GBA (24 intendentes).",
-      "necesita": "—"
+      "texto": "CB Global Data GBA (24 intendentes) y CB Global federal (gobernadores, intendentes y dirigentes nacionales por provincia, campo 8–13/11). Del federal faltan por relevar a mano los valores de noviembre de 18 gobernadores y 18 intendentes, que están solo en gráficos.",
+      "necesita": "lectura de los gráficos de las pp. de desglose del PDF 1vxmhzHN… (N1 fila 386)"
     },
     {
       "modulo": "Intención de voto",
@@ -1510,7 +1510,8 @@
     "Clima / rumbo",
     "Agenda pública",
     "Conversación digital",
-    "Territorio"
+    "Territorio",
+    "Anexo TEM · empleo e ingresos"
   ],
   "evolucion": [
     {
@@ -3188,6 +3189,1084 @@
           ],
           "evidencia": "ALTA intra-serie",
           "nota": "Kicillof supera a Milei desde el corte de ago-26 y abre la mayor distancia en nov-26: 45 contra 40."
+        }
+      ]
+    },
+    {
+      "tab": "semaforo",
+      "modulo": "Territorio",
+      "titulo": "Territorio · CB Global · gobernadores (imagen positiva) · nov-26",
+      "nota": "CB Global Data, campo 8–13/11 (n=24.625 provinciales; 11.360 municipales). Una medición por serie. Solo figuran los valores de noviembre impresos en el texto del informe (3 primeros y 3 últimos de cada ranking); el resto está en gráficos y queda pendiente de relevar a mano.",
+      "filas": [
+        {
+          "etiqueta": "CB Global · Imagen positiva · Jaldo (Tucumán)",
+          "consultora": "CB Global Data",
+          "celdas": [
+            {
+              "fila": 1638
+            }
+          ],
+          "nota": ""
+        },
+        {
+          "etiqueta": "CB Global · Imagen positiva · Figueroa (Neuquén)",
+          "consultora": "CB Global Data",
+          "celdas": [
+            {
+              "fila": 1639
+            }
+          ],
+          "nota": ""
+        },
+        {
+          "etiqueta": "CB Global · Imagen positiva · Pullaro (Santa Fe)",
+          "consultora": "CB Global Data",
+          "celdas": [
+            {
+              "fila": 1640
+            }
+          ],
+          "nota": ""
+        },
+        {
+          "etiqueta": "CB Global · Imagen positiva · Cornejo (Mendoza)",
+          "consultora": "CB Global Data",
+          "celdas": [
+            {
+              "fila": 1641
+            }
+          ],
+          "nota": ""
+        },
+        {
+          "etiqueta": "CB Global · Imagen positiva · Kicillof (PBA)",
+          "consultora": "CB Global Data",
+          "celdas": [
+            {
+              "fila": 1642
+            }
+          ],
+          "nota": ""
+        },
+        {
+          "etiqueta": "CB Global · Imagen positiva · Quintela (La Rioja)",
+          "consultora": "CB Global Data",
+          "celdas": [
+            {
+              "fila": 1643
+            }
+          ],
+          "nota": ""
+        }
+      ]
+    },
+    {
+      "tab": "semaforo",
+      "modulo": "Territorio",
+      "titulo": "Territorio · CB Global · intendentes federales (imagen positiva) · nov-26",
+      "nota": "CB Global Data, campo 8–13/11 (n=24.625 provinciales; 11.360 municipales). Una medición por serie. Solo figuran los valores de noviembre impresos en el texto del informe (3 primeros y 3 últimos de cada ranking); el resto está en gráficos y queda pendiente de relevar a mano.",
+      "filas": [
+        {
+          "etiqueta": "CB Global · Imagen positiva · Jofré (Formosa Capital)",
+          "consultora": "CB Global Data",
+          "celdas": [
+            {
+              "fila": 1644
+            }
+          ],
+          "nota": ""
+        },
+        {
+          "etiqueta": "CB Global · Imagen positiva · Sastre (Puerto Madryn)",
+          "consultora": "CB Global Data",
+          "celdas": [
+            {
+              "fila": 1645
+            }
+          ],
+          "nota": ""
+        },
+        {
+          "etiqueta": "CB Global · Imagen positiva · Saadi (Catamarca Capital)",
+          "consultora": "CB Global Data",
+          "celdas": [
+            {
+              "fila": 1646
+            }
+          ],
+          "nota": ""
+        },
+        {
+          "etiqueta": "CB Global · Imagen positiva · Nikisch (Resistencia)",
+          "consultora": "CB Global Data",
+          "celdas": [
+            {
+              "fila": 1647
+            }
+          ],
+          "nota": ""
+        },
+        {
+          "etiqueta": "CB Global · Imagen positiva · Molina (La Rioja Capital)",
+          "consultora": "CB Global Data",
+          "celdas": [
+            {
+              "fila": 1648
+            }
+          ],
+          "nota": ""
+        },
+        {
+          "etiqueta": "CB Global · Imagen positiva · Alak (La Plata)",
+          "consultora": "CB Global Data",
+          "celdas": [
+            {
+              "fila": 1649
+            }
+          ],
+          "nota": ""
+        }
+      ]
+    },
+    {
+      "tab": "semaforo",
+      "modulo": "Territorio",
+      "titulo": "Territorio · CB Global · imagen positiva de Milei por jurisdicción · nov-26",
+      "nota": "Tabla comparativa del informe de CB Global (noviembre, campo 8–13/11): una medición por provincia, en el mismo cuestionario. Los niveles no se comparan con otras consultoras.",
+      "filas": [
+        {
+          "etiqueta": "CB Global · Imagen positiva de Milei · Catamarca",
+          "consultora": "CB Global Data",
+          "celdas": [
+            {
+              "fila": 1650
+            }
+          ],
+          "nota": ""
+        },
+        {
+          "etiqueta": "CB Global · Imagen positiva de Milei · Chaco",
+          "consultora": "CB Global Data",
+          "celdas": [
+            {
+              "fila": 1653
+            }
+          ],
+          "nota": ""
+        },
+        {
+          "etiqueta": "CB Global · Imagen positiva de Milei · Chubut",
+          "consultora": "CB Global Data",
+          "celdas": [
+            {
+              "fila": 1656
+            }
+          ],
+          "nota": ""
+        },
+        {
+          "etiqueta": "CB Global · Imagen positiva de Milei · CABA",
+          "consultora": "CB Global Data",
+          "celdas": [
+            {
+              "fila": 1659
+            }
+          ],
+          "nota": ""
+        },
+        {
+          "etiqueta": "CB Global · Imagen positiva de Milei · Córdoba",
+          "consultora": "CB Global Data",
+          "celdas": [
+            {
+              "fila": 1662
+            }
+          ],
+          "nota": ""
+        },
+        {
+          "etiqueta": "CB Global · Imagen positiva de Milei · Corrientes",
+          "consultora": "CB Global Data",
+          "celdas": [
+            {
+              "fila": 1665
+            }
+          ],
+          "nota": ""
+        },
+        {
+          "etiqueta": "CB Global · Imagen positiva de Milei · Entre Ríos",
+          "consultora": "CB Global Data",
+          "celdas": [
+            {
+              "fila": 1668
+            }
+          ],
+          "nota": ""
+        },
+        {
+          "etiqueta": "CB Global · Imagen positiva de Milei · Formosa",
+          "consultora": "CB Global Data",
+          "celdas": [
+            {
+              "fila": 1671
+            }
+          ],
+          "nota": ""
+        },
+        {
+          "etiqueta": "CB Global · Imagen positiva de Milei · Jujuy",
+          "consultora": "CB Global Data",
+          "celdas": [
+            {
+              "fila": 1674
+            }
+          ],
+          "nota": ""
+        },
+        {
+          "etiqueta": "CB Global · Imagen positiva de Milei · La Pampa",
+          "consultora": "CB Global Data",
+          "celdas": [
+            {
+              "fila": 1677
+            }
+          ],
+          "nota": ""
+        },
+        {
+          "etiqueta": "CB Global · Imagen positiva de Milei · La Rioja",
+          "consultora": "CB Global Data",
+          "celdas": [
+            {
+              "fila": 1680
+            }
+          ],
+          "nota": ""
+        },
+        {
+          "etiqueta": "CB Global · Imagen positiva de Milei · Mendoza",
+          "consultora": "CB Global Data",
+          "celdas": [
+            {
+              "fila": 1683
+            }
+          ],
+          "nota": ""
+        },
+        {
+          "etiqueta": "CB Global · Imagen positiva de Milei · Misiones",
+          "consultora": "CB Global Data",
+          "celdas": [
+            {
+              "fila": 1686
+            }
+          ],
+          "nota": ""
+        },
+        {
+          "etiqueta": "CB Global · Imagen positiva de Milei · Neuquén",
+          "consultora": "CB Global Data",
+          "celdas": [
+            {
+              "fila": 1689
+            }
+          ],
+          "nota": ""
+        },
+        {
+          "etiqueta": "CB Global · Imagen positiva de Milei · Provincia de Buenos Aires",
+          "consultora": "CB Global Data",
+          "celdas": [
+            {
+              "fila": 1692
+            }
+          ],
+          "nota": ""
+        },
+        {
+          "etiqueta": "CB Global · Imagen positiva de Milei · Río Negro",
+          "consultora": "CB Global Data",
+          "celdas": [
+            {
+              "fila": 1695
+            }
+          ],
+          "nota": ""
+        },
+        {
+          "etiqueta": "CB Global · Imagen positiva de Milei · Salta",
+          "consultora": "CB Global Data",
+          "celdas": [
+            {
+              "fila": 1698
+            }
+          ],
+          "nota": ""
+        },
+        {
+          "etiqueta": "CB Global · Imagen positiva de Milei · San Juan",
+          "consultora": "CB Global Data",
+          "celdas": [
+            {
+              "fila": 1701
+            }
+          ],
+          "nota": ""
+        },
+        {
+          "etiqueta": "CB Global · Imagen positiva de Milei · San Luis",
+          "consultora": "CB Global Data",
+          "celdas": [
+            {
+              "fila": 1704
+            }
+          ],
+          "nota": ""
+        },
+        {
+          "etiqueta": "CB Global · Imagen positiva de Milei · Santa Cruz",
+          "consultora": "CB Global Data",
+          "celdas": [
+            {
+              "fila": 1707
+            }
+          ],
+          "nota": ""
+        },
+        {
+          "etiqueta": "CB Global · Imagen positiva de Milei · Santa Fe",
+          "consultora": "CB Global Data",
+          "celdas": [
+            {
+              "fila": 1710
+            }
+          ],
+          "nota": ""
+        },
+        {
+          "etiqueta": "CB Global · Imagen positiva de Milei · Santiago del Estero",
+          "consultora": "CB Global Data",
+          "celdas": [
+            {
+              "fila": 1713
+            }
+          ],
+          "nota": ""
+        },
+        {
+          "etiqueta": "CB Global · Imagen positiva de Milei · Tierra del Fuego",
+          "consultora": "CB Global Data",
+          "celdas": [
+            {
+              "fila": 1716
+            }
+          ],
+          "nota": ""
+        },
+        {
+          "etiqueta": "CB Global · Imagen positiva de Milei · Tucumán",
+          "consultora": "CB Global Data",
+          "celdas": [
+            {
+              "fila": 1719
+            }
+          ],
+          "nota": ""
+        }
+      ]
+    },
+    {
+      "tab": "semaforo",
+      "modulo": "Territorio",
+      "titulo": "Territorio · CB Global · imagen positiva de Bullrich por jurisdicción · nov-26",
+      "nota": "Tabla comparativa del informe de CB Global (noviembre, campo 8–13/11): una medición por provincia, en el mismo cuestionario. Los niveles no se comparan con otras consultoras.",
+      "filas": [
+        {
+          "etiqueta": "CB Global · Imagen positiva de Bullrich · Catamarca",
+          "consultora": "CB Global Data",
+          "celdas": [
+            {
+              "fila": 1651
+            }
+          ],
+          "nota": ""
+        },
+        {
+          "etiqueta": "CB Global · Imagen positiva de Bullrich · Chaco",
+          "consultora": "CB Global Data",
+          "celdas": [
+            {
+              "fila": 1654
+            }
+          ],
+          "nota": ""
+        },
+        {
+          "etiqueta": "CB Global · Imagen positiva de Bullrich · Chubut",
+          "consultora": "CB Global Data",
+          "celdas": [
+            {
+              "fila": 1657
+            }
+          ],
+          "nota": ""
+        },
+        {
+          "etiqueta": "CB Global · Imagen positiva de Bullrich · CABA",
+          "consultora": "CB Global Data",
+          "celdas": [
+            {
+              "fila": 1660
+            }
+          ],
+          "nota": ""
+        },
+        {
+          "etiqueta": "CB Global · Imagen positiva de Bullrich · Córdoba",
+          "consultora": "CB Global Data",
+          "celdas": [
+            {
+              "fila": 1663
+            }
+          ],
+          "nota": ""
+        },
+        {
+          "etiqueta": "CB Global · Imagen positiva de Bullrich · Corrientes",
+          "consultora": "CB Global Data",
+          "celdas": [
+            {
+              "fila": 1666
+            }
+          ],
+          "nota": ""
+        },
+        {
+          "etiqueta": "CB Global · Imagen positiva de Bullrich · Entre Ríos",
+          "consultora": "CB Global Data",
+          "celdas": [
+            {
+              "fila": 1669
+            }
+          ],
+          "nota": ""
+        },
+        {
+          "etiqueta": "CB Global · Imagen positiva de Bullrich · Formosa",
+          "consultora": "CB Global Data",
+          "celdas": [
+            {
+              "fila": 1672
+            }
+          ],
+          "nota": ""
+        },
+        {
+          "etiqueta": "CB Global · Imagen positiva de Bullrich · Jujuy",
+          "consultora": "CB Global Data",
+          "celdas": [
+            {
+              "fila": 1675
+            }
+          ],
+          "nota": ""
+        },
+        {
+          "etiqueta": "CB Global · Imagen positiva de Bullrich · La Pampa",
+          "consultora": "CB Global Data",
+          "celdas": [
+            {
+              "fila": 1678
+            }
+          ],
+          "nota": ""
+        },
+        {
+          "etiqueta": "CB Global · Imagen positiva de Bullrich · La Rioja",
+          "consultora": "CB Global Data",
+          "celdas": [
+            {
+              "fila": 1681
+            }
+          ],
+          "nota": ""
+        },
+        {
+          "etiqueta": "CB Global · Imagen positiva de Bullrich · Mendoza",
+          "consultora": "CB Global Data",
+          "celdas": [
+            {
+              "fila": 1684
+            }
+          ],
+          "nota": ""
+        },
+        {
+          "etiqueta": "CB Global · Imagen positiva de Bullrich · Misiones",
+          "consultora": "CB Global Data",
+          "celdas": [
+            {
+              "fila": 1687
+            }
+          ],
+          "nota": ""
+        },
+        {
+          "etiqueta": "CB Global · Imagen positiva de Bullrich · Neuquén",
+          "consultora": "CB Global Data",
+          "celdas": [
+            {
+              "fila": 1690
+            }
+          ],
+          "nota": ""
+        },
+        {
+          "etiqueta": "CB Global · Imagen positiva de Bullrich · Provincia de Buenos Aires",
+          "consultora": "CB Global Data",
+          "celdas": [
+            {
+              "fila": 1693
+            }
+          ],
+          "nota": ""
+        },
+        {
+          "etiqueta": "CB Global · Imagen positiva de Bullrich · Río Negro",
+          "consultora": "CB Global Data",
+          "celdas": [
+            {
+              "fila": 1696
+            }
+          ],
+          "nota": ""
+        },
+        {
+          "etiqueta": "CB Global · Imagen positiva de Bullrich · Salta",
+          "consultora": "CB Global Data",
+          "celdas": [
+            {
+              "fila": 1699
+            }
+          ],
+          "nota": ""
+        },
+        {
+          "etiqueta": "CB Global · Imagen positiva de Bullrich · San Juan",
+          "consultora": "CB Global Data",
+          "celdas": [
+            {
+              "fila": 1702
+            }
+          ],
+          "nota": ""
+        },
+        {
+          "etiqueta": "CB Global · Imagen positiva de Bullrich · San Luis",
+          "consultora": "CB Global Data",
+          "celdas": [
+            {
+              "fila": 1705
+            }
+          ],
+          "nota": ""
+        },
+        {
+          "etiqueta": "CB Global · Imagen positiva de Bullrich · Santa Cruz",
+          "consultora": "CB Global Data",
+          "celdas": [
+            {
+              "fila": 1708
+            }
+          ],
+          "nota": ""
+        },
+        {
+          "etiqueta": "CB Global · Imagen positiva de Bullrich · Santa Fe",
+          "consultora": "CB Global Data",
+          "celdas": [
+            {
+              "fila": 1711
+            }
+          ],
+          "nota": ""
+        },
+        {
+          "etiqueta": "CB Global · Imagen positiva de Bullrich · Santiago del Estero",
+          "consultora": "CB Global Data",
+          "celdas": [
+            {
+              "fila": 1714
+            }
+          ],
+          "nota": ""
+        },
+        {
+          "etiqueta": "CB Global · Imagen positiva de Bullrich · Tierra del Fuego",
+          "consultora": "CB Global Data",
+          "celdas": [
+            {
+              "fila": 1717
+            }
+          ],
+          "nota": ""
+        },
+        {
+          "etiqueta": "CB Global · Imagen positiva de Bullrich · Tucumán",
+          "consultora": "CB Global Data",
+          "celdas": [
+            {
+              "fila": 1720
+            }
+          ],
+          "nota": ""
+        }
+      ]
+    },
+    {
+      "tab": "semaforo",
+      "modulo": "Territorio",
+      "titulo": "Territorio · CB Global · imagen positiva de Kicillof por jurisdicción · nov-26",
+      "nota": "Tabla comparativa del informe de CB Global (noviembre, campo 8–13/11): una medición por provincia, en el mismo cuestionario. Los niveles no se comparan con otras consultoras.",
+      "filas": [
+        {
+          "etiqueta": "CB Global · Imagen positiva de Kicillof · Catamarca",
+          "consultora": "CB Global Data",
+          "celdas": [
+            {
+              "fila": 1652
+            }
+          ],
+          "nota": ""
+        },
+        {
+          "etiqueta": "CB Global · Imagen positiva de Kicillof · Chaco",
+          "consultora": "CB Global Data",
+          "celdas": [
+            {
+              "fila": 1655
+            }
+          ],
+          "nota": ""
+        },
+        {
+          "etiqueta": "CB Global · Imagen positiva de Kicillof · Chubut",
+          "consultora": "CB Global Data",
+          "celdas": [
+            {
+              "fila": 1658
+            }
+          ],
+          "nota": ""
+        },
+        {
+          "etiqueta": "CB Global · Imagen positiva de Kicillof · CABA",
+          "consultora": "CB Global Data",
+          "celdas": [
+            {
+              "fila": 1661
+            }
+          ],
+          "nota": ""
+        },
+        {
+          "etiqueta": "CB Global · Imagen positiva de Kicillof · Córdoba",
+          "consultora": "CB Global Data",
+          "celdas": [
+            {
+              "fila": 1664
+            }
+          ],
+          "nota": ""
+        },
+        {
+          "etiqueta": "CB Global · Imagen positiva de Kicillof · Corrientes",
+          "consultora": "CB Global Data",
+          "celdas": [
+            {
+              "fila": 1667
+            }
+          ],
+          "nota": ""
+        },
+        {
+          "etiqueta": "CB Global · Imagen positiva de Kicillof · Entre Ríos",
+          "consultora": "CB Global Data",
+          "celdas": [
+            {
+              "fila": 1670
+            }
+          ],
+          "nota": ""
+        },
+        {
+          "etiqueta": "CB Global · Imagen positiva de Kicillof · Formosa",
+          "consultora": "CB Global Data",
+          "celdas": [
+            {
+              "fila": 1673
+            }
+          ],
+          "nota": ""
+        },
+        {
+          "etiqueta": "CB Global · Imagen positiva de Kicillof · Jujuy",
+          "consultora": "CB Global Data",
+          "celdas": [
+            {
+              "fila": 1676
+            }
+          ],
+          "nota": ""
+        },
+        {
+          "etiqueta": "CB Global · Imagen positiva de Kicillof · La Pampa",
+          "consultora": "CB Global Data",
+          "celdas": [
+            {
+              "fila": 1679
+            }
+          ],
+          "nota": ""
+        },
+        {
+          "etiqueta": "CB Global · Imagen positiva de Kicillof · La Rioja",
+          "consultora": "CB Global Data",
+          "celdas": [
+            {
+              "fila": 1682
+            }
+          ],
+          "nota": ""
+        },
+        {
+          "etiqueta": "CB Global · Imagen positiva de Kicillof · Mendoza",
+          "consultora": "CB Global Data",
+          "celdas": [
+            {
+              "fila": 1685
+            }
+          ],
+          "nota": ""
+        },
+        {
+          "etiqueta": "CB Global · Imagen positiva de Kicillof · Misiones",
+          "consultora": "CB Global Data",
+          "celdas": [
+            {
+              "fila": 1688
+            }
+          ],
+          "nota": ""
+        },
+        {
+          "etiqueta": "CB Global · Imagen positiva de Kicillof · Neuquén",
+          "consultora": "CB Global Data",
+          "celdas": [
+            {
+              "fila": 1691
+            }
+          ],
+          "nota": ""
+        },
+        {
+          "etiqueta": "CB Global · Imagen positiva de Kicillof · Provincia de Buenos Aires",
+          "consultora": "CB Global Data",
+          "celdas": [
+            {
+              "fila": 1694
+            }
+          ],
+          "nota": ""
+        },
+        {
+          "etiqueta": "CB Global · Imagen positiva de Kicillof · Río Negro",
+          "consultora": "CB Global Data",
+          "celdas": [
+            {
+              "fila": 1697
+            }
+          ],
+          "nota": ""
+        },
+        {
+          "etiqueta": "CB Global · Imagen positiva de Kicillof · Salta",
+          "consultora": "CB Global Data",
+          "celdas": [
+            {
+              "fila": 1700
+            }
+          ],
+          "nota": ""
+        },
+        {
+          "etiqueta": "CB Global · Imagen positiva de Kicillof · San Juan",
+          "consultora": "CB Global Data",
+          "celdas": [
+            {
+              "fila": 1703
+            }
+          ],
+          "nota": ""
+        },
+        {
+          "etiqueta": "CB Global · Imagen positiva de Kicillof · San Luis",
+          "consultora": "CB Global Data",
+          "celdas": [
+            {
+              "fila": 1706
+            }
+          ],
+          "nota": ""
+        },
+        {
+          "etiqueta": "CB Global · Imagen positiva de Kicillof · Santa Cruz",
+          "consultora": "CB Global Data",
+          "celdas": [
+            {
+              "fila": 1709
+            }
+          ],
+          "nota": ""
+        },
+        {
+          "etiqueta": "CB Global · Imagen positiva de Kicillof · Santa Fe",
+          "consultora": "CB Global Data",
+          "celdas": [
+            {
+              "fila": 1712
+            }
+          ],
+          "nota": ""
+        },
+        {
+          "etiqueta": "CB Global · Imagen positiva de Kicillof · Santiago del Estero",
+          "consultora": "CB Global Data",
+          "celdas": [
+            {
+              "fila": 1715
+            }
+          ],
+          "nota": ""
+        },
+        {
+          "etiqueta": "CB Global · Imagen positiva de Kicillof · Tierra del Fuego",
+          "consultora": "CB Global Data",
+          "celdas": [
+            {
+              "fila": 1718
+            }
+          ],
+          "nota": ""
+        },
+        {
+          "etiqueta": "CB Global · Imagen positiva de Kicillof · Tucumán",
+          "consultora": "CB Global Data",
+          "celdas": [
+            {
+              "fila": 1721
+            }
+          ],
+          "nota": ""
+        }
+      ]
+    },
+    {
+      "tab": "indicadores",
+      "modulo": "Anexo TEM · empleo e ingresos",
+      "titulo": "Anexo TEM · empleo e ingresos · C-P · Empleo registrado · variación mensual ago-26 (miles de puestos)",
+      "nota": "C-P Consultora, informe de noviembre sobre series oficiales (Secretaría de Trabajo, INDEC, ANSES, EIL, Ministerio de Economía). Capa TEM: condición, no percepción; no comparable con encuestas ni con conversación digital. El período de referencia de cada dato está en su etiqueta. Una medición por serie.",
+      "filas": [
+        {
+          "etiqueta": "C-P · Privado registrado",
+          "consultora": "C-P Consultora",
+          "celdas": [
+            {
+              "fila": 1623
+            }
+          ],
+          "nota": ""
+        },
+        {
+          "etiqueta": "C-P · Total registrado",
+          "consultora": "C-P Consultora",
+          "celdas": [
+            {
+              "fila": 1626
+            }
+          ],
+          "nota": ""
+        },
+        {
+          "etiqueta": "C-P · Público registrado",
+          "consultora": "C-P Consultora",
+          "celdas": [
+            {
+              "fila": 1627
+            }
+          ],
+          "nota": ""
+        },
+        {
+          "etiqueta": "C-P · Monotributo",
+          "consultora": "C-P Consultora",
+          "celdas": [
+            {
+              "fila": 1628
+            }
+          ],
+          "nota": ""
+        }
+      ]
+    },
+    {
+      "tab": "indicadores",
+      "modulo": "Anexo TEM · empleo e ingresos",
+      "titulo": "Anexo TEM · empleo e ingresos · C-P · Empleo privado registrado · variación acumulada a ago-26 (miles de puestos)",
+      "nota": "C-P Consultora, informe de noviembre sobre series oficiales (Secretaría de Trabajo, INDEC, ANSES, EIL, Ministerio de Economía). Capa TEM: condición, no percepción; no comparable con encuestas ni con conversación digital. El período de referencia de cada dato está en su etiqueta. Una medición por serie.",
+      "filas": [
+        {
+          "etiqueta": "C-P · Desde may-25",
+          "consultora": "C-P Consultora",
+          "celdas": [
+            {
+              "fila": 1624
+            }
+          ],
+          "nota": ""
+        },
+        {
+          "etiqueta": "C-P · Desde dic-25",
+          "consultora": "C-P Consultora",
+          "celdas": [
+            {
+              "fila": 1625
+            }
+          ],
+          "nota": ""
+        }
+      ]
+    },
+    {
+      "tab": "indicadores",
+      "modulo": "Anexo TEM · empleo e ingresos",
+      "titulo": "Anexo TEM · empleo e ingresos · C-P · Ingresos reales · variación mensual oct-26 (%)",
+      "nota": "C-P Consultora, informe de noviembre sobre series oficiales (Secretaría de Trabajo, INDEC, ANSES, EIL, Ministerio de Economía). Capa TEM: condición, no percepción; no comparable con encuestas ni con conversación digital. El período de referencia de cada dato está en su etiqueta. Una medición por serie.",
+      "filas": [
+        {
+          "etiqueta": "C-P · Salario de convenio C-P",
+          "consultora": "C-P Consultora",
+          "celdas": [
+            {
+              "fila": 1631
+            }
+          ],
+          "nota": ""
+        },
+        {
+          "etiqueta": "C-P · Jubilación mínima",
+          "consultora": "C-P Consultora",
+          "celdas": [
+            {
+              "fila": 1633
+            }
+          ],
+          "nota": ""
+        },
+        {
+          "etiqueta": "C-P · Jubilaciones medias y altas",
+          "consultora": "C-P Consultora",
+          "celdas": [
+            {
+              "fila": 1634
+            }
+          ],
+          "nota": ""
+        },
+        {
+          "etiqueta": "C-P · AUH",
+          "consultora": "C-P Consultora",
+          "celdas": [
+            {
+              "fila": 1635
+            }
+          ],
+          "nota": ""
+        }
+      ]
+    },
+    {
+      "tab": "indicadores",
+      "modulo": "Anexo TEM · empleo e ingresos",
+      "titulo": "Anexo TEM · empleo e ingresos · C-P · Pobreza y reforma laboral",
+      "nota": "C-P Consultora, informe de noviembre sobre series oficiales (Secretaría de Trabajo, INDEC, ANSES, EIL, Ministerio de Economía). Capa TEM: condición, no percepción; no comparable con encuestas ni con conversación digital. El período de referencia de cada dato está en su etiqueta. Una medición por serie.",
+      "filas": [
+        {
+          "etiqueta": "C-P · Tasa de pobreza 2T-26 (%)",
+          "consultora": "C-P Consultora",
+          "celdas": [
+            {
+              "fila": 1632
+            }
+          ],
+          "nota": ""
+        },
+        {
+          "etiqueta": "C-P · Trabajadores incorporados al RIFL, 4 meses (puestos)",
+          "consultora": "C-P Consultora",
+          "celdas": [
+            {
+              "fila": 1629
+            }
+          ],
+          "nota": ""
+        }
+      ]
+    },
+    {
+      "tab": "indicadores",
+      "modulo": "Anexo TEM · empleo e ingresos",
+      "titulo": "Anexo TEM · empleo e ingresos · C-P · Salarios y mercado de trabajo · sep-26",
+      "nota": "C-P Consultora, informe de noviembre sobre series oficiales (Secretaría de Trabajo, INDEC, ANSES, EIL, Ministerio de Economía). Capa TEM: condición, no percepción; no comparable con encuestas ni con conversación digital. El período de referencia de cada dato está en su etiqueta. Una medición por serie.",
+      "filas": [
+        {
+          "etiqueta": "C-P · Índice de Salarios privado registrado, var. mensual nominal sep-26 (%)",
+          "consultora": "C-P Consultora",
+          "celdas": [
+            {
+              "fila": 1630
+            }
+          ],
+          "nota": ""
+        },
+        {
+          "etiqueta": "C-P · EIL · tasa de empleo, var. mensual sep-26 (%)",
+          "consultora": "C-P Consultora",
+          "celdas": [
+            {
+              "fila": 1637
+            }
+          ],
+          "nota": ""
+        }
+      ]
+    },
+    {
+      "tab": "indicadores",
+      "modulo": "Anexo TEM · empleo e ingresos",
+      "titulo": "Anexo TEM · empleo e ingresos · C-P · Gasto en previsión social · oct-26",
+      "nota": "C-P Consultora, informe de noviembre sobre series oficiales (Secretaría de Trabajo, INDEC, ANSES, EIL, Ministerio de Economía). Capa TEM: condición, no percepción; no comparable con encuestas ni con conversación digital. El período de referencia de cada dato está en su etiqueta. Una medición por serie.",
+      "filas": [
+        {
+          "etiqueta": "C-P · Gasto real en previsión social (sin jubilaciones y pensiones), MM3M, var. mensual (%)",
+          "consultora": "C-P Consultora",
+          "celdas": [
+            {
+              "fila": 1636
+            }
+          ],
+          "nota": ""
         }
       ]
     }

@@ -27,7 +27,7 @@ TAB_DE_MODULO = {
     'Economía percibida': 'indicadores', 'Expectativas': 'indicadores', 'Clima / rumbo': 'indicadores',
     'Gestión nacional': 'imagen', 'Imagen Milei': 'imagen', 'Imagen otros dirigentes': 'imagen',
     'Intención de voto': 'voto', 'Agenda pública': 'agenda', 'Conversación digital': 'sl', 'Territorio': 'semaforo',
-    'GAP CONV–SL': 'gap', 'Semáforo': 'semaforo', 'Indicadores': 'indicadores',
+    'GAP CONV–SL': 'gap', 'Anexo TEM · empleo e ingresos': 'indicadores', 'Semáforo': 'semaforo', 'Indicadores': 'indicadores',
 }
 EJE_DE_GRUPO = {'IMG': 'MI', 'GESTION': 'MG', 'CONS': 'MV'}
 SL_TIPO = {'315': 'Evento puntual', '342': 'Evento puntual', '317': 'Audiencias (PDM)', '355': 'Audiencias (PDM)',
