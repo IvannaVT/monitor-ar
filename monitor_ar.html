@@ -158,6 +158,7 @@ footer a{color:var(--accent)}
 .timeline-strip::-webkit-scrollbar{display:none}
 .tl-inner{display:flex;align-items:stretch;gap:0;min-width:max-content;padding:0 20px}
 .tl-item{display:flex;flex-direction:column;align-items:center;gap:3px;padding:8px 14px;position:relative;border-right:1px solid var(--border);cursor:default;flex-shrink:0}
+.tl-item[hidden]{display:none}
 .tl-item:last-child{border-right:none}
 .tl-item.published .tl-dot{background:var(--accent)}
 .tl-item.upcoming .tl-dot{background:transparent;border-color:var(--border)}
@@ -222,22 +223,22 @@ footer a{color:var(--accent)}
 <div class="timeline-strip" title="Últimos datos publicados y próximas fechas">
   <div class="tl-inner">
     <!-- publicados -->
-    <div class="tl-item published">
+    <div class="tl-item published" id="tlNacionPublicado" hidden>
       <div class="tl-dot"></div>
-      <div class="tl-date">13 oct</div>
+      <div class="tl-date"></div>
       <div class="tl-icon">📊</div>
       <div class="tl-name">IPC Nacional</div>
-      <div class="tl-val pos">1,9%</div>
-      <div class="tl-period">sep-26</div>
+      <div class="tl-val pos"></div>
+      <div class="tl-period"></div>
       <div class="tl-src">INDEC</div>
     </div>
-    <div class="tl-item published">
+    <div class="tl-item published" id="tlCabaPublicado" hidden>
       <div class="tl-dot"></div>
-      <div class="tl-date">14 oct</div>
+      <div class="tl-date"></div>
       <div class="tl-icon">🏙️</div>
       <div class="tl-name">IPCBA CABA</div>
-      <div class="tl-val pos">1,8%</div>
-      <div class="tl-period">sep-26</div>
+      <div class="tl-val pos"></div>
+      <div class="tl-period"></div>
       <div class="tl-src">IDECBA</div>
     </div>
     <div class="tl-item published">
@@ -261,22 +262,22 @@ footer a{color:var(--accent)}
     <!-- divisor próximos -->
     <div class="tl-divider"></div>
     <!-- próximos -->
-    <div class="tl-item soon">
+    <div class="tl-item soon" id="tlNacionProximo" hidden>
       <div class="tl-dot"></div>
       <div class="tl-upcoming-lbl">próximo</div>
       <div class="tl-icon">📊</div>
       <div class="tl-name">IPC Nacional</div>
-      <div class="tl-val neu">oct-26</div>
-      <div class="tl-period">~13 nov</div>
+      <div class="tl-val neu"></div>
+      <div class="tl-period"></div>
       <div class="tl-src">INDEC</div>
     </div>
-    <div class="tl-item soon">
+    <div class="tl-item soon" id="tlCabaProximo" hidden>
       <div class="tl-dot"></div>
       <div class="tl-upcoming-lbl">próximo</div>
       <div class="tl-icon">🏙️</div>
       <div class="tl-name">IPCBA CABA</div>
-      <div class="tl-val neu">oct-26</div>
-      <div class="tl-period">~14 nov</div>
+      <div class="tl-val neu"></div>
+      <div class="tl-period"></div>
       <div class="tl-src">IDECBA</div>
     </div>
     <div class="tl-item upcoming">
@@ -310,27 +311,25 @@ footer a{color:var(--accent)}
   <p class="sec">Clima macroeconómico · Argentina</p>
   <div class="kpi-grid" style="grid-template-columns:repeat(auto-fit,minmax(180px,1fr))">
     <!-- IPC Nacional -->
-    <div class="kpi highlight">
-      <div class="kpi-label">IPC Nacional · sep-26</div>
-      <div class="kpi-num">1,9%</div>
-      <div class="kpi-meta"><span class="arrow up">↑</span><span class="kpi-sub">INDEC · mensual · vs 1,7% ago</span></div>
+    <div class="kpi highlight" id="ipcNacional">
+      <div class="kpi-label">IPC Nacional</div>
+      <div class="kpi-num">—</div>
+      <div class="kpi-meta"><span class="kpi-sub"></span></div>
       <div class="kpi-subs">
-        <div class="kpi-sub-row"><span class="kpi-sub-lbl">Núcleo</span><span class="kpi-sub-val">1,7%</span></div>
-        <div class="kpi-sub-row"><span class="kpi-sub-lbl">Regulados</span><span class="kpi-sub-val">2,8%</span></div>
-        <div class="kpi-sub-row"><span class="kpi-sub-lbl">Acumulado</span><span class="kpi-sub-val">23,6%</span></div>
-        <div class="kpi-sub-row"><span class="kpi-sub-lbl">Interanual</span><span class="kpi-sub-val ia">33,4%</span></div>
+        <div class="kpi-sub-row"><span class="kpi-sub-lbl">Acumulado</span><span class="kpi-sub-val">—</span></div>
+        <div class="kpi-sub-row"><span class="kpi-sub-lbl">Interanual</span><span class="kpi-sub-val ia">—</span></div>
       </div>
     </div>
     <!-- IPCBA CABA -->
-    <div class="kpi">
-      <div class="kpi-label">IPCBA CABA · sep-26</div>
-      <div class="kpi-num">1,8%</div>
-      <div class="kpi-meta"><span class="arrow flat">→</span><span class="kpi-sub">IDECBA · brecha −0,1 p.p.</span></div>
+    <div class="kpi" id="ipcCaba">
+      <div class="kpi-label">IPCBA CABA</div>
+      <div class="kpi-num">—</div>
+      <div class="kpi-meta"><span class="kpi-sub"></span></div>
       <div class="kpi-subs">
-        <div class="kpi-sub-row"><span class="kpi-sub-lbl">Bienes</span><span class="kpi-sub-val">1,6%</span></div>
-        <div class="kpi-sub-row"><span class="kpi-sub-lbl">Servicios</span><span class="kpi-sub-val">2,0%</span></div>
-        <div class="kpi-sub-row"><span class="kpi-sub-lbl">Acumulado</span><span class="kpi-sub-val">23,7%</span></div>
-        <div class="kpi-sub-row"><span class="kpi-sub-lbl">Interanual</span><span class="kpi-sub-val ia">32,9%</span></div>
+        <div class="kpi-sub-row"><span class="kpi-sub-lbl">Bienes</span><span class="kpi-sub-val">—</span></div>
+        <div class="kpi-sub-row"><span class="kpi-sub-lbl">Servicios</span><span class="kpi-sub-val">—</span></div>
+        <div class="kpi-sub-row"><span class="kpi-sub-lbl">Acumulado</span><span class="kpi-sub-val">—</span></div>
+        <div class="kpi-sub-row"><span class="kpi-sub-lbl">Interanual</span><span class="kpi-sub-val ia">—</span></div>
       </div>
     </div>
     <!-- ICC -->
@@ -358,24 +357,24 @@ footer a{color:var(--accent)}
   </div>
   <div class="chart-wrap">
     <div class="chart-head">
-      <div><h3>Inflación mensual · IPC Nacional vs IPCBA CABA</h3><p>Sep-25 → Sep-26 · barras + media móvil 3 meses</p></div>
+      <div><h3>Inflación mensual · IPC Nacional vs IPCBA CABA</h3><p><span id="rangoInflacion"></span> · barras + media móvil 3 meses</p></div>
     </div>
     <div class="chart-box med"><canvas id="chartInflComp"></canvas></div>
     <div class="legend" id="legendInflComp"></div>
-    <p class="source">IPC INDEC: sep-25→sep-26 (1,9% sep · acum. 23,6% · i.a. 33,4%) · IPCBA IDECBA/GCBA · MM3: media móvil 3 meses</p>
+    <p class="source">IPC Nacional: INDEC · IPCBA: IDECBA · MM3: media móvil 3 meses</p>
   </div>
   <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px">
     <div class="chart-wrap" style="margin:0">
-      <div class="chart-head"><div><h3>IPC Nacional · acum. e interanual</h3><p>Ene-26 → Sep-26 · acum. barra izq. · i.a. línea der.</p></div></div>
+      <div class="chart-head"><div><h3>IPC Nacional · acum. e interanual</h3><p><span id="rangoInflacionNacion"></span> · acum. barra izq. · i.a. línea der.</p></div></div>
       <div class="chart-box"><canvas id="chartInflNacAcumIA"></canvas></div>
       <div class="legend" id="legendInflNacAcumIA"></div>
-      <p class="source">Acum. ene-sep 2026: 23,6% · Interanual sep-26: 33,4% · INDEC</p>
+      <p class="source">Fuente: INDEC</p>
     </div>
     <div class="chart-wrap" style="margin:0">
-      <div class="chart-head"><div><h3>IPCBA CABA · acum. e interanual</h3><p>Ene-26 → Sep-26 · acum. barra izq. · i.a. línea der.</p></div></div>
+      <div class="chart-head"><div><h3>IPCBA CABA · acum. e interanual</h3><p><span id="rangoInflacionCaba"></span> · acum. barra izq. · i.a. línea der.</p></div></div>
       <div class="chart-box"><canvas id="chartInflCabaAcumIA"></canvas></div>
       <div class="legend" id="legendInflCabaAcumIA"></div>
-      <p class="source">Acum. ene-sep 2026: 23,7% · Interanual sep-26: 32,9% · IDECBA · Serie completa 2026</p>
+      <p class="source">Fuente: IDECBA</p>
     </div>
   </div>
   <div class="chart-wrap">
@@ -1410,8 +1409,7 @@ function toggleDataset(chartId,idx){
   if(items[idx]) items[idx].classList.toggle('muted',!hidden);
 }
 
-/* ── DATA — cargado desde data/indicadores.json ─ */
-// Variables asignadas por fetch; no editar aquí — editar data/indicadores.json
+/* ── DATA — inflación desde radar_data.json; demás indicadores desde indicadores.json ─ */
 
 /* ── CHART HELPERS ──────────────────────────── */
 function baseOpts(){
@@ -1578,7 +1576,7 @@ function initTab(tab){
           plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>c.dataset.label+': '+(c.parsed.y!==null?c.parsed.y.toFixed(1):'—')+'%'}}},
           scales:{
             x:{ticks:{font:{family:"'IBM Plex Mono',monospace",size:10},color:tok('--fg-dim')},grid:{color:tok('--border')}},
-            y:{min:0,max:4.5,ticks:{font:{size:10},color:tok('--fg-dim'),callback:v=>v+'%'},grid:{color:tok('--border')}}
+            y:{suggestedMin:0,suggestedMax:4.5,ticks:{font:{size:10},color:tok('--fg-dim'),callback:v=>v+'%'},grid:{color:tok('--border')}}
           }
         }
       });
@@ -1611,10 +1609,10 @@ function initTab(tab){
             }}}},
             scales:{
               x:{ticks:{font:{family:"'IBM Plex Mono',monospace",size:10},color:tok('--fg-dim')},grid:{color:tok('--border')}},
-              yA:{position:'left',min:0,max:28,
+              yA:{position:'left',suggestedMin:0,suggestedMax:28,
                   title:{display:true,text:'Acum. %',color:tok(acumColor.replace('var(','').replace(')','').replace('--','')?'--fg-dim':'--fg-dim'),font:{size:10}},
                   ticks:{font:{size:10},color:tok('--fg-dim'),callback:v=>v+'%'},grid:{color:tok('--border')}},
-              yI:{position:'right',min:29,max:38,
+              yI:{position:'right',suggestedMin:29,suggestedMax:38,
                   title:{display:true,text:'Interan. %',color:cv(iaColor),font:{size:10}},
                   ticks:{font:{size:10},color:tok('--fg-dim'),callback:v=>v+'%'},grid:{drawOnChartArea:false}}
             }
@@ -1844,17 +1842,86 @@ function initTab(tab){
 }
 
 /* ── CARGA DE DATOS + INIT ──────────────────── */
-fetch('./data/indicadores.json')
-  .then(r=>{ if(!r.ok)throw new Error(r.status); return r.json(); })
-  .then(d=>{
-    // Asigna todas las variables al scope global
-    Object.assign(window, d);
-    // Tablas estáticas
+const seriesInflacion = [
+  'MINFL', 'IPC_FULL', 'IPCBA_FULL', 'MIPCACUM', 'IPC_ACUM', 'IPC_IA_9',
+  'IPCBA_ACUM_9', 'IPCBA_IA_9', 'TIPCBA_MES', 'TIPCBA_VAR', 'TIPCBA_IA',
+  'TIPCBA_ACUM', 'TIPCBA_BIENES', 'TIPCBA_SERV', 'TIPCBA_ESTAC', 'TIPCBA_REG'
+];
+const formatoInflacion = new Intl.NumberFormat('es-AR', {minimumFractionDigits: 1, maximumFractionDigits: 1});
+const porcentajeInflacion = valor => Number.isFinite(valor) ? formatoInflacion.format(valor) + '%' : '—';
+
+function renderResumenInflacion(datos) {
+  const tarjetas = [
+    {id: 'ipcNacional', linea: 'Nacion', nombre: 'IPC Nacional', mensual: IPC_FULL,
+      detalle: [], cortes: [IPC_ACUM, IPC_IA_9], fuente: 'INDEC'},
+    {id: 'ipcCaba', linea: 'Caba', nombre: 'IPCBA CABA', mensual: IPCBA_FULL,
+      detalle: [TIPCBA_BIENES, TIPCBA_SERV], cortes: [IPCBA_ACUM_9, IPCBA_IA_9], fuente: 'IDECBA'}
+  ];
+  for (const tarjeta of tarjetas) {
+    const ultimo = tarjeta.mensual.findLastIndex(Number.isFinite);
+    const periodo = MINFL[ultimo];
+    const actual = tarjeta.mensual[ultimo];
+    const anterior = tarjeta.mensual[ultimo - 1];
+    const corte = MIPCACUM.indexOf(periodo);
+    const detalle = TIPCBA_MES.indexOf(periodo);
+    const ficha = document.getElementById(tarjeta.id);
+    ficha.querySelector('.kpi-label').textContent = [tarjeta.nombre, periodo?.toLowerCase()].filter(Boolean).join(' · ');
+    ficha.querySelector('.kpi-num').textContent = porcentajeInflacion(actual);
+    const contexto = [tarjeta.fuente];
+    if (Number.isFinite(anterior)) contexto.push('vs ' + porcentajeInflacion(anterior) + ' en ' + MINFL[ultimo - 1].toLowerCase());
+    if (tarjeta.id === 'ipcCaba' && Number.isFinite(actual) && Number.isFinite(IPC_FULL[ultimo])) {
+      const brecha = actual - IPC_FULL[ultimo];
+      contexto.push('brecha vs IPC Nacional ' + (brecha > 0 ? '+' : '') + formatoInflacion.format(brecha) + ' p.p.');
+    }
+    ficha.querySelector('.kpi-sub').textContent = contexto.join(' · ');
+    const valores = [...tarjeta.detalle.map(serie => serie[detalle]), ...tarjeta.cortes.map(serie => serie[corte])];
+    ficha.querySelectorAll('.kpi-sub-val').forEach((campo, i) => {
+      campo.textContent = porcentajeInflacion(valores[i]);
+    });
+    const publicado = datos.ENCABEZADO?.publicados.find(item => item.nombre === tarjeta.nombre);
+    const proximo = datos.ENCABEZADO?.proximos.find(item => item.nombre === tarjeta.nombre);
+    for (const [sufijo, item] of [['Publicado', publicado], ['Proximo', proximo]]) {
+      if (!item) continue;
+      const nodo = document.getElementById('tl' + tarjeta.linea + sufijo);
+      const esPublicado = sufijo === 'Publicado';
+      if (esPublicado) nodo.querySelector('.tl-date').textContent = item.fecha;
+      nodo.querySelector('.tl-val').textContent = esPublicado ? porcentajeInflacion(item.valor) : item.periodo;
+      nodo.querySelector('.tl-period').textContent = esPublicado ? item.periodo : item.fecha;
+      nodo.title = item.metodo || '';
+      nodo.hidden = false;
+    }
+  }
+
+  const rango = meses => meses.length ? meses[0] + ' → ' + meses.at(-1) : '';
+  document.getElementById('rangoInflacion').textContent = rango(MINFL);
+  document.getElementById('rangoInflacionNacion').textContent = rango(MIPCACUM);
+  document.getElementById('rangoInflacionCaba').textContent = rango(MIPCACUM);
+}
+
+async function cargarDatos(ruta, opciones) {
+  const respuesta = await fetch(ruta, opciones);
+  if (!respuesta.ok) throw new Error(ruta + ' (' + respuesta.status + ')');
+  return respuesta.json();
+}
+
+Promise.all([cargarDatos('./data/indicadores.json'), cargarDatos('./data/radar_data.json', {cache: 'no-store'})])
+  .then(([indicadores, radar]) => {
+    const inflacion = Object.fromEntries(seriesInflacion.map(nombre => {
+      if (!Array.isArray(radar[nombre])) throw new Error('Falta la serie ' + nombre);
+      return [nombre, radar[nombre]];
+    }));
+    Object.assign(window, indicadores, inflacion);
+    renderResumenInflacion(radar);
     renderTablaVoto(); renderTablaTEM(); renderSLSerie(); renderSLRows();
-    // Primer tab
     initTab('indicadores');
   })
-  .catch(err=>console.error('Error cargando indicadores.json:', err));
+  .catch(err => {
+    console.error('Error cargando Monitor AR:', err);
+    const aviso = document.createElement('p');
+    aviso.className = 'notice';
+    aviso.textContent = 'No se pudieron cargar los datos de Monitor AR.';
+    document.querySelector('.main-content').prepend(aviso);
+  });
 </script>
 
 </body></html>
