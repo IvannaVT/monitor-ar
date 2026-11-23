@@ -1333,6 +1333,30 @@
       "eje": "MI",
       "fila": 1582,
       "nota": "Lectura visual de la lámina «IMAGEN DE JAVIER MILEI · % Tendencia desde septiembre 2024», página 30 del PDF de D'Alessio de agosto (Drive 1mTV-Kdw), el 18/11. La extracción de texto entrega la serie sin rótulos de mes, pero la lámina sí está rotulada (sep-24 a ago-26) con el valor impreso sobre cada punto: el valor queda leído del informe y se retira la excepción registrada antes. Registro en base maestra fila 175."
+    },
+    {
+      "modulo": "ICC",
+      "ruta": "ICC",
+      "eje": "MESI",
+      "fuente_complementaria": "ICC_CIF_NAC_NOV26"
+    },
+    {
+      "modulo": "ICC",
+      "ruta": "ICC_CABA_13",
+      "eje": "MESI",
+      "fuente_complementaria": "ICC_CIF_CABA_NOV26"
+    },
+    {
+      "modulo": "ICC",
+      "ruta": "ICC_INT_13",
+      "eje": "MESI",
+      "fuente_complementaria": "ICC_CIF_INTERIOR_NOV26"
+    },
+    {
+      "modulo": "ICC",
+      "ruta": "ICC_GBA_14",
+      "eje": "MESI",
+      "fuente_complementaria": "ICC_CIF_GBA_NOV26"
     }
   ],
   "retiros": [],
@@ -4273,17 +4297,6 @@
   ],
   "calendario": [
     {
-      "modulo": "ICC",
-      "mes": "Nov-26",
-      "icono": "🎯",
-      "nombre": "ICC UTDT",
-      "periodo": "nov-26",
-      "fecha": "~17 nov",
-      "fuente": "UTDT CIF",
-      "metodo": "fecha estimada por regularidad histórica, vía monitorargy.com (MCP, herramienta calendario, consultado 2026-11-11)",
-      "clase": "upcoming"
-    },
-    {
       "modulo": "ICG",
       "mes": "Nov-26",
       "icono": "🏛️",
@@ -4345,7 +4358,7 @@
       "eje": "MESI",
       "unidad": "",
       "fuente": "UTDT CIF",
-      "fecha": "oct",
+      "fecha": "19 nov",
       "clase_valor": "neu"
     },
     {

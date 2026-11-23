@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
-  "corte": "2026-11-13",
+  "corte": "2026-11-23",
   "revision": {
     "estado": "aprobado",
-    "fecha": "2026-11-13",
-    "responsable": "Codex · actualización documental del 13/11/2026",
+    "fecha": "2026-11-23",
+    "responsable": "Codex · cotejo de la agenda parlamentaria del 23/11/2026",
     "css_sha256": "956e775386fb2b963d0b727db0c01931f5ca69a902ec421f601e9a990a2bc1dc",
-    "contenido_sha256": "bc79c067472886b25f6789266df83a9f8b1ebfc0bb34e3d7d889b578f6fdf324"
+    "contenido_sha256": "e90659c4c7bd0ad68a09a8a6625851b972e6423b261d3ff22bfb3db36d03d886"
   },
   "fuentes": {
     "bloques": {
@@ -153,6 +153,11 @@
       "etiqueta": "Proyecto y planillas · GCBA",
       "url": "https://buenosaires.gob.ar/gcaba_historico/proyecto-de-ley-presupuesto-2027",
       "consultada": "2026-11-13"
+    },
+    "agenda_25nov": {
+      "etiqueta": "Legislatura · Agenda 25/11",
+      "url": "https://www.legislatura.gob.ar/AgendaLCABADetalle/4855/30876",
+      "consultada": "2026-11-23"
     }
   },
   "rondas": [
@@ -586,6 +591,17 @@
   ],
   "agenda": [
     {
+      "id": "A-06",
+      "fecha": "2026-11-25",
+      "titulo": "Presupuesto 2027 · reunión de comisión prevista",
+      "texto": "La Comisión de Presupuesto tiene previsto tratar el expediente 3083-J-2026 a las 10 h en el Salón San Martín, junto con los proyectos de Código Fiscal, Ley Impositiva, Ley Arancelaria y financiamiento del Belgrano Sur. Horario sujeto a cambios.",
+      "fuentes": [
+        "agenda_25nov"
+      ],
+      "estado": "verificado",
+      "tipo": "blue"
+    },
+    {
       "id": "A-05",
       "fecha": "2026-11-02",
       "titulo": "Presupuesto general 2027 · reunión informativa",
@@ -960,8 +976,9 @@
     {
       "id": "PAN-03",
       "titulo": "Estado del Presupuesto 2027",
-      "texto": "Último hito confirmado en esta revisión: exposición de la Defensoría del Pueblo el 2/11 sobre el expediente 3083-J-2026. Sin próximo encuentro confirmado en las fuentes consultadas.",
+      "texto": "La agenda oficial prevé tratar el Presupuesto 2027 (3083-J-2026) en comisión el 25/11 a las 10 h, en el Salón San Martín. La Defensoría del Pueblo expuso el 2/11.",
       "fuentes": [
+        "agenda_25nov",
         "agenda_nov",
         "defensoria",
         "proyecto2027"
