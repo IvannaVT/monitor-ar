@@ -6,7 +6,7 @@
     "fecha": "2026-11-26",
     "responsable": "Ivanna Travaini · cotejo editorial del 26/11/2026 sobre fuentes oficiales de la Legislatura",
     "css_sha256": "956e775386fb2b963d0b727db0c01931f5ca69a902ec421f601e9a990a2bc1dc",
-    "contenido_sha256": "01bb4086c3c541767bddac42919f4e731d8ad57ec8960908065bca0297a49331"
+    "contenido_sha256": "1bf66d56aa47a419de94e23d591d76b5aafc64f59be863f45f72186aa9f15b06"
   },
   "fuentes": {
     "bloques": {
@@ -569,10 +569,9 @@
     {
       "id": "S-05",
       "titulo": "Presupuesto general 2027 · plazo de observaciones",
-      "texto": "Dictamen de mayoría del 25/11 (despacho 926/2026) sobre el expediente 3083-J-2026, con preferencia. El plazo para presentar observaciones vence el 30/11 a las 14:00. El proyecto remitido por el Ejecutivo (mensaje 42/26) fija gastos por $24.094.340.599.263 y recursos por $24.095.657.042.129, con fuentes financieras por $918.357.557.463, aplicaciones financieras por $919.674.000.329 y un resultado financiero superavitario de $1.316,4 millones. Autoriza operaciones de crédito público y reestructuraciones presupuestarias.",
+      "texto": "Dictamen de mayoría del 25/11 (despacho 926/2026) sobre el expediente 3083-J-2026, con preferencia. El plazo de observaciones vence el 30/11 a las 14:00. El texto aconsejado fija gastos por $24.094.340.599.263 —$19.768.623.479.401 corrientes y $4.325.717.119.862 de capital— y estima recursos por $24.095.657.042.129. Aprueba fuentes financieras por $918.357.557.463 y aplicaciones por $919.674.000.329, y fija gastos figurativos por $1.728.685.077.476. Las firmas registradas son siete sin disidencia, cuatro con disidencia y doce sin firmar, sobre 23 integrantes de la comisión.",
       "fuentes": [
-        "exp3083",
-        "proyecto2027"
+        "exp3083"
       ],
       "estado": "verificado",
       "tipo": "yellow"
@@ -585,6 +584,17 @@
         "exp3079",
         "exp3080",
         "exp3081"
+      ],
+      "estado": "verificado",
+      "tipo": "yellow"
+    },
+    {
+      "id": "S-07",
+      "titulo": "Presupuesto 2027 · ampliación de la emisión autorizada por la Ley 7008",
+      "texto": "El artículo 12 del texto aconsejado faculta al Poder Ejecutivo a ampliar el monto máximo de emisión autorizado por el inciso a) del artículo 2 de la Ley 7008 por un monto adicional igual al allí establecido, con los mismos destinos y condiciones. El artículo 13 fija en $1.200.000.000.000 el máximo en circulación de crédito de corto plazo y Letras del Tesoro, con garantía sobre fondos de la coparticipación federal. Seguimiento: monto efectivamente emitido bajo cada autorización.",
+      "fuentes": [
+        "exp3083",
+        "ley7008"
       ],
       "estado": "verificado",
       "tipo": "yellow"

@@ -41,11 +41,17 @@ Expediente 3084-J:
 - Firman sin disidencia (13): los siete anteriores más Ferrario, Nagata, Pakgojz, Pelayo, Ramírez y Vartabedian.
 - No firman (10): Arenaza, Barroetaveña, Bielli, Caporiccio, Casielles, Iañez, Lammens, Modarelli, Negri, Neira.
 
-«No firma» puede corresponder a una firma pendiente de carga en el sistema. Releer antes de usar este detalle en cualquier pieza, interna o pública.
+Para el expediente 3083-J estas firmas fueron verificadas el 26/11 directamente en el modal de firmas de su ficha, que las registra como «SI FIRMA», «FIRMA CON DISIDENCIA» y «NO FIRMA» sobre los 23 integrantes de la comisión. Coinciden con la lectura del 25/11. Para los otros tres expedientes la lectura sigue siendo la del 25/11 por la noche, donde «no firma» puede corresponder a una firma pendiente de carga.
+
+Nombres completos según el registro oficial del 3083-J: firman Donati (Pablo Alejandro), López (Matías Damián), Loupias (Francisco), Parera (Ignacio José), Siciliano (Sergio Hernán), Thourte (Manuela) y Wolff (Waldo); firman con disidencia Pakgojz (Nicolás), Pelayo (Solana), Ramírez (María del Pilar) y Vartabedian (Diego); no firman Arenaza (Juan Pablo), Barroetaveña (Matías), Bielli (María), Caporiccio (Francisco), Casielles (Eugenio), Ferrario (Emmanuel), Iañez (Berenice), Lammens (Matías), Modarelli (Juan Pablo), Nagata (Sebastián), Negri (Claudia) y Neira (Claudia).
 
 ## Pendientes de esta corrida
 
-Los textos de los dictámenes de 3079-J, 3080-J, 3081-J y 3083-J no se leyeron. Por eso los registros publicados atribuyen el contenido al proyecto remitido por el Ejecutivo —«el proyecto remitido por el Ejecutivo fija…»— y no al dictamen. El dictamen puede diferir del proyecto. Para el próximo corte: leer los cuatro dictámenes y, si hay diferencias, corregir la atribución.
+El dictamen del 3083-J se leyó el 26/11 y el registro S-05 pasó a atribuir su contenido al texto aconsejado, no al proyecto. Los montos de gastos, recursos, fuentes y aplicaciones del dictamen coinciden con los del proyecto del Ejecutivo, y el texto suma el desglose por gastos corrientes y de capital y los gastos figurativos.
+
+Del cotejo surgió el artículo 12, que faculta a ampliar el monto máximo de emisión autorizado por el inciso a) del artículo 2 de la Ley 7008 por un monto adicional igual. Quedó registrado como S-07. Es el vínculo directo entre el Presupuesto 2027 y la ley del bono a proveedores: la advertencia de no confundir ambas obligaciones sigue siendo válida, pero el presupuesto sí amplía la autorización de aquella ley.
+
+Los dictámenes de 3079-J, 3080-J y 3081-J siguen sin leerse, de modo que sus registros atribuyen el contenido al proyecto remitido por el Ejecutivo. Método verificado para obtenerlos: en la ficha del expediente, pestaña «Dictámenes», enlace «Descargar» de la fila del dictamen; el archivo baja como .docx. El enlace directo download.aspx no es accesible por fuera del navegador.
 
 El único dictamen cotejado contra su proyecto es el del 3084-J: no registra diferencias en los artículos 1 a 8 y agrega un considerando sobre la presencia de funcionarios del Ejecutivo que informaron. Así consta en `P-02`.
 
