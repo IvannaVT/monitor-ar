@@ -1,0 +1,45 @@
+# Netlify publica la raíz del repositorio tal cual, a diferencia del workflow
+# de GitHub Pages, que copia a _site solo index.html, monitor_ar.html,
+# monitor_leg.html, radar_eeuu_2026.html y los dos JSON que el sitio consume.
+#
+# Estas reglas igualan ese alcance: dejan fuera del sitio la documentación
+# interna, el generador, la plantilla, las pruebas y las bases de trabajo.
+# PUBLICACION.md establece que la documentación interna, la plantilla y el
+# generador no se incorporan al sitio, y que el registro de comprobaciones y
+# los pendientes permanecen en GitHub.
+#
+# Es una lista explícita, no un patrón: Netlify solo admite el comodín al
+# final de la ruta. Al sumar documentación, scripts o bases nuevas hay que
+# agregarlas acá.
+#
+# El signo ! en el código de estado fuerza la regla: sin él Netlify sirve el
+# archivo cuando existe en el repositorio y la regla no llega a aplicarse.
+
+# Documentación interna y registro de corridas
+/docs/*                         /404.html   404!
+/readme.md                      /404.html   404!
+/README.md                      /404.html   404!
+/publicacion.md                 /404.html   404!
+/PUBLICACION.md                 /404.html   404!
+/diseno_claude.md               /404.html   404!
+/DISENO_CLAUDE.md               /404.html   404!
+/revision_preguntas.md          /404.html   404!
+/REVISION_PREGUNTAS.md          /404.html   404!
+
+# Generador, plantilla y utilidades
+/monitor_leg.template.html      /404.html   404!
+/monitor_leg_build.py           /404.html   404!
+/monitor_leg_view.py            /404.html   404!
+/patch_base_maestra.py          /404.html   404!
+/update_base_maestra.py         /404.html   404!
+/scripts/*                      /404.html   404!
+/tests/*                        /404.html   404!
+
+# Bases y datos de trabajo. Quedan públicos solo indicadores.json y
+# radar_data.json, que son los que cargan las páginas.
+/data/bases/*                   /404.html   404!
+/data/legislativo.json          /404.html   404!
+/data/radar_mapping.json        /404.html   404!
+/data/radar_trazabilidad.csv    /404.html   404!
+/data/cifras_sin_respaldo.json  /404.html   404!
+/data/diccionario_indicadores.json  /404.html   404!
