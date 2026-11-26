@@ -51,7 +51,19 @@ El dictamen del 3083-J se leyó el 26/11 y el registro S-05 pasó a atribuir su 
 
 Del cotejo surgió el artículo 12, que faculta a ampliar el monto máximo de emisión autorizado por el inciso a) del artículo 2 de la Ley 7008 por un monto adicional igual. Quedó registrado como S-07. Es el vínculo directo entre el Presupuesto 2027 y la ley del bono a proveedores: la advertencia de no confundir ambas obligaciones sigue siendo válida, pero el presupuesto sí amplía la autorización de aquella ley.
 
-Los dictámenes de 3079-J, 3080-J y 3081-J siguen sin leerse, de modo que sus registros atribuyen el contenido al proyecto remitido por el Ejecutivo. Método verificado para obtenerlos: en la ficha del expediente, pestaña «Dictámenes», enlace «Descargar» de la fila del dictamen; el archivo baja como .docx. El enlace directo download.aspx no es accesible por fuera del navegador.
+Los dictámenes de 3079-J, 3080-J y 3081-J se leyeron el 26/11. El cotejo corrigió tres formulaciones que venían del resumen de trabajo y no del texto.
+
+**El 28,7% no es un aumento del impuesto.** El considerando del 3080-J dice que «se actualizan los valores de los inmuebles y los límites para las exenciones o bonificaciones en los tributos en un 28,7 %», con el objetivo declarado de asegurar la progresividad del inmobiliario y del ABL. En el impuesto de sellos, el 28,7% es el incremento del «límite para la exención o bonificación» en la transferencia de dominio de vivienda. El registro decía «28,7% en inmobiliario, ABL y sellos de vivienda», que se lee como una suba de alícuota.
+
+**El 18% aplica a límites, no a una suba general.** El texto actualiza en 18% los límites fijados para el incremento de alícuotas de ingresos brutos, hasta $2.542.500.000, y los montos fijos y límites de exenciones.
+
+**Son libros, no librerías.** Los artículos 2, 3 y 4 del 3079-J dejan sin efecto la obligación de pago del inmobiliario y del ABL para las cuotas con vencimiento de enero a junio, en inmuebles habilitados para gastronomía (códigos 561011, 561012, 561014, 561019 y 561030), hotelería (551010, 551022 y 551023) y venta de libros (464211, 476111 y 477820). La venta de artículos de librería y papelería no está entre las actividades alcanzadas. Queda cerrada la duda entre «librerías» y «libros» anotada más arriba: el texto dice venta de libros. El beneficio alcanza exclusivamente a los inmuebles habilitados para esas actividades.
+
+Del 3080-J se suma la alícuota del 5% para productos emergentes de tabaco y nicotina, incorporada a partir de la Ley 6.964 y de la Resolución 549/26 del Ministerio de Salud de la Nación.
+
+El dictamen del 3084-J no se releyó en esta corrida: el enlace de descarga de su ficha entregó el documento del 3080-J. Sigue valiendo el cotejo anterior, que no registró diferencias en los artículos 1 a 8 respecto del proyecto.
+
+Método verificado para obtener los dictámenes: en la ficha del expediente, pestaña «Dictámenes», enlace «Descargar» de la fila; el archivo baja como .docx. El enlace directo download.aspx no es accesible por fuera del navegador: el proxy lo rechaza con 403.
 
 El único dictamen cotejado contra su proyecto es el del 3084-J: no registra diferencias en los artículos 1 a 8 y agrega un considerando sobre la presencia de funcionarios del Ejecutivo que informaron. Así consta en `P-02`.
 
