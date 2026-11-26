@@ -6,7 +6,7 @@
     "fecha": "2026-11-26",
     "responsable": "Ivanna Travaini · cotejo editorial del 26/11/2026 sobre fuentes oficiales de la Legislatura",
     "css_sha256": "956e775386fb2b963d0b727db0c01931f5ca69a902ec421f601e9a990a2bc1dc",
-    "contenido_sha256": "ea3e7902e45bea39eda8c10665cab30b590456e7417bfee8e43241d8ad5eaa89"
+    "contenido_sha256": "ac1972e764d3f3e427c543b02d6ff6db3abae6772be531e1c0dc54d5f4bdc41b"
   },
   "fuentes": {
     "bloques": {
@@ -578,11 +578,20 @@
     },
     {
       "id": "S-06",
-      "titulo": "Código fiscal, ley impositiva y arancelaria 2027 · plazo de observaciones",
-      "texto": "Dictámenes de mayoría del 25/11 (despachos 923, 924 y 925/2026) sobre los expedientes 3079-J, 3080-J y 3081-J, los tres con preferencia. El plazo de observaciones vence el 30/11 a las 14:00. Los textos aconsejados actualizan un 18% los límites de alícuotas de ingresos brutos, hasta $2.542.500.000, y los montos fijos y límites de exenciones; actualizan un 28,7% los valores de los inmuebles y los límites para exenciones y bonificaciones del inmobiliario y del ABL, y en el mismo porcentaje el límite para la exención del impuesto de sellos en la transferencia de vivienda; y fijan una alícuota del 5% para productos emergentes de tabaco y nicotina. El código fiscal deja sin efecto la obligación de pago del inmobiliario y del ABL para las cuotas con vencimiento de enero a junio en inmuebles habilitados para gastronomía, hotelería y venta de libros, y crea un régimen de promoción para locales de la Avenida de Mayo. La ley arancelaria reduce valores de trámites y distingue entre gestión digital y en papel.",
+      "titulo": "Ley impositiva 2027 · plazo de observaciones",
+      "texto": "Dictamen de mayoría del 25/11 (despacho 924/2026) sobre el expediente 3080-J-2026, con preferencia. El plazo de observaciones vence el 30/11 a las 14:00. El texto aconsejado actualiza un 18% los límites fijados para el incremento de alícuotas del impuesto sobre los ingresos brutos, hasta $2.542.500.000, y en el mismo porcentaje los montos fijos y los límites de exenciones. Con el objetivo declarado de asegurar la progresividad del impuesto inmobiliario y de la tasa retributiva de los servicios de alumbrado, barrido y limpieza, mantenimiento y conservación de sumideros, actualiza un 28,7% los valores de los inmuebles y los límites para las exenciones o bonificaciones en esos tributos. En el impuesto de sellos incrementa un 28,7% el límite para la exención o bonificación en la transferencia de dominio de bienes inmuebles destinados a vivienda. Fija una alícuota del 5% para los productos emergentes de tabaco o nicotina.",
+      "fuentes": [
+        "exp3080"
+      ],
+      "estado": "verificado",
+      "tipo": "yellow"
+    },
+    {
+      "id": "S-08",
+      "titulo": "Código fiscal y ley arancelaria 2027 · plazo de observaciones",
+      "texto": "Dictámenes de mayoría del 25/11 (despachos 923 y 925/2026) sobre los expedientes 3079-J y 3081-J, ambos con preferencia. El plazo de observaciones vence el 30/11 a las 14:00. El texto aconsejado para el código fiscal deja sin efecto la obligación de pago del impuesto inmobiliario y de la tasa retributiva de los servicios de alumbrado, barrido y limpieza correspondiente a las cuotas con vencimiento en los meses de enero a junio, y alcanza exclusivamente a los inmuebles habilitados para servicios de gastronomía, de alojamiento y de venta de libros. Regula la figura del responsable sustituto, desagrega los beneficios por buen cumplimiento y métodos de pago, y crea un régimen de promoción que permite computar como pago a cuenta de la tasa retributiva lo invertido en reformar locales comerciales de planta baja sobre la Avenida de Mayo. El texto aconsejado para la ley arancelaria reduce valores de trámites, distingue entre formato digital y papel y exceptúa del cargo a la solicitud digital.",
       "fuentes": [
         "exp3079",
-        "exp3080",
         "exp3081"
       ],
       "estado": "verificado",
