@@ -59,7 +59,12 @@ def render_monitor(d):
     controversies += '<h3 id="proyectos">Proyectos prioritarios</h3><div class="mosaico">'+''.join(tile(r['titulo'], e(r['texto']), 'green' if r['id']!='P-02' else 'yellow', r) for r in d['preguntas'])+'</div>'
     body += '<hr class="divider">'+section(3,'controversiales','Temas y controversias — Planteos relevados',controversies)
 
-    questions = '<p class="section-note">22 planteos registrados entre el 6 y el 26/10. Cobertura: LLA, FxBA, CD y FIT/PO. Sin posiciones relevadas en esta tabla para Vamos por Más, Ciudadanos Unidos/UCR y Transformación. Posiciones de noviembre y votos sobre el Presupuesto 2027 pendientes de confirmación.</p><div class="filtros" role="group" aria-label="Filtrar posiciones por bloque">'
+    span = [r['fecha'] for r in d['preguntas_bloques']]
+    desde, hasta = ('/'.join(reversed(f.split('-')[1:])) for f in (min(span), max(span)))
+    relevados = {r['filtro'] for r in d['preguntas_bloques']}
+    faltantes = [b['titulo'] for b in d['bloques'] if b['filtro'] not in relevados]
+    sin_relevar = (' Sin posiciones relevadas en esta tabla para ' + ', '.join(faltantes) + '.') if faltantes else ''
+    questions = f'<p class="section-note">{len(span)} planteos registrados entre el {desde} y el {hasta}. Cobertura: {", ".join(sorted(relevados))}.{sin_relevar} Los votos sobre el Presupuesto 2027 están pendientes de confirmación.</p><div class="filtros" role="group" aria-label="Filtrar posiciones por bloque">'
     for key,label in [('todos','Todos'),('LLA','🔴 LLA'),('FxBA','🔵 FxBA'),('CD','🟢 CD'),('FIT','FIT/PO')]:
         active = ' class="activo" aria-pressed="true"' if key=='todos' else ' aria-pressed="false"'
         questions += f'<button type="button"{active} onclick="filtrar(\'{key}\',this)">{label}</button>'
