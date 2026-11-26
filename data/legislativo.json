@@ -6,7 +6,7 @@
     "fecha": "2026-11-26",
     "responsable": "Ivanna Travaini · cotejo editorial del 26/11/2026 sobre fuentes oficiales de la Legislatura",
     "css_sha256": "956e775386fb2b963d0b727db0c01931f5ca69a902ec421f601e9a990a2bc1dc",
-    "contenido_sha256": "ac1972e764d3f3e427c543b02d6ff6db3abae6772be531e1c0dc54d5f4bdc41b"
+    "contenido_sha256": "5468ce4bc70d7a877ed082b39035db512b60e9885e5c0ef04269fdddd009ec2e"
   },
   "fuentes": {
     "bloques": {
@@ -178,6 +178,29 @@
       "etiqueta": "Expediente 3084-J-2026 · financiamiento Belgrano Sur",
       "url": "https://parlamentaria.legislatura.gob.ar/pages/expediente.aspx?id=142696",
       "consultada": "2026-11-25"
+    },
+    "uia_gcba": {
+      "etiqueta": "GCBA · Jorge Macri ante la UIA · 3/11",
+      "url": "https://buenosaires.gob.ar/noticias/jorge-macri-ante-los-industriales-baja-de-impuestos-incentivos-la-inversion-y-obra-publica",
+      "consultada": "2026-11-26"
+    },
+    "negociacion_nov": {
+      "etiqueta": "Ámbito · negociación con LLA · 17/11",
+      "url": "https://www.ambito.com/politica/presupuesto-2027-caba-el-pro-negociara-cambios-la-libertad-avanza-que-reclama-mas-ajuste-y-baja-impuestos-n6345847",
+      "consultada": "2026-11-26",
+      "clase": "prensa"
+    },
+    "mesa_letrap": {
+      "etiqueta": "Letra P · mesa de negociación · 18/11",
+      "url": "https://www.letrap.com.ar/politica/presupuesto-porteno-jorge-macri-abre-una-mesa-negociacion-asegurarse-el-apoyo-la-libertad-avanza-n5428295",
+      "consultada": "2026-11-26",
+      "clase": "prensa"
+    },
+    "pj_cambios": {
+      "etiqueta": "Ámbito · reclamos del peronismo · 24/11",
+      "url": "https://www.ambito.com/politica/presupuesto-caba-el-peronismo-pide-cambios-mientras-el-pro-apunta-los-votos-lla-ucr-y-larreta-n6348801",
+      "consultada": "2026-11-26",
+      "clase": "prensa"
     }
   },
   "rondas": [
@@ -560,6 +583,27 @@
       "texto": "El comunicado oficial presenta los ejes de atención primaria, prevención y salud mental.",
       "fuentes": [
         "salud"
+      ],
+      "estado": "verificado",
+      "tipo": "grey"
+    },
+    {
+      "id": "D-05",
+      "titulo": "Ejecutivo · baja impositiva ante la UIA",
+      "texto": "Jorge Macri expuso el 3/11 ante la Unión Industrial Argentina la baja de impuestos, los incentivos a la inversión y la obra pública previstos para 2027. El comunicado oficial atribuye un 20% del presupuesto a obra pública.",
+      "fuentes": [
+        "uia_gcba"
+      ],
+      "estado": "verificado",
+      "tipo": "blue"
+    },
+    {
+      "id": "D-06",
+      "titulo": "Negociación con La Libertad Avanza · noviembre",
+      "texto": "Letra P describe el 18/11 una mesa de negociación abierta por el Ejecutivo para conseguir acompañamiento, y atribuye al oficialismo más reparos sobre ABL residencial y patentes que sobre los tributos que gravan la actividad. Sin declaración directa ni respuesta oficial documentada.",
+      "fuentes": [
+        "mesa_letrap",
+        "negociacion_nov"
       ],
       "estado": "verificado",
       "tipo": "grey"
@@ -1012,6 +1056,32 @@
       "clase": "Pregunta",
       "fuentes": [
         "hacienda_prensa"
+      ],
+      "estado": "verificado"
+    },
+    {
+      "id": "Q-23",
+      "filtro": "LLA",
+      "actor": "P. Ramírez",
+      "tema": "Gasto",
+      "texto": "Reclamo de mayor reducción del gasto y de baja de impuestos, presentado en la mesa de negociación. Atribución periodística.",
+      "fecha": "2026-11-17",
+      "clase": "Reclamo",
+      "fuentes": [
+        "negociacion_nov"
+      ],
+      "estado": "verificado"
+    },
+    {
+      "id": "Q-24",
+      "filtro": "FxBA",
+      "actor": "C. Neira",
+      "tema": "Vivienda",
+      "texto": "Pedido de cambios en empleo, vivienda, transporte e impuestos antes de acompañar. Atribución periodística.",
+      "fecha": "2026-11-24",
+      "clase": "Reclamo",
+      "fuentes": [
+        "pj_cambios"
       ],
       "estado": "verificado"
     }
