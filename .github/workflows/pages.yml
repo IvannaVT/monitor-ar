@@ -14,20 +14,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v6
-      - name: Comprobar contenido antes de publicar
-        run: |
-          python3 monitor_leg_build.py --check
-          python3 scripts/build_radar_data.py --check
-          python3 scripts/check_cifras.py
-          python3 scripts/check_indicadores.py
-          python3 scripts/check_sintaxis.py
-          python3 -m unittest discover -s tests -p 'test_radar_data.py'
-      - name: Preparar sitio público
-        if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
-        run: |
-          mkdir -p _site/data
-          cp index.html monitor_ar.html monitor_leg.html radar_eeuu_2026.html _site/
-          cp data/indicadores.json data/radar_data.json _site/data/
+      - name: Comprobar contenido y preparar sitio público
+        run: bash scripts/build_site.sh
       - uses: actions/upload-pages-artifact@v4
         if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
         with:
