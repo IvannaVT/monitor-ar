@@ -1,0 +1,14 @@
+# Netlify publica el sitio con el mismo alcance y el mismo chequeo previo que
+# el workflow de GitHub Pages: las dos rutas invocan scripts/build_site.sh.
+#
+# Antes de esto, Netlify servía la raíz del repositorio tal cual —incluida la
+# documentación interna, el generador y las bases de trabajo— y publicaba cada
+# push sin validar nada. _redirects tapaba las rutas una por una; ahora se
+# publica solo lo que el script copia a _site/, que es una lista blanca.
+#
+# Si el chequeo falla, el build falla y Netlify no publica: el sitio queda en
+# la versión anterior en lugar de publicar contenido no validado.
+
+[build]
+  command = "bash scripts/build_site.sh"
+  publish = "_site"
