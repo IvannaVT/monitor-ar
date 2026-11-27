@@ -17104,8 +17104,8 @@
     {
      "tipo": "pendiente",
      "modulo": "Agenda pública",
-     "etiqueta": "Sin ranking nacional completo con fila en nivel 2. Management & Fit (desocupación 21,9 · corrupción 18,1) y Pulso Research (pregunta abierta) tienen solo parte del ranking legible.",
-     "necesita": "relevar a mano el ranking completo de principal problema de M&F (PDF 1cmuEFkd…) y de Pulso (PDF 1eoMG0IJ…)"
+     "etiqueta": "Sin ranking nacional con fila en nivel 2 en el Monitor. Pulso Research (pregunta abierta, 22 categorías, N2 2100–2121) quedó cargado en la base; Management & Fit solo tiene legibles desocupación 21,9 y corrupción 18,1.",
+     "necesita": "relevar a mano el ranking completo de principal problema de M&F (PDF 1cmuEFkd…, pesa más de 10 MB y no se puede bajar por el conector)"
     }
    ]
   },
@@ -17160,8 +17160,8 @@
     {
      "tipo": "pendiente",
      "modulo": "Territorio",
-     "etiqueta": "Management & Fit nov-26 no se cargó completo: desconfianza y el resto del ranking de principal problema por celdas ambiguas; el corte de PBA (aprobación Milei 35,8 · Kicillof 37,4) está en la base pero no en el Monitor.",
-     "necesita": "relevar a mano esas celdas del PDF 1cmuEFkd…"
+     "etiqueta": "Management & Fit nov-26: desconfianza cargada (60,1%); falta el resto del ranking de principal problema por celdas ambiguas. El corte de PBA (aprobación Milei 35,8 · Kicillof 37,4) está en la base pero no en el Monitor.",
+     "necesita": "relevar a mano el ranking de principal problema del PDF 1cmuEFkd…"
     }
    ]
   }
@@ -17770,7 +17770,7 @@
      "NI:1472"
     ],
     "pendiente": [
-     "Sin ranking nacional completo con fila en nivel 2. Management & Fit (desocupación 21,9 · corrupción 18,1) y Pulso Research (pregunta abierta) tienen solo parte del ranking legible. Necesita: relevar a mano el ranking completo de principal problema de M&F (PDF 1cmuEFkd…) y de Pulso (PDF 1eoMG0IJ…)"
+     "Sin ranking nacional con fila en nivel 2 en el Monitor. Pulso Research (pregunta abierta, 22 categorías, N2 2100–2121) quedó cargado en la base; Management & Fit solo tiene legibles desocupación 21,9 y corrupción 18,1. Necesita: relevar a mano el ranking completo de principal problema de M&F (PDF 1cmuEFkd…, pesa más de 10 MB y no se puede bajar por el conector)"
     ]
    },
    "bases": [
@@ -17935,7 +17935,7 @@
     "pendiente": [
      "CB Global Data GBA (24 intendentes) y CB Global federal (gobernadores, intendentes y dirigentes nacionales por provincia, campo 8–13/11). Del federal faltan por relevar a mano los valores de noviembre de 18 gobernadores y 18 intendentes, que están solo en gráficos. Necesita: lectura de los gráficos de las pp. de desglose del PDF 1vxmhzHN… (N1 fila 386)",
      "DC CABA nov-26: presupuesto «salud y educación primero» figura en 28,4% en la presentación y en 31,4% en el informe analítico (submuestra de ~70 casos, ±11,7 pp). Ambos valores están en la base; no se usan en el Monitor. Necesita: base de campo de DC Consultores para resolver la discrepancia",
-     "Management & Fit nov-26 no se cargó completo: desconfianza y el resto del ranking de principal problema por celdas ambiguas; el corte de PBA (aprobación Milei 35,8 · Kicillof 37,4) está en la base pero no en el Monitor. Necesita: relevar a mano esas celdas del PDF 1cmuEFkd…"
+     "Management & Fit nov-26: desconfianza cargada (60,1%); falta el resto del ranking de principal problema por celdas ambiguas. El corte de PBA (aprobación Milei 35,8 · Kicillof 37,4) está en la base pero no en el Monitor. Necesita: relevar a mano el ranking de principal problema del PDF 1cmuEFkd…"
     ]
    },
    "bases": [
