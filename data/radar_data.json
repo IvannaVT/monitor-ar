@@ -467,7 +467,7 @@
     null,
     null,
     33,
-    null
+    31
    ],
    "pj": [
     null,
@@ -479,7 +479,7 @@
     null,
     null,
     33,
-    null
+    34
    ]
   },
   "Zuban": {
@@ -570,24 +570,24 @@
     null,
     null,
     null,
-    null,
-    null,
-    null,
-    null,
+    24,
+    24,
+    24,
+    24,
     26,
-    null
+    24
    ],
    "pj": [
     null,
     null,
     null,
     null,
-    null,
-    null,
-    null,
-    null,
+    25,
+    25,
+    26,
+    23,
     24,
-    null
+    25
    ]
   },
   "DC Consultores": {
@@ -598,9 +598,9 @@
     null,
     null,
     null,
-    null,
-    null,
-    null,
+    41.3,
+    43.7,
+    40.2,
     42.6,
     null
    ],
@@ -615,6 +615,33 @@
     null,
     17.1,
     null
+   ]
+  },
+  "Pulso Research": {
+   "color": "var(--c4)",
+   "lla": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    25.8
+   ],
+   "pj": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    21.3
    ]
   }
  },
@@ -648,10 +675,10 @@
   },
   {
    "name": "Eq. Mide",
-   "p": "Oct-26",
-   "lla": 33,
-   "pj": 33,
-   "d": 2,
+   "p": "Nov-26",
+   "lla": 31,
+   "pj": 34,
+   "d": -2,
    "n": "—",
    "met": "—"
   },
@@ -684,10 +711,10 @@
   },
   {
    "name": "ESPOP",
-   "p": "Oct-26",
-   "lla": 26,
-   "pj": 24,
-   "d": null,
+   "p": "Nov-26",
+   "lla": 24,
+   "pj": 25,
+   "d": -2,
    "n": "—",
    "met": "—"
   },
@@ -696,6 +723,15 @@
    "p": "Oct-26",
    "lla": 42.6,
    "pj": 17.1,
+   "d": 2.4,
+   "n": "—",
+   "met": "—"
+  },
+  {
+   "name": "Pulso Research",
+   "p": "Nov-26",
+   "lla": 25.8,
+   "pj": 21.3,
    "d": null,
    "n": "—",
    "met": "—"
@@ -760,7 +796,7 @@
     56.9,
     57.2,
     55.7,
-    null,
+    56,
     56.8,
     null
    ],
@@ -769,7 +805,7 @@
     37.5,
     33.9,
     36.1,
-    null,
+    36,
     34.9,
     null
    ]
@@ -863,8 +899,8 @@
    "pos": [
     null,
     null,
-    null,
-    null,
+    40.5,
+    40.6,
     39.3,
     41.9,
     38.9
@@ -872,8 +908,8 @@
    "neg": [
     null,
     null,
-    null,
-    null,
+    55.4,
+    54.1,
     57.1,
     55.2,
     56.1
@@ -951,7 +987,7 @@
     null,
     null,
     32.4,
-    null
+    38.6
    ],
    "neg": [
     null,
@@ -960,7 +996,7 @@
     null,
     null,
     64.6,
-    null
+    58.7
    ]
   },
   "DC Consultores": {
@@ -981,6 +1017,69 @@
     null,
     null,
     55.1,
+    null
+   ]
+  },
+  "Management & Fit": {
+   "color": "var(--c4)",
+   "pos": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    34
+   ],
+   "neg": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    54.1
+   ]
+  },
+  "RDT": {
+   "color": "var(--fg-dim)",
+   "pos": [
+    38.2,
+    38,
+    39.3,
+    null,
+    null,
+    null,
+    null
+   ],
+   "neg": [
+    53.7,
+    52.4,
+    53.1,
+    null,
+    null,
+    null,
+    null
+   ]
+  },
+  "ESPOP": {
+   "color": "var(--c7)",
+   "pos": [
+    null,
+    33,
+    33,
+    null,
+    null,
+    34,
+    null
+   ],
+   "neg": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    60,
     null
    ]
   }
@@ -1007,11 +1106,11 @@
     35.6
    ],
    "desaprob": [
-    null,
-    null,
-    null,
-    null,
-    null,
+    58.5,
+    51.6,
+    53.8,
+    53.3,
+    52.6,
     52.4,
     55.9
    ]
@@ -1064,7 +1163,7 @@
     31.3,
     null,
     null,
-    null,
+    33.4,
     null,
     null,
     null
@@ -1073,7 +1172,7 @@
     54.5,
     null,
     null,
-    null,
+    53.3,
     null,
     null,
     null
@@ -1187,22 +1286,22 @@
   "M&F": {
    "color": "var(--warn)",
    "aprob": [
-    null,
-    null,
+    37.9,
+    37.3,
     null,
     null,
     null,
     36.6,
-    null
+    37.6
    ],
    "desaprob": [
-    null,
-    null,
+    58.1,
+    58.2,
     null,
     null,
     null,
     58.1,
-    null
+    58.1
    ]
   },
   "Zentrix": {
@@ -1230,8 +1329,8 @@
    "color": "var(--fg-dim)",
    "aprob": [
     null,
-    null,
-    null,
+    30.7,
+    32.6,
     null,
     null,
     29.5,
@@ -1239,8 +1338,8 @@
    ],
    "desaprob": [
     null,
-    null,
-    null,
+    54.5,
+    54.4,
     null,
     null,
     null,
@@ -1256,7 +1355,7 @@
     null,
     null,
     28.9,
-    null
+    34
    ],
    "desaprob": [
     null,
@@ -1265,18 +1364,39 @@
     null,
     null,
     null,
-    null
+    59.6
    ]
   },
   "D'Alessio": {
    "color": "var(--c5)",
    "aprob": [
-    null,
-    null,
-    null,
-    null,
     39,
     null,
+    null,
+    40,
+    39,
+    null,
+    null
+   ],
+   "desaprob": [
+    60,
+    null,
+    null,
+    58,
+    60,
+    null,
+    null
+   ]
+  },
+  "ESPOP": {
+   "color": "var(--c7)",
+   "aprob": [
+    null,
+    35,
+    34,
+    35,
+    35,
+    36,
     null
    ],
    "desaprob": [
@@ -1284,8 +1404,8 @@
     null,
     null,
     null,
-    60,
     null,
+    60,
     null
    ]
   }
@@ -1817,13 +1937,13 @@
     "tipo": "rango",
     "mes": "Nov-26",
     "unidad": "%",
-    "n": 3,
+    "n": 5,
     "grupos": [
      {
       "composicion": "estandar",
-      "n": 3,
-      "min": 56.1,
-      "max": 57,
+      "n": 5,
+      "min": 54.1,
+      "max": 58.7,
       "rango_valido": true,
       "direccion": "sin dirección común entre consultoras",
       "direcciones": {
@@ -1841,9 +1961,30 @@
         "estado": "sube",
         "detalle": "Oct-26 → Nov-26",
         "delta": 4
+       },
+       "Pulso Research": {
+        "estado": "baja",
+        "detalle": "Oct-26 → Nov-26",
+        "delta": -5.9
+       },
+       "Management & Fit": {
+        "estado": "sin medición anterior",
+        "detalle": "serie de un solo punto"
        }
       },
       "consultoras": {
+       "Pulso Research": {
+        "valor": 58.7,
+        "ref": {
+         "fila": 1951,
+         "base": "nivel2_indicadores",
+         "file_id": "1eoMG0IJq0ArLCUXPemLwyvuS1EDbP-C5",
+         "campo": "2026-11-07→2026-11-16",
+         "categoria": "Negativa",
+         "composicion": "estandar",
+         "secundaria": ""
+        }
+       },
        "QMonitor": {
         "valor": 57,
         "ref": {
@@ -1879,6 +2020,18 @@
          "composicion": "estandar",
          "secundaria": ""
         }
+       },
+       "Management & Fit": {
+        "valor": 54.1,
+        "ref": {
+         "fila": 1836,
+         "base": "nivel2_indicadores",
+         "file_id": "1cmuEFkdV5dtihVQCBX4eO6Gof-jLEnLp",
+         "campo": "2026-11-12→2026-11-17",
+         "categoria": "Negativa (mala + muy mala)",
+         "composicion": "estandar",
+         "secundaria": ""
+        }
        }
       }
      }
@@ -1886,7 +2039,9 @@
     "por_consultora": {
      "Analogías": 56.7,
      "Proyección": 56.1,
-     "QMonitor": 57
+     "QMonitor": 57,
+     "Pulso Research": 58.7,
+     "Management & Fit": 54.1
     },
     "una_composicion": true
    },
@@ -1913,11 +2068,11 @@
     "tipo": "rango",
     "mes": "Nov-26",
     "unidad": "%",
-    "n": 3,
+    "n": 5,
     "grupos": [
      {
       "composicion": "estandar",
-      "n": 3,
+      "n": 5,
       "min": 32,
       "max": 39.2,
       "rango_valido": true,
@@ -1937,6 +2092,15 @@
         "estado": "sube",
         "detalle": "Oct-26 → Nov-26",
         "delta": 1
+       },
+       "Pulso Research": {
+        "estado": "sube",
+        "detalle": "Oct-26 → Nov-26",
+        "delta": 6.2
+       },
+       "Management & Fit": {
+        "estado": "sin medición anterior",
+        "detalle": "serie de un solo punto"
        }
       },
       "consultoras": {
@@ -1964,6 +2128,30 @@
          "secundaria": ""
         }
        },
+       "Pulso Research": {
+        "valor": 38.6,
+        "ref": {
+         "fila": 1950,
+         "base": "nivel2_indicadores",
+         "file_id": "1eoMG0IJq0ArLCUXPemLwyvuS1EDbP-C5",
+         "campo": "2026-11-07→2026-11-16",
+         "categoria": "Positiva",
+         "composicion": "estandar",
+         "secundaria": ""
+        }
+       },
+       "Management & Fit": {
+        "valor": 34,
+        "ref": {
+         "fila": 1835,
+         "base": "nivel2_indicadores",
+         "file_id": "1cmuEFkdV5dtihVQCBX4eO6Gof-jLEnLp",
+         "campo": "2026-11-12→2026-11-17",
+         "categoria": "Positiva (muy buena + buena)",
+         "composicion": "estandar",
+         "secundaria": ""
+        }
+       },
        "QMonitor": {
         "valor": 32,
         "ref": {
@@ -1982,7 +2170,9 @@
     "por_consultora": {
      "Analogías": 39.2,
      "Proyección": 38.9,
-     "QMonitor": 32
+     "QMonitor": 32,
+     "Pulso Research": 38.6,
+     "Management & Fit": 34
     },
     "una_composicion": true
    },
@@ -2009,13 +2199,13 @@
     "tipo": "rango",
     "mes": "Nov-26",
     "unidad": "%",
-    "n": 3,
+    "n": 5,
     "grupos": [
      {
       "composicion": "estandar",
-      "n": 3,
+      "n": 5,
       "min": 30.3,
-      "max": 36,
+      "max": 37.6,
       "rango_valido": true,
       "direccion": "sin dirección común entre consultoras",
       "direcciones": {
@@ -2033,9 +2223,31 @@
         "estado": "sube",
         "detalle": "Oct-26 → Nov-26",
         "delta": 1
+       },
+       "M&F": {
+        "estado": "sube",
+        "detalle": "Oct-26 → Nov-26",
+        "delta": 1.0
+       },
+       "Pulso Research": {
+        "estado": "sube",
+        "detalle": "Oct-26 → Nov-26",
+        "delta": 5.1
        }
       },
       "consultoras": {
+       "M&F": {
+        "valor": 37.6,
+        "ref": {
+         "fila": 1803,
+         "base": "nivel2_indicadores",
+         "file_id": "1cmuEFkdV5dtihVQCBX4eO6Gof-jLEnLp",
+         "campo": "2026-11-12→2026-11-17",
+         "categoria": "Positiva / Aprueba",
+         "composicion": "estandar",
+         "secundaria": ""
+        }
+       },
        "QMonitor": {
         "valor": 36,
         "ref": {
@@ -2060,6 +2272,18 @@
          "secundaria": ""
         }
        },
+       "Pulso Research": {
+        "valor": 34,
+        "ref": {
+         "fila": 1948,
+         "base": "nivel2_indicadores",
+         "file_id": "1eoMG0IJq0ArLCUXPemLwyvuS1EDbP-C5",
+         "campo": "2026-11-07→2026-11-16",
+         "categoria": "Muy bien + Bien",
+         "composicion": "estandar",
+         "secundaria": ""
+        }
+       },
        "Analogías": {
         "valor": 30.3,
         "ref": {
@@ -2078,7 +2302,9 @@
     "por_consultora": {
      "Proyección": 35.6,
      "Analogías": 30.3,
-     "QMonitor": 36
+     "QMonitor": 36,
+     "M&F": 37.6,
+     "Pulso Research": 34
     },
     "una_composicion": true
    },
@@ -2195,13 +2421,13 @@
     "tipo": "rango",
     "mes": "Nov-26",
     "unidad": "%",
-    "n": 3,
+    "n": 5,
     "grupos": [
      {
       "composicion": "estandar",
-      "n": 3,
+      "n": 5,
       "min": 30.3,
-      "max": 36,
+      "max": 37.6,
       "rango_valido": true,
       "direccion": "sin dirección común entre consultoras",
       "direcciones": {
@@ -2219,9 +2445,31 @@
         "estado": "sube",
         "detalle": "Oct-26 → Nov-26",
         "delta": 1
+       },
+       "M&F": {
+        "estado": "sube",
+        "detalle": "Oct-26 → Nov-26",
+        "delta": 1.0
+       },
+       "Pulso Research": {
+        "estado": "sube",
+        "detalle": "Oct-26 → Nov-26",
+        "delta": 5.1
        }
       },
       "consultoras": {
+       "M&F": {
+        "valor": 37.6,
+        "ref": {
+         "fila": 1803,
+         "base": "nivel2_indicadores",
+         "file_id": "1cmuEFkdV5dtihVQCBX4eO6Gof-jLEnLp",
+         "campo": "2026-11-12→2026-11-17",
+         "categoria": "Positiva / Aprueba",
+         "composicion": "estandar",
+         "secundaria": ""
+        }
+       },
        "QMonitor": {
         "valor": 36,
         "ref": {
@@ -2246,6 +2494,18 @@
          "secundaria": ""
         }
        },
+       "Pulso Research": {
+        "valor": 34,
+        "ref": {
+         "fila": 1948,
+         "base": "nivel2_indicadores",
+         "file_id": "1eoMG0IJq0ArLCUXPemLwyvuS1EDbP-C5",
+         "campo": "2026-11-07→2026-11-16",
+         "categoria": "Muy bien + Bien",
+         "composicion": "estandar",
+         "secundaria": ""
+        }
+       },
        "Analogías": {
         "valor": 30.3,
         "ref": {
@@ -2264,14 +2524,16 @@
     "por_consultora": {
      "Proyección": 35.6,
      "Analogías": 30.3,
-     "QMonitor": 36
+     "QMonitor": 36,
+     "M&F": 37.6,
+     "Pulso Research": 34
     },
     "una_composicion": true
    },
    "tendencia": "may–nov 2026",
-   "cobertura": "9 consultoras en oct-26 (mes completo) · 2 en nov-26 (corte parcial al 17/11)",
+   "cobertura": "10 consultoras en oct-26 (mes completo) · 5 en nov-26 (corte al 27/11)",
    "comparabilidad": "MEDIA — misma pregunta de aprobación, pero universo, técnica y escala difieren entre consultoras",
-   "direccion": "sin dirección común entre consultoras: Proyección baja (Sep-26 → Nov-26) · Analogías baja (Oct-26 → Nov-26) · QMonitor sube (Oct-26 → Nov-26)",
+   "direccion": "sin dirección común entre consultoras: Proyección baja (Sep-26 → Nov-26) · Analogías baja (Oct-26 → Nov-26) · QMonitor sube (Oct-26 → Nov-26) · M&F sube (Oct-26 → Nov-26) · Pulso Research sube (Oct-26 → Nov-26)",
    "nota": "Rango de oct-26: 28,9–38,7%; no se promedian. Intra-consultora: Proyección 42% en sep → 35,6% en nov; QMonitor 35% → 36%. La cantidad de consultoras acredita cobertura, no dirección."
   },
   {
@@ -2282,11 +2544,11 @@
     "tipo": "rango",
     "mes": "Nov-26",
     "unidad": "%",
-    "n": 3,
+    "n": 5,
     "grupos": [
      {
       "composicion": "estandar",
-      "n": 3,
+      "n": 5,
       "min": 32,
       "max": 39.2,
       "rango_valido": true,
@@ -2306,6 +2568,15 @@
         "estado": "sube",
         "detalle": "Oct-26 → Nov-26",
         "delta": 1
+       },
+       "Pulso Research": {
+        "estado": "sube",
+        "detalle": "Oct-26 → Nov-26",
+        "delta": 6.2
+       },
+       "Management & Fit": {
+        "estado": "sin medición anterior",
+        "detalle": "serie de un solo punto"
        }
       },
       "consultoras": {
@@ -2333,6 +2604,30 @@
          "secundaria": ""
         }
        },
+       "Pulso Research": {
+        "valor": 38.6,
+        "ref": {
+         "fila": 1950,
+         "base": "nivel2_indicadores",
+         "file_id": "1eoMG0IJq0ArLCUXPemLwyvuS1EDbP-C5",
+         "campo": "2026-11-07→2026-11-16",
+         "categoria": "Positiva",
+         "composicion": "estandar",
+         "secundaria": ""
+        }
+       },
+       "Management & Fit": {
+        "valor": 34,
+        "ref": {
+         "fila": 1835,
+         "base": "nivel2_indicadores",
+         "file_id": "1cmuEFkdV5dtihVQCBX4eO6Gof-jLEnLp",
+         "campo": "2026-11-12→2026-11-17",
+         "categoria": "Positiva (muy buena + buena)",
+         "composicion": "estandar",
+         "secundaria": ""
+        }
+       },
        "QMonitor": {
         "valor": 32,
         "ref": {
@@ -2351,14 +2646,16 @@
     "por_consultora": {
      "Analogías": 39.2,
      "Proyección": 38.9,
-     "QMonitor": 32
+     "QMonitor": 32,
+     "Pulso Research": 38.6,
+     "Management & Fit": 34
     },
     "una_composicion": true
    },
    "tendencia": "may–nov 2026",
-   "cobertura": "9 consultoras en oct-26 · 2 en nov-26 (corte parcial)",
+   "cobertura": "10 consultoras en oct-26 · 5 en nov-26 (corte al 27/11)",
    "comparabilidad": "MEDIA — misma pregunta de imagen personal; las escalas difieren (algunas consultoras suman buena + muy buena)",
-   "direccion": "sin dirección común entre consultoras: Analogías estable (Oct-26 → Nov-26) · Proyección baja (Oct-26 → Nov-26) · QMonitor sube (Oct-26 → Nov-26)",
+   "direccion": "sin dirección común entre consultoras: Analogías estable (Oct-26 → Nov-26) · Proyección baja (Oct-26 → Nov-26) · QMonitor sube (Oct-26 → Nov-26) · Pulso Research sube (Oct-26 → Nov-26) · sin par comparable: Management & Fit",
    "nota": "Rango de oct-26: 31–43,8%. La dispersión entre consultoras supera la variación mensual de cada serie. Imagen personal ≠ aprobación de gestión."
   },
   {
@@ -2369,13 +2666,13 @@
     "tipo": "rango",
     "mes": "Nov-26",
     "unidad": "%",
-    "n": 3,
+    "n": 5,
     "grupos": [
      {
       "composicion": "estandar",
-      "n": 3,
-      "min": 56.1,
-      "max": 57,
+      "n": 5,
+      "min": 54.1,
+      "max": 58.7,
       "rango_valido": true,
       "direccion": "sin dirección común entre consultoras",
       "direcciones": {
@@ -2393,9 +2690,30 @@
         "estado": "sube",
         "detalle": "Oct-26 → Nov-26",
         "delta": 4
+       },
+       "Pulso Research": {
+        "estado": "baja",
+        "detalle": "Oct-26 → Nov-26",
+        "delta": -5.9
+       },
+       "Management & Fit": {
+        "estado": "sin medición anterior",
+        "detalle": "serie de un solo punto"
        }
       },
       "consultoras": {
+       "Pulso Research": {
+        "valor": 58.7,
+        "ref": {
+         "fila": 1951,
+         "base": "nivel2_indicadores",
+         "file_id": "1eoMG0IJq0ArLCUXPemLwyvuS1EDbP-C5",
+         "campo": "2026-11-07→2026-11-16",
+         "categoria": "Negativa",
+         "composicion": "estandar",
+         "secundaria": ""
+        }
+       },
        "QMonitor": {
         "valor": 57,
         "ref": {
@@ -2431,6 +2749,18 @@
          "composicion": "estandar",
          "secundaria": ""
         }
+       },
+       "Management & Fit": {
+        "valor": 54.1,
+        "ref": {
+         "fila": 1836,
+         "base": "nivel2_indicadores",
+         "file_id": "1cmuEFkdV5dtihVQCBX4eO6Gof-jLEnLp",
+         "campo": "2026-11-12→2026-11-17",
+         "categoria": "Negativa (mala + muy mala)",
+         "composicion": "estandar",
+         "secundaria": ""
+        }
        }
       }
      }
@@ -2438,14 +2768,16 @@
     "por_consultora": {
      "Analogías": 56.7,
      "Proyección": 56.1,
-     "QMonitor": 57
+     "QMonitor": 57,
+     "Pulso Research": 58.7,
+     "Management & Fit": 54.1
     },
     "una_composicion": true
    },
    "tendencia": "may–nov 2026",
-   "cobertura": "9 consultoras en oct-26 · 2 en nov-26 (corte parcial)",
+   "cobertura": "10 consultoras en oct-26 · 5 en nov-26 (corte al 27/11)",
    "comparabilidad": "MEDIA — misma pregunta; Zentrix agrega mala + muy mala y Giacobbe separa «regular» y «no lo conozco»",
-   "direccion": "sin dirección común entre consultoras: Analogías estable (Oct-26 → Nov-26) · Proyección estable (Oct-26 → Nov-26) · QMonitor sube (Oct-26 → Nov-26)",
+   "direccion": "sin dirección común entre consultoras: Analogías estable (Oct-26 → Nov-26) · Proyección estable (Oct-26 → Nov-26) · QMonitor sube (Oct-26 → Nov-26) · Pulso Research baja (Oct-26 → Nov-26) · sin par comparable: Management & Fit",
    "nota": "Rango de oct-26: 53–64,6%. Giacobbe oct-26 corregida a 56,8% con el PDF primario (campo 28/10–2/11)."
   },
   {
@@ -2559,12 +2891,12 @@
     "tipo": "rango",
     "mes": "Nov-26",
     "unidad": "%",
-    "n": 3,
+    "n": 6,
     "grupos": [
      {
       "composicion": "estandar",
-      "n": 3,
-      "min": 32,
+      "n": 6,
+      "min": 24,
       "max": 35,
       "rango_valido": true,
       "direccion": "sin dirección común entre consultoras",
@@ -2573,6 +2905,11 @@
         "estado": "baja",
         "detalle": "Oct-26 → Nov-26",
         "delta": -2.8
+       },
+       "Eq. Mide": {
+        "estado": "baja",
+        "detalle": "Oct-26 → Nov-26",
+        "delta": -2
        },
        "QMonitor": {
         "estado": "sube",
@@ -2583,6 +2920,15 @@
         "estado": "sube",
         "detalle": "Oct-26 → Nov-26",
         "delta": 2.8
+       },
+       "ESPOP": {
+        "estado": "baja",
+        "detalle": "Oct-26 → Nov-26",
+        "delta": -2
+       },
+       "Pulso Research": {
+        "estado": "sin medición anterior",
+        "detalle": "serie de un solo punto"
        }
       },
       "consultoras": {
@@ -2621,21 +2967,60 @@
          "composicion": "estandar",
          "secundaria": ""
         }
+       },
+       "Eq. Mide": {
+        "valor": 31,
+        "ref": {
+         "fila": 2226,
+         "base": "nivel2_indicadores",
+         "file_id": "No aplica (fuente secundaria)",
+         "campo": "2026-10-28→2026-11-06",
+         "categoria": "La Libertad Avanza",
+         "composicion": "estandar",
+         "secundaria": "FUENTE SECUNDARIA · encuestas-argentinas.com · https://encuestas-argentinas.com/encuestas/ (ficha del 12/11/2026; hilo X: https://x.com/_EncuestAR_/status/2120881979881079077) · consultado 2026-11-27 · fuente original: Equipo Mide"
+        }
+       },
+       "Pulso Research": {
+        "valor": 25.8,
+        "ref": {
+         "fila": 1989,
+         "base": "nivel2_indicadores",
+         "file_id": "1eoMG0IJq0ArLCUXPemLwyvuS1EDbP-C5",
+         "campo": "2026-11-07→2026-11-16",
+         "categoria": "La Libertad Avanza",
+         "composicion": "estandar",
+         "secundaria": ""
+        }
+       },
+       "ESPOP": {
+        "valor": 24,
+        "ref": {
+         "fila": 2224,
+         "base": "nivel2_indicadores",
+         "file_id": "No aplica (fuente secundaria)",
+         "campo": "2026-11-04→2026-11-12",
+         "categoria": "La Libertad Avanza",
+         "composicion": "estandar",
+         "secundaria": "FUENTE SECUNDARIA · encuestas-argentinas.com · https://encuestas-argentinas.com/encuestas/ (ficha del 20/11/2026; hilo X: https://x.com/_EncuestAR_/status/2123810422591484376) · consultado 2026-11-27 · fuente original: ESPOP (UdeSA)"
+        }
        }
       }
      }
     ],
     "por_consultora": {
      "Proyección": 35,
+     "Eq. Mide": 31,
      "QMonitor": 32,
-     "Analogías": 33.7
+     "Analogías": 33.7,
+     "ESPOP": 24,
+     "Pulso Research": 25.8
     },
     "una_composicion": true
    },
    "tendencia": "feb–nov 2026",
    "cobertura": "8 consultoras en oct-26 · 2 en nov-26 (corte parcial)",
    "comparabilidad": "MEDIA — todas preguntan por espacio y LLA es una categoría única; DC Consultores usa muestreo no probabilístico",
-   "direccion": "sin dirección común entre consultoras: Proyección baja (Oct-26 → Nov-26) · QMonitor sube (Oct-26 → Nov-26) · Analogías sube (Oct-26 → Nov-26)",
+   "direccion": "sin dirección común entre consultoras: Proyección baja (Oct-26 → Nov-26) · Eq. Mide baja (Oct-26 → Nov-26) · QMonitor sube (Oct-26 → Nov-26) · Analogías sube (Oct-26 → Nov-26) · ESPOP baja (Oct-26 → Nov-26) · sin par comparable: Pulso Research",
    "nota": "Rango de oct-26: 26–42,6%. La dispersión entre consultoras supera la diferencia entre espacios: es dispersión metodológica, no estabilidad."
   },
   {
@@ -2646,12 +3031,12 @@
     "tipo": "rango",
     "mes": "Nov-26",
     "unidad": "%",
-    "n": 3,
+    "n": 6,
     "grupos": [
      {
       "composicion": "estandar",
-      "n": 2,
-      "min": 33.0,
+      "n": 5,
+      "min": 21.3,
       "max": 35,
       "rango_valido": true,
       "direccion": "sin dirección común entre consultoras",
@@ -2661,10 +3046,24 @@
         "detalle": "Oct-26 → Nov-26",
         "delta": -0.9
        },
+       "Eq. Mide": {
+        "estado": "sube",
+        "detalle": "Oct-26 → Nov-26",
+        "delta": 1
+       },
        "Analogías": {
         "estado": "sube",
         "detalle": "Oct-26 → Nov-26",
         "delta": 1.4
+       },
+       "ESPOP": {
+        "estado": "sube",
+        "detalle": "Oct-26 → Nov-26",
+        "delta": 1
+       },
+       "Pulso Research": {
+        "estado": "sin medición anterior",
+        "detalle": "serie de un solo punto"
        }
       },
       "consultoras": {
@@ -2680,6 +3079,18 @@
          "secundaria": ""
         }
        },
+       "Eq. Mide": {
+        "valor": 34,
+        "ref": {
+         "fila": 2227,
+         "base": "nivel2_indicadores",
+         "file_id": "No aplica (fuente secundaria)",
+         "campo": "2026-10-28→2026-11-06",
+         "categoria": "Peronismo",
+         "composicion": "estandar",
+         "secundaria": "FUENTE SECUNDARIA · encuestas-argentinas.com · https://encuestas-argentinas.com/encuestas/ (ficha del 12/11/2026; hilo X: https://x.com/_EncuestAR_/status/2120881979881079077) · consultado 2026-11-27 · fuente original: Equipo Mide"
+        }
+       },
        "Analogías": {
         "valor": 33.0,
         "ref": {
@@ -2688,6 +3099,30 @@
          "file_id": "1hqm_RbINFpsNIMA-W7ZaNjZ_r762KpVN",
          "campo": "2026-11-15→2026-11-18",
          "categoria": "Peronismo Unido",
+         "composicion": "estandar",
+         "secundaria": ""
+        }
+       },
+       "ESPOP": {
+        "valor": 25,
+        "ref": {
+         "fila": 2225,
+         "base": "nivel2_indicadores",
+         "file_id": "No aplica (fuente secundaria)",
+         "campo": "2026-11-04→2026-11-12",
+         "categoria": "Peronismo",
+         "composicion": "estandar",
+         "secundaria": "FUENTE SECUNDARIA · encuestas-argentinas.com · https://encuestas-argentinas.com/encuestas/ (ficha del 20/11/2026; hilo X: https://x.com/_EncuestAR_/status/2123810422591484376) · consultado 2026-11-27 · fuente original: ESPOP (UdeSA)"
+        }
+       },
+       "Pulso Research": {
+        "valor": 21.3,
+        "ref": {
+         "fila": 1990,
+         "base": "nivel2_indicadores",
+         "file_id": "1eoMG0IJq0ArLCUXPemLwyvuS1EDbP-C5",
+         "campo": "2026-11-07→2026-11-16",
+         "categoria": "Peronismo Kirchnerista",
          "composicion": "estandar",
          "secundaria": ""
         }
@@ -2725,15 +3160,18 @@
     ],
     "por_consultora": {
      "Proyección": 35,
+     "Eq. Mide": 34,
      "QMonitor": 25,
-     "Analogías": 33.0
+     "Analogías": 33.0,
+     "ESPOP": 25,
+     "Pulso Research": 21.3
     },
     "una_composicion": false
    },
    "tendencia": "feb–nov 2026",
    "cobertura": "8 consultoras en oct-26 · 2 en nov-26 (corte parcial)",
    "comparabilidad": "BAJA entre composiciones — unas consultoras agregan peronismo y kirchnerismo y otras los separan",
-   "direccion": "sin dirección común entre consultoras: Proyección estable (Oct-26 → Nov-26) · Analogías sube (Oct-26 → Nov-26) · sin par comparable: QMonitor",
+   "direccion": "sin dirección común entre consultoras: Proyección estable (Oct-26 → Nov-26) · Eq. Mide sube (Oct-26 → Nov-26) · Analogías sube (Oct-26 → Nov-26) · ESPOP sube (Oct-26 → Nov-26) · sin par comparable: Pulso Research, QMonitor",
    "nota": "El rango no cruza composiciones. En oct-26, las 7 consultoras que agregan peronismo y kirchnerismo van de 24–36,6%; DC Consultores, que mide peronismo sin kirchnerismo, queda en 17,1% (una sola fuente) y forma su propio grupo. Los dos valores no se comparan entre sí ni se promedian."
   },
   {
@@ -2757,7 +3195,7 @@
    "cobertura": "1 consultora con serie (Proyección) · 3 cortes",
    "comparabilidad": "MEDIA — serie intra-Proyección; Synopsis oct es fuente secundaria",
    "direccion": "estable: la diferencia entre ambos queda dentro del margen en los tres cortes",
-   "nota": "Proyección sep 40,8–40,2 · oct 41,0–39,1 · nov 40,7–39,1. Synopsis oct (41,9–41,8) es fuente secundaria, evidencia máxima MEDIA, y no se encadena. Se retiraron las referencias a Explanans y OPSA: sin fila ni informe en la base."
+   "nota": "Proyección sep 40,8–40,2 · oct 41,0–39,1 · nov 40,7–39,1. Synopsis oct (41,9–41,8) es fuente secundaria, evidencia máxima MEDIA, y no se encadena. Se retiraron las referencias a Explanans y OPSA: sin fila ni informe en la base. QSocial (octubre, n=4.000, dato puntual): Milei 40 · Kicillof 45 · no sabe 15; el propio informe consigna Milei sin cambio y Kicillof +12 pp frente a feb-26. No se encadena con Proyección: pregunta, muestra y fecha de campo distintas (fila N2 1940–1942)."
   },
   {
    "bloque": "Territorial",
@@ -2798,6 +3236,52 @@
    "comparabilidad": "BAJA — sin corte anterior comparable",
    "direccion": "evidencia insuficiente para establecer dirección",
    "nota": "Ranking CB de Intendentes GBA, nov-26: máximo Nardini +24,8 p.p. y mínimo Menéndez −22,6 p.p. No se agregan municipios ni se promedian entre sí."
+  },
+  {
+   "bloque": "Territorial",
+   "indicador": "CABA · balance de imagen de Jorge Macri (DC Consultores)",
+   "estado": "⚪",
+   "ultima": {
+    "tipo": "fila",
+    "valor": -9,
+    "unidad": "pp",
+    "mes": "Nov-26",
+    "consultora": "DC Consultores",
+    "categoria": "Balance de imagen (positiva − negativa)",
+    "id_indicador": "IMG_JMACRI_BALANCE_CABA",
+    "fila": 1924,
+    "base": "nivel2_indicadores",
+    "file_id": "1m6qeyq1JXIDKOuSuRRpYizSd7isjKEL8",
+    "campo": "2026-11-18→2026-11-22"
+   },
+   "tendencia": "medición única (nov-26)",
+   "cobertura": "1 consultora · 1 medición",
+   "comparabilidad": "BAJA — indicador derivado por la consultora (positiva − negativa); sin corte anterior comparable",
+   "direccion": "evidencia insuficiente para establecer dirección",
+   "nota": "DC CABA, campo 18–22/11, n=1.293. El balance de Macri es −9,0 p.p. (30,8 positiva · 39,8 negativa). No se compara con series nacionales ni con el ICC CABA."
+  },
+  {
+   "bloque": "Territorial",
+   "indicador": "Córdoba Capital · rumbo de la ciudad (Radar Público)",
+   "estado": "⚪",
+   "ultima": {
+    "tipo": "fila",
+    "valor": 30,
+    "unidad": "%",
+    "mes": "Oct-26",
+    "consultora": "Radar Público",
+    "categoria": "Dirección correcta",
+    "id_indicador": "RUMBO_CIUDAD_CORRECTO_CORDOBA_CAPITAL",
+    "fila": 2032,
+    "base": "nivel2_indicadores",
+    "file_id": "1ZWRJAm0kkUeJ9rZGYCeGTPXB5mF70j8t",
+    "campo": "2026-10-26→2026-11-01"
+   },
+   "tendencia": "medición única (campo 26/10–1/11)",
+   "cobertura": "1 consultora · 1 medición",
+   "comparabilidad": "BAJA — muestra de la ciudad de Córdoba (n=500, ±4,4%); sin corte anterior de ciudad capital",
+   "direccion": "evidencia insuficiente para establecer dirección",
+   "nota": "Dirección correcta 30% · incorrecta 52% · no sabe 18% (filas N2 2032–2034). No se agrega a series provinciales: la ola de septiembre de Radar Público fue provincial (n=1.000) y no es comparable."
   }
  ],
  "DESTACADOS": [
@@ -3005,7 +3489,7 @@
      "campo": "pos",
      "mes": "Nov-26",
      "composicion": "estandar",
-     "n": 3,
+     "n": 5,
      "min": 32,
      "max": 39.2,
      "rango_valido": true,
@@ -3025,6 +3509,15 @@
        "estado": "sube",
        "detalle": "Oct-26 → Nov-26",
        "delta": 1
+      },
+      "Pulso Research": {
+       "estado": "sube",
+       "detalle": "Oct-26 → Nov-26",
+       "delta": 6.2
+      },
+      "Management & Fit": {
+       "estado": "sin medición anterior",
+       "detalle": "serie de un solo punto"
       }
      },
      "consultoras": {
@@ -3052,6 +3545,30 @@
         "secundaria": ""
        }
       },
+      "Pulso Research": {
+       "valor": 38.6,
+       "ref": {
+        "fila": 1950,
+        "base": "nivel2_indicadores",
+        "file_id": "1eoMG0IJq0ArLCUXPemLwyvuS1EDbP-C5",
+        "campo": "2026-11-07→2026-11-16",
+        "categoria": "Positiva",
+        "composicion": "estandar",
+        "secundaria": ""
+       }
+      },
+      "Management & Fit": {
+       "valor": 34,
+       "ref": {
+        "fila": 1835,
+        "base": "nivel2_indicadores",
+        "file_id": "1cmuEFkdV5dtihVQCBX4eO6Gof-jLEnLp",
+        "campo": "2026-11-12→2026-11-17",
+        "categoria": "Positiva (muy buena + buena)",
+        "composicion": "estandar",
+        "secundaria": ""
+       }
+      },
       "QMonitor": {
        "valor": 32,
        "ref": {
@@ -3070,9 +3587,9 @@
      "campo": "neg",
      "mes": "Nov-26",
      "composicion": "estandar",
-     "n": 3,
-     "min": 56.1,
-     "max": 57,
+     "n": 5,
+     "min": 54.1,
+     "max": 58.7,
      "rango_valido": true,
      "direccion": "sin dirección común entre consultoras",
      "direcciones": {
@@ -3090,9 +3607,30 @@
        "estado": "sube",
        "detalle": "Oct-26 → Nov-26",
        "delta": 4
+      },
+      "Pulso Research": {
+       "estado": "baja",
+       "detalle": "Oct-26 → Nov-26",
+       "delta": -5.9
+      },
+      "Management & Fit": {
+       "estado": "sin medición anterior",
+       "detalle": "serie de un solo punto"
       }
      },
      "consultoras": {
+      "Pulso Research": {
+       "valor": 58.7,
+       "ref": {
+        "fila": 1951,
+        "base": "nivel2_indicadores",
+        "file_id": "1eoMG0IJq0ArLCUXPemLwyvuS1EDbP-C5",
+        "campo": "2026-11-07→2026-11-16",
+        "categoria": "Negativa",
+        "composicion": "estandar",
+        "secundaria": ""
+       }
+      },
       "QMonitor": {
        "valor": 57,
        "ref": {
@@ -3124,6 +3662,18 @@
         "base": "nivel2_indicadores",
         "file_id": "1P_43U922vyw_gFYdje1io2SPO-AH_JT1",
         "campo": "2026-11-01→2026-11-09",
+        "categoria": "Negativa (mala + muy mala)",
+        "composicion": "estandar",
+        "secundaria": ""
+       }
+      },
+      "Management & Fit": {
+       "valor": 54.1,
+       "ref": {
+        "fila": 1836,
+        "base": "nivel2_indicadores",
+        "file_id": "1cmuEFkdV5dtihVQCBX4eO6Gof-jLEnLp",
+        "campo": "2026-11-12→2026-11-17",
         "categoria": "Negativa (mala + muy mala)",
         "composicion": "estandar",
         "secundaria": ""
@@ -3462,7 +4012,9 @@
    "fuentes": [
     "Analogías",
     "DC Consultores",
+    "Management & Fit",
     "Proyección",
+    "Pulso Research",
     "QMonitor",
     "Tendencias",
     "Zubán Córdoba"
@@ -3476,9 +4028,9 @@
      "campo": "aprob",
      "mes": "Nov-26",
      "composicion": "estandar",
-     "n": 3,
+     "n": 5,
      "min": 30.3,
-     "max": 36,
+     "max": 37.6,
      "rango_valido": true,
      "direccion": "sin dirección común entre consultoras",
      "direcciones": {
@@ -3496,9 +4048,31 @@
        "estado": "sube",
        "detalle": "Oct-26 → Nov-26",
        "delta": 1
+      },
+      "M&F": {
+       "estado": "sube",
+       "detalle": "Oct-26 → Nov-26",
+       "delta": 1.0
+      },
+      "Pulso Research": {
+       "estado": "sube",
+       "detalle": "Oct-26 → Nov-26",
+       "delta": 5.1
       }
      },
      "consultoras": {
+      "M&F": {
+       "valor": 37.6,
+       "ref": {
+        "fila": 1803,
+        "base": "nivel2_indicadores",
+        "file_id": "1cmuEFkdV5dtihVQCBX4eO6Gof-jLEnLp",
+        "campo": "2026-11-12→2026-11-17",
+        "categoria": "Positiva / Aprueba",
+        "composicion": "estandar",
+        "secundaria": ""
+       }
+      },
       "QMonitor": {
        "valor": 36,
        "ref": {
@@ -3523,6 +4097,18 @@
         "secundaria": ""
        }
       },
+      "Pulso Research": {
+       "valor": 34,
+       "ref": {
+        "fila": 1948,
+        "base": "nivel2_indicadores",
+        "file_id": "1eoMG0IJq0ArLCUXPemLwyvuS1EDbP-C5",
+        "campo": "2026-11-07→2026-11-16",
+        "categoria": "Muy bien + Bien",
+        "composicion": "estandar",
+        "secundaria": ""
+       }
+      },
       "Analogías": {
        "valor": 30.3,
        "ref": {
@@ -3541,7 +4127,7 @@
      "campo": "desaprob",
      "mes": "Nov-26",
      "composicion": "estandar",
-     "n": 3,
+     "n": 5,
      "min": 55.9,
      "max": 62,
      "rango_valido": true,
@@ -3561,6 +4147,15 @@
        "estado": "sube",
        "detalle": "Oct-26 → Nov-26",
        "delta": 1
+      },
+      "M&F": {
+       "estado": "estable",
+       "detalle": "Oct-26 → Nov-26",
+       "delta": 0.0
+      },
+      "Pulso Research": {
+       "estado": "sin medición anterior",
+       "detalle": "serie de un solo punto"
       }
      },
      "consultoras": {
@@ -3584,6 +4179,30 @@
         "file_id": "1hqm_RbINFpsNIMA-W7ZaNjZ_r762KpVN",
         "campo": "2026-11-15→2026-11-18",
         "categoria": "Negativa (calificaciones 1 y 2)",
+        "composicion": "estandar",
+        "secundaria": ""
+       }
+      },
+      "Pulso Research": {
+       "valor": 59.6,
+       "ref": {
+        "fila": 1949,
+        "base": "nivel2_indicadores",
+        "file_id": "1eoMG0IJq0ArLCUXPemLwyvuS1EDbP-C5",
+        "campo": "2026-11-07→2026-11-16",
+        "categoria": "Mal + Muy mal",
+        "composicion": "estandar",
+        "secundaria": ""
+       }
+      },
+      "M&F": {
+       "valor": 58.1,
+       "ref": {
+        "fila": 1804,
+        "base": "nivel2_indicadores",
+        "file_id": "1cmuEFkdV5dtihVQCBX4eO6Gof-jLEnLp",
+        "campo": "2026-11-12→2026-11-17",
+        "categoria": "Negativa / Desaprueba",
         "composicion": "estandar",
         "secundaria": ""
        }
@@ -3623,7 +4242,9 @@
    ],
    "fuentes": [
     "Analogías",
+    "M&F",
     "Proyección",
+    "Pulso Research",
     "QMonitor"
    ]
   },
@@ -3635,8 +4256,8 @@
      "campo": "lla",
      "mes": "Nov-26",
      "composicion": "estandar",
-     "n": 3,
-     "min": 32,
+     "n": 6,
+     "min": 24,
      "max": 35,
      "rango_valido": true,
      "direccion": "sin dirección común entre consultoras",
@@ -3645,6 +4266,11 @@
        "estado": "baja",
        "detalle": "Oct-26 → Nov-26",
        "delta": -2.8
+      },
+      "Eq. Mide": {
+       "estado": "baja",
+       "detalle": "Oct-26 → Nov-26",
+       "delta": -2
       },
       "QMonitor": {
        "estado": "sube",
@@ -3655,6 +4281,15 @@
        "estado": "sube",
        "detalle": "Oct-26 → Nov-26",
        "delta": 2.8
+      },
+      "ESPOP": {
+       "estado": "baja",
+       "detalle": "Oct-26 → Nov-26",
+       "delta": -2
+      },
+      "Pulso Research": {
+       "estado": "sin medición anterior",
+       "detalle": "serie de un solo punto"
       }
      },
      "consultoras": {
@@ -3693,6 +4328,42 @@
         "composicion": "estandar",
         "secundaria": ""
        }
+      },
+      "Eq. Mide": {
+       "valor": 31,
+       "ref": {
+        "fila": 2226,
+        "base": "nivel2_indicadores",
+        "file_id": "No aplica (fuente secundaria)",
+        "campo": "2026-10-28→2026-11-06",
+        "categoria": "La Libertad Avanza",
+        "composicion": "estandar",
+        "secundaria": "FUENTE SECUNDARIA · encuestas-argentinas.com · https://encuestas-argentinas.com/encuestas/ (ficha del 12/11/2026; hilo X: https://x.com/_EncuestAR_/status/2120881979881079077) · consultado 2026-11-27 · fuente original: Equipo Mide"
+       }
+      },
+      "Pulso Research": {
+       "valor": 25.8,
+       "ref": {
+        "fila": 1989,
+        "base": "nivel2_indicadores",
+        "file_id": "1eoMG0IJq0ArLCUXPemLwyvuS1EDbP-C5",
+        "campo": "2026-11-07→2026-11-16",
+        "categoria": "La Libertad Avanza",
+        "composicion": "estandar",
+        "secundaria": ""
+       }
+      },
+      "ESPOP": {
+       "valor": 24,
+       "ref": {
+        "fila": 2224,
+        "base": "nivel2_indicadores",
+        "file_id": "No aplica (fuente secundaria)",
+        "campo": "2026-11-04→2026-11-12",
+        "categoria": "La Libertad Avanza",
+        "composicion": "estandar",
+        "secundaria": "FUENTE SECUNDARIA · encuestas-argentinas.com · https://encuestas-argentinas.com/encuestas/ (ficha del 20/11/2026; hilo X: https://x.com/_EncuestAR_/status/2123810422591484376) · consultado 2026-11-27 · fuente original: ESPOP (UdeSA)"
+       }
       }
      }
     },
@@ -3700,8 +4371,8 @@
      "campo": "pj",
      "mes": "Nov-26",
      "composicion": "estandar",
-     "n": 2,
-     "min": 33.0,
+     "n": 5,
+     "min": 21.3,
      "max": 35,
      "rango_valido": true,
      "direccion": "sin dirección común entre consultoras",
@@ -3711,10 +4382,24 @@
        "detalle": "Oct-26 → Nov-26",
        "delta": -0.9
       },
+      "Eq. Mide": {
+       "estado": "sube",
+       "detalle": "Oct-26 → Nov-26",
+       "delta": 1
+      },
       "Analogías": {
        "estado": "sube",
        "detalle": "Oct-26 → Nov-26",
        "delta": 1.4
+      },
+      "ESPOP": {
+       "estado": "sube",
+       "detalle": "Oct-26 → Nov-26",
+       "delta": 1
+      },
+      "Pulso Research": {
+       "estado": "sin medición anterior",
+       "detalle": "serie de un solo punto"
       }
      },
      "consultoras": {
@@ -3730,6 +4415,18 @@
         "secundaria": ""
        }
       },
+      "Eq. Mide": {
+       "valor": 34,
+       "ref": {
+        "fila": 2227,
+        "base": "nivel2_indicadores",
+        "file_id": "No aplica (fuente secundaria)",
+        "campo": "2026-10-28→2026-11-06",
+        "categoria": "Peronismo",
+        "composicion": "estandar",
+        "secundaria": "FUENTE SECUNDARIA · encuestas-argentinas.com · https://encuestas-argentinas.com/encuestas/ (ficha del 12/11/2026; hilo X: https://x.com/_EncuestAR_/status/2120881979881079077) · consultado 2026-11-27 · fuente original: Equipo Mide"
+       }
+      },
       "Analogías": {
        "valor": 33.0,
        "ref": {
@@ -3738,6 +4435,30 @@
         "file_id": "1hqm_RbINFpsNIMA-W7ZaNjZ_r762KpVN",
         "campo": "2026-11-15→2026-11-18",
         "categoria": "Peronismo Unido",
+        "composicion": "estandar",
+        "secundaria": ""
+       }
+      },
+      "ESPOP": {
+       "valor": 25,
+       "ref": {
+        "fila": 2225,
+        "base": "nivel2_indicadores",
+        "file_id": "No aplica (fuente secundaria)",
+        "campo": "2026-11-04→2026-11-12",
+        "categoria": "Peronismo",
+        "composicion": "estandar",
+        "secundaria": "FUENTE SECUNDARIA · encuestas-argentinas.com · https://encuestas-argentinas.com/encuestas/ (ficha del 20/11/2026; hilo X: https://x.com/_EncuestAR_/status/2123810422591484376) · consultado 2026-11-27 · fuente original: ESPOP (UdeSA)"
+       }
+      },
+      "Pulso Research": {
+       "valor": 21.3,
+       "ref": {
+        "fila": 1990,
+        "base": "nivel2_indicadores",
+        "file_id": "1eoMG0IJq0ArLCUXPemLwyvuS1EDbP-C5",
+        "campo": "2026-11-07→2026-11-16",
+        "categoria": "Peronismo Kirchnerista",
         "composicion": "estandar",
         "secundaria": ""
        }
@@ -4052,8 +4773,11 @@
    "fuentes": [
     "Analogías",
     "DC Consultores",
+    "ESPOP",
     "ESPOP (UdeSA)",
+    "Eq. Mide",
     "Proyección",
+    "Pulso Research",
     "QMonitor"
    ]
   },
@@ -6483,7 +7207,7 @@
    "min12": 1.94
   },
   "GESTION_OCT": {
-   "n": 9,
+   "n": 10,
    "min": 28.9,
    "max": 38.7,
    "rango": 9.8,
@@ -6497,7 +7221,8 @@
     "M&F": 36.6,
     "Zentrix": 36.2,
     "RDT": 29.5,
-    "Pulso Research": 28.9
+    "Pulso Research": 28.9,
+    "ESPOP": 36
    }
   }
  },
@@ -6561,7 +7286,7 @@
    "mes": "Nov-26",
    "valor": 40.99,
    "fila": "",
-   "rotulo": "FUENTE SECUNDARIA · Perfil reproducido por UTDT · 19/11/2026",
+   "rotulo": "FUENTE SECUNDARIA · Perfil (reproduce la nota de prensa de UTDT, publicada 19/11/2026) · https://www.utdt.edu/ver_nota_prensa.php?id_item_menu=6&id_nota_prensa=23683 · consultado 2026-11-27 · fuente original: UTDT, Índice de Confianza del Consumidor (campo 3–17/11, Poliarquía)",
    "modulo": "ICC",
    "fuente_original": "CIF/UTDT"
   },
@@ -6570,7 +7295,7 @@
    "mes": "Nov-26",
    "valor": 43.41,
    "fila": "",
-   "rotulo": "FUENTE SECUNDARIA · Perfil reproducido por UTDT · 19/11/2026",
+   "rotulo": "FUENTE SECUNDARIA · Perfil (reproduce la nota de prensa de UTDT, publicada 19/11/2026) · https://www.utdt.edu/ver_nota_prensa.php?id_item_menu=6&id_nota_prensa=23683 · consultado 2026-11-27 · fuente original: UTDT, Índice de Confianza del Consumidor (campo 3–17/11, Poliarquía)",
    "modulo": "ICC",
    "fuente_original": "CIF/UTDT"
   },
@@ -6579,7 +7304,7 @@
    "mes": "Nov-26",
    "valor": 47.52,
    "fila": "",
-   "rotulo": "FUENTE SECUNDARIA · Perfil reproducido por UTDT · 19/11/2026",
+   "rotulo": "FUENTE SECUNDARIA · Perfil (reproduce la nota de prensa de UTDT, publicada 19/11/2026) · https://www.utdt.edu/ver_nota_prensa.php?id_item_menu=6&id_nota_prensa=23683 · consultado 2026-11-27 · fuente original: UTDT, Índice de Confianza del Consumidor (campo 3–17/11, Poliarquía)",
    "modulo": "ICC",
    "fuente_original": "CIF/UTDT"
   },
@@ -6588,9 +7313,144 @@
    "mes": "Nov-26",
    "valor": 36.51,
    "fila": "",
-   "rotulo": "FUENTE SECUNDARIA · Perfil reproducido por UTDT · 19/11/2026",
+   "rotulo": "FUENTE SECUNDARIA · Perfil (reproduce la nota de prensa de UTDT, publicada 19/11/2026) · https://www.utdt.edu/ver_nota_prensa.php?id_item_menu=6&id_nota_prensa=23683 · consultado 2026-11-27 · fuente original: UTDT, Índice de Confianza del Consumidor (campo 3–17/11, Poliarquía)",
    "modulo": "ICC",
    "fuente_original": "CIF/UTDT"
+  },
+  {
+   "ruta": "CONS.ESPOP.lla",
+   "mes": "Jun-26",
+   "valor": 24,
+   "fila": 2216,
+   "rotulo": "FUENTE SECUNDARIA · encuestas-argentinas.com · https://encuestas-argentinas.com/encuestas/ (ficha del 10/06/2026; hilo X: https://x.com/_EncuestAR_/status/2064778547890143481) · consultado 2026-11-27 · fuente original: ESPOP (UdeSA)",
+   "modulo": "Intención de voto",
+   "fuente_original": "ESPOP (UdeSA)"
+  },
+  {
+   "ruta": "CONS.ESPOP.pj",
+   "mes": "Jun-26",
+   "valor": 25,
+   "fila": 2217,
+   "rotulo": "FUENTE SECUNDARIA · encuestas-argentinas.com · https://encuestas-argentinas.com/encuestas/ (ficha del 10/06/2026; hilo X: https://x.com/_EncuestAR_/status/2064778547890143481) · consultado 2026-11-27 · fuente original: ESPOP (UdeSA)",
+   "modulo": "Intención de voto",
+   "fuente_original": "ESPOP (UdeSA)"
+  },
+  {
+   "ruta": "CONS.ESPOP.lla",
+   "mes": "Jul-26",
+   "valor": 24,
+   "fila": 2218,
+   "rotulo": "FUENTE SECUNDARIA · encuestas-argentinas.com · https://encuestas-argentinas.com/encuestas/ (ficha del 14/07/2026; hilo X: https://x.com/_EncuestAR_/status/2077066045437665785) · consultado 2026-11-27 · fuente original: ESPOP (UdeSA)",
+   "modulo": "Intención de voto",
+   "fuente_original": "ESPOP (UdeSA)"
+  },
+  {
+   "ruta": "CONS.ESPOP.pj",
+   "mes": "Jul-26",
+   "valor": 25,
+   "fila": 2219,
+   "rotulo": "FUENTE SECUNDARIA · encuestas-argentinas.com · https://encuestas-argentinas.com/encuestas/ (ficha del 14/07/2026; hilo X: https://x.com/_EncuestAR_/status/2077066045437665785) · consultado 2026-11-27 · fuente original: ESPOP (UdeSA)",
+   "modulo": "Intención de voto",
+   "fuente_original": "ESPOP (UdeSA)"
+  },
+  {
+   "ruta": "CONS.ESPOP.lla",
+   "mes": "Ago-26",
+   "valor": 24,
+   "fila": 2220,
+   "rotulo": "FUENTE SECUNDARIA · encuestas-argentinas.com · https://encuestas-argentinas.com/encuestas/ (ficha del 13/08/2026; hilo X: https://x.com/_EncuestAR_/status/2088080252945789170) · consultado 2026-11-27 · fuente original: ESPOP (UdeSA)",
+   "modulo": "Intención de voto",
+   "fuente_original": "ESPOP (UdeSA)"
+  },
+  {
+   "ruta": "CONS.ESPOP.pj",
+   "mes": "Ago-26",
+   "valor": 26,
+   "fila": 2221,
+   "rotulo": "FUENTE SECUNDARIA · encuestas-argentinas.com · https://encuestas-argentinas.com/encuestas/ (ficha del 13/08/2026; hilo X: https://x.com/_EncuestAR_/status/2088080252945789170) · consultado 2026-11-27 · fuente original: ESPOP (UdeSA)",
+   "modulo": "Intención de voto",
+   "fuente_original": "ESPOP (UdeSA)"
+  },
+  {
+   "ruta": "CONS.ESPOP.lla",
+   "mes": "Sep-26",
+   "valor": 24,
+   "fila": 2222,
+   "rotulo": "FUENTE SECUNDARIA · encuestas-argentinas.com · https://encuestas-argentinas.com/encuestas/ (ficha del 13/09/2026; hilo X: https://x.com/_EncuestAR_/status/2099311055558131863) · consultado 2026-11-27 · fuente original: ESPOP (UdeSA)",
+   "modulo": "Intención de voto",
+   "fuente_original": "ESPOP (UdeSA)"
+  },
+  {
+   "ruta": "CONS.ESPOP.pj",
+   "mes": "Sep-26",
+   "valor": 23,
+   "fila": 2223,
+   "rotulo": "FUENTE SECUNDARIA · encuestas-argentinas.com · https://encuestas-argentinas.com/encuestas/ (ficha del 13/09/2026; hilo X: https://x.com/_EncuestAR_/status/2099311055558131863) · consultado 2026-11-27 · fuente original: ESPOP (UdeSA)",
+   "modulo": "Intención de voto",
+   "fuente_original": "ESPOP (UdeSA)"
+  },
+  {
+   "ruta": "CONS.ESPOP.lla",
+   "mes": "Nov-26",
+   "valor": 24,
+   "fila": 2224,
+   "rotulo": "FUENTE SECUNDARIA · encuestas-argentinas.com · https://encuestas-argentinas.com/encuestas/ (ficha del 20/11/2026; hilo X: https://x.com/_EncuestAR_/status/2123810422591484376) · consultado 2026-11-27 · fuente original: ESPOP (UdeSA)",
+   "modulo": "Intención de voto",
+   "fuente_original": "ESPOP (UdeSA)"
+  },
+  {
+   "ruta": "CONS.ESPOP.pj",
+   "mes": "Nov-26",
+   "valor": 25,
+   "fila": 2225,
+   "rotulo": "FUENTE SECUNDARIA · encuestas-argentinas.com · https://encuestas-argentinas.com/encuestas/ (ficha del 20/11/2026; hilo X: https://x.com/_EncuestAR_/status/2123810422591484376) · consultado 2026-11-27 · fuente original: ESPOP (UdeSA)",
+   "modulo": "Intención de voto",
+   "fuente_original": "ESPOP (UdeSA)"
+  },
+  {
+   "ruta": "CONS.Eq. Mide.lla",
+   "mes": "Nov-26",
+   "valor": 31,
+   "fila": 2226,
+   "rotulo": "FUENTE SECUNDARIA · encuestas-argentinas.com · https://encuestas-argentinas.com/encuestas/ (ficha del 12/11/2026; hilo X: https://x.com/_EncuestAR_/status/2120881979881079077) · consultado 2026-11-27 · fuente original: Equipo Mide",
+   "modulo": "Intención de voto",
+   "fuente_original": "Equipo Mide"
+  },
+  {
+   "ruta": "CONS.Eq. Mide.pj",
+   "mes": "Nov-26",
+   "valor": 34,
+   "fila": 2227,
+   "rotulo": "FUENTE SECUNDARIA · encuestas-argentinas.com · https://encuestas-argentinas.com/encuestas/ (ficha del 12/11/2026; hilo X: https://x.com/_EncuestAR_/status/2120881979881079077) · consultado 2026-11-27 · fuente original: Equipo Mide",
+   "modulo": "Intención de voto",
+   "fuente_original": "Equipo Mide"
+  },
+  {
+   "ruta": "CONS.DC Consultores.lla",
+   "mes": "Jul-26",
+   "valor": 41.3,
+   "fila": 2228,
+   "rotulo": "FUENTE SECUNDARIA · encuestas-argentinas.com · https://encuestas-argentinas.com/encuestas/ (ficha del 18/08/2026; hilo X: https://x.com/_EncuestAR_/status/2089872813440049343) · consultado 2026-11-27 · fuente original: DC Consultores",
+   "modulo": "Intención de voto",
+   "fuente_original": "DC Consultores"
+  },
+  {
+   "ruta": "CONS.DC Consultores.lla",
+   "mes": "Ago-26",
+   "valor": 43.7,
+   "fila": 2229,
+   "rotulo": "FUENTE SECUNDARIA · encuestas-argentinas.com · https://encuestas-argentinas.com/encuestas/ (ficha del 10/09/2026; hilo X: https://x.com/_EncuestAR_/status/2098085048687996999) · consultado 2026-11-27 · fuente original: DC Consultores",
+   "modulo": "Intención de voto",
+   "fuente_original": "DC Consultores"
+  },
+  {
+   "ruta": "CONS.DC Consultores.lla",
+   "mes": "Sep-26",
+   "valor": 40.2,
+   "fila": 2230,
+   "rotulo": "FUENTE SECUNDARIA · encuestas-argentinas.com · https://encuestas-argentinas.com/encuestas/ (ficha del 03/10/2026; hilo X: https://x.com/_EncuestAR_/status/2106382609651577156) · consultado 2026-11-27 · fuente original: DC Consultores",
+   "modulo": "Intención de voto",
+   "fuente_original": "DC Consultores"
   }
  ],
  "ENCABEZADO": {
@@ -6632,7 +7492,7 @@
     "clase_valor": "neu",
     "valor": 40.99,
     "periodo": "nov-26",
-    "secundaria": "FUENTE SECUNDARIA · Perfil reproducido por UTDT · 19/11/2026"
+    "secundaria": "FUENTE SECUNDARIA · Perfil (reproduce la nota de prensa de UTDT, publicada 19/11/2026) · https://www.utdt.edu/ver_nota_prensa.php?id_item_menu=6&id_nota_prensa=23683 · consultado 2026-11-27 · fuente original: UTDT, Índice de Confianza del Consumidor (campo 3–17/11, Poliarquía)"
    },
    {
     "icono": "🏛️",
@@ -12841,7 +13701,112 @@
    "mes": "Nov-26",
    "valor": 40.99,
    "fila": "",
-   "rotulo": "FUENTE SECUNDARIA · Perfil reproducido por UTDT · 19/11/2026"
+   "rotulo": "FUENTE SECUNDARIA · Perfil (reproduce la nota de prensa de UTDT, publicada 19/11/2026) · https://www.utdt.edu/ver_nota_prensa.php?id_item_menu=6&id_nota_prensa=23683 · consultado 2026-11-27 · fuente original: UTDT, Índice de Confianza del Consumidor (campo 3–17/11, Poliarquía)"
+  },
+  {
+   "indicador": "CONS.ESPOP.lla",
+   "mes": "Jun-26",
+   "valor": 24,
+   "fila": 2216,
+   "rotulo": "FUENTE SECUNDARIA · encuestas-argentinas.com · https://encuestas-argentinas.com/encuestas/ (ficha del 10/06/2026; hilo X: https://x.com/_EncuestAR_/status/2064778547890143481) · consultado 2026-11-27 · fuente original: ESPOP (UdeSA)"
+  },
+  {
+   "indicador": "CONS.ESPOP.pj",
+   "mes": "Jun-26",
+   "valor": 25,
+   "fila": 2217,
+   "rotulo": "FUENTE SECUNDARIA · encuestas-argentinas.com · https://encuestas-argentinas.com/encuestas/ (ficha del 10/06/2026; hilo X: https://x.com/_EncuestAR_/status/2064778547890143481) · consultado 2026-11-27 · fuente original: ESPOP (UdeSA)"
+  },
+  {
+   "indicador": "CONS.ESPOP.lla",
+   "mes": "Jul-26",
+   "valor": 24,
+   "fila": 2218,
+   "rotulo": "FUENTE SECUNDARIA · encuestas-argentinas.com · https://encuestas-argentinas.com/encuestas/ (ficha del 14/07/2026; hilo X: https://x.com/_EncuestAR_/status/2077066045437665785) · consultado 2026-11-27 · fuente original: ESPOP (UdeSA)"
+  },
+  {
+   "indicador": "CONS.ESPOP.pj",
+   "mes": "Jul-26",
+   "valor": 25,
+   "fila": 2219,
+   "rotulo": "FUENTE SECUNDARIA · encuestas-argentinas.com · https://encuestas-argentinas.com/encuestas/ (ficha del 14/07/2026; hilo X: https://x.com/_EncuestAR_/status/2077066045437665785) · consultado 2026-11-27 · fuente original: ESPOP (UdeSA)"
+  },
+  {
+   "indicador": "CONS.ESPOP.lla",
+   "mes": "Ago-26",
+   "valor": 24,
+   "fila": 2220,
+   "rotulo": "FUENTE SECUNDARIA · encuestas-argentinas.com · https://encuestas-argentinas.com/encuestas/ (ficha del 13/08/2026; hilo X: https://x.com/_EncuestAR_/status/2088080252945789170) · consultado 2026-11-27 · fuente original: ESPOP (UdeSA)"
+  },
+  {
+   "indicador": "CONS.ESPOP.pj",
+   "mes": "Ago-26",
+   "valor": 26,
+   "fila": 2221,
+   "rotulo": "FUENTE SECUNDARIA · encuestas-argentinas.com · https://encuestas-argentinas.com/encuestas/ (ficha del 13/08/2026; hilo X: https://x.com/_EncuestAR_/status/2088080252945789170) · consultado 2026-11-27 · fuente original: ESPOP (UdeSA)"
+  },
+  {
+   "indicador": "CONS.ESPOP.lla",
+   "mes": "Sep-26",
+   "valor": 24,
+   "fila": 2222,
+   "rotulo": "FUENTE SECUNDARIA · encuestas-argentinas.com · https://encuestas-argentinas.com/encuestas/ (ficha del 13/09/2026; hilo X: https://x.com/_EncuestAR_/status/2099311055558131863) · consultado 2026-11-27 · fuente original: ESPOP (UdeSA)"
+  },
+  {
+   "indicador": "CONS.ESPOP.pj",
+   "mes": "Sep-26",
+   "valor": 23,
+   "fila": 2223,
+   "rotulo": "FUENTE SECUNDARIA · encuestas-argentinas.com · https://encuestas-argentinas.com/encuestas/ (ficha del 13/09/2026; hilo X: https://x.com/_EncuestAR_/status/2099311055558131863) · consultado 2026-11-27 · fuente original: ESPOP (UdeSA)"
+  },
+  {
+   "indicador": "CONS.ESPOP.lla",
+   "mes": "Nov-26",
+   "valor": 24,
+   "fila": 2224,
+   "rotulo": "FUENTE SECUNDARIA · encuestas-argentinas.com · https://encuestas-argentinas.com/encuestas/ (ficha del 20/11/2026; hilo X: https://x.com/_EncuestAR_/status/2123810422591484376) · consultado 2026-11-27 · fuente original: ESPOP (UdeSA)"
+  },
+  {
+   "indicador": "CONS.ESPOP.pj",
+   "mes": "Nov-26",
+   "valor": 25,
+   "fila": 2225,
+   "rotulo": "FUENTE SECUNDARIA · encuestas-argentinas.com · https://encuestas-argentinas.com/encuestas/ (ficha del 20/11/2026; hilo X: https://x.com/_EncuestAR_/status/2123810422591484376) · consultado 2026-11-27 · fuente original: ESPOP (UdeSA)"
+  },
+  {
+   "indicador": "CONS.Eq. Mide.lla",
+   "mes": "Nov-26",
+   "valor": 31,
+   "fila": 2226,
+   "rotulo": "FUENTE SECUNDARIA · encuestas-argentinas.com · https://encuestas-argentinas.com/encuestas/ (ficha del 12/11/2026; hilo X: https://x.com/_EncuestAR_/status/2120881979881079077) · consultado 2026-11-27 · fuente original: Equipo Mide"
+  },
+  {
+   "indicador": "CONS.Eq. Mide.pj",
+   "mes": "Nov-26",
+   "valor": 34,
+   "fila": 2227,
+   "rotulo": "FUENTE SECUNDARIA · encuestas-argentinas.com · https://encuestas-argentinas.com/encuestas/ (ficha del 12/11/2026; hilo X: https://x.com/_EncuestAR_/status/2120881979881079077) · consultado 2026-11-27 · fuente original: Equipo Mide"
+  },
+  {
+   "indicador": "CONS.DC Consultores.lla",
+   "mes": "Jul-26",
+   "valor": 41.3,
+   "fila": 2228,
+   "rotulo": "FUENTE SECUNDARIA · encuestas-argentinas.com · https://encuestas-argentinas.com/encuestas/ (ficha del 18/08/2026; hilo X: https://x.com/_EncuestAR_/status/2089872813440049343) · consultado 2026-11-27 · fuente original: DC Consultores"
+  },
+  {
+   "indicador": "CONS.DC Consultores.lla",
+   "mes": "Ago-26",
+   "valor": 43.7,
+   "fila": 2229,
+   "rotulo": "FUENTE SECUNDARIA · encuestas-argentinas.com · https://encuestas-argentinas.com/encuestas/ (ficha del 10/09/2026; hilo X: https://x.com/_EncuestAR_/status/2098085048687996999) · consultado 2026-11-27 · fuente original: DC Consultores"
+  },
+  {
+   "indicador": "CONS.DC Consultores.lla",
+   "mes": "Sep-26",
+   "valor": 40.2,
+   "fila": 2230,
+   "rotulo": "FUENTE SECUNDARIA · encuestas-argentinas.com · https://encuestas-argentinas.com/encuestas/ (ficha del 03/10/2026; hilo X: https://x.com/_EncuestAR_/status/2106382609651577156) · consultado 2026-11-27 · fuente original: DC Consultores"
   }
  ],
  "UPD": {
@@ -13767,7 +14732,7 @@
      "campo": "2026-11-03→2026-11-17",
      "unidad": "puntos (0–100)",
      "nota": "",
-     "secundaria": "FUENTE SECUNDARIA · Perfil reproducido por UTDT · 19/11/2026",
+     "secundaria": "FUENTE SECUNDARIA · Perfil (reproduce la nota de prensa de UTDT, publicada 19/11/2026) · https://www.utdt.edu/ver_nota_prensa.php?id_item_menu=6&id_nota_prensa=23683 · consultado 2026-11-27 · fuente original: UTDT, Índice de Confianza del Consumidor (campo 3–17/11, Poliarquía)",
      "categoria": "Nacional"
     },
     {
@@ -13784,7 +14749,7 @@
      "campo": "2026-11-03→2026-11-17",
      "unidad": "puntos (0–100)",
      "nota": "",
-     "secundaria": "FUENTE SECUNDARIA · Perfil reproducido por UTDT · 19/11/2026",
+     "secundaria": "FUENTE SECUNDARIA · Perfil (reproduce la nota de prensa de UTDT, publicada 19/11/2026) · https://www.utdt.edu/ver_nota_prensa.php?id_item_menu=6&id_nota_prensa=23683 · consultado 2026-11-27 · fuente original: UTDT, Índice de Confianza del Consumidor (campo 3–17/11, Poliarquía)",
      "categoria": "CABA"
     },
     {
@@ -13801,7 +14766,7 @@
      "campo": "2026-11-03→2026-11-17",
      "unidad": "puntos (0–100)",
      "nota": "",
-     "secundaria": "FUENTE SECUNDARIA · Perfil reproducido por UTDT · 19/11/2026",
+     "secundaria": "FUENTE SECUNDARIA · Perfil (reproduce la nota de prensa de UTDT, publicada 19/11/2026) · https://www.utdt.edu/ver_nota_prensa.php?id_item_menu=6&id_nota_prensa=23683 · consultado 2026-11-27 · fuente original: UTDT, Índice de Confianza del Consumidor (campo 3–17/11, Poliarquía)",
      "categoria": "Interior"
     },
     {
@@ -13818,7 +14783,7 @@
      "campo": "2026-11-03→2026-11-17",
      "unidad": "puntos (0–100)",
      "nota": "",
-     "secundaria": "FUENTE SECUNDARIA · Perfil reproducido por UTDT · 19/11/2026",
+     "secundaria": "FUENTE SECUNDARIA · Perfil (reproduce la nota de prensa de UTDT, publicada 19/11/2026) · https://www.utdt.edu/ver_nota_prensa.php?id_item_menu=6&id_nota_prensa=23683 · consultado 2026-11-27 · fuente original: UTDT, Índice de Confianza del Consumidor (campo 3–17/11, Poliarquía)",
      "categoria": "GBA"
     },
     {
@@ -14422,6 +15387,74 @@
      "categoria": "Negativa"
     },
     {
+     "tipo": "serie",
+     "modulo": "Gestión nacional",
+     "etiqueta": "GESTION · ESPOP · aprob",
+     "valor": 36,
+     "anterior": null,
+     "estado": "nuevo",
+     "consultora": "ESPOP (UdeSA)",
+     "fila": 1722,
+     "base": "nivel2_indicadores",
+     "file_id": "1sqyEKazoQMuF5nDAeIDl1Crp0dO43qbY",
+     "campo": "2026-10-05→2026-10-13",
+     "unidad": "%",
+     "nota": "Dato primario de Nivel 2 que faltaba mapear al Monitor (completa la serie; cargado 27/11/2026).",
+     "secundaria": "",
+     "categoria": "Aprueba (Apruebo mucho + Apruebo algo)"
+    },
+    {
+     "tipo": "serie",
+     "modulo": "Gestión nacional",
+     "etiqueta": "GESTION · ESPOP · desaprob",
+     "valor": 60,
+     "anterior": null,
+     "estado": "nuevo",
+     "consultora": "ESPOP (UdeSA)",
+     "fila": 1723,
+     "base": "nivel2_indicadores",
+     "file_id": "1sqyEKazoQMuF5nDAeIDl1Crp0dO43qbY",
+     "campo": "2026-10-05→2026-10-13",
+     "unidad": "%",
+     "nota": "Dato primario de Nivel 2 que faltaba mapear al Monitor (completa la serie; cargado 27/11/2026).",
+     "secundaria": "",
+     "categoria": "Desaprueba (Desapruebo mucho + Desapruebo algo)"
+    },
+    {
+     "tipo": "serie",
+     "modulo": "Imagen Milei",
+     "etiqueta": "IMG · ESPOP · pos",
+     "valor": 34,
+     "anterior": null,
+     "estado": "nuevo",
+     "consultora": "ESPOP (UdeSA)",
+     "fila": 1728,
+     "base": "nivel2_indicadores",
+     "file_id": "1sqyEKazoQMuF5nDAeIDl1Crp0dO43qbY",
+     "campo": "2026-10-05→2026-10-13",
+     "unidad": "%",
+     "nota": "Dato primario de Nivel 2 que faltaba mapear al Monitor (completa la serie; cargado 27/11/2026).",
+     "secundaria": "",
+     "categoria": "Positiva total (Muy buena + Buena)"
+    },
+    {
+     "tipo": "serie",
+     "modulo": "Imagen Milei",
+     "etiqueta": "IMG · ESPOP · neg",
+     "valor": 60,
+     "anterior": null,
+     "estado": "nuevo",
+     "consultora": "ESPOP (UdeSA)",
+     "fila": 1729,
+     "base": "nivel2_indicadores",
+     "file_id": "1sqyEKazoQMuF5nDAeIDl1Crp0dO43qbY",
+     "campo": "2026-10-05→2026-10-13",
+     "unidad": "%",
+     "nota": "Dato primario de Nivel 2 que faltaba mapear al Monitor (completa la serie; cargado 27/11/2026).",
+     "secundaria": "",
+     "categoria": "Negativa total (Mala + Muy mala)"
+    },
+    {
      "tipo": "pendiente",
      "modulo": "Gestión nacional",
      "etiqueta": "Proyección octubre: solo la valoración negativa (52,4%) está en N2.",
@@ -14638,6 +15671,159 @@
      "nota": "Lectura visual de la lámina «IMAGEN DE JAVIER MILEI · % Tendencia desde septiembre 2024», página 30 del PDF de D'Alessio de agosto (Drive 1mTV-Kdw), el 18/11. La extracción de texto entrega la serie sin rótulos de mes, pero la lámina sí está rotulada (sep-24 a ago-26) con el valor impreso sobre cada punto: el valor queda leído del informe y se retira la excepción registrada antes. Registro en base maestra fila 175.",
      "secundaria": "",
      "categoria": "Positiva"
+    },
+    {
+     "tipo": "serie",
+     "modulo": "Gestión nacional",
+     "etiqueta": "GESTION · Proyección · desaprob",
+     "valor": 53.8,
+     "anterior": null,
+     "estado": "nuevo",
+     "consultora": "Proyección Consultores",
+     "fila": 2209,
+     "base": "nivel2_indicadores",
+     "file_id": "1FNbjV7Ru5gL5DriFMYTlZSmQJvNhc0qa",
+     "campo": "2026-07-01→2026-07-10",
+     "unidad": "%",
+     "nota": "malo + muy malo (ICP); Completa el hueco de la serie desde Nivel 2 (fuente primaria del Drive; cargado 27/11/2026).",
+     "secundaria": "",
+     "categoria": "Malo + Muy malo"
+    },
+    {
+     "tipo": "serie",
+     "modulo": "Imagen Milei",
+     "etiqueta": "IMG · Proyección · pos",
+     "valor": 40.5,
+     "anterior": null,
+     "estado": "nuevo",
+     "consultora": "Proyección Consultores",
+     "fila": 2212,
+     "base": "nivel2_indicadores",
+     "file_id": "1FNbjV7Ru5gL5DriFMYTlZSmQJvNhc0qa",
+     "campo": "2026-07-01→2026-07-10",
+     "unidad": "%",
+     "nota": "Completa el hueco de la serie desde Nivel 2 (fuente primaria del Drive; cargado 27/11/2026).",
+     "secundaria": "",
+     "categoria": "Positiva (muy buena + buena)"
+    },
+    {
+     "tipo": "serie",
+     "modulo": "Imagen Milei",
+     "etiqueta": "IMG · Proyección · neg",
+     "valor": 55.4,
+     "anterior": null,
+     "estado": "nuevo",
+     "consultora": "Proyección Consultores",
+     "fila": 2213,
+     "base": "nivel2_indicadores",
+     "file_id": "1FNbjV7Ru5gL5DriFMYTlZSmQJvNhc0qa",
+     "campo": "2026-07-01→2026-07-10",
+     "unidad": "%",
+     "nota": "Completa el hueco de la serie desde Nivel 2 (fuente primaria del Drive; cargado 27/11/2026).",
+     "secundaria": "",
+     "categoria": "Negativa (mala + muy mala)"
+    },
+    {
+     "tipo": "serie",
+     "modulo": "Gestión nacional",
+     "etiqueta": "GESTION · RDT · aprob",
+     "valor": 32.6,
+     "anterior": null,
+     "estado": "nuevo",
+     "consultora": "REALLE DALLA TORRE",
+     "fila": 272,
+     "base": "nivel2_indicadores",
+     "file_id": "1MV3Nzf9O8_TVlFvdfuRSQHa8u6xSnIYv",
+     "campo": "2026-07-24→2026-07-28",
+     "unidad": "%",
+     "nota": "Dato primario de Nivel 2 que faltaba mapear al Monitor (completa la serie; cargado 27/11/2026).",
+     "secundaria": "",
+     "categoria": "Aprueba"
+    },
+    {
+     "tipo": "serie",
+     "modulo": "Gestión nacional",
+     "etiqueta": "GESTION · RDT · desaprob",
+     "valor": 54.4,
+     "anterior": null,
+     "estado": "nuevo",
+     "consultora": "REALLE DALLA TORRE",
+     "fila": 273,
+     "base": "nivel2_indicadores",
+     "file_id": "1MV3Nzf9O8_TVlFvdfuRSQHa8u6xSnIYv",
+     "campo": "2026-07-24→2026-07-28",
+     "unidad": "%",
+     "nota": "Dato primario de Nivel 2 que faltaba mapear al Monitor (completa la serie; cargado 27/11/2026).",
+     "secundaria": "",
+     "categoria": "Desaprueba"
+    },
+    {
+     "tipo": "serie",
+     "modulo": "Imagen Milei",
+     "etiqueta": "IMG · RDT · pos",
+     "valor": 39.3,
+     "anterior": null,
+     "estado": "nuevo",
+     "consultora": "REALLE DALLA TORRE",
+     "fila": 258,
+     "base": "nivel2_indicadores",
+     "file_id": "1MV3Nzf9O8_TVlFvdfuRSQHa8u6xSnIYv",
+     "campo": "2026-07-24→2026-07-28",
+     "unidad": "%",
+     "nota": "Dato primario de Nivel 2 que faltaba mapear al Monitor (completa la serie; cargado 27/11/2026).",
+     "secundaria": "",
+     "categoria": "Positiva"
+    },
+    {
+     "tipo": "serie",
+     "modulo": "Imagen Milei",
+     "etiqueta": "IMG · RDT · neg",
+     "valor": 53.1,
+     "anterior": null,
+     "estado": "nuevo",
+     "consultora": "REALLE DALLA TORRE",
+     "fila": 259,
+     "base": "nivel2_indicadores",
+     "file_id": "1MV3Nzf9O8_TVlFvdfuRSQHa8u6xSnIYv",
+     "campo": "2026-07-24→2026-07-28",
+     "unidad": "%",
+     "nota": "Dato primario de Nivel 2 que faltaba mapear al Monitor (completa la serie; cargado 27/11/2026).",
+     "secundaria": "",
+     "categoria": "Negativa"
+    },
+    {
+     "tipo": "serie",
+     "modulo": "Gestión nacional",
+     "etiqueta": "GESTION · ESPOP · aprob",
+     "valor": 34,
+     "anterior": null,
+     "estado": "nuevo",
+     "consultora": "UDESA ESPOP (Laboratorio de Observacion de la Opinion Publica, LOOP, Universidad de San Andres)",
+     "fila": 493,
+     "base": "nivel2_indicadores",
+     "file_id": "1M4T33zKGO8sGRGpGpf9i83Lr0qsrJJet",
+     "campo": "2026-07-03→2026-07-08",
+     "unidad": "%",
+     "nota": "Dato primario de Nivel 2 que faltaba mapear al Monitor (completa la serie; cargado 27/11/2026).",
+     "secundaria": "",
+     "categoria": "Aprueba"
+    },
+    {
+     "tipo": "serie",
+     "modulo": "Imagen Milei",
+     "etiqueta": "IMG · ESPOP · pos",
+     "valor": 33,
+     "anterior": null,
+     "estado": "nuevo",
+     "consultora": "UDESA ESPOP (Laboratorio de Observacion de la Opinion Publica, LOOP, Universidad de San Andres)",
+     "fila": 497,
+     "base": "nivel2_indicadores",
+     "file_id": "1M4T33zKGO8sGRGpGpf9i83Lr0qsrJJet",
+     "campo": "2026-07-03→2026-07-08",
+     "unidad": "%",
+     "nota": "Dato primario de Nivel 2 que faltaba mapear al Monitor (completa la serie; cargado 27/11/2026).",
+     "secundaria": "",
+     "categoria": "Positiva"
     }
    ],
    "Sep-26": [
@@ -14844,6 +16030,74 @@
      "nota": "Completa el hueco de septiembre. Estudio Nacional de Proyección de septiembre (PDF Drive 1G2Om8Kk, sección Imagen y conocimiento), campo 1–10/09/2026: Milei 39,3 positiva y 57,1 negativa.",
      "secundaria": "",
      "categoria": "Positiva (muy buena + buena)"
+    },
+    {
+     "tipo": "serie",
+     "modulo": "Imagen Milei",
+     "etiqueta": "IMG · Giacobbe · pos",
+     "valor": 36,
+     "anterior": null,
+     "estado": "nuevo",
+     "consultora": "Giacobbe",
+     "fila": 2152,
+     "base": "nivel2_indicadores",
+     "file_id": "1QsRUsN7Lx50_PMvD-JxEu53JNYxLbOgb",
+     "campo": "2026-09-30→2026-10-05",
+     "unidad": "%",
+     "nota": "Completa el hueco de septiembre. Informe Público de Giacobbe de septiembre (PDF Drive 1QsRUsN7, p. 2), campo 30/09–05/10/2026: positiva 36,0 / regular 6,9 / negativa 56,0.",
+     "secundaria": "",
+     "categoria": "Positiva"
+    },
+    {
+     "tipo": "serie",
+     "modulo": "Imagen Milei",
+     "etiqueta": "IMG · Giacobbe · neg",
+     "valor": 56,
+     "anterior": null,
+     "estado": "nuevo",
+     "consultora": "Giacobbe",
+     "fila": 2154,
+     "base": "nivel2_indicadores",
+     "file_id": "1QsRUsN7Lx50_PMvD-JxEu53JNYxLbOgb",
+     "campo": "2026-09-30→2026-10-05",
+     "unidad": "%",
+     "nota": "Informe Público de Giacobbe de septiembre (PDF Drive 1QsRUsN7, p. 2): 56,0 − 55,7 (agosto) = +0,3 p.p.",
+     "secundaria": "",
+     "categoria": "Negativa"
+    },
+    {
+     "tipo": "serie",
+     "modulo": "Gestión nacional",
+     "etiqueta": "GESTION · Proyección · desaprob",
+     "valor": 52.6,
+     "anterior": null,
+     "estado": "nuevo",
+     "consultora": "Proyección Consultores",
+     "fila": 2211,
+     "base": "nivel2_indicadores",
+     "file_id": "1G2Om8KkIMnngn5tK3XZlJCesBhy2vCLE",
+     "campo": "2026-09-01→2026-09-10",
+     "unidad": "%",
+     "nota": "malo + muy malo (ICP); Completa el hueco de la serie desde Nivel 2 (fuente primaria del Drive; cargado 27/11/2026).",
+     "secundaria": "",
+     "categoria": "Malo + Muy malo"
+    },
+    {
+     "tipo": "serie",
+     "modulo": "Gestión nacional",
+     "etiqueta": "GESTION · ESPOP · aprob",
+     "valor": 35,
+     "anterior": null,
+     "estado": "nuevo",
+     "consultora": "UDESA ESPOP (Laboratorio de Observacion de la Opinion Publica, LOOP, Universidad de San Andres)",
+     "fila": 467,
+     "base": "nivel2_indicadores",
+     "file_id": "1pNrVH70a-gbULzu7gsghjFQuQbUMZB-K",
+     "campo": "2026-09-03→2026-09-09",
+     "unidad": "%",
+     "nota": "Dato primario de Nivel 2 que faltaba mapear al Monitor (completa la serie; cargado 27/11/2026).",
+     "secundaria": "",
+     "categoria": "Aprueba"
     }
    ],
    "May-26": [
@@ -14997,6 +16251,125 @@
      "campo": "2026-05-29→2026-06-03",
      "unidad": "%",
      "nota": "",
+     "secundaria": "",
+     "categoria": "Negativa"
+    },
+    {
+     "tipo": "serie",
+     "modulo": "Gestión nacional",
+     "etiqueta": "GESTION · Proyección · desaprob",
+     "valor": 58.5,
+     "anterior": null,
+     "estado": "nuevo",
+     "consultora": "Proyección Consultores",
+     "fila": 2207,
+     "base": "nivel2_indicadores",
+     "file_id": "1WAy-IMavm3Hlhj5zv7-jkgwj1mOJ4OrM",
+     "campo": "2026-05-02→2026-05-10",
+     "unidad": "%",
+     "nota": "malo + muy malo (ICP); Completa el hueco de la serie desde Nivel 2 (fuente primaria del Drive; cargado 27/11/2026).",
+     "secundaria": "",
+     "categoria": "Malo + Muy malo"
+    },
+    {
+     "tipo": "serie",
+     "modulo": "Gestión nacional",
+     "etiqueta": "GESTION · M&F · aprob",
+     "valor": 37.9,
+     "anterior": null,
+     "estado": "nuevo",
+     "consultora": "Management & Fit (para CEIL-CONICET)",
+     "fila": 223,
+     "base": "nivel2_indicadores",
+     "file_id": "19T-9ISg-Iu_300ZMFAZxO93DE__6Buzn",
+     "campo": "2026-05-11→2026-05-22",
+     "unidad": "%",
+     "nota": "Dato primario de Nivel 2 que faltaba mapear al Monitor (completa la serie; cargado 27/11/2026).",
+     "secundaria": "",
+     "categoria": "Aprueba"
+    },
+    {
+     "tipo": "serie",
+     "modulo": "Gestión nacional",
+     "etiqueta": "GESTION · M&F · desaprob",
+     "valor": 58.1,
+     "anterior": null,
+     "estado": "nuevo",
+     "consultora": "Management & Fit (para CEIL-CONICET)",
+     "fila": 317,
+     "base": "nivel2_indicadores",
+     "file_id": "19T-9ISg-Iu_300ZMFAZxO93DE__6Buzn",
+     "campo": "2026-05-11→2026-05-22",
+     "unidad": "%",
+     "nota": "Dato primario de Nivel 2 que faltaba mapear al Monitor (completa la serie; cargado 27/11/2026).",
+     "secundaria": "",
+     "categoria": "Desaprueba"
+    },
+    {
+     "tipo": "serie",
+     "modulo": "Gestión nacional",
+     "etiqueta": "GESTION · D'Alessio · aprob",
+     "valor": 39,
+     "anterior": null,
+     "estado": "nuevo",
+     "consultora": "D'ALESSIO IROL / BERENSZTEIN",
+     "fila": 160,
+     "base": "nivel2_indicadores",
+     "file_id": "1SF0QgWxSJRumHei7o5rFD_frgErsQcfh",
+     "campo": "2026-05-29→2026-05-30",
+     "unidad": "%",
+     "nota": "Dato primario de Nivel 2 que faltaba mapear al Monitor (completa la serie; cargado 27/11/2026).",
+     "secundaria": "",
+     "categoria": "Buena"
+    },
+    {
+     "tipo": "serie",
+     "modulo": "Gestión nacional",
+     "etiqueta": "GESTION · D'Alessio · desaprob",
+     "valor": 60,
+     "anterior": null,
+     "estado": "nuevo",
+     "consultora": "D'ALESSIO IROL / BERENSZTEIN",
+     "fila": 161,
+     "base": "nivel2_indicadores",
+     "file_id": "1SF0QgWxSJRumHei7o5rFD_frgErsQcfh",
+     "campo": "2026-05-29→2026-05-30",
+     "unidad": "%",
+     "nota": "Dato primario de Nivel 2 que faltaba mapear al Monitor (completa la serie; cargado 27/11/2026).",
+     "secundaria": "",
+     "categoria": "Mala"
+    },
+    {
+     "tipo": "serie",
+     "modulo": "Imagen Milei",
+     "etiqueta": "IMG · RDT · pos",
+     "valor": 38.2,
+     "anterior": null,
+     "estado": "nuevo",
+     "consultora": "REALLE DALLA TORRE",
+     "fila": 116,
+     "base": "nivel2_indicadores",
+     "file_id": "1FBUHtaiEgKDEUN8uYrpk5LwHkYCTziIc",
+     "campo": "2026-05-25→2026-05-31",
+     "unidad": "%",
+     "nota": "Dato primario de Nivel 2 que faltaba mapear al Monitor (completa la serie; cargado 27/11/2026).",
+     "secundaria": "",
+     "categoria": "Positiva"
+    },
+    {
+     "tipo": "serie",
+     "modulo": "Imagen Milei",
+     "etiqueta": "IMG · RDT · neg",
+     "valor": 53.7,
+     "anterior": null,
+     "estado": "nuevo",
+     "consultora": "REALLE DALLA TORRE",
+     "fila": 117,
+     "base": "nivel2_indicadores",
+     "file_id": "1FBUHtaiEgKDEUN8uYrpk5LwHkYCTziIc",
+     "campo": "2026-05-25→2026-05-31",
+     "unidad": "%",
+     "nota": "Dato primario de Nivel 2 que faltaba mapear al Monitor (completa la serie; cargado 27/11/2026).",
      "secundaria": "",
      "categoria": "Negativa"
     }
@@ -15154,6 +16527,142 @@
      "nota": "",
      "secundaria": "",
      "categoria": "Negativa"
+    },
+    {
+     "tipo": "serie",
+     "modulo": "Gestión nacional",
+     "etiqueta": "GESTION · Proyección · desaprob",
+     "valor": 53.3,
+     "anterior": null,
+     "estado": "nuevo",
+     "consultora": "Proyección Consultores",
+     "fila": 2210,
+     "base": "nivel2_indicadores",
+     "file_id": "1-5iOlPRLcG8NvygQWp0UrzB9b3UPL6Jc",
+     "campo": "2026-08-01→2026-08-12",
+     "unidad": "%",
+     "nota": "malo + muy malo (ICP); Completa el hueco de la serie desde Nivel 2 (fuente primaria del Drive; cargado 27/11/2026).",
+     "secundaria": "",
+     "categoria": "Malo + Muy malo"
+    },
+    {
+     "tipo": "serie",
+     "modulo": "Imagen Milei",
+     "etiqueta": "IMG · Proyección · pos",
+     "valor": 40.6,
+     "anterior": null,
+     "estado": "nuevo",
+     "consultora": "Proyección Consultores",
+     "fila": 2214,
+     "base": "nivel2_indicadores",
+     "file_id": "1-5iOlPRLcG8NvygQWp0UrzB9b3UPL6Jc",
+     "campo": "2026-08-01→2026-08-12",
+     "unidad": "%",
+     "nota": "Completa el hueco de la serie desde Nivel 2 (fuente primaria del Drive; cargado 27/11/2026).",
+     "secundaria": "",
+     "categoria": "Positiva (muy buena + buena)"
+    },
+    {
+     "tipo": "serie",
+     "modulo": "Imagen Milei",
+     "etiqueta": "IMG · Proyección · neg",
+     "valor": 54.1,
+     "anterior": null,
+     "estado": "nuevo",
+     "consultora": "Proyección Consultores",
+     "fila": 2215,
+     "base": "nivel2_indicadores",
+     "file_id": "1-5iOlPRLcG8NvygQWp0UrzB9b3UPL6Jc",
+     "campo": "2026-08-01→2026-08-12",
+     "unidad": "%",
+     "nota": "Completa el hueco de la serie desde Nivel 2 (fuente primaria del Drive; cargado 27/11/2026).",
+     "secundaria": "",
+     "categoria": "Negativa (mala + muy mala)"
+    },
+    {
+     "tipo": "serie",
+     "modulo": "Gestión nacional",
+     "etiqueta": "GESTION · Synopsis · aprob",
+     "valor": 33.4,
+     "anterior": null,
+     "estado": "nuevo",
+     "consultora": "Synopsis",
+     "fila": 965,
+     "base": "nivel2_indicadores",
+     "file_id": "1gXeLj77CWNyV8BIw1oKXr0CqLX9ENOYh",
+     "campo": "2026-08-10→2026-08-18",
+     "unidad": "%",
+     "nota": "Dato primario de Nivel 2 que faltaba mapear al Monitor (completa la serie; cargado 27/11/2026).",
+     "secundaria": "",
+     "categoria": "Positivo (Muy bueno + Bueno)"
+    },
+    {
+     "tipo": "serie",
+     "modulo": "Gestión nacional",
+     "etiqueta": "GESTION · Synopsis · desaprob",
+     "valor": 53.3,
+     "anterior": null,
+     "estado": "nuevo",
+     "consultora": "Synopsis",
+     "fila": 967,
+     "base": "nivel2_indicadores",
+     "file_id": "1gXeLj77CWNyV8BIw1oKXr0CqLX9ENOYh",
+     "campo": "2026-08-10→2026-08-18",
+     "unidad": "%",
+     "nota": "Dato primario de Nivel 2 que faltaba mapear al Monitor (completa la serie; cargado 27/11/2026).",
+     "secundaria": "",
+     "categoria": "Negativo (Malo + Muy malo)"
+    },
+    {
+     "tipo": "serie",
+     "modulo": "Gestión nacional",
+     "etiqueta": "GESTION · D'Alessio · aprob",
+     "valor": 40,
+     "anterior": null,
+     "estado": "nuevo",
+     "consultora": "D'ALESSIO IROL / BERENSZTEIN",
+     "fila": 412,
+     "base": "nivel2_indicadores",
+     "file_id": "1mTV-KdwP9o_UnL0r7o19dmBIqi2efLpu",
+     "campo": "2026-08-28→2026-08-30",
+     "unidad": "%",
+     "nota": "Dato primario de Nivel 2 que faltaba mapear al Monitor (completa la serie; cargado 27/11/2026).",
+     "secundaria": "",
+     "categoria": "Buena"
+    },
+    {
+     "tipo": "serie",
+     "modulo": "Gestión nacional",
+     "etiqueta": "GESTION · D'Alessio · desaprob",
+     "valor": 58,
+     "anterior": null,
+     "estado": "nuevo",
+     "consultora": "D'ALESSIO IROL / BERENSZTEIN",
+     "fila": 413,
+     "base": "nivel2_indicadores",
+     "file_id": "1mTV-KdwP9o_UnL0r7o19dmBIqi2efLpu",
+     "campo": "2026-08-28→2026-08-30",
+     "unidad": "%",
+     "nota": "Dato primario de Nivel 2 que faltaba mapear al Monitor (completa la serie; cargado 27/11/2026).",
+     "secundaria": "",
+     "categoria": "Mala"
+    },
+    {
+     "tipo": "serie",
+     "modulo": "Gestión nacional",
+     "etiqueta": "GESTION · ESPOP · aprob",
+     "valor": 35,
+     "anterior": null,
+     "estado": "nuevo",
+     "consultora": "UDESA ESPOP (Laboratorio de Observacion de la Opinion Publica, LOOP, Universidad de San Andres)",
+     "fila": 935,
+     "base": "nivel2_indicadores",
+     "file_id": "10JolqVQDHCeDZkFZGoE75e4dAsNvtECO",
+     "campo": "2026-08-05→2026-08-11",
+     "unidad": "%",
+     "nota": "Dato primario de Nivel 2 que faltaba mapear al Monitor (completa la serie; cargado 27/11/2026).",
+     "secundaria": "",
+     "categoria": "Aprueba"
     },
     {
      "tipo": "serie",
@@ -15430,6 +16939,142 @@
      "categoria": "Negativa (calificaciones 1 y 2)"
     },
     {
+     "tipo": "serie",
+     "modulo": "Gestión nacional",
+     "etiqueta": "GESTION · M&F · aprob",
+     "valor": 37.6,
+     "anterior": null,
+     "estado": "nuevo",
+     "consultora": "Management & Fit",
+     "fila": 1803,
+     "base": "nivel2_indicadores",
+     "file_id": "1cmuEFkdV5dtihVQCBX4eO6Gof-jLEnLp",
+     "campo": "2026-11-12→2026-11-17",
+     "unidad": "%",
+     "nota": "Noviembre: campo 12–17/11, informe de Management & Fit (Drive).",
+     "secundaria": "",
+     "categoria": "Positiva / Aprueba"
+    },
+    {
+     "tipo": "serie",
+     "modulo": "Gestión nacional",
+     "etiqueta": "GESTION · M&F · desaprob",
+     "valor": 58.1,
+     "anterior": null,
+     "estado": "nuevo",
+     "consultora": "Management & Fit",
+     "fila": 1804,
+     "base": "nivel2_indicadores",
+     "file_id": "1cmuEFkdV5dtihVQCBX4eO6Gof-jLEnLp",
+     "campo": "2026-11-12→2026-11-17",
+     "unidad": "%",
+     "nota": "Noviembre: campo 12–17/11, informe de Management & Fit (Drive).",
+     "secundaria": "",
+     "categoria": "Negativa / Desaprueba"
+    },
+    {
+     "tipo": "serie",
+     "modulo": "Gestión nacional",
+     "etiqueta": "GESTION · Pulso Research · aprob",
+     "valor": 34,
+     "anterior": null,
+     "estado": "nuevo",
+     "consultora": "Pulso Research",
+     "fila": 1948,
+     "base": "nivel2_indicadores",
+     "file_id": "1eoMG0IJq0ArLCUXPemLwyvuS1EDbP-C5",
+     "campo": "2026-11-07→2026-11-16",
+     "unidad": "%",
+     "nota": "Brújula Social de noviembre, campo 7–16/11 (n=1.552). Salto de +5,1 pp contra octubre marcado «verificar» en la base.",
+     "secundaria": "",
+     "categoria": "Muy bien + Bien"
+    },
+    {
+     "tipo": "serie",
+     "modulo": "Gestión nacional",
+     "etiqueta": "GESTION · Pulso Research · desaprob",
+     "valor": 59.6,
+     "anterior": null,
+     "estado": "nuevo",
+     "consultora": "Pulso Research",
+     "fila": 1949,
+     "base": "nivel2_indicadores",
+     "file_id": "1eoMG0IJq0ArLCUXPemLwyvuS1EDbP-C5",
+     "campo": "2026-11-07→2026-11-16",
+     "unidad": "%",
+     "nota": "Brújula Social de noviembre: mal + muy mal. Sin corte de octubre cargado.",
+     "secundaria": "",
+     "categoria": "Mal + Muy mal"
+    },
+    {
+     "tipo": "serie",
+     "modulo": "Imagen Milei",
+     "etiqueta": "IMG · Pulso Research · pos",
+     "valor": 38.6,
+     "anterior": null,
+     "estado": "nuevo",
+     "consultora": "Pulso Research",
+     "fila": 1950,
+     "base": "nivel2_indicadores",
+     "file_id": "1eoMG0IJq0ArLCUXPemLwyvuS1EDbP-C5",
+     "campo": "2026-11-07→2026-11-16",
+     "unidad": "%",
+     "nota": "Brújula Social de noviembre. Salto de +6,2 pp contra octubre marcado «verificar» en la base.",
+     "secundaria": "",
+     "categoria": "Positiva"
+    },
+    {
+     "tipo": "serie",
+     "modulo": "Imagen Milei",
+     "etiqueta": "IMG · Pulso Research · neg",
+     "valor": 58.7,
+     "anterior": null,
+     "estado": "nuevo",
+     "consultora": "Pulso Research",
+     "fila": 1951,
+     "base": "nivel2_indicadores",
+     "file_id": "1eoMG0IJq0ArLCUXPemLwyvuS1EDbP-C5",
+     "campo": "2026-11-07→2026-11-16",
+     "unidad": "%",
+     "nota": "Brújula Social de noviembre.",
+     "secundaria": "",
+     "categoria": "Negativa"
+    },
+    {
+     "tipo": "serie",
+     "modulo": "Imagen Milei",
+     "etiqueta": "IMG · Management & Fit · pos",
+     "valor": 34,
+     "anterior": null,
+     "estado": "nuevo",
+     "consultora": "Management & Fit",
+     "fila": 1835,
+     "base": "nivel2_indicadores",
+     "file_id": "1cmuEFkdV5dtihVQCBX4eO6Gof-jLEnLp",
+     "campo": "2026-11-12→2026-11-17",
+     "unidad": "%",
+     "nota": "Management & Fit nov-26 (muy buena + buena); serie propia de un solo corte.",
+     "secundaria": "",
+     "categoria": "Positiva (muy buena + buena)"
+    },
+    {
+     "tipo": "serie",
+     "modulo": "Imagen Milei",
+     "etiqueta": "IMG · Management & Fit · neg",
+     "valor": 54.1,
+     "anterior": null,
+     "estado": "nuevo",
+     "consultora": "Management & Fit",
+     "fila": 1836,
+     "base": "nivel2_indicadores",
+     "file_id": "1cmuEFkdV5dtihVQCBX4eO6Gof-jLEnLp",
+     "campo": "2026-11-12→2026-11-17",
+     "unidad": "%",
+     "nota": "Management & Fit nov-26 (mala + muy mala); serie propia de un solo corte.",
+     "secundaria": "",
+     "categoria": "Negativa (mala + muy mala)"
+    },
+    {
      "tipo": "pendiente",
      "modulo": "Imagen Milei",
      "etiqueta": "Vozna: imagen positiva (may 36,3 · jul 32,1 · sep 31,3), negativa (sep 63,5) y aprobación (jul 36,3 · sep 32,6) seguían escritas dentro del código de index.html, fuera de las bases. Retiradas de los gráficos.",
@@ -15445,6 +17090,18 @@
      "tipo": "pendiente",
      "modulo": "Imagen Milei",
      "etiqueta": "Imagen positiva de Milei: sin huecos. Los 11 meses que tenían negativa sin su contracara se cerraron el 18/11: Giacobbe jul y ago, Proyección sep, D'Alessio jun y jul, Zentrix may–sep desde informes primarios de Drive, y Zuban jul por fuente secundaria, único caso sin informe primario.",
+     "necesita": "—"
+    },
+    {
+     "tipo": "pendiente",
+     "modulo": "Gestión nacional",
+     "etiqueta": "Pulso Research nov-26 trae saltos grandes frente a octubre (aprobación 28,9 → 34,0; imagen positiva de Milei 32,4 → 38,6). La base los marca «verificar»: no se confirmó que pregunta y escala de octubre sean idénticas.",
+     "necesita": "contrastar el cuestionario de Brújula Social de octubre y noviembre"
+    },
+    {
+     "tipo": "pendiente",
+     "modulo": "Imagen Milei",
+     "etiqueta": "Vozna nacional nov-26 (campo 5–11/11, n=2.195): aprobación 36% (N2 fila 1943). Sin serie comparable: septiembre fue muestra de PBA. Los cuatro segmentos del electorado son perfiles estadísticos, no una pregunta, y no entran a series.",
      "necesita": "—"
     }
    ],
@@ -15599,6 +17256,159 @@
      "campo": "",
      "unidad": "%",
      "nota": "Lectura visual de la lámina «IMAGEN DE JAVIER MILEI · % Tendencia desde septiembre 2024», página 30 del PDF de D'Alessio de agosto (Drive 1mTV-Kdw), el 18/11. La extracción de texto entrega la serie sin rótulos de mes, pero la lámina sí está rotulada (sep-24 a ago-26) con el valor impreso sobre cada punto: el valor queda leído del informe y se retira la excepción registrada antes. Registro en base maestra fila 175.",
+     "secundaria": "",
+     "categoria": "Positiva"
+    },
+    {
+     "tipo": "serie",
+     "modulo": "Gestión nacional",
+     "etiqueta": "GESTION · Proyección · desaprob",
+     "valor": 51.6,
+     "anterior": null,
+     "estado": "nuevo",
+     "consultora": "Proyección Consultores",
+     "fila": 2208,
+     "base": "nivel2_indicadores",
+     "file_id": "1FNbjV7Ru5gL5DriFMYTlZSmQJvNhc0qa",
+     "campo": "2026-06-01→2026-06-07",
+     "unidad": "%",
+     "nota": "malo + muy malo (ICP); Completa el hueco de la serie desde Nivel 2 (fuente primaria del Drive; cargado 27/11/2026).",
+     "secundaria": "",
+     "categoria": "Malo + Muy malo"
+    },
+    {
+     "tipo": "serie",
+     "modulo": "Gestión nacional",
+     "etiqueta": "GESTION · M&F · aprob",
+     "valor": 37.3,
+     "anterior": null,
+     "estado": "nuevo",
+     "consultora": "Management & Fit (para CEIL-CONICET)",
+     "fila": 340,
+     "base": "nivel2_indicadores",
+     "file_id": "1UbJlpbFctHlVGvU1FY43tluOxjBCreu_",
+     "campo": "2026-06-12→2026-06-26",
+     "unidad": "%",
+     "nota": "Dato primario de Nivel 2 que faltaba mapear al Monitor (completa la serie; cargado 27/11/2026).",
+     "secundaria": "",
+     "categoria": "Aprueba"
+    },
+    {
+     "tipo": "serie",
+     "modulo": "Gestión nacional",
+     "etiqueta": "GESTION · M&F · desaprob",
+     "valor": 58.2,
+     "anterior": null,
+     "estado": "nuevo",
+     "consultora": "Management & Fit (para CEIL-CONICET)",
+     "fila": 341,
+     "base": "nivel2_indicadores",
+     "file_id": "1UbJlpbFctHlVGvU1FY43tluOxjBCreu_",
+     "campo": "2026-06-12→2026-06-26",
+     "unidad": "%",
+     "nota": "Dato primario de Nivel 2 que faltaba mapear al Monitor (completa la serie; cargado 27/11/2026).",
+     "secundaria": "",
+     "categoria": "Desaprueba"
+    },
+    {
+     "tipo": "serie",
+     "modulo": "Gestión nacional",
+     "etiqueta": "GESTION · RDT · aprob",
+     "valor": 30.7,
+     "anterior": null,
+     "estado": "nuevo",
+     "consultora": "REALLE DALLA TORRE",
+     "fila": 250,
+     "base": "nivel2_indicadores",
+     "file_id": "16wRSyvJ1odR1foUIw7POMojiy6ROoVj4",
+     "campo": "2026-06-25→2026-06-30",
+     "unidad": "%",
+     "nota": "Dato primario de Nivel 2 que faltaba mapear al Monitor (completa la serie; cargado 27/11/2026).",
+     "secundaria": "",
+     "categoria": "Aprueba"
+    },
+    {
+     "tipo": "serie",
+     "modulo": "Gestión nacional",
+     "etiqueta": "GESTION · RDT · desaprob",
+     "valor": 54.5,
+     "anterior": null,
+     "estado": "nuevo",
+     "consultora": "REALLE DALLA TORRE",
+     "fila": 251,
+     "base": "nivel2_indicadores",
+     "file_id": "16wRSyvJ1odR1foUIw7POMojiy6ROoVj4",
+     "campo": "2026-06-25→2026-06-30",
+     "unidad": "%",
+     "nota": "Dato primario de Nivel 2 que faltaba mapear al Monitor (completa la serie; cargado 27/11/2026).",
+     "secundaria": "",
+     "categoria": "Desaprueba"
+    },
+    {
+     "tipo": "serie",
+     "modulo": "Imagen Milei",
+     "etiqueta": "IMG · RDT · pos",
+     "valor": 38,
+     "anterior": null,
+     "estado": "nuevo",
+     "consultora": "REALLE DALLA TORRE",
+     "fila": 236,
+     "base": "nivel2_indicadores",
+     "file_id": "16wRSyvJ1odR1foUIw7POMojiy6ROoVj4",
+     "campo": "2026-06-25→2026-06-30",
+     "unidad": "%",
+     "nota": "Dato primario de Nivel 2 que faltaba mapear al Monitor (completa la serie; cargado 27/11/2026).",
+     "secundaria": "",
+     "categoria": "Positiva"
+    },
+    {
+     "tipo": "serie",
+     "modulo": "Imagen Milei",
+     "etiqueta": "IMG · RDT · neg",
+     "valor": 52.4,
+     "anterior": null,
+     "estado": "nuevo",
+     "consultora": "REALLE DALLA TORRE",
+     "fila": 237,
+     "base": "nivel2_indicadores",
+     "file_id": "16wRSyvJ1odR1foUIw7POMojiy6ROoVj4",
+     "campo": "2026-06-25→2026-06-30",
+     "unidad": "%",
+     "nota": "Dato primario de Nivel 2 que faltaba mapear al Monitor (completa la serie; cargado 27/11/2026).",
+     "secundaria": "",
+     "categoria": "Negativa"
+    },
+    {
+     "tipo": "serie",
+     "modulo": "Gestión nacional",
+     "etiqueta": "GESTION · ESPOP · aprob",
+     "valor": 35,
+     "anterior": null,
+     "estado": "nuevo",
+     "consultora": "UDESA ESPOP (Laboratorio de Observacion de la Opinion Publica, LOOP, Universidad de San Andres)",
+     "fila": 492,
+     "base": "nivel2_indicadores",
+     "file_id": "1hjSuesE94RV_pmWa1lwfblzxLW-DUBEQ",
+     "campo": "2026-06-03→2026-06-05",
+     "unidad": "%",
+     "nota": "Dato primario de Nivel 2 que faltaba mapear al Monitor (completa la serie; cargado 27/11/2026).",
+     "secundaria": "",
+     "categoria": "Aprueba"
+    },
+    {
+     "tipo": "serie",
+     "modulo": "Imagen Milei",
+     "etiqueta": "IMG · ESPOP · pos",
+     "valor": 33,
+     "anterior": null,
+     "estado": "nuevo",
+     "consultora": "UDESA ESPOP (Laboratorio de Observacion de la Opinion Publica, LOOP, Universidad de San Andres)",
+     "fila": 496,
+     "base": "nivel2_indicadores",
+     "file_id": "1hjSuesE94RV_pmWa1lwfblzxLW-DUBEQ",
+     "campo": "2026-06-03→2026-06-05",
+     "unidad": "%",
+     "nota": "Dato primario de Nivel 2 que faltaba mapear al Monitor (completa la serie; cargado 27/11/2026).",
      "secundaria": "",
      "categoria": "Positiva"
     }
@@ -15991,6 +17801,108 @@
     {
      "tipo": "serie",
      "modulo": "Intención de voto",
+     "etiqueta": "CONS · Pulso Research · lla",
+     "valor": 25.8,
+     "anterior": null,
+     "estado": "nuevo",
+     "consultora": "Pulso Research",
+     "fila": 1989,
+     "base": "nivel2_indicadores",
+     "file_id": "1eoMG0IJq0ArLCUXPemLwyvuS1EDbP-C5",
+     "campo": "2026-11-07→2026-11-16",
+     "unidad": "%",
+     "nota": "Voto por espacio sin proyección de indecisos (con proyección: 32,8%, fila 1995 de N2). Medición única.",
+     "secundaria": "",
+     "categoria": "La Libertad Avanza"
+    },
+    {
+     "tipo": "serie",
+     "modulo": "Intención de voto",
+     "etiqueta": "CONS · Pulso Research · pj",
+     "valor": 21.3,
+     "anterior": null,
+     "estado": "nuevo",
+     "consultora": "Pulso Research",
+     "fila": 1990,
+     "base": "nivel2_indicadores",
+     "file_id": "1eoMG0IJq0ArLCUXPemLwyvuS1EDbP-C5",
+     "campo": "2026-11-07→2026-11-16",
+     "unidad": "%",
+     "nota": "Peronismo kirchnerista, sin proyección de indecisos. Medición única; no se suma con peronismo federal.",
+     "secundaria": "",
+     "categoria": "Peronismo Kirchnerista"
+    },
+    {
+     "tipo": "serie",
+     "modulo": "Intención de voto",
+     "etiqueta": "CONS · ESPOP · lla",
+     "valor": 24,
+     "anterior": null,
+     "estado": "nuevo",
+     "consultora": "ESPOP (UdeSA)",
+     "fila": 2224,
+     "base": "nivel2_indicadores",
+     "file_id": "No aplica (fuente secundaria)",
+     "campo": "2026-11-04→2026-11-12",
+     "unidad": "%",
+     "nota": "Mes por fecha de campo (criterio de la celda de octubre). Completado desde fuente secundaria; evidencia máxima MEDIA. Sin informe primario de noviembre en Drive.",
+     "secundaria": "FUENTE SECUNDARIA · encuestas-argentinas.com · https://encuestas-argentinas.com/encuestas/ (ficha del 20/11/2026; hilo X: https://x.com/_EncuestAR_/status/2123810422591484376) · consultado 2026-11-27 · fuente original: ESPOP (UdeSA)",
+     "categoria": "La Libertad Avanza"
+    },
+    {
+     "tipo": "serie",
+     "modulo": "Intención de voto",
+     "etiqueta": "CONS · ESPOP · pj",
+     "valor": 25,
+     "anterior": null,
+     "estado": "nuevo",
+     "consultora": "ESPOP (UdeSA)",
+     "fila": 2225,
+     "base": "nivel2_indicadores",
+     "file_id": "No aplica (fuente secundaria)",
+     "campo": "2026-11-04→2026-11-12",
+     "unidad": "%",
+     "nota": "Mes por fecha de campo (criterio de la celda de octubre). Completado desde fuente secundaria; evidencia máxima MEDIA. Sin informe primario de noviembre en Drive.",
+     "secundaria": "FUENTE SECUNDARIA · encuestas-argentinas.com · https://encuestas-argentinas.com/encuestas/ (ficha del 20/11/2026; hilo X: https://x.com/_EncuestAR_/status/2123810422591484376) · consultado 2026-11-27 · fuente original: ESPOP (UdeSA)",
+     "categoria": "Peronismo"
+    },
+    {
+     "tipo": "serie",
+     "modulo": "Intención de voto",
+     "etiqueta": "CONS · Eq ·  Mide · lla",
+     "valor": 31,
+     "anterior": null,
+     "estado": "nuevo",
+     "consultora": "Equipo Mide",
+     "fila": 2226,
+     "base": "nivel2_indicadores",
+     "file_id": "No aplica (fuente secundaria)",
+     "campo": "2026-10-28→2026-11-06",
+     "unidad": "%",
+     "nota": "Mes por fecha de publicación (criterio de la serie). Completado desde fuente secundaria; evidencia máxima MEDIA. Verificar el mes que enuncia la consultora al cargar el informe.",
+     "secundaria": "FUENTE SECUNDARIA · encuestas-argentinas.com · https://encuestas-argentinas.com/encuestas/ (ficha del 12/11/2026; hilo X: https://x.com/_EncuestAR_/status/2120881979881079077) · consultado 2026-11-27 · fuente original: Equipo Mide",
+     "categoria": "La Libertad Avanza"
+    },
+    {
+     "tipo": "serie",
+     "modulo": "Intención de voto",
+     "etiqueta": "CONS · Eq ·  Mide · pj",
+     "valor": 34,
+     "anterior": null,
+     "estado": "nuevo",
+     "consultora": "Equipo Mide",
+     "fila": 2227,
+     "base": "nivel2_indicadores",
+     "file_id": "No aplica (fuente secundaria)",
+     "campo": "2026-10-28→2026-11-06",
+     "unidad": "%",
+     "nota": "Mes por fecha de publicación (criterio de la serie). Completado desde fuente secundaria; evidencia máxima MEDIA. Verificar el mes que enuncia la consultora al cargar el informe.",
+     "secundaria": "FUENTE SECUNDARIA · encuestas-argentinas.com · https://encuestas-argentinas.com/encuestas/ (ficha del 12/11/2026; hilo X: https://x.com/_EncuestAR_/status/2120881979881079077) · consultado 2026-11-27 · fuente original: Equipo Mide",
+     "categoria": "Peronismo"
+    },
+    {
+     "tipo": "serie",
+     "modulo": "Intención de voto",
      "etiqueta": "OFIOPO · Proyección · oficialismo",
      "valor": 35,
      "anterior": null,
@@ -16266,6 +18178,207 @@
      "modulo": "Intención de voto",
      "etiqueta": "Balotaje de Synopsis oct-26 (Milei 41,9 · Kicillof 41,8) retirado de los gráficos el 18/11: el rótulo declaraba «ficha original pendiente» y, sin identidad acreditada, la Parte XVI.5 lo mantiene como candidato pendiente fuera de gráficos y cálculos. Coherente con la decisión del 11/11 de no cargar la intención de voto de esa misma ola. El registro se conserva en las fuentes complementarias.",
      "necesita": "la ficha técnica de esa ola de Synopsis (campo 12–17/10) o el enlace al informe original"
+    },
+    {
+     "tipo": "pendiente",
+     "modulo": "Intención de voto",
+     "etiqueta": "QSocial (octubre): solo se cargaron el corte de feb-26 informado en el texto y el de octubre; los valores intermedios del gráfico (abr–sep) no se asignaron a su serie.",
+     "necesita": "relevar a mano los cortes intermedios del gráfico del PDF 1Kvc6rs3…"
+    }
+   ],
+   "Jun-26": [
+    {
+     "tipo": "serie",
+     "modulo": "Intención de voto",
+     "etiqueta": "CONS · ESPOP · lla",
+     "valor": 24,
+     "anterior": null,
+     "estado": "nuevo",
+     "consultora": "ESPOP (UdeSA)",
+     "fila": 2216,
+     "base": "nivel2_indicadores",
+     "file_id": "No aplica (fuente secundaria)",
+     "campo": "2026-06-03→2026-06-05",
+     "unidad": "%",
+     "nota": "Mes por fecha de campo (criterio de la celda de octubre). Completado desde fuente secundaria; evidencia máxima MEDIA. Informe primario en Drive sin el voto extraído.",
+     "secundaria": "FUENTE SECUNDARIA · encuestas-argentinas.com · https://encuestas-argentinas.com/encuestas/ (ficha del 10/06/2026; hilo X: https://x.com/_EncuestAR_/status/2064778547890143481) · consultado 2026-11-27 · fuente original: ESPOP (UdeSA)",
+     "categoria": "La Libertad Avanza"
+    },
+    {
+     "tipo": "serie",
+     "modulo": "Intención de voto",
+     "etiqueta": "CONS · ESPOP · pj",
+     "valor": 25,
+     "anterior": null,
+     "estado": "nuevo",
+     "consultora": "ESPOP (UdeSA)",
+     "fila": 2217,
+     "base": "nivel2_indicadores",
+     "file_id": "No aplica (fuente secundaria)",
+     "campo": "2026-06-03→2026-06-05",
+     "unidad": "%",
+     "nota": "Mes por fecha de campo (criterio de la celda de octubre). Completado desde fuente secundaria; evidencia máxima MEDIA. Informe primario en Drive sin el voto extraído.",
+     "secundaria": "FUENTE SECUNDARIA · encuestas-argentinas.com · https://encuestas-argentinas.com/encuestas/ (ficha del 10/06/2026; hilo X: https://x.com/_EncuestAR_/status/2064778547890143481) · consultado 2026-11-27 · fuente original: ESPOP (UdeSA)",
+     "categoria": "Peronismo"
+    }
+   ],
+   "Jul-26": [
+    {
+     "tipo": "serie",
+     "modulo": "Intención de voto",
+     "etiqueta": "CONS · ESPOP · lla",
+     "valor": 24,
+     "anterior": null,
+     "estado": "nuevo",
+     "consultora": "ESPOP (UdeSA)",
+     "fila": 2218,
+     "base": "nivel2_indicadores",
+     "file_id": "No aplica (fuente secundaria)",
+     "campo": "2026-07-03→2026-07-08",
+     "unidad": "%",
+     "nota": "Mes por fecha de campo (criterio de la celda de octubre). Completado desde fuente secundaria; evidencia máxima MEDIA. Informe primario en Drive sin el voto extraído.",
+     "secundaria": "FUENTE SECUNDARIA · encuestas-argentinas.com · https://encuestas-argentinas.com/encuestas/ (ficha del 14/07/2026; hilo X: https://x.com/_EncuestAR_/status/2077066045437665785) · consultado 2026-11-27 · fuente original: ESPOP (UdeSA)",
+     "categoria": "La Libertad Avanza"
+    },
+    {
+     "tipo": "serie",
+     "modulo": "Intención de voto",
+     "etiqueta": "CONS · ESPOP · pj",
+     "valor": 25,
+     "anterior": null,
+     "estado": "nuevo",
+     "consultora": "ESPOP (UdeSA)",
+     "fila": 2219,
+     "base": "nivel2_indicadores",
+     "file_id": "No aplica (fuente secundaria)",
+     "campo": "2026-07-03→2026-07-08",
+     "unidad": "%",
+     "nota": "Mes por fecha de campo (criterio de la celda de octubre). Completado desde fuente secundaria; evidencia máxima MEDIA. Informe primario en Drive sin el voto extraído.",
+     "secundaria": "FUENTE SECUNDARIA · encuestas-argentinas.com · https://encuestas-argentinas.com/encuestas/ (ficha del 14/07/2026; hilo X: https://x.com/_EncuestAR_/status/2077066045437665785) · consultado 2026-11-27 · fuente original: ESPOP (UdeSA)",
+     "categoria": "Peronismo"
+    },
+    {
+     "tipo": "serie",
+     "modulo": "Intención de voto",
+     "etiqueta": "CONS · DC Consultores · lla",
+     "valor": 41.3,
+     "anterior": null,
+     "estado": "nuevo",
+     "consultora": "DC Consultores",
+     "fila": 2228,
+     "base": "nivel2_indicadores",
+     "file_id": "No aplica (fuente secundaria)",
+     "campo": "2026-07-24→2026-07-26",
+     "unidad": "%",
+     "nota": "Mes por fecha de campo (criterio de la celda de octubre). Completado desde fuente secundaria; evidencia máxima MEDIA. Solo LLA: la categoría peronista del agregador no es la de la serie.",
+     "secundaria": "FUENTE SECUNDARIA · encuestas-argentinas.com · https://encuestas-argentinas.com/encuestas/ (ficha del 18/08/2026; hilo X: https://x.com/_EncuestAR_/status/2089872813440049343) · consultado 2026-11-27 · fuente original: DC Consultores",
+     "categoria": "La Libertad Avanza"
+    }
+   ],
+   "Ago-26": [
+    {
+     "tipo": "serie",
+     "modulo": "Intención de voto",
+     "etiqueta": "CONS · ESPOP · lla",
+     "valor": 24,
+     "anterior": null,
+     "estado": "nuevo",
+     "consultora": "ESPOP (UdeSA)",
+     "fila": 2220,
+     "base": "nivel2_indicadores",
+     "file_id": "No aplica (fuente secundaria)",
+     "campo": "2026-08-05→2026-08-11",
+     "unidad": "%",
+     "nota": "Mes por fecha de campo (criterio de la celda de octubre). Completado desde fuente secundaria; evidencia máxima MEDIA. Informe primario en Drive sin el voto extraído.",
+     "secundaria": "FUENTE SECUNDARIA · encuestas-argentinas.com · https://encuestas-argentinas.com/encuestas/ (ficha del 13/08/2026; hilo X: https://x.com/_EncuestAR_/status/2088080252945789170) · consultado 2026-11-27 · fuente original: ESPOP (UdeSA)",
+     "categoria": "La Libertad Avanza"
+    },
+    {
+     "tipo": "serie",
+     "modulo": "Intención de voto",
+     "etiqueta": "CONS · ESPOP · pj",
+     "valor": 26,
+     "anterior": null,
+     "estado": "nuevo",
+     "consultora": "ESPOP (UdeSA)",
+     "fila": 2221,
+     "base": "nivel2_indicadores",
+     "file_id": "No aplica (fuente secundaria)",
+     "campo": "2026-08-05→2026-08-11",
+     "unidad": "%",
+     "nota": "Mes por fecha de campo (criterio de la celda de octubre). Completado desde fuente secundaria; evidencia máxima MEDIA. Informe primario en Drive sin el voto extraído.",
+     "secundaria": "FUENTE SECUNDARIA · encuestas-argentinas.com · https://encuestas-argentinas.com/encuestas/ (ficha del 13/08/2026; hilo X: https://x.com/_EncuestAR_/status/2088080252945789170) · consultado 2026-11-27 · fuente original: ESPOP (UdeSA)",
+     "categoria": "Peronismo"
+    },
+    {
+     "tipo": "serie",
+     "modulo": "Intención de voto",
+     "etiqueta": "CONS · DC Consultores · lla",
+     "valor": 43.7,
+     "anterior": null,
+     "estado": "nuevo",
+     "consultora": "DC Consultores",
+     "fila": 2229,
+     "base": "nivel2_indicadores",
+     "file_id": "No aplica (fuente secundaria)",
+     "campo": "2026-08-28→2026-08-31",
+     "unidad": "%",
+     "nota": "Mes por fecha de campo (criterio de la celda de octubre). Completado desde fuente secundaria; evidencia máxima MEDIA. Solo LLA: la categoría peronista del agregador no es la de la serie.",
+     "secundaria": "FUENTE SECUNDARIA · encuestas-argentinas.com · https://encuestas-argentinas.com/encuestas/ (ficha del 10/09/2026; hilo X: https://x.com/_EncuestAR_/status/2098085048687996999) · consultado 2026-11-27 · fuente original: DC Consultores",
+     "categoria": "La Libertad Avanza"
+    }
+   ],
+   "Sep-26": [
+    {
+     "tipo": "serie",
+     "modulo": "Intención de voto",
+     "etiqueta": "CONS · ESPOP · lla",
+     "valor": 24,
+     "anterior": null,
+     "estado": "nuevo",
+     "consultora": "ESPOP (UdeSA)",
+     "fila": 2222,
+     "base": "nivel2_indicadores",
+     "file_id": "No aplica (fuente secundaria)",
+     "campo": "2026-09-03→2026-09-09",
+     "unidad": "%",
+     "nota": "Mes por fecha de campo (criterio de la celda de octubre). Completado desde fuente secundaria; evidencia máxima MEDIA. Informe primario en Drive sin el voto extraído.",
+     "secundaria": "FUENTE SECUNDARIA · encuestas-argentinas.com · https://encuestas-argentinas.com/encuestas/ (ficha del 13/09/2026; hilo X: https://x.com/_EncuestAR_/status/2099311055558131863) · consultado 2026-11-27 · fuente original: ESPOP (UdeSA)",
+     "categoria": "La Libertad Avanza"
+    },
+    {
+     "tipo": "serie",
+     "modulo": "Intención de voto",
+     "etiqueta": "CONS · ESPOP · pj",
+     "valor": 23,
+     "anterior": null,
+     "estado": "nuevo",
+     "consultora": "ESPOP (UdeSA)",
+     "fila": 2223,
+     "base": "nivel2_indicadores",
+     "file_id": "No aplica (fuente secundaria)",
+     "campo": "2026-09-03→2026-09-09",
+     "unidad": "%",
+     "nota": "Mes por fecha de campo (criterio de la celda de octubre). Completado desde fuente secundaria; evidencia máxima MEDIA. Informe primario en Drive sin el voto extraído.",
+     "secundaria": "FUENTE SECUNDARIA · encuestas-argentinas.com · https://encuestas-argentinas.com/encuestas/ (ficha del 13/09/2026; hilo X: https://x.com/_EncuestAR_/status/2099311055558131863) · consultado 2026-11-27 · fuente original: ESPOP (UdeSA)",
+     "categoria": "Peronismo"
+    },
+    {
+     "tipo": "serie",
+     "modulo": "Intención de voto",
+     "etiqueta": "CONS · DC Consultores · lla",
+     "valor": 40.2,
+     "anterior": null,
+     "estado": "nuevo",
+     "consultora": "DC Consultores",
+     "fila": 2230,
+     "base": "nivel2_indicadores",
+     "file_id": "No aplica (fuente secundaria)",
+     "campo": "2026-09-26→2026-09-29",
+     "unidad": "%",
+     "nota": "Mes por fecha de campo (criterio de la celda de octubre). Completado desde fuente secundaria; evidencia máxima MEDIA. Solo LLA: la categoría peronista del agregador no es la de la serie.",
+     "secundaria": "FUENTE SECUNDARIA · encuestas-argentinas.com · https://encuestas-argentinas.com/encuestas/ (ficha del 03/10/2026; hilo X: https://x.com/_EncuestAR_/status/2106382609651577156) · consultado 2026-11-27 · fuente original: DC Consultores",
+     "categoria": "La Libertad Avanza"
     }
    ]
   },
@@ -16397,8 +18510,8 @@
     {
      "tipo": "pendiente",
      "modulo": "Agenda pública",
-     "etiqueta": "Sin mediciones nacionales con fila en nivel 2.",
-     "necesita": "—"
+     "etiqueta": "Sin ranking nacional con fila en nivel 2 en el Monitor. Pulso Research (pregunta abierta, 22 categorías, N2 2100–2121) quedó cargado en la base; Management & Fit solo tiene legibles desocupación 21,9 y corrupción 18,1.",
+     "necesita": "relevar a mano el ranking completo de principal problema de M&F (PDF 1cmuEFkd…, pesa más de 10 MB y no se puede bajar por el conector)"
     }
    ]
   },
@@ -16443,6 +18556,18 @@
      "modulo": "Semáforo",
      "etiqueta": "PoliTech Río Negro (voto provincial jul-26: LLA 25,1 · peronismo 22,2 · JSRN 21,5) retirado del Radar el 18/11. Venía de baribache3000.com.ar, que no es ninguno de los dos sitios autorizados por la Parte XVI.3, y además abría una serie provincial nueva, que la Parte XVI.2 no permite.",
      "necesita": "el informe original de PoliTech sobre Río Negro, para cargarlo como fuente primaria"
+    },
+    {
+     "tipo": "pendiente",
+     "modulo": "Territorio",
+     "etiqueta": "DC CABA nov-26: presupuesto «salud y educación primero» figura en 28,4% en la presentación y en 31,4% en el informe analítico (submuestra de ~70 casos, ±11,7 pp). Ambos valores están en la base; no se usan en el Monitor.",
+     "necesita": "base de campo de DC Consultores para resolver la discrepancia"
+    },
+    {
+     "tipo": "pendiente",
+     "modulo": "Territorio",
+     "etiqueta": "Management & Fit nov-26: desconfianza cargada (60,1%); falta el resto del ranking de principal problema por celdas ambiguas. El corte de PBA (aprobación Milei 35,8 · Kicillof 37,4) está en la base pero no en el Monitor.",
+     "necesita": "relevar a mano el ranking de principal problema del PDF 1cmuEFkd…"
     }
    ]
   }
@@ -16572,11 +18697,12 @@
    "seccion": "Gestión nacional",
    "Oct-26": {
     "estado": "parcial",
-    "n_fuentes": 10,
+    "n_fuentes": 11,
     "fuentes": [
      "Analogías",
      "AtlasIntel",
      "CELAG",
+     "ESPOP (UdeSA)",
      "Management & Fit",
      "Proyección",
      "Pulso Research",
@@ -16601,7 +18727,9 @@
      "NI:1239",
      "NI:1243",
      "NI:1246",
-     "NI:1576"
+     "NI:1576",
+     "NI:1722",
+     "NI:1723"
     ],
     "pendiente": [
      "Proyección octubre: solo la valoración negativa (52,4%) está en N2. Necesita: cargar la positiva del ICP de octubre"
@@ -16609,10 +18737,12 @@
    },
    "Nov-26": {
     "estado": "parcial",
-    "n_fuentes": 3,
+    "n_fuentes": 5,
     "fuentes": [
      "Analogías Investigación & Estrategia",
+     "Management & Fit",
      "Proyección",
+     "Pulso Research",
      "QMonitor"
     ],
     "filas": [
@@ -16621,10 +18751,15 @@
      "NI:1460",
      "NI:1461",
      "NI:1791",
-     "NI:1792"
+     "NI:1792",
+     "NI:1803",
+     "NI:1804",
+     "NI:1948",
+     "NI:1949"
     ],
     "pendiente": [
-     "Management & Fit sep-26: el registro de encuestar no informa el universo. La pregunta textual y la técnica quedaron acreditadas el 17/11 («Más allá de tu voto a presidente, ¿aprobás o desaprobás la gestión de Javier Milei en el gobierno nacional?»; presencial + online + CATI). Necesita: informe original de Management & Fit con el universo"
+     "Management & Fit sep-26: el registro de encuestar no informa el universo. La pregunta textual y la técnica quedaron acreditadas el 17/11 («Más allá de tu voto a presidente, ¿aprobás o desaprobás la gestión de Javier Milei en el gobierno nacional?»; presencial + online + CATI). Necesita: informe original de Management & Fit con el universo",
+     "Pulso Research nov-26 trae saltos grandes frente a octubre (aprobación 28,9 → 34,0; imagen positiva de Milei 32,4 → 38,6). La base los marca «verificar»: no se confirmó que pregunta y escala de octubre sean idénticas. Necesita: contrastar el cuestionario de Brújula Social de octubre y noviembre"
     ]
    },
    "bases": [
@@ -16635,11 +18770,12 @@
    "seccion": "Imagen Milei",
    "Oct-26": {
     "estado": "parcial",
-    "n_fuentes": 9,
+    "n_fuentes": 10,
     "fuentes": [
      "Analogías",
      "CELAG",
      "DC Consultores",
+     "ESPOP (UdeSA)",
      "Giacobbe",
      "Proyección",
      "Pulso Research",
@@ -16665,7 +18801,9 @@
      "NI:1364",
      "NI:1550",
      "NI:1557",
-     "NI:1573"
+     "NI:1573",
+     "NI:1728",
+     "NI:1729"
     ],
     "pendiente": [
      "CB Global Data octubre (ranking LATAM): valor en gráfico, no extraíble. Necesita: relevar a mano (N2 fila 1177)"
@@ -16673,10 +18811,12 @@
    },
    "Nov-26": {
     "estado": "parcial",
-    "n_fuentes": 3,
+    "n_fuentes": 5,
     "fuentes": [
      "Analogías Investigación & Estrategia",
+     "Management & Fit",
      "Proyección",
+     "Pulso Research",
      "QMonitor"
     ],
     "filas": [
@@ -16685,11 +18825,16 @@
      "NI:1473",
      "NI:1474",
      "NI:1789",
-     "NI:1790"
+     "NI:1790",
+     "NI:1835",
+     "NI:1836",
+     "NI:1950",
+     "NI:1951"
     ],
     "pendiente": [
      "Vozna: imagen positiva (may 36,3 · jul 32,1 · sep 31,3), negativa (sep 63,5) y aprobación (jul 36,3 · sep 32,6) seguían escritas dentro del código de index.html, fuera de las bases. Retiradas de los gráficos. Necesita: informes de Vozna de mayo, julio y septiembre de 2026 para cargarlos en Nivel 1 y Nivel 2",
-     "Imagen positiva de Milei: sin huecos. Los 11 meses que tenían negativa sin su contracara se cerraron el 18/11: Giacobbe jul y ago, Proyección sep, D'Alessio jun y jul, Zentrix may–sep desde informes primarios de Drive, y Zuban jul por fuente secundaria, único caso sin informe primario."
+     "Imagen positiva de Milei: sin huecos. Los 11 meses que tenían negativa sin su contracara se cerraron el 18/11: Giacobbe jul y ago, Proyección sep, D'Alessio jun y jul, Zentrix may–sep desde informes primarios de Drive, y Zuban jul por fuente secundaria, único caso sin informe primario.",
+     "Vozna nacional nov-26 (campo 5–11/11, n=2.195): aprobación 36% (N2 fila 1943). Sin serie comparable: septiembre fue muestra de PBA. Los cuatro segmentos del electorado son perfiles estadísticos, no una pregunta, y no entran a series."
     ]
    },
    "bases": [
@@ -16801,11 +18946,14 @@
    },
    "Nov-26": {
     "estado": "parcial",
-    "n_fuentes": 4,
+    "n_fuentes": 7,
     "fuentes": [
      "Analogías Investigación & Estrategia",
+     "ESPOP (UdeSA)",
+     "Equipo Mide",
      "PoliTech",
      "Proyección",
+     "Pulso Research",
      "QMonitor"
     ],
     "filas": [
@@ -16842,13 +18990,20 @@
      "NI:1621",
      "NI:1622",
      "NI:1800",
-     "NI:1801"
+     "NI:1801",
+     "NI:1989",
+     "NI:1990",
+     "NI:2224",
+     "NI:2225",
+     "NI:2226",
+     "NI:2227"
     ],
     "pendiente": [
      "QMonitor noviembre: balotaje y pisos/techos no relevados todavía. Necesita: lectura de las pp. 47–55 del PDF",
      "Equipo Mide «oficialismo vs. oposición» 42/34/12/12 (N2 1569–1572): excluido de gráficos, rangos, contadores y conclusiones. Aplicada la definición acordada (oficialismo = LLA; oposición = todo lo que no es LLA; no votaría, blanco e indecisos aparte), la lámina de voto por espacio del 18–25/09 da 33 / 48 / 6 / 13 y no 34 / 42 / 12 / 12. El conflicto queda registrado en N2 sin sobrescribir. Necesita: la lámina del capítulo electoral del PDF 148N9Me0 con la pregunta de oficialismo vs. oposición y su base de cálculo",
      "Eje «oficialismo vs. oposición» no computable: solo Proyección (nov-26) tiene en la base todas las categorías de voto por espacio. Para el resto falta cargar las categorías distintas de LLA y PJ, y completarlas por diferencia no está permitido. Necesita: las categorías completas de voto por espacio de cada consultora",
-     "Balotaje de Synopsis oct-26 (Milei 41,9 · Kicillof 41,8) retirado de los gráficos el 18/11: el rótulo declaraba «ficha original pendiente» y, sin identidad acreditada, la Parte XVI.5 lo mantiene como candidato pendiente fuera de gráficos y cálculos. Coherente con la decisión del 11/11 de no cargar la intención de voto de esa misma ola. El registro se conserva en las fuentes complementarias. Necesita: la ficha técnica de esa ola de Synopsis (campo 12–17/10) o el enlace al informe original"
+     "Balotaje de Synopsis oct-26 (Milei 41,9 · Kicillof 41,8) retirado de los gráficos el 18/11: el rótulo declaraba «ficha original pendiente» y, sin identidad acreditada, la Parte XVI.5 lo mantiene como candidato pendiente fuera de gráficos y cálculos. Coherente con la decisión del 11/11 de no cargar la intención de voto de esa misma ola. El registro se conserva en las fuentes complementarias. Necesita: la ficha técnica de esa ola de Synopsis (campo 12–17/10) o el enlace al informe original",
+     "QSocial (octubre): solo se cargaron el corte de feb-26 informado en el texto y el de octubre; los valores intermedios del gráfico (abr–sep) no se asignaron a su serie. Necesita: relevar a mano los cortes intermedios del gráfico del PDF 1Kvc6rs3…"
     ]
    },
    "bases": [
@@ -17033,7 +19188,7 @@
      "NI:1472"
     ],
     "pendiente": [
-     "Sin mediciones nacionales con fila en nivel 2."
+     "Sin ranking nacional con fila en nivel 2 en el Monitor. Pulso Research (pregunta abierta, 22 categorías, N2 2100–2121) quedó cargado en la base; Management & Fit solo tiene legibles desocupación 21,9 y corrupción 18,1. Necesita: relevar a mano el ranking completo de principal problema de M&F (PDF 1cmuEFkd…, pesa más de 10 MB y no se puede bajar por el conector)"
     ]
    },
    "bases": [
@@ -17196,7 +19351,9 @@
      "NI:1721"
     ],
     "pendiente": [
-     "CB Global Data GBA (24 intendentes) y CB Global federal (gobernadores, intendentes y dirigentes nacionales por provincia, campo 8–13/11). Del federal faltan por relevar a mano los valores de noviembre de 18 gobernadores y 18 intendentes, que están solo en gráficos. Necesita: lectura de los gráficos de las pp. de desglose del PDF 1vxmhzHN… (N1 fila 386)"
+     "CB Global Data GBA (24 intendentes) y CB Global federal (gobernadores, intendentes y dirigentes nacionales por provincia, campo 8–13/11). Del federal faltan por relevar a mano los valores de noviembre de 18 gobernadores y 18 intendentes, que están solo en gráficos. Necesita: lectura de los gráficos de las pp. de desglose del PDF 1vxmhzHN… (N1 fila 386)",
+     "DC CABA nov-26: presupuesto «salud y educación primero» figura en 28,4% en la presentación y en 31,4% en el informe analítico (submuestra de ~70 casos, ±11,7 pp). Ambos valores están en la base; no se usan en el Monitor. Necesita: base de campo de DC Consultores para resolver la discrepancia",
+     "Management & Fit nov-26: desconfianza cargada (60,1%); falta el resto del ranking de principal problema por celdas ambiguas. El corte de PBA (aprobación Milei 35,8 · Kicillof 37,4) está en la base pero no en el Monitor. Necesita: relevar a mano el ranking de principal problema del PDF 1cmuEFkd…"
     ]
    },
    "bases": [
@@ -17244,9 +19401,9 @@
  ],
  "META": {
   "corte": {
-   "fecha": "2026-11-26",
+   "fecha": "2026-11-27",
    "mes_parcial": "Nov-26",
-   "etiqueta": "Noviembre 2026 · corte al 26/11/2026",
+   "etiqueta": "Noviembre 2026 · corte al 27/11/2026",
    "base_publicada": "b43fcb8 (index.html publicado en ivannavt.github.io/monitor-ar)"
   },
   "generado_por": "scripts/build_radar_data.py",
@@ -17258,16 +19415,25 @@
    "data/bases/radar_fuentes_complementarias.tsv",
    "data/radar_mapping.json"
   ],
-  "valores_trazados": 532,
-  "nuevos": 181,
+  "valores_trazados": 598,
+  "nuevos": 247,
   "corregidos": 15,
   "retirados": 0,
   "puntuales": 0,
   "en_series_de_evolucion": 290,
   "fuente_secundaria": [
-   "FUENTE SECUNDARIA · Perfil reproducido por UTDT · 19/11/2026",
+   "FUENTE SECUNDARIA · Perfil (reproduce la nota de prensa de UTDT, publicada 19/11/2026) · https://www.utdt.edu/ver_nota_prensa.php?id_item_menu=6&id_nota_prensa=23683 · consultado 2026-11-27 · fuente original: UTDT, Índice de Confianza del Consumidor (campo 3–17/11, Poliarquía)",
+   "FUENTE SECUNDARIA · encuestas-argentinas.com · https://encuestas-argentinas.com/encuestas/ (ficha del 03/10/2026; hilo X: https://x.com/_EncuestAR_/status/2106382609651577156) · consultado 2026-11-27 · fuente original: DC Consultores",
    "FUENTE SECUNDARIA · encuestas-argentinas.com · https://encuestas-argentinas.com/encuestas/ (ficha del 04/08/2026, registro sin URL propia en el listado) · consultado 2026-11-18 · fuente original: Zuban Córdoba",
    "FUENTE SECUNDARIA · encuestas-argentinas.com · https://encuestas-argentinas.com/encuestas/ (ficha del 04/08/2026, registro sin URL propia; hilo X: https://x.com/_EncuestAR_/status/2084520359408148892) · consultado 2026-11-18 · fuente original: Zuban Córdoba",
+   "FUENTE SECUNDARIA · encuestas-argentinas.com · https://encuestas-argentinas.com/encuestas/ (ficha del 10/06/2026; hilo X: https://x.com/_EncuestAR_/status/2064778547890143481) · consultado 2026-11-27 · fuente original: ESPOP (UdeSA)",
+   "FUENTE SECUNDARIA · encuestas-argentinas.com · https://encuestas-argentinas.com/encuestas/ (ficha del 10/09/2026; hilo X: https://x.com/_EncuestAR_/status/2098085048687996999) · consultado 2026-11-27 · fuente original: DC Consultores",
+   "FUENTE SECUNDARIA · encuestas-argentinas.com · https://encuestas-argentinas.com/encuestas/ (ficha del 12/11/2026; hilo X: https://x.com/_EncuestAR_/status/2120881979881079077) · consultado 2026-11-27 · fuente original: Equipo Mide",
+   "FUENTE SECUNDARIA · encuestas-argentinas.com · https://encuestas-argentinas.com/encuestas/ (ficha del 13/08/2026; hilo X: https://x.com/_EncuestAR_/status/2088080252945789170) · consultado 2026-11-27 · fuente original: ESPOP (UdeSA)",
+   "FUENTE SECUNDARIA · encuestas-argentinas.com · https://encuestas-argentinas.com/encuestas/ (ficha del 13/09/2026; hilo X: https://x.com/_EncuestAR_/status/2099311055558131863) · consultado 2026-11-27 · fuente original: ESPOP (UdeSA)",
+   "FUENTE SECUNDARIA · encuestas-argentinas.com · https://encuestas-argentinas.com/encuestas/ (ficha del 14/07/2026; hilo X: https://x.com/_EncuestAR_/status/2077066045437665785) · consultado 2026-11-27 · fuente original: ESPOP (UdeSA)",
+   "FUENTE SECUNDARIA · encuestas-argentinas.com · https://encuestas-argentinas.com/encuestas/ (ficha del 18/08/2026; hilo X: https://x.com/_EncuestAR_/status/2089872813440049343) · consultado 2026-11-27 · fuente original: DC Consultores",
+   "FUENTE SECUNDARIA · encuestas-argentinas.com · https://encuestas-argentinas.com/encuestas/ (ficha del 20/11/2026; hilo X: https://x.com/_EncuestAR_/status/2123810422591484376) · consultado 2026-11-27 · fuente original: ESPOP (UdeSA)",
    "FUENTE SECUNDARIA · encuestas-argentinas.com · https://encuestas-argentinas.com/encuestas/ (registro sin URL propia; hilo X: https://x.com/_EncuestAR_/status/2109835471689777618) · consultado 2026-11-17 · fuente original: Management & Fit",
    "FUENTE SECUNDARIA · monitorargy.com · https://monitorargy.com/serie/ipc_mensual · consultado 2026-11-11 · fuente original: INDEC"
   ]

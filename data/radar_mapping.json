@@ -1,9 +1,9 @@
 {
   "_descripcion": "Especificación de qué fila de las bases alimenta cada celda del Radar. No contiene valores: build_radar_data.py los lee de data/bases/*.tsv (extractos de base_maestra_2026 y nivel2_indicadores). Las filas son números de fila de Google Sheets.",
   "corte": {
-    "fecha": "2026-11-26",
+    "fecha": "2026-11-27",
     "mes_parcial": "Nov-26",
-    "etiqueta": "Noviembre 2026 · corte al 26/11/2026",
+    "etiqueta": "Noviembre 2026 · corte al 27/11/2026",
     "base_publicada": "b43fcb8 (index.html publicado en ivannavt.github.io/monitor-ar)"
   },
   "extender_ejes": {
@@ -175,6 +175,41 @@
       "campos": [
         "lla",
         "pj"
+      ]
+    },
+    "IMG.Management & Fit": {
+      "color": "var(--c4)",
+      "campos": [
+        "pos",
+        "neg"
+      ]
+    },
+    "CONS.Pulso Research": {
+      "color": "var(--c4)",
+      "campos": [
+        "lla",
+        "pj"
+      ]
+    },
+    "IMG.RDT": {
+      "color": "var(--fg-dim)",
+      "campos": [
+        "pos",
+        "neg"
+      ]
+    },
+    "GESTION.ESPOP": {
+      "color": "var(--c7)",
+      "campos": [
+        "aprob",
+        "desaprob"
+      ]
+    },
+    "IMG.ESPOP": {
+      "color": "var(--c7)",
+      "campos": [
+        "pos",
+        "neg"
       ]
     }
   },
@@ -1403,6 +1438,483 @@
       "ruta": "ICC_GBA_14",
       "eje": "MESI",
       "fuente_complementaria": "ICC_CIF_GBA_NOV26"
+    },
+    {
+      "modulo": "Gestión nacional",
+      "ruta": "GESTION.M&F.aprob",
+      "eje": "MG",
+      "fila": 1803,
+      "nota": "Noviembre: campo 12–17/11, informe de Management & Fit (Drive)."
+    },
+    {
+      "modulo": "Gestión nacional",
+      "ruta": "GESTION.M&F.desaprob",
+      "eje": "MG",
+      "fila": 1804,
+      "nota": "Noviembre: campo 12–17/11, informe de Management & Fit (Drive)."
+    },
+    {
+      "modulo": "Gestión nacional",
+      "ruta": "GESTION.Pulso Research.aprob",
+      "eje": "MG",
+      "fila": 1948,
+      "nota": "Brújula Social de noviembre, campo 7–16/11 (n=1.552). Salto de +5,1 pp contra octubre marcado «verificar» en la base."
+    },
+    {
+      "modulo": "Gestión nacional",
+      "ruta": "GESTION.Pulso Research.desaprob",
+      "eje": "MG",
+      "fila": 1949,
+      "nota": "Brújula Social de noviembre: mal + muy mal. Sin corte de octubre cargado."
+    },
+    {
+      "modulo": "Imagen Milei",
+      "ruta": "IMG.Pulso Research.pos",
+      "eje": "MI",
+      "fila": 1950,
+      "nota": "Brújula Social de noviembre. Salto de +6,2 pp contra octubre marcado «verificar» en la base."
+    },
+    {
+      "modulo": "Imagen Milei",
+      "ruta": "IMG.Pulso Research.neg",
+      "eje": "MI",
+      "fila": 1951,
+      "nota": "Brújula Social de noviembre."
+    },
+    {
+      "modulo": "Imagen Milei",
+      "ruta": "IMG.Management & Fit.pos",
+      "eje": "MI",
+      "fila": 1835,
+      "nota": "Management & Fit nov-26 (muy buena + buena); serie propia de un solo corte."
+    },
+    {
+      "modulo": "Imagen Milei",
+      "ruta": "IMG.Management & Fit.neg",
+      "eje": "MI",
+      "fila": 1836,
+      "nota": "Management & Fit nov-26 (mala + muy mala); serie propia de un solo corte."
+    },
+    {
+      "modulo": "Intención de voto",
+      "ruta": "CONS.Pulso Research.lla",
+      "eje": "MV",
+      "fila": 1989,
+      "nota": "Voto por espacio sin proyección de indecisos (con proyección: 32,8%, fila 1995 de N2). Medición única."
+    },
+    {
+      "modulo": "Intención de voto",
+      "ruta": "CONS.Pulso Research.pj",
+      "eje": "MV",
+      "fila": 1990,
+      "nota": "Peronismo kirchnerista, sin proyección de indecisos. Medición única; no se suma con peronismo federal."
+    },
+    {
+      "modulo": "Imagen Milei",
+      "ruta": "IMG.Giacobbe.pos",
+      "eje": "MI",
+      "fila": 2152,
+      "nota": "Completa el hueco de septiembre. Informe Público de Giacobbe de septiembre (PDF Drive 1QsRUsN7, p. 2), campo 30/09–05/10/2026: positiva 36,0 / regular 6,9 / negativa 56,0."
+    },
+    {
+      "modulo": "Imagen Milei",
+      "ruta": "IMG.Giacobbe.neg",
+      "eje": "MI",
+      "fila": 2154,
+      "nota": "Informe Público de Giacobbe de septiembre (PDF Drive 1QsRUsN7, p. 2): 56,0 − 55,7 (agosto) = +0,3 p.p."
+    },
+    {
+      "modulo": "Gestión nacional",
+      "ruta": "GESTION.Proyección.desaprob",
+      "eje": "MG",
+      "fila": 2207,
+      "nota": "malo + muy malo (ICP); Completa el hueco de la serie desde Nivel 2 (fuente primaria del Drive; cargado 27/11/2026)."
+    },
+    {
+      "modulo": "Gestión nacional",
+      "ruta": "GESTION.Proyección.desaprob",
+      "eje": "MG",
+      "fila": 2208,
+      "nota": "malo + muy malo (ICP); Completa el hueco de la serie desde Nivel 2 (fuente primaria del Drive; cargado 27/11/2026)."
+    },
+    {
+      "modulo": "Gestión nacional",
+      "ruta": "GESTION.Proyección.desaprob",
+      "eje": "MG",
+      "fila": 2209,
+      "nota": "malo + muy malo (ICP); Completa el hueco de la serie desde Nivel 2 (fuente primaria del Drive; cargado 27/11/2026)."
+    },
+    {
+      "modulo": "Gestión nacional",
+      "ruta": "GESTION.Proyección.desaprob",
+      "eje": "MG",
+      "fila": 2210,
+      "nota": "malo + muy malo (ICP); Completa el hueco de la serie desde Nivel 2 (fuente primaria del Drive; cargado 27/11/2026)."
+    },
+    {
+      "modulo": "Gestión nacional",
+      "ruta": "GESTION.Proyección.desaprob",
+      "eje": "MG",
+      "fila": 2211,
+      "nota": "malo + muy malo (ICP); Completa el hueco de la serie desde Nivel 2 (fuente primaria del Drive; cargado 27/11/2026)."
+    },
+    {
+      "modulo": "Imagen Milei",
+      "ruta": "IMG.Proyección.pos",
+      "eje": "MI",
+      "fila": 2212,
+      "nota": "Completa el hueco de la serie desde Nivel 2 (fuente primaria del Drive; cargado 27/11/2026)."
+    },
+    {
+      "modulo": "Imagen Milei",
+      "ruta": "IMG.Proyección.neg",
+      "eje": "MI",
+      "fila": 2213,
+      "nota": "Completa el hueco de la serie desde Nivel 2 (fuente primaria del Drive; cargado 27/11/2026)."
+    },
+    {
+      "modulo": "Imagen Milei",
+      "ruta": "IMG.Proyección.pos",
+      "eje": "MI",
+      "fila": 2214,
+      "nota": "Completa el hueco de la serie desde Nivel 2 (fuente primaria del Drive; cargado 27/11/2026)."
+    },
+    {
+      "modulo": "Imagen Milei",
+      "ruta": "IMG.Proyección.neg",
+      "eje": "MI",
+      "fila": 2215,
+      "nota": "Completa el hueco de la serie desde Nivel 2 (fuente primaria del Drive; cargado 27/11/2026)."
+    },
+    {
+      "modulo": "Intención de voto",
+      "ruta": "CONS.ESPOP.lla",
+      "eje": "MV",
+      "fila": 2216,
+      "nota": "Mes por fecha de campo (criterio de la celda de octubre). Completado desde fuente secundaria; evidencia máxima MEDIA. Informe primario en Drive sin el voto extraído.",
+      "rotulo": "FUENTE SECUNDARIA · encuestas-argentinas.com · https://encuestas-argentinas.com/encuestas/ (ficha del 10/06/2026; hilo X: https://x.com/_EncuestAR_/status/2064778547890143481) · consultado 2026-11-27 · fuente original: ESPOP (UdeSA)"
+    },
+    {
+      "modulo": "Intención de voto",
+      "ruta": "CONS.ESPOP.pj",
+      "eje": "MV",
+      "fila": 2217,
+      "nota": "Mes por fecha de campo (criterio de la celda de octubre). Completado desde fuente secundaria; evidencia máxima MEDIA. Informe primario en Drive sin el voto extraído.",
+      "rotulo": "FUENTE SECUNDARIA · encuestas-argentinas.com · https://encuestas-argentinas.com/encuestas/ (ficha del 10/06/2026; hilo X: https://x.com/_EncuestAR_/status/2064778547890143481) · consultado 2026-11-27 · fuente original: ESPOP (UdeSA)"
+    },
+    {
+      "modulo": "Intención de voto",
+      "ruta": "CONS.ESPOP.lla",
+      "eje": "MV",
+      "fila": 2218,
+      "nota": "Mes por fecha de campo (criterio de la celda de octubre). Completado desde fuente secundaria; evidencia máxima MEDIA. Informe primario en Drive sin el voto extraído.",
+      "rotulo": "FUENTE SECUNDARIA · encuestas-argentinas.com · https://encuestas-argentinas.com/encuestas/ (ficha del 14/07/2026; hilo X: https://x.com/_EncuestAR_/status/2077066045437665785) · consultado 2026-11-27 · fuente original: ESPOP (UdeSA)"
+    },
+    {
+      "modulo": "Intención de voto",
+      "ruta": "CONS.ESPOP.pj",
+      "eje": "MV",
+      "fila": 2219,
+      "nota": "Mes por fecha de campo (criterio de la celda de octubre). Completado desde fuente secundaria; evidencia máxima MEDIA. Informe primario en Drive sin el voto extraído.",
+      "rotulo": "FUENTE SECUNDARIA · encuestas-argentinas.com · https://encuestas-argentinas.com/encuestas/ (ficha del 14/07/2026; hilo X: https://x.com/_EncuestAR_/status/2077066045437665785) · consultado 2026-11-27 · fuente original: ESPOP (UdeSA)"
+    },
+    {
+      "modulo": "Intención de voto",
+      "ruta": "CONS.ESPOP.lla",
+      "eje": "MV",
+      "fila": 2220,
+      "nota": "Mes por fecha de campo (criterio de la celda de octubre). Completado desde fuente secundaria; evidencia máxima MEDIA. Informe primario en Drive sin el voto extraído.",
+      "rotulo": "FUENTE SECUNDARIA · encuestas-argentinas.com · https://encuestas-argentinas.com/encuestas/ (ficha del 13/08/2026; hilo X: https://x.com/_EncuestAR_/status/2088080252945789170) · consultado 2026-11-27 · fuente original: ESPOP (UdeSA)"
+    },
+    {
+      "modulo": "Intención de voto",
+      "ruta": "CONS.ESPOP.pj",
+      "eje": "MV",
+      "fila": 2221,
+      "nota": "Mes por fecha de campo (criterio de la celda de octubre). Completado desde fuente secundaria; evidencia máxima MEDIA. Informe primario en Drive sin el voto extraído.",
+      "rotulo": "FUENTE SECUNDARIA · encuestas-argentinas.com · https://encuestas-argentinas.com/encuestas/ (ficha del 13/08/2026; hilo X: https://x.com/_EncuestAR_/status/2088080252945789170) · consultado 2026-11-27 · fuente original: ESPOP (UdeSA)"
+    },
+    {
+      "modulo": "Intención de voto",
+      "ruta": "CONS.ESPOP.lla",
+      "eje": "MV",
+      "fila": 2222,
+      "nota": "Mes por fecha de campo (criterio de la celda de octubre). Completado desde fuente secundaria; evidencia máxima MEDIA. Informe primario en Drive sin el voto extraído.",
+      "rotulo": "FUENTE SECUNDARIA · encuestas-argentinas.com · https://encuestas-argentinas.com/encuestas/ (ficha del 13/09/2026; hilo X: https://x.com/_EncuestAR_/status/2099311055558131863) · consultado 2026-11-27 · fuente original: ESPOP (UdeSA)"
+    },
+    {
+      "modulo": "Intención de voto",
+      "ruta": "CONS.ESPOP.pj",
+      "eje": "MV",
+      "fila": 2223,
+      "nota": "Mes por fecha de campo (criterio de la celda de octubre). Completado desde fuente secundaria; evidencia máxima MEDIA. Informe primario en Drive sin el voto extraído.",
+      "rotulo": "FUENTE SECUNDARIA · encuestas-argentinas.com · https://encuestas-argentinas.com/encuestas/ (ficha del 13/09/2026; hilo X: https://x.com/_EncuestAR_/status/2099311055558131863) · consultado 2026-11-27 · fuente original: ESPOP (UdeSA)"
+    },
+    {
+      "modulo": "Intención de voto",
+      "ruta": "CONS.ESPOP.lla",
+      "eje": "MV",
+      "fila": 2224,
+      "nota": "Mes por fecha de campo (criterio de la celda de octubre). Completado desde fuente secundaria; evidencia máxima MEDIA. Sin informe primario de noviembre en Drive.",
+      "rotulo": "FUENTE SECUNDARIA · encuestas-argentinas.com · https://encuestas-argentinas.com/encuestas/ (ficha del 20/11/2026; hilo X: https://x.com/_EncuestAR_/status/2123810422591484376) · consultado 2026-11-27 · fuente original: ESPOP (UdeSA)"
+    },
+    {
+      "modulo": "Intención de voto",
+      "ruta": "CONS.ESPOP.pj",
+      "eje": "MV",
+      "fila": 2225,
+      "nota": "Mes por fecha de campo (criterio de la celda de octubre). Completado desde fuente secundaria; evidencia máxima MEDIA. Sin informe primario de noviembre en Drive.",
+      "rotulo": "FUENTE SECUNDARIA · encuestas-argentinas.com · https://encuestas-argentinas.com/encuestas/ (ficha del 20/11/2026; hilo X: https://x.com/_EncuestAR_/status/2123810422591484376) · consultado 2026-11-27 · fuente original: ESPOP (UdeSA)"
+    },
+    {
+      "modulo": "Intención de voto",
+      "ruta": "CONS.Eq. Mide.lla",
+      "eje": "MV",
+      "fila": 2226,
+      "nota": "Mes por fecha de publicación (criterio de la serie). Completado desde fuente secundaria; evidencia máxima MEDIA. Verificar el mes que enuncia la consultora al cargar el informe.",
+      "rotulo": "FUENTE SECUNDARIA · encuestas-argentinas.com · https://encuestas-argentinas.com/encuestas/ (ficha del 12/11/2026; hilo X: https://x.com/_EncuestAR_/status/2120881979881079077) · consultado 2026-11-27 · fuente original: Equipo Mide"
+    },
+    {
+      "modulo": "Intención de voto",
+      "ruta": "CONS.Eq. Mide.pj",
+      "eje": "MV",
+      "fila": 2227,
+      "nota": "Mes por fecha de publicación (criterio de la serie). Completado desde fuente secundaria; evidencia máxima MEDIA. Verificar el mes que enuncia la consultora al cargar el informe.",
+      "rotulo": "FUENTE SECUNDARIA · encuestas-argentinas.com · https://encuestas-argentinas.com/encuestas/ (ficha del 12/11/2026; hilo X: https://x.com/_EncuestAR_/status/2120881979881079077) · consultado 2026-11-27 · fuente original: Equipo Mide"
+    },
+    {
+      "modulo": "Intención de voto",
+      "ruta": "CONS.DC Consultores.lla",
+      "eje": "MV",
+      "fila": 2228,
+      "nota": "Mes por fecha de campo (criterio de la celda de octubre). Completado desde fuente secundaria; evidencia máxima MEDIA. Solo LLA: la categoría peronista del agregador no es la de la serie.",
+      "rotulo": "FUENTE SECUNDARIA · encuestas-argentinas.com · https://encuestas-argentinas.com/encuestas/ (ficha del 18/08/2026; hilo X: https://x.com/_EncuestAR_/status/2089872813440049343) · consultado 2026-11-27 · fuente original: DC Consultores"
+    },
+    {
+      "modulo": "Intención de voto",
+      "ruta": "CONS.DC Consultores.lla",
+      "eje": "MV",
+      "fila": 2229,
+      "nota": "Mes por fecha de campo (criterio de la celda de octubre). Completado desde fuente secundaria; evidencia máxima MEDIA. Solo LLA: la categoría peronista del agregador no es la de la serie.",
+      "rotulo": "FUENTE SECUNDARIA · encuestas-argentinas.com · https://encuestas-argentinas.com/encuestas/ (ficha del 10/09/2026; hilo X: https://x.com/_EncuestAR_/status/2098085048687996999) · consultado 2026-11-27 · fuente original: DC Consultores"
+    },
+    {
+      "modulo": "Intención de voto",
+      "ruta": "CONS.DC Consultores.lla",
+      "eje": "MV",
+      "fila": 2230,
+      "nota": "Mes por fecha de campo (criterio de la celda de octubre). Completado desde fuente secundaria; evidencia máxima MEDIA. Solo LLA: la categoría peronista del agregador no es la de la serie.",
+      "rotulo": "FUENTE SECUNDARIA · encuestas-argentinas.com · https://encuestas-argentinas.com/encuestas/ (ficha del 03/10/2026; hilo X: https://x.com/_EncuestAR_/status/2106382609651577156) · consultado 2026-11-27 · fuente original: DC Consultores"
+    },
+    {
+      "modulo": "Gestión nacional",
+      "ruta": "GESTION.Synopsis.aprob",
+      "eje": "MG",
+      "fila": 965,
+      "nota": "Dato primario de Nivel 2 que faltaba mapear al Monitor (completa la serie; cargado 27/11/2026)."
+    },
+    {
+      "modulo": "Gestión nacional",
+      "ruta": "GESTION.Synopsis.desaprob",
+      "eje": "MG",
+      "fila": 967,
+      "nota": "Dato primario de Nivel 2 que faltaba mapear al Monitor (completa la serie; cargado 27/11/2026)."
+    },
+    {
+      "modulo": "Gestión nacional",
+      "ruta": "GESTION.M&F.aprob",
+      "eje": "MG",
+      "fila": 223,
+      "nota": "Dato primario de Nivel 2 que faltaba mapear al Monitor (completa la serie; cargado 27/11/2026)."
+    },
+    {
+      "modulo": "Gestión nacional",
+      "ruta": "GESTION.M&F.desaprob",
+      "eje": "MG",
+      "fila": 317,
+      "nota": "Dato primario de Nivel 2 que faltaba mapear al Monitor (completa la serie; cargado 27/11/2026)."
+    },
+    {
+      "modulo": "Gestión nacional",
+      "ruta": "GESTION.M&F.aprob",
+      "eje": "MG",
+      "fila": 340,
+      "nota": "Dato primario de Nivel 2 que faltaba mapear al Monitor (completa la serie; cargado 27/11/2026)."
+    },
+    {
+      "modulo": "Gestión nacional",
+      "ruta": "GESTION.M&F.desaprob",
+      "eje": "MG",
+      "fila": 341,
+      "nota": "Dato primario de Nivel 2 que faltaba mapear al Monitor (completa la serie; cargado 27/11/2026)."
+    },
+    {
+      "modulo": "Gestión nacional",
+      "ruta": "GESTION.D'Alessio.aprob",
+      "eje": "MG",
+      "fila": 160,
+      "nota": "Dato primario de Nivel 2 que faltaba mapear al Monitor (completa la serie; cargado 27/11/2026)."
+    },
+    {
+      "modulo": "Gestión nacional",
+      "ruta": "GESTION.D'Alessio.desaprob",
+      "eje": "MG",
+      "fila": 161,
+      "nota": "Dato primario de Nivel 2 que faltaba mapear al Monitor (completa la serie; cargado 27/11/2026)."
+    },
+    {
+      "modulo": "Gestión nacional",
+      "ruta": "GESTION.D'Alessio.aprob",
+      "eje": "MG",
+      "fila": 412,
+      "nota": "Dato primario de Nivel 2 que faltaba mapear al Monitor (completa la serie; cargado 27/11/2026)."
+    },
+    {
+      "modulo": "Gestión nacional",
+      "ruta": "GESTION.D'Alessio.desaprob",
+      "eje": "MG",
+      "fila": 413,
+      "nota": "Dato primario de Nivel 2 que faltaba mapear al Monitor (completa la serie; cargado 27/11/2026)."
+    },
+    {
+      "modulo": "Gestión nacional",
+      "ruta": "GESTION.RDT.aprob",
+      "eje": "MG",
+      "fila": 250,
+      "nota": "Dato primario de Nivel 2 que faltaba mapear al Monitor (completa la serie; cargado 27/11/2026)."
+    },
+    {
+      "modulo": "Gestión nacional",
+      "ruta": "GESTION.RDT.desaprob",
+      "eje": "MG",
+      "fila": 251,
+      "nota": "Dato primario de Nivel 2 que faltaba mapear al Monitor (completa la serie; cargado 27/11/2026)."
+    },
+    {
+      "modulo": "Gestión nacional",
+      "ruta": "GESTION.RDT.aprob",
+      "eje": "MG",
+      "fila": 272,
+      "nota": "Dato primario de Nivel 2 que faltaba mapear al Monitor (completa la serie; cargado 27/11/2026)."
+    },
+    {
+      "modulo": "Gestión nacional",
+      "ruta": "GESTION.RDT.desaprob",
+      "eje": "MG",
+      "fila": 273,
+      "nota": "Dato primario de Nivel 2 que faltaba mapear al Monitor (completa la serie; cargado 27/11/2026)."
+    },
+    {
+      "modulo": "Imagen Milei",
+      "ruta": "IMG.RDT.pos",
+      "eje": "MI",
+      "fila": 116,
+      "nota": "Dato primario de Nivel 2 que faltaba mapear al Monitor (completa la serie; cargado 27/11/2026)."
+    },
+    {
+      "modulo": "Imagen Milei",
+      "ruta": "IMG.RDT.neg",
+      "eje": "MI",
+      "fila": 117,
+      "nota": "Dato primario de Nivel 2 que faltaba mapear al Monitor (completa la serie; cargado 27/11/2026)."
+    },
+    {
+      "modulo": "Imagen Milei",
+      "ruta": "IMG.RDT.pos",
+      "eje": "MI",
+      "fila": 236,
+      "nota": "Dato primario de Nivel 2 que faltaba mapear al Monitor (completa la serie; cargado 27/11/2026)."
+    },
+    {
+      "modulo": "Imagen Milei",
+      "ruta": "IMG.RDT.neg",
+      "eje": "MI",
+      "fila": 237,
+      "nota": "Dato primario de Nivel 2 que faltaba mapear al Monitor (completa la serie; cargado 27/11/2026)."
+    },
+    {
+      "modulo": "Imagen Milei",
+      "ruta": "IMG.RDT.pos",
+      "eje": "MI",
+      "fila": 258,
+      "nota": "Dato primario de Nivel 2 que faltaba mapear al Monitor (completa la serie; cargado 27/11/2026)."
+    },
+    {
+      "modulo": "Imagen Milei",
+      "ruta": "IMG.RDT.neg",
+      "eje": "MI",
+      "fila": 259,
+      "nota": "Dato primario de Nivel 2 que faltaba mapear al Monitor (completa la serie; cargado 27/11/2026)."
+    },
+    {
+      "modulo": "Gestión nacional",
+      "ruta": "GESTION.ESPOP.aprob",
+      "eje": "MG",
+      "fila": 492,
+      "nota": "Dato primario de Nivel 2 que faltaba mapear al Monitor (completa la serie; cargado 27/11/2026)."
+    },
+    {
+      "modulo": "Gestión nacional",
+      "ruta": "GESTION.ESPOP.aprob",
+      "eje": "MG",
+      "fila": 493,
+      "nota": "Dato primario de Nivel 2 que faltaba mapear al Monitor (completa la serie; cargado 27/11/2026)."
+    },
+    {
+      "modulo": "Gestión nacional",
+      "ruta": "GESTION.ESPOP.aprob",
+      "eje": "MG",
+      "fila": 935,
+      "nota": "Dato primario de Nivel 2 que faltaba mapear al Monitor (completa la serie; cargado 27/11/2026)."
+    },
+    {
+      "modulo": "Gestión nacional",
+      "ruta": "GESTION.ESPOP.aprob",
+      "eje": "MG",
+      "fila": 467,
+      "nota": "Dato primario de Nivel 2 que faltaba mapear al Monitor (completa la serie; cargado 27/11/2026)."
+    },
+    {
+      "modulo": "Gestión nacional",
+      "ruta": "GESTION.ESPOP.aprob",
+      "eje": "MG",
+      "fila": 1722,
+      "nota": "Dato primario de Nivel 2 que faltaba mapear al Monitor (completa la serie; cargado 27/11/2026)."
+    },
+    {
+      "modulo": "Gestión nacional",
+      "ruta": "GESTION.ESPOP.desaprob",
+      "eje": "MG",
+      "fila": 1723,
+      "nota": "Dato primario de Nivel 2 que faltaba mapear al Monitor (completa la serie; cargado 27/11/2026)."
+    },
+    {
+      "modulo": "Imagen Milei",
+      "ruta": "IMG.ESPOP.pos",
+      "eje": "MI",
+      "fila": 496,
+      "nota": "Dato primario de Nivel 2 que faltaba mapear al Monitor (completa la serie; cargado 27/11/2026)."
+    },
+    {
+      "modulo": "Imagen Milei",
+      "ruta": "IMG.ESPOP.pos",
+      "eje": "MI",
+      "fila": 497,
+      "nota": "Dato primario de Nivel 2 que faltaba mapear al Monitor (completa la serie; cargado 27/11/2026)."
+    },
+    {
+      "modulo": "Imagen Milei",
+      "ruta": "IMG.ESPOP.pos",
+      "eje": "MI",
+      "fila": 1728,
+      "nota": "Dato primario de Nivel 2 que faltaba mapear al Monitor (completa la serie; cargado 27/11/2026)."
+    },
+    {
+      "modulo": "Imagen Milei",
+      "ruta": "IMG.ESPOP.neg",
+      "eje": "MI",
+      "fila": 1729,
+      "nota": "Dato primario de Nivel 2 que faltaba mapear al Monitor (completa la serie; cargado 27/11/2026)."
     }
   ],
   "retiros": [],
@@ -1448,8 +1960,8 @@
     {
       "modulo": "Agenda pública",
       "mes": "Nov-26",
-      "texto": "Sin mediciones nacionales con fila en nivel 2.",
-      "necesita": "—"
+      "texto": "Sin ranking nacional con fila en nivel 2 en el Monitor. Pulso Research (pregunta abierta, 22 categorías, N2 2100–2121) quedó cargado en la base; Management & Fit solo tiene legibles desocupación 21,9 y corrupción 18,1.",
+      "necesita": "relevar a mano el ranking completo de principal problema de M&F (PDF 1cmuEFkd…, pesa más de 10 MB y no se puede bajar por el conector)"
     },
     {
       "modulo": "Gestión nacional",
@@ -1564,6 +2076,36 @@
       "mes": "Nov-26",
       "texto": "Imagen positiva de Milei: sin huecos. Los 11 meses que tenían negativa sin su contracara se cerraron el 18/11: Giacobbe jul y ago, Proyección sep, D'Alessio jun y jul, Zentrix may–sep desde informes primarios de Drive, y Zuban jul por fuente secundaria, único caso sin informe primario.",
       "necesita": "—"
+    },
+    {
+      "modulo": "Gestión nacional",
+      "mes": "Nov-26",
+      "texto": "Pulso Research nov-26 trae saltos grandes frente a octubre (aprobación 28,9 → 34,0; imagen positiva de Milei 32,4 → 38,6). La base los marca «verificar»: no se confirmó que pregunta y escala de octubre sean idénticas.",
+      "necesita": "contrastar el cuestionario de Brújula Social de octubre y noviembre"
+    },
+    {
+      "modulo": "Imagen Milei",
+      "mes": "Nov-26",
+      "texto": "Vozna nacional nov-26 (campo 5–11/11, n=2.195): aprobación 36% (N2 fila 1943). Sin serie comparable: septiembre fue muestra de PBA. Los cuatro segmentos del electorado son perfiles estadísticos, no una pregunta, y no entran a series.",
+      "necesita": "—"
+    },
+    {
+      "modulo": "Intención de voto",
+      "mes": "Nov-26",
+      "texto": "QSocial (octubre): solo se cargaron el corte de feb-26 informado en el texto y el de octubre; los valores intermedios del gráfico (abr–sep) no se asignaron a su serie.",
+      "necesita": "relevar a mano los cortes intermedios del gráfico del PDF 1Kvc6rs3…"
+    },
+    {
+      "modulo": "Territorio",
+      "mes": "Nov-26",
+      "texto": "DC CABA nov-26: presupuesto «salud y educación primero» figura en 28,4% en la presentación y en 31,4% en el informe analítico (submuestra de ~70 casos, ±11,7 pp). Ambos valores están en la base; no se usan en el Monitor.",
+      "necesita": "base de campo de DC Consultores para resolver la discrepancia"
+    },
+    {
+      "modulo": "Territorio",
+      "mes": "Nov-26",
+      "texto": "Management & Fit nov-26: desconfianza cargada (60,1%); falta el resto del ranking de principal problema por celdas ambiguas. El corte de PBA (aprobación Milei 35,8 · Kicillof 37,4) está en la base pero no en el Monitor.",
+      "necesita": "relevar a mano el ranking de principal problema del PDF 1cmuEFkd…"
     }
   ],
   "secciones_cobertura": [
@@ -4695,7 +5237,7 @@
         "campo": "aprob"
       },
       "tendencia": "may–nov 2026",
-      "cobertura": "{n:GESTION.aprob|Oct-26} consultoras en oct-26 (mes completo) · 2 en nov-26 (corte parcial al 17/11)",
+      "cobertura": "{n:GESTION.aprob|Oct-26} consultoras en oct-26 (mes completo) · {n:GESTION.aprob|Nov-26} en nov-26 (corte al 27/11)",
       "comparabilidad": "MEDIA — misma pregunta de aprobación, pero universo, técnica y escala difieren entre consultoras",
       "nota": "Rango de oct-26: {rango:GESTION.aprob|Oct-26}; no se promedian. Intra-consultora: Proyección {val:GESTION.Proyección.aprob|Sep-26} en sep → {val:GESTION.Proyección.aprob|Nov-26} en nov; QMonitor {val:GESTION.QMonitor.aprob|Oct-26} → {val:GESTION.QMonitor.aprob|Nov-26}. La cantidad de consultoras acredita cobertura, no dirección."
     },
@@ -4708,7 +5250,7 @@
         "campo": "pos"
       },
       "tendencia": "may–nov 2026",
-      "cobertura": "{n:IMG.pos|Oct-26} consultoras en oct-26 · 2 en nov-26 (corte parcial)",
+      "cobertura": "{n:IMG.pos|Oct-26} consultoras en oct-26 · {n:IMG.pos|Nov-26} en nov-26 (corte al 27/11)",
       "comparabilidad": "MEDIA — misma pregunta de imagen personal; las escalas difieren (algunas consultoras suman buena + muy buena)",
       "nota": "Rango de oct-26: {rango:IMG.pos|Oct-26}. La dispersión entre consultoras supera la variación mensual de cada serie. Imagen personal ≠ aprobación de gestión."
     },
@@ -4721,7 +5263,7 @@
         "campo": "neg"
       },
       "tendencia": "may–nov 2026",
-      "cobertura": "{n:IMG.neg|Oct-26} consultoras en oct-26 · 2 en nov-26 (corte parcial)",
+      "cobertura": "{n:IMG.neg|Oct-26} consultoras en oct-26 · {n:IMG.neg|Nov-26} en nov-26 (corte al 27/11)",
       "comparabilidad": "MEDIA — misma pregunta; Zentrix agrega mala + muy mala y Giacobbe separa «regular» y «no lo conozco»",
       "nota": "Rango de oct-26: {rango:IMG.neg|Oct-26}. Giacobbe oct-26 corregida a {val:IMG.Giacobbe.neg|Oct-26} con el PDF primario (campo 28/10–2/11)."
     },
@@ -4832,7 +5374,7 @@
       "cobertura": "1 consultora con serie (Proyección) · 3 cortes",
       "comparabilidad": "MEDIA — serie intra-Proyección; Synopsis oct es fuente secundaria",
       "direccion": "estable: la diferencia entre ambos queda dentro del margen en los tres cortes",
-      "nota": "Proyección sep 40,8–40,2 · oct 41,0–39,1 · nov 40,7–39,1. Synopsis oct (41,9–41,8) es fuente secundaria, evidencia máxima MEDIA, y no se encadena. Se retiraron las referencias a Explanans y OPSA: sin fila ni informe en la base."
+      "nota": "Proyección sep 40,8–40,2 · oct 41,0–39,1 · nov 40,7–39,1. Synopsis oct (41,9–41,8) es fuente secundaria, evidencia máxima MEDIA, y no se encadena. Se retiraron las referencias a Explanans y OPSA: sin fila ni informe en la base. QSocial (octubre, n=4.000, dato puntual): Milei 40 · Kicillof 45 · no sabe 15; el propio informe consigna Milei sin cambio y Kicillof +12 pp frente a feb-26. No se encadena con Proyección: pregunta, muestra y fecha de campo distintas (fila N2 1940–1942)."
     },
     {
       "bloque": "Territorial",
@@ -4861,6 +5403,32 @@
       "comparabilidad": "BAJA — sin corte anterior comparable",
       "direccion": "evidencia insuficiente para establecer dirección",
       "nota": "Ranking CB de Intendentes GBA, nov-26: máximo Nardini +24,8 p.p. y mínimo Menéndez −22,6 p.p. No se agregan municipios ni se promedian entre sí."
+    },
+    {
+      "bloque": "Territorial",
+      "indicador": "CABA · balance de imagen de Jorge Macri (DC Consultores)",
+      "estado": "⚪",
+      "ultima": {
+        "fila": 1924
+      },
+      "tendencia": "medición única (nov-26)",
+      "cobertura": "1 consultora · 1 medición",
+      "comparabilidad": "BAJA — indicador derivado por la consultora (positiva − negativa); sin corte anterior comparable",
+      "direccion": "evidencia insuficiente para establecer dirección",
+      "nota": "DC CABA, campo 18–22/11, n=1.293. El balance de Macri es −9,0 p.p. (30,8 positiva · 39,8 negativa). No se compara con series nacionales ni con el ICC CABA."
+    },
+    {
+      "bloque": "Territorial",
+      "indicador": "Córdoba Capital · rumbo de la ciudad (Radar Público)",
+      "estado": "⚪",
+      "ultima": {
+        "fila": 2032
+      },
+      "tendencia": "medición única (campo 26/10–1/11)",
+      "cobertura": "1 consultora · 1 medición",
+      "comparabilidad": "BAJA — muestra de la ciudad de Córdoba (n=500, ±4,4%); sin corte anterior de ciudad capital",
+      "direccion": "evidencia insuficiente para establecer dirección",
+      "nota": "Dirección correcta 30% · incorrecta 52% · no sabe 18% (filas N2 2032–2034). No se agrega a series provinciales: la ola de septiembre de Radar Público fue provincial (n=1.000) y no es comparable."
     }
   ],
   "icg_variacion_oficial": {
