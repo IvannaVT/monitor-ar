@@ -250,7 +250,9 @@
     "VOTO_PRES_CAND_NSNC",
     "VOTO_PRES_CAND_PULLARO",
     "VOTO_PRES_ESC1_LLA",
-    "VOTO_PRES_ESC1_PERONISMO"
+    "VOTO_PRES_ESC1_PERONISMO",
+    "GESTION_NACIONAL_APROBACION_UDESA",
+    "IMG_MILEI_POSITIVA_UDESA"
   ],
   "_nota_pendientes": "Backlog explícito: IDs que ya estaban fuera de forma canónica cuando se puso el control el 18/11/2026. Se normalizan por tandas. Un ID nuevo fuera de forma NO entra acá: hace fallar la corrida.",
   "_nota_alcance": "Las reglas se validaron contra las 190 id_indicador del extracto del Radar y se aplicaron en seco a las 1621 filas del Sheet de Nivel 2 (18/11/2026): 172 IDs cambiarían de grafía y 12 canónicos recibirían más de un ID. La columna id_indicador_normalizado NO se escribió todavía: el invariante de colisión necesita mes, categoría y resultado de la base completa, y antes hay que resolver la discrepancia entre el Sheet (1621 filas) y la copia del Project (4935 filas, 1987 indicadores, snapshot de octubre)."
