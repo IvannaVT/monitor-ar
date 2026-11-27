@@ -45,6 +45,7 @@ img{max-width:100%}
 .header-tools{display:flex;align-items:center;gap:8px}
 .site-nav{display:flex;align-items:stretch;height:52px}
 .site-nav-link{display:inline-flex;align-items:center;min-height:44px;border-bottom:2px solid transparent;padding:0 14px;font-family:'IBM Plex Sans',sans-serif;font-size:13px;font-weight:500;color:var(--fg-dim);text-decoration:none;white-space:nowrap;letter-spacing:.2px}
+.site-nav-link.on{color:var(--accent);border-bottom-color:var(--accent)}
 .site-nav-link:hover{color:var(--fg);border-bottom-color:var(--accent)}
 .site-nav-link:focus-visible{outline:2px solid var(--accent);outline-offset:-2px}
 
@@ -282,6 +283,7 @@ footer a{color:var(--accent)}
     <div class="logo">Monitor<span>AR</span><small>NOV 2026 · corte al 27/11</small></div>
     <div class="header-tools">
       <nav class="site-nav" aria-label="Monitores del sitio">
+        <a class="site-nav-link" href="#caba" id="navCaba">CABA</a>
         <a class="site-nav-link" href="./monitor_leg.html">Monitor LEG</a>
         <a class="site-nav-link" href="./radar_eeuu_2026.html"><span class="nav-pre">Elecciones </span>USA</a>
       </nav>
@@ -302,7 +304,6 @@ footer a{color:var(--accent)}
     <button class="tab-btn" data-tab="sl">Conv. Digital</button>
     <button class="tab-btn" data-tab="agenda">Agenda pública</button>
     <button class="tab-btn" data-tab="semaforo">Semáforo</button>
-    <button class="tab-btn" data-tab="caba">CABA</button>
     <button class="tab-btn" data-tab="gap">GAP CONV–SL</button>
     <button class="tab-btn" data-tab="voto"><em>Int. de voto</em></button>
   </div>
@@ -1304,7 +1305,18 @@ document.querySelectorAll('.tab-btn').forEach(btn=>{
     initTab(btn.dataset.tab);
   });
 });
-function applyHash(){const h=location.hash.replace('#','');if(h){const b=document.querySelector(`[data-tab="${h}"]`);if(b)b.click();}}
+function abrirTab(t){
+  document.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active'));
+  document.querySelectorAll('.panel').forEach(p=>p.classList.remove('active'));
+  const b=document.querySelector(`.tab-btn[data-tab="${t}"]`);if(b)b.classList.add('active');
+  document.getElementById('tab-'+t).classList.add('active');
+  document.getElementById('navCaba').classList.toggle('on',t==='caba');
+  try{history.replaceState(null,'','#'+t);}catch(e){}
+  initTab(t);window.scrollTo(0,0);
+}
+document.getElementById('navCaba').addEventListener('click',e=>{e.preventDefault();abrirTab('caba');});
+document.querySelectorAll('.tab-btn').forEach(b=>b.addEventListener('click',()=>document.getElementById('navCaba').classList.remove('on')));
+function applyHash(){const h=location.hash.replace('#','');if(h==='caba'){abrirTab('caba');return;}if(h){const b=document.querySelector(`[data-tab="${h}"]`);if(b)b.click();}}
 
 /* ── MES ACCORDION ─────────────────────────── */
 function toggleMesAnterior(id){
