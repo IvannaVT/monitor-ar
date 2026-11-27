@@ -2101,7 +2101,7 @@ function renderEvolCharts(tab){
     if(!ser.length){ // sin series de 2+ cortes: barras del último corte con 3+ mediciones de la misma unidad
       const mes=[...g.meses].reverse().find(m=>g.filas.filter(f=>f.celdas[m]).length>=3);if(!mes)return;
       const fs0=g.filas.filter(f=>f.celdas[mes]);const cnt={};fs0.forEach(f=>{const u=f.celdas[mes].unidad||'';cnt[u]=(cnt[u]||0)+1});
-      const uni=Object.keys(cnt).sort((a,b)=>cnt[b]-cnt[a])[0];const fs=fs0.filter(f=>(f.celdas[mes].unidad||'')===uni);if(fs.length<3)return;
+      const uni=Object.keys(cnt).sort((a,b)=>cnt[b]-cnt[a])[0];const fs=fs0.filter(f=>(f.celdas[mes].unidad||'')===uni).sort((a,b)=>(b.celdas[mes].v??-Infinity)-(a.celdas[mes].v??-Infinity));if(fs.length<3)return;
       // las etiquetas repiten fuente y variable en cada barra; eso va al subtítulo
       const parts=fs.map(f=>f.etiqueta.split(' · '));
       let pre=0,suf=0;
