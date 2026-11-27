@@ -115,7 +115,13 @@ COB = [
     ]},
 ]
 
-data = {'cobertura': COB, 'jefatura': {'series': jef}, 'cambio': cambio, 'espacio': {'series': esp}, 'imagen': img, 'prob_voto': prob}
+CORTES = {
+    'Sep': {'consultora': 'DC Consultores', 'campo': '22–27/09', 'muestra': '1.043 casos efectivos · ±2,2%'},
+    'Oct': {'consultora': 'DC Consultores', 'campo': '22–26/10', 'muestra': '1.360 casos efectivos · ±2,5%'},
+    'Nov': {'consultora': 'DC Consultores', 'campo': '18–22/11', 'muestra': '1.293 casos efectivos · ±2,7%'},
+}
+
+data = {'cortes': CORTES, 'cobertura': COB, 'jefatura': {'series': jef}, 'cambio': cambio, 'espacio': {'series': esp}, 'imagen': img, 'prob_voto': prob}
 txt = json.dumps(data, ensure_ascii=False, indent=1) + '\n'
 if '--check' in sys.argv:
     if OUT.read_text(encoding='utf-8') != txt:
