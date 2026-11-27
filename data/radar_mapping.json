@@ -1379,6 +1379,30 @@
       "eje": "MV",
       "fila": 1800,
       "nota": "línea propia de la consultora; ver serie de evolución para comparabilidad"
+    },
+    {
+      "modulo": "ICC",
+      "ruta": "ICC",
+      "eje": "MESI",
+      "fuente_complementaria": "ICC_CIF_NAC_NOV26"
+    },
+    {
+      "modulo": "ICC",
+      "ruta": "ICC_CABA_13",
+      "eje": "MESI",
+      "fuente_complementaria": "ICC_CIF_CABA_NOV26"
+    },
+    {
+      "modulo": "ICC",
+      "ruta": "ICC_INT_13",
+      "eje": "MESI",
+      "fuente_complementaria": "ICC_CIF_INTERIOR_NOV26"
+    },
+    {
+      "modulo": "ICC",
+      "ruta": "ICC_GBA_14",
+      "eje": "MESI",
+      "fuente_complementaria": "ICC_CIF_GBA_NOV26"
     }
   ],
   "retiros": [],
@@ -4325,17 +4349,6 @@
   ],
   "calendario": [
     {
-      "modulo": "ICC",
-      "mes": "Nov-26",
-      "icono": "🎯",
-      "nombre": "ICC UTDT",
-      "periodo": "nov-26",
-      "fecha": "~17 nov",
-      "fuente": "UTDT CIF",
-      "metodo": "fecha estimada por regularidad histórica, vía monitorargy.com (MCP, herramienta calendario, consultado 2026-11-11)",
-      "clase": "upcoming"
-    },
-    {
       "modulo": "ICG",
       "mes": "Nov-26",
       "icono": "🏛️",
@@ -4397,7 +4410,7 @@
       "eje": "MESI",
       "unidad": "",
       "fuente": "UTDT CIF",
-      "fecha": "oct",
+      "fecha": "19 nov",
       "clase_valor": "neu"
     },
     {
