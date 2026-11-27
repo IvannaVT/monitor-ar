@@ -1379,6 +1379,30 @@
       "eje": "MV",
       "fila": 1800,
       "nota": "línea propia de la consultora; ver serie de evolución para comparabilidad"
+    },
+    {
+      "modulo": "ICC",
+      "ruta": "ICC",
+      "eje": "MESI",
+      "fuente_complementaria": "ICC_CIF_NAC_NOV26"
+    },
+    {
+      "modulo": "ICC",
+      "ruta": "ICC_CABA_13",
+      "eje": "MESI",
+      "fuente_complementaria": "ICC_CIF_CABA_NOV26"
+    },
+    {
+      "modulo": "ICC",
+      "ruta": "ICC_INT_13",
+      "eje": "MESI",
+      "fuente_complementaria": "ICC_CIF_INTERIOR_NOV26"
+    },
+    {
+      "modulo": "ICC",
+      "ruta": "ICC_GBA_14",
+      "eje": "MESI",
+      "fuente_complementaria": "ICC_CIF_GBA_NOV26"
     }
   ],
   "retiros": [],
@@ -4325,17 +4349,6 @@
   ],
   "calendario": [
     {
-      "modulo": "ICC",
-      "mes": "Nov-26",
-      "icono": "🎯",
-      "nombre": "ICC UTDT",
-      "periodo": "nov-26",
-      "fecha": "~17 nov",
-      "fuente": "UTDT CIF",
-      "metodo": "fecha estimada por regularidad histórica, vía monitorargy.com (MCP, herramienta calendario, consultado 2026-11-11)",
-      "clase": "upcoming"
-    },
-    {
       "modulo": "ICG",
       "mes": "Nov-26",
       "icono": "🏛️",
@@ -4397,7 +4410,7 @@
       "eje": "MESI",
       "unidad": "",
       "fuente": "UTDT CIF",
-      "fecha": "oct",
+      "fecha": "19 nov",
       "clase_valor": "neu"
     },
     {
@@ -4862,10 +4875,10 @@
     }
   ],
   "icg_variacion_oficial": {
-    "mes": "Oct-26",
-    "valor": 0.9,
-    "fuente": "UTDT, Escuela de Gobierno · informe mensual del ICG de octubre de 2026 (1,95 puntos)",
-    "nota": "Variación oficial informada por UTDT. El cociente entre los índices redondeados de la serie (1,95 / 1,94) da +0,5%: no es equivalente y no se publica como tal."
+    "mes": "Nov-26",
+    "valor": 4.1,
+    "fuente": "UTDT, Escuela de Gobierno · informe mensual del ICG de noviembre de 2026 (2,04 puntos)",
+    "nota": "Variación oficial informada por UTDT (+4,1% vs octubre), calculada con valores sin redondear. El cociente de los índices redondeados de la serie (2,04 / 1,95) da +4,6%: no es equivalente y no se publica como tal."
   },
   "agenda_ranking": {
     "titulo": "Problema principal · Proyección · nov-26 (corte parcial)",

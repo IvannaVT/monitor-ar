@@ -340,7 +340,7 @@ footer a{color:var(--accent)}
     </div>
   </div>
   <div class="chart-wrap">
-    <div class="chart-head"><div><h3>ICC + ICG · UTDT</h3><p>Sep-25 → Nov-26* · ICC Nacional + ICG Nacional (eje der.) · *nov-26: ICG publicado (campo 3–17/11); ICC sin publicación en la base</p></div></div>
+    <div class="chart-head"><div><h3>ICC + ICG · UTDT</h3><p>Sep-25 → Nov-26 · ICC nacional y regional hasta noviembre · ICG nacional hasta noviembre (eje der.)</p></div></div>
     <div class="chart-box med"><canvas id="chartICCICG"></canvas></div>
     <div class="legend" id="legendICCICG"></div>
     <p class="source" id="srcICCICG"></p>
@@ -1594,7 +1594,7 @@ function initTab(tab){
         'Acum. IPCBA','Interanual IPCBA',
         'var(--c4)','var(--c4)');
     })();
-    // ── ICC + ICG combinados (dual-axis) + apertura regional oct-26 ─
+    // ── ICC + ICG combinados (dual-axis) + apertura regional ─
     (function(){
       const ctx=document.getElementById('chartICCICG');if(!ctx)return;
       if(chartRegistry['chartICCICG'])try{chartRegistry['chartICCICG'].destroy();}catch(e){}
@@ -1639,7 +1639,7 @@ function initTab(tab){
         }
       });
       buildLegend('legendICCICG','chartICCICG',
-        ['ICC Nacional','ICC CABA oct-26','ICC Interior oct-26','ICC GBA oct-26','ICG Nacional'],
+        ['ICC Nacional','ICC CABA','ICC Interior','ICC GBA','ICG Nacional'],
         ['var(--c2)','var(--c5)','var(--c4)','var(--c1)','var(--c3)']);
     })();
   }
@@ -1788,20 +1788,21 @@ const driveLink=id=>id?` · <a href="https://drive.google.com/file/d/${esc(id)}/
 let MES_SEL='Nov-26';
 function renderKPIs(){
   const k=KPI.ICC,g=KPI.ICG,el=document.getElementById('kpiICC'),eg=document.getElementById('kpiICG');
-  const iO=MESI.indexOf('Oct-26'),iS=MESI.indexOf('Sep-26'),dC=k.valor!=null&&ICC[iS]!=null?((ICC[iO]/ICC[iS]-1)*100):null;
+  const iICC=MESI.indexOf(k.mes),mesAnterior=MESI[iICC-1];
+  const dC=k.valor!=null&&ICC[iICC-1]!=null?((k.valor/ICC[iICC-1]-1)*100):null;
   if(el)el.innerHTML=`<div class="kpi-label">ICC · ${esc(k.mes.toLowerCase())}</div><div class="kpi-num">${fmt(k.valor)}</div>
-    <div class="kpi-meta"><span class="kpi-delta ${dC>0?'up':'down'}">${dC==null?'':(dC>0?'+':'')+dC.toFixed(2).replace('.',',')+'%'}</span><span class="kpi-sub">vs sep-26 · UTDT CIF · N2 fila 1345</span></div>
-    <div class="kpi-subs"><div class="kpi-sub-row"><span class="kpi-sub-lbl">CABA</span><span class="kpi-sub-val">${fmt(ICC_CABA_13[iO])}</span></div>
-    <div class="kpi-sub-row"><span class="kpi-sub-lbl">Interior</span><span class="kpi-sub-val">${fmt(ICC_INT_13[iO])}</span></div>
-    <div class="kpi-sub-row"><span class="kpi-sub-lbl">GBA</span><span class="kpi-sub-val">${fmt(ICC_GBA_14[iO])}</span></div></div>`;
+    <div class="kpi-meta"><span class="kpi-delta ${dC>0?'up':'down'}">${dC==null?'':(dC>0?'+':'')+dC.toFixed(2).replace('.',',')+'%'}</span><span class="kpi-sub">vs ${esc((mesAnterior||'').toLowerCase())} · UTDT CIF</span></div>
+    <div class="kpi-subs"><div class="kpi-sub-row"><span class="kpi-sub-lbl">CABA</span><span class="kpi-sub-val">${fmt(ICC_CABA_13[iICC])}</span></div>
+    <div class="kpi-sub-row"><span class="kpi-sub-lbl">Interior</span><span class="kpi-sub-val">${fmt(ICC_INT_13[iICC])}</span></div>
+    <div class="kpi-sub-row"><span class="kpi-sub-lbl">GBA</span><span class="kpi-sub-val">${fmt(ICC_GBA_14[iICC])}</span></div></div>`;
   if(eg){const vo=g.var_oficial,d=vo?vo.valor:null;
     eg.innerHTML=`<div class="kpi-label">ICG · ${esc(g.mes.toLowerCase())}</div><div class="kpi-num">${fmt(g.valor)}</div>
-    <div class="kpi-meta"><span class="kpi-delta ${d>0?'up':'down'}">${d==null?'':(d>0?'+':'')+d.toFixed(1).replace('.',',')+'%'}</span><span class="kpi-sub">m/m oficial · vs ${fmt(g.anterior)} sep-26 · UTDT Escuela de Gobierno</span></div>
+    <div class="kpi-meta"><span class="kpi-delta ${d>0?'up':'down'}">${d==null?'':(d>0?'+':'')+d.toFixed(1).replace('.',',')+'%'}</span><span class="kpi-sub">m/m oficial · vs ${fmt(g.anterior)} oct-26 · UTDT Escuela de Gobierno</span></div>
     <div class="kpi-subs"><div class="kpi-sub-row"><span class="kpi-sub-lbl">Escala</span><span class="kpi-sub-val">0–5</span></div>
     <div class="kpi-sub-row"><span class="kpi-sub-lbl">Máx 12m</span><span class="kpi-sub-val">${fmt(g.max12)}</span></div>
     <div class="kpi-sub-row"><span class="kpi-sub-lbl">Mín 12m</span><span class="kpi-sub-val">${fmt(g.min12)}</span></div></div>`;}
   const src=document.getElementById('srcICCICG');
-  if(src)src.innerHTML=`ICC ${esc(k.mes)}: ${fmt(k.valor)} (N2 filas 1345–1348, PDF CIF oct-26) · campo 5–16 oct · n=1.000 · CATI · ICG ${esc(g.mes)}: ${fmt(g.valor)} (N2 fila 1086; una sola vez) · ICG may–sep desde N2 filas 1030–1034 · UTDT / Poliarquía`;
+  if(src)src.innerHTML=`ICC ${esc(k.mes)}: ${fmt(k.valor)} · campo 3–17 nov · <a href="https://www.utdt.edu/ver_nota_prensa.php?id_item_menu=6&id_nota_prensa=23683" target="_blank" rel="noopener">CIF/UTDT · cifras reproducidas de Perfil</a> · ICG ${esc(g.mes)}: ${fmt(g.valor)} (N2 fila 1788) · ICG may–oct desde N2 filas 1030–1034 y 1086 · UTDT / Poliarquía`;
   document.querySelectorAll('[data-bind="ICC_OCT_TL"]').forEach(e=>e.textContent=k.oct_pendiente?'s/d':fmt(ICC[MESI.indexOf('Oct-26')]));
 }
 /* ── GAP CONV–SL y SEMÁFORO: se dibujan desde radar_data.json ───── */

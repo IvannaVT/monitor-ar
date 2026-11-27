@@ -63,7 +63,7 @@
   40.23,
   41.18,
   41.52,
-  null
+  40.99
  ],
  "ICG": [
   1.9,
@@ -325,7 +325,7 @@
   39.87,
   37.16,
   39.68,
-  null
+  43.41
  ],
  "ICC_INT_13": [
   null,
@@ -342,7 +342,7 @@
   43.82,
   46.11,
   46.0,
-  null
+  47.52
  ],
  "ICC_GBA_14": [
   null,
@@ -359,7 +359,7 @@
   38.27,
   39.55,
   39.49,
-  null
+  36.51
  ],
  "MV": [
   "Feb-26",
@@ -2471,8 +2471,8 @@
    "estado": "🟡",
    "ultima": {
     "tipo": "simple",
-    "valor": 41.52,
-    "mes": "Oct-26",
+    "valor": 40.99,
+    "mes": "Nov-26",
     "unidad": "",
     "fuente": "UTDT CIF"
    },
@@ -2765,8 +2765,8 @@
    "estado": "🟡",
    "ultima": {
     "tipo": "simple",
-    "valor": 39.68,
-    "mes": "Oct-26",
+    "valor": 43.41,
+    "mes": "Nov-26",
     "unidad": "",
     "fuente": "UTDT CIF"
    },
@@ -6459,15 +6459,20 @@
  ],
  "KPI": {
   "ICC": {
-   "valor": 41.52,
-   "mes": "Oct-26",
+   "valor": 40.99,
+   "mes": "Nov-26",
    "oct_pendiente": false
   },
   "ICG": {
    "valor": 2.04,
    "mes": "Nov-26",
    "anterior": 1.95,
-   "var_oficial": null,
+   "var_oficial": {
+    "mes": "Nov-26",
+    "valor": 4.1,
+    "fuente": "UTDT, Escuela de Gobierno · informe mensual del ICG de noviembre de 2026 (2,04 puntos)",
+    "nota": "Variación oficial informada por UTDT (+4,1% vs octubre), calculada con valores sin redondear. El cociente de los índices redondeados de la serie (2,04 / 1,95) da +4,6%: no es equivalente y no se publica como tal."
+   },
    "max12": 2.5,
    "min12": 1.94
   },
@@ -6544,6 +6549,42 @@
    "rotulo": "FUENTE SECUNDARIA · encuestas-argentinas.com · https://encuestas-argentinas.com/encuestas/ (registro sin URL propia; hilo X: https://x.com/_EncuestAR_/status/2109835471689777618) · consultado 2026-11-17 · fuente original: Management & Fit",
    "modulo": "Gestión nacional",
    "fuente_original": "Management & Fit"
+  },
+  {
+   "ruta": "ICC",
+   "mes": "Nov-26",
+   "valor": 40.99,
+   "fila": "",
+   "rotulo": "FUENTE SECUNDARIA · Perfil reproducido por UTDT · 19/11/2026",
+   "modulo": "ICC",
+   "fuente_original": "CIF/UTDT"
+  },
+  {
+   "ruta": "ICC_CABA_13",
+   "mes": "Nov-26",
+   "valor": 43.41,
+   "fila": "",
+   "rotulo": "FUENTE SECUNDARIA · Perfil reproducido por UTDT · 19/11/2026",
+   "modulo": "ICC",
+   "fuente_original": "CIF/UTDT"
+  },
+  {
+   "ruta": "ICC_INT_13",
+   "mes": "Nov-26",
+   "valor": 47.52,
+   "fila": "",
+   "rotulo": "FUENTE SECUNDARIA · Perfil reproducido por UTDT · 19/11/2026",
+   "modulo": "ICC",
+   "fuente_original": "CIF/UTDT"
+  },
+  {
+   "ruta": "ICC_GBA_14",
+   "mes": "Nov-26",
+   "valor": 36.51,
+   "fila": "",
+   "rotulo": "FUENTE SECUNDARIA · Perfil reproducido por UTDT · 19/11/2026",
+   "modulo": "ICC",
+   "fuente_original": "CIF/UTDT"
   }
  ],
  "ENCABEZADO": {
@@ -6581,11 +6622,11 @@
     "eje": "MESI",
     "unidad": "",
     "fuente": "UTDT CIF",
-    "fecha": "oct",
+    "fecha": "19 nov",
     "clase_valor": "neu",
-    "valor": 41.52,
-    "periodo": "oct-26",
-    "secundaria": ""
+    "valor": 40.99,
+    "periodo": "nov-26",
+    "secundaria": "FUENTE SECUNDARIA · Perfil reproducido por UTDT · 19/11/2026"
    },
    {
     "icono": "🏛️",
@@ -6602,17 +6643,6 @@
    }
   ],
   "proximos": [
-   {
-    "modulo": "ICC",
-    "mes": "Nov-26",
-    "icono": "🎯",
-    "nombre": "ICC UTDT",
-    "periodo": "nov-26",
-    "fecha": "~17 nov",
-    "fuente": "UTDT CIF",
-    "metodo": "fecha estimada por regularidad histórica, vía monitorargy.com (MCP, herramienta calendario, consultado 2026-11-11)",
-    "clase": "upcoming"
-   },
    {
     "modulo": "ICG",
     "mes": "Nov-26",
@@ -12810,6 +12840,13 @@
    "valor": 36.6,
    "fila": 1576,
    "rotulo": "FUENTE SECUNDARIA · encuestas-argentinas.com · https://encuestas-argentinas.com/encuestas/ (registro sin URL propia; hilo X: https://x.com/_EncuestAR_/status/2109835471689777618) · consultado 2026-11-17 · fuente original: Management & Fit"
+  },
+  {
+   "indicador": "ICC",
+   "mes": "Nov-26",
+   "valor": 40.99,
+   "fila": "",
+   "rotulo": "FUENTE SECUNDARIA · Perfil reproducido por UTDT · 19/11/2026"
   }
  ],
  "UPD": {
@@ -13720,6 +13757,74 @@
      "nota": "",
      "secundaria": "",
      "categoria": "Índice total"
+    },
+    {
+     "tipo": "serie",
+     "modulo": "ICC",
+     "etiqueta": "ICC",
+     "valor": 40.99,
+     "anterior": null,
+     "estado": "nuevo",
+     "consultora": "CIF/UTDT",
+     "fila": "",
+     "base": "radar_fuentes_complementarias",
+     "file_id": "",
+     "campo": "2026-11-03→2026-11-17",
+     "unidad": "puntos (0–100)",
+     "nota": "",
+     "secundaria": "FUENTE SECUNDARIA · Perfil reproducido por UTDT · 19/11/2026",
+     "categoria": "Nacional"
+    },
+    {
+     "tipo": "serie",
+     "modulo": "ICC",
+     "etiqueta": "ICC_CABA_13",
+     "valor": 43.41,
+     "anterior": null,
+     "estado": "nuevo",
+     "consultora": "CIF/UTDT",
+     "fila": "",
+     "base": "radar_fuentes_complementarias",
+     "file_id": "",
+     "campo": "2026-11-03→2026-11-17",
+     "unidad": "puntos (0–100)",
+     "nota": "",
+     "secundaria": "FUENTE SECUNDARIA · Perfil reproducido por UTDT · 19/11/2026",
+     "categoria": "CABA"
+    },
+    {
+     "tipo": "serie",
+     "modulo": "ICC",
+     "etiqueta": "ICC_INT_13",
+     "valor": 47.52,
+     "anterior": null,
+     "estado": "nuevo",
+     "consultora": "CIF/UTDT",
+     "fila": "",
+     "base": "radar_fuentes_complementarias",
+     "file_id": "",
+     "campo": "2026-11-03→2026-11-17",
+     "unidad": "puntos (0–100)",
+     "nota": "",
+     "secundaria": "FUENTE SECUNDARIA · Perfil reproducido por UTDT · 19/11/2026",
+     "categoria": "Interior"
+    },
+    {
+     "tipo": "serie",
+     "modulo": "ICC",
+     "etiqueta": "ICC_GBA_14",
+     "valor": 36.51,
+     "anterior": null,
+     "estado": "nuevo",
+     "consultora": "CIF/UTDT",
+     "fila": "",
+     "base": "radar_fuentes_complementarias",
+     "file_id": "",
+     "campo": "2026-11-03→2026-11-17",
+     "unidad": "puntos (0–100)",
+     "nota": "",
+     "secundaria": "FUENTE SECUNDARIA · Perfil reproducido por UTDT · 19/11/2026",
+     "categoria": "GBA"
     },
     {
      "tipo": "pendiente",
@@ -16427,16 +16532,17 @@
     "pendiente": []
    },
    "Nov-26": {
-    "estado": "pendiente",
-    "n_fuentes": 0,
-    "fuentes": [],
+    "estado": "con datos",
+    "n_fuentes": 1,
+    "fuentes": [
+     "CIF/UTDT"
+    ],
     "filas": [],
-    "pendiente": [
-     "ICC UTDT nov-26: publicación prevista ~17 nov (fecha estimada por regularidad histórica, vía monitorargy.com (MCP, herramienta calendario, consultado 2026-11-11))."
-    ]
+    "pendiente": []
    },
    "bases": [
-    "nivel2_indicadores"
+    "nivel2_indicadores",
+    "radar_fuentes_complementarias"
    ]
   },
   {
@@ -17159,13 +17265,14 @@
    "data/bases/radar_fuentes_complementarias.tsv",
    "data/radar_mapping.json"
   ],
-  "valores_trazados": 528,
-  "nuevos": 177,
+  "valores_trazados": 532,
+  "nuevos": 181,
   "corregidos": 15,
   "retirados": 0,
   "puntuales": 0,
   "en_series_de_evolucion": 290,
   "fuente_secundaria": [
+   "FUENTE SECUNDARIA · Perfil reproducido por UTDT · 19/11/2026",
    "FUENTE SECUNDARIA · encuestas-argentinas.com · https://encuestas-argentinas.com/encuestas/ (ficha del 04/08/2026, registro sin URL propia en el listado) · consultado 2026-11-18 · fuente original: Zuban Córdoba",
    "FUENTE SECUNDARIA · encuestas-argentinas.com · https://encuestas-argentinas.com/encuestas/ (ficha del 04/08/2026, registro sin URL propia; hilo X: https://x.com/_EncuestAR_/status/2084520359408148892) · consultado 2026-11-18 · fuente original: Zuban Córdoba",
    "FUENTE SECUNDARIA · encuestas-argentinas.com · https://encuestas-argentinas.com/encuestas/ (registro sin URL propia; hilo X: https://x.com/_EncuestAR_/status/2109835471689777618) · consultado 2026-11-17 · fuente original: Management & Fit",
