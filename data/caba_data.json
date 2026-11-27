@@ -1,0 +1,358 @@
+{
+ "jefatura": {
+  "series": [
+   {
+    "nombre": "Patricia Bullrich",
+    "puntos": {
+     "Oct": {
+      "v": 27.6,
+      "fila": 2305
+     },
+     "Nov": {
+      "v": 28.4,
+      "fila": 1898
+     }
+    }
+   },
+   {
+    "nombre": "Jorge Macri",
+    "puntos": {
+     "Oct": {
+      "v": 33.8,
+      "fila": 1252
+     },
+     "Nov": {
+      "v": 25.3,
+      "fila": 1899
+     }
+    }
+   },
+   {
+    "nombre": "Leandro Santoro",
+    "puntos": {
+     "Oct": {
+      "v": 19.2,
+      "fila": 2306
+     },
+     "Nov": {
+      "v": 24.8,
+      "fila": 1900
+     }
+    }
+   },
+   {
+    "nombre": "Horacio Rodríguez Larreta",
+    "puntos": {
+     "Oct": {
+      "v": 7.9,
+      "fila": 2307,
+      "sec": true
+     },
+     "Nov": {
+      "v": 4.7,
+      "fila": 1902
+     }
+    }
+   },
+   {
+    "nombre": "Roberto García Moritán",
+    "puntos": {
+     "Oct": {
+      "v": 5.8,
+      "fila": 2308,
+      "sec": true
+     },
+     "Nov": {
+      "v": 0.6,
+      "fila": 1903
+     }
+    }
+   },
+   {
+    "nombre": "Otro",
+    "puntos": {
+     "Oct": {
+      "v": 5.7,
+      "fila": 2309,
+      "sec": true
+     },
+     "Nov": {
+      "v": 16.2,
+      "fila": 1901
+     }
+    }
+   }
+  ]
+ },
+ "cambio": {
+  "titulo": "Continuidad o cambio · 2027",
+  "series": [
+   {
+    "nombre": "Cambio de rumbo total",
+    "puntos": {
+     "Sep": {
+      "v": 41.2,
+      "fila": 853
+     },
+     "Oct": {
+      "v": 39.1,
+      "fila": 2310
+     },
+     "Nov": {
+      "v": 52.4,
+      "fila": 1890
+     }
+    }
+   },
+   {
+    "nombre": "Continuidad de J. Macri y PRO",
+    "puntos": {
+     "Oct": {
+      "v": 35.6,
+      "fila": 2311
+     },
+     "Nov": {
+      "v": 28.5,
+      "fila": 1891
+     }
+    }
+   },
+   {
+    "nombre": "Continuidad de la LLA (sin J. Macri)",
+    "puntos": {
+     "Oct": {
+      "v": 25.3,
+      "fila": 2312
+     },
+     "Nov": {
+      "v": 19.1,
+      "fila": 1892
+     }
+    }
+   }
+  ]
+ },
+ "espacio": {
+  "series": [
+   {
+    "nombre": "La Libertad Avanza",
+    "puntos": {
+     "Oct": {
+      "v": 29.9,
+      "fila": 1251
+     },
+     "Nov": {
+      "v": 23.5,
+      "fila": 1894
+     }
+    }
+   },
+   {
+    "nombre": "PRO",
+    "puntos": {
+     "Oct": {
+      "v": 28.3,
+      "fila": 2304
+     },
+     "Nov": {
+      "v": 20.2,
+      "fila": 1895
+     }
+    }
+   },
+   {
+    "nombre": "Peronismo",
+    "puntos": {
+     "Nov": {
+      "v": 18.4,
+      "fila": 1896
+     }
+    }
+   },
+   {
+    "nombre": "Kirchnerismo",
+    "puntos": {
+     "Nov": {
+      "v": 11.3,
+      "fila": 1897
+     }
+    }
+   },
+   {
+    "nombre": "Otro / indefinidos",
+    "puntos": {
+     "Nov": {
+      "v": 26.6,
+      "fila": 1893
+     }
+    }
+   }
+  ]
+ },
+ "imagen": [
+  {
+   "nombre": "Patricia Bullrich",
+   "pos": {
+    "Sep": {
+     "v": 47.1,
+     "fila": 923
+    },
+    "Nov": {
+     "v": 45.2,
+     "fila": 1912
+    }
+   },
+   "neg": {
+    "Sep": {
+     "v": 28.7,
+     "fila": 925
+    }
+   }
+  },
+  {
+   "nombre": "Sandra Pettovello",
+   "pos": {
+    "Sep": {
+     "v": 39.2,
+     "fila": 887
+    },
+    "Nov": {
+     "v": 40.5,
+     "fila": 1913
+    }
+   },
+   "neg": {
+    "Sep": {
+     "v": 28.9,
+     "fila": 889
+    }
+   }
+  },
+  {
+   "nombre": "Javier Milei",
+   "pos": {
+    "Sep": {
+     "v": 31.3,
+     "fila": 907
+    },
+    "Nov": {
+     "v": 37.2,
+     "fila": 1914
+    }
+   },
+   "neg": {
+    "Sep": {
+     "v": 41.6,
+     "fila": 909
+    }
+   }
+  },
+  {
+   "nombre": "Victoria Villarruel",
+   "pos": {
+    "Sep": {
+     "v": 28.6,
+     "fila": 911
+    },
+    "Nov": {
+     "v": 35.5,
+     "fila": 1915
+    }
+   },
+   "neg": {
+    "Sep": {
+     "v": 38.4,
+     "fila": 913
+    }
+   }
+  },
+  {
+   "nombre": "Jorge Macri",
+   "pos": {
+    "Sep": {
+     "v": 30.3,
+     "fila": 879
+    },
+    "Nov": {
+     "v": 30.8,
+     "fila": 1916
+    }
+   },
+   "neg": {
+    "Sep": {
+     "v": 32.6,
+     "fila": 881
+    },
+    "Nov": {
+     "v": 39.8,
+     "fila": 1917
+    }
+   }
+  },
+  {
+   "nombre": "Axel Kicillof",
+   "pos": {
+    "Sep": {
+     "v": 20.0,
+     "fila": 915
+    },
+    "Nov": {
+     "v": 23.1,
+     "fila": 1919
+    }
+   },
+   "neg": {
+    "Sep": {
+     "v": 71.1,
+     "fila": 917
+    },
+    "Nov": {
+     "v": 55.3,
+     "fila": 1920
+    }
+   }
+  }
+ ],
+ "prob_voto": [
+  {
+   "nombre": "Javier Milei",
+   "v": 4.6,
+   "fila": 1904
+  },
+  {
+   "nombre": "Patricia Bullrich",
+   "v": 4.2,
+   "fila": 1905
+  },
+  {
+   "nombre": "Leandro Santoro",
+   "v": 4.0,
+   "fila": 1906
+  },
+  {
+   "nombre": "Jorge Macri",
+   "v": 3.7,
+   "fila": 1907
+  },
+  {
+   "nombre": "Axel Kicillof",
+   "v": 3.2,
+   "fila": 1908
+  },
+  {
+   "nombre": "Horacio Rodríguez Larreta",
+   "v": 3.1,
+   "fila": 1909
+  },
+  {
+   "nombre": "Cristina Kirchner",
+   "v": 3.1,
+   "fila": 1910
+  },
+  {
+   "nombre": "Sandra Pettovello",
+   "v": 2.7,
+   "fila": 1911
+  }
+ ]
+}

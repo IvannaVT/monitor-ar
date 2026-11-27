@@ -106,6 +106,14 @@ img{max-width:100%}
 .sem-it .sem-vl{font-family:'IBM Plex Sans',sans-serif;font-size:11px;white-space:normal;line-height:1.2}
 .sem-det{padding:0 0 8px 30px;font-size:11.5px;line-height:1.45;display:grid;gap:3px}
 .sem-det .k{color:var(--fg-dim);font-size:10px;text-transform:uppercase;letter-spacing:.4px;margin-right:4px}
+.cb-t{width:100%;border-collapse:collapse;font-size:12px;margin:2px 0 4px}
+.cb-t th{font-weight:600;font-size:10px;text-transform:uppercase;letter-spacing:.4px;color:var(--fg-dim);text-align:right;padding:3px 8px;border-bottom:1px solid var(--border)}
+.cb-t th:first-child,.cb-t td:first-child{text-align:left}
+.cb-t td{padding:4px 8px;border-bottom:1px solid var(--border);text-align:right;font-family:'IBM Plex Mono',monospace;font-variant-numeric:tabular-nums;white-space:nowrap}
+.cb-t td:first-child{font-family:'IBM Plex Sans',sans-serif;font-weight:600;white-space:normal}
+.cb-t td.d,.cb-t td.up,.cb-t td.dn{color:var(--fg-dim)}.cb-t sup{color:var(--warn);font-size:9px}
+.cb-n{font-size:11px;color:var(--fg-dim);margin:2px 0 14px;line-height:1.45}
+.cb-h{display:flex;flex-wrap:wrap;gap:4px 10px;align-items:baseline;margin:16px 0 4px}.cb-h b{font-size:13px}.cb-h span{font-size:10.5px;color:var(--fg-dim)}
 .sem-res{font-weight:400;font-size:11px;color:var(--fg-dim);margin-left:6px}
 @media(min-width:900px){.sem-it>summary{grid-template-columns:22px minmax(0,1fr) 110px minmax(0,1.5fr)}.sem-it .sem-m{grid-column:auto;flex-wrap:nowrap;overflow:hidden;white-space:nowrap;min-width:0}.sem-it .sem-m>span:first-child{flex:none}.sem-it .sem-m>.signal{flex:none}.sem-it .sem-m>span:last-child{overflow:hidden;text-overflow:ellipsis}}
 @media(max-width:640px){.sem-det{padding-left:0}}
@@ -294,6 +302,7 @@ footer a{color:var(--accent)}
     <button class="tab-btn" data-tab="sl">Conv. Digital</button>
     <button class="tab-btn" data-tab="agenda">Agenda pública</button>
     <button class="tab-btn" data-tab="semaforo">Semáforo</button>
+    <button class="tab-btn" data-tab="caba">CABA</button>
     <button class="tab-btn" data-tab="gap">GAP CONV–SL</button>
     <button class="tab-btn" data-tab="voto"><em>Int. de voto</em></button>
   </div>
@@ -1000,6 +1009,12 @@ footer a{color:var(--accent)}
 </section>
 
 <!-- ── TAB 7: SEMÁFORO ───────────────────────── -->
+<section class="panel" id="tab-caba">
+  <p class="sec">CABA · últimos informes · corte al 27/11</p>
+  <div class="cb-n" style="margin-top:0">DC Consultores (sep, oct y nov, mismo universo y técnica: residentes en CABA en condiciones de votar, online) es la única consultora de CABA con más de un corte; las lecturas son variación entre dos o tres cortes, no tendencia. Sin promedios ni cruces con series nacionales. Octubre: Larreta, García Moritán y «Otro» vienen de encuestas-argentinas.com (fuente original DC; evidencia máxima MEDIA, marcados <sup style="color:var(--warn)">s</sup>).</div>
+  <div id="cabaCont"><p class="cb-n">Cargando…</p></div>
+</section>
+
 <section class="panel" id="tab-semaforo">
   <p class="sec">Semáforo ejecutivo · may–nov 2026 · corte al 27/11</p>
   <div class="info-box" style="margin-bottom:18px;font-size:11px;line-height:1.6">
@@ -1734,6 +1749,8 @@ function initTab(tab){
     buildLegend('legendGAPDist','chartGAPDist',labs,cols);
   }
 
+  if(tab==='caba'){renderCaba();}
+
   if(tab==='semaforo'){
     renderSemaforo();renderEjes();renderEspecificas();
   }
@@ -2048,6 +2065,40 @@ function renderRangos(){
       if(q){el.textContent=`${q} consultora${q===1?'':'s'} · ${ax[i]}`;break;}}});
   document.querySelectorAll('[data-consultoras]').forEach(el=>{const g=el.dataset.consultoras,grp={IMG,CONS,GESTION};el.textContent=Object.keys(grp[g]||{}).length+' consultoras';});
 }
+let CABA=null;
+async function renderCaba(){
+  const cont=document.getElementById('cabaCont');
+  if(!CABA){try{CABA=await (await fetch('./data/caba_data.json')).json();}catch(e){cont.innerHTML='<p class="cb-n">No se pudo cargar data/caba_data.json.</p>';return;}}
+  const f1=v=>v==null?'—':String(v).replace('.',',');
+  const dl=(a,b)=>{if(a==null||b==null)return['—',''];const d=Math.round((b-a)*10)/10;return[(d>0?'+':'')+String(d).replace('.',',')+' pp',d>0?'up':d<0?'dn':'d'];};
+  const cel=(p)=>p?`<td>${f1(p.v)}${p.sec?'<sup>s</sup>':''}</td>`:'<td class="d">—</td>';
+  const tabla=(series,meses,ult)=>{
+    const [m0,m1]=ult;
+    return `<table class="cb-t"><thead><tr><th></th>${meses.map(m=>`<th>${m}</th>`).join('')}<th>${m0}→${m1}</th></tr></thead><tbody>`+
+    series.map(x=>{const [t,c]=dl(x.puntos[m0]&&x.puntos[m0].v,x.puntos[m1]&&x.puntos[m1].v);return `<tr><td>${esc(x.nombre)}</td>${meses.map(m=>cel(x.puntos[m])).join('')}<td class="${c}">${t}</td></tr>`;}).join('')+'</tbody></table>';
+  };
+  const filas=(ps)=>ps.map(p=>p.fila).join(', ');
+  const trz=(txt)=>`<details class="det-tab" style="margin:0 0 10px"><summary style="font-size:10.5px;color:var(--fg-dim)">Trazabilidad</summary><div class="cb-n">${txt}</div></details>`;
+  let h='';
+  h+=`<div class="cb-h"><b>Jefatura de Gobierno 2027 · escenario</b><span>% · oct → nov · comparabilidad MEDIA: el escenario cambia la proporción de «Otro»</span></div>`+tabla(CABA.jefatura.series,['Oct','Nov'],['Oct','Nov'])+
+     `<div class="cb-n">Bullrich pasa a liderar; Jorge Macri y Santoro se cruzan. Dos cortes: variación, no tendencia.</div>`;
+  h+=`<div class="cb-h"><b>Continuidad o cambio · 2027</b><span>% · sep → nov · comparabilidad ALTA (misma pregunta y categorías)</span></div>`+tabla(CABA.cambio.series,['Sep','Oct','Nov'],['Oct','Nov'])+
+     `<div class="cb-n">Septiembre solo tiene cargada la categoría «cambio de rumbo total». Variación mostrada: oct → nov.</div>`;
+  h+=`<div class="cb-h"><b>Intención de voto por espacio · CABA</b><span>% · oct → nov · comparabilidad MEDIA: solo LLA y PRO figuran en ambos cortes</span></div>`+tabla(CABA.espacio.series,['Oct','Nov'],['Oct','Nov']);
+  h+=`<div class="cb-h"><b>Imagen de dirigentes en CABA</b><span>% positiva (muy buena + buena) y negativa · sep → nov · comparabilidad ALTA</span></div>`+
+     `<table class="cb-t"><thead><tr><th></th><th>Pos sep</th><th>Pos nov</th><th>Var</th><th>Neg sep</th><th>Neg nov</th><th>Var</th></tr></thead><tbody>`+
+     CABA.imagen.map(x=>{const [tp,cp]=dl(x.pos.Sep&&x.pos.Sep.v,x.pos.Nov&&x.pos.Nov.v);const [tn,cn]=dl(x.neg.Sep&&x.neg.Sep.v,x.neg.Nov&&x.neg.Nov.v);
+       return `<tr><td>${esc(x.nombre)}</td>${cel(x.pos.Sep)}${cel(x.pos.Nov)}<td class="${cp}">${tp}</td>${cel(x.neg.Sep)}${cel(x.neg.Nov)}<td class="${cn}">${tn}</td></tr>`;}).join('')+'</tbody></table>'+
+     `<div class="cb-n">Negativa de noviembre solo cargada para Jorge Macri y Kicillof. Imagen personal, no aprobación de gestión.</div>`;
+  h+=`<div class="cb-h"><b>Probabilidad de voto · promedio 0–10</b><span>nov · un solo corte · ranking, sin variación</span></div>`+
+     `<table class="cb-t"><tbody>${CABA.prob_voto.map(x=>`<tr><td>${esc(x.nombre)}</td><td>${f1(x.v)}</td></tr>`).join('')}</tbody></table>`;
+  h+=`<div class="cb-h"><b>Contexto TEM</b><span>no se cruza con las series de opinión</span></div>`+
+     `<table class="cb-t"><tbody><tr><td>IPCBA · variación mensual (IDECBA)</td><td>sep ${f1(IPCBA_FULL[MIPC.indexOf('Sep-26')])}%</td><td>oct ${f1(IPCBA_FULL[MIPC.indexOf('Oct-26')])}%</td></tr>`+
+     `<tr><td>ICC CABA (UTDT)</td><td>oct ${f1(ICC_CABA_13[MESI.indexOf('Oct-26')])}</td><td>nov ${f1(ICC_CABA_13[MESI.indexOf('Nov-26')])}</td></tr></tbody></table>`;
+  h+=trz(`DC Consultores: sep 22–27/09, oct 22–26/10 (n=1.360, ±2,5%, muestreo no probabilístico, dispositivos móviles), nov 18–22/11. Filas de Nivel 2 — Jefatura: ${filas(CABA.jefatura.series.flatMap(x=>Object.values(x.puntos)))}. Continuidad: ${filas(CABA.cambio.series.flatMap(x=>Object.values(x.puntos)))}. Espacio: ${filas(CABA.espacio.series.flatMap(x=>Object.values(x.puntos)))}. Los valores marcados <sup>s</sup> (Nivel 2, filas 2307–2309): FUENTE SECUNDARIA · encuestas-argentinas.com · https://encuestas-argentinas.com/encuestas/provincias/ · consultado 2026-11-27 · fuente original: DC Consultores; coinciden con el gráfico del informe de Drive.`);
+  cont.innerHTML=h;
+}
+
 function renderTablaVar(){
   const box=document.getElementById('tablaVar');if(!box)return;
   const EXTRA={}; // Vozna (pos/neg/aprob) retirado el 17/11: no tiene fila en Nivel 1 ni Nivel 2 — ver pendientes
