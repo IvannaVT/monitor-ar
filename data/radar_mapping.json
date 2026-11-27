@@ -211,6 +211,13 @@
         "pos",
         "neg"
       ]
+    },
+    "IMG.AtlasIntel": {
+      "color": "var(--pos)",
+      "campos": [
+        "pos",
+        "neg"
+      ]
     }
   },
   "asignaciones": [
@@ -686,14 +693,14 @@
       "ruta": "GESTION.AtlasIntel.aprob",
       "eje": "MG",
       "fila": 1204,
-      "nota": "sin PDF en Drive (rescatado de portal)"
+      "nota": "sin PDF en Drive (rescatado de portal) | CORRECCION 2026-11-27: ola con campo 2–7/10, rótulo «Septiembre» del informe (N1 304/382); mes enunciado = septiembre según CORRECCION 2026-11-16 de Nivel 2."
     },
     {
       "modulo": "Gestión nacional",
       "ruta": "GESTION.AtlasIntel.desaprob",
       "eje": "MG",
       "fila": 1203,
-      "nota": "sin PDF en Drive (rescatado de portal)"
+      "nota": "sin PDF en Drive (rescatado de portal) | CORRECCION 2026-11-27: ola con campo 2–7/10, rótulo «Septiembre» del informe (N1 304/382); mes enunciado = septiembre según CORRECCION 2026-11-16 de Nivel 2."
     },
     {
       "modulo": "Gestión nacional",
@@ -1915,6 +1922,132 @@
       "eje": "MI",
       "fila": 1729,
       "nota": "Dato primario de Nivel 2 que faltaba mapear al Monitor (completa la serie; cargado 27/11/2026)."
+    },
+    {
+      "modulo": "Gestión nacional",
+      "ruta": "GESTION.AtlasIntel.aprob",
+      "eje": "MG",
+      "fila": 2255,
+      "nota": "Informe Latam Pulse de Drive (fuente primaria); cargado a Nivel 2 el 27/11/2026."
+    },
+    {
+      "modulo": "Gestión nacional",
+      "ruta": "GESTION.AtlasIntel.desaprob",
+      "eje": "MG",
+      "fila": 2256,
+      "nota": "Informe Latam Pulse de Drive (fuente primaria); cargado a Nivel 2 el 27/11/2026."
+    },
+    {
+      "modulo": "Imagen Milei",
+      "ruta": "IMG.AtlasIntel.pos",
+      "eje": "MI",
+      "fila": 2257,
+      "nota": "Informe Latam Pulse de Drive (fuente primaria); cargado a Nivel 2 el 27/11/2026."
+    },
+    {
+      "modulo": "Imagen Milei",
+      "ruta": "IMG.AtlasIntel.neg",
+      "eje": "MI",
+      "fila": 2258,
+      "nota": "Informe Latam Pulse de Drive (fuente primaria); cargado a Nivel 2 el 27/11/2026."
+    },
+    {
+      "modulo": "Gestión nacional",
+      "ruta": "GESTION.AtlasIntel.aprob",
+      "eje": "MG",
+      "fila": 2259,
+      "nota": "Informe Latam Pulse de Drive (fuente primaria); cargado a Nivel 2 el 27/11/2026."
+    },
+    {
+      "modulo": "Gestión nacional",
+      "ruta": "GESTION.AtlasIntel.desaprob",
+      "eje": "MG",
+      "fila": 2260,
+      "nota": "Informe Latam Pulse de Drive (fuente primaria); cargado a Nivel 2 el 27/11/2026."
+    },
+    {
+      "modulo": "Imagen Milei",
+      "ruta": "IMG.AtlasIntel.pos",
+      "eje": "MI",
+      "fila": 2261,
+      "nota": "Informe Latam Pulse de Drive (fuente primaria); cargado a Nivel 2 el 27/11/2026."
+    },
+    {
+      "modulo": "Imagen Milei",
+      "ruta": "IMG.AtlasIntel.neg",
+      "eje": "MI",
+      "fila": 2262,
+      "nota": "Informe Latam Pulse de Drive (fuente primaria); cargado a Nivel 2 el 27/11/2026."
+    },
+    {
+      "modulo": "Gestión nacional",
+      "ruta": "GESTION.AtlasIntel.aprob",
+      "eje": "MG",
+      "fila": 2263,
+      "nota": "Informe Latam Pulse de Drive (fuente primaria); cargado a Nivel 2 el 27/11/2026."
+    },
+    {
+      "modulo": "Gestión nacional",
+      "ruta": "GESTION.AtlasIntel.desaprob",
+      "eje": "MG",
+      "fila": 2264,
+      "nota": "Informe Latam Pulse de Drive (fuente primaria); cargado a Nivel 2 el 27/11/2026."
+    },
+    {
+      "modulo": "Imagen Milei",
+      "ruta": "IMG.AtlasIntel.pos",
+      "eje": "MI",
+      "fila": 2265,
+      "nota": "Informe Latam Pulse de Drive (fuente primaria); cargado a Nivel 2 el 27/11/2026."
+    },
+    {
+      "modulo": "Imagen Milei",
+      "ruta": "IMG.AtlasIntel.neg",
+      "eje": "MI",
+      "fila": 2266,
+      "nota": "Informe Latam Pulse de Drive (fuente primaria); cargado a Nivel 2 el 27/11/2026."
+    },
+    {
+      "modulo": "Gestión nacional",
+      "ruta": "GESTION.AtlasIntel.aprob",
+      "eje": "MG",
+      "fila": 2267,
+      "nota": "Informe Latam Pulse de Drive (fuente primaria); cargado a Nivel 2 el 27/11/2026."
+    },
+    {
+      "modulo": "Gestión nacional",
+      "ruta": "GESTION.AtlasIntel.desaprob",
+      "eje": "MG",
+      "fila": 2268,
+      "nota": "Informe Latam Pulse de Drive (fuente primaria); cargado a Nivel 2 el 27/11/2026."
+    },
+    {
+      "modulo": "Imagen Milei",
+      "ruta": "IMG.AtlasIntel.pos",
+      "eje": "MI",
+      "fila": 2269,
+      "nota": "Informe Latam Pulse de Drive (fuente primaria); cargado a Nivel 2 el 27/11/2026."
+    },
+    {
+      "modulo": "Imagen Milei",
+      "ruta": "IMG.AtlasIntel.neg",
+      "eje": "MI",
+      "fila": 2270,
+      "nota": "Informe Latam Pulse de Drive (fuente primaria); cargado a Nivel 2 el 27/11/2026."
+    },
+    {
+      "modulo": "Gestión nacional",
+      "ruta": "GESTION.AtlasIntel.aprob",
+      "eje": "MG",
+      "fila": 1433,
+      "nota": "Ola con campo 5–9/11/2026, rótulo octubre (N2 mes 10). Estaba cargada en Nivel 2 y sin mapear."
+    },
+    {
+      "modulo": "Gestión nacional",
+      "ruta": "GESTION.AtlasIntel.desaprob",
+      "eje": "MG",
+      "fila": 1432,
+      "nota": "Ola con campo 5–9/11/2026, rótulo octubre (N2 mes 10). Estaba cargada en Nivel 2 y sin mapear."
     }
   ],
   "retiros": [],
