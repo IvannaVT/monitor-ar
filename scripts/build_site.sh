@@ -16,6 +16,7 @@ cd "$(dirname "$0")/.."
 echo "── Chequeo previo ──"
 python3 monitor_leg_build.py --check
 python3 scripts/build_radar_data.py --check
+python3 scripts/build_caba_data.py --check
 python3 scripts/check_cifras.py
 python3 scripts/check_indicadores.py
 python3 scripts/check_sintaxis.py
@@ -25,6 +26,6 @@ echo "── Sitio público ──"
 rm -rf _site
 mkdir -p _site/data
 cp index.html monitor_ar.html monitor_leg.html radar_eeuu_2026.html 404.html _site/
-cp data/indicadores.json data/radar_data.json _site/data/
+cp data/indicadores.json data/radar_data.json data/caba_data.json _site/data/
 
 echo "_site/ generado con $(find _site -type f | wc -l) archivos"
