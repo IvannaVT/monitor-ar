@@ -1487,6 +1487,20 @@
       "eje": "MV",
       "fila": 1990,
       "nota": "Peronismo kirchnerista, sin proyección de indecisos. Medición única; no se suma con peronismo federal."
+    },
+    {
+      "modulo": "Imagen Milei",
+      "ruta": "IMG.Giacobbe.pos",
+      "eje": "MI",
+      "fila": 2152,
+      "nota": "Completa el hueco de septiembre. Informe Público de Giacobbe de septiembre (PDF Drive 1QsRUsN7, p. 2), campo 30/09–05/10/2026: positiva 36,0 / regular 6,9 / negativa 56,0."
+    },
+    {
+      "modulo": "Imagen Milei",
+      "ruta": "IMG.Giacobbe.neg",
+      "eje": "MI",
+      "fila": 2154,
+      "nota": "Informe Público de Giacobbe de septiembre (PDF Drive 1QsRUsN7, p. 2): 56,0 − 55,7 (agosto) = +0,3 p.p."
     }
   ],
   "retiros": [],

@@ -796,7 +796,7 @@
     56.9,
     57.2,
     55.7,
-    null,
+    56,
     56.8,
     null
    ],
@@ -805,7 +805,7 @@
     37.5,
     33.9,
     36.1,
-    null,
+    36,
     34.9,
     null
    ]
@@ -15363,6 +15363,40 @@
      "nota": "Completa el hueco de septiembre. Estudio Nacional de Proyección de septiembre (PDF Drive 1G2Om8Kk, sección Imagen y conocimiento), campo 1–10/09/2026: Milei 39,3 positiva y 57,1 negativa.",
      "secundaria": "",
      "categoria": "Positiva (muy buena + buena)"
+    },
+    {
+     "tipo": "serie",
+     "modulo": "Imagen Milei",
+     "etiqueta": "IMG · Giacobbe · pos",
+     "valor": 36,
+     "anterior": null,
+     "estado": "nuevo",
+     "consultora": "Giacobbe",
+     "fila": 2152,
+     "base": "nivel2_indicadores",
+     "file_id": "1QsRUsN7Lx50_PMvD-JxEu53JNYxLbOgb",
+     "campo": "2026-09-30→2026-10-05",
+     "unidad": "%",
+     "nota": "Completa el hueco de septiembre. Informe Público de Giacobbe de septiembre (PDF Drive 1QsRUsN7, p. 2), campo 30/09–05/10/2026: positiva 36,0 / regular 6,9 / negativa 56,0.",
+     "secundaria": "",
+     "categoria": "Positiva"
+    },
+    {
+     "tipo": "serie",
+     "modulo": "Imagen Milei",
+     "etiqueta": "IMG · Giacobbe · neg",
+     "valor": 56,
+     "anterior": null,
+     "estado": "nuevo",
+     "consultora": "Giacobbe",
+     "fila": 2154,
+     "base": "nivel2_indicadores",
+     "file_id": "1QsRUsN7Lx50_PMvD-JxEu53JNYxLbOgb",
+     "campo": "2026-09-30→2026-10-05",
+     "unidad": "%",
+     "nota": "Informe Público de Giacobbe de septiembre (PDF Drive 1QsRUsN7, p. 2): 56,0 − 55,7 (agosto) = +0,3 p.p.",
+     "secundaria": "",
+     "categoria": "Negativa"
     }
    ],
    "May-26": [
@@ -17997,8 +18031,8 @@
    "data/bases/radar_fuentes_complementarias.tsv",
    "data/radar_mapping.json"
   ],
-  "valores_trazados": 542,
-  "nuevos": 191,
+  "valores_trazados": 544,
+  "nuevos": 193,
   "corregidos": 15,
   "retirados": 0,
   "puntuales": 0,
