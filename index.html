@@ -102,6 +102,7 @@ img{max-width:100%}
 .sem-it .sem-m{grid-column:2/4;display:flex;flex-wrap:wrap;gap:4px 6px;align-items:center;font-size:10.5px;color:var(--fg-dim)}
 .sem-it .sem-m .signal{font-size:9.5px;padding:1px 7px}
 .sem-it[open]{background:color-mix(in srgb,var(--fg-dim) 6%,transparent)}
+.sem-it.ej .sem-m{gap:2px 12px}@media(min-width:900px){.sem-it.ej>summary{grid-template-columns:22px minmax(0,.9fr) 130px minmax(0,2fr)}.sem-it.ej .sem-m{flex-wrap:wrap;white-space:normal}}
 .sem-it .sem-vl{font-family:'IBM Plex Sans',sans-serif;font-size:11px;white-space:normal;line-height:1.2}
 .sem-det{padding:0 0 8px 30px;font-size:11.5px;line-height:1.45;display:grid;gap:3px}
 .sem-det .k{color:var(--fg-dim);font-size:10px;text-transform:uppercase;letter-spacing:.4px;margin-right:4px}
@@ -1894,22 +1895,23 @@ function renderGAP(){
 }
 function renderEjes(){
   const cont=document.getElementById('ejesTabla');if(!cont)return;
-  cont.innerHTML=`<div class="table-wrap"><table>
-    <thead><tr><th>Eje</th><th>Fuentes</th><th>Rango comparable</th><th>Verificación previa</th></tr></thead>
-    <tbody>${EJES.map(e=>{
-      const conVal=e.grupos.filter(g=>g.min!=null);
-      const celda=!e.grupos.length?'<span style="color:var(--warn)">eje vacío en este corte</span>'
-        :conVal.length?conVal.map(g=>{
-          const comp=g.composicion&&g.composicion!=='estandar'?' · '+esc(g.composicion):'';
-          const val=g.rango_valido?`<strong>${fmt(g.min)}–${fmt(g.max)}%</strong> <span style="color:var(--fg-dim)">(${g.n} fuentes · ${esc(g.mes)})</span>`
-            :`${fmt(g.min)}% <span style="color:var(--warn)">una sola fuente: no se arma rango</span>`;
-          return `<div>${esc(g.campo)}${comp}: ${val}<div style="padding-left:8px;color:var(--fg-dim)">${Object.keys(g.consultoras).join(' · ')}</div></div>`;}).join('')
-        :'<span style="color:var(--fg-dim)">series intra-consultora: no se arma rango entre fuentes</span>';
-      return `<tr><td><strong>${esc(e.nombre)}</strong></td>
-        <td style="font-size:10px;color:var(--fg-dim)">${e.fuentes.length?esc(e.fuentes.join(' · ')):'—'}</td>
-        <td style="font-size:10px">${celda}</td>
-        <td style="font-size:10px;color:var(--fg-dim)">${esc(e.verificacion)}</td></tr>`;}).join('')}
-    </tbody></table></div>`;
+  const limpiar=t=>String(t||'').replace(/\s*\((?:filas? )?N2 [^)]*\)/g,'').replace(/\s*N2 \d[\d–, y-]*/g,'').trim();
+  cont.innerHTML='<div class="sem-lista">'+EJES.map(e=>{
+    const conVal=e.grupos.filter(g=>g.min!=null);
+    const rango=g=>g.rango_valido?`${fmt(g.min)}–${fmt(g.max)}%`:`${fmt(g.min)}%`;
+    const etq=g=>String(g.campo).replace(/\s*·.*$/,'')+(g.composicion&&g.composicion!=='estandar'?' · '+g.composicion.replace(/^pj · /,''):'');
+    const cuenta=!e.grupos.length?'eje vacío':conVal.length?Math.max(...conVal.map(g=>g.n))+' fuentes':'intra-consultora';
+    const resumen=conVal.length?conVal.map(g=>`<span><strong style="color:var(--fg)">${esc(etq(g))}</strong> ${rango(g)}${g.rango_valido?'':' <span style="color:var(--warn)">1 fuente</span>'}</span>`).join(''):`<span>${!e.grupos.length?'sin series en este corte':'sin rango entre fuentes'}</span>`;
+    const mes=conVal.length?conVal[0].mes:'';
+    const det=conVal.map(g=>`<div><span class="k">${esc(etq(g))}</span>${g.rango_valido?`<strong>${rango(g)}</strong> · ${g.n} fuentes · ${esc(g.mes)}`:`${rango(g)} · una sola fuente: no se arma rango`}<div style="color:var(--fg-dim)">${esc(Object.keys(g.consultoras).join(' · '))}</div></div>`).join('');
+    return `<details class="sem-it ej"><summary>
+      <span class="sem-e" style="font-size:11px;color:var(--fg-dim)">▸</span><span class="sem-n">${esc(e.nombre)}</span><span class="sem-v sem-vl" style="color:${e.grupos.length?'var(--fg-dim)':'var(--warn)'}">${esc(cuenta)}${mes?' · '+esc(mes):''}</span>
+      <span class="sem-m">${resumen}</span>
+    </summary><div class="sem-det">
+      ${det}
+      ${e.fuentes.length?`<div><span class="k">fuentes</span>${esc(e.fuentes.join(' · '))}</div>`:''}
+      <div><span class="k">verificación</span>${esc(limpiar(e.verificacion))}</div>
+    </div></details>`;}).join('')+'</div>';
 }
 function renderEspecificas(){
   const cont=document.getElementById('preguntasEspecificas');if(!cont)return;
