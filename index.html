@@ -1011,7 +1011,7 @@ footer a{color:var(--accent)}
 <!-- ── TAB 7: SEMÁFORO ───────────────────────── -->
 <section class="panel" id="tab-caba">
   <p class="sec">CABA · últimos informes · corte al 27/11</p>
-  <div class="cb-n" style="margin-top:0">DC Consultores (sep, oct y nov, mismo universo y técnica: residentes en CABA en condiciones de votar, online) es la única consultora de CABA con más de un corte; las lecturas son variación entre dos o tres cortes, no tendencia. Sin promedios ni cruces con series nacionales. Octubre: Larreta, García Moritán y «Otro» vienen de encuestas-argentinas.com (fuente original DC; evidencia máxima MEDIA, marcados <sup style="color:var(--warn)">s</sup>).</div>
+  <div class="cb-n" style="margin-top:0">DC Consultores (sep, oct y nov, mismo universo y técnica: residentes en CABA en condiciones de votar, online) es la única consultora de CABA con más de un corte; las lecturas son variación entre dos o tres cortes, no tendencia. Sin promedios ni cruces con series nacionales. Octubre: Larreta, García Moritán y «Otro» vienen de encuestas-argentinas.com (fuente original DC; evidencia máxima MEDIA, marcados <sup style="color:var(--warn)">s</sup>); <sup style="color:var(--warn)">v</sup> = cifra de la ficha de Nivel 1, a verificar contra el PDF).</div>
   <div id="cabaCont"><p class="cb-n">Cargando…</p></div>
 </section>
 
@@ -2079,15 +2079,21 @@ async function renderCaba(){
   if(!CABA){try{CABA=await (await fetch('./data/caba_data.json')).json();}catch(e){cont.innerHTML='<p class="cb-n">No se pudo cargar data/caba_data.json.</p>';return;}}
   const f1=v=>v==null?'—':String(v).replace('.',',');
   const dl=(a,b)=>{if(a==null||b==null)return['—',''];const d=Math.round((b-a)*10)/10;return[(d>0?'+':'')+String(d).replace('.',',')+' pp',d>0?'up':d<0?'dn':'d'];};
-  const cel=(p)=>p?`<td>${f1(p.v)}${p.sec?'<sup>s</sup>':''}</td>`:'<td class="d">—</td>';
+  const cel=(p)=>p?`<td>${f1(p.v)}${p.sec?'<sup>s</sup>':''}${p.ver?'<sup>v</sup>':''}</td>`:'<td class="d">—</td>';
   const tabla=(series,meses,ult)=>{
     const [m0,m1]=ult;
     return `<table class="cb-t"><thead><tr><th></th>${meses.map(m=>`<th>${m}</th>`).join('')}<th>${m0}→${m1}</th></tr></thead><tbody>`+
-    series.map(x=>{const [t,c]=dl(x.puntos[m0]&&x.puntos[m0].v,x.puntos[m1]&&x.puntos[m1].v);return `<tr><td>${esc(x.nombre)}</td>${meses.map(m=>cel(x.puntos[m])).join('')}<td class="${c}">${t}</td></tr>`;}).join('')+'</tbody></table>';
+    series.map(x=>{const sv=x.puntos[m0]&&x.puntos[m0].ver&&x.nombre!=='La Libertad Avanza'&&x.nombre!=='PRO';const [t,c]=sv?['no comparable','d']:dl(x.puntos[m0]&&x.puntos[m0].v,x.puntos[m1]&&x.puntos[m1].v);return `<tr><td>${esc(x.nombre)}</td>${meses.map(m=>cel(x.puntos[m])).join('')}<td class="${c}">${t}</td></tr>`;}).join('')+'</tbody></table>';
   };
   const filas=(ps)=>ps.map(p=>p.fila).join(', ');
   const trz=(txt)=>`<details class="det-tab" style="margin:0 0 10px"><summary style="font-size:10.5px;color:var(--fg-dim)">Trazabilidad</summary><div class="cb-n">${txt}</div></details>`;
   let h='';
+  h+=`<div class="cb-h"><b>Foto por consultora</b><span>qué hay cargado de CABA y qué serie permite armar</span></div>`+
+     CABA.cobertura.map(c=>`<details class="det-tab" ${c.consultora==='DC Consultores'?'open':''} style="margin:0 0 6px"><summary><b>${esc(c.consultora)}</b> <span class="sem-res">${c.tipo} · ${c.informes.length} ${c.informes.length>1?'cortes':'corte'}</span></summary>`+
+     `<table class="cb-t" style="margin-top:4px"><thead><tr><th>Mes</th><th style="text-align:left">Campo · muestra</th><th style="text-align:left">Cargado</th><th style="text-align:left">Serie</th></tr></thead><tbody>`+
+     c.informes.map(i=>`<tr><td>${esc(i.mes)}</td><td style="text-align:left;font-family:inherit;white-space:normal">${esc(i.campo)}${i.muestra?' · '+esc(i.muestra):''}</td><td style="text-align:left;font-family:inherit;white-space:normal">${esc(i.carga)}${i.valor?' · <b>'+f1(i.valor[0])+'</b>':''}${i.estado==='Parcial'?' <sup>parcial</sup>':''}</td><td style="text-align:left;font-family:inherit;white-space:normal;color:var(--fg-dim)">${esc(i.serie)}</td></tr>`).join('')+
+     `</tbody></table></details>`).join('')+
+     `<div class="cb-n">Series armables hoy, todas de DC: continuidad/cambio (sep–nov, ALTA), imagen positiva (sep–nov, ALTA) y voto por espacio y Jefatura (oct–nov, MEDIA). Las demás consultoras tienen un solo corte o series propias; no se mezclan con DC.</div>`;
   h+=`<div class="cb-h"><b>Jefatura de Gobierno 2027 · escenario</b><span>% · oct → nov · comparabilidad MEDIA: el escenario cambia la proporción de «Otro»</span></div>`+tabla(CABA.jefatura.series,['Oct','Nov'],['Oct','Nov'])+
      `<div class="cb-n">Bullrich pasa a liderar; Jorge Macri y Santoro se cruzan. Dos cortes: variación, no tendencia.</div>`;
   h+=`<div class="cb-h"><b>Continuidad o cambio · 2027</b><span>% · sep → nov · comparabilidad ALTA (misma pregunta y categorías)</span></div>`+tabla(CABA.cambio.series,['Sep','Oct','Nov'],['Oct','Nov'])+

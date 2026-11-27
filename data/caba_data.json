@@ -1,4 +1,120 @@
 {
+ "cobertura": [
+  {
+   "consultora": "DC Consultores",
+   "tipo": "CONV",
+   "informes": [
+    {
+     "mes": "Jul",
+     "campo": "19–22/07",
+     "muestra": "1.360 · ±2,7",
+     "carga": "Solo imagen 50/50 de Macri y Milei",
+     "estado": "Parcial",
+     "serie": "No comparable: escala sin «regular» ni «no lo conozco»"
+    },
+    {
+     "mes": "Ago",
+     "campo": "23–27/08",
+     "muestra": "918 · ±2,5",
+     "carga": "3 cifras de clima (casa porteña, esperanza, desolación)",
+     "estado": "Parcial",
+     "serie": "Sin imagen ni voto cargados"
+    },
+    {
+     "mes": "Sep",
+     "campo": "22–27/09",
+     "muestra": "Pendiente de ficha",
+     "carga": "Imagen de 13 dirigentes, continuidad/cambio, clima",
+     "estado": "Cargado",
+     "serie": "Imagen y continuidad/cambio: ALTA con nov"
+    },
+    {
+     "mes": "Oct",
+     "campo": "22–26/10",
+     "muestra": "1.360 · ±2,5",
+     "carga": "Voto por espacio, Jefatura, continuidad/cambio",
+     "estado": "Cargado",
+     "serie": "Continuidad/cambio ALTA; Jefatura y espacio MEDIA"
+    },
+    {
+     "mes": "Nov",
+     "campo": "18–22/11",
+     "muestra": "Ver informe",
+     "carga": "Voto, Jefatura, imagen, emociones, probabilidad de voto",
+     "estado": "Cargado",
+     "serie": "Cierra las series sep–nov"
+    }
+   ]
+  },
+  {
+   "consultora": "CB Global Data",
+   "tipo": "CONV",
+   "informes": [
+    {
+     "mes": "Sep",
+     "campo": "21–25/09",
+     "muestra": "",
+     "carga": "Imagen positiva del Jefe de Gobierno de CABA",
+     "valor": [
+      46.9,
+      928
+     ],
+     "serie": "Un corte; ranking de alcaldes de América Latina"
+    },
+    {
+     "mes": "Nov",
+     "campo": "08–13/11",
+     "muestra": "",
+     "carga": "Imagen positiva de Milei, Bullrich y Kicillof en CABA",
+     "valor": null,
+     "serie": "Un corte; no se mezcla con DC"
+    }
+   ]
+  },
+  {
+   "consultora": "OPSA UBA",
+   "tipo": "CONV",
+   "informes": [
+    {
+     "mes": "Ago",
+     "campo": "25/08–01/09",
+     "muestra": "1.258 residentes CABA",
+     "carga": "Calificación 1–10 al Gobierno de la Ciudad",
+     "valor": [
+      4.5,
+      366
+     ],
+     "serie": "Un corte; escala distinta de la aprobación"
+    }
+   ]
+  },
+  {
+   "consultora": "CIF / UTDT",
+   "tipo": "CONV",
+   "informes": [
+    {
+     "mes": "Jul–Nov",
+     "campo": "mensual",
+     "muestra": "",
+     "carga": "ICC con apertura CABA",
+     "serie": "Serie mensual propia (expectativas)"
+    }
+   ]
+  },
+  {
+   "consultora": "IDECBA",
+   "tipo": "TEM",
+   "informes": [
+    {
+     "mes": "Abr–Oct",
+     "campo": "mensual",
+     "muestra": "",
+     "carga": "IPCBA",
+     "serie": "Serie mensual propia (dato duro)"
+    }
+   ]
+  }
+ ],
  "jefatura": {
   "series": [
    {
@@ -163,6 +279,11 @@
    {
     "nombre": "Peronismo",
     "puntos": {
+     "Oct": {
+      "v": 5.2,
+      "fila": 2315,
+      "ver": true
+     },
      "Nov": {
       "v": 18.4,
       "fila": 1896
@@ -172,6 +293,11 @@
    {
     "nombre": "Kirchnerismo",
     "puntos": {
+     "Oct": {
+      "v": 13.7,
+      "fila": 2314,
+      "ver": true
+     },
      "Nov": {
       "v": 11.3,
       "fila": 1897
@@ -181,6 +307,11 @@
    {
     "nombre": "Otro / indefinidos",
     "puntos": {
+     "Oct": {
+      "v": 22.9,
+      "fila": 2313,
+      "ver": true
+     },
      "Nov": {
       "v": 26.6,
       "fila": 1893
