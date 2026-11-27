@@ -1896,16 +1896,16 @@ function renderGAP(){
 function renderEjes(){
   const cont=document.getElementById('ejesTabla');if(!cont)return;
   const limpiar=t=>String(t||'').replace(/\s*\((?:filas? )?N2 [^)]*\)/g,'').replace(/\s*N2 \d[\d–, y-]*/g,'').trim();
-  cont.innerHTML='<div class="sem-lista">'+EJES.map(e=>{
+  cont.innerHTML='<div class="sem-lista">'+EJES.filter(e=>e.grupos.some(g=>g.min!=null)).map(e=>{
     const conVal=e.grupos.filter(g=>g.min!=null);
     const rango=g=>g.rango_valido?`${fmt(g.min)}–${fmt(g.max)}%`:`${fmt(g.min)}%`;
     const etq=g=>String(g.campo).replace(/\s*·.*$/,'')+(g.composicion&&g.composicion!=='estandar'?' · '+g.composicion.replace(/^pj · /,''):'');
-    const cuenta=!e.grupos.length?'eje vacío':conVal.length?Math.max(...conVal.map(g=>g.n))+' fuentes':'intra-consultora';
-    const resumen=conVal.length?conVal.map(g=>`<span><strong style="color:var(--fg)">${esc(etq(g))}</strong> ${rango(g)}${g.rango_valido?'':' <span style="color:var(--warn)">1 fuente</span>'}</span>`).join(''):`<span>${!e.grupos.length?'sin series en este corte':'sin rango entre fuentes'}</span>`;
+    const cuenta='';
+    const resumen=conVal.length?conVal.map(g=>`<span><strong style="color:var(--fg)">${esc(etq(g))}</strong> ${rango(g)}</span>`).join(''):`<span>${!e.grupos.length?'sin series en este corte':'sin rango entre fuentes'}</span>`;
     const mes=conVal.length?conVal[0].mes:'';
-    const det=conVal.map(g=>`<div><span class="k">${esc(etq(g))}</span>${g.rango_valido?`<strong>${rango(g)}</strong> · ${g.n} fuentes · ${esc(g.mes)}`:`${rango(g)} · una sola fuente: no se arma rango`}<div style="color:var(--fg-dim)">${esc(Object.keys(g.consultoras).join(' · '))}</div></div>`).join('');
+    const det=conVal.map(g=>`<div><span class="k">${esc(etq(g))}</span>${g.rango_valido?`<strong>${rango(g)}</strong> · ${esc(g.mes)}`:`${rango(g)} · una sola fuente: no se arma rango`}<div style="color:var(--fg-dim)">${esc(Object.keys(g.consultoras).join(' · '))}</div></div>`).join('');
     return `<details class="sem-it ej"><summary>
-      <span class="sem-e" style="font-size:11px;color:var(--fg-dim)">▸</span><span class="sem-n">${esc(e.nombre)}</span><span class="sem-v sem-vl" style="color:${e.grupos.length?'var(--fg-dim)':'var(--warn)'}">${esc(cuenta)}${mes?' · '+esc(mes):''}</span>
+      <span class="sem-e" style="font-size:11px;color:var(--fg-dim)">▸</span><span class="sem-n">${esc(e.nombre)}</span><span class="sem-v sem-vl" style="color:${e.grupos.length?'var(--fg-dim)':'var(--warn)'}">${esc(mes)}</span>
       <span class="sem-m">${resumen}</span>
     </summary><div class="sem-det">
       ${det}
