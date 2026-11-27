@@ -4349,17 +4349,6 @@
   ],
   "calendario": [
     {
-      "modulo": "ICG",
-      "mes": "Nov-26",
-      "icono": "🏛️",
-      "nombre": "ICG UTDT",
-      "periodo": "nov-26",
-      "fecha": "~17 nov",
-      "fuente": "UTDT Esc. de Gobierno",
-      "metodo": "fecha estimada por regularidad histórica, vía monitorargy.com (MCP, herramienta calendario, consultado 2026-11-11)",
-      "clase": "upcoming"
-    },
-    {
       "modulo": "IPCBA CABA",
       "mes": "Nov-26",
       "icono": "🏙️",
@@ -4420,7 +4409,7 @@
       "eje": "MESI",
       "unidad": "",
       "fuente": "UTDT",
-      "fecha": "oct",
+      "fecha": "campo 3–17 nov",
       "clase_valor": "neu"
     }
   ],
