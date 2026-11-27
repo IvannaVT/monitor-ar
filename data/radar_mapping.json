@@ -4875,10 +4875,10 @@
     }
   ],
   "icg_variacion_oficial": {
-    "mes": "Oct-26",
-    "valor": 0.9,
-    "fuente": "UTDT, Escuela de Gobierno · informe mensual del ICG de octubre de 2026 (1,95 puntos)",
-    "nota": "Variación oficial informada por UTDT. El cociente entre los índices redondeados de la serie (1,95 / 1,94) da +0,5%: no es equivalente y no se publica como tal."
+    "mes": "Nov-26",
+    "valor": 4.1,
+    "fuente": "UTDT, Escuela de Gobierno · informe mensual del ICG de noviembre de 2026 (2,04 puntos)",
+    "nota": "Variación oficial informada por UTDT (+4,1% vs octubre), calculada con valores sin redondear. El cociente de los índices redondeados de la serie (2,04 / 1,95) da +4,6%: no es equivalente y no se publica como tal."
   },
   "agenda_ranking": {
     "titulo": "Problema principal · Proyección · nov-26 (corte parcial)",

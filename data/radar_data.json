@@ -6467,7 +6467,12 @@
    "valor": 2.04,
    "mes": "Nov-26",
    "anterior": 1.95,
-   "var_oficial": null,
+   "var_oficial": {
+    "mes": "Nov-26",
+    "valor": 4.1,
+    "fuente": "UTDT, Escuela de Gobierno · informe mensual del ICG de noviembre de 2026 (2,04 puntos)",
+    "nota": "Variación oficial informada por UTDT (+4,1% vs octubre), calculada con valores sin redondear. El cociente de los índices redondeados de la serie (2,04 / 1,95) da +4,6%: no es equivalente y no se publica como tal."
+   },
    "max12": 2.5,
    "min12": 1.94
   },

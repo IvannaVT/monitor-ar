@@ -1797,12 +1797,12 @@ function renderKPIs(){
     <div class="kpi-sub-row"><span class="kpi-sub-lbl">GBA</span><span class="kpi-sub-val">${fmt(ICC_GBA_14[iICC])}</span></div></div>`;
   if(eg){const vo=g.var_oficial,d=vo?vo.valor:null;
     eg.innerHTML=`<div class="kpi-label">ICG · ${esc(g.mes.toLowerCase())}</div><div class="kpi-num">${fmt(g.valor)}</div>
-    <div class="kpi-meta"><span class="kpi-delta ${d>0?'up':'down'}">${d==null?'':(d>0?'+':'')+d.toFixed(1).replace('.',',')+'%'}</span><span class="kpi-sub">m/m oficial · vs ${fmt(g.anterior)} sep-26 · UTDT Escuela de Gobierno</span></div>
+    <div class="kpi-meta"><span class="kpi-delta ${d>0?'up':'down'}">${d==null?'':(d>0?'+':'')+d.toFixed(1).replace('.',',')+'%'}</span><span class="kpi-sub">m/m oficial · vs ${fmt(g.anterior)} oct-26 · UTDT Escuela de Gobierno</span></div>
     <div class="kpi-subs"><div class="kpi-sub-row"><span class="kpi-sub-lbl">Escala</span><span class="kpi-sub-val">0–5</span></div>
     <div class="kpi-sub-row"><span class="kpi-sub-lbl">Máx 12m</span><span class="kpi-sub-val">${fmt(g.max12)}</span></div>
     <div class="kpi-sub-row"><span class="kpi-sub-lbl">Mín 12m</span><span class="kpi-sub-val">${fmt(g.min12)}</span></div></div>`;}
   const src=document.getElementById('srcICCICG');
-  if(src)src.innerHTML=`ICC ${esc(k.mes)}: ${fmt(k.valor)} · campo 3–17 nov · <a href="https://www.utdt.edu/ver_nota_prensa.php?id_item_menu=6&id_nota_prensa=23683" target="_blank" rel="noopener">CIF/UTDT · cifras reproducidas de Perfil</a> · ICG ${esc(g.mes)}: ${fmt(g.valor)} (N2 fila 1086) · ICG may–sep desde N2 filas 1030–1034 · UTDT / Poliarquía`;
+  if(src)src.innerHTML=`ICC ${esc(k.mes)}: ${fmt(k.valor)} · campo 3–17 nov · <a href="https://www.utdt.edu/ver_nota_prensa.php?id_item_menu=6&id_nota_prensa=23683" target="_blank" rel="noopener">CIF/UTDT · cifras reproducidas de Perfil</a> · ICG ${esc(g.mes)}: ${fmt(g.valor)} (N2 fila 1788) · ICG may–oct desde N2 filas 1030–1034 y 1086 · UTDT / Poliarquía`;
   document.querySelectorAll('[data-bind="ICC_OCT_TL"]').forEach(e=>e.textContent=k.oct_pendiente?'s/d':fmt(ICC[MESI.indexOf('Oct-26')]));
 }
 /* ── GAP CONV–SL y SEMÁFORO: se dibujan desde radar_data.json ───── */
