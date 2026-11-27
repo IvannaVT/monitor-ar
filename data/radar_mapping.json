@@ -211,6 +211,27 @@
         "pos",
         "neg"
       ]
+    },
+    "IMG.AtlasIntel": {
+      "color": "var(--pos)",
+      "campos": [
+        "pos",
+        "neg"
+      ]
+    },
+    "GESTION.Equipo Mide": {
+      "color": "var(--c1)",
+      "campos": [
+        "aprob",
+        "desaprob"
+      ]
+    },
+    "IMG.Equipo Mide": {
+      "color": "var(--c1)",
+      "campos": [
+        "pos",
+        "neg"
+      ]
     }
   },
   "asignaciones": [
@@ -686,14 +707,14 @@
       "ruta": "GESTION.AtlasIntel.aprob",
       "eje": "MG",
       "fila": 1204,
-      "nota": "sin PDF en Drive (rescatado de portal)"
+      "nota": "sin PDF en Drive (rescatado de portal) | CORRECCION 2026-11-27: ola con campo 2–7/10, rótulo «Septiembre» del informe (N1 304/382); mes enunciado = septiembre según CORRECCION 2026-11-16 de Nivel 2."
     },
     {
       "modulo": "Gestión nacional",
       "ruta": "GESTION.AtlasIntel.desaprob",
       "eje": "MG",
       "fila": 1203,
-      "nota": "sin PDF en Drive (rescatado de portal)"
+      "nota": "sin PDF en Drive (rescatado de portal) | CORRECCION 2026-11-27: ola con campo 2–7/10, rótulo «Septiembre» del informe (N1 304/382); mes enunciado = septiembre según CORRECCION 2026-11-16 de Nivel 2."
     },
     {
       "modulo": "Gestión nacional",
@@ -1915,6 +1936,391 @@
       "eje": "MI",
       "fila": 1729,
       "nota": "Dato primario de Nivel 2 que faltaba mapear al Monitor (completa la serie; cargado 27/11/2026)."
+    },
+    {
+      "modulo": "Gestión nacional",
+      "ruta": "GESTION.AtlasIntel.aprob",
+      "eje": "MG",
+      "fila": 2255,
+      "nota": "Informe Latam Pulse de Drive (fuente primaria); cargado a Nivel 2 el 27/11/2026."
+    },
+    {
+      "modulo": "Gestión nacional",
+      "ruta": "GESTION.AtlasIntel.desaprob",
+      "eje": "MG",
+      "fila": 2256,
+      "nota": "Informe Latam Pulse de Drive (fuente primaria); cargado a Nivel 2 el 27/11/2026."
+    },
+    {
+      "modulo": "Imagen Milei",
+      "ruta": "IMG.AtlasIntel.pos",
+      "eje": "MI",
+      "fila": 2257,
+      "nota": "Informe Latam Pulse de Drive (fuente primaria); cargado a Nivel 2 el 27/11/2026."
+    },
+    {
+      "modulo": "Imagen Milei",
+      "ruta": "IMG.AtlasIntel.neg",
+      "eje": "MI",
+      "fila": 2258,
+      "nota": "Informe Latam Pulse de Drive (fuente primaria); cargado a Nivel 2 el 27/11/2026."
+    },
+    {
+      "modulo": "Gestión nacional",
+      "ruta": "GESTION.AtlasIntel.aprob",
+      "eje": "MG",
+      "fila": 2259,
+      "nota": "Informe Latam Pulse de Drive (fuente primaria); cargado a Nivel 2 el 27/11/2026."
+    },
+    {
+      "modulo": "Gestión nacional",
+      "ruta": "GESTION.AtlasIntel.desaprob",
+      "eje": "MG",
+      "fila": 2260,
+      "nota": "Informe Latam Pulse de Drive (fuente primaria); cargado a Nivel 2 el 27/11/2026."
+    },
+    {
+      "modulo": "Imagen Milei",
+      "ruta": "IMG.AtlasIntel.pos",
+      "eje": "MI",
+      "fila": 2261,
+      "nota": "Informe Latam Pulse de Drive (fuente primaria); cargado a Nivel 2 el 27/11/2026."
+    },
+    {
+      "modulo": "Imagen Milei",
+      "ruta": "IMG.AtlasIntel.neg",
+      "eje": "MI",
+      "fila": 2262,
+      "nota": "Informe Latam Pulse de Drive (fuente primaria); cargado a Nivel 2 el 27/11/2026."
+    },
+    {
+      "modulo": "Gestión nacional",
+      "ruta": "GESTION.AtlasIntel.aprob",
+      "eje": "MG",
+      "fila": 2263,
+      "nota": "Informe Latam Pulse de Drive (fuente primaria); cargado a Nivel 2 el 27/11/2026."
+    },
+    {
+      "modulo": "Gestión nacional",
+      "ruta": "GESTION.AtlasIntel.desaprob",
+      "eje": "MG",
+      "fila": 2264,
+      "nota": "Informe Latam Pulse de Drive (fuente primaria); cargado a Nivel 2 el 27/11/2026."
+    },
+    {
+      "modulo": "Imagen Milei",
+      "ruta": "IMG.AtlasIntel.pos",
+      "eje": "MI",
+      "fila": 2265,
+      "nota": "Informe Latam Pulse de Drive (fuente primaria); cargado a Nivel 2 el 27/11/2026."
+    },
+    {
+      "modulo": "Imagen Milei",
+      "ruta": "IMG.AtlasIntel.neg",
+      "eje": "MI",
+      "fila": 2266,
+      "nota": "Informe Latam Pulse de Drive (fuente primaria); cargado a Nivel 2 el 27/11/2026."
+    },
+    {
+      "modulo": "Gestión nacional",
+      "ruta": "GESTION.AtlasIntel.aprob",
+      "eje": "MG",
+      "fila": 2267,
+      "nota": "Informe Latam Pulse de Drive (fuente primaria); cargado a Nivel 2 el 27/11/2026."
+    },
+    {
+      "modulo": "Gestión nacional",
+      "ruta": "GESTION.AtlasIntel.desaprob",
+      "eje": "MG",
+      "fila": 2268,
+      "nota": "Informe Latam Pulse de Drive (fuente primaria); cargado a Nivel 2 el 27/11/2026."
+    },
+    {
+      "modulo": "Imagen Milei",
+      "ruta": "IMG.AtlasIntel.pos",
+      "eje": "MI",
+      "fila": 2269,
+      "nota": "Informe Latam Pulse de Drive (fuente primaria); cargado a Nivel 2 el 27/11/2026."
+    },
+    {
+      "modulo": "Imagen Milei",
+      "ruta": "IMG.AtlasIntel.neg",
+      "eje": "MI",
+      "fila": 2270,
+      "nota": "Informe Latam Pulse de Drive (fuente primaria); cargado a Nivel 2 el 27/11/2026."
+    },
+    {
+      "modulo": "Gestión nacional",
+      "ruta": "GESTION.AtlasIntel.aprob",
+      "eje": "MG",
+      "fila": 1433,
+      "nota": "Ola con campo 5–9/11/2026, rótulo octubre (N2 mes 10). Estaba cargada en Nivel 2 y sin mapear."
+    },
+    {
+      "modulo": "Gestión nacional",
+      "ruta": "GESTION.AtlasIntel.desaprob",
+      "eje": "MG",
+      "fila": 1432,
+      "nota": "Ola con campo 5–9/11/2026, rótulo octubre (N2 mes 10). Estaba cargada en Nivel 2 y sin mapear."
+    },
+    {
+      "modulo": "Imagen Milei",
+      "ruta": "IMG.QMonitor.pos",
+      "eje": "MI",
+      "fila": 2271,
+      "nota": "Serie de la p. 27 del informe de noviembre de QMonitor; edición = mes del gráfico + 1 (misma convención que gestión). Valor de la etiqueta del gráfico."
+    },
+    {
+      "modulo": "Imagen Milei",
+      "ruta": "IMG.QMonitor.neg",
+      "eje": "MI",
+      "fila": 2272,
+      "nota": "Serie de la p. 27 del informe de noviembre de QMonitor; edición = mes del gráfico + 1 (misma convención que gestión). Valor de la etiqueta del gráfico."
+    },
+    {
+      "modulo": "Imagen Milei",
+      "ruta": "IMG.QMonitor.pos",
+      "eje": "MI",
+      "fila": 2273,
+      "nota": "Serie de la p. 27 del informe de noviembre de QMonitor; edición = mes del gráfico + 1 (misma convención que gestión). Valor de la etiqueta del gráfico."
+    },
+    {
+      "modulo": "Imagen Milei",
+      "ruta": "IMG.QMonitor.neg",
+      "eje": "MI",
+      "fila": 2274,
+      "nota": "Serie de la p. 27 del informe de noviembre de QMonitor; edición = mes del gráfico + 1 (misma convención que gestión). Valor de la etiqueta del gráfico."
+    },
+    {
+      "modulo": "Imagen Milei",
+      "ruta": "IMG.QMonitor.pos",
+      "eje": "MI",
+      "fila": 2275,
+      "nota": "Serie de la p. 27 del informe de noviembre de QMonitor; edición = mes del gráfico + 1 (misma convención que gestión). Valor de la etiqueta del gráfico."
+    },
+    {
+      "modulo": "Imagen Milei",
+      "ruta": "IMG.QMonitor.neg",
+      "eje": "MI",
+      "fila": 2276,
+      "nota": "Serie de la p. 27 del informe de noviembre de QMonitor; edición = mes del gráfico + 1 (misma convención que gestión). Valor de la etiqueta del gráfico."
+    },
+    {
+      "modulo": "Imagen Milei",
+      "ruta": "IMG.QMonitor.pos",
+      "eje": "MI",
+      "fila": 2277,
+      "nota": "Serie de la p. 27 del informe de noviembre de QMonitor; edición = mes del gráfico + 1 (misma convención que gestión). Valor de la etiqueta del gráfico."
+    },
+    {
+      "modulo": "Imagen Milei",
+      "ruta": "IMG.QMonitor.neg",
+      "eje": "MI",
+      "fila": 2278,
+      "nota": "Serie de la p. 27 del informe de noviembre de QMonitor; edición = mes del gráfico + 1 (misma convención que gestión). Valor de la etiqueta del gráfico."
+    },
+    {
+      "modulo": "Imagen Milei",
+      "ruta": "IMG.QMonitor.pos",
+      "eje": "MI",
+      "fila": 2279,
+      "nota": "Serie de la p. 27 del informe de noviembre de QMonitor; edición = mes del gráfico + 1 (misma convención que gestión). Valor de la etiqueta del gráfico."
+    },
+    {
+      "modulo": "Imagen Milei",
+      "ruta": "IMG.QMonitor.neg",
+      "eje": "MI",
+      "fila": 2280,
+      "nota": "Serie de la p. 27 del informe de noviembre de QMonitor; edición = mes del gráfico + 1 (misma convención que gestión). Valor de la etiqueta del gráfico."
+    },
+    {
+      "modulo": "Gestión nacional",
+      "ruta": "GESTION.Zentrix.aprob",
+      "eje": "MG",
+      "fila": 2281,
+      "nota": "Serie de la p. 6 del informe de octubre de Zentrix; el gráfico rotula por mes. Valor de la etiqueta del gráfico."
+    },
+    {
+      "modulo": "Gestión nacional",
+      "ruta": "GESTION.Zentrix.desaprob",
+      "eje": "MG",
+      "fila": 2282,
+      "nota": "Serie de la p. 6 del informe de octubre de Zentrix; el gráfico rotula por mes. Valor de la etiqueta del gráfico."
+    },
+    {
+      "modulo": "Gestión nacional",
+      "ruta": "GESTION.Zentrix.aprob",
+      "eje": "MG",
+      "fila": 2283,
+      "nota": "Serie de la p. 6 del informe de octubre de Zentrix; el gráfico rotula por mes. Valor de la etiqueta del gráfico."
+    },
+    {
+      "modulo": "Gestión nacional",
+      "ruta": "GESTION.Zentrix.desaprob",
+      "eje": "MG",
+      "fila": 2284,
+      "nota": "Serie de la p. 6 del informe de octubre de Zentrix; el gráfico rotula por mes. Valor de la etiqueta del gráfico."
+    },
+    {
+      "modulo": "Gestión nacional",
+      "ruta": "GESTION.Zentrix.aprob",
+      "eje": "MG",
+      "fila": 2285,
+      "nota": "Serie de la p. 6 del informe de octubre de Zentrix; el gráfico rotula por mes. Valor de la etiqueta del gráfico."
+    },
+    {
+      "modulo": "Gestión nacional",
+      "ruta": "GESTION.Zentrix.desaprob",
+      "eje": "MG",
+      "fila": 2286,
+      "nota": "Serie de la p. 6 del informe de octubre de Zentrix; el gráfico rotula por mes. Valor de la etiqueta del gráfico."
+    },
+    {
+      "modulo": "Gestión nacional",
+      "ruta": "GESTION.Zentrix.aprob",
+      "eje": "MG",
+      "fila": 2287,
+      "nota": "Serie de la p. 6 del informe de octubre de Zentrix; el gráfico rotula por mes. Valor de la etiqueta del gráfico."
+    },
+    {
+      "modulo": "Gestión nacional",
+      "ruta": "GESTION.Zentrix.desaprob",
+      "eje": "MG",
+      "fila": 2288,
+      "nota": "Serie de la p. 6 del informe de octubre de Zentrix; el gráfico rotula por mes. Valor de la etiqueta del gráfico."
+    },
+    {
+      "modulo": "Gestión nacional",
+      "ruta": "GESTION.Zentrix.aprob",
+      "eje": "MG",
+      "fila": 2289,
+      "nota": "Serie de la p. 6 del informe de octubre de Zentrix; el gráfico rotula por mes. Valor de la etiqueta del gráfico."
+    },
+    {
+      "modulo": "Gestión nacional",
+      "ruta": "GESTION.Zentrix.desaprob",
+      "eje": "MG",
+      "fila": 2290,
+      "nota": "Serie de la p. 6 del informe de octubre de Zentrix; el gráfico rotula por mes. Valor de la etiqueta del gráfico."
+    },
+    {
+      "modulo": "Gestión nacional",
+      "ruta": "GESTION.Equipo Mide.aprob",
+      "eje": "MG",
+      "fila": 2291,
+      "nota": "Informe propio del mes; enteros publicados."
+    },
+    {
+      "modulo": "Gestión nacional",
+      "ruta": "GESTION.Equipo Mide.desaprob",
+      "eje": "MG",
+      "fila": 2292,
+      "nota": "Informe propio del mes; enteros publicados."
+    },
+    {
+      "modulo": "Imagen Milei",
+      "ruta": "IMG.Equipo Mide.pos",
+      "eje": "MI",
+      "fila": 2293,
+      "nota": "Informe propio del mes; enteros publicados."
+    },
+    {
+      "modulo": "Imagen Milei",
+      "ruta": "IMG.Equipo Mide.neg",
+      "eje": "MI",
+      "fila": 2294,
+      "nota": "Informe propio del mes; enteros publicados."
+    },
+    {
+      "modulo": "Gestión nacional",
+      "ruta": "GESTION.Equipo Mide.aprob",
+      "eje": "MG",
+      "fila": 2295,
+      "nota": "Informe propio del mes; enteros publicados."
+    },
+    {
+      "modulo": "Gestión nacional",
+      "ruta": "GESTION.Equipo Mide.desaprob",
+      "eje": "MG",
+      "fila": 2296,
+      "nota": "Informe propio del mes; enteros publicados."
+    },
+    {
+      "modulo": "Imagen Milei",
+      "ruta": "IMG.Equipo Mide.pos",
+      "eje": "MI",
+      "fila": 2297,
+      "nota": "Informe propio del mes; enteros publicados."
+    },
+    {
+      "modulo": "Imagen Milei",
+      "ruta": "IMG.Equipo Mide.neg",
+      "eje": "MI",
+      "fila": 2298,
+      "nota": "Informe propio del mes; enteros publicados."
+    },
+    {
+      "modulo": "Gestión nacional",
+      "ruta": "GESTION.Equipo Mide.aprob",
+      "eje": "MG",
+      "fila": 2299,
+      "nota": "Informe propio del mes; enteros publicados."
+    },
+    {
+      "modulo": "Gestión nacional",
+      "ruta": "GESTION.Equipo Mide.desaprob",
+      "eje": "MG",
+      "fila": 2300,
+      "nota": "Informe propio del mes; enteros publicados."
+    },
+    {
+      "modulo": "Imagen Milei",
+      "ruta": "IMG.Equipo Mide.pos",
+      "eje": "MI",
+      "fila": 2301,
+      "nota": "Informe propio del mes; enteros publicados."
+    },
+    {
+      "modulo": "Imagen Milei",
+      "ruta": "IMG.Equipo Mide.neg",
+      "eje": "MI",
+      "fila": 2302,
+      "nota": "Informe propio del mes; enteros publicados."
+    },
+    {
+      "modulo": "Gestión nacional",
+      "ruta": "GESTION.Zentrix.desaprob",
+      "eje": "MG",
+      "fila": 2303,
+      "nota": "Serie de la p. 6 del informe de octubre de Zentrix; el gráfico rotula por mes. Valor de la etiqueta del gráfico."
+    },
+    {
+      "modulo": "Gestión nacional",
+      "ruta": "GESTION.Equipo Mide.aprob",
+      "eje": "MG",
+      "fila": 836,
+      "nota": "Ola con campo 18–25/09/2026 cargada en Nivel 2 con mes 9 y sin mapear; verificar: otras filas de la misma ola figuran con mes 10 (EQUIPOMIDE_2026_10_NAC)."
+    },
+    {
+      "modulo": "Gestión nacional",
+      "ruta": "GESTION.Equipo Mide.desaprob",
+      "eje": "MG",
+      "fila": 837,
+      "nota": "Ola con campo 18–25/09/2026 cargada en Nivel 2 con mes 9 y sin mapear; verificar: otras filas de la misma ola figuran con mes 10 (EQUIPOMIDE_2026_10_NAC)."
+    },
+    {
+      "modulo": "Imagen Milei",
+      "ruta": "IMG.Equipo Mide.pos",
+      "eje": "MI",
+      "fila": 838,
+      "nota": "Ola con campo 18–25/09/2026 cargada en Nivel 2 con mes 9 y sin mapear; verificar: otras filas de la misma ola figuran con mes 10 (EQUIPOMIDE_2026_10_NAC)."
+    },
+    {
+      "modulo": "Imagen Milei",
+      "ruta": "IMG.Equipo Mide.neg",
+      "eje": "MI",
+      "fila": 839,
+      "nota": "Ola con campo 18–25/09/2026 cargada en Nivel 2 con mes 9 y sin mapear; verificar: otras filas de la misma ola figuran con mes 10 (EQUIPOMIDE_2026_10_NAC)."
     }
   ],
   "retiros": [],
