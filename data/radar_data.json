@@ -616,6 +616,33 @@
     17.1,
     null
    ]
+  },
+  "Pulso Research": {
+   "color": "var(--c4)",
+   "lla": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    25.8
+   ],
+   "pj": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    21.3
+   ]
   }
  },
  "lastRows": [
@@ -696,6 +723,15 @@
    "p": "Oct-26",
    "lla": 42.6,
    "pj": 17.1,
+   "d": null,
+   "n": "—",
+   "met": "—"
+  },
+  {
+   "name": "Pulso Research",
+   "p": "Nov-26",
+   "lla": 25.8,
+   "pj": 21.3,
    "d": null,
    "n": "—",
    "met": "—"
@@ -951,7 +987,7 @@
     null,
     null,
     32.4,
-    null
+    38.6
    ],
    "neg": [
     null,
@@ -960,7 +996,7 @@
     null,
     null,
     64.6,
-    null
+    58.7
    ]
   },
   "DC Consultores": {
@@ -982,6 +1018,27 @@
     null,
     55.1,
     null
+   ]
+  },
+  "Management & Fit": {
+   "color": "var(--c4)",
+   "pos": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    34
+   ],
+   "neg": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    54.1
    ]
   }
  },
@@ -1193,7 +1250,7 @@
     null,
     null,
     36.6,
-    null
+    37.6
    ],
    "desaprob": [
     null,
@@ -1202,7 +1259,7 @@
     null,
     null,
     58.1,
-    null
+    58.1
    ]
   },
   "Zentrix": {
@@ -1256,7 +1313,7 @@
     null,
     null,
     28.9,
-    null
+    34
    ],
    "desaprob": [
     null,
@@ -1265,7 +1322,7 @@
     null,
     null,
     null,
-    null
+    59.6
    ]
   },
   "D'Alessio": {
@@ -1817,13 +1874,13 @@
     "tipo": "rango",
     "mes": "Nov-26",
     "unidad": "%",
-    "n": 3,
+    "n": 5,
     "grupos": [
      {
       "composicion": "estandar",
-      "n": 3,
-      "min": 56.1,
-      "max": 57,
+      "n": 5,
+      "min": 54.1,
+      "max": 58.7,
       "rango_valido": true,
       "direccion": "sin dirección común entre consultoras",
       "direcciones": {
@@ -1841,9 +1898,30 @@
         "estado": "sube",
         "detalle": "Oct-26 → Nov-26",
         "delta": 4
+       },
+       "Pulso Research": {
+        "estado": "baja",
+        "detalle": "Oct-26 → Nov-26",
+        "delta": -5.9
+       },
+       "Management & Fit": {
+        "estado": "sin medición anterior",
+        "detalle": "serie de un solo punto"
        }
       },
       "consultoras": {
+       "Pulso Research": {
+        "valor": 58.7,
+        "ref": {
+         "fila": 1951,
+         "base": "nivel2_indicadores",
+         "file_id": "1eoMG0IJq0ArLCUXPemLwyvuS1EDbP-C5",
+         "campo": "2026-11-07→2026-11-16",
+         "categoria": "Negativa",
+         "composicion": "estandar",
+         "secundaria": ""
+        }
+       },
        "QMonitor": {
         "valor": 57,
         "ref": {
@@ -1879,6 +1957,18 @@
          "composicion": "estandar",
          "secundaria": ""
         }
+       },
+       "Management & Fit": {
+        "valor": 54.1,
+        "ref": {
+         "fila": 1836,
+         "base": "nivel2_indicadores",
+         "file_id": "1cmuEFkdV5dtihVQCBX4eO6Gof-jLEnLp",
+         "campo": "2026-11-12→2026-11-17",
+         "categoria": "Negativa (mala + muy mala)",
+         "composicion": "estandar",
+         "secundaria": ""
+        }
        }
       }
      }
@@ -1886,7 +1976,9 @@
     "por_consultora": {
      "Analogías": 56.7,
      "Proyección": 56.1,
-     "QMonitor": 57
+     "QMonitor": 57,
+     "Pulso Research": 58.7,
+     "Management & Fit": 54.1
     },
     "una_composicion": true
    },
@@ -1913,11 +2005,11 @@
     "tipo": "rango",
     "mes": "Nov-26",
     "unidad": "%",
-    "n": 3,
+    "n": 5,
     "grupos": [
      {
       "composicion": "estandar",
-      "n": 3,
+      "n": 5,
       "min": 32,
       "max": 39.2,
       "rango_valido": true,
@@ -1937,6 +2029,15 @@
         "estado": "sube",
         "detalle": "Oct-26 → Nov-26",
         "delta": 1
+       },
+       "Pulso Research": {
+        "estado": "sube",
+        "detalle": "Oct-26 → Nov-26",
+        "delta": 6.2
+       },
+       "Management & Fit": {
+        "estado": "sin medición anterior",
+        "detalle": "serie de un solo punto"
        }
       },
       "consultoras": {
@@ -1964,6 +2065,30 @@
          "secundaria": ""
         }
        },
+       "Pulso Research": {
+        "valor": 38.6,
+        "ref": {
+         "fila": 1950,
+         "base": "nivel2_indicadores",
+         "file_id": "1eoMG0IJq0ArLCUXPemLwyvuS1EDbP-C5",
+         "campo": "2026-11-07→2026-11-16",
+         "categoria": "Positiva",
+         "composicion": "estandar",
+         "secundaria": ""
+        }
+       },
+       "Management & Fit": {
+        "valor": 34,
+        "ref": {
+         "fila": 1835,
+         "base": "nivel2_indicadores",
+         "file_id": "1cmuEFkdV5dtihVQCBX4eO6Gof-jLEnLp",
+         "campo": "2026-11-12→2026-11-17",
+         "categoria": "Positiva (muy buena + buena)",
+         "composicion": "estandar",
+         "secundaria": ""
+        }
+       },
        "QMonitor": {
         "valor": 32,
         "ref": {
@@ -1982,7 +2107,9 @@
     "por_consultora": {
      "Analogías": 39.2,
      "Proyección": 38.9,
-     "QMonitor": 32
+     "QMonitor": 32,
+     "Pulso Research": 38.6,
+     "Management & Fit": 34
     },
     "una_composicion": true
    },
@@ -2009,13 +2136,13 @@
     "tipo": "rango",
     "mes": "Nov-26",
     "unidad": "%",
-    "n": 3,
+    "n": 5,
     "grupos": [
      {
       "composicion": "estandar",
-      "n": 3,
+      "n": 5,
       "min": 30.3,
-      "max": 36,
+      "max": 37.6,
       "rango_valido": true,
       "direccion": "sin dirección común entre consultoras",
       "direcciones": {
@@ -2033,9 +2160,31 @@
         "estado": "sube",
         "detalle": "Oct-26 → Nov-26",
         "delta": 1
+       },
+       "M&F": {
+        "estado": "sube",
+        "detalle": "Oct-26 → Nov-26",
+        "delta": 1.0
+       },
+       "Pulso Research": {
+        "estado": "sube",
+        "detalle": "Oct-26 → Nov-26",
+        "delta": 5.1
        }
       },
       "consultoras": {
+       "M&F": {
+        "valor": 37.6,
+        "ref": {
+         "fila": 1803,
+         "base": "nivel2_indicadores",
+         "file_id": "1cmuEFkdV5dtihVQCBX4eO6Gof-jLEnLp",
+         "campo": "2026-11-12→2026-11-17",
+         "categoria": "Positiva / Aprueba",
+         "composicion": "estandar",
+         "secundaria": ""
+        }
+       },
        "QMonitor": {
         "valor": 36,
         "ref": {
@@ -2060,6 +2209,18 @@
          "secundaria": ""
         }
        },
+       "Pulso Research": {
+        "valor": 34,
+        "ref": {
+         "fila": 1948,
+         "base": "nivel2_indicadores",
+         "file_id": "1eoMG0IJq0ArLCUXPemLwyvuS1EDbP-C5",
+         "campo": "2026-11-07→2026-11-16",
+         "categoria": "Muy bien + Bien",
+         "composicion": "estandar",
+         "secundaria": ""
+        }
+       },
        "Analogías": {
         "valor": 30.3,
         "ref": {
@@ -2078,7 +2239,9 @@
     "por_consultora": {
      "Proyección": 35.6,
      "Analogías": 30.3,
-     "QMonitor": 36
+     "QMonitor": 36,
+     "M&F": 37.6,
+     "Pulso Research": 34
     },
     "una_composicion": true
    },
@@ -2195,13 +2358,13 @@
     "tipo": "rango",
     "mes": "Nov-26",
     "unidad": "%",
-    "n": 3,
+    "n": 5,
     "grupos": [
      {
       "composicion": "estandar",
-      "n": 3,
+      "n": 5,
       "min": 30.3,
-      "max": 36,
+      "max": 37.6,
       "rango_valido": true,
       "direccion": "sin dirección común entre consultoras",
       "direcciones": {
@@ -2219,9 +2382,31 @@
         "estado": "sube",
         "detalle": "Oct-26 → Nov-26",
         "delta": 1
+       },
+       "M&F": {
+        "estado": "sube",
+        "detalle": "Oct-26 → Nov-26",
+        "delta": 1.0
+       },
+       "Pulso Research": {
+        "estado": "sube",
+        "detalle": "Oct-26 → Nov-26",
+        "delta": 5.1
        }
       },
       "consultoras": {
+       "M&F": {
+        "valor": 37.6,
+        "ref": {
+         "fila": 1803,
+         "base": "nivel2_indicadores",
+         "file_id": "1cmuEFkdV5dtihVQCBX4eO6Gof-jLEnLp",
+         "campo": "2026-11-12→2026-11-17",
+         "categoria": "Positiva / Aprueba",
+         "composicion": "estandar",
+         "secundaria": ""
+        }
+       },
        "QMonitor": {
         "valor": 36,
         "ref": {
@@ -2246,6 +2431,18 @@
          "secundaria": ""
         }
        },
+       "Pulso Research": {
+        "valor": 34,
+        "ref": {
+         "fila": 1948,
+         "base": "nivel2_indicadores",
+         "file_id": "1eoMG0IJq0ArLCUXPemLwyvuS1EDbP-C5",
+         "campo": "2026-11-07→2026-11-16",
+         "categoria": "Muy bien + Bien",
+         "composicion": "estandar",
+         "secundaria": ""
+        }
+       },
        "Analogías": {
         "valor": 30.3,
         "ref": {
@@ -2264,14 +2461,16 @@
     "por_consultora": {
      "Proyección": 35.6,
      "Analogías": 30.3,
-     "QMonitor": 36
+     "QMonitor": 36,
+     "M&F": 37.6,
+     "Pulso Research": 34
     },
     "una_composicion": true
    },
    "tendencia": "may–nov 2026",
-   "cobertura": "9 consultoras en oct-26 (mes completo) · 2 en nov-26 (corte parcial al 17/11)",
+   "cobertura": "9 consultoras en oct-26 (mes completo) · 5 en nov-26 (corte al 27/11)",
    "comparabilidad": "MEDIA — misma pregunta de aprobación, pero universo, técnica y escala difieren entre consultoras",
-   "direccion": "sin dirección común entre consultoras: Proyección baja (Sep-26 → Nov-26) · Analogías baja (Oct-26 → Nov-26) · QMonitor sube (Oct-26 → Nov-26)",
+   "direccion": "sin dirección común entre consultoras: Proyección baja (Sep-26 → Nov-26) · Analogías baja (Oct-26 → Nov-26) · QMonitor sube (Oct-26 → Nov-26) · M&F sube (Oct-26 → Nov-26) · Pulso Research sube (Oct-26 → Nov-26)",
    "nota": "Rango de oct-26: 28,9–38,7%; no se promedian. Intra-consultora: Proyección 42% en sep → 35,6% en nov; QMonitor 35% → 36%. La cantidad de consultoras acredita cobertura, no dirección."
   },
   {
@@ -2282,11 +2481,11 @@
     "tipo": "rango",
     "mes": "Nov-26",
     "unidad": "%",
-    "n": 3,
+    "n": 5,
     "grupos": [
      {
       "composicion": "estandar",
-      "n": 3,
+      "n": 5,
       "min": 32,
       "max": 39.2,
       "rango_valido": true,
@@ -2306,6 +2505,15 @@
         "estado": "sube",
         "detalle": "Oct-26 → Nov-26",
         "delta": 1
+       },
+       "Pulso Research": {
+        "estado": "sube",
+        "detalle": "Oct-26 → Nov-26",
+        "delta": 6.2
+       },
+       "Management & Fit": {
+        "estado": "sin medición anterior",
+        "detalle": "serie de un solo punto"
        }
       },
       "consultoras": {
@@ -2333,6 +2541,30 @@
          "secundaria": ""
         }
        },
+       "Pulso Research": {
+        "valor": 38.6,
+        "ref": {
+         "fila": 1950,
+         "base": "nivel2_indicadores",
+         "file_id": "1eoMG0IJq0ArLCUXPemLwyvuS1EDbP-C5",
+         "campo": "2026-11-07→2026-11-16",
+         "categoria": "Positiva",
+         "composicion": "estandar",
+         "secundaria": ""
+        }
+       },
+       "Management & Fit": {
+        "valor": 34,
+        "ref": {
+         "fila": 1835,
+         "base": "nivel2_indicadores",
+         "file_id": "1cmuEFkdV5dtihVQCBX4eO6Gof-jLEnLp",
+         "campo": "2026-11-12→2026-11-17",
+         "categoria": "Positiva (muy buena + buena)",
+         "composicion": "estandar",
+         "secundaria": ""
+        }
+       },
        "QMonitor": {
         "valor": 32,
         "ref": {
@@ -2351,14 +2583,16 @@
     "por_consultora": {
      "Analogías": 39.2,
      "Proyección": 38.9,
-     "QMonitor": 32
+     "QMonitor": 32,
+     "Pulso Research": 38.6,
+     "Management & Fit": 34
     },
     "una_composicion": true
    },
    "tendencia": "may–nov 2026",
-   "cobertura": "9 consultoras en oct-26 · 2 en nov-26 (corte parcial)",
+   "cobertura": "9 consultoras en oct-26 · 5 en nov-26 (corte al 27/11)",
    "comparabilidad": "MEDIA — misma pregunta de imagen personal; las escalas difieren (algunas consultoras suman buena + muy buena)",
-   "direccion": "sin dirección común entre consultoras: Analogías estable (Oct-26 → Nov-26) · Proyección baja (Oct-26 → Nov-26) · QMonitor sube (Oct-26 → Nov-26)",
+   "direccion": "sin dirección común entre consultoras: Analogías estable (Oct-26 → Nov-26) · Proyección baja (Oct-26 → Nov-26) · QMonitor sube (Oct-26 → Nov-26) · Pulso Research sube (Oct-26 → Nov-26) · sin par comparable: Management & Fit",
    "nota": "Rango de oct-26: 31–43,8%. La dispersión entre consultoras supera la variación mensual de cada serie. Imagen personal ≠ aprobación de gestión."
   },
   {
@@ -2369,13 +2603,13 @@
     "tipo": "rango",
     "mes": "Nov-26",
     "unidad": "%",
-    "n": 3,
+    "n": 5,
     "grupos": [
      {
       "composicion": "estandar",
-      "n": 3,
-      "min": 56.1,
-      "max": 57,
+      "n": 5,
+      "min": 54.1,
+      "max": 58.7,
       "rango_valido": true,
       "direccion": "sin dirección común entre consultoras",
       "direcciones": {
@@ -2393,9 +2627,30 @@
         "estado": "sube",
         "detalle": "Oct-26 → Nov-26",
         "delta": 4
+       },
+       "Pulso Research": {
+        "estado": "baja",
+        "detalle": "Oct-26 → Nov-26",
+        "delta": -5.9
+       },
+       "Management & Fit": {
+        "estado": "sin medición anterior",
+        "detalle": "serie de un solo punto"
        }
       },
       "consultoras": {
+       "Pulso Research": {
+        "valor": 58.7,
+        "ref": {
+         "fila": 1951,
+         "base": "nivel2_indicadores",
+         "file_id": "1eoMG0IJq0ArLCUXPemLwyvuS1EDbP-C5",
+         "campo": "2026-11-07→2026-11-16",
+         "categoria": "Negativa",
+         "composicion": "estandar",
+         "secundaria": ""
+        }
+       },
        "QMonitor": {
         "valor": 57,
         "ref": {
@@ -2431,6 +2686,18 @@
          "composicion": "estandar",
          "secundaria": ""
         }
+       },
+       "Management & Fit": {
+        "valor": 54.1,
+        "ref": {
+         "fila": 1836,
+         "base": "nivel2_indicadores",
+         "file_id": "1cmuEFkdV5dtihVQCBX4eO6Gof-jLEnLp",
+         "campo": "2026-11-12→2026-11-17",
+         "categoria": "Negativa (mala + muy mala)",
+         "composicion": "estandar",
+         "secundaria": ""
+        }
        }
       }
      }
@@ -2438,14 +2705,16 @@
     "por_consultora": {
      "Analogías": 56.7,
      "Proyección": 56.1,
-     "QMonitor": 57
+     "QMonitor": 57,
+     "Pulso Research": 58.7,
+     "Management & Fit": 54.1
     },
     "una_composicion": true
    },
    "tendencia": "may–nov 2026",
-   "cobertura": "9 consultoras en oct-26 · 2 en nov-26 (corte parcial)",
+   "cobertura": "9 consultoras en oct-26 · 5 en nov-26 (corte al 27/11)",
    "comparabilidad": "MEDIA — misma pregunta; Zentrix agrega mala + muy mala y Giacobbe separa «regular» y «no lo conozco»",
-   "direccion": "sin dirección común entre consultoras: Analogías estable (Oct-26 → Nov-26) · Proyección estable (Oct-26 → Nov-26) · QMonitor sube (Oct-26 → Nov-26)",
+   "direccion": "sin dirección común entre consultoras: Analogías estable (Oct-26 → Nov-26) · Proyección estable (Oct-26 → Nov-26) · QMonitor sube (Oct-26 → Nov-26) · Pulso Research baja (Oct-26 → Nov-26) · sin par comparable: Management & Fit",
    "nota": "Rango de oct-26: 53–64,6%. Giacobbe oct-26 corregida a 56,8% con el PDF primario (campo 28/10–2/11)."
   },
   {
@@ -2559,12 +2828,12 @@
     "tipo": "rango",
     "mes": "Nov-26",
     "unidad": "%",
-    "n": 3,
+    "n": 4,
     "grupos": [
      {
       "composicion": "estandar",
-      "n": 3,
-      "min": 32,
+      "n": 4,
+      "min": 25.8,
       "max": 35,
       "rango_valido": true,
       "direccion": "sin dirección común entre consultoras",
@@ -2583,6 +2852,10 @@
         "estado": "sube",
         "detalle": "Oct-26 → Nov-26",
         "delta": 2.8
+       },
+       "Pulso Research": {
+        "estado": "sin medición anterior",
+        "detalle": "serie de un solo punto"
        }
       },
       "consultoras": {
@@ -2621,6 +2894,18 @@
          "composicion": "estandar",
          "secundaria": ""
         }
+       },
+       "Pulso Research": {
+        "valor": 25.8,
+        "ref": {
+         "fila": 1989,
+         "base": "nivel2_indicadores",
+         "file_id": "1eoMG0IJq0ArLCUXPemLwyvuS1EDbP-C5",
+         "campo": "2026-11-07→2026-11-16",
+         "categoria": "La Libertad Avanza",
+         "composicion": "estandar",
+         "secundaria": ""
+        }
        }
       }
      }
@@ -2628,14 +2913,15 @@
     "por_consultora": {
      "Proyección": 35,
      "QMonitor": 32,
-     "Analogías": 33.7
+     "Analogías": 33.7,
+     "Pulso Research": 25.8
     },
     "una_composicion": true
    },
    "tendencia": "feb–nov 2026",
    "cobertura": "8 consultoras en oct-26 · 2 en nov-26 (corte parcial)",
    "comparabilidad": "MEDIA — todas preguntan por espacio y LLA es una categoría única; DC Consultores usa muestreo no probabilístico",
-   "direccion": "sin dirección común entre consultoras: Proyección baja (Oct-26 → Nov-26) · QMonitor sube (Oct-26 → Nov-26) · Analogías sube (Oct-26 → Nov-26)",
+   "direccion": "sin dirección común entre consultoras: Proyección baja (Oct-26 → Nov-26) · QMonitor sube (Oct-26 → Nov-26) · Analogías sube (Oct-26 → Nov-26) · sin par comparable: Pulso Research",
    "nota": "Rango de oct-26: 26–42,6%. La dispersión entre consultoras supera la diferencia entre espacios: es dispersión metodológica, no estabilidad."
   },
   {
@@ -2646,12 +2932,12 @@
     "tipo": "rango",
     "mes": "Nov-26",
     "unidad": "%",
-    "n": 3,
+    "n": 4,
     "grupos": [
      {
       "composicion": "estandar",
-      "n": 2,
-      "min": 33.0,
+      "n": 3,
+      "min": 21.3,
       "max": 35,
       "rango_valido": true,
       "direccion": "sin dirección común entre consultoras",
@@ -2665,6 +2951,10 @@
         "estado": "sube",
         "detalle": "Oct-26 → Nov-26",
         "delta": 1.4
+       },
+       "Pulso Research": {
+        "estado": "sin medición anterior",
+        "detalle": "serie de un solo punto"
        }
       },
       "consultoras": {
@@ -2688,6 +2978,18 @@
          "file_id": "1hqm_RbINFpsNIMA-W7ZaNjZ_r762KpVN",
          "campo": "2026-11-15→2026-11-18",
          "categoria": "Peronismo Unido",
+         "composicion": "estandar",
+         "secundaria": ""
+        }
+       },
+       "Pulso Research": {
+        "valor": 21.3,
+        "ref": {
+         "fila": 1990,
+         "base": "nivel2_indicadores",
+         "file_id": "1eoMG0IJq0ArLCUXPemLwyvuS1EDbP-C5",
+         "campo": "2026-11-07→2026-11-16",
+         "categoria": "Peronismo Kirchnerista",
          "composicion": "estandar",
          "secundaria": ""
         }
@@ -2726,14 +3028,15 @@
     "por_consultora": {
      "Proyección": 35,
      "QMonitor": 25,
-     "Analogías": 33.0
+     "Analogías": 33.0,
+     "Pulso Research": 21.3
     },
     "una_composicion": false
    },
    "tendencia": "feb–nov 2026",
    "cobertura": "8 consultoras en oct-26 · 2 en nov-26 (corte parcial)",
    "comparabilidad": "BAJA entre composiciones — unas consultoras agregan peronismo y kirchnerismo y otras los separan",
-   "direccion": "sin dirección común entre consultoras: Proyección estable (Oct-26 → Nov-26) · Analogías sube (Oct-26 → Nov-26) · sin par comparable: QMonitor",
+   "direccion": "sin dirección común entre consultoras: Proyección estable (Oct-26 → Nov-26) · Analogías sube (Oct-26 → Nov-26) · sin par comparable: Pulso Research, QMonitor",
    "nota": "El rango no cruza composiciones. En oct-26, las 7 consultoras que agregan peronismo y kirchnerismo van de 24–36,6%; DC Consultores, que mide peronismo sin kirchnerismo, queda en 17,1% (una sola fuente) y forma su propio grupo. Los dos valores no se comparan entre sí ni se promedian."
   },
   {
@@ -2757,7 +3060,7 @@
    "cobertura": "1 consultora con serie (Proyección) · 3 cortes",
    "comparabilidad": "MEDIA — serie intra-Proyección; Synopsis oct es fuente secundaria",
    "direccion": "estable: la diferencia entre ambos queda dentro del margen en los tres cortes",
-   "nota": "Proyección sep 40,8–40,2 · oct 41,0–39,1 · nov 40,7–39,1. Synopsis oct (41,9–41,8) es fuente secundaria, evidencia máxima MEDIA, y no se encadena. Se retiraron las referencias a Explanans y OPSA: sin fila ni informe en la base."
+   "nota": "Proyección sep 40,8–40,2 · oct 41,0–39,1 · nov 40,7–39,1. Synopsis oct (41,9–41,8) es fuente secundaria, evidencia máxima MEDIA, y no se encadena. Se retiraron las referencias a Explanans y OPSA: sin fila ni informe en la base. QSocial (octubre, n=4.000, dato puntual): Milei 40 · Kicillof 45 · no sabe 15; el propio informe consigna Milei sin cambio y Kicillof +12 pp frente a feb-26. No se encadena con Proyección: pregunta, muestra y fecha de campo distintas (fila N2 1940–1942)."
   },
   {
    "bloque": "Territorial",
@@ -2798,6 +3101,52 @@
    "comparabilidad": "BAJA — sin corte anterior comparable",
    "direccion": "evidencia insuficiente para establecer dirección",
    "nota": "Ranking CB de Intendentes GBA, nov-26: máximo Nardini +24,8 p.p. y mínimo Menéndez −22,6 p.p. No se agregan municipios ni se promedian entre sí."
+  },
+  {
+   "bloque": "Territorial",
+   "indicador": "CABA · balance de imagen de Jorge Macri (DC Consultores)",
+   "estado": "⚪",
+   "ultima": {
+    "tipo": "fila",
+    "valor": -9,
+    "unidad": "pp",
+    "mes": "Nov-26",
+    "consultora": "DC Consultores",
+    "categoria": "Balance de imagen (positiva − negativa)",
+    "id_indicador": "IMG_JMACRI_BALANCE_CABA",
+    "fila": 1924,
+    "base": "nivel2_indicadores",
+    "file_id": "1m6qeyq1JXIDKOuSuRRpYizSd7isjKEL8",
+    "campo": "2026-11-18→2026-11-22"
+   },
+   "tendencia": "medición única (nov-26)",
+   "cobertura": "1 consultora · 1 medición",
+   "comparabilidad": "BAJA — indicador derivado por la consultora (positiva − negativa); sin corte anterior comparable",
+   "direccion": "evidencia insuficiente para establecer dirección",
+   "nota": "DC CABA, campo 18–22/11, n=1.293. El balance de Macri es −9,0 p.p. (30,8 positiva · 39,8 negativa). No se compara con series nacionales ni con el ICC CABA."
+  },
+  {
+   "bloque": "Territorial",
+   "indicador": "Córdoba Capital · rumbo de la ciudad (Radar Público)",
+   "estado": "⚪",
+   "ultima": {
+    "tipo": "fila",
+    "valor": 30,
+    "unidad": "%",
+    "mes": "Oct-26",
+    "consultora": "Radar Público",
+    "categoria": "Dirección correcta",
+    "id_indicador": "RUMBO_CIUDAD_CORRECTO_CORDOBA_CAPITAL",
+    "fila": 2032,
+    "base": "nivel2_indicadores",
+    "file_id": "1ZWRJAm0kkUeJ9rZGYCeGTPXB5mF70j8t",
+    "campo": "2026-10-26→2026-11-01"
+   },
+   "tendencia": "medición única (campo 26/10–1/11)",
+   "cobertura": "1 consultora · 1 medición",
+   "comparabilidad": "BAJA — muestra de la ciudad de Córdoba (n=500, ±4,4%); sin corte anterior de ciudad capital",
+   "direccion": "evidencia insuficiente para establecer dirección",
+   "nota": "Dirección correcta 30% · incorrecta 52% · no sabe 18% (filas N2 2032–2034). No se agrega a series provinciales: la ola de septiembre de Radar Público fue provincial (n=1.000) y no es comparable."
   }
  ],
  "DESTACADOS": [
@@ -3005,7 +3354,7 @@
      "campo": "pos",
      "mes": "Nov-26",
      "composicion": "estandar",
-     "n": 3,
+     "n": 5,
      "min": 32,
      "max": 39.2,
      "rango_valido": true,
@@ -3025,6 +3374,15 @@
        "estado": "sube",
        "detalle": "Oct-26 → Nov-26",
        "delta": 1
+      },
+      "Pulso Research": {
+       "estado": "sube",
+       "detalle": "Oct-26 → Nov-26",
+       "delta": 6.2
+      },
+      "Management & Fit": {
+       "estado": "sin medición anterior",
+       "detalle": "serie de un solo punto"
       }
      },
      "consultoras": {
@@ -3052,6 +3410,30 @@
         "secundaria": ""
        }
       },
+      "Pulso Research": {
+       "valor": 38.6,
+       "ref": {
+        "fila": 1950,
+        "base": "nivel2_indicadores",
+        "file_id": "1eoMG0IJq0ArLCUXPemLwyvuS1EDbP-C5",
+        "campo": "2026-11-07→2026-11-16",
+        "categoria": "Positiva",
+        "composicion": "estandar",
+        "secundaria": ""
+       }
+      },
+      "Management & Fit": {
+       "valor": 34,
+       "ref": {
+        "fila": 1835,
+        "base": "nivel2_indicadores",
+        "file_id": "1cmuEFkdV5dtihVQCBX4eO6Gof-jLEnLp",
+        "campo": "2026-11-12→2026-11-17",
+        "categoria": "Positiva (muy buena + buena)",
+        "composicion": "estandar",
+        "secundaria": ""
+       }
+      },
       "QMonitor": {
        "valor": 32,
        "ref": {
@@ -3070,9 +3452,9 @@
      "campo": "neg",
      "mes": "Nov-26",
      "composicion": "estandar",
-     "n": 3,
-     "min": 56.1,
-     "max": 57,
+     "n": 5,
+     "min": 54.1,
+     "max": 58.7,
      "rango_valido": true,
      "direccion": "sin dirección común entre consultoras",
      "direcciones": {
@@ -3090,9 +3472,30 @@
        "estado": "sube",
        "detalle": "Oct-26 → Nov-26",
        "delta": 4
+      },
+      "Pulso Research": {
+       "estado": "baja",
+       "detalle": "Oct-26 → Nov-26",
+       "delta": -5.9
+      },
+      "Management & Fit": {
+       "estado": "sin medición anterior",
+       "detalle": "serie de un solo punto"
       }
      },
      "consultoras": {
+      "Pulso Research": {
+       "valor": 58.7,
+       "ref": {
+        "fila": 1951,
+        "base": "nivel2_indicadores",
+        "file_id": "1eoMG0IJq0ArLCUXPemLwyvuS1EDbP-C5",
+        "campo": "2026-11-07→2026-11-16",
+        "categoria": "Negativa",
+        "composicion": "estandar",
+        "secundaria": ""
+       }
+      },
       "QMonitor": {
        "valor": 57,
        "ref": {
@@ -3124,6 +3527,18 @@
         "base": "nivel2_indicadores",
         "file_id": "1P_43U922vyw_gFYdje1io2SPO-AH_JT1",
         "campo": "2026-11-01→2026-11-09",
+        "categoria": "Negativa (mala + muy mala)",
+        "composicion": "estandar",
+        "secundaria": ""
+       }
+      },
+      "Management & Fit": {
+       "valor": 54.1,
+       "ref": {
+        "fila": 1836,
+        "base": "nivel2_indicadores",
+        "file_id": "1cmuEFkdV5dtihVQCBX4eO6Gof-jLEnLp",
+        "campo": "2026-11-12→2026-11-17",
         "categoria": "Negativa (mala + muy mala)",
         "composicion": "estandar",
         "secundaria": ""
@@ -3462,7 +3877,9 @@
    "fuentes": [
     "Analogías",
     "DC Consultores",
+    "Management & Fit",
     "Proyección",
+    "Pulso Research",
     "QMonitor",
     "Tendencias",
     "Zubán Córdoba"
@@ -3476,9 +3893,9 @@
      "campo": "aprob",
      "mes": "Nov-26",
      "composicion": "estandar",
-     "n": 3,
+     "n": 5,
      "min": 30.3,
-     "max": 36,
+     "max": 37.6,
      "rango_valido": true,
      "direccion": "sin dirección común entre consultoras",
      "direcciones": {
@@ -3496,9 +3913,31 @@
        "estado": "sube",
        "detalle": "Oct-26 → Nov-26",
        "delta": 1
+      },
+      "M&F": {
+       "estado": "sube",
+       "detalle": "Oct-26 → Nov-26",
+       "delta": 1.0
+      },
+      "Pulso Research": {
+       "estado": "sube",
+       "detalle": "Oct-26 → Nov-26",
+       "delta": 5.1
       }
      },
      "consultoras": {
+      "M&F": {
+       "valor": 37.6,
+       "ref": {
+        "fila": 1803,
+        "base": "nivel2_indicadores",
+        "file_id": "1cmuEFkdV5dtihVQCBX4eO6Gof-jLEnLp",
+        "campo": "2026-11-12→2026-11-17",
+        "categoria": "Positiva / Aprueba",
+        "composicion": "estandar",
+        "secundaria": ""
+       }
+      },
       "QMonitor": {
        "valor": 36,
        "ref": {
@@ -3523,6 +3962,18 @@
         "secundaria": ""
        }
       },
+      "Pulso Research": {
+       "valor": 34,
+       "ref": {
+        "fila": 1948,
+        "base": "nivel2_indicadores",
+        "file_id": "1eoMG0IJq0ArLCUXPemLwyvuS1EDbP-C5",
+        "campo": "2026-11-07→2026-11-16",
+        "categoria": "Muy bien + Bien",
+        "composicion": "estandar",
+        "secundaria": ""
+       }
+      },
       "Analogías": {
        "valor": 30.3,
        "ref": {
@@ -3541,7 +3992,7 @@
      "campo": "desaprob",
      "mes": "Nov-26",
      "composicion": "estandar",
-     "n": 3,
+     "n": 5,
      "min": 55.9,
      "max": 62,
      "rango_valido": true,
@@ -3561,6 +4012,15 @@
        "estado": "sube",
        "detalle": "Oct-26 → Nov-26",
        "delta": 1
+      },
+      "M&F": {
+       "estado": "estable",
+       "detalle": "Oct-26 → Nov-26",
+       "delta": 0.0
+      },
+      "Pulso Research": {
+       "estado": "sin medición anterior",
+       "detalle": "serie de un solo punto"
       }
      },
      "consultoras": {
@@ -3584,6 +4044,30 @@
         "file_id": "1hqm_RbINFpsNIMA-W7ZaNjZ_r762KpVN",
         "campo": "2026-11-15→2026-11-18",
         "categoria": "Negativa (calificaciones 1 y 2)",
+        "composicion": "estandar",
+        "secundaria": ""
+       }
+      },
+      "Pulso Research": {
+       "valor": 59.6,
+       "ref": {
+        "fila": 1949,
+        "base": "nivel2_indicadores",
+        "file_id": "1eoMG0IJq0ArLCUXPemLwyvuS1EDbP-C5",
+        "campo": "2026-11-07→2026-11-16",
+        "categoria": "Mal + Muy mal",
+        "composicion": "estandar",
+        "secundaria": ""
+       }
+      },
+      "M&F": {
+       "valor": 58.1,
+       "ref": {
+        "fila": 1804,
+        "base": "nivel2_indicadores",
+        "file_id": "1cmuEFkdV5dtihVQCBX4eO6Gof-jLEnLp",
+        "campo": "2026-11-12→2026-11-17",
+        "categoria": "Negativa / Desaprueba",
         "composicion": "estandar",
         "secundaria": ""
        }
@@ -3623,7 +4107,9 @@
    ],
    "fuentes": [
     "Analogías",
+    "M&F",
     "Proyección",
+    "Pulso Research",
     "QMonitor"
    ]
   },
@@ -3635,8 +4121,8 @@
      "campo": "lla",
      "mes": "Nov-26",
      "composicion": "estandar",
-     "n": 3,
-     "min": 32,
+     "n": 4,
+     "min": 25.8,
      "max": 35,
      "rango_valido": true,
      "direccion": "sin dirección común entre consultoras",
@@ -3655,6 +4141,10 @@
        "estado": "sube",
        "detalle": "Oct-26 → Nov-26",
        "delta": 2.8
+      },
+      "Pulso Research": {
+       "estado": "sin medición anterior",
+       "detalle": "serie de un solo punto"
       }
      },
      "consultoras": {
@@ -3693,6 +4183,18 @@
         "composicion": "estandar",
         "secundaria": ""
        }
+      },
+      "Pulso Research": {
+       "valor": 25.8,
+       "ref": {
+        "fila": 1989,
+        "base": "nivel2_indicadores",
+        "file_id": "1eoMG0IJq0ArLCUXPemLwyvuS1EDbP-C5",
+        "campo": "2026-11-07→2026-11-16",
+        "categoria": "La Libertad Avanza",
+        "composicion": "estandar",
+        "secundaria": ""
+       }
       }
      }
     },
@@ -3700,8 +4202,8 @@
      "campo": "pj",
      "mes": "Nov-26",
      "composicion": "estandar",
-     "n": 2,
-     "min": 33.0,
+     "n": 3,
+     "min": 21.3,
      "max": 35,
      "rango_valido": true,
      "direccion": "sin dirección común entre consultoras",
@@ -3715,6 +4217,10 @@
        "estado": "sube",
        "detalle": "Oct-26 → Nov-26",
        "delta": 1.4
+      },
+      "Pulso Research": {
+       "estado": "sin medición anterior",
+       "detalle": "serie de un solo punto"
       }
      },
      "consultoras": {
@@ -3738,6 +4244,18 @@
         "file_id": "1hqm_RbINFpsNIMA-W7ZaNjZ_r762KpVN",
         "campo": "2026-11-15→2026-11-18",
         "categoria": "Peronismo Unido",
+        "composicion": "estandar",
+        "secundaria": ""
+       }
+      },
+      "Pulso Research": {
+       "valor": 21.3,
+       "ref": {
+        "fila": 1990,
+        "base": "nivel2_indicadores",
+        "file_id": "1eoMG0IJq0ArLCUXPemLwyvuS1EDbP-C5",
+        "campo": "2026-11-07→2026-11-16",
+        "categoria": "Peronismo Kirchnerista",
         "composicion": "estandar",
         "secundaria": ""
        }
@@ -4054,6 +4572,7 @@
     "DC Consultores",
     "ESPOP (UdeSA)",
     "Proyección",
+    "Pulso Research",
     "QMonitor"
    ]
   },
@@ -15430,6 +15949,142 @@
      "categoria": "Negativa (calificaciones 1 y 2)"
     },
     {
+     "tipo": "serie",
+     "modulo": "Gestión nacional",
+     "etiqueta": "GESTION · M&F · aprob",
+     "valor": 37.6,
+     "anterior": null,
+     "estado": "nuevo",
+     "consultora": "Management & Fit",
+     "fila": 1803,
+     "base": "nivel2_indicadores",
+     "file_id": "1cmuEFkdV5dtihVQCBX4eO6Gof-jLEnLp",
+     "campo": "2026-11-12→2026-11-17",
+     "unidad": "%",
+     "nota": "Noviembre: campo 12–17/11, informe de Management & Fit (Drive).",
+     "secundaria": "",
+     "categoria": "Positiva / Aprueba"
+    },
+    {
+     "tipo": "serie",
+     "modulo": "Gestión nacional",
+     "etiqueta": "GESTION · M&F · desaprob",
+     "valor": 58.1,
+     "anterior": null,
+     "estado": "nuevo",
+     "consultora": "Management & Fit",
+     "fila": 1804,
+     "base": "nivel2_indicadores",
+     "file_id": "1cmuEFkdV5dtihVQCBX4eO6Gof-jLEnLp",
+     "campo": "2026-11-12→2026-11-17",
+     "unidad": "%",
+     "nota": "Noviembre: campo 12–17/11, informe de Management & Fit (Drive).",
+     "secundaria": "",
+     "categoria": "Negativa / Desaprueba"
+    },
+    {
+     "tipo": "serie",
+     "modulo": "Gestión nacional",
+     "etiqueta": "GESTION · Pulso Research · aprob",
+     "valor": 34,
+     "anterior": null,
+     "estado": "nuevo",
+     "consultora": "Pulso Research",
+     "fila": 1948,
+     "base": "nivel2_indicadores",
+     "file_id": "1eoMG0IJq0ArLCUXPemLwyvuS1EDbP-C5",
+     "campo": "2026-11-07→2026-11-16",
+     "unidad": "%",
+     "nota": "Brújula Social de noviembre, campo 7–16/11 (n=1.552). Salto de +5,1 pp contra octubre marcado «verificar» en la base.",
+     "secundaria": "",
+     "categoria": "Muy bien + Bien"
+    },
+    {
+     "tipo": "serie",
+     "modulo": "Gestión nacional",
+     "etiqueta": "GESTION · Pulso Research · desaprob",
+     "valor": 59.6,
+     "anterior": null,
+     "estado": "nuevo",
+     "consultora": "Pulso Research",
+     "fila": 1949,
+     "base": "nivel2_indicadores",
+     "file_id": "1eoMG0IJq0ArLCUXPemLwyvuS1EDbP-C5",
+     "campo": "2026-11-07→2026-11-16",
+     "unidad": "%",
+     "nota": "Brújula Social de noviembre: mal + muy mal. Sin corte de octubre cargado.",
+     "secundaria": "",
+     "categoria": "Mal + Muy mal"
+    },
+    {
+     "tipo": "serie",
+     "modulo": "Imagen Milei",
+     "etiqueta": "IMG · Pulso Research · pos",
+     "valor": 38.6,
+     "anterior": null,
+     "estado": "nuevo",
+     "consultora": "Pulso Research",
+     "fila": 1950,
+     "base": "nivel2_indicadores",
+     "file_id": "1eoMG0IJq0ArLCUXPemLwyvuS1EDbP-C5",
+     "campo": "2026-11-07→2026-11-16",
+     "unidad": "%",
+     "nota": "Brújula Social de noviembre. Salto de +6,2 pp contra octubre marcado «verificar» en la base.",
+     "secundaria": "",
+     "categoria": "Positiva"
+    },
+    {
+     "tipo": "serie",
+     "modulo": "Imagen Milei",
+     "etiqueta": "IMG · Pulso Research · neg",
+     "valor": 58.7,
+     "anterior": null,
+     "estado": "nuevo",
+     "consultora": "Pulso Research",
+     "fila": 1951,
+     "base": "nivel2_indicadores",
+     "file_id": "1eoMG0IJq0ArLCUXPemLwyvuS1EDbP-C5",
+     "campo": "2026-11-07→2026-11-16",
+     "unidad": "%",
+     "nota": "Brújula Social de noviembre.",
+     "secundaria": "",
+     "categoria": "Negativa"
+    },
+    {
+     "tipo": "serie",
+     "modulo": "Imagen Milei",
+     "etiqueta": "IMG · Management & Fit · pos",
+     "valor": 34,
+     "anterior": null,
+     "estado": "nuevo",
+     "consultora": "Management & Fit",
+     "fila": 1835,
+     "base": "nivel2_indicadores",
+     "file_id": "1cmuEFkdV5dtihVQCBX4eO6Gof-jLEnLp",
+     "campo": "2026-11-12→2026-11-17",
+     "unidad": "%",
+     "nota": "Management & Fit nov-26 (muy buena + buena); serie propia de un solo corte.",
+     "secundaria": "",
+     "categoria": "Positiva (muy buena + buena)"
+    },
+    {
+     "tipo": "serie",
+     "modulo": "Imagen Milei",
+     "etiqueta": "IMG · Management & Fit · neg",
+     "valor": 54.1,
+     "anterior": null,
+     "estado": "nuevo",
+     "consultora": "Management & Fit",
+     "fila": 1836,
+     "base": "nivel2_indicadores",
+     "file_id": "1cmuEFkdV5dtihVQCBX4eO6Gof-jLEnLp",
+     "campo": "2026-11-12→2026-11-17",
+     "unidad": "%",
+     "nota": "Management & Fit nov-26 (mala + muy mala); serie propia de un solo corte.",
+     "secundaria": "",
+     "categoria": "Negativa (mala + muy mala)"
+    },
+    {
      "tipo": "pendiente",
      "modulo": "Imagen Milei",
      "etiqueta": "Vozna: imagen positiva (may 36,3 · jul 32,1 · sep 31,3), negativa (sep 63,5) y aprobación (jul 36,3 · sep 32,6) seguían escritas dentro del código de index.html, fuera de las bases. Retiradas de los gráficos.",
@@ -15445,6 +16100,18 @@
      "tipo": "pendiente",
      "modulo": "Imagen Milei",
      "etiqueta": "Imagen positiva de Milei: sin huecos. Los 11 meses que tenían negativa sin su contracara se cerraron el 18/11: Giacobbe jul y ago, Proyección sep, D'Alessio jun y jul, Zentrix may–sep desde informes primarios de Drive, y Zuban jul por fuente secundaria, único caso sin informe primario.",
+     "necesita": "—"
+    },
+    {
+     "tipo": "pendiente",
+     "modulo": "Gestión nacional",
+     "etiqueta": "Pulso Research nov-26 trae saltos grandes frente a octubre (aprobación 28,9 → 34,0; imagen positiva de Milei 32,4 → 38,6). La base los marca «verificar»: no se confirmó que pregunta y escala de octubre sean idénticas.",
+     "necesita": "contrastar el cuestionario de Brújula Social de octubre y noviembre"
+    },
+    {
+     "tipo": "pendiente",
+     "modulo": "Imagen Milei",
+     "etiqueta": "Vozna nacional nov-26 (campo 5–11/11, n=2.195): aprobación 36% (N2 fila 1943). Sin serie comparable: septiembre fue muestra de PBA. Los cuatro segmentos del electorado son perfiles estadísticos, no una pregunta, y no entran a series.",
      "necesita": "—"
     }
    ],
@@ -15991,6 +16658,40 @@
     {
      "tipo": "serie",
      "modulo": "Intención de voto",
+     "etiqueta": "CONS · Pulso Research · lla",
+     "valor": 25.8,
+     "anterior": null,
+     "estado": "nuevo",
+     "consultora": "Pulso Research",
+     "fila": 1989,
+     "base": "nivel2_indicadores",
+     "file_id": "1eoMG0IJq0ArLCUXPemLwyvuS1EDbP-C5",
+     "campo": "2026-11-07→2026-11-16",
+     "unidad": "%",
+     "nota": "Voto por espacio sin proyección de indecisos (con proyección: 32,8%, fila 1995 de N2). Medición única.",
+     "secundaria": "",
+     "categoria": "La Libertad Avanza"
+    },
+    {
+     "tipo": "serie",
+     "modulo": "Intención de voto",
+     "etiqueta": "CONS · Pulso Research · pj",
+     "valor": 21.3,
+     "anterior": null,
+     "estado": "nuevo",
+     "consultora": "Pulso Research",
+     "fila": 1990,
+     "base": "nivel2_indicadores",
+     "file_id": "1eoMG0IJq0ArLCUXPemLwyvuS1EDbP-C5",
+     "campo": "2026-11-07→2026-11-16",
+     "unidad": "%",
+     "nota": "Peronismo kirchnerista, sin proyección de indecisos. Medición única; no se suma con peronismo federal.",
+     "secundaria": "",
+     "categoria": "Peronismo Kirchnerista"
+    },
+    {
+     "tipo": "serie",
+     "modulo": "Intención de voto",
      "etiqueta": "OFIOPO · Proyección · oficialismo",
      "valor": 35,
      "anterior": null,
@@ -16266,6 +16967,12 @@
      "modulo": "Intención de voto",
      "etiqueta": "Balotaje de Synopsis oct-26 (Milei 41,9 · Kicillof 41,8) retirado de los gráficos el 18/11: el rótulo declaraba «ficha original pendiente» y, sin identidad acreditada, la Parte XVI.5 lo mantiene como candidato pendiente fuera de gráficos y cálculos. Coherente con la decisión del 11/11 de no cargar la intención de voto de esa misma ola. El registro se conserva en las fuentes complementarias.",
      "necesita": "la ficha técnica de esa ola de Synopsis (campo 12–17/10) o el enlace al informe original"
+    },
+    {
+     "tipo": "pendiente",
+     "modulo": "Intención de voto",
+     "etiqueta": "QSocial (octubre): solo se cargaron el corte de feb-26 informado en el texto y el de octubre; los valores intermedios del gráfico (abr–sep) no se asignaron a su serie.",
+     "necesita": "relevar a mano los cortes intermedios del gráfico del PDF 1Kvc6rs3…"
     }
    ]
   },
@@ -16397,8 +17104,8 @@
     {
      "tipo": "pendiente",
      "modulo": "Agenda pública",
-     "etiqueta": "Sin mediciones nacionales con fila en nivel 2.",
-     "necesita": "—"
+     "etiqueta": "Sin ranking nacional completo con fila en nivel 2. Management & Fit (desocupación 21,9 · corrupción 18,1) y Pulso Research (pregunta abierta) tienen solo parte del ranking legible.",
+     "necesita": "relevar a mano el ranking completo de principal problema de M&F (PDF 1cmuEFkd…) y de Pulso (PDF 1eoMG0IJ…)"
     }
    ]
   },
@@ -16443,6 +17150,18 @@
      "modulo": "Semáforo",
      "etiqueta": "PoliTech Río Negro (voto provincial jul-26: LLA 25,1 · peronismo 22,2 · JSRN 21,5) retirado del Radar el 18/11. Venía de baribache3000.com.ar, que no es ninguno de los dos sitios autorizados por la Parte XVI.3, y además abría una serie provincial nueva, que la Parte XVI.2 no permite.",
      "necesita": "el informe original de PoliTech sobre Río Negro, para cargarlo como fuente primaria"
+    },
+    {
+     "tipo": "pendiente",
+     "modulo": "Territorio",
+     "etiqueta": "DC CABA nov-26: presupuesto «salud y educación primero» figura en 28,4% en la presentación y en 31,4% en el informe analítico (submuestra de ~70 casos, ±11,7 pp). Ambos valores están en la base; no se usan en el Monitor.",
+     "necesita": "base de campo de DC Consultores para resolver la discrepancia"
+    },
+    {
+     "tipo": "pendiente",
+     "modulo": "Territorio",
+     "etiqueta": "Management & Fit nov-26 no se cargó completo: desconfianza y el resto del ranking de principal problema por celdas ambiguas; el corte de PBA (aprobación Milei 35,8 · Kicillof 37,4) está en la base pero no en el Monitor.",
+     "necesita": "relevar a mano esas celdas del PDF 1cmuEFkd…"
     }
    ]
   }
@@ -16609,10 +17328,12 @@
    },
    "Nov-26": {
     "estado": "parcial",
-    "n_fuentes": 3,
+    "n_fuentes": 5,
     "fuentes": [
      "Analogías Investigación & Estrategia",
+     "Management & Fit",
      "Proyección",
+     "Pulso Research",
      "QMonitor"
     ],
     "filas": [
@@ -16621,10 +17342,15 @@
      "NI:1460",
      "NI:1461",
      "NI:1791",
-     "NI:1792"
+     "NI:1792",
+     "NI:1803",
+     "NI:1804",
+     "NI:1948",
+     "NI:1949"
     ],
     "pendiente": [
-     "Management & Fit sep-26: el registro de encuestar no informa el universo. La pregunta textual y la técnica quedaron acreditadas el 17/11 («Más allá de tu voto a presidente, ¿aprobás o desaprobás la gestión de Javier Milei en el gobierno nacional?»; presencial + online + CATI). Necesita: informe original de Management & Fit con el universo"
+     "Management & Fit sep-26: el registro de encuestar no informa el universo. La pregunta textual y la técnica quedaron acreditadas el 17/11 («Más allá de tu voto a presidente, ¿aprobás o desaprobás la gestión de Javier Milei en el gobierno nacional?»; presencial + online + CATI). Necesita: informe original de Management & Fit con el universo",
+     "Pulso Research nov-26 trae saltos grandes frente a octubre (aprobación 28,9 → 34,0; imagen positiva de Milei 32,4 → 38,6). La base los marca «verificar»: no se confirmó que pregunta y escala de octubre sean idénticas. Necesita: contrastar el cuestionario de Brújula Social de octubre y noviembre"
     ]
    },
    "bases": [
@@ -16673,10 +17399,12 @@
    },
    "Nov-26": {
     "estado": "parcial",
-    "n_fuentes": 3,
+    "n_fuentes": 5,
     "fuentes": [
      "Analogías Investigación & Estrategia",
+     "Management & Fit",
      "Proyección",
+     "Pulso Research",
      "QMonitor"
     ],
     "filas": [
@@ -16685,11 +17413,16 @@
      "NI:1473",
      "NI:1474",
      "NI:1789",
-     "NI:1790"
+     "NI:1790",
+     "NI:1835",
+     "NI:1836",
+     "NI:1950",
+     "NI:1951"
     ],
     "pendiente": [
      "Vozna: imagen positiva (may 36,3 · jul 32,1 · sep 31,3), negativa (sep 63,5) y aprobación (jul 36,3 · sep 32,6) seguían escritas dentro del código de index.html, fuera de las bases. Retiradas de los gráficos. Necesita: informes de Vozna de mayo, julio y septiembre de 2026 para cargarlos en Nivel 1 y Nivel 2",
-     "Imagen positiva de Milei: sin huecos. Los 11 meses que tenían negativa sin su contracara se cerraron el 18/11: Giacobbe jul y ago, Proyección sep, D'Alessio jun y jul, Zentrix may–sep desde informes primarios de Drive, y Zuban jul por fuente secundaria, único caso sin informe primario."
+     "Imagen positiva de Milei: sin huecos. Los 11 meses que tenían negativa sin su contracara se cerraron el 18/11: Giacobbe jul y ago, Proyección sep, D'Alessio jun y jul, Zentrix may–sep desde informes primarios de Drive, y Zuban jul por fuente secundaria, único caso sin informe primario.",
+     "Vozna nacional nov-26 (campo 5–11/11, n=2.195): aprobación 36% (N2 fila 1943). Sin serie comparable: septiembre fue muestra de PBA. Los cuatro segmentos del electorado son perfiles estadísticos, no una pregunta, y no entran a series."
     ]
    },
    "bases": [
@@ -16801,11 +17534,12 @@
    },
    "Nov-26": {
     "estado": "parcial",
-    "n_fuentes": 4,
+    "n_fuentes": 5,
     "fuentes": [
      "Analogías Investigación & Estrategia",
      "PoliTech",
      "Proyección",
+     "Pulso Research",
      "QMonitor"
     ],
     "filas": [
@@ -16842,13 +17576,16 @@
      "NI:1621",
      "NI:1622",
      "NI:1800",
-     "NI:1801"
+     "NI:1801",
+     "NI:1989",
+     "NI:1990"
     ],
     "pendiente": [
      "QMonitor noviembre: balotaje y pisos/techos no relevados todavía. Necesita: lectura de las pp. 47–55 del PDF",
      "Equipo Mide «oficialismo vs. oposición» 42/34/12/12 (N2 1569–1572): excluido de gráficos, rangos, contadores y conclusiones. Aplicada la definición acordada (oficialismo = LLA; oposición = todo lo que no es LLA; no votaría, blanco e indecisos aparte), la lámina de voto por espacio del 18–25/09 da 33 / 48 / 6 / 13 y no 34 / 42 / 12 / 12. El conflicto queda registrado en N2 sin sobrescribir. Necesita: la lámina del capítulo electoral del PDF 148N9Me0 con la pregunta de oficialismo vs. oposición y su base de cálculo",
      "Eje «oficialismo vs. oposición» no computable: solo Proyección (nov-26) tiene en la base todas las categorías de voto por espacio. Para el resto falta cargar las categorías distintas de LLA y PJ, y completarlas por diferencia no está permitido. Necesita: las categorías completas de voto por espacio de cada consultora",
-     "Balotaje de Synopsis oct-26 (Milei 41,9 · Kicillof 41,8) retirado de los gráficos el 18/11: el rótulo declaraba «ficha original pendiente» y, sin identidad acreditada, la Parte XVI.5 lo mantiene como candidato pendiente fuera de gráficos y cálculos. Coherente con la decisión del 11/11 de no cargar la intención de voto de esa misma ola. El registro se conserva en las fuentes complementarias. Necesita: la ficha técnica de esa ola de Synopsis (campo 12–17/10) o el enlace al informe original"
+     "Balotaje de Synopsis oct-26 (Milei 41,9 · Kicillof 41,8) retirado de los gráficos el 18/11: el rótulo declaraba «ficha original pendiente» y, sin identidad acreditada, la Parte XVI.5 lo mantiene como candidato pendiente fuera de gráficos y cálculos. Coherente con la decisión del 11/11 de no cargar la intención de voto de esa misma ola. El registro se conserva en las fuentes complementarias. Necesita: la ficha técnica de esa ola de Synopsis (campo 12–17/10) o el enlace al informe original",
+     "QSocial (octubre): solo se cargaron el corte de feb-26 informado en el texto y el de octubre; los valores intermedios del gráfico (abr–sep) no se asignaron a su serie. Necesita: relevar a mano los cortes intermedios del gráfico del PDF 1Kvc6rs3…"
     ]
    },
    "bases": [
@@ -17033,7 +17770,7 @@
      "NI:1472"
     ],
     "pendiente": [
-     "Sin mediciones nacionales con fila en nivel 2."
+     "Sin ranking nacional completo con fila en nivel 2. Management & Fit (desocupación 21,9 · corrupción 18,1) y Pulso Research (pregunta abierta) tienen solo parte del ranking legible. Necesita: relevar a mano el ranking completo de principal problema de M&F (PDF 1cmuEFkd…) y de Pulso (PDF 1eoMG0IJ…)"
     ]
    },
    "bases": [
@@ -17196,7 +17933,9 @@
      "NI:1721"
     ],
     "pendiente": [
-     "CB Global Data GBA (24 intendentes) y CB Global federal (gobernadores, intendentes y dirigentes nacionales por provincia, campo 8–13/11). Del federal faltan por relevar a mano los valores de noviembre de 18 gobernadores y 18 intendentes, que están solo en gráficos. Necesita: lectura de los gráficos de las pp. de desglose del PDF 1vxmhzHN… (N1 fila 386)"
+     "CB Global Data GBA (24 intendentes) y CB Global federal (gobernadores, intendentes y dirigentes nacionales por provincia, campo 8–13/11). Del federal faltan por relevar a mano los valores de noviembre de 18 gobernadores y 18 intendentes, que están solo en gráficos. Necesita: lectura de los gráficos de las pp. de desglose del PDF 1vxmhzHN… (N1 fila 386)",
+     "DC CABA nov-26: presupuesto «salud y educación primero» figura en 28,4% en la presentación y en 31,4% en el informe analítico (submuestra de ~70 casos, ±11,7 pp). Ambos valores están en la base; no se usan en el Monitor. Necesita: base de campo de DC Consultores para resolver la discrepancia",
+     "Management & Fit nov-26 no se cargó completo: desconfianza y el resto del ranking de principal problema por celdas ambiguas; el corte de PBA (aprobación Milei 35,8 · Kicillof 37,4) está en la base pero no en el Monitor. Necesita: relevar a mano esas celdas del PDF 1cmuEFkd…"
     ]
    },
    "bases": [
@@ -17244,9 +17983,9 @@
  ],
  "META": {
   "corte": {
-   "fecha": "2026-11-26",
+   "fecha": "2026-11-27",
    "mes_parcial": "Nov-26",
-   "etiqueta": "Noviembre 2026 · corte al 26/11/2026",
+   "etiqueta": "Noviembre 2026 · corte al 27/11/2026",
    "base_publicada": "b43fcb8 (index.html publicado en ivannavt.github.io/monitor-ar)"
   },
   "generado_por": "scripts/build_radar_data.py",
@@ -17258,8 +17997,8 @@
    "data/bases/radar_fuentes_complementarias.tsv",
    "data/radar_mapping.json"
   ],
-  "valores_trazados": 532,
-  "nuevos": 181,
+  "valores_trazados": 542,
+  "nuevos": 191,
   "corregidos": 15,
   "retirados": 0,
   "puntuales": 0,
