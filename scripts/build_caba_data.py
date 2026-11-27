@@ -96,9 +96,9 @@ COB = [
     {'consultora': 'DC Consultores', 'tipo': 'CONV', 'informes': [
         {'mes': 'Jul', 'campo': '19–22/07', 'muestra': '1.360 · ±2,7', 'carga': 'Solo imagen 50/50 de Macri y Milei', 'estado': 'Parcial', 'serie': 'No comparable: escala sin «regular» ni «no lo conozco»'},
         {'mes': 'Ago', 'campo': '23–27/08', 'muestra': '918 · ±2,5', 'carga': '3 cifras de clima (casa porteña, esperanza, desolación)', 'estado': 'Parcial', 'serie': 'Sin imagen ni voto cargados'},
-        {'mes': 'Sep', 'campo': '22–27/09', 'muestra': 'Pendiente de ficha', 'carga': 'Imagen de 13 dirigentes, continuidad/cambio, clima', 'estado': 'Cargado', 'serie': 'Imagen y continuidad/cambio: ALTA con nov'},
+        {'mes': 'Sep', 'campo': '22–27/09', 'muestra': '1.043 · ±2,2', 'carga': 'Imagen de 13 dirigentes, continuidad/cambio, clima', 'estado': 'Cargado', 'serie': 'Imagen y continuidad/cambio: ALTA con nov'},
         {'mes': 'Oct', 'campo': '22–26/10', 'muestra': '1.360 · ±2,5', 'carga': 'Voto por espacio, Jefatura, continuidad/cambio', 'estado': 'Cargado', 'serie': 'Continuidad/cambio ALTA; Jefatura y espacio MEDIA'},
-        {'mes': 'Nov', 'campo': '18–22/11', 'muestra': 'Ver informe', 'carga': 'Voto, Jefatura, imagen, emociones, probabilidad de voto', 'estado': 'Cargado', 'serie': 'Cierra las series sep–nov'},
+        {'mes': 'Nov', 'campo': '18–22/11', 'muestra': '1.293 · ±2,7', 'carga': 'Voto, Jefatura, imagen, emociones, probabilidad de voto', 'estado': 'Cargado', 'serie': 'Cierra las series sep–nov'},
     ]},
     {'consultora': 'CB Global Data', 'tipo': 'CONV', 'informes': [
         {'mes': 'Sep', 'campo': '21–25/09', 'muestra': '', 'carga': 'Imagen positiva del Jefe de Gobierno de CABA', 'valor': val('CBGLOBALDATA', 'Sep', 'IMG_JEFEGOBIERNO_CABA_POSITIVA_CBGLOBALDATA'), 'serie': 'Un corte; ranking de alcaldes de América Latina'},
