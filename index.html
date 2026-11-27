@@ -518,7 +518,6 @@ footer a{color:var(--accent)}
         <div style="font-size:11px;font-weight:600;letter-spacing:.5px;text-transform:uppercase;color:var(--fg-dim);margin-bottom:6px">Escenario 2027 · SL</div>
         <div style="font-size:26px;font-weight:700;font-variant-numeric:tabular-nums;line-height:1">—<span style="font-size:14px;font-weight:400"> s/d</span></div>
         <div style="font-size:11px;color:var(--fg-dim);margin-top:4px">El 52% atribuido a Monitor Digital no tiene fila en la base: retirado el 17/11</div>
-        <div style="margin-top:8px"><span class="gap-delta-badge dn" style="font-size:10px">sin respaldo · pendiente</span></div>
       </div>
 
       <div class="chart-wrap" style="margin-bottom:0;padding:14px 16px">
@@ -1075,7 +1074,6 @@ footer a{color:var(--accent)}
   <p class="sec">Alertas activas</p>
   <div class="hallazgo">
     <div class="hallazgo-head">
-      <span class="hallazgo-dir h-mix">SIN RESPALDO</span>
       <span class="hallazgo-src">Rumbo y expectativas</span>
     </div>
     <div class="hallazgo-txt">Proyección mide en nov-26 un <strong>30,8% que ve el rumbo correcto</strong> y un <strong>58,0% equivocado</strong>. Por su lado, el subíndice de Expectativas del ICC va de <strong>47,14 en julio a 47,87 en octubre</strong>. Son dos fuentes distintas: se leen por separado, no se cruzan ni se promedian.</div>
@@ -1083,7 +1081,6 @@ footer a{color:var(--accent)}
   </div>
   <div class="hallazgo">
     <div class="hallazgo-head">
-      <span class="hallazgo-dir h-mix">SIN RESPALDO</span>
       <span class="hallazgo-src">Imagen Milei · Zuban</span>
     </div>
     <div class="hallazgo-txt">De Zuban lo verificable es el tramo <strong>sep→oct</strong>: la imagen positiva de Milei baja <strong>1,1 p.p.</strong> y la negativa sube <strong>2,3 p.p.</strong> Son dos cortes: dan variación, no tendencia.</div>
@@ -1091,7 +1088,6 @@ footer a{color:var(--accent)}
   </div>
   <div class="hallazgo">
     <div class="hallazgo-head">
-      <span class="hallazgo-dir h-mix">SIN PAR SL</span>
       <span class="hallazgo-src">Agenda desempleo</span>
     </div>
     <div class="hallazgo-txt">El desempleo como problema principal lo mide Proyección: <strong>23,5% en oct-26</strong> y <strong>28,8% en nov-26</strong>. No hay indicador SL de agenda en la base, de modo que no corresponde calcular ninguna brecha CONV–SL.</div>
@@ -1913,16 +1909,16 @@ function renderGAP(){
 function renderEjes(){
   const cont=document.getElementById('ejesTabla');if(!cont)return;
   const limpiar=t=>String(t||'').replace(/\s*\((?:filas? )?N2 [^)]*\)/g,'').replace(/\s*N2 \d[\d–, y-]*/g,'').trim();
-  cont.innerHTML='<div class="sem-lista">'+EJES.map(e=>{
+  cont.innerHTML='<div class="sem-lista">'+EJES.filter(e=>e.grupos.some(g=>g.min!=null)).map(e=>{
     const conVal=e.grupos.filter(g=>g.min!=null);
     const rango=g=>g.rango_valido?`${fmt(g.min)}–${fmt(g.max)}%`:`${fmt(g.min)}%`;
     const etq=g=>String(g.campo).replace(/\s*·.*$/,'')+(g.composicion&&g.composicion!=='estandar'?' · '+g.composicion.replace(/^pj · /,''):'');
-    const cuenta=!e.grupos.length?'eje vacío':conVal.length?Math.max(...conVal.map(g=>g.n))+' fuentes':'intra-consultora';
-    const resumen=conVal.length?conVal.map(g=>`<span><strong style="color:var(--fg)">${esc(etq(g))}</strong> ${rango(g)}${g.rango_valido?'':' <span style="color:var(--warn)">1 fuente</span>'}</span>`).join(''):`<span>${!e.grupos.length?'sin series en este corte':'sin rango entre fuentes'}</span>`;
+    const cuenta='';
+    const resumen=conVal.length?conVal.map(g=>`<span><strong style="color:var(--fg)">${esc(etq(g))}</strong> ${rango(g)}</span>`).join(''):`<span>${!e.grupos.length?'sin series en este corte':'sin rango entre fuentes'}</span>`;
     const mes=conVal.length?conVal[0].mes:'';
-    const det=conVal.map(g=>`<div><span class="k">${esc(etq(g))}</span>${g.rango_valido?`<strong>${rango(g)}</strong> · ${g.n} fuentes · ${esc(g.mes)}`:`${rango(g)} · una sola fuente: no se arma rango`}<div style="color:var(--fg-dim)">${esc(Object.keys(g.consultoras).join(' · '))}</div></div>`).join('');
+    const det=conVal.map(g=>`<div><span class="k">${esc(etq(g))}</span>${g.rango_valido?`<strong>${rango(g)}</strong> · ${esc(g.mes)}`:`${rango(g)} · una sola fuente: no se arma rango`}<div style="color:var(--fg-dim)">${esc(Object.keys(g.consultoras).join(' · '))}</div></div>`).join('');
     return `<details class="sem-it ej"><summary>
-      <span class="sem-e" style="font-size:11px;color:var(--fg-dim)">▸</span><span class="sem-n">${esc(e.nombre)}</span><span class="sem-v sem-vl" style="color:${e.grupos.length?'var(--fg-dim)':'var(--warn)'}">${esc(cuenta)}${mes?' · '+esc(mes):''}</span>
+      <span class="sem-e" style="font-size:11px;color:var(--fg-dim)">▸</span><span class="sem-n">${esc(e.nombre)}</span><span class="sem-v sem-vl" style="color:${e.grupos.length?'var(--fg-dim)':'var(--warn)'}">${esc(mes)}</span>
       <span class="sem-m">${resumen}</span>
     </summary><div class="sem-det">
       ${det}
