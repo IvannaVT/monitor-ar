@@ -7080,7 +7080,7 @@
    "mes": "Nov-26",
    "valor": 40.99,
    "fila": "",
-   "rotulo": "FUENTE SECUNDARIA · Perfil reproducido por UTDT · 19/11/2026",
+   "rotulo": "FUENTE SECUNDARIA · Perfil (reproduce la nota de prensa de UTDT, publicada 19/11/2026) · https://www.utdt.edu/ver_nota_prensa.php?id_item_menu=6&id_nota_prensa=23683 · consultado 2026-11-27 · fuente original: UTDT, Índice de Confianza del Consumidor (campo 3–17/11, Poliarquía)",
    "modulo": "ICC",
    "fuente_original": "CIF/UTDT"
   },
@@ -7089,7 +7089,7 @@
    "mes": "Nov-26",
    "valor": 43.41,
    "fila": "",
-   "rotulo": "FUENTE SECUNDARIA · Perfil reproducido por UTDT · 19/11/2026",
+   "rotulo": "FUENTE SECUNDARIA · Perfil (reproduce la nota de prensa de UTDT, publicada 19/11/2026) · https://www.utdt.edu/ver_nota_prensa.php?id_item_menu=6&id_nota_prensa=23683 · consultado 2026-11-27 · fuente original: UTDT, Índice de Confianza del Consumidor (campo 3–17/11, Poliarquía)",
    "modulo": "ICC",
    "fuente_original": "CIF/UTDT"
   },
@@ -7098,7 +7098,7 @@
    "mes": "Nov-26",
    "valor": 47.52,
    "fila": "",
-   "rotulo": "FUENTE SECUNDARIA · Perfil reproducido por UTDT · 19/11/2026",
+   "rotulo": "FUENTE SECUNDARIA · Perfil (reproduce la nota de prensa de UTDT, publicada 19/11/2026) · https://www.utdt.edu/ver_nota_prensa.php?id_item_menu=6&id_nota_prensa=23683 · consultado 2026-11-27 · fuente original: UTDT, Índice de Confianza del Consumidor (campo 3–17/11, Poliarquía)",
    "modulo": "ICC",
    "fuente_original": "CIF/UTDT"
   },
@@ -7107,7 +7107,7 @@
    "mes": "Nov-26",
    "valor": 36.51,
    "fila": "",
-   "rotulo": "FUENTE SECUNDARIA · Perfil reproducido por UTDT · 19/11/2026",
+   "rotulo": "FUENTE SECUNDARIA · Perfil (reproduce la nota de prensa de UTDT, publicada 19/11/2026) · https://www.utdt.edu/ver_nota_prensa.php?id_item_menu=6&id_nota_prensa=23683 · consultado 2026-11-27 · fuente original: UTDT, Índice de Confianza del Consumidor (campo 3–17/11, Poliarquía)",
    "modulo": "ICC",
    "fuente_original": "CIF/UTDT"
   }
@@ -7151,7 +7151,7 @@
     "clase_valor": "neu",
     "valor": 40.99,
     "periodo": "nov-26",
-    "secundaria": "FUENTE SECUNDARIA · Perfil reproducido por UTDT · 19/11/2026"
+    "secundaria": "FUENTE SECUNDARIA · Perfil (reproduce la nota de prensa de UTDT, publicada 19/11/2026) · https://www.utdt.edu/ver_nota_prensa.php?id_item_menu=6&id_nota_prensa=23683 · consultado 2026-11-27 · fuente original: UTDT, Índice de Confianza del Consumidor (campo 3–17/11, Poliarquía)"
    },
    {
     "icono": "🏛️",
@@ -13360,7 +13360,7 @@
    "mes": "Nov-26",
    "valor": 40.99,
    "fila": "",
-   "rotulo": "FUENTE SECUNDARIA · Perfil reproducido por UTDT · 19/11/2026"
+   "rotulo": "FUENTE SECUNDARIA · Perfil (reproduce la nota de prensa de UTDT, publicada 19/11/2026) · https://www.utdt.edu/ver_nota_prensa.php?id_item_menu=6&id_nota_prensa=23683 · consultado 2026-11-27 · fuente original: UTDT, Índice de Confianza del Consumidor (campo 3–17/11, Poliarquía)"
   }
  ],
  "UPD": {
@@ -14286,7 +14286,7 @@
      "campo": "2026-11-03→2026-11-17",
      "unidad": "puntos (0–100)",
      "nota": "",
-     "secundaria": "FUENTE SECUNDARIA · Perfil reproducido por UTDT · 19/11/2026",
+     "secundaria": "FUENTE SECUNDARIA · Perfil (reproduce la nota de prensa de UTDT, publicada 19/11/2026) · https://www.utdt.edu/ver_nota_prensa.php?id_item_menu=6&id_nota_prensa=23683 · consultado 2026-11-27 · fuente original: UTDT, Índice de Confianza del Consumidor (campo 3–17/11, Poliarquía)",
      "categoria": "Nacional"
     },
     {
@@ -14303,7 +14303,7 @@
      "campo": "2026-11-03→2026-11-17",
      "unidad": "puntos (0–100)",
      "nota": "",
-     "secundaria": "FUENTE SECUNDARIA · Perfil reproducido por UTDT · 19/11/2026",
+     "secundaria": "FUENTE SECUNDARIA · Perfil (reproduce la nota de prensa de UTDT, publicada 19/11/2026) · https://www.utdt.edu/ver_nota_prensa.php?id_item_menu=6&id_nota_prensa=23683 · consultado 2026-11-27 · fuente original: UTDT, Índice de Confianza del Consumidor (campo 3–17/11, Poliarquía)",
      "categoria": "CABA"
     },
     {
@@ -14320,7 +14320,7 @@
      "campo": "2026-11-03→2026-11-17",
      "unidad": "puntos (0–100)",
      "nota": "",
-     "secundaria": "FUENTE SECUNDARIA · Perfil reproducido por UTDT · 19/11/2026",
+     "secundaria": "FUENTE SECUNDARIA · Perfil (reproduce la nota de prensa de UTDT, publicada 19/11/2026) · https://www.utdt.edu/ver_nota_prensa.php?id_item_menu=6&id_nota_prensa=23683 · consultado 2026-11-27 · fuente original: UTDT, Índice de Confianza del Consumidor (campo 3–17/11, Poliarquía)",
      "categoria": "Interior"
     },
     {
@@ -14337,7 +14337,7 @@
      "campo": "2026-11-03→2026-11-17",
      "unidad": "puntos (0–100)",
      "nota": "",
-     "secundaria": "FUENTE SECUNDARIA · Perfil reproducido por UTDT · 19/11/2026",
+     "secundaria": "FUENTE SECUNDARIA · Perfil (reproduce la nota de prensa de UTDT, publicada 19/11/2026) · https://www.utdt.edu/ver_nota_prensa.php?id_item_menu=6&id_nota_prensa=23683 · consultado 2026-11-27 · fuente original: UTDT, Índice de Confianza del Consumidor (campo 3–17/11, Poliarquía)",
      "categoria": "GBA"
     },
     {
@@ -18004,7 +18004,7 @@
   "puntuales": 0,
   "en_series_de_evolucion": 290,
   "fuente_secundaria": [
-   "FUENTE SECUNDARIA · Perfil reproducido por UTDT · 19/11/2026",
+   "FUENTE SECUNDARIA · Perfil (reproduce la nota de prensa de UTDT, publicada 19/11/2026) · https://www.utdt.edu/ver_nota_prensa.php?id_item_menu=6&id_nota_prensa=23683 · consultado 2026-11-27 · fuente original: UTDT, Índice de Confianza del Consumidor (campo 3–17/11, Poliarquía)",
    "FUENTE SECUNDARIA · encuestas-argentinas.com · https://encuestas-argentinas.com/encuestas/ (ficha del 04/08/2026, registro sin URL propia en el listado) · consultado 2026-11-18 · fuente original: Zuban Córdoba",
    "FUENTE SECUNDARIA · encuestas-argentinas.com · https://encuestas-argentinas.com/encuestas/ (ficha del 04/08/2026, registro sin URL propia; hilo X: https://x.com/_EncuestAR_/status/2084520359408148892) · consultado 2026-11-18 · fuente original: Zuban Córdoba",
    "FUENTE SECUNDARIA · encuestas-argentinas.com · https://encuestas-argentinas.com/encuestas/ (registro sin URL propia; hilo X: https://x.com/_EncuestAR_/status/2109835471689777618) · consultado 2026-11-17 · fuente original: Management & Fit",
