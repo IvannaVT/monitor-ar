@@ -9,19 +9,22 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 TSV = ROOT / 'data' / 'bases' / 'nivel2_extracto_caba.tsv'
 OUT = ROOT / 'data' / 'caba_data.json'
-MES = {'2026_09': 'Sep', '2026_10': 'Oct', '2026_11': 'Nov'}
+MES = {'2026_08': 'Ago', '2026_09': 'Sep', '2026_10': 'Oct', '2026_11': 'Nov'}
+VERIF = {2313, 2314, 2315}  # Oct espacio: cifras de N1, verificar categorías
 SEC = {2307, 2308, 2309}  # Oct: Larreta, García Moritán, Otro vía encuestas-argentinas.com (fuente original DC)
 
 rows = []
 with open(TSV, encoding='utf-8', newline='') as fh:
     for r in csv.DictReader(fh, delimiter='\t'):
         r['fila'] = int(r['fila']); r['resultado'] = float(r['resultado'])
-        r['mes'] = MES[r['id_informe'][len('DCCONSULTORES_'):len('DCCONSULTORES_') + 7]]
+        import re as _re
+        r['mes'] = MES[_re.search(r'_(2026_\d\d)', r['id_informe']).group(1)]
+        r['cons'] = r['id_informe'].split('_')[0]
         rows.append(r)
 
 
-def get(mes, ind, cat):
-    c = [r for r in rows if r['mes'] == mes and r['id_indicador'] == ind and r['categoria'].startswith(cat)]
+def get(mes, ind, cat, cons='DCCONSULTORES'):
+    c = [r for r in rows if r['cons'] == cons and r['mes'] == mes and r['id_indicador'] == ind and r['categoria'].startswith(cat)]
     if len(c) != 1:
         raise SystemExit(f'{mes} {ind} {cat}: {len(c)} filas')
     return c[0]
@@ -59,10 +62,11 @@ cambio = serie('Continuidad o cambio · 2027', CC, [('Cambio de rumbo total', 'C
 
 ES = 'CONV_DCCAB_VOTO_ESPACIO_CABA'; EN = 'VOTO_CABA_ESPACIO_2027_DC'
 esp = []
-for lab, co, cn in [('La Libertad Avanza', 'La Libertad', 'La Libertad'), ('PRO', 'PRO', 'PRO'), ('Peronismo', None, 'Peronismo'), ('Kirchnerismo', None, 'Kirchnerismo'), ('Otro / indefinidos', None, 'Otro')]:
+for lab, co, cn in [('La Libertad Avanza', 'La Libertad', 'La Libertad'), ('PRO', 'PRO', 'PRO'), ('Peronismo', 'Peronismo', 'Peronismo'), ('Kirchnerismo', 'Kirchnerismo', 'Kirchnerismo'), ('Otro / indefinidos', 'Otro', 'Otro')]:
     pts = {}
     if co:
         r = get('Oct', ES, co); pts['Oct'] = {'v': r['resultado'], 'fila': r['fila']}
+    if co and pts['Oct']['fila'] in VERIF: pts['Oct']['ver'] = True
     r = get('Nov', EN, cn); pts['Nov'] = {'v': r['resultado'], 'fila': r['fila']}
     esp.append({'nombre': lab, 'puntos': pts})
 
@@ -83,7 +87,35 @@ for lab, key in [('Javier Milei', 'MILEI'), ('Patricia Bullrich', 'BULLRICH'), (
                  ('Axel Kicillof', 'KICILLOF'), ('Horacio Rodríguez Larreta', 'LARRETA'), ('Cristina Kirchner', 'CFK'), ('Sandra Pettovello', 'PETTOVELLO')]:
     r = get('Nov', f'PROB_VOTO_{key}_CABA_DC', ''); prob.append({'nombre': lab, 'v': r['resultado'], 'fila': r['fila']})
 
-data = {'jefatura': {'series': jef}, 'cambio': cambio, 'espacio': {'series': esp}, 'imagen': img, 'prob_voto': prob}
+
+def val(cons, mes, ind):
+    r = get(mes, ind, '', cons)
+    return r['resultado'], r['fila']
+
+COB = [
+    {'consultora': 'DC Consultores', 'tipo': 'CONV', 'informes': [
+        {'mes': 'Jul', 'campo': '19–22/07', 'muestra': '1.360 · ±2,7', 'carga': 'Solo imagen 50/50 de Macri y Milei', 'estado': 'Parcial', 'serie': 'No comparable: escala sin «regular» ni «no lo conozco»'},
+        {'mes': 'Ago', 'campo': '23–27/08', 'muestra': '918 · ±2,5', 'carga': '3 cifras de clima (casa porteña, esperanza, desolación)', 'estado': 'Parcial', 'serie': 'Sin imagen ni voto cargados'},
+        {'mes': 'Sep', 'campo': '22–27/09', 'muestra': '1.043 · ±2,2', 'carga': 'Imagen de 13 dirigentes, continuidad/cambio, clima', 'estado': 'Cargado', 'serie': 'Imagen y continuidad/cambio: ALTA con nov'},
+        {'mes': 'Oct', 'campo': '22–26/10', 'muestra': '1.360 · ±2,5', 'carga': 'Voto por espacio, Jefatura, continuidad/cambio', 'estado': 'Cargado', 'serie': 'Continuidad/cambio ALTA; Jefatura y espacio MEDIA'},
+        {'mes': 'Nov', 'campo': '18–22/11', 'muestra': '1.293 · ±2,7', 'carga': 'Voto, Jefatura, imagen, emociones, probabilidad de voto', 'estado': 'Cargado', 'serie': 'Cierra las series sep–nov'},
+    ]},
+    {'consultora': 'CB Global Data', 'tipo': 'CONV', 'informes': [
+        {'mes': 'Sep', 'campo': '21–25/09', 'muestra': '', 'carga': 'Imagen positiva del Jefe de Gobierno de CABA', 'valor': val('CBGLOBALDATA', 'Sep', 'IMG_JEFEGOBIERNO_CABA_POSITIVA_CBGLOBALDATA'), 'serie': 'Un corte; ranking de alcaldes de América Latina'},
+        {'mes': 'Nov', 'campo': '08–13/11', 'muestra': '', 'carga': 'Imagen positiva de Milei, Bullrich y Kicillof en CABA', 'valor': None, 'serie': 'Un corte; no se mezcla con DC'},
+    ]},
+    {'consultora': 'OPSA UBA', 'tipo': 'CONV', 'informes': [
+        {'mes': 'Ago', 'campo': '25/08–01/09', 'muestra': '1.258 residentes CABA', 'carga': 'Calificación 1–10 al Gobierno de la Ciudad', 'valor': val('OPSA', 'Ago', 'GESTION_CABA_CALIFICACION_1A10'), 'serie': 'Un corte; escala distinta de la aprobación'},
+    ]},
+    {'consultora': 'CIF / UTDT', 'tipo': 'CONV', 'informes': [
+        {'mes': 'Jul–Nov', 'campo': 'mensual', 'muestra': '', 'carga': 'ICC con apertura CABA', 'serie': 'Serie mensual propia (expectativas)'},
+    ]},
+    {'consultora': 'IDECBA', 'tipo': 'TEM', 'informes': [
+        {'mes': 'Abr–Oct', 'campo': 'mensual', 'muestra': '', 'carga': 'IPCBA', 'serie': 'Serie mensual propia (dato duro)'},
+    ]},
+]
+
+data = {'cobertura': COB, 'jefatura': {'series': jef}, 'cambio': cambio, 'espacio': {'series': esp}, 'imagen': img, 'prob_voto': prob}
 txt = json.dumps(data, ensure_ascii=False, indent=1) + '\n'
 if '--check' in sys.argv:
     if OUT.read_text(encoding='utf-8') != txt:
