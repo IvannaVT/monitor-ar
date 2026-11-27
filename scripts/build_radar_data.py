@@ -686,7 +686,8 @@ def construir():
     gest_oct = {n: s['aprob'][D['MG'].index('Oct-26')] for n, s in D['GESTION'].items() if s['aprob'][D['MG'].index('Oct-26')] is not None}
     rango = round(max(gest_oct.values()) - min(gest_oct.values()), 1) if len(gest_oct) > 1 else None
     D['KPI'] = {
-        'ICC': {'valor': icc, 'mes': icc_m, 'oct_pendiente': D['ICC'][D['MESI'].index('Oct-26')] is None},
+        'ICC': {'valor': icc, 'mes': icc_m, 'oct_pendiente': D['ICC'][D['MESI'].index('Oct-26')] is None,
+                'var_oficial': (cfg['icc_variacion_oficial'] if cfg['icc_variacion_oficial']['mes'] == icc_m else None)},
         'ICG': {'valor': icg, 'mes': icg_m, 'anterior': D['ICG'][i_icg - 1],
                 'var_oficial': (cfg['icg_variacion_oficial'] if cfg['icg_variacion_oficial']['mes'] == icg_m else None),
                 'max12': max(v for v in D['ICG'][-13:] if v is not None), 'min12': min(v for v in D['ICG'][-13:] if v is not None)},

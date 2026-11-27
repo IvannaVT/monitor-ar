@@ -1789,9 +1789,9 @@ let MES_SEL='Nov-26';
 function renderKPIs(){
   const k=KPI.ICC,g=KPI.ICG,el=document.getElementById('kpiICC'),eg=document.getElementById('kpiICG');
   const iICC=MESI.indexOf(k.mes),mesAnterior=MESI[iICC-1];
-  const dC=k.valor!=null&&ICC[iICC-1]!=null?((k.valor/ICC[iICC-1]-1)*100):null;
+  const dC=k.var_oficial?k.var_oficial.valor:(k.valor!=null&&ICC[iICC-1]!=null?((k.valor/ICC[iICC-1]-1)*100):null);
   if(el)el.innerHTML=`<div class="kpi-label">ICC · ${esc(k.mes.toLowerCase())}</div><div class="kpi-num">${fmt(k.valor)}</div>
-    <div class="kpi-meta"><span class="kpi-delta ${dC>0?'up':'down'}">${dC==null?'':(dC>0?'+':'')+dC.toFixed(2).replace('.',',')+'%'}</span><span class="kpi-sub">vs ${esc((mesAnterior||'').toLowerCase())} · UTDT CIF</span></div>
+    <div class="kpi-meta"><span class="kpi-delta ${dC>0?'up':'down'}">${dC==null?'':(dC>0?'+':'')+dC.toFixed(2).replace('.',',')+'%'}</span><span class="kpi-sub">${k.var_oficial?'m/m oficial · ':''}vs ${esc((mesAnterior||'').toLowerCase())} · UTDT CIF</span></div>
     <div class="kpi-subs"><div class="kpi-sub-row"><span class="kpi-sub-lbl">CABA</span><span class="kpi-sub-val">${fmt(ICC_CABA_13[iICC])}</span></div>
     <div class="kpi-sub-row"><span class="kpi-sub-lbl">Interior</span><span class="kpi-sub-val">${fmt(ICC_INT_13[iICC])}</span></div>
     <div class="kpi-sub-row"><span class="kpi-sub-lbl">GBA</span><span class="kpi-sub-val">${fmt(ICC_GBA_14[iICC])}</span></div></div>`;
