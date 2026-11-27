@@ -116,20 +116,19 @@ img{max-width:100%}
 .cm-c b{font-size:14px;line-height:1}.cm-c:hover,.cm-c.on{background:color-mix(in srgb,var(--ic) 16%,transparent)}.cm-c.on{box-shadow:inset 0 0 0 2px var(--ic)}
 .cm-v{border-left:1px solid var(--border);color:var(--fg-dim);cursor:default;align-items:center;justify-content:center;display:flex;font-size:12px}
 .cm-det{margin:8px 0 6px;padding:10px 12px;border:1px solid var(--border);border-radius:8px;font-size:12px;line-height:1.55;color:var(--fg)}
-.jg-axis{display:grid;grid-template-columns:minmax(150px,230px) 1fr 96px;gap:0 14px;margin:2px 0 0}.jg-ticks{position:relative;height:16px;margin-left:42px;margin-right:78px}.jg-ticks i{position:absolute;transform:translateX(-50%);font-style:normal;font-size:10px;color:var(--fg-dim)}
-.jg-row{display:grid;grid-template-columns:minmax(150px,230px) 1fr 96px;gap:4px 14px;padding:8px 0;border-bottom:1px solid var(--border);align-items:center}
-.jg-bs{display:grid;gap:4px;min-width:0}.jg-b{display:grid;grid-template-columns:34px 1fr 70px;gap:8px;align-items:center}
-.jg-tr{height:16px;border-radius:3px;background:repeating-linear-gradient(90deg,transparent 0,transparent calc(25% - 1px),color-mix(in srgb,var(--fg-dim) 28%,transparent) calc(25% - 1px),color-mix(in srgb,var(--fg-dim) 28%,transparent) 25%)}
-.jg-tr i{display:block;height:100%;border-radius:3px}.jg-b b{font-family:'IBM Plex Mono',monospace;font-size:13px;white-space:nowrap}.jg-b sup{color:var(--warn);font-size:10px;margin-left:2px}
-.jg-r{font-family:'IBM Plex Mono',monospace;font-size:11.5px;color:var(--fg)}em.jg-r{font-family:'IBM Plex Sans',sans-serif;font-style:normal;color:var(--fg-dim)}
-@media(max-width:700px){.jg-axis{display:none}.jg-row{grid-template-columns:1fr;gap:4px}.jg-r{padding-left:42px}.cm-row{grid-template-columns:minmax(96px,1.4fr) repeat(5,minmax(48px,1fr))}.cm-c{font-size:10px}}
+@media(max-width:700px){.cm-row{grid-template-columns:minmax(96px,1.4fr) repeat(5,minmax(48px,1fr))}.cm-c{font-size:10px}}
+.cb-ax{display:grid;grid-template-columns:minmax(150px,230px) 1fr;gap:0 14px;margin:0}.cb-ax:before{content:''}.cb-axt{position:relative;height:16px;margin-left:42px;margin-right:82px}.cb-axt i{position:absolute;transform:translateX(-50%);font-style:normal;font-size:10px;color:var(--fg-dim);white-space:nowrap}.cb-axt i:first-child{transform:none}
+.cb-sub{font-size:12px;font-weight:700;margin:10px 0 2px}.cb-lnk{background:none;border:0;color:var(--accent);font:inherit;font-size:12.5px;cursor:pointer;padding:6px 0;min-height:36px}
+.cb-tabs{display:inline-flex;border:1px solid var(--border);border-radius:8px;overflow:hidden;margin:2px 0 6px}.cb-tabs button{background:none;border:0;color:var(--fg-dim);font:inherit;font-size:13px;font-weight:600;padding:9px 18px;min-height:44px;cursor:pointer}.cb-tabs button[aria-selected=true]{background:color-mix(in srgb,var(--accent) 22%,transparent);color:var(--fg)}.cb-tabs button:focus-visible{outline:2px solid var(--accent);outline-offset:-2px}
+.cb-vd{overflow-x:auto}
+@media(max-width:700px){.cb-ax{grid-template-columns:1fr}.cb-axt{margin-left:42px}}
 .cb-leg{display:flex;flex-wrap:wrap;gap:6px 16px;font-size:12px;margin:2px 0 8px}.cb-leg span{display:inline-flex;align-items:center;gap:6px}.cb-leg i{width:12px;height:12px;border-radius:2px;display:inline-block}
 .cb-r{display:grid;grid-template-columns:minmax(150px,230px) 1fr;gap:4px 14px;padding:8px 0;border-bottom:1px solid var(--border);align-items:start}
 .cb-nm{font-size:13px;font-weight:600;line-height:1.25;overflow-wrap:anywhere}
 .cb-bs{display:grid;gap:4px;min-width:0}
-.cb-b{display:grid;grid-template-columns:34px 1fr auto;gap:8px;align-items:center;min-width:0}
+.cb-b{display:grid;grid-template-columns:34px 1fr 74px;gap:8px;align-items:center;min-width:0}
 .cb-m{font-size:11px;font-weight:700;letter-spacing:.3px}
-.cb-tr{height:14px;background:color-mix(in srgb,var(--fg-dim) 14%,transparent);border-radius:3px;overflow:hidden;min-width:0}
+.cb-tr{height:14px;border-radius:3px;min-width:0;background:repeating-linear-gradient(90deg,transparent 0,transparent calc(var(--st,25%) - 1px),color-mix(in srgb,var(--fg-dim) 30%,transparent) calc(var(--st,25%) - 1px),color-mix(in srgb,var(--fg-dim) 30%,transparent) var(--st,25%)),color-mix(in srgb,var(--fg-dim) 12%,transparent)}
 .cb-tr i{display:block;height:100%;border-radius:3px}
 .cb-b b{font-family:'IBM Plex Mono',monospace;font-size:13px;min-width:70px;text-align:left;white-space:nowrap}
 .cb-b em{font-style:normal;font-size:12px;color:var(--fg-dim);min-width:70px}
@@ -307,6 +306,8 @@ footer a{color:var(--accent)}
   .header-inner{gap:6px;padding:4px 0}
   .header-tools{flex-shrink:0}
 }
+@media(max-width:420px){.site-header{padding:0 10px}.header-inner{gap:6px}.header-tools{gap:2px;min-width:0}.site-nav-link{padding:0 6px;font-size:12px}.logo{font-size:14px}.logo small{font-size:8.5px}.theme-btn{padding:4px 9px;min-height:30px}}
+@media(max-width:380px){.site-nav-link{padding:0 4px;font-size:11.5px}.logo{font-size:13px}.logo small{display:none}.theme-btn{padding:4px 8px}}
 </style>
 
 <header class="site-header">
@@ -1042,7 +1043,8 @@ footer a{color:var(--accent)}
 <!-- ── TAB 7: SEMÁFORO ───────────────────────── -->
 <section class="panel" id="tab-caba">
   <p class="sec">CABA · últimos informes · corte al 27/11</p>
-  <div class="cb-n" style="margin-top:0">DC Consultores (sep, oct y nov, mismo universo y técnica: residentes en CABA en condiciones de votar, online) es la única consultora de CABA con más de un corte; las lecturas son variación entre dos o tres cortes, no tendencia. Sin promedios ni cruces con series nacionales. Octubre: Larreta, García Moritán y «Otro» vienen de encuestas-argentinas.com (fuente original DC; evidencia máxima MEDIA, marcados <sup style="color:var(--warn)">s</sup>); <sup style="color:var(--warn)">v</sup> = cifra de la ficha de Nivel 1, a verificar contra el PDF).</div>
+  <div class="cb-n" style="margin-top:0">DC Consultores · septiembre, octubre y noviembre · lecturas entre cortes, no tendencia.</div>
+  <p class="cb-n" style="margin:-4px 0 6px"><button type="button" id="lnkCob" class="cb-lnk">Ver cobertura por consultora ↓</button></p>
   <div id="cabaCont"><p class="cb-n">Cargando…</p></div>
 </section>
 
@@ -2118,7 +2120,7 @@ async function renderCaba(){
   };
   const filas=(ps)=>ps.map(p=>p.fila).join(', ');
   const trz=(txt)=>`<details class="det-tab" style="margin:0 0 10px"><summary style="font-size:10.5px;color:var(--fg-dim)">Trazabilidad</summary><div class="cb-n">${txt}</div></details>`;
-  let h='';
+  let h='',cobH='';
   // ── Matriz de cobertura ──
   const MES5=['Jul','Ago','Sep','Oct','Nov'],MESL={Jul:'Julio',Ago:'Agosto',Sep:'Septiembre',Oct:'Octubre',Nov:'Noviembre'};
   const last=(arr,labs)=>{const ix=arr.map((v,i)=>v==null?-1:i).filter(i=>i>=0);return ix.length?[labs[ix[0]],labs[ix[ix.length-1]]]:null;};
@@ -2144,13 +2146,13 @@ async function renderCaba(){
     const k=f.serie?'serie':c.est;const [ic,tx,col]=IC[k];
     return `<button class="cm-c" data-f="${fi}" data-m="${m}" style="--ic:${col}"><b>${ic}</b><span>${tx}</span></button>`;
   };
-  h+=`<div class="cb-h"><b>Cobertura por consultora</b><span>qué hay cargado de CABA · tocá una celda para ver campo, muestra y contenido</span></div>`+
+  cobH+=`<div id="cabaCob" class="cb-h"><b>Cobertura por consultora</b><span>qué hay cargado de CABA · tocá una celda para ver campo, muestra y contenido</span></div>`+
      `<div class="cm-leg">${['informe','parcial','puntual','serie'].map(k=>`<span style="--ic:${IC[k][2]}"><b>${IC[k][0]}</b> ${IC[k][1]}${{informe:' cargado',parcial:' (carga incompleta)',puntual:' (un solo dato)',serie:' mensual propia'}[k]}</span>`).join('')}</div>`+
      `<div class="cm" role="table"><div class="cm-row cm-head" role="row"><div class="cm-n"></div>${MES5.map(m=>`<div class="cm-h">${m}</div>`).join('')}</div>`+
      filasCob.map((f,fi)=>`<div class="cm-row" role="row"><div class="cm-n"><b>${esc(f.nombre)}</b><small>${f.tipo}${f.serie&&f.rango?' · '+f.rango[0].toLowerCase()+' a '+f.rango[1].toLowerCase():''}</small></div>${MES5.map(m=>celdaMat(f,fi,m)).join('')}</div>`).join('')+
      `</div><div class="cm-det" id="cmDet">Seleccioná una celda para ver fecha de campo, muestra y contenido.</div>`+
      `<div class="cb-n">Series armables hoy, todas de DC: continuidad/cambio (sep–nov, ALTA), imagen positiva (sep–nov, ALTA) y voto por espacio y Jefatura (oct–nov, MEDIA). Las demás consultoras tienen un solo corte o series propias; no se mezclan con DC. CIF/UTDT e IDECBA son series mensuales propias y no se cruzan con opinión.</div>`;
-  setTimeout(()=>{
+  const cobInit=()=>{
     const det=document.getElementById('cmDet');
     document.querySelectorAll('.cm-c[data-f]').forEach(b=>b.addEventListener('click',()=>{
       document.querySelectorAll('.cm-c.on').forEach(x=>x.classList.remove('on'));b.classList.add('on');
@@ -2161,69 +2163,87 @@ async function renderCaba(){
         const i=c.i;det.innerHTML=`<b>${esc(f.nombre)} · ${MESL[m]}</b> · ${f.tipo} · ${IC[c.est][0]} ${IC[c.est][1]}<br>Campo: ${esc(i.campo)}${i.muestra?' · Muestra: '+esc(i.muestra):' · Muestra: sin dato'}<br>Contenido: ${esc(i.carga)}${i.valor?' · <b>'+f1(i.valor[0])+'</b>':''}<br>Serie: ${esc(i.serie)}`;
       }
     }));
-  },0);
+  };
   const MC={Sep:'#f2c744',Oct:'#8fc7e8',Nov:'#1fd6c1'};
   const CT=CABA.cortes;
   const marks=p=>(p.sec?'<sup title="Fuente secundaria">s</sup>':'')+(p.ver?'<sup title="Cifra a verificar">v</sup>':'');
-  const leg=ms=>`<div class="cb-leg">${ms.map(m=>`<span><i style="background:${MC[m]}"></i>${{Sep:'Septiembre',Oct:'Octubre',Nov:'Noviembre'}[m]}</span>`).join('')}<span style="color:var(--fg-dim)"><sup style="color:var(--warn)">s</sup> fuente secundaria · <sup style="color:var(--warn)">v</sup> cifra a verificar</span></div>`;
+  const MN={Sep:'Septiembre',Oct:'Octubre',Nov:'Noviembre'};
+  const leg=ms=>`<div class="cb-leg">${ms.map(m=>`<span><i style="background:${MC[m]}"></i>${MN[m]}</span>`).join('')}<span style="color:var(--fg-dim)"><sup style="color:var(--warn)">s</sup> fuente secundaria · <sup style="color:var(--warn)">v</sup> cifra a verificar</span></div>`;
   const ML={Sep:'sep',Oct:'oct',Nov:'nov'};
-  const barra=(m,p,max,unit)=>p?`<div class="cb-b"><span class="cb-m" style="color:${MC[m]}">${m}</span><div class="cb-tr"><i style="width:${Math.max(0,Math.min(100,p.v/max*100))}%;background:${MC[m]}"></i></div><b>${unit?p.v.toFixed(1).replace('.',','):f1(p.v)}${unit}${marks(p)}</b></div>`:
-    `<div class="cb-b"><span class="cb-m" style="color:${MC[m]}">${m}</span><div class="cb-tr"></div><em>Sin dato</em></div>`;
-  // filas: [{nombre, puntos:{mes:{v,...}}, incomp:boolean}]
-  const grafico=(rows,meses,max,rot)=>{
+  const pc=v=>v.toFixed(1).replace('.',',');
+  // escala visible desde cero: max, paso, unidad
+  const eje=(max,step,unit)=>{const t=[];for(let v=0;v<=max+1e-9;v+=step)t.push(v);return `<div class="cb-ax" aria-hidden="true"><div class="cb-axt">${t.map(v=>`<i style="left:${v/max*100}%">${String(v).replace('.',',')}${unit}</i>`).join('')}</div></div>`;};
+  const barra=(m,p,sc,unit)=>p?`<div class="cb-b"><span class="cb-m" style="color:${MC[m]}">${m}</span><div class="cb-tr" style="--st:${sc.step/sc.max*100}%"><i style="width:${Math.max(0,Math.min(100,p.v/sc.max*100))}%;background:${MC[m]}"></i></div><b>${pc(p.v)}${unit}${marks(p)}</b></div>`:
+    `<div class="cb-b"><span class="cb-m" style="color:${MC[m]}">${m}</span><div class="cb-tr" style="--st:${sc.step/sc.max*100}%"></div><em>Sin dato</em></div>`;
+  // filas: [{nombre, puntos:{mes:{v,...}}, incomp}]
+  const grafico=(rows,meses,sc,rot,unit='%')=>{
     const [m0,m1]=[meses[meses.length-2],meses[meses.length-1]];
-    return leg(meses)+rows.map(x=>{
+    return leg(meses)+eje(sc.max,sc.step,unit)+rows.map(x=>{
       let d='';
-      if(x.incomp)d='No comparable entre cortes: las categorías no coinciden';
-      else if(x.puntos[m0]&&x.puntos[m1]){const t=dl(x.puntos[m0].v,x.puntos[m1].v)[0];d=`${rot} ${ML[m0]}–${ML[m1]}: ${t}`;}
-      return `<div class="cb-r"><div class="cb-nm">${esc(x.nombre)}</div><div class="cb-bs">${meses.map(m=>barra(m,x.puntos[m],max,'%')).join('')}${d?`<div class="cb-d">${d}</div>`:''}</div></div>`;}).join('');
+      if(x.incomp)d='No comparable entre cortes';
+      else if(x.puntos[m0]&&x.puntos[m1]){d=`${rot} ${ML[m0]}–${ML[m1]}: ${dl(x.puntos[m0].v,x.puntos[m1].v)[0]}`;}
+      return `<div class="cb-r"><div class="cb-nm">${esc(x.nombre)}</div><div class="cb-bs">${meses.map(m=>barra(m,x.puntos[m],sc,unit)).join('')}${d?`<div class="cb-d">${d}</div>`:''}</div></div>`;}).join('');
   };
   const trzCortes=(ms,ps)=>`<div class="cb-tz">${ms.map(m=>`<b style="color:${MC[m]}">${m}</b> · ${esc(CT[m].consultora)} · campo ${esc(CT[m].campo)} · ${esc(CT[m].muestra)}`).join('<br>')}<br>Filas de Nivel 2: ${filas(ps)}.${ps.some(p=>p.sec)?'<br><sup style="color:var(--warn)">s</sup> FUENTE SECUNDARIA · encuestas-argentinas.com · https://encuestas-argentinas.com/encuestas/provincias/ · consultado 2026-11-27 · fuente original: DC Consultores (filas 2307–2309, evidencia máxima MEDIA).':''}${ps.some(p=>p.ver)?'<br><sup style="color:var(--warn)">v</sup> Cifra tomada de la ficha de Nivel 1 (fila 335); verificar contra el PDF original.':''}</div>`;
-  const vd=(tbl,ms,ps,extra)=>`<details class="cb-vd"><summary>Ver datos y fuentes</summary>${tbl}${trzCortes(ms,ps)}${extra||''}</details>`;
+  const vd=(tbl,ms,ps)=>`<details class="cb-vd"><summary>Ver datos y fuentes</summary>${tbl}${trzCortes(ms,ps)}</details>`;
   const allp=sr=>sr.flatMap(x=>Object.values(x.puntos));
-  const sinD=(a,b)=>a&&b;
-  // 1 Jefatura · barras agrupadas, eje común desde cero, orden por noviembre
+  // 1 Jefatura · eje común desde cero, orden por noviembre, «Otro» al final
   const jefR=CABA.jefatura.series.map(x=>({...x,incomp:x.nombre==='Otro'})).sort((a,b)=>(a.nombre==='Otro')-(b.nombre==='Otro')||b.puntos.Nov.v-a.puntos.Nov.v);
-  const JM=40;
-  const eje=`<div class="jg-axis"><span></span><div class="jg-ticks">${[0,10,20,30,40].map(t=>`<i style="left:${t/JM*100}%">${t}%</i>`).join('')}</div><span></span></div>`;
-  const jbar=(m,p)=>`<div class="jg-b"><span class="cb-m" style="color:${MC[m]}">${m}</span><div class="jg-tr"><i style="width:${p.v/JM*100}%;background:${MC[m]}"></i></div><b>${p.v.toFixed(1).replace('.',',')}%${marks(p)}</b></div>`;
-  h+=`<div class="cb-h"><b>Jefatura de Gobierno 2027 · escenario</b><span>% de votos · octubre → noviembre · ordenado por noviembre</span></div>`+
-     leg(['Oct','Nov'])+eje+
-     jefR.map(x=>{const r=x.incomp?'<em class="jg-r">No comparable</em>':`<span class="jg-r">${x.puntos.Oct.v.toFixed(1).replace('.',',')}% → ${x.puntos.Nov.v.toFixed(1).replace('.',',')}%</span>`;
-       return `<div class="jg-row"><div class="cb-nm">${esc(x.nombre)}</div><div class="jg-bs">${jbar('Oct',x.puntos.Oct)}${jbar('Nov',x.puntos.Nov)}</div>${r}</div>`;}).join('')+
-     `<div class="cb-n"><b>Comparabilidad media · cambió la proporción de «Otro»</b>. La categoría «Otro» no se compara entre cortes. Dos cortes: no es tendencia.</div>`+
+  h+=`<div class="cb-h"><b>Jefatura de Gobierno 2027 · escenario</b><span>% de votos · octubre y noviembre · ordenado por noviembre</span></div>`+
+     grafico(jefR,['Oct','Nov'],{max:40,step:10},'Diferencia')+
+     `<div class="cb-n"><b>Comparabilidad media · cambió la proporción de «Otro»</b>. Dos cortes: no es tendencia.</div>`+
      vd(tabla(CABA.jefatura.series,['Oct','Nov'],['Oct','Nov']),['Oct','Nov'],allp(CABA.jefatura.series));
   // 2 Continuidad / cambio
   h+=`<div class="cb-h"><b>Continuidad o cambio · 2027</b><span>% · septiembre, octubre y noviembre · comparabilidad ALTA</span></div>`+
-     grafico(CABA.cambio.series,['Sep','Oct','Nov'],60,'Variación entre cortes')+
-     `<div class="cb-n">Septiembre solo tiene cargada la categoría «cambio de rumbo total».</div>`+
+     grafico(CABA.cambio.series,['Sep','Oct','Nov'],{max:60,step:20},'Variación entre cortes')+
+     `<div class="cb-n">Septiembre solo tiene cargada la categoría «cambio de rumbo total»; el resto figura como «Sin dato».</div>`+
      vd(tabla(CABA.cambio.series,['Sep','Oct','Nov'],['Oct','Nov']),['Sep','Oct','Nov'],allp(CABA.cambio.series));
-  // 3 Espacio
-  const esp=CABA.espacio.series.map(x=>({...x,incomp:!(x.nombre==='La Libertad Avanza'||x.nombre==='PRO')}));
-  h+=`<div class="cb-h"><b>Intención de voto por espacio · CABA</b><span>% · octubre y noviembre · comparabilidad MEDIA: solo LLA y PRO son comparables</span></div>`+
-     grafico(esp,['Oct','Nov'],40,'Diferencia')+
+  // 3 Voto por espacio: LLA y PRO emparejados; el resto, por mes, sin diferencias
+  const comp=CABA.espacio.series.filter(x=>x.nombre==='La Libertad Avanza'||x.nombre==='PRO');
+  const nocomp=CABA.espacio.series.filter(x=>!comp.includes(x));
+  const grupo=m=>nocomp.filter(x=>x.puntos[m]).map(x=>({nombre:x.nombre,puntos:{[m]:x.puntos[m]}}));
+  const grupoH=m=>`<div class="cb-sub">${MN[m]}</div>`+eje(40,10,'%')+grupo(m).map(x=>`<div class="cb-r"><div class="cb-nm">${esc(x.nombre)}</div><div class="cb-bs">${barra(m,x.puntos[m],{max:40,step:10},'%')}</div></div>`).join('');
+  h+=`<div class="cb-h"><b>Intención de voto por espacio · CABA</b><span>% · comparabilidad MEDIA: solo LLA y PRO son comparables entre cortes</span></div>`+
+     grafico(comp,['Oct','Nov'],{max:40,step:10},'Diferencia')+
+     `<div class="cb-h" style="margin-top:12px"><b>Categorías no comparables entre cortes</b><span>sin diferencias en puntos · cada mes por separado</span></div>`+
+     leg(['Oct','Nov'])+grupoH('Oct')+grupoH('Nov')+
      vd(tabla(CABA.espacio.series,['Oct','Nov'],['Oct','Nov']),['Oct','Nov'],allp(CABA.espacio.series));
-  // 4 Imagen positiva y negativa
+  // 4 Imagen: un bloque con selector Positiva / Negativa (mismo orden y escala)
   const imgS=k=>CABA.imagen.map(x=>({nombre:x.nombre,puntos:x[k]}));
   const imgP=allp(imgS('pos')).concat(allp(imgS('neg')));
-  h+=`<div class="cb-h"><b>Imagen positiva de dirigentes en CABA</b><span>% muy buena + buena · septiembre y noviembre · comparabilidad ALTA</span></div>`+
-     grafico(imgS('pos'),['Sep','Nov'],60,'Diferencia')+
-     `<div class="cb-h"><b>Imagen negativa de dirigentes en CABA</b><span>% mala + muy mala · septiembre y noviembre</span></div>`+
-     grafico(imgS('neg'),['Sep','Nov'],80,'Diferencia')+
-     `<div class="cb-n">Negativa de noviembre solo cargada para Jorge Macri y Axel Kicillof; el resto figura como «Sin dato». Imagen personal, no aprobación de gestión.</div>`+
+  h+=`<div class="cb-h"><b>Imagen de dirigentes en CABA</b><span>% · septiembre y noviembre · comparabilidad ALTA · misma escala en ambas lecturas</span></div>`+
+     `<div class="cb-tabs" role="tablist" aria-label="Imagen positiva o negativa"><button role="tab" id="imgT-pos" aria-selected="true" aria-controls="imgPanel" tabindex="0">Positiva</button><button role="tab" id="imgT-neg" aria-selected="false" aria-controls="imgPanel" tabindex="-1">Negativa</button></div>`+
+     `<div id="imgPanel" role="tabpanel" aria-labelledby="imgT-pos"></div>`+
+     `<div class="cb-n">Imagen personal, no aprobación de gestión. La negativa de noviembre solo está cargada para Jorge Macri y Axel Kicillof.</div>`+
      vd(`<table class="cb-t"><thead><tr><th></th><th>Pos sep</th><th>Pos nov</th><th>Diferencia</th><th>Neg sep</th><th>Neg nov</th><th>Diferencia</th></tr></thead><tbody>`+
         CABA.imagen.map(x=>{const [tp]=dl(x.pos.Sep&&x.pos.Sep.v,x.pos.Nov&&x.pos.Nov.v);const [tn]=dl(x.neg.Sep&&x.neg.Sep.v,x.neg.Nov&&x.neg.Nov.v);
           return `<tr><td>${esc(x.nombre)}</td>${cel(x.pos.Sep)}${cel(x.pos.Nov)}<td class="d">${tp}</td>${cel(x.neg.Sep)}${cel(x.neg.Nov)}<td class="d">${tn}</td></tr>`;}).join('')+'</tbody></table>',['Sep','Nov'],imgP);
   // 5 Probabilidad de voto
-  const probMax=10;
   h+=`<div class="cb-h"><b>Probabilidad de voto · promedio 0–10</b><span>noviembre · un solo corte</span></div>`+
-     `<div class="cb-leg"><span><i style="background:${MC.Nov}"></i>Noviembre</span></div>`+
-     CABA.prob_voto.map(x=>`<div class="cb-r"><div class="cb-nm">${esc(x.nombre)}</div><div class="cb-bs">${barra('Nov',{v:x.v},probMax,'')}</div></div>`).join('')+
+     `<div class="cb-leg"><span><i style="background:${MC.Nov}"></i>Noviembre</span></div>`+eje(10,5,'')+
+     CABA.prob_voto.map(x=>`<div class="cb-r"><div class="cb-nm">${esc(x.nombre)}</div><div class="cb-bs">${barra('Nov',{v:x.v},{max:10,step:5},'')}</div></div>`).join('')+
      vd(`<table class="cb-t"><tbody>${CABA.prob_voto.map(x=>`<tr><td>${esc(x.nombre)}</td><td>${f1(x.v)}</td></tr>`).join('')}</tbody></table>`,['Nov'],CABA.prob_voto.map(x=>({fila:x.fila})));
+  h+=cobH;
+  h+=`<div class="cb-n">DC Consultores (sep, oct y nov, mismo universo y técnica: residentes en CABA en condiciones de votar, online) es la única consultora de CABA con más de un corte; las lecturas son variación entre dos o tres cortes, no tendencia. Sin promedios ni cruces con series nacionales. Octubre: Larreta, García Moritán y «Otro» vienen de encuestas-argentinas.com (fuente original DC; evidencia máxima MEDIA, marcados <sup style="color:var(--warn)">s</sup>); <sup style="color:var(--warn)">v</sup> = cifra de la ficha de Nivel 1, a verificar contra el PDF).</div>`;
   h+=`<div class="cb-h"><b>Contexto TEM</b><span>no se cruza con las series de opinión</span></div>`+
      `<table class="cb-t"><tbody><tr><td>IPCBA · variación mensual (IDECBA)</td><td>sep ${f1(IPCBA_FULL[MIPC.indexOf('Sep-26')])}%</td><td>oct ${f1(IPCBA_FULL[MIPC.indexOf('Oct-26')])}%</td></tr>`+
      `<tr><td>ICC CABA (UTDT)</td><td>oct ${f1(ICC_CABA_13[MESI.indexOf('Oct-26')])}</td><td>nov ${f1(ICC_CABA_13[MESI.indexOf('Nov-26')])}</td></tr></tbody></table>`;
   cont.innerHTML=h;
+  cobInit();
+  // selector Positiva / Negativa (toque y teclado)
+  const imgPanel=document.getElementById('imgPanel');
+  const drawImg=k=>{
+    ['pos','neg'].forEach(t=>{const b=document.getElementById('imgT-'+t);b.setAttribute('aria-selected',t===k);b.tabIndex=t===k?0:-1;});
+    imgPanel.setAttribute('aria-labelledby','imgT-'+k);
+    imgPanel.innerHTML=grafico(imgS(k),['Sep','Nov'],{max:80,step:20},'Diferencia');
+  };
+  drawImg('pos');
+  ['pos','neg'].forEach(k=>{
+    const b=document.getElementById('imgT-'+k);
+    b.addEventListener('click',()=>drawImg(k));
+    b.addEventListener('keydown',e=>{if(e.key==='ArrowRight'||e.key==='ArrowLeft'||e.key==='Home'||e.key==='End'){e.preventDefault();const o=k==='pos'?'neg':'pos';drawImg(o);document.getElementById('imgT-'+o).focus();}});
+  });
+  const lk=document.getElementById('lnkCob');if(lk)lk.addEventListener('click',()=>document.getElementById('cabaCob').scrollIntoView({behavior:'smooth',block:'start'}));
 }
 
 function renderTablaVar(){
