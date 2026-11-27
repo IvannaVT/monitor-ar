@@ -710,6 +710,16 @@ def construir():
             TL.append({**t, 'valor': v, 'periodo': m.lower(), 'secundaria': sec})
         else:
             TL.append(t)
+    # Regla: una publicación ya cargada en la serie no puede figurar como «próxima».
+    SERIE_DE_MODULO = {'ICG': ('ICG', 'MESI'), 'ICC': ('ICC', 'MESI'),
+                       'IPC Nación': ('IPC', 'MIPC'), 'IPCBA CABA': ('IPCBA_FULL', 'MINFL')}
+    for c in cfg['calendario']:
+        if c['modulo'] in SERIE_DE_MODULO:
+            serie, eje = SERIE_DE_MODULO[c['modulo']]
+            if c['mes'] in D[eje] and D[eje].index(c['mes']) < len(D[serie]) \
+                    and D[serie][D[eje].index(c['mes'])] is not None:
+                raise BuildError(f"Calendario: {c['nombre']} {c['mes']} figura como próximo pero la serie "
+                                 f"{serie} ya tiene su dato; sacarlo de 'calendario' en radar_mapping.json")
     D['ENCABEZADO'] = {'publicados': TL, 'proximos': cfg['calendario']}
     D['EVOL'] = EVOL
     # SL: tono entre cuentas reales por tramo (Reputación Digital, informe sep–nov)

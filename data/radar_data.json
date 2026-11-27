@@ -6635,7 +6635,7 @@
     "eje": "MESI",
     "unidad": "",
     "fuente": "UTDT",
-    "fecha": "oct",
+    "fecha": "campo 3–17 nov",
     "clase_valor": "neu",
     "valor": 2.04,
     "periodo": "nov-26",
@@ -6643,17 +6643,6 @@
    }
   ],
   "proximos": [
-   {
-    "modulo": "ICG",
-    "mes": "Nov-26",
-    "icono": "🏛️",
-    "nombre": "ICG UTDT",
-    "periodo": "nov-26",
-    "fecha": "~17 nov",
-    "fuente": "UTDT Esc. de Gobierno",
-    "metodo": "fecha estimada por regularidad histórica, vía monitorargy.com (MCP, herramienta calendario, consultado 2026-11-11)",
-    "clase": "upcoming"
-   },
    {
     "modulo": "IPCBA CABA",
     "mes": "Nov-26",
@@ -16559,7 +16548,7 @@
     "pendiente": []
    },
    "Nov-26": {
-    "estado": "parcial",
+    "estado": "con datos",
     "n_fuentes": 1,
     "fuentes": [
      "UTdT / Poliarquía Consultores"
@@ -16567,9 +16556,7 @@
     "filas": [
      "NI:1788"
     ],
-    "pendiente": [
-     "ICG UTDT nov-26: publicación prevista ~17 nov (fecha estimada por regularidad histórica, vía monitorargy.com (MCP, herramienta calendario, consultado 2026-11-11))."
-    ]
+    "pendiente": []
    },
    "bases": [
     "nivel2_indicadores"

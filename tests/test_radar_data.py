@@ -37,6 +37,19 @@ class RadarDataTests(unittest.TestCase):
                         if v is not None:
                             self.assertIn((f'{grupo}.{nombre}.{c}', mes), trazados, f'{grupo}.{nombre}.{c} {mes} sin fuente')
 
+    def test_proximos_no_incluye_datos_ya_cargados(self):
+        """Una publicación con valor en su serie no puede figurar como «próxima»."""
+        series = {'ICG': ('ICG', 'MESI'), 'ICC': ('ICC', 'MESI'),
+                  'IPC Nación': ('IPC', 'MIPC'), 'IPCBA CABA': ('IPCBA_FULL', 'MINFL')}
+        for c in self.D['ENCABEZADO']['proximos']:
+            if c['modulo'] in series:
+                serie, eje = series[c['modulo']]
+                if c['mes'] not in self.D[eje]:
+                    continue  # el eje aún no llega a ese mes: no hay dato posible
+                i = self.D[eje].index(c['mes'])
+                v = self.D[serie][i] if i < len(self.D[serie]) else None
+                self.assertIsNone(v, f"{c['nombre']} {c['mes']} está en «próximos» pero ya tiene dato ({v})")
+
     def test_noviembre_parcial_presente(self):
         for eje in ('MESI', 'MI', 'MG', 'MV'):
             self.assertEqual(self.D[eje][-1], 'Nov-26')
