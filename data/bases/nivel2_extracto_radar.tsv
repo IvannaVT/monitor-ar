@@ -491,3 +491,10 @@ fila	id_informe	mes	fecha_campo_inicio	fecha_campo_fin	consultora	id_indicador	c
 1719	CBGLOBALDATA_2026_11_FEDERAL	11	2026-11-08	2026-11-13	CB Global Data	IMG_MILEI_POSITIVA_CBGLOBAL_PROV	Positiva	35.2	%	1vxmhzHNc3mhgftKgbJn1WyQEPhG7YUJM	ok
 1720	CBGLOBALDATA_2026_11_FEDERAL	11	2026-11-08	2026-11-13	CB Global Data	IMG_BULLRICH_POSITIVA_CBGLOBAL_PROV	Positiva	30	%	1vxmhzHNc3mhgftKgbJn1WyQEPhG7YUJM	ok
 1721	CBGLOBALDATA_2026_11_FEDERAL	11	2026-11-08	2026-11-13	CB Global Data	IMG_KICILLOF_POSITIVA_CBGLOBAL_PROV	Positiva	40.4	%	1vxmhzHNc3mhgftKgbJn1WyQEPhG7YUJM	ok
+1788	ICG_DITELLA_2026_11_NAC	11	2026-11-03	2026-11-17	UTdT / Poliarquía Consultores	ICG_DITELLA_TOTAL	Índice total	2.04	puntos (0-5)	1B1U8TC2nSgI-2x1c1OfuVn_pfxyNpNrg	ok
+1789	ANALOGIAS_2026_11_NAC	11	2026-11-15	2026-11-18	Analogías Investigación & Estrategia	IMG_MILEI_POSITIVA	Positiva (muy buena + buena)	39.2	%	1hqm_RbINFpsNIMA-W7ZaNjZ_r762KpVN	ok
+1790	ANALOGIAS_2026_11_NAC	11	2026-11-15	2026-11-18	Analogías Investigación & Estrategia	IMG_MILEI_NEGATIVA	Negativa (mala + muy mala)	56.7	%	1hqm_RbINFpsNIMA-W7ZaNjZ_r762KpVN	ok
+1791	ANALOGIAS_2026_11_NAC	11	2026-11-15	2026-11-18	Analogías Investigación & Estrategia	GESTION_NAC_POSITIVA_MILEI	Positiva (calificaciones 4 y 5)	30.3	%	1hqm_RbINFpsNIMA-W7ZaNjZ_r762KpVN	ok
+1792	ANALOGIAS_2026_11_NAC	11	2026-11-15	2026-11-18	Analogías Investigación & Estrategia	GESTION_NAC_NEGATIVA_MILEI	Negativa (calificaciones 1 y 2)	59.7	%	1hqm_RbINFpsNIMA-W7ZaNjZ_r762KpVN	ok
+1800	ANALOGIAS_2026_11_NAC	11	2026-11-15	2026-11-18	Analogías Investigación & Estrategia	VOTO_PRES_ESC1_PERONISMO	Peronismo Unido	33.0	%	1hqm_RbINFpsNIMA-W7ZaNjZ_r762KpVN	ok
+1801	ANALOGIAS_2026_11_NAC	11	2026-11-15	2026-11-18	Analogías Investigación & Estrategia	VOTO_PRES_ESC1_LLA	Milei / LLA	33.7	%	1hqm_RbINFpsNIMA-W7ZaNjZ_r762KpVN	ok

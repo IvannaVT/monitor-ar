@@ -1,9 +1,9 @@
 {
   "_descripcion": "Especificación de qué fila de las bases alimenta cada celda del Radar. No contiene valores: build_radar_data.py los lee de data/bases/*.tsv (extractos de base_maestra_2026 y nivel2_indicadores). Las filas son números de fila de Google Sheets.",
   "corte": {
-    "fecha": "2026-11-19",
+    "fecha": "2026-11-26",
     "mes_parcial": "Nov-26",
-    "etiqueta": "Noviembre 2026 · corte al 19/11/2026",
+    "etiqueta": "Noviembre 2026 · corte al 26/11/2026",
     "base_publicada": "b43fcb8 (index.html publicado en ivannavt.github.io/monitor-ar)"
   },
   "extender_ejes": {
@@ -1333,6 +1333,52 @@
       "eje": "MI",
       "fila": 1582,
       "nota": "Lectura visual de la lámina «IMAGEN DE JAVIER MILEI · % Tendencia desde septiembre 2024», página 30 del PDF de D'Alessio de agosto (Drive 1mTV-Kdw), el 18/11. La extracción de texto entrega la serie sin rótulos de mes, pero la lámina sí está rotulada (sep-24 a ago-26) con el valor impreso sobre cada punto: el valor queda leído del informe y se retira la excepción registrada antes. Registro en base maestra fila 175."
+    },
+    {
+      "modulo": "ICG",
+      "ruta": "ICG",
+      "eje": "MESI",
+      "fila": 1788
+    },
+    {
+      "modulo": "Imagen Milei",
+      "ruta": "IMG.Analogías.pos",
+      "eje": "MI",
+      "fila": 1789
+    },
+    {
+      "modulo": "Imagen Milei",
+      "ruta": "IMG.Analogías.neg",
+      "eje": "MI",
+      "fila": 1790
+    },
+    {
+      "modulo": "Gestión nacional",
+      "ruta": "GESTION.Analogías.aprob",
+      "eje": "MG",
+      "fila": 1791,
+      "nota": "calificación 4–5 sobre escala 1–5; no es aprueba/desaprueba"
+    },
+    {
+      "modulo": "Gestión nacional",
+      "ruta": "GESTION.Analogías.desaprob",
+      "eje": "MG",
+      "fila": 1792,
+      "nota": "calificación 1–2 sobre escala 1–5"
+    },
+    {
+      "modulo": "Intención de voto",
+      "ruta": "CONS.Analogías.lla",
+      "eje": "MV",
+      "fila": 1801,
+      "nota": "línea propia de la consultora; ver serie de evolución para comparabilidad"
+    },
+    {
+      "modulo": "Intención de voto",
+      "ruta": "CONS.Analogías.pj",
+      "eje": "MV",
+      "fila": 1800,
+      "nota": "línea propia de la consultora; ver serie de evolución para comparabilidad"
     }
   ],
   "retiros": [],
@@ -1577,6 +1623,9 @@
           "celdas": [
             {
               "fila": 1110
+            },
+            {
+              "fila": 1801
             }
           ],
           "nota": ""
@@ -1587,6 +1636,9 @@
           "celdas": [
             {
               "fila": 1109
+            },
+            {
+              "fila": 1800
             }
           ],
           "nota": ""
