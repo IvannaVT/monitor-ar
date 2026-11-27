@@ -107,6 +107,21 @@ img{max-width:100%}
 .sem-it .sem-vl{font-family:'IBM Plex Sans',sans-serif;font-size:11px;white-space:normal;line-height:1.2}
 .sem-det{padding:0 0 8px 30px;font-size:11.5px;line-height:1.45;display:grid;gap:3px}
 .sem-det .k{color:var(--fg-dim);font-size:10px;text-transform:uppercase;letter-spacing:.4px;margin-right:4px}
+.cb-leg{display:flex;flex-wrap:wrap;gap:6px 16px;font-size:12px;margin:2px 0 8px}.cb-leg span{display:inline-flex;align-items:center;gap:6px}.cb-leg i{width:12px;height:12px;border-radius:2px;display:inline-block}
+.cb-r{display:grid;grid-template-columns:minmax(150px,230px) 1fr;gap:4px 14px;padding:8px 0;border-bottom:1px solid var(--border);align-items:start}
+.cb-nm{font-size:13px;font-weight:600;line-height:1.25;overflow-wrap:anywhere}
+.cb-bs{display:grid;gap:4px;min-width:0}
+.cb-b{display:grid;grid-template-columns:34px 1fr auto;gap:8px;align-items:center;min-width:0}
+.cb-m{font-size:11px;font-weight:700;letter-spacing:.3px}
+.cb-tr{height:14px;background:color-mix(in srgb,var(--fg-dim) 14%,transparent);border-radius:3px;overflow:hidden;min-width:0}
+.cb-tr i{display:block;height:100%;border-radius:3px}
+.cb-b b{font-family:'IBM Plex Mono',monospace;font-size:13px;min-width:70px;text-align:left;white-space:nowrap}
+.cb-b em{font-style:normal;font-size:12px;color:var(--fg-dim);min-width:70px}
+.cb-b sup{color:var(--warn);font-size:10px;margin-left:2px}
+.cb-d{font-size:11px;color:var(--fg-dim);padding-left:42px}
+.cb-vd{margin:6px 0 4px}.cb-vd>summary{cursor:pointer;font-size:11.5px;color:var(--accent);list-style:none}.cb-vd>summary::-webkit-details-marker{display:none}
+.cb-vd[open]>summary{margin-bottom:6px}.cb-tz{font-size:11px;color:var(--fg-dim);line-height:1.5;margin:4px 0 8px}
+@media(max-width:700px){.cb-r{grid-template-columns:1fr}.cb-d{padding-left:42px}.cb-t td:first-child{min-width:110px}}
 .cb-t{width:100%;border-collapse:collapse;font-size:12px;margin:2px 0 4px}
 .cb-t th{font-weight:600;font-size:10px;text-transform:uppercase;letter-spacing:.4px;color:var(--fg-dim);text-align:right;padding:3px 8px;border-bottom:1px solid var(--border)}
 .cb-t th:first-child,.cb-t td:first-child{text-align:left}
@@ -2078,12 +2093,12 @@ async function renderCaba(){
   const cont=document.getElementById('cabaCont');
   if(!CABA){try{CABA=await (await fetch('./data/caba_data.json')).json();}catch(e){cont.innerHTML='<p class="cb-n">No se pudo cargar data/caba_data.json.</p>';return;}}
   const f1=v=>v==null?'—':String(v).replace('.',',');
-  const dl=(a,b)=>{if(a==null||b==null)return['—',''];const d=Math.round((b-a)*10)/10;return[(d>0?'+':'')+String(d).replace('.',',')+' pp',d>0?'up':d<0?'dn':'d'];};
-  const cel=(p)=>p?`<td>${f1(p.v)}${p.sec?'<sup>s</sup>':''}${p.ver?'<sup>v</sup>':''}</td>`:'<td class="d">—</td>';
+  const dl=(a,b)=>{if(a==null||b==null)return['Sin dato',''];const d=Math.round((b-a)*10)/10;return[(d>0?'+':'')+String(d).replace('.',',')+' pp',d>0?'up':d<0?'dn':'d'];};
+  const cel=(p)=>p?`<td>${f1(p.v)}${p.sec?'<sup>s</sup>':''}${p.ver?'<sup>v</sup>':''}</td>`:'<td class="d">Sin dato</td>';
   const tabla=(series,meses,ult)=>{
     const [m0,m1]=ult;
-    return `<table class="cb-t"><thead><tr><th></th>${meses.map(m=>`<th>${m}</th>`).join('')}<th>${m0}→${m1}</th></tr></thead><tbody>`+
-    series.map(x=>{const sv=x.puntos[m0]&&x.puntos[m0].ver&&x.nombre!=='La Libertad Avanza'&&x.nombre!=='PRO';const [t,c]=sv?['no comparable','d']:dl(x.puntos[m0]&&x.puntos[m0].v,x.puntos[m1]&&x.puntos[m1].v);return `<tr><td>${esc(x.nombre)}</td>${meses.map(m=>cel(x.puntos[m])).join('')}<td class="${c}">${t}</td></tr>`;}).join('')+'</tbody></table>';
+    return `<table class="cb-t"><thead><tr><th></th>${meses.map(m=>`<th>${m}</th>`).join('')}<th>${meses.length>2?'Variación entre cortes':'Diferencia'} ${m0.toLowerCase()}–${m1.toLowerCase()}</th></tr></thead><tbody>`+
+    series.map(x=>{const sv=x.nombre==='Otro'||(x.puntos[m0]&&x.puntos[m0].ver&&x.nombre!=='La Libertad Avanza'&&x.nombre!=='PRO');const [t,c]=sv?['No comparable','d']:dl(x.puntos[m0]&&x.puntos[m0].v,x.puntos[m1]&&x.puntos[m1].v);return `<tr><td>${esc(x.nombre)}</td>${meses.map(m=>cel(x.puntos[m])).join('')}<td class="${c}">${t}</td></tr>`;}).join('')+'</tbody></table>';
   };
   const filas=(ps)=>ps.map(p=>p.fila).join(', ');
   const trz=(txt)=>`<details class="det-tab" style="margin:0 0 10px"><summary style="font-size:10.5px;color:var(--fg-dim)">Trazabilidad</summary><div class="cb-n">${txt}</div></details>`;
@@ -2094,22 +2109,62 @@ async function renderCaba(){
      c.informes.map(i=>`<tr><td>${esc(i.mes)}</td><td style="text-align:left;font-family:inherit;white-space:normal">${esc(i.campo)}${i.muestra?' · '+esc(i.muestra):''}</td><td style="text-align:left;font-family:inherit;white-space:normal">${esc(i.carga)}${i.valor?' · <b>'+f1(i.valor[0])+'</b>':''}${i.estado==='Parcial'?' <sup>parcial</sup>':''}</td><td style="text-align:left;font-family:inherit;white-space:normal;color:var(--fg-dim)">${esc(i.serie)}</td></tr>`).join('')+
      `</tbody></table></details>`).join('')+
      `<div class="cb-n">Series armables hoy, todas de DC: continuidad/cambio (sep–nov, ALTA), imagen positiva (sep–nov, ALTA) y voto por espacio y Jefatura (oct–nov, MEDIA). Las demás consultoras tienen un solo corte o series propias; no se mezclan con DC.</div>`;
-  h+=`<div class="cb-h"><b>Jefatura de Gobierno 2027 · escenario</b><span>% · oct → nov · comparabilidad MEDIA: el escenario cambia la proporción de «Otro»</span></div>`+tabla(CABA.jefatura.series,['Oct','Nov'],['Oct','Nov'])+
-     `<div class="cb-n">Bullrich pasa a liderar; Jorge Macri y Santoro se cruzan. Dos cortes: variación, no tendencia.</div>`;
-  h+=`<div class="cb-h"><b>Continuidad o cambio · 2027</b><span>% · sep → nov · comparabilidad ALTA (misma pregunta y categorías)</span></div>`+tabla(CABA.cambio.series,['Sep','Oct','Nov'],['Oct','Nov'])+
-     `<div class="cb-n">Septiembre solo tiene cargada la categoría «cambio de rumbo total». Variación mostrada: oct → nov.</div>`;
-  h+=`<div class="cb-h"><b>Intención de voto por espacio · CABA</b><span>% · oct → nov · comparabilidad MEDIA: solo LLA y PRO figuran en ambos cortes</span></div>`+tabla(CABA.espacio.series,['Oct','Nov'],['Oct','Nov']);
-  h+=`<div class="cb-h"><b>Imagen de dirigentes en CABA</b><span>% positiva (muy buena + buena) y negativa · sep → nov · comparabilidad ALTA</span></div>`+
-     `<table class="cb-t"><thead><tr><th></th><th>Pos sep</th><th>Pos nov</th><th>Var</th><th>Neg sep</th><th>Neg nov</th><th>Var</th></tr></thead><tbody>`+
-     CABA.imagen.map(x=>{const [tp,cp]=dl(x.pos.Sep&&x.pos.Sep.v,x.pos.Nov&&x.pos.Nov.v);const [tn,cn]=dl(x.neg.Sep&&x.neg.Sep.v,x.neg.Nov&&x.neg.Nov.v);
-       return `<tr><td>${esc(x.nombre)}</td>${cel(x.pos.Sep)}${cel(x.pos.Nov)}<td class="${cp}">${tp}</td>${cel(x.neg.Sep)}${cel(x.neg.Nov)}<td class="${cn}">${tn}</td></tr>`;}).join('')+'</tbody></table>'+
-     `<div class="cb-n">Negativa de noviembre solo cargada para Jorge Macri y Kicillof. Imagen personal, no aprobación de gestión.</div>`;
-  h+=`<div class="cb-h"><b>Probabilidad de voto · promedio 0–10</b><span>nov · un solo corte · ranking, sin variación</span></div>`+
-     `<table class="cb-t"><tbody>${CABA.prob_voto.map(x=>`<tr><td>${esc(x.nombre)}</td><td>${f1(x.v)}</td></tr>`).join('')}</tbody></table>`;
+  const MC={Sep:'#f2c744',Oct:'#3dd6f5',Nov:'#ff8fb8'};
+  const CT=CABA.cortes;
+  const marks=p=>(p.sec?'<sup title="Fuente secundaria">s</sup>':'')+(p.ver?'<sup title="Cifra a verificar">v</sup>':'');
+  const leg=ms=>`<div class="cb-leg">${ms.map(m=>`<span><i style="background:${MC[m]}"></i>${{Sep:'Septiembre',Oct:'Octubre',Nov:'Noviembre'}[m]}</span>`).join('')}<span style="color:var(--fg-dim)"><sup style="color:var(--warn)">s</sup> fuente secundaria · <sup style="color:var(--warn)">v</sup> cifra a verificar</span></div>`;
+  const ML={Sep:'sep',Oct:'oct',Nov:'nov'};
+  const barra=(m,p,max,unit)=>p?`<div class="cb-b"><span class="cb-m" style="color:${MC[m]}">${m}</span><div class="cb-tr"><i style="width:${Math.max(0,Math.min(100,p.v/max*100))}%;background:${MC[m]}"></i></div><b>${unit?p.v.toFixed(1).replace('.',','):f1(p.v)}${unit}${marks(p)}</b></div>`:
+    `<div class="cb-b"><span class="cb-m" style="color:${MC[m]}">${m}</span><div class="cb-tr"></div><em>Sin dato</em></div>`;
+  // filas: [{nombre, puntos:{mes:{v,...}}, incomp:boolean}]
+  const grafico=(rows,meses,max,rot)=>{
+    const [m0,m1]=[meses[meses.length-2],meses[meses.length-1]];
+    return leg(meses)+rows.map(x=>{
+      let d='';
+      if(x.incomp)d='No comparable entre cortes: las categorías no coinciden';
+      else if(x.puntos[m0]&&x.puntos[m1]){const t=dl(x.puntos[m0].v,x.puntos[m1].v)[0];d=`${rot} ${ML[m0]}–${ML[m1]}: ${t}`;}
+      return `<div class="cb-r"><div class="cb-nm">${esc(x.nombre)}</div><div class="cb-bs">${meses.map(m=>barra(m,x.puntos[m],max,'%')).join('')}${d?`<div class="cb-d">${d}</div>`:''}</div></div>`;}).join('');
+  };
+  const trzCortes=(ms,ps)=>`<div class="cb-tz">${ms.map(m=>`<b style="color:${MC[m]}">${m}</b> · ${esc(CT[m].consultora)} · campo ${esc(CT[m].campo)} · ${esc(CT[m].muestra)}`).join('<br>')}<br>Filas de Nivel 2: ${filas(ps)}.${ps.some(p=>p.sec)?'<br><sup style="color:var(--warn)">s</sup> FUENTE SECUNDARIA · encuestas-argentinas.com · https://encuestas-argentinas.com/encuestas/provincias/ · consultado 2026-11-27 · fuente original: DC Consultores (filas 2307–2309, evidencia máxima MEDIA).':''}${ps.some(p=>p.ver)?'<br><sup style="color:var(--warn)">v</sup> Cifra tomada de la ficha de Nivel 1 (fila 335); verificar contra el PDF original.':''}</div>`;
+  const vd=(tbl,ms,ps,extra)=>`<details class="cb-vd"><summary>Ver datos y fuentes</summary>${tbl}${trzCortes(ms,ps)}${extra||''}</details>`;
+  const allp=sr=>sr.flatMap(x=>Object.values(x.puntos));
+  const sinD=(a,b)=>a&&b;
+  // 1 Jefatura
+  const jef=CABA.jefatura.series.map(x=>({...x,incomp:x.nombre==='Otro'}));
+  h+=`<div class="cb-h"><b>Jefatura de Gobierno 2027 · escenario</b><span>% de votos · octubre y noviembre · comparabilidad MEDIA</span></div>`+
+     grafico(jef,['Oct','Nov'],40,'Diferencia')+
+     `<div class="cb-n">El escenario de noviembre cambia el peso de «Otro»: esa categoría no se compara. Dos cortes: no es tendencia.</div>`+
+     vd(tabla(CABA.jefatura.series,['Oct','Nov'],['Oct','Nov']),['Oct','Nov'],allp(CABA.jefatura.series));
+  // 2 Continuidad / cambio
+  h+=`<div class="cb-h"><b>Continuidad o cambio · 2027</b><span>% · septiembre, octubre y noviembre · comparabilidad ALTA</span></div>`+
+     grafico(CABA.cambio.series,['Sep','Oct','Nov'],60,'Variación entre cortes')+
+     `<div class="cb-n">Septiembre solo tiene cargada la categoría «cambio de rumbo total».</div>`+
+     vd(tabla(CABA.cambio.series,['Sep','Oct','Nov'],['Oct','Nov']),['Sep','Oct','Nov'],allp(CABA.cambio.series));
+  // 3 Espacio
+  const esp=CABA.espacio.series.map(x=>({...x,incomp:!(x.nombre==='La Libertad Avanza'||x.nombre==='PRO')}));
+  h+=`<div class="cb-h"><b>Intención de voto por espacio · CABA</b><span>% · octubre y noviembre · comparabilidad MEDIA: solo LLA y PRO son comparables</span></div>`+
+     grafico(esp,['Oct','Nov'],40,'Diferencia')+
+     vd(tabla(CABA.espacio.series,['Oct','Nov'],['Oct','Nov']),['Oct','Nov'],allp(CABA.espacio.series));
+  // 4 Imagen positiva y negativa
+  const imgS=k=>CABA.imagen.map(x=>({nombre:x.nombre,puntos:x[k]}));
+  const imgP=allp(imgS('pos')).concat(allp(imgS('neg')));
+  h+=`<div class="cb-h"><b>Imagen positiva de dirigentes en CABA</b><span>% muy buena + buena · septiembre y noviembre · comparabilidad ALTA</span></div>`+
+     grafico(imgS('pos'),['Sep','Nov'],60,'Diferencia')+
+     `<div class="cb-h"><b>Imagen negativa de dirigentes en CABA</b><span>% mala + muy mala · septiembre y noviembre</span></div>`+
+     grafico(imgS('neg'),['Sep','Nov'],80,'Diferencia')+
+     `<div class="cb-n">Negativa de noviembre solo cargada para Jorge Macri y Axel Kicillof; el resto figura como «Sin dato». Imagen personal, no aprobación de gestión.</div>`+
+     vd(`<table class="cb-t"><thead><tr><th></th><th>Pos sep</th><th>Pos nov</th><th>Diferencia</th><th>Neg sep</th><th>Neg nov</th><th>Diferencia</th></tr></thead><tbody>`+
+        CABA.imagen.map(x=>{const [tp]=dl(x.pos.Sep&&x.pos.Sep.v,x.pos.Nov&&x.pos.Nov.v);const [tn]=dl(x.neg.Sep&&x.neg.Sep.v,x.neg.Nov&&x.neg.Nov.v);
+          return `<tr><td>${esc(x.nombre)}</td>${cel(x.pos.Sep)}${cel(x.pos.Nov)}<td class="d">${tp}</td>${cel(x.neg.Sep)}${cel(x.neg.Nov)}<td class="d">${tn}</td></tr>`;}).join('')+'</tbody></table>',['Sep','Nov'],imgP);
+  // 5 Probabilidad de voto
+  const probMax=10;
+  h+=`<div class="cb-h"><b>Probabilidad de voto · promedio 0–10</b><span>noviembre · un solo corte</span></div>`+
+     `<div class="cb-leg"><span><i style="background:${MC.Nov}"></i>Noviembre</span></div>`+
+     CABA.prob_voto.map(x=>`<div class="cb-r"><div class="cb-nm">${esc(x.nombre)}</div><div class="cb-bs">${barra('Nov',{v:x.v},probMax,'')}</div></div>`).join('')+
+     vd(`<table class="cb-t"><tbody>${CABA.prob_voto.map(x=>`<tr><td>${esc(x.nombre)}</td><td>${f1(x.v)}</td></tr>`).join('')}</tbody></table>`,['Nov'],CABA.prob_voto.map(x=>({fila:x.fila})));
   h+=`<div class="cb-h"><b>Contexto TEM</b><span>no se cruza con las series de opinión</span></div>`+
      `<table class="cb-t"><tbody><tr><td>IPCBA · variación mensual (IDECBA)</td><td>sep ${f1(IPCBA_FULL[MIPC.indexOf('Sep-26')])}%</td><td>oct ${f1(IPCBA_FULL[MIPC.indexOf('Oct-26')])}%</td></tr>`+
      `<tr><td>ICC CABA (UTDT)</td><td>oct ${f1(ICC_CABA_13[MESI.indexOf('Oct-26')])}</td><td>nov ${f1(ICC_CABA_13[MESI.indexOf('Nov-26')])}</td></tr></tbody></table>`;
-  h+=trz(`DC Consultores: sep 22–27/09, oct 22–26/10 (n=1.360, ±2,5%, muestreo no probabilístico, dispositivos móviles), nov 18–22/11. Filas de Nivel 2 — Jefatura: ${filas(CABA.jefatura.series.flatMap(x=>Object.values(x.puntos)))}. Continuidad: ${filas(CABA.cambio.series.flatMap(x=>Object.values(x.puntos)))}. Espacio: ${filas(CABA.espacio.series.flatMap(x=>Object.values(x.puntos)))}. Los valores marcados <sup>s</sup> (Nivel 2, filas 2307–2309): FUENTE SECUNDARIA · encuestas-argentinas.com · https://encuestas-argentinas.com/encuestas/provincias/ · consultado 2026-11-27 · fuente original: DC Consultores; coinciden con el gráfico del informe de Drive.`);
   cont.innerHTML=h;
 }
 
