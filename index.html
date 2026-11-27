@@ -92,6 +92,20 @@ img{max-width:100%}
 .badge-pend{display:inline-block;font-size:9px;font-family:'IBM Plex Mono',monospace;letter-spacing:.5px;padding:1px 6px;border-radius:4px;background:color-mix(in srgb,var(--warn) 18%,transparent);color:var(--warn);text-transform:uppercase}
 
 .table-wrap{overflow-x:auto;margin-bottom:16px}
+.sem-lista{display:grid;gap:6px;margin:6px 0 4px}
+.sem-it{border:1px solid var(--border);border-radius:8px;padding:0 10px}
+.sem-it>summary{cursor:pointer;list-style:none;display:grid;grid-template-columns:22px 1fr auto;column-gap:8px;row-gap:3px;align-items:center;padding:8px 0;min-height:44px}
+.sem-it>summary::-webkit-details-marker{display:none}
+.sem-it .sem-e{font-size:15px;line-height:1}
+.sem-it .sem-n{font-size:13px;font-weight:600}
+.sem-it .sem-v{font-family:'IBM Plex Mono',monospace;font-size:14px;text-align:right;white-space:nowrap}
+.sem-it .sem-m{grid-column:2/4;display:flex;flex-wrap:wrap;gap:4px 6px;align-items:center;font-size:10.5px;color:var(--fg-dim)}
+.sem-it .sem-m .signal{font-size:9.5px;padding:1px 7px}
+.sem-it[open]{background:color-mix(in srgb,var(--fg-dim) 6%,transparent)}
+.sem-det{padding:2px 0 10px 30px;font-size:11.5px;line-height:1.5;display:grid;gap:5px}
+.sem-det .k{color:var(--fg-dim);font-size:10px;text-transform:uppercase;letter-spacing:.4px;margin-right:4px}
+.sem-res{font-weight:400;font-size:11px;color:var(--fg-dim);margin-left:6px}
+@media(max-width:640px){.sem-det{padding-left:0}}
 table{width:100%;border-collapse:collapse;font-size:12px;min-width:380px}
 th{text-align:left;font-size:10px;font-weight:600;letter-spacing:.6px;text-transform:uppercase;color:var(--fg-dim);padding:7px 10px;border-bottom:2px solid var(--border)}
 td{padding:8px 10px;border-bottom:1px solid var(--border);color:var(--fg);font-variant-numeric:tabular-nums}
@@ -1954,26 +1968,27 @@ function renderDestacados(){
 function renderSemaforo(){
   const cont=document.getElementById('semaforoTablas');if(!cont)return;
   const bloques=[...new Set(SEMAFORO.map(r=>r.bloque))];
+  const limpiar=t=>String(t||'').replace(/\s*\((?:filas? )?N2 [^)]*\)/g,'').replace(/\s*N2 \d[\d–, y-]*/g,'').trim();
+  const corto=(t,n)=>{t=String(t||'').split(/[;:]/)[0].replace(/ entre consultoras$/,'').trim();return t.length>n?t.slice(0,n-1)+'…':t};
   cont.innerHTML=bloques.map((b,i)=>{
-    const filas=SEMAFORO.filter(r=>r.bloque===b).map(r=>{
+    const rs=SEMAFORO.filter(r=>r.bloque===b);
+    const cuenta=['🟢','🟡','🔴','⚪'].map(e=>[e,rs.filter(r=>r.estado===e).length]).filter(x=>x[1]).map(x=>x[0]+' '+x[1]).join(' · ');
+    const items=rs.map(r=>{
       const cp=(r.comparabilidad||'').split('—')[0].trim();
       const ev=cp==='ALTA'?'conv':cp==='MEDIA'?'mix':'nd';
+      const motivo=(r.comparabilidad||'').split('—').slice(1).join('—').trim();
       const sinDir=/sin dirección|insuficiente/i.test(r.direccion||'');
-      return `<tr>
-        <td><strong>${esc(r.indicador)}</strong></td>
-        <td>${r.estado}</td>
-        <td class="num">${valorDestacado(r.ultima)}<div style="font-size:10px;color:var(--fg-dim);font-weight:400;text-align:left">${htmlLectura(r.ultima)}</div></td>
-        <td style="color:var(--fg-dim)">${esc(r.tendencia)}</td>
-        <td style="font-size:10px;line-height:1.5">
-          <div><span style="color:var(--fg-dim)">cobertura</span> ${esc(r.cobertura)}</div>
-          <div style="margin-top:3px"><span style="color:var(--fg-dim)">comparabilidad</span> <span class="signal ${ev}">${esc(cp)}</span> ${esc((r.comparabilidad||'').split('—').slice(1).join('—').trim())}</div>
-          <div style="margin-top:3px"><span style="color:var(--fg-dim)">dirección</span> <strong style="color:${sinDir?'var(--warn)':'inherit'}">${esc(r.direccion)}</strong></div>
-        </td>
-        <td>${esc(r.nota)}</td></tr>`;}).join('');
-    return `<details class="det-tab"${i===0?' open':''}><summary><b>${esc(b)}</b></summary>
-      <div class="table-wrap" style="margin-bottom:20px"><table>
-      <thead><tr><th>Indicador</th><th>Estado</th><th>Última medición</th><th>Tendencia · período</th><th>Cobertura · comparabilidad · dirección</th><th>Nota</th></tr></thead>
-      <tbody>${filas}</tbody></table></div></details>`;
+      return `<details class="sem-it"><summary>
+        <span class="sem-e">${r.estado}</span><span class="sem-n">${esc(r.indicador)}</span><span class="sem-v">${valorDestacado(r.ultima)}</span>
+        <span class="sem-m"><span>${esc(r.tendencia)}</span><span class="signal ${ev}">${esc(cp)}</span><span style="color:${sinDir?'var(--warn)':'inherit'}">${esc(corto(r.direccion,40))}</span></span>
+      </summary><div class="sem-det">
+        <div><span class="k">última</span>${htmlLectura(r.ultima)}</div>
+        <div><span class="k">dirección</span><strong style="color:${sinDir?'var(--warn)':'inherit'}">${esc(r.direccion)}</strong></div>
+        ${r.nota?`<div><span class="k">lectura</span>${esc(limpiar(r.nota))}</div>`:''}
+        <div><span class="k">comparabilidad</span><span class="signal ${ev}">${esc(cp)}</span>${motivo?' '+esc(motivo):''}</div>
+        <div><span class="k">cobertura</span>${esc(r.cobertura)}</div>
+      </div></details>`;}).join('');
+    return `<details class="det-tab"${i===0?' open':''}><summary><b>${esc(b)}</b> <span class="sem-res">${rs.length} · ${cuenta}</span></summary><div class="sem-lista">${items}</div></details>`;
   }).join('');
 }
 function itemHTML(it){
