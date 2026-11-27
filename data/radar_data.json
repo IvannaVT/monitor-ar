@@ -6461,7 +6461,13 @@
   "ICC": {
    "valor": 40.99,
    "mes": "Nov-26",
-   "oct_pendiente": false
+   "oct_pendiente": false,
+   "var_oficial": {
+    "mes": "Nov-26",
+    "valor": -1.27,
+    "fuente": "UTDT, CIF · nota de prensa del ICC de noviembre de 2026 (40,99 puntos vs 41,52 en octubre), publicada 19/11/2026",
+    "nota": "Variación oficial informada por UTDT (−1,27% vs octubre; el titular la redondea a −1,3%), calculada con valores sin redondear. El cociente de los índices redondeados de la serie (40,99 / 41,52) da −1,28%: no es equivalente y no se publica como tal."
+   }
   },
   "ICG": {
    "valor": 2.04,

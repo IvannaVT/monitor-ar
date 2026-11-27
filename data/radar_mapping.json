@@ -4869,6 +4869,12 @@
     "fuente": "UTDT, Escuela de Gobierno · informe mensual del ICG de noviembre de 2026 (2,04 puntos)",
     "nota": "Variación oficial informada por UTDT (+4,1% vs octubre), calculada con valores sin redondear. El cociente de los índices redondeados de la serie (2,04 / 1,95) da +4,6%: no es equivalente y no se publica como tal."
   },
+  "icc_variacion_oficial": {
+    "mes": "Nov-26",
+    "valor": -1.27,
+    "fuente": "UTDT, CIF · nota de prensa del ICC de noviembre de 2026 (40,99 puntos vs 41,52 en octubre), publicada 19/11/2026",
+    "nota": "Variación oficial informada por UTDT (−1,27% vs octubre; el titular la redondea a −1,3%), calculada con valores sin redondear. El cociente de los índices redondeados de la serie (40,99 / 41,52) da −1,28%: no es equivalente y no se publica como tal."
+  },
   "agenda_ranking": {
     "titulo": "Problema principal · Proyección · nov-26 (corte parcial)",
     "nota": "Una sola consultora: los porcentajes no se promedian entre fuentes. Respuesta múltiple, no suman 100.",
