@@ -4076,6 +4076,7 @@
       "tab": "indicadores",
       "modulo": "Economía percibida",
       "titulo": "IPE de Proyección · puntos (1–5)",
+      "nota": "IPE = Índice de Percepción Económica · elaborado por Proyección · escala 1–5",
       "filas": [
         {
           "etiqueta": "Proyección · IPE · índice total",

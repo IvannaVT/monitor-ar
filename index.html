@@ -2346,7 +2346,7 @@ function renderEvolCharts(tab){
     const meses=g.meses.slice(i0,i1+1);
     const sueltas=g.filas.filter(f=>f.n===1&&g.meses.some(m=>f.celdas[m]));
     const id=`evolc_${tab}_${gi}`;
-    box.insertAdjacentHTML('beforeend',`<div class="chart-wrap"><div class="chart-head"><div><h3>${esc(g.titulo.split(' · ')[0])} · evolución</h3><p>${esc(meses[0])} → ${esc(meses[meses.length-1])} · una línea por consultora e indicador · no se promedian · clic en leyenda para filtrar</p></div></div>
+    box.insertAdjacentHTML('beforeend',`<div class="chart-wrap"><div class="chart-head"><div><h3>${esc(g.titulo.split(' · ')[0])} · evolución</h3><p>${esc(meses[0])} → ${esc(meses[meses.length-1])} · una línea por consultora e indicador · no se promedian · clic en leyenda para filtrar${g.nota?" · "+esc(g.nota):""}</p></div></div>
       <div class="chart-box"><canvas id="${id}"></canvas></div><div class="legend" id="${id}_lg"></div>
       <p class="source">${esc(ser.map(f=>f.etiqueta+(f.nota?' ('+f.nota+')':'')).join(' · '))}${sueltas.length?' — con una sola medición, fuera del gráfico: '+esc(sueltas.slice(0,4).map(f=>f.etiqueta+' ('+Object.keys(f.celdas).join(', ').toLowerCase()+')').join(' · '))+(sueltas.length>4?' y '+(sueltas.length-4)+' más':''):''}</p></div>`);
     const cols=ser.map((_,i)=>pal[i%pal.length]);
