@@ -20,7 +20,7 @@ import sys
 import tempfile
 
 RAIZ = pathlib.Path(__file__).resolve().parent.parent
-PAGINAS = ['index.html', 'monitor_ar.html', 'monitor_leg.html', 'radar_eeuu_2026.html']
+PAGINAS = ['index.html', 'monitor_ar.html', 'monitor_leg.html', 'radar_eeuu_2026.html', 'espana_29n.html']
 
 
 def main():

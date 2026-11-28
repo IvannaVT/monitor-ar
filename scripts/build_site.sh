@@ -25,7 +25,7 @@ python3 -m unittest discover -s tests -p 'test_radar_data.py'
 echo "── Sitio público ──"
 rm -rf _site
 mkdir -p _site/data
-cp index.html monitor_ar.html monitor_leg.html radar_eeuu_2026.html 404.html _site/
-cp data/indicadores.json data/radar_data.json data/caba_data.json _site/data/
+cp index.html monitor_ar.html monitor_leg.html radar_eeuu_2026.html espana_29n.html 404.html _site/
+cp data/indicadores.json data/radar_data.json data/caba_data.json data/espana_29n.json _site/data/
 
 echo "_site/ generado con $(find _site -type f | wc -l) archivos"
